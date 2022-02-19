@@ -1,6 +1,1 @@
-# Devwares main site
-
-    `npm install`
-
-    `npm start`
-
+## This is the Documentation for the Contrast libraries
