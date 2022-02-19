@@ -1,0 +1,170 @@
+---
+title: "Carousel"
+metaTitle: "Carousel Component for React Bootstrap"
+metaDescription: "React Bootstrap Carousel allows us to create a carousel for our photos or text slides that is shown in a cyclic fashion."
+---
+
+FIX THIS
+
+# React Bootstrap Carousel
+
+React Bootstrap Carousel allows us to create a carousel for our photos or text slides that is shown in a cyclic fashion. The carousel is a slideshow that allows you to cycle between a number of different pieces of content. It can be used with a collection of photos, text, or custom markup. The previous and next controls and indicators are also supported.
+
+
+## Importing the React Bootstrap Carousel Component
+
+You begin by importing 'CDBCarousel' into your project to use the Contrast React Bootstrap Carousel component.
+
+```javascript
+import { CDBCarousel } from "cdbreact";
+```
+
+## Default Carousel
+
+![React Bootstrap Carousel](https://i.imgur.com/NH00iYw.gif)
+
+```javascript
+import React from "react";
+import { CDBCarousel, CDBCarouselItem, CDBCarouselInner, CDBView, CDBContainer } from "cdbreact";
+
+export const Carousel = () => {
+  return (
+    <CDBContainer>
+      <CDBContainer>
+        <CDBCarousel
+          activeItem={1}
+          length={3}
+          showControls={true}
+          showIndicators={true}
+          className="z-depth-1"
+          slide
+        >
+          <CDBCarouselInner>
+            <CDBCarouselItem itemId="1">
+              <CDBView>
+                <img
+                  className="d-block w-100"
+                  src="https://imgur.com/oPU7JbX"
+                  alt="First slide"
+                />
+              </CDBView>
+            </CDBCarouselItem>
+            <CDBCarouselItem itemId="2">
+              <CDBView>
+                <img
+                  className="d-block w-100"
+                  src="https://imgur.com/EgVSItY"
+                  alt="Second slide"
+                />
+              </CDBView>
+            </CDBCarouselItem>
+            <CDBCarouselItem itemId="3">
+              <CDBView>
+                <img
+                  className="d-block w-100"
+                  src="https://imgur.com/c1aFo29"
+                  alt="Third slide"
+                />
+              </CDBView>
+            </CDBCarouselItem>
+          </CDBCarouselInner>
+        </CDBCarousel>
+      </CDBContainer>
+    </CDBContainer>
+  );
+};
+```
+
+# ## API Reference
+
+This section will expand on the props you'll be able to use with the Contrast React Bootstrap Card component. You'll learn what these props do, how to utilize them, and what their default values are.
+
+## API Reference: Contrast React Bootstrap Carousel Properties
+
+Other prop options for the CDBCarousel component are included in the table below.
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       |              |Adds custom classes	      |     <CDBCarousel className="myClass" ... />  |
+| activeItem     | Number       |              | The index of default active item | <CDBCarousel activeItem={1} ... />  |
+| interval       | Number or Boolean | 6000    | Time in milliseconds between slides changes | <CDBCarousel interval={10000} ... />  |
+| length         | Number       |              | Indicates amount of slides in the carousel | <CDBCarousel length={3} ... />  |
+| tag            | function or String       | div          | Changes default `html` tag | <CDBCarousel tag="div" ... />  |
+| mobileGesture  | Boolean      | true         | Switches on/off carousel mobile gesture. | <CDBCarousel mobileGesture={false} .../>  |
+| multiItem      | Boolean      | false        | Switches multiItem mode - more items in one view, changed controls | <CDBCarousel multiItem={true} .../>  |
+| onHoverStop    | Boolean      | true         | Stops the changing slide when mouse is on the element of the carousel | <CDBCarousel onHoverStop={false} .../>  |
+| showControls   | Boolean      | true         | Switches on/off carousel controls | <CDBCarousel showControls={false} .../>  |
+| showIndicators | Boolean      | true         | Switches on/off carousel indicators | <CDBCarousel showIndicators={false} .../>  |
+| slide          | Boolean      | false        | Switches slide styles of carousel | <CDBCarousel slide .../>  |
+| testimonial    | Boolean      | false        | Sets black, bigger control arrows for testimonial carousels | <CDBCarousel testimonial .../>  |
+| thumbnails     | Boolean      | false        | Replaces simple dot indicators with miniature slides pictures | <CDBCarousel thumbnails .../>  |
+
+
+## API Reference: Contrast React Bootstrap Carousel Caption Properties
+
+Other 'CDBControl' component prop alternatives are included in the table below.
+
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       |              |Adds custom classes	      |     <CDBCarouselCaption className="myClass" ... />  |
+| tag            | function or String       | div          | Changes default `html` tag | <CDBCarouselCaption tag="div" ... />  |
+
+
+## API Reference: Contrast React Bootstrap Carousel Controls Properties
+
+The table below lists other prop options of the `CDBControl` component.
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       |              |Adds custom classes	      |     <CDBControl className="myClass" ... />  |
+| direction      | String       |              | Specifies the slide direction. Can either be `prev` or `next`. | <CDBControl direction="prev" ... />  |
+| iconLeft       | Boolean      |              | Toggles left Icon's visibility | <CDBControl IconLeft ... />  |
+| iconRight      | Boolean      |              | Toggles right Icon's visibility | <CDBControl IconRight ... />  |
+| onClick        | Any          |              | performs an action when clicked | <CDBControl onClick={handleClick} ... />  |
+| tag            | function or String       | div          | Changes default `html` tag | <CDBControl tag="div" ... />  |
+| multiItem      | Boolean      | false        | Switches multiItem mode - more items in one view, changed controls | <CDBCarousel multiItem={true} .../>  |
+| testimonial    | Boolean      | false        | Sets black, bigger control arrows for testimonial carousels | <CDBCarousel testimonial .../>  |
+
+## API Reference: Contrast React Bootstrap Carousel Indicator Properties
+
+
+The table below lists other prop options of the `CDBCarouselIndicators` component.
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       |              |Adds custom classes	      |     <CDBCarouselIndicator className="myClass" ... />  |
+| active         | Boolean      |              | Set as active item indicator | <CDBCarouselIndicator active ... />  |
+| alt            | String       | "Carousel thumbnail" | Sets the alternate when image is yet to load | <CDBCarouselIndicator alt="Carousel thumbnail" ... />  |
+| img            | String       |              | Provides the Carousel thumbnail | <CDBCarouselIndicator img="img_url" ... />  |
+
+## API Reference: Contrast React Bootstrap Carousel Indicators Properties
+
+The table below lists other prop options of the `CDBCarouselIndicators` component.
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       |              |Adds custom classes	      |     <CDBCarouselIndicators className="myClass" ... />  |
+
+## API Reference: Contrast React Bootstrap Carousel Inner Properties
+
+The table below lists other prop options of the `CDBCarouselInner` component.
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       |              |Adds custom classes	      |     <CDBCarouselInner className="myClass" ... />  |
+| active         | Boolean      |              | Set as active item | <CDBCarouselInner active ... />  |
+| tag            | function or String       | div          | Changes default `html` tag | <CDBCarouselInner tag="div" ... />  |
+
+## API Reference: Contrast React Bootstrap Carousel Item Properties
+
+The table below lists other prop options of the `CDBCarouselItem` component.
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       |              |Adds custom classes	      |     <CDBCarouselItem className="myClass" ... />  |
+| active         | Boolean      |              | Set as active item | <CDBCarouselItem active ... />  |
+| tag            | function or String       | div          | Changes default `html` tag | <CDBCarouselItem tag="div" ... />  |
+| itemId         | Number       |              | The index of item in carousel | <CDBCarouselItem itemId={1} ... />  |
+
+

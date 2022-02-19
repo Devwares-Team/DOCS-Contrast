@@ -1,0 +1,7 @@
+# public
+.cache
+.firebasesrc
+node_modules
+firebase.json
+*DS_Store
+*.env

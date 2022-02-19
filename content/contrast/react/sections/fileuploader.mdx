@@ -1,0 +1,46 @@
+---
+title: "FileUploader"
+metaTitle: "FileUploader Component for React Bootstrap"
+metaDescription: "Building a FileUploader Component using React Bootstrap"
+---
+
+import React from "react";
+import {Link} from "gatsby";
+import fileuploader from "../components/images/fileuploader.gif";
+
+# React Bootstrap File Uploader
+
+The React Bootstrap FileUploader allows you to upload files using the drag and drop functionality.
+
+## Importing the React Bootstrap FileUploader Component
+
+To use the Contrast React Bootstrap DatePicker component, you import `CDBFileUploader` into your project.
+
+```js
+import { CDBFileUploader } from "cdbreact";
+```
+
+<i/>
+
+## Default File Uploader
+
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+
+<img src={fileuploader} alt="Contrast React Bootstrap File Uploader Default "/>
+
+```js
+import React from "react";
+import { CDBFileUploader, CDBContainer } from "cdbreact";
+
+export const FileUploader = () => {
+  return (
+    <CDBContainer>
+      <CDBFileUploader />
+    </CDBContainer>
+  );
+};
+```
+
+
+
+

@@ -1,0 +1,339 @@
+---
+title: "Tab"
+metaTitle: "Tab Component for React Bootstrap"
+metaDescription: "Building a Tab Component using React Bootstrap"
+
+---
+
+import React from "react";
+import {Link} from "gatsby";
+
+# React Bootstrap Tab
+
+Bootstrap tabs are components that separate content placed in the same wrapper but a separate pane. Only one pane can be displayed at a time. 
+
+CDB Tabs are compatible with ReactRouter, meaning that `<NavLink>` components inside can be used both for one-page tabs and general routing solution for main navigation. Make sure to include the wrapping `<BrowserRouter>`.
+
+If you are using `navs` to provide a navigation bar, be sure to add an appropriate role attributes to the `<NavLinks>` (`role="tab"`).
+
+<i/>
+
+## Default Tab
+
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+
+
+![React Bootstrap Tab](https://imgur.com/PR8nMiM.gif)
+
+```js
+import React, { useState } from "react";
+import { CDBNav, CDBTabLink, CDBTabContent, CDBTabPane, CDBContainer } from "cdbreact";
+
+const Tabs = () => {
+
+  const [item1, setItem1] = useState("1");
+
+  const toggle = (tab) => {
+    if (item1 !== tab) {
+      setItem1(tab)
+    }
+  };
+    
+  return (
+    <CDBContainer>
+        <CDBNav className="nav-tabs mt-5">
+        <CDBTabLink
+            link
+            to="#"
+            active={item1 === "1"}
+            onClick={() => toggle("1")}
+            role="tab"
+        >
+            Label 1
+        </CDBTabLink>
+
+        <CDBTabLink
+            link
+            to="#"
+            active={item1 === "2"}
+            onClick={() => toggle("2")}
+            role="tab"
+        >
+            Label 2
+        </CDBTabLink>
+        <CDBTabLink
+            link
+            to="#"
+            active={item1 === "3"}
+            onClick={() => toggle("3")}
+            role="tab"
+        >
+            Label 3
+        </CDBTabLink>
+        </CDBNav>
+        <CDBTabContent activeItem={item1}>
+            <CDBTabPane tabId="1" role="tabpanel">
+                <p className="mt-2">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Nihil odit magnam minima, soluta doloribus reiciendis
+                molestiae placeat unde eos molestias. Quisquam aperiam,
+                pariatur. Tempora, placeat ratione porro voluptate odit
+                minima.
+                </p>
+            </CDBTabPane>
+            <CDBTabPane tabId="2" role="tabpanel">
+                <p className="mt-2">
+                Quisquam aperiam, pariatur. Tempora, placeat ratione porro
+                voluptate odit minima. Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Nihil odit magnam minima,
+                soluta doloribus reiciendis molestiae placeat unde eos
+                molestias.
+                </p>
+                <p>
+                Quisquam aperiam, pariatur. Tempora, placeat ratione porro
+                voluptate odit minima. Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Nihil odit magnam minima,
+                soluta doloribus reiciendis molestiae placeat unde eos
+                molestias.
+                </p>
+            </CDBTabPane>
+            <CDBTabPane tabId="3" role="tabpanel">
+                <p className="mt-2">
+                Quisquam aperiam, pariatur. Tempora, placeat ratione porro
+                voluptate odit minima. Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Nihil odit magnam minima,
+                soluta doloribus reiciendis molestiae placeat unde eos
+                molestias.
+                </p>
+            </CDBTabPane>
+        </CDBTabContent>
+    </CDBContainer>
+  );
+};
+
+export default Tabs;
+```
+<i/>
+
+## Tab Justified
+
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+
+![React Bootstrap Tab Justified](https://imgur.com/JNq6N3p.gif)
+
+```js
+import React, { useState } from "react";
+import { CDBNav, CDBTabLink, CDBTabContent, CDBTabPane, CDBContainer } from "cdbreact";
+
+const Tabs = () => {
+
+  const [item1, setItem1] = useState("1");
+
+  const toggle = (tab) => {
+    if (item1 !== tab) {
+      setItem1(tab)
+    }
+  };
+    
+  return (
+    <CDBContainer>
+        <CDBNav className="nav-tabs mt-5 nav-justified">
+        <CDBTabLink
+            link
+            to="#"
+            active={item1 === "1"}
+            onClick={() => toggle("1")}
+            role="tab"
+        >
+            Label 1
+        </CDBTabLink>
+
+        <CDBTabLink
+            link
+            to="#"
+            active={item1 === "2"}
+            onClick={() => toggle("2")}
+            role="tab"
+        >
+            Label 2
+        </CDBTabLink>
+        <CDBTabLink
+            link
+            to="#"
+            active={item1 === "3"}
+            onClick={() => toggle("3")}
+            role="tab"
+        >
+            Label 3
+        </CDBTabLink>
+        </CDBNav>
+        <CDBTabContent activeItem={item1}>
+            <CDBTabPane tabId="1" role="tabpanel">
+                <p className="mt-2">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Nihil odit magnam minima, soluta doloribus reiciendis
+                molestiae placeat unde eos molestias. Quisquam aperiam,
+                pariatur. Tempora, placeat ratione porro voluptate odit
+                minima.
+                </p>
+            </CDBTabPane>
+            <CDBTabPane tabId="2" role="tabpanel">
+                <p className="mt-2">
+                Quisquam aperiam, pariatur. Tempora, placeat ratione porro
+                voluptate odit minima. Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Nihil odit magnam minima,
+                soluta doloribus reiciendis molestiae placeat unde eos
+                molestias.
+                </p>
+                <p>
+                Quisquam aperiam, pariatur. Tempora, placeat ratione porro
+                voluptate odit minima. Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Nihil odit magnam minima,
+                soluta doloribus reiciendis molestiae placeat unde eos
+                molestias.
+                </p>
+            </CDBTabPane>
+            <CDBTabPane tabId="3" role="tabpanel">
+                <p className="mt-2">
+                Quisquam aperiam, pariatur. Tempora, placeat ratione porro
+                voluptate odit minima. Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Nihil odit magnam minima,
+                soluta doloribus reiciendis molestiae placeat unde eos
+                molestias.
+                </p>
+            </CDBTabPane>
+        </CDBTabContent>
+    </CDBContainer>
+  );
+};
+
+export default Tabs;
+```
+
+<i/>
+
+## Tab with Icons
+
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+
+![React Bootstrap Tab With Icons ](https://imgur.com/VPYMDeL.gif)
+
+```js
+import React, { useState } from "react";
+import { CDBNav, CDBTabLink, CDBTabContent, CDBTabPane, CDBContainer, CDBIcon } from "cdbreact";
+
+const Tabs = () => {
+
+  const [item1, setItem1] = useState("1");
+
+  const toggle = (tab) => {
+    if (item1 !== tab) {
+      setItem1(tab)
+    }
+  };
+    
+  return (
+        <CDBContainer>
+            <CDBNav className="nav-tabs mt-5 nav-justified">
+            <CDBTabLink
+                link
+                to="#"
+                active={item1 === "1"}
+                onClick={() => toggle("1")}
+                role="tab"
+            >
+                <CDBIcon icon="bomb" className="mr-2" />
+                Label 1
+            </CDBTabLink>
+
+            <CDBTabLink
+                link
+                to="#"
+                active={item1 === "2"}
+                onClick={() => toggle("2")}
+                role="tab"
+            >
+                <CDBIcon icon="bomb" className="mr-2" />
+                Label 2
+            </CDBTabLink>
+            <CDBTabLink
+                link
+                to="#"
+                active={item1 === "3"}
+                onClick={() => toggle("3")}
+                role="tab"
+            >
+                <CDBIcon icon="bomb" className="mr-2" />
+                Label 3
+            </CDBTabLink>
+            </CDBNav>
+            <CDBTabContent activeItem={item1}>
+                <CDBTabPane tabId="1" role="tabpanel">
+                    <p className="mt-2">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Nihil odit magnam minima, soluta doloribus reiciendis
+                    molestiae placeat unde eos molestias. Quisquam aperiam,
+                    pariatur. Tempora, placeat ratione porro voluptate odit
+                    minima.
+                    </p>
+                </CDBTabPane>
+                <CDBTabPane tabId="2" role="tabpanel">
+                    <p className="mt-2">
+                    Quisquam aperiam, pariatur. Tempora, placeat ratione porro
+                    voluptate odit minima. Lorem ipsum dolor sit amet,
+                    consectetur adipisicing elit. Nihil odit magnam minima,
+                    soluta doloribus reiciendis molestiae placeat unde eos
+                    molestias.
+                    </p>
+                    <p>
+                    Quisquam aperiam, pariatur. Tempora, placeat ratione porro
+                    voluptate odit minima. Lorem ipsum dolor sit amet,
+                    consectetur adipisicing elit. Nihil odit magnam minima,
+                    soluta doloribus reiciendis molestiae placeat unde eos
+                    molestias.
+                    </p>
+                </CDBTabPane>
+                <CDBTabPane tabId="3" role="tabpanel">
+                    <p className="mt-2">
+                    Quisquam aperiam, pariatur. Tempora, placeat ratione porro
+                    voluptate odit minima. Lorem ipsum dolor sit amet,
+                    consectetur adipisicing elit. Nihil odit magnam minima,
+                    soluta doloribus reiciendis molestiae placeat unde eos
+                    molestias.
+                    </p>
+                </CDBTabPane>
+            </CDBTabContent>
+        </CDBContainer>
+  );
+};
+
+export default Tabs;
+
+```
+
+# API
+
+In this section you will find advanced information about the Tab component. You will find out which modules are required, what are the possibilities of configuring the component, and what events and methods you can use to work with it.
+
+
+
+## API Reference: Contrast React Bootstrap Tab Content Properties
+
+The table below shows the configuration options of the CDBTabContent component.
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       |              | Sets custom classes, use class `card` to achieve card-like effect (you can use Card subcomponents inside)	      |     <CDBTabContent className="card" ... />  |
+| activeItem     | Any       |              |  	Active TabPane id - use this prop to control the component | <CDBTabContent activeItem="activeTab" ... />  |
+
+## API Reference: Contrast React Bootstrap Tab Pane Properties
+
+The table below shows the configuration options of the CDBTabPane component.
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       |              | Sets custom classes    |     <CDBTabPane className="customClass" ... />  |
+| tabId          | Any       |              |  Indicates active pane	| <CDBTabPane tabId="Tab1" ... />  |
+
+
+

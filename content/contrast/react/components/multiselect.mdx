@@ -1,0 +1,218 @@
+---
+title: "Multiselect"
+metaTitle: "Multiselect Component for React Bootstrap"
+metaDescription: "React Bootstrap Multiselect is a form control that displays a collapsible list of numerous values after the user clicks it."
+
+---
+
+import React from "react";
+import {Link} from "gatsby";
+import imgUrl from "./images/multiselect1.png";
+import imgUrl2 from "./images/multiselect2.png";
+import imgUrl3 from "./images/multiselect3.png";
+import imgUrl4 from "./images/multiselect4.png";
+
+# React Bootstrap Multiselect
+
+React Bootstrap Multiselect is a form control that displays a collapsible list of numerous values after the user clicks it. It's appropriate for usage in forms, menus, and surveys. They let you to move through alternatives with the `↑`  and `↓` arrow keys, and choose the required option using the `↵` key.
+
+## Importing the React Bootstrap Multiselect Component
+
+
+Begin by importing 'CDBMultiselect' into your project to use the Contrast React Bootstrap Multiselect component.
+
+```javascript
+import { CDBMultiselect } from "cdbreact";
+```
+
+
+<i/>
+
+## Default Multiselect
+
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+
+The `options` argument in the React Bootstrap Multiselect Component accepts an object reflecting a user's multiple choices.
+
+<img src={imgUrl} alt="Contrast React Bootstrap Default Multiselect Component"/>
+
+
+```javascript
+import React from "react";
+import { CDBMultiselect, CDBContainer } from "cdbreact";
+
+export const Multiselect = () => {
+
+// "showing" key:value pair optional
+const option = [
+    {
+      text: "Value 1",
+      showing: true,
+    },
+    {
+      text: "Second Value",
+      showing: true,
+    },
+    {
+      text: "Third Value",
+      showing: true,
+    },
+    {
+      text: "Final Value",
+      showing: true,
+    },
+  ];
+
+  return (
+    <CDBContainer>
+            <CDBMultiselect options={option} selected="Value" />
+    </CDBContainer>
+  );
+};
+```
+<i/>
+
+## Multiselect with Search
+
+To enable users to search for these choices, use the `search options` parameter.
+
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+
+<img src={imgUrl2} alt="Contrast React Bootstrap Multiselect with Search Component"/>
+
+
+```javascript
+import React from "react";
+import { CDBMultiselect, CDBContainer } from "cdbreact";
+
+export const Multiselect = () => {
+
+// "showing" key:value pair optional
+const option = [
+    {
+      text: "Value 1",
+      showing: true,
+    },
+    {
+      text: "Second Value",
+      showing: true,
+    },
+    {
+      text: "Third Value",
+      showing: true,
+    },
+    {
+      text: "Final Value",
+      showing: true,
+    },
+  ];
+
+  return (
+    <CDBContainer>
+        <CDBMultiselect color="secondary" search options={option} selected="Value" />
+    </CDBContainer>
+  );
+};
+```
+
+<i/>
+
+## Multiselect with Submit Option
+
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+
+<img src={imgUrl3} alt="Contrast React Bootstrap Multiselect with Submit Option Component"/>
+
+
+```javascript
+import React from "react";
+import { CDBMultiselect, CDBContainer } from "cdbreact";
+
+export const Multiselect = () => {
+
+// "showing" key:value pair optional
+const option = [
+    {
+      text: "Value 1",
+      showing: true,
+    },
+    {
+      text: "Second Value",
+      showing: true,
+    },
+    {
+      text: "Third Value",
+      showing: true,
+    },
+    {
+      text: "Final Value",
+      showing: true,
+    },
+  ];
+
+  return (
+    <CDBContainer>
+        <CDBMultiselect color="dark" submit options={option} selected="Value" />
+    </CDBContainer>
+  );
+};
+```
+<i/>
+
+## Multiselect with Limited Options
+
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+
+<img src={imgUrl4} alt="React Bootstrap Multiselect with Limited Option Component"/>
+
+
+```javascript
+import React from "react";
+import { CDBMultiselect, CDBContainer } from "cdbreact";
+
+export const Multiselect = () => {
+
+// "showing" key:value pair optional
+const option = [
+    {
+      text: "Value 1",
+      showing: true,
+    },
+    {
+      text: "Second Value",
+      showing: true,
+    },
+    {
+      text: "Third Value",
+      showing: true,
+    },
+    {
+      text: "Final Value",
+      showing: true,
+    },
+  ];
+
+  return (
+    <CDBContainer>
+        <CDBMultiselect color="danger" limitedOptions options={option} selected="Value" />
+    </CDBContainer>
+  );
+};
+```
+
+## Contrast React Bootstrap Multiselect Props
+
+The props you get to use with the React Bootstrap Multiselect component will be expanded upon in this section. You'll learn what these props do, how to utilize them in your code, and what their default values are.
+
+Other `CDBMultiselect` component prop options are listed in the table below.
+
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       | Adds custom classes             |Adds custom classes	      |     <CDBMultiselect className="myClass" ... />  |
+| tag            | String       | div          | Changes default tag | <CDBMultiselect tag="div" ... />  |
+| search         | Boolean      | false        |  	Search element will appear as the first child of select. | <CDBMultiselect search .../>  |
+| color          | String       | primary      |  	Sets colorful hover effect on select options. | <CDBMultiselect color="secondary" ... />  |
+| options        | array of objects |          | Sets options array as source of data. This property is used in alternative Select version. | <CDBMultiselect options={option} ... />  |
+| selected       | String       |              |  	Set default select text content. | <CDBMultiselect selected="choose_option" ... />  |
+

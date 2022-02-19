@@ -1,0 +1,245 @@
+---
+title: "Notification"
+metaTitle: "Notification Component for React Bootstrap"
+metaDescription: "React Bootstrap notification is a component that allows you to send visitors to your website simple and easily customizable alert messages."
+---
+
+import React from "react";
+import {Link} from "gatsby";
+import notification from "./images/notification1.png";
+import notification2 from "./images/notification2.png";
+import notification3 from "./images/notification3.png";
+import notification4 from "./images/notification4.png";
+
+# React Bootstrap Notification
+
+React Bootstrap notification is a component that allows you to send visitors to your website simple and easily customizable alert messages.
+Toasts are little notifications that are meant to look like the push notifications that have become popular on mobile and desktop platforms. Because they're made with flexbox, they're simple to align and place.
+
+## Importing the React Bootstrap Notification Component
+
+Start by importing `CDBNotification` into your project to use the Contrast React Bootstrap Notification component.
+
+```javascript
+import { CDBNotification } from "cdbreact";
+```
+
+<i/>
+
+## Custom Notification
+
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+
+There are a few options for the React Bootstrap Notification. The `show` option makes your notification component visible, while the `fade` property makes your notification component fade out as it leaves your screen.
+
+To alter the color of the icon in your notification, we add a text value to the `iconClassName` prop on our `CDBNotification` component, then attach the color we want it to have (e.g., primary, secondary, etc.). `iconClassName = "text-primary" is an example`.
+
+<img src={notification} alt="Contrast React Bootstrap Default Notification"/>
+
+
+```javascript
+import React from "react";
+import { CDBNotification, CDBContainer } from "cdbreact";
+
+export const Notification = () => {
+  return (
+    <CDBContainer>
+          <CDBNotification
+            show
+            fade
+            autohide={2}
+            title="Contrast"
+            message="Hello, world! This is a primary message."
+            text="11 mins ago"
+          />
+          <CDBNotification
+            show
+            fade
+            iconClassName="text-primary"
+            title="Contrast"
+            message="Hello, world! This is a primary message."
+            text="11 mins ago"
+          />
+          <CDBNotification
+            show
+            fade
+            iconClassName="text-secondary"
+            title="Contrast"
+            message="Hello, world! This is a primary message."
+            text="11 mins ago"
+          />
+    </CDBContainer>
+  );
+};
+```
+<i/>
+
+## Notification with Hidden Message
+
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+
+<img src={notification2} alt="Contrast React Bootstrap Notification with Hidden Message "/>
+
+
+```javascript
+import React from "react";
+import { CDBNotification, CDBContainer } from "cdbreact";
+
+export const Notification = () => {
+  return (
+    <CDBContainer>
+          <CDBNotification
+            show
+            fade
+            hideMessage
+            autohide={5}
+            title="Contrast"
+            message="Hello, world! This is a primary message."
+            text="11 mins ago"
+          />
+          <CDBNotification
+            show
+            fade
+            hideMessage
+            iconClassName="text-success"
+            title="Contrast"
+            message="Hello, world! This is a primary message."
+            text="11 mins ago"
+          />
+          <CDBNotification
+            show
+            fade
+            hideMessage
+            iconClassName="text-warning"
+            title="Contrast"
+            message="Hello, world! This is a primary message."
+            text="11 mins ago"
+          />
+    </CDBContainer>
+  );
+};
+```
+
+<i/>
+
+## Notification with Icons
+
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+
+You can customize the icon on your notification using the Contrast React Bootstrap Notification component. Use the `icon` prop to do so.
+
+<img src={notification3} alt="Contrast React Bootstrap Notification with Icons"/>
+
+
+```javascript
+import React from "react";
+import { CDBNotification, CDBContainer } from "cdbreact";
+
+export const Notification = () => {
+  return (
+    <CDBContainer>
+            <CDBNotification
+              show
+              fade
+              title="Contrast"
+              icon="award"
+              message="Hello, world! This is a primary message."
+              text="11 mins ago"
+            />
+            <CDBNotification
+              show
+              fade
+              iconClassName="text-primary"
+              title="Contrast"
+              icon="bus"
+              message="Hello, world! This is a primary message."
+              text="11 mins ago"
+            />
+
+            <CDBNotification
+              show
+              fade
+              iconClassName="text-danger"
+              title="Contrast"
+              icon="burn"
+              message="Hello, world! This is a primary message."
+              text="11 mins ago"
+            />
+            <CDBNotification
+              show
+              fade
+              iconClassName="text-success"
+              icon="car-crash"
+              title="Contrast"
+              message="Hello, world! This is a primary message."
+              text="11 mins ago"
+            />
+    </CDBContainer>
+  );
+};
+```
+<i/>
+
+## Positioning
+
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+
+The `position` parameter specifies where the notification should appear on the webpage.
+
+<img src={notification4} alt="Contrast React Bootstrap Notification with Positioning "/>
+
+
+```javascript
+import React from "react";
+import { CDBNotification, CDBContainer } from "cdbreact";
+
+export const Notification = () => {
+  return (
+    <CDBContainer className="position-relative">
+            <CDBNotification
+              show
+              fade
+              title="Contrast"
+              message="Hello, world! This is a positioned notification."
+              text="11 mins ago"
+              position="top-left"
+            />
+            <CDBNotification
+              show
+              fade
+              title="Contrast"
+              message="Hello, world! This is a positioned notification."
+              text="11 mins ago"
+              position="bottom-right"
+            />
+    </CDBContainer>
+  );
+};
+```
+
+## Contrast React Bootstrap Notification Props
+
+
+The props you get to use with the React Bootstrap Notification component will be elaborated upon in this section. You'll learn what these props do, how to utilize them in your code, and what their default values is.
+
+Other prop settings for the 'CDBNotification' component are listed in the table below.
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| bodyClassName  | String       |              |Adds custom className to the `body` section of notification component      |     <CDBNotification bodyClassName="p-5 font-weight-bold" .../>  |
+| bodyColor      | String       |              | Set color to the `body` section of notification component      |     <CDBNotification bodyColor="black" .../>  |
+| ClassName      | String       |              | Adds custom classes to the wrapper  |     <CDBNotification ClassName="stylish-color-dark" .../>  |
+| closeClassName | String       | text-dark    | Adds custom classes to the Close button  |     <CDBNotification closeClassName="blue-grey-text" .../>  |
+| tag            | function or String       | div          | Changes default tag | <CDBNotification tag="div" ... />  |
+| fade           | Boolean      | false        | Adds a fade effect when you close the notification | <CDBNotification fade .../>  |
+| hideMessage   | Boolean      | false        | Hides messages in the component | <CDBNotification hideMessage .../> |  |
+| autohide       | Number       |              | Sets time in ms when box hide. `0 = infinity` | <CDBNotification autoHide={3000} .../>  |
+| icon           | String       | square       |  	Sets a custom icon | <CDBNotification icon="bell" ... />  |
+| iconClassName  | String       |              |  	Adds custom classes to the Icon | <CDBNotification iconClassName="green-text" ... />  |
+| message        | String       |              |  Sets message of the notification | <CDBNotification message="Hello there! This is a toast message" ... />  |
+| position       | String       |              | One of top-right, top-center, top-left, bottom-right, bottom-center, bottom-left | <CDBNotification position="top-right" ... />  |
+| show           | Boolean      | false        |  	Shows your component. If you do not use this setting, your component will exist, but it will be hidden.  | <CDBNotification show .../>  |
+| text           | String       |              |   	Sets text of the notification | <CDBNotification text="11 minutes ago" ... />  |
+| title          | String       |              |  Set header text of the notification | <CDBNotification title="Someone sent you an email" ... />  |
+| titleClassName | String       |              |  Adds custom classes to the title text | <CDBNotification titleClassName="elegant-color-dark-white-text" ... />  |
+| titleColor     | String       |              |  Sets the color of the title | <CDBNotification titleColor="white" ... />  |

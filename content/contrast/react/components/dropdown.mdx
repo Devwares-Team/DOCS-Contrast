@@ -1,0 +1,660 @@
+---
+title: "DropDown"
+metaTitle: "DropDown Component for React Bootstrap"
+metaDescription: "The React Bootstrap Dropdown is a toggleable menu that provides multiple links or content. It enables the creation of complex navigation and link categorization"
+---
+
+import React from "react";
+
+# React Bootstrap DropDown
+
+The React Bootstrap Dropdown is a toggleable menu that provides multiple links or content. It enables the creation of complex navigation and link categorization.
+
+Dropdowns are key parts in more complex navigation systems, allowing you to place all of the most relevant links in our menu bar (or other component acting as navigation - such as SideNav).
+
+CDB dropdowns are not only highly practical, but they are also visually appealing. After they open a link, it gives them these distinctive Material Design features, such as shadows, dynamic colors, and attractive waves.
+
+They are toggled by clicking rather than hovering; this is an intentional design choice. Why?
+
+Because CDB is a "mobile first" framework, we avoid mixing functional elements with interaction through hovering because it degrades the User Experience of mobile device users.
+
+
+
+By adjusting props and prop values, we can give our dropdown component several predefined styles with the React Bootstrap DropDown component. In the examples below, we explored with the 'color' prop (which changes the dropdown's background color), the `dropup` prop (which changes the caret symbol to face upwards), the `dropleft` prop (which changes the caret symbol to face left), the `dropright` prop (which changes the caret symbol to face right), and the `size` prop ( this prop can have values ranging from small to large ).
+
+## Importing the React Bootstrap DropDown Component
+
+
+To begin using the Contrast React Bootstrap DropDown component, import `CDBDropDown` into your project.
+```javascript
+import { CDBDropDown } from "cdbreact";
+```
+
+Then we import `CDBDropDownMenu`, which holds the text we want to show in our dropdown, and `CDBDropDownToggle`, which is the caret that toggles our dropdown.
+
+```javascript
+import { CDBDropDown, CDBDropDownMenu, CDBDropDownItem, CDBDropDownToggle } from "cdbreact";
+```
+
+
+## Dark Toggle Bar
+
+
+<div class="container">
+  <div class="dropdown">
+    <button
+      class="btn btn-dark dropdown-toggle"
+      type="button"
+      id="dropdownMenuButton"
+      data-toggle="dropdown"
+      aria-expanded="false"
+    >
+      Dark Toggle Bar
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <li><span class="dropdown-item">This is the toggle menu</span></li>
+    </ul>
+  </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBDropDown, CDBDropDownMenu, CDBDropDownToggle, CDBContainer } from "cdbreact";
+
+const DropDown = () => {
+
+  return (
+    <CDBContainer>
+                <CDBDropDown>
+                  <CDBDropDownToggle color="dark" caret>
+                    Dark Toggle Bar
+                  </CDBDropDownToggle>
+                  <CDBDropDownMenu>
+                    This is the toogle menu
+                  </CDBDropDownMenu>
+                </CDBDropDown>
+    </CDBContainer>
+  );
+};
+
+export default DropDown;
+```
+## Primary Toggler
+
+<div class="container">
+  <div class="dropdown">
+    <button
+      class="btn btn-primary dropdown-toggle"
+      type="button"
+      id="dropdownMenuButton"
+      data-toggle="dropdown"
+      aria-expanded="false"
+    >
+      Primary Toggle Bar
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <li><span class="dropdown-item">This is the toggle menu with caret</span></li>
+    </ul>
+  </div>
+</div>
+
+
+```javascript
+import React from "react";
+import { CDBDropDown, CDBDropDownMenu, CDBDropDownToggle, CDBContainer } from "cdbreact";
+
+const DropDown = () => {
+
+  return (
+    <CDBContainer>
+                <CDBDropDown>
+                  <CDBDropDownToggle color="primary" caret dropdown>
+                    Primary Toggle Bar
+                  </CDBDropDownToggle>
+                  <CDBDropDownMenu>
+                    This is the toogle menu with caret
+                  </CDBDropDownMenu>
+                </CDBDropDown>
+    </CDBContainer>
+  );
+};
+
+export default DropDown;
+```
+## Secondary Toggle Bar
+
+
+<div class="container">
+  <div class="dropdown dropright">
+    <button
+      class="btn btn-secondary dropdown-toggle"
+      type="button"
+      id="dropdownMenuButton"
+      data-toggle="dropdown"
+      aria-expanded="false"
+    >
+      Secondary Toggle Bar as Nav
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <li><span class="dropdown-item">This is the toggle menu to the right</span></li>
+    </ul>
+  </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBDropDown, CDBDropDownMenu, CDBDropDownToggle, CDBContainer } from "cdbreact";
+
+const DropDown = () => {
+
+  return (
+    <CDBContainer>
+                <CDBDropDown>
+                  <CDBDropDownToggle color="secondary" caret dropright>
+                    Secondary Toggle Bar as nav
+                  </CDBDropDownToggle>
+                  <CDBDropDownMenu dropright>
+                    This is the toogle menu to the right
+                  </CDBDropDownMenu>
+                </CDBDropDown>
+    </CDBContainer>
+  );
+};
+
+export default DropDown;
+```
+## Danger Toggle Bar
+
+<div class="container">
+  <div class="dropdown dropup">
+    <button
+      class="btn btn-danger dropdown-toggle"
+      type="button"
+      id="dropdownMenuButton"
+      data-toggle="dropdown"
+      aria-expanded="false"
+    >
+      Danger Toggle Bar
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <li><span class="dropdown-item">This is the toggle menu to the top</span></li>
+    </ul>
+  </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBDropDown, CDBDropDownMenu, CDBDropDownToggle, CDBContainer } from "cdbreact";
+
+const DropDown = () => {
+
+  return (
+    <CDBContainer>
+                <CDBDropDown style={{ margin: "30px 0" }}>
+                  <CDBDropDownToggle color="danger" caret dropup>
+                    Danger Toggle Bar
+                  </CDBDropDownToggle>
+                  <CDBDropDownMenu dropup>
+                    This is the toogle menu to the top
+                  </CDBDropDownMenu>
+                </CDBDropDown>
+    </CDBContainer>
+  );
+};
+
+export default DropDown;
+```
+## Success Toggle Bar
+
+<div class="container">
+  <div class="dropdown dropleft">
+    <button
+      class="btn btn-success dropdown-toggle"
+      type="button"
+      id="dropdownMenuButton"
+      data-toggle="dropdown"
+      aria-expanded="false"
+    >
+      Success Toggle Bar
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <li><span class="dropdown-item">This is the toggle menu to the left</span></li>
+    </ul>
+  </div>
+</div>
+
+
+```javascript
+import React from "react";
+import { CDBDropDown, CDBDropDownMenu, CDBDropDownToggle, CDBContainer } from "cdbreact";
+
+const DropDown = () => {
+
+  return (
+    <CDBContainer>
+                <CDBDropDown style={{ margin: "30px 0" }}>
+                  <CDBDropDownToggle color="success" caret dropleft>
+                    Success Toggle Bar
+                  </CDBDropDownToggle>
+                  <CDBDropDownMenu dropleft>
+                    This is the toggle menu to the left
+                  </CDBDropDownMenu>
+                </CDBDropDown>
+    </CDBContainer>
+  );
+};
+
+export default DropDown;
+```
+## Large DropDown
+
+The `CDBDropDownToggle` component takes in a `size` prop, giving the `size` prop a value of `lg` gives the DropDown extra padding all around.
+
+<div class="container">
+  <div class="dropdown">
+    <button
+      class="btn btn-dark btn-lg dropdown-toggle"
+      type="button"
+      id="dropdownMenuButton"
+      data-toggle="dropdown"
+      aria-expanded="false"
+    >
+      Large Dark Toggle Bar
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <li><span class="dropdown-item">This is the toggle menu to the right</span></li>
+    </ul>
+  </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBDropDown, CDBDropDownMenu, CDBDropDownToggle, CDBContainer } from "cdbreact";
+
+const DropDown = () => {
+
+  return (
+    <CDBContainer>
+                <CDBDropDown>
+                  <CDBDropDownToggle color="dark" size="lg">
+                    Large Dark Toggle Bar
+                  </CDBDropDownToggle>
+                  <CDBDropDownMenu dropright>
+                    This is the toogle menu to the right
+                  </CDBDropDownMenu>
+                </CDBDropDown>
+    </CDBContainer>
+  );
+};
+
+export default DropDown;
+```
+## Small Dropdown
+
+<div class="container">
+  <div class="dropdown dropright">
+    <button
+      class="btn btn-secondary btn-sm dropdown-toggle"
+      type="button"
+      id="dropdownMenuButton"
+      data-toggle="dropdown"
+      aria-expanded="false"
+    >
+      small secondary toggle bar
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <li><span class="dropdown-item">cold place</span></li>
+      <div class="dropdown-divider"></div>
+      <li><span class="dropdown-item">First Item in Cold Place</span></li>
+      <li><span class="dropdown-item">second</span></li>
+      <li><span class="dropdown-item">second</span></li>
+      <li><span class="dropdown-item">second</span></li>
+      <li><span class="dropdown-item"><a href="/docs/contrast/react/components/alert">Alert</a></span></li>
+    </ul>
+  </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBDropDown, CDBDropDownItem, CDBDropDownMenu, CDBDropDownToggle, CDBContainer } from "cdbreact";
+
+const DropDown = () => {
+
+  return (
+    <CDBContainer>
+                <CDBDropDown>
+                  <CDBDropDownToggle color="secondary" size="sm">
+                    small secondary toggle bar
+                  </CDBDropDownToggle>
+                  <CDBDropDownMenu dropright>
+                    <CDBDropDownItem header>cold place</CDBDropDownItem>
+                    <CDBDropDownItem divider />
+                    <CDBDropDownItem disabled>
+                      First Item in cold place
+                    </CDBDropDownItem>
+                    <CDBDropDownItem disabled>second</CDBDropDownItem>
+                    <CDBDropDownItem toggle>second</CDBDropDownItem>
+                    <CDBDropDownItem>second</CDBDropDownItem>
+                    <CDBDropDownItem>
+                      <CDBLink to="/alert"> Alert</CDBLink>
+                    </CDBDropDownItem>
+                  </CDBDropDownMenu>
+                </CDBDropDown>
+    </CDBContainer>
+  );
+};
+
+export default DropDown;
+```
+## Disabled Danger Toggle Bar
+
+<div class="container">
+  <div class="dropdown">
+    <button
+      class="btn btn-danger dropdown-toggle"
+      type="button"
+      id="dropdownMenuButton"
+      data-toggle="dropdown"
+      aria-expanded="false"
+    >
+      Disabled Danger Toggle Bar
+    </button>
+  </div>
+</div>
+
+
+```javascript
+import React from "react";
+import { CDBDropDown, CDBDropDownMenu, CDBDropDownToggle, CDBContainer } from "cdbreact";
+
+const DropDown = () => {
+
+  return (
+    <CDBContainer>
+                <CDBDropDown>
+                  <CDBDropDownToggle color="danger" disabled>
+                    Disabled Danger Toggle Bar
+                  </CDBDropDownToggle>
+                  <CDBDropDownMenu dropright>
+                    This is the toogle menu to the right
+                  </CDBDropDownMenu>
+                </CDBDropDown>
+    </CDBContainer>
+  );
+};
+
+export default DropDown;
+```
+## Menu with Header
+
+<div class="container">
+  <div class="dropdown">
+    <button
+      class="btn btn-secondary dropdown-toggle"
+      type="button"
+      id="dropdownMenuButton"
+      data-toggle="dropdown"
+      aria-expanded="false"
+    >
+      Dropdown
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <li><span class="dropdown-header">Cold place</span></li>
+      <li><span class="dropdown-item">First Item in Cold Place</span></li>
+      <li><span class="dropdown-item">second</span></li>
+      <li><span class="dropdown-item">second</span></li>
+    </ul>
+  </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBDropDown, CDBDropDownMenu, CDBDropDownItem, CDBDropDownToggle, CDBContainer } from "cdbreact";
+
+const DropDown = () => {
+
+  return (
+    <CDBContainer>
+                <CDBDropDown>
+                  <CDBDropDownToggle color="secondary">
+                    DropDown
+                  </CDBDropDownToggle>
+                  <CDBDropDownMenu dropright>
+                    <CDBDropDownItem header>Cold place</CDBDropDownItem>
+                    <CDBDropDownItem>
+                      First Item in cold place
+                    </CDBDropDownItem>
+                    <CDBDropDownItem toggle>second</CDBDropDownItem>
+                    <CDBDropDownItem>second</CDBDropDownItem>
+                  </CDBDropDownMenu>
+                </CDBDropDown>
+    </CDBContainer>
+  );
+};
+
+export default DropDown;
+```
+## Menu with Divider
+
+<div class="container">
+  <div class="dropdown dropleft">
+    <button
+      class="btn btn-warning text-dark dropdown-toggle"
+      type="button"
+      id="dropdownMenuButton"
+      data-toggle="dropdown"
+      aria-expanded="false"
+    >
+      Dropdown
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <li><span class="dropdown-item"><a href="/docs/contrast/react/components/alert">Alert</a></span></li>
+      <div class="dropdown-divider"></div>
+      <li><span class="dropdown-item">First Item in Cold Place</span></li>
+      <li><span class="dropdown-item">second</span></li>
+      <li><span class="dropdown-item">second</span></li>
+    </ul>
+  </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBDropDown, CDBDropDownItem, CDBDropDownMenu, CDBDropDownToggle, CDBContainer } from "cdbreact";
+
+const DropDown = () => {
+
+  return (
+    <CDBContainer>
+                <CDBDropDown>
+                  <CDBDropDownToggle color="warning">
+                    DropDown
+                  </CDBDropDownToggle>
+                  <CDBDropDownMenu dropleft>
+                    <CDBDropDownItem>
+                      <CDBLink to="/alert"> Alert</CDBLink>
+                    </CDBDropDownItem>
+                    <CDBDropDownItem divider />
+                    <CDBDropDownItem>
+                      First Item in cold place
+                    </CDBDropDownItem>
+                    <CDBDropDownItem toggle>second</CDBDropDownItem>
+                    <CDBDropDownItem>second</CDBDropDownItem>
+                  </CDBDropDownMenu>
+                </CDBDropDown>
+    </CDBContainer>
+  );
+};
+
+export default DropDown;
+```
+## Disabled Menu Items
+
+<div class="container">
+  <div class="dropdown dropup">
+    <button
+      class="btn btn-success dropdown-toggle"
+      type="button"
+      id="dropdownMenuButton"
+      data-toggle="dropdown"
+      aria-expanded="false"
+    >
+      Dropdown
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <li><span class="dropdown-item">Cold place</span></li>
+      <li><span class="dropdown-item disabled">Disabled</span></li>
+      <li><span class="dropdown-item">Second</span></li>
+      <li><span class="dropdown-item">Last</span></li>
+    </ul>
+  </div>
+</div>
+
+
+```javascript
+import React from "react";
+import { CDBDropDown, CDBDropDownItem, CDBDropDownMenu, CDBDropDownToggle, CDBContainer } from "cdbreact";
+
+const DropDown = () => {
+
+  return (
+    <CDBContainer>
+                <CDBDropDown>
+                  <CDBDropDownToggle color="success">
+                    DropDown
+                  </CDBDropDownToggle>
+                  <CDBDropDownMenu dropup>
+                    <CDBDropDownItem>Cold place</CDBDropDownItem>
+                    <CDBDropDownItem disabled>
+                      Disabled
+                    </CDBDropDownItem>
+                    <CDBDropDownItem disabled>Second</CDBDropDownItem>
+                    <CDBDropDownItem>Last</CDBDropDownItem>
+                  </CDBDropDownMenu>
+                </CDBDropDown>
+    </CDBContainer>
+  );
+};
+
+export default DropDown;
+```
+## Active Menu Items
+
+
+<div class="container">
+  <div class="dropdown dropup">
+    <button
+      class="btn btn-dark dropdown-toggle"
+      type="button"
+      id="dropdownMenuButton"
+      data-toggle="dropdown"
+      aria-expanded="false"
+    >
+      Dropdown
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <li><span class="dropdown-item">Cold place</span></li>
+      <li><span class="dropdown-item active">Active</span></li>
+      <li><span class="dropdown-item">Second</span></li>
+      <li><span class="dropdown-item">Last</span></li>
+    </ul>
+  </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBDropDown, CDBDropDownItem, CDBDropDownMenu, CDBDropDownToggle, CDBContainer } from "cdbreact";
+
+const DropDown = () => {
+
+  return (
+    <CDBContainer>
+                <CDBDropDown>
+                  <CDBDropDownToggle color="dark">
+                    DropDown
+                  </CDBDropDownToggle>
+                  <CDBDropDownMenu dropup>
+                    <CDBDropDownItem>Cold place</CDBDropDownItem>
+                    <CDBDropDownItem active>
+                      Active
+                    </CDBDropDownItem>
+                    <CDBDropDownItem toggle>Second</CDBDropDownItem>
+                    <CDBDropDownItem>Last</CDBDropDownItem>
+                  </CDBDropDownMenu>
+                </CDBDropDown>
+    </CDBContainer>
+  );
+};
+
+export default DropDown;
+```
+
+# Contrast React Bootstrap DropDown Props
+
+This tutorial will expand on your previous knowledge of the props available with the React Bootstrap DropDown component. You'll learn what these properties do, what their default values are, and how to use them in your code.
+
+Other prop options for the `CDBDropDown` component are included in the table below.
+
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       |              |Adds custom classes	      |     <CDBDropDown className="myClass" ... />  |
+| tag            | String       | span          | Changes default dropdown tag | <CDBDropDown tag="p" ... />  |
+| dropup        | Boolean      | false        | Trigger dropdown menu above dropdown button | <CDBDropDown dropup .../>  |
+| dropleft        | Boolean      | false        | Trigger dropdown menu on the left side of dropdown button | <CDBDropDown dropleft .../>  |
+| dropright        | Boolean      | false        | Trigger dropdown menu on the right side of dropdown button | <CDBDropDown dropright .../>  |
+| toggle        | function      |         | Control dropdown on click | <CDBDropDown toggle={handleToggle} .../>  |
+
+
+## API Reference: Contrast React Bootstrap DropDownItem Properties
+
+The table below shows `CDBDropDownItem` component prop options.
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       |              |Adds custom classes	      |     <CDBDropDownItem className="myClass" ... />  |
+| tag            | String       | button          | Changes default dropdown tag | <CDBDropDownItem tag="button" ... />  |
+| active        | Boolean      | false        | Sets active state for of the menu item | <CDBDropDownItem active .../>  |
+| disable        | Boolean      | false        | Disables item and sets its color to light grey | <CDBDropDownItem disable .../>  |
+| divider        | Boolean      | false        | Places dividing line instead of content | <CDBDropDownItem divider .../>  |
+| header        | Boolean      | false        |  	Formats the item as a menu header (grey text, more padding) | <CDBDropDownItem header .../>  |
+| toggle        | Boolean      | false        |  Set to `false` to prevent from closing Dropdown on click	| <CDBDropDownItem toggle={false} .../>  |
+| onClick        | function      |         | Toggle dropdown on click | <CDBDropDownItem onClick={handleToggle} .../>  |
+
+## API Reference: Contrast DropDownMenu Properties
+
+The table below shows `CDBDropDownMenu` component prop options.
+
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       |              |Adds custom classes	      |     <CDBDropDownMenu className="myClass" ... />  |
+| tag            | String       | span          | Changes default dropdown tag | <CDBDropDownMenu tag="button" ... />  |
+| color        | String      | primary        | Changes DropdownMenuItem hover background color, accepts `["primary", "secondary", "success", "dark", "danger", "info", "warning"]` | <CDBDropDownMenu color="secondary" .../>  |
+| disable        | Boolean      | false        | Disables item and sets its color to light grey | <CDBDropDownMenu disable .../>  |
+| divider        | Boolean      | false        | Places dividing line instead of content | <CDBDropDownMenu divider .../>  |
+| header        | Boolean      | false        |  	Formats the item as a menu header (grey text, more padding) | <CDBDropDownMenu header .../>  |
+| toggle        | Boolean      | false        |  Set to `false` to prevent from closing Dropdown on click	| <CDBDropDownMenu toggle={false} .../>  |
+| onClick        | function      |         | Toggle dropdown on click | <CDBDropDownMenu onClick={handleToggle} .../>  |
+| dropup        | Boolean      | false        | Trigger dropdown menu above dropdown button | <CDBDropDownMenu dropup .../>  |
+| dropdown        | Boolean      | false        | Trigger dropdown menu below dropdown button | <CDBDropDownMenu dropdown .../>  |
+| dropleft        | Boolean      | false        | Trigger dropdown menu on the left side of dropdown button | <CDBDropDownMenu dropleft .../>  |
+| dropright        | Boolean      | false        | Trigger dropdown menu on the right side of dropdown button | <CDBDropDownMenu dropright .../>  |
+
+## API Reference: Contrast DropDownToggle Properties
+
+The table below shows `CDBDropDownToggle` component prop options.
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       |              |Adds custom classes	      |     <CDBDropDownToggle className="myClass" ... />  |
+| tag            | String       | button          | Changes default dropdown tag | <CDBDropDownToggle tag="button" ... />  |
+| color        | String      | primary        | Changes DropdownMenuItem hover background color, accepts `["primary", "secondary", "success", "dark", "danger", "info", "warning"]` | <CDBDropDownToggle color="secondary" .../>  |
+| size        | String      | |  	Determines size of the Dropdown button, available parameters: `["lg", "sm"]` (medium by default) | <CDBDropDownToggle size="sm" .../>  |
+| caret        | Boolean      | false        |  Inserts caret icon inside Dropdown button | <CDBDropDownToggle caret .../>  |
+| nav        | Boolean      | false        |   	Props required while using Dropdown within Navbar	| <CDBDropDownToggle nav .../>  |
+| dropup        | Boolean      | false        | Trigger dropdown menu above dropdown button | <CDBDropDownToggle dropup .../>  |
+| dropdown        | Boolean      | false        | Trigger dropdown menu below dropdown button | <CDBDropDownToggle dropdown .../>  |
+| dropleft        | Boolean      | false        | Trigger dropdown menu on the left side of dropdown button | <CDBDropDownToggle dropleft .../>  |
+| dropright        | Boolean      | false        | Trigger dropdown menu on the right side of dropdown button | <CDBDropDownToggle dropright .../>  |
+
+

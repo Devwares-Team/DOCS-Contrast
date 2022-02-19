@@ -1,0 +1,340 @@
+---
+title: "Badges"
+metaTitle: "Badge Component for React Bootstrap"
+metaDescription: "React Bootstrap Badges can be used to display notifications such as unread messages and missed phone calls."
+---
+
+import React from "react";
+import {Link} from "gatsby";
+
+
+# FIX code
+
+# React Bootstrap Badges
+
+React Bootstrap Badges are used to signal and display messages. React Bootstrap Badges can be used to display notifications such as unread messages and missed phone calls.
+
+## Importing the React Bootstrap Badge component
+
+To use the Contrast React Bootstrap Badge component, you start up by importing `CDBBadge` into your project.
+
+```javascript
+import { CDBBadge, CDBIcon } from "cdbreact";
+```
+
+## Default Contrast Badge
+
+Using relative font sizing and 'em' units, the Contrast React Bootstrap Badge scales to the size of the immediate parent element.
+
+<div class="container">
+  <span class="badge bg-primary">Primary</span>
+  <span class="badge bg-secondary">Secondary Badge</span>
+  <span class="badge bg-success">Success Badge</span>
+  <span class="badge bg-danger">Danger Badge</span>
+  <span class="badge bg-warning text-dark">Warning Badge</span>
+  <span class="badge bg-info">Info Badge</span>
+  <span class="badge bg-dark text-light">Dark Badge</span>
+</div>
+
+```javascript
+import React from "react";
+import { CDBBadge, CDBContainer } from "cdbreact";
+
+export const Badge = () => {
+  return (
+    <CDBContainer>
+        <CDBBadge color="primary">
+            Primary
+          </CDBBadge>
+          <CDBBadge color="secondary">
+            Secondary Badge
+          </CDBBadge>
+          <CDBBadge color="success">
+            Success Badge
+          </CDBBadge>
+          <CDBBadge color="danger">
+            Danger Badge
+          </CDBBadge>
+          <CDBBadge color="warning">
+            Warning Badge
+          </CDBBadge>
+          <CDBBadge color="info">
+            Info Badge
+          </CDBBadge>
+          <CDBBadge color="dark">
+            Dark Badge
+      </CDBBadge>
+    </CDBContainer>
+  );
+};
+```
+## Pill Badges
+
+You can set the value of the 'borderType' attribute to 'pill' using this React Bootstrap Badge. The badges become more rounded as a result of this change.
+
+<div class="container">
+  <span class="badge badge-pill bg-primary">Primary</span>
+  <span class="badge badge-pill bg-secondary">Secondary Badge</span>
+  <span class="badge badge-pill bg-success">Success Badge</span>
+  <span class="badge badge-pill bg-danger">Danger Badge</span>
+  <span class="badge badge-pill bg-warning text-dark">Warning Badge</span>
+  <span class="badge badge-pill bg-info">Info Badge</span>
+  <span class="badge badge-pill bg-dark text-light">Dark Badge</span>
+</div>
+
+```javascript
+import React from "react";
+import { CDBBadge, CDBContainer } from "cdbreact";
+
+export const Badge = () => {
+  return (
+    <CDBContainer>
+          <CDBBadge color="primary" borderType="pill">
+            Primary
+          </CDBBadge>
+          <CDBBadge color="secondary" borderType="pill">
+            Secondary Badge
+          </CDBBadge>
+          <CDBBadge color="success" borderType="pill">
+            Success Badge
+          </CDBBadge>
+          <CDBBadge color="danger" borderType="pill">
+            Danger Badge
+          </CDBBadge>
+          <CDBBadge color="warning" borderType="pill">
+            Warning Badge
+          </CDBBadge>
+          <CDBBadge color="info" borderType="pill">
+            Info Badge
+          </CDBBadge>
+          <CDBBadge color="dark" borderType="pill">
+            Dark Badge
+          </CDBBadge>
+    </CDBContainer>
+  );
+};
+```
+
+## Contextual Variations
+
+Use the'size' prop to specify how large or small your badge should be. The standard badge size is medium. We can check out the code and the contextual variations offered by this.
+
+
+
+<div class="container">
+  <span class="badge badge-lg bg-secondary">Large</span>
+  <span class="badge bg-primary">Normal</span>
+  <span class="badge badge-sm bg-success">Small</span>
+</div>
+
+```javascript
+import React from "react";
+import { CDBBadge, CDBContainer } from "cdbreact";
+
+export const Badge = () => {
+  return (
+    <CDBContainer>
+          <CDBBadge color="secondary" size="large">
+            Large
+          </CDBBadge>
+          <CDBBadge color="primary">Medium</CDBBadge>
+          <CDBBadge color="success" size="small">
+            Small
+          </CDBBadge>
+    </CDBContainer>
+  );
+};
+```
+
+## Flat Badges
+To remove the badge shadows from your badges, use the 'flat' attribute. Your badges will take on the appearance of the badges shown below if you use this characteristic.
+
+<div class="container">
+  <span class="badge badge-flat bg-primary">Primary</span>
+  <span class="badge badge-flat bg-secondary">Flat Secondary</span>
+  <span class="badge badge-flat bg-success">Flat Success</span>
+  <span class="badge badge-flat bg-danger">Flat Danger</span>
+  <span class="badge badge-flat bg-warning text-dark">Flat Warning</span>
+  <span class="badge badge-flat bg-info">Flat Info</span>
+  <span class="badge badge-flat bg-dark text-light">Flat Dark</span>
+</div>
+
+```javascript
+import React from "react";
+import { CDBBadge, CDBContainer } from "cdbreact";
+
+export const Badge = () => {
+  return (
+    <CDBContainer>
+          <CDBBadge color="primary" flat>
+            Flat Primary
+          </CDBBadge>
+          <CDBBadge color="secondary" flat>
+            Flat Secondary
+          </CDBBadge>
+          <CDBBadge color="success" flat>
+            Flat Success
+          </CDBBadge>
+          <CDBBadge color="danger" flat>
+            Flat Danger
+          </CDBBadge>
+          <CDBBadge color="warning" flat>
+            Flat Warning
+          </CDBBadge>
+          <CDBBadge color="info" flat>
+            Flat Info
+          </CDBBadge>
+          <CDBBadge color="dark" flat>
+            Flat Dark
+          </CDBBadge>
+    </CDBContainer>
+  );
+};
+```
+
+<i/>
+
+## Badges with Icons
+
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+
+The [CDBIcon](https://www.devwares.com/docs/contrast/react/components/icon) component is used in this tutorial. More information on how to use the Contrast React Bootstrap Icon in your project can be found in our documentation.
+
+We can have icons in our badges by nesting the 'CDBIcon' component in our 'CDBBadge' component.
+
+<div class="container">
+  <span class="badge bg-secondary"
+  ><i class="fab fa-facebook-f"></i
+  ></span>
+  <span class="badge bg-primary"><i class="fab fa-instagram"></i></span>
+  <span class="badge bg-success"><i class="fab fa-snapchat-ghost"></i></span>
+  <span class="badge bg-info"><i class="fa fa-anchor"></i></span>
+  <span class="badge bg-warning text-dark"><i class="fa fa-sun"></i></span>
+  <span class="badge bg-danger"><i class="fa fa-battery-three-quarters"></i></span>
+  <span class="badge bg-success"><i class="fab fa-btc"></i></span>
+  <span class="badge bg-secondary"><i class="fa fa-heart"></i></span>
+  <span class="badge bg-danger"><i class="fab fa-apple"></i></span>
+  <span class="badge bg-primary text-light"><i class="fa fa-users"></i></span>
+</div>
+
+```javascript
+import React from "react";
+import { CDBBadge, CDBIcon, CDBContainer } from "cdbreact";
+
+export const Badge = () => {
+  return (
+    <CDBContainer>
+          <CDBBadge color="secondary">
+            <CDBIcon fab icon="facebook-f" />
+          </CDBBadge>
+          <CDBBadge color="primary">
+            <CDBIcon fab icon="instagram" />
+          </CDBBadge>
+          <CDBBadge color="success">
+            <CDBIcon fab icon="snapchat-ghost" />
+          </CDBBadge>
+          <CDBBadge color="info">
+            <CDBIcon icon="anchor" />
+          </CDBBadge>
+          <CDBBadge color="warning">
+            <CDBIcon far icon="sun" />
+          </CDBBadge>
+          <CDBBadge color="danger">
+            <CDBIcon icon="battery-three-quarters" />
+          </CDBBadge>
+          <CDBBadge color="success">
+            <CDBIcon fab icon="btc" size="large" />
+          </CDBBadge>
+          <CDBBadge borderType="pill" color="secondary" size="large">
+            <CDBIcon icon="heart" />
+          </CDBBadge>
+          <CDBBadge borderType="pill" color="danger">
+            <CDBIcon fab icon="apple" />
+          </CDBBadge>
+          <CDBBadge borderType="pill" color="primary" size="large">
+            <CDBIcon icon="users" />
+          </CDBBadge>
+    </CDBContainer>
+  );
+};
+```
+
+<i/>
+
+## Rounded Badges with Icons
+
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+
+You can use these rounded pages with icons on your projects as a pro component. The pages in your projects will look like this.
+  <div class="container">
+    <span class="badge badge-pill bg-secondary"
+    ><i class="fab fa-facebook-f"></i
+    ></span>
+    <span class="badge badge-pill bg-primary"><i class="fab fa-instagram"></i></span>
+    <span class="badge badge-pill bg-success"><i class="fab fa-snapchat-ghost"></i></span>
+    <span class="badge badge-pill bg-info"><i class="fa fa-anchor"></i></span>
+    <span class="badge badge-pill bg-warning text-dark"><i class="fa fa-sun"></i></span>
+    <span class="badge badge-pill bg-danger"><i class="fa fa-battery-three-quarters"></i></span>
+    <span class="badge badge-pill bg-success"><i class="fab fa-btc"></i></span>
+    <span class="badge badge-pill bg-secondary"><i class="fa fa-heart"></i></span>
+    <span class="badge badge-pill bg-danger"><i class="fab fa-apple"></i></span>
+    <span class="badge badge-pill bg-primary text-light"><i class="fa fa-users"></i></span>
+  </div>
+
+```javascript
+import React from "react";
+import { CDBBadge, CDBIcon, CDBContainer } from "cdbreact";
+
+export const Badge = () => {
+  return (
+    <CDBContainer>
+          <CDBBadge color="secondary">
+            <CDBIcon fab icon="facebook-f" />
+          </CDBBadge>
+          <CDBBadge color="primary">
+            <CDBIcon fab icon="instagram" />
+          </CDBBadge>
+          <CDBBadge color="success">
+            <CDBIcon fab icon="snapchat-ghost" />
+          </CDBBadge>
+          <CDBBadge color="info">
+            <CDBIcon icon="anchor" />
+          </CDBBadge>
+          <CDBBadge color="warning">
+            <CDBIcon far icon="sun" />
+          </CDBBadge>
+          <CDBBadge color="danger">
+            <CDBIcon icon="battery-three-quarters" />
+          </CDBBadge>
+          <CDBBadge color="success">
+            <CDBIcon fab icon="btc" size="large" />
+          </CDBBadge>
+          <CDBBadge borderType="pill" color="secondary" size="large">
+            <CDBIcon icon="heart" />
+          </CDBBadge>
+          <CDBBadge borderType="pill" color="danger">
+            <CDBIcon fab icon="apple" />
+          </CDBBadge>
+          <CDBBadge borderType="pill" color="primary" size="large">
+            <CDBIcon icon="users" />
+          </CDBBadge>
+    </CDBContainer>
+  );
+};
+```
+
+# Contrast React Bootstrap Badge Props
+
+The props you get to use with the Contrast React Bootstrap Badge component will be elaborated on in this section. You'll learn what these props do, how to utilize them, and what their default values are.
+
+The table below lists other prop options of the `CDBBadge` component.
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+|  className     | String       | Adds custom classes             |Adds custom classes	      |     <CDBBadge className="myClass" ... />  |
+| color          | String       | primary      | Determines badge color, accepts CDB predefined color classes: `primary` `secondary` `success` `danger` `warning` `info` `light` `dark` | <CDBBadge color="primary" ... />  |
+| flat           | Boolean      | false        | Adds flat effect to badge | <CDBBadge color="primary" flat .../>  |
+| size           | String       | medium       | Determines badge size, available values: `small` `medium` `large`, `medium` by default  | <CDBBadge color="secondary" size="large" .../>  |
+| borderType     | String       | box          | Determines the corners effect of the badge| <CDBBadge color="secondary" borderType="pill" .../> |
+| tag            | String       | span         | Changes default tag | <CDBBadge color="secondary" tag="span" .../> |
+

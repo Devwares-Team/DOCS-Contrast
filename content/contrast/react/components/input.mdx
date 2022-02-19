@@ -1,0 +1,300 @@
+---
+title: "Input"
+metaTitle: "Input Component for React Bootstrap"
+metaDescription: "React Bootstrap Input is a specific field that receives data from the user. "
+
+---
+
+import React from "react";
+import { Link } from "gatsby";
+
+# React Bootstrap Input
+
+React Bootstrap Input is a specific field that receives data from the user. It's primarily used in a variety of web-based forms.
+## Importing the React Bootstrap Input Component
+
+You begin by importing `CDBInput` into your project to use the Contrast React Bootstrap Input component.
+
+```javascript
+import { CDBInput } from "cdbreact";
+```
+
+## Default Input
+
+
+
+<div class="container">
+  <div class="cdb-form">
+    <input type="text" class="form-control" />
+    <label>Username</label>
+  </div>
+  <div class="cdb-form">
+    <input type="email" class="form-control" />
+    <label>Your Email</label>
+  </div>
+  <div class="cdb-form">
+    <input type="number" class="form-control" />
+  </div>
+  <div class="cdb-form">
+    <input type="text" class="form-control border-top-0 border-left-0 border-right-0" />
+  </div>
+  <div class="cdb-form">
+    <input type="text" class="form-control bg-light" />
+  </div>
+  <input type="checkbox"/>
+  <div class="cdb-form">
+    <textarea class="form-control" style="height:75px;"></textarea>
+  </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBInput, CDBContainer } from "cdbreact";
+
+export const Input = () => {
+  return (
+    <CDBContainer>
+          <CDBInput label="Username" />
+          <CDBInput hint="Your e-mail" type="email" />
+          <CDBInput type="number" />
+          <CDBInput material type="text" />
+          <CDBInput background type="text" />
+          <CDBInput type="checkbox" />
+          <CDBInput className="mt-5" type="textarea" />
+    </CDBContainer>
+  );
+};
+export default Input;
+```
+
+## Input Sizing
+
+<div class="container">
+  <div class="cdb-form form-sm">
+    <input type="email" class="form-control" />
+    <label>Your Email</label>
+  </div>
+  <div class="cdb-form form-lg">
+    <input type="number" class="form-control" />
+    <label>Your Number</label>
+  </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBInput, CDBContainer } from "cdbreact";
+
+export const Input = () => {
+  return (
+    <CDBContainer>
+          <CDBInput label="Your e-mail" type="email" size="sm" />
+          <CDBInput type="number" label="Your Number" size="lg" />
+    </CDBContainer>
+  );
+};
+export default Input;
+```
+
+## Input with icons
+
+
+<div class="container">
+  <div class="cdb-form form-lg">
+    <i class="fa fa-user prefix"></i>
+    <input type="text" class="form-control" />
+    <label>Username</label>
+  </div>
+  <div class="cdb-form form-lg">
+    <i class="fa fa-bell prefix"></i>
+    <input type="password" class="form-control" />
+    <label>Password</label>
+  </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBInput, CDBContainer } from "cdbreact";
+
+const Input = () => {
+  return (
+    <CDBContainer>
+          <CDBInput label="Username" type="text" icon="user"/>
+          <CDBInput label="Password" type="password" icon="bell"/>
+    </CDBContainer>
+  );
+};
+export default Input;
+```
+
+## Input with Label
+
+<div class="container">
+  <div class="cdb-form form-lg">
+    <input type="email" class="form-control border-top-0 border-left-0 border-right-0" />
+    <label>Your Email</label>
+  </div>
+  <div class="cdb-form form-lg">
+    <input type="number" class="form-control border-top-0 border-left-0 border-right-0" />
+    <label>Your Number</label>
+  </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBInput, CDBContainer } from "cdbreact";
+
+const Input = () => {
+  return (
+    <CDBContainer>
+          <CDBInput material label="Your e-mail" type="email" />
+          <CDBInput material type="number" label="Your Number" />
+    </CDBContainer>
+  );
+};
+export default Input;
+```
+
+## Placeholder
+
+<div class="container">
+  <div class="cdb-form form-lg">
+    <input type="email" class="form-control" placeholder="Your Email" />
+  </div>
+  <div class="cdb-form form-lg">
+    <input type="number" class="form-control" placeholder="Your Number" />
+  </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBInput, CDBContainer } from "cdbreact";
+
+const Input = () => {
+  return (
+    <CDBContainer>
+          <CDBInput hint="Your e-mail" type="email" />
+          <CDBInput type="number" hint="Your Number" />
+    </CDBContainer>
+  );
+};
+export default Input;
+```
+
+## Disabled Inputs
+
+<div class="container">
+  <div class="cdb-form form-lg">
+    <input type="email" class="form-control" disabled placeholder="Your e-mail" />
+  </div>
+  <div class="cdb-form form-lg">
+    <input type="number" class="form-control" disabled placeholder="Your Number" />
+  </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBInput, CDBContainer } from "cdbreact";
+
+const Input = () => {
+  return (
+    <CDBContainer>
+          <CDBInput hint="Your e-mail" type="email" disabled />
+          <CDBInput hint="Your Number" type="number" disabled />
+    </CDBContainer>
+  );
+};
+export default Input;
+```
+## Textarea
+
+  <div class="container">
+	  <div class="cdb-form">
+	    <textarea class="form-control" style="height:75px;"></textarea>
+	  	<label>Your Name</label>
+	  </div>
+	  <div class="cdb-form">
+	    <textarea class="form-control border-top-0 border-left-0 border-right-0" style="height:120px;"></textarea>
+	    <label>Your Story</label>
+	  </div>
+  </div>
+
+```javascript
+import React from "react";
+import { CDBInput, CDBContainer } from "cdbreact";
+
+const Input = () => {
+  return (
+    <CDBContainer>
+          <CDBInput label="Your name" type="textarea" />
+          <CDBInput
+            label="Your story"
+            type="textarea"
+            material
+            rows={5}
+            cols={10}
+          />
+    </CDBContainer>
+  );
+};
+export default Input;
+```
+## Background
+
+<div class="container">
+  <div class="cdb-form form-lg">
+    <input type="email" class="form-control bg-light" placeholder="Your Email" />
+  </div>
+  <div class="cdb-form form-lg">
+    <input type="number" class="form-control bg-light" placeholder="Your Number" />
+  </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBInput, CDBContainer } from "cdbreact";
+
+const Input = () => {
+  return (
+    <CDBContainer>
+          <CDBInput hint="Your e-mail" type="email" background />
+          <CDBInput type="number" hint="Your Number" background />
+    </CDBContainer>
+  );
+};
+export default Input;
+```
+
+# Contrast React Bootstrap Input Props
+
+This section will expand on the props available with the React Bootstrap Input component. You'll learn what these props do, how to utilize them, and what their default values are.
+
+Other prop options for the `CDBInput` component are listed in the table below
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       |              |Adds custom classes	      |     <CDBInput className="myClass" ... />  |
+| tag            | String       | div          | Changes default input tag | <CDBInput tag="input" ... />  |
+| containerClass     | String       |           | Adds custom class to wrapping div | <CDBInput containerClass="wrapper" ... />  |
+| error     | String       |           |  	Sets the error message for the labels data-error attribute | <CDBInput error="Ouch!" ... />  |
+| hint     | String       |           |  	Sets the placeholder for the Input | <CDBInput hint="Placeholder" ... />  |
+| value     | Number, Boolean or String       |           |  The value of the input element (use with the controlled input)	| <CDBInput value="I am controlled" onChange={this.handleChange} ... />  |
+| material        | Boolean      | false        | Changes component styles for material theme | <CDBInput material .../>  |
+| valueDefault     | Number or String       |           |  The default value of the input (use with the uncontrolled input)	| <CDBInput valueDefault="I am uncontrolled" ... />  |
+| id     | String       |           | Required! Set the id of the input element 	| <CDBInput id="myId" ... />  |
+| label     | String       |           | Add label to the component; you can attach jsx elements (f.e. links) 	| <CDBInput label="My custom input" ... />  |
+| labelClass     | String       |           | Add custom class to label | <CDBInput labelClass="My custom label class" ... />  |
+| labelId     | String       |           | Sets custom id to label | <CDBInput labelId="myId" ... /> |  |
+| size     | String       |      lg     | Changes size of the component; available `lg` and `sm` | <CDBInput size="lg" ... /> |  |
+| success     | String       |           | Sets the success message for the labels data-success attribute | <CDBInput success="Great!" ... /> |  |
+| type     | String       |  text         | The type of the input element | <CDBInput type="checkbox" ... /> |  |
+| inputRef     | Object or function       |           |  	Allows to attach React Ref to the input component; accepts only Callback Ref | <CDBInput inputRef={ref => this.myRef = ref } .../>  |
+| icon     | String       |           |  Adds font awesome icon	| <CDBInput icon="caret-right" ... />  |
+| iconBrand     | String       |           |  Use this property to set brand icon (`fab`)	| <CDBInput icon="twitter" iconBrand ... />  |
+| iconLight     | String       |           |  Use this property to set light icon (`fal`)	| <CDBInput icon="twitter" iconLight ... />  |
+| iconRegular     | String       |           |  Use this property to set regular icon (`far`)	| <CDBInput icon="twitter" iconRegular ... />  |
+| iconClass     | String       |           | Adds custom classes to icon element | <CDBInput icon="caret-right" iconClass="my-class" ... /> |  |
+| disable        | Boolean      | false        | Disables Input component | <CDBInput disabled .../>  |
+| group        | Boolean      | false        | Add .form-group class to the wrapping div | <CDBInput error .../>  |
+| filled        | Boolean      | false        | Add filled-in style to checkbox/radio button | <CDBInput type="checkbox" filled .../>  |
+| validate        | Boolean      | false        |  	Adds `.validate` class to the Input component | <CDBInput validate .../>  |
+| gap        | Boolean      | false        | Creates gap inside checkbox/radio button | <CDBInput type="checkbox" gap .../>  |

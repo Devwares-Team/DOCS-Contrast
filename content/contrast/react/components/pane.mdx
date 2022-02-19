@@ -1,0 +1,155 @@
+---
+title: "Pane"
+metaTitle: "Pane Component for React Bootstrap"
+metaDescription: "React Bootstrap Pane Component is part of a window that gives the user more information or quick access to common software functionality."
+---
+
+import React from "react";
+import {Link} from "gatsby";
+
+React Bootstrap Pane Component is part of a window that gives the user more information or quick access to common software functionality. A common example is a preview pane, a pane with a location etc.
+
+## Importing the React Bootstrap Pane Component
+
+You begin by importing `CDBPane` into your project to use the Contrast React Bootstrap Pane component.
+
+```javascript
+import { CDBPane } from "cdbreact";
+```
+
+<i/>
+
+
+## Pane with Location Marker
+
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+
+ You import the `CDBPanelTitle` component to write headings in your pane, the `CDBPanelText` component to write texts or messages in your pane, and the `CDBPaneImage` component for your pane images, in addition to the `CDBPane` component.
+
+
+We also import the [CDBIcon](https://www.devwares.com/docs/contrast/react/components/icon). We can have icons in our pane by nesting the `CDBIcon` in our `CDBPane`.
+
+<div class="container">
+  <div class="panel" style="width: 400px">
+    <div class="pane">
+      <img
+        class="pane-img"
+        src="https://media.istockphoto.com/photos/beautiful-woman-wearing-brown-curly-hairstyle-picture-id495006065?s=170x170"
+      />
+      <div class="ml-3">
+        <div class="font-weight-bold">Warren Briggs</div>
+        <p class="panel-text mb-0">Australia</p>
+      </div>
+      <p class="ml-auto mb-0 text-danger">
+        300m <i class="fas fa-map-marker-alt"></i>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+```javascript
+import React from "react";
+import { CDBPanel, CDBPane, CDBPanelTitle, CDBPanelText, CDBPaneImage, CDBIcon, CDBContainer } from "cdbreact";
+
+export const Pane = () => {
+  return (
+    <CDBContainer>
+            <CDBPanel style={{width:"400px"}}>
+              <CDBPane>
+                <CDBPaneImage size="md" src="https://media.istockphoto.com/photos/beautiful-woman-wearing-brown-curly-hairstyle-picture-id495006065?s=170x170" />
+                <div className="ml-3">
+                  <CDBPanelTitle>Warren Briggs</CDBPanelTitle>
+                  <CDBPanelText small>Australia</CDBPanelText>
+                </div>
+                <p className="ml-auto mb-0 text-danger">300m <CDBIcon fas icon="map-marker-alt" /></p>
+              </CDBPane>
+            </CDBPanel>
+    </CDBContainer>
+  );
+};
+```
+<i/>
+
+## Pane with Dropdown
+
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+
+The React Bootstrap Dropdown component is nestled in this tutorial area, [CDBDropDown](https://www.devwares.com/docs/contrast/react/components/dropdown), in the `CDBPane` component. , We now have dropdowns in our pane as a result of this.
+
+<div class="container">
+  <div class="panel" style="width: 400px">
+    <div class="pane">
+      <img
+        class="pane-img pane-md"
+        src="https://media.istockphoto.com/photos/beautiful-woman-wearing-brown-curly-hairstyle-picture-id495006065?s=170x170"
+      />
+      <div class="ml-3">
+        <div class="font-weight-bold">Warren Briggs</div>
+        <p class="panel-text mb-0">Breafast</p>
+      </div>
+      <div class="dropdown ml-auto">
+        <button
+          class="btn btn-white btn-flat dropdown-toggle dropdown-toggle-false mr-0"
+          type="button"
+          id="dropdownMenuButton"
+          data-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <li>
+            <a class="dropdown-item disabled" href="#">Edit Profile</a>
+          </li>
+          <li><a class="dropdown-divider" href="#"></a></li>
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Action 2</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBPane, CDBDropDownItem, CDBDropDown, CDBDropDownMenu, CDBDropDownToggle, CDBPanel, CDBPanelTitle, CDBPanelText, CDBPaneImage, CDBIcon, CDBContainer } from "cdbreact";
+
+export const Pane = () => {
+  return (
+    <CDBContainer>
+            <CDBPanel style={{width:"400px", padding:"10px"}}>
+              <CDBPane>
+                <CDBPaneImage size="md" src="https://media.istockphoto.com/photos/beautiful-woman-wearing-brown-curly-hairstyle-picture-id495006065?s=170x170" />
+                <div className="ml-3">
+                  <CDBPanelTitle>Warren Briggs</CDBPanelTitle>
+                  <CDBPanelText small>Breakfast</CDBPanelText>
+                </div>
+                <CDBDropDown className="ml-auto">
+                  <CDBDropDownToggle color="white"><CDBIcon className="text-muted" fas icon="ellipsis-h"/></CDBDropDownToggle>
+                  <CDBDropDownMenu>
+                    <CDBDropDownItem disabled>Edit Profile</CDBDropDownItem>
+                    <CDBDropDownItem divider />
+                    <CDBDropDownItem>Action 1</CDBDropDownItem>
+                    <CDBDropDownItem>Action 2</CDBDropDownItem>
+                  </CDBDropDownMenu>
+                </CDBDropDown>
+              </CDBPane>
+            </CDBPanel>
+    </CDBContainer>
+  );
+};
+```
+
+
+## Contrast React Bootstrap Pane Props
+
+
+This section will elaborate on the props available with the React Bootstrap Pane component. You'll learn what these props do, how to utilize them, and what their default values are.
+
+Other prop options for the 'CDBPane' component are listed in the table below.
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       |             |Adds custom classes	      |     <CDBPane className="myClass" ... />  |
+| tag            | String       | div          | Changes default input tag | <CDBPane tag="div" ... />  |

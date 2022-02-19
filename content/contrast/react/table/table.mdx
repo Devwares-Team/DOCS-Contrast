@@ -1,0 +1,895 @@
+---
+title: 'Table'
+metaTitle: 'Table Component for React Bootstrap'
+metaDescription: 'Building a Table Component using React Bootstrap'
+---import React from 'react';
+
+# React Bootstrap Table
+
+React Bootstrap Tables are component with basic tables features. They let you aggregate a huge amount of data and present it in a clear and orderly way.
+
+React Bootstrap tables provide additional benefits like responsiveness, and the possibility to manipulate the styles of the tables. You can enhance your tables by adding buttons, checkboxes, panels, and many other additional elements. You can also use an advanced data tables options like sort, search or pagination.
+
+## Importing the React Bootstrap Table Component
+
+To use the Contrast React Bootstrap Table, you import `CDBTable` into your project. We also need to import `CDBTableHeader` for the first row, which usually indicates the items in the columns. We also need to import `CDBTableBody` for the rest of the table.
+
+```js
+import { CDBTable, CDBTableHeader, CDBTableBody, CDBContainer } from 'cdbreact';
+```
+
+## Default Table
+
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+```js
+import React from 'react';
+import { CDBTable, CDBTableHeader, CDBTableBody, CDBContainer } from 'cdbreact';
+
+const Table = () => {
+  return (
+    <CDBContainer>
+      <CDBTable>
+        <CDBTableHeader>
+          <tr>
+            <th>#</th>
+            <th>First</th>
+            <th>Last</th>
+            <th>Handle</th>
+          </tr>
+        </CDBTableHeader>
+        <CDBTableBody>
+          <tr>
+            <td>1</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </CDBTableBody>
+      </CDBTable>
+    </CDBContainer>
+  );
+};
+export default Table;
+```
+
+## Table Head Options
+
+<div class="container">
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+```js
+import React from 'react';
+import { CDBTable, CDBTableHeader, CDBTableBody, CDBContainer } from 'cdbreact';
+
+const Table = () => {
+  return (
+    <CDBContainer>
+      <CDBTable>
+        <CDBTableHeader color="dark">
+          <tr>
+            <th>#</th>
+            <th>First</th>
+            <th>Last</th>
+            <th>Handle</th>
+          </tr>
+        </CDBTableHeader>
+        <CDBTableBody>
+          <tr>
+            <td>1</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </CDBTableBody>
+      </CDBTable>
+      <CDBTable>
+        <CDBTableHeader color="light">
+          <tr>
+            <th>#</th>
+            <th>First</th>
+            <th>Last</th>
+            <th>Handle</th>
+          </tr>
+        </CDBTableHeader>
+        <CDBTableBody>
+          <tr>
+            <td>1</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </CDBTableBody>
+      </CDBTable>h
+    </CDBContainer>
+  );
+};
+export default Table;
+```
+
+## Striped Table
+
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+```js
+import React from 'react';
+import { CDBTable, CDBTableHeader, CDBTableBody, CDBContainer } from 'cdbreact';
+
+const Table = () => {
+  return (
+    <CDBContainer>
+      <CDBTable striped>
+        <CDBTableHeader>
+          <tr>
+            <th>#</th>
+            <th>First</th>
+            <th>Last</th>
+            <th>Handle</th>
+          </tr>
+        </CDBTableHeader>
+        <CDBTableBody>
+          <tr>
+            <td>1</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </CDBTableBody>
+      </CDBTable>
+    </CDBContainer>
+  );
+};
+export default Table;
+```
+
+## Bordered Table
+
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+```js
+import React from 'react';
+import { CDBTable, CDBTableHeader, CDBTableBody, CDBContainer } from 'cdbreact';
+
+const Table = () => {
+  return (
+    <CDBContainer>
+      <CDBTable bordered>
+        <CDBTableHeader>
+          <tr>
+            <th>#</th>
+            <th>First</th>
+            <th>Last</th>
+            <th>Handle</th>
+          </tr>
+        </CDBTableHeader>
+        <CDBTableBody>
+          <tr>
+            <td>1</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </CDBTableBody>
+      </CDBTable>
+    </CDBContainer>
+  );
+};
+export default Table;
+```
+
+## Borderless Table
+
+<div class="container">
+  <table class="table table-borderless">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+```js
+import React from 'react';
+import { CDBTable, CDBTableHeader, CDBTableBody, CDBContainer } from 'cdbreact';
+
+const Table = () => {
+  return (
+    <CDBContainer>
+      <CDBTable borderless>
+        <CDBTableHeader>
+          <tr>
+            <th>#</th>
+            <th>First</th>
+            <th>Last</th>
+            <th>Handle</th>
+          </tr>
+        </CDBTableHeader>
+        <CDBTableBody>
+          <tr>
+            <td>1</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </CDBTableBody>
+      </CDBTable>
+    </CDBContainer>
+  );
+};
+export default Table;
+```
+
+## Hoverable Rows
+
+<div class="container">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+```js
+import React from 'react';
+import { CDBTable, CDBTableHeader, CDBTableBody, CDBContainer } from 'cdbreact';
+
+const Table = () => {
+  return (
+    <CDBContainer>
+      <CDBTable hover>
+        <CDBTableHeader>
+          <tr>
+            <th>#</th>
+            <th>First</th>
+            <th>Last</th>
+            <th>Handle</th>
+          </tr>
+        </CDBTableHeader>
+        <CDBTableBody>
+          <tr>
+            <td>1</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </CDBTableBody>
+      </CDBTable>
+    </CDBContainer>
+  );
+};
+export default Table;
+```
+
+## Small Table
+
+<div class="container">
+  <table class="table table-sm">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+```js
+import React from 'react';
+import { CDBTable, CDBTableHeader, CDBTableBody, CDBContainer } from 'cdbreact';
+
+const Table = () => {
+  return (
+    <CDBContainer>
+      <CDBTable small>
+        <CDBTableHeader>
+          <tr>
+            <th>#</th>
+            <th>First</th>
+            <th>Last</th>
+            <th>Handle</th>
+          </tr>
+        </CDBTableHeader>
+        <CDBTableBody>
+          <tr>
+            <td>1</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </CDBTableBody>
+      </CDBTable>
+    </CDBContainer>
+  );
+};
+export default Table;
+```
+
+## Captions
+
+<div class="container">
+  <table class="table">
+    <caption>List of users</caption>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+```js
+import React from 'react';
+import { CDBTable, CDBTableHeader, CDBTableBody, CDBContainer } from 'cdbreact';
+
+const Table = () => {
+  return (
+    <CDBContainer>
+      <CDBTable>
+        <caption>List of users</caption>
+        <CDBTableHeader>
+          <tr>
+            <th>#</th>
+            <th>First</th>
+            <th>Last</th>
+            <th>Handle</th>
+          </tr>
+        </CDBTableHeader>
+        <CDBTableBody>
+          <tr>
+            <td>1</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </CDBTableBody>
+      </CDBTable>
+    </CDBContainer>
+  );
+};
+export default Table;
+```
+
+## Responsive Tables
+
+<div class="container">
+  <div style="width:500px;" class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Second</th>
+          <th scope="col">Third</th>
+          <th scope="col">Fourth</th>
+          <th scope="col">Fifth</th>
+          <th scope="col">Sixth</th>
+          <th scope="col">Seventh</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Name</td>
+          <td>Name</td>
+          <td>Name</td>
+          <td>Name</td>
+          <td>Name</td>
+          <td>Name</td>
+          <td>Name</td>
+          <td>Name</td>
+          <td>@email</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Name</td>
+          <td>Name</td>
+          <td>Name</td>
+          <td>Name</td>
+          <td>Name</td>
+          <td>Name</td>
+          <td>Name</td>
+          <td>Name</td>
+          <td>@email</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Name</td>
+          <td>Name</td>
+          <td>Name</td>
+          <td>Name</td>
+          <td>Name</td>
+          <td>Name</td>
+          <td>Name</td>
+          <td>Name</td>
+          <td>@email</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+```js
+import React from 'react';
+import { CDBTable, CDBTableHeader, CDBTableBody, CDBContainer } from 'cdbreact';
+
+const Table = () => {
+  return (
+    <CDBContainer>
+      <CDBTable responsive>
+        <CDBTableHeader>
+          <tr>
+            <th>#</th>
+            <th>First</th>
+            <th>Second</th>
+            <th>Third</th>
+            <th>Fourth</th>
+            <th>Fifth</th>
+            <th>Sixth</th>
+            <th>Seventh</th>
+            <th>Last</th>
+            <th>Handle</th>
+          </tr>
+        </CDBTableHeader>
+        <CDBTableBody>
+          <tr>
+            <td>1</td>
+            <td>Name</td>
+            <td>Name</td>
+            <td>Name</td>
+            <td>Name</td>
+            <td>Name</td>
+            <td>Name</td>
+            <td>Name</td>
+            <td>Name</td>
+            <td>@email</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Name</td>
+            <td>Name</td>
+            <td>Name</td>
+            <td>Name</td>
+            <td>Name</td>
+            <td>Name</td>
+            <td>Name</td>
+            <td>Name</td>
+            <td>@email</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Name</td>
+            <td>Name</td>
+            <td>Name</td>
+            <td>Name</td>
+            <td>Name</td>
+            <td>Name</td>
+            <td>Name</td>
+            <td>Name</td>
+            <td>@email</td>
+          </tr>
+        </CDBTableBody>
+      </CDBTable>
+    </CDBContainer>
+  );
+};
+export default Table;
+```
+
+## API Reference: Contrast React Bootstrap Table Props
+
+This section will build on your information about the props you get to use with the Contrast React Bootstrap Table component. You will find out what these props do, their default values, and how you would use them in your code.
+
+The table below lists other prop options of the `CDBTable` component.
+
+| Name             |  Type   | Default |                                                                                                     Description                                                                                                      |                                            Example |
+| :--------------- | :-----: | ------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | -------------------------------------------------: |
+| className        | String  |         |                                                                                                 Adds custom classes                                                                                                  |               <CDBTable className="myClass" ... /> |
+| wrapperClassName | String  |         |                                                                                              Adds custom wrapper class                                                                                               | <CDBTable wrapperClassName="myWrapperClass" ... /> |
+| tag              | String  |     div |                                                                                              Changes default input tag                                                                                               |                       <CDBTable tag="input" ... /> |
+| autoWidth        | Boolean |   false |                                                                                  Automatically adjust columns width to the content.                                                                                  |                          <CDBTable autoWidth .../> |
+| bordered         | Boolean |   false |                                                                                     Adds border on all table's and cell's sides.                                                                                     |                           <CDBTable bordered .../> |
+| borderless       | Boolean |   false |                                                                                   Disables border on all table's and cell's sides.                                                                                   |                         <CDBTable borderless .../> |
+| btn              | Boolean |   false |                                                                                                    Adds a button                                                                                                     |                                <CDBTable btn .../> |
+| dark             | Boolean |   false |                                                                                                Enables the dark style                                                                                                |                               <CDBTable dark .../> |
+| fixed            | Boolean |   false |                                                                                              Sets fixed columns width.                                                                                               |                              <CDBTable fixed .../> |
+| hover            | Boolean |   false |                                                                        Adds hover state on table rows (rows are marked on light-grey color).                                                                         |                              <CDBTable hover .../> |
+| maxHeight        | String  |         |                                                                      Sets table's maxHeight. You can use px, vh or whatever fits to your needs.                                                                      |                 <CDBTable maxHeight="200px" ... /> |
+| tHead            | String  |         |                                                                                       Changes the color of the table head text                                                                                       |                      <CDBTable tHead="#000" ... /> |
+| responsive       | Boolean |   false | Makes table scrollable horizontally when screen width is smaller than table content (under 768px). It make use of `overflow-y: hidden` which clips off content that goes beyond the bottom or top edge of the table. |                         <CDBTable responsive .../> |
+| responsiveSm     | Boolean |   false |                                                                           Makes table scrollable horizontally on under 576px wide screens.                                                                           |                       <CDBTable responsiveSm .../> |
+| responsiveMd     | Boolean |   false |                                                                           Makes table scrollable horizontally on under 768px wide screens.                                                                           |                       <CDBTable responsiveMd .../> |
+| responsiveLg     | Boolean |   false |                                                                           Makes table scrollable horizontally on under 992px wide screens.                                                                           |                       <CDBTable responsiveLg .../> |
+| responsiveXl     | Boolean |   false |                                                                          Makes table scrollable horizontally on under 1200px wide screens.                                                                           |                       <CDBTable responsiveXl .../> |
+| scrollY          | Boolean |   false |                                         Allows table to be scrolled vertically if it's content is higher than 200px. Combine it with maxHeight to manipulate table's height.                                         |                            <CDBTable scrollY .../> |
+| small            | Boolean |   false |                                                                                             Cuts cell's padding by half.                                                                                             |                              <CDBTable small .../> |
+| striped          | Boolean |   false |                                                                                        Adds zebra-striping to any table row.                                                                                         |                            <CDBTable striped .../> |
+
+## API Reference: Contrast React Bootstrap Table Header Props
+
+The table below lists other prop options of the `CDBTableHeader` component.
+
+| Name      |      Type      | Default |                        Description                        |                                      Example |
+| :-------- | :------------: | ------: | :-------------------------------------------------------: | -------------------------------------------: |
+| className |     String     |         |                    Adds custom classes                    |   <CDBTableHeader className="myClass" ... /> |
+| color     |     String     |         | Changes TableHead background color. Use CDB color classes | <CDBTableHeader color="primary-color" ... /> |
+| textWhite |    Boolean     |   false |           Sets TableHead's font color to white.           |              <CDBTableHeader textWhite .../> |
+| columns   | Array[Objects] |   false |            Binds your data into the component.            |      <CDBTableHeader columns={columns} .../> |
+
+## API Reference: Contrast React Bootstrap Table Body Props
+
+The table below lists other prop options of the `CDBTableBody` component.
+
+| Name      |      Type      | Default |                        Description                        |                                    Example |
+| :-------- | :------------: | ------: | :-------------------------------------------------------: | -----------------------------------------: |
+| className |     String     |         |                    Adds custom classes                    |   <CDBTableBody className="myClass" ... /> |
+| color     |     String     |         | Changes TableBody background color. Use CDB color classes | <CDBTableBody color="primary-color" ... /> |
+| textWhite |    Boolean     |   false |           Sets TableBody's font color to white.           |              <CDBTableBody textWhite .../> |
+| rows      | Array[Objects] |   false |            Binds your data into the component.            |            <CDBTableBody rows={rows} .../> |
+
+## API Reference: Contrast React Bootstrap Table Footer Props
+
+The table below lists other prop options of the `CDBTableFooter` component.
+
+| Name      |      Type      | Default |                         Description                         |                                      Example |
+| :-------- | :------------: | ------: | :---------------------------------------------------------: | -------------------------------------------: |
+| className |     String     |         |                     Adds custom classes                     |   <CDBTableFooter className="myClass" ... /> |
+| color     |     String     |         | Changes TableFooter background color. Use CDB color classes | <CDBTableFooter color="primary-color" ... /> |
+| textWhite |    Boolean     |   false |           Sets TableFooter's font color to white.           |              <CDBTableFooter textWhite .../> |
+| columns   | Array[Objects] |   false |             Binds your data into the component.             |      <CDBTableFooter columns={columns} .../> |

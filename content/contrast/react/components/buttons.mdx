@@ -1,0 +1,474 @@
+---
+title: "Button"
+metaTitle: "Button Component for React Bootstrap"
+metaDescription: "Users can interact with your website using the React Bootstrap button. In terms of size, form, and color, they are simple to alter."
+---
+
+
+import React from "react";
+import {Link} from "gatsby";
+
+FIX THIS
+
+# React Bootstrap Button
+
+Users can interact with your website using the React Bootstrap button. In terms of size, form, and color, they are simple to alter. They include a number of pre-defined button styles, each with its own semantic function and a few more controls.
+
+## Importing the React Bootstrap Button component
+
+You begin by importing the CDBButton component into your project to use the React Bootstrap Button component.
+
+```javascript
+import { CDBBtn } from "cdbreact";
+```
+
+## Default Buttons
+
+The `color` prop affects the background color of the button.
+
+<div class="container">
+  <button class="btn btn-primary">Primary</button>
+  <button class="btn btn-secondary">Secondary</button>
+  <button class="btn btn-success">Success</button>
+  <button class="btn btn-danger">Danger</button>
+  <button class="btn btn-dark">Dark</button>
+  <button class="btn btn-warning">Warning</button>
+  <button class="btn btn-info">Info</button>
+</div>
+
+```javascript
+import React from "react";
+import { CDBBtn, CDBContainer } from "cdbreact";
+
+export const Button = () => {
+  return (
+    <CDBContainer>
+          <CDBBtn color="primary">Primary</CDBBtn>
+          <CDBBtn color="secondary">Secondary</CDBBtn>
+          <CDBBtn color="success">Success</CDBBtn>
+          <CDBBtn color="danger">Danger</CDBBtn>
+          <CDBBtn color="dark">Dark</CDBBtn>
+          <CDBBtn color="warning">Warning</CDBBtn>
+          <CDBBtn color="info">Info</CDBBtn>
+    </CDBContainer>
+  );
+};
+```
+
+## Circular Buttons
+
+The 'circle' attribute is used on the React Bootstrap buttons to make them more rounded.
+
+<div class="container">
+  <button class="btn btn-rounded btn-primary">Primary</button>
+  <button class="btn btn-rounded btn-secondary">Secondary</button>
+  <button class="btn btn-rounded btn-success">Success</button>
+  <button class="btn btn-rounded btn-danger">Danger</button>
+  <button class="btn btn-rounded btn-dark">Dark</button>
+  <button class="btn btn-rounded btn-warning">Warning</button>
+  <button class="btn btn-rounded btn-info">Info</button>
+</div>
+
+```javascript
+import React from "react";
+import { CDBBtn, CDBContainer } from "cdbreact";
+
+export const Button = () => {
+  return (
+    <CDBContainer>
+          <CDBBtn color="primary" circle>
+            Primary
+          </CDBBtn>
+          <CDBBtn color="secondary" circle>
+            Secondary
+          </CDBBtn>
+          <CDBBtn color="success" circle>
+            Success
+          </CDBBtn>
+          <CDBBtn color="danger" circle>
+            Danger
+          </CDBBtn>
+          <CDBBtn color="dark" circle>
+            Dark
+          </CDBBtn>
+          <CDBBtn color="warning" circle>
+            Warning
+          </CDBBtn>
+          <CDBBtn color="info" circle>
+            Info
+          </CDBBtn>
+    </CDBContainer>
+  );
+};
+```
+## Outline Buttons
+
+To give your button merely an outline, use the 'outline' button.
+
+<div class="container">
+  <button class="btn btn-outline-primary">Primary</button>
+  <button class="btn btn-outline-secondary">Secondary</button>
+  <button class="btn btn-outline-success">Success</button>
+  <button class="btn btn-outline-danger">Danger</button>
+  <button class="btn btn-outline-dark">Dark</button>
+  <button class="btn btn-outline-warning">Warning</button>
+  <button class="btn btn-outline-info">Info</button>
+</div>
+  
+
+```javascript
+import React from "react";
+import { CDBBtn, CDBContainer } from "cdbreact";
+
+export const Button = () => {
+  return (
+    <CDBContainer>
+          <CDBBtn color="primary" outline>
+            Primary
+          </CDBBtn>
+          <CDBBtn color="secondary" outline>
+            Secondary
+          </CDBBtn>
+          <CDBBtn color="success" outline>
+            Success
+          </CDBBtn>
+          <CDBBtn color="danger" outline>
+            Danger
+          </CDBBtn>
+          <CDBBtn color="dark" outline>
+            Dark
+          </CDBBtn>
+          <CDBBtn color="warning" outline>
+            Warning
+          </CDBBtn>
+          <CDBBtn color="info" outline>
+            Info
+          </CDBBtn>
+    </CDBContainer>
+  );
+};
+```
+
+## Circular Outline Buttons
+
+To create the circular outline buttons, we'll use the React Bootstrap components for buttons
+
+<div class="container">
+  <button class="btn btn-rounded btn-outline-primary">Primary</button>
+  <button class="btn btn-rounded btn-outline-secondary">Secondary</button>
+  <button class="btn btn-rounded btn-outline-success">Success</button>
+  <button class="btn btn-rounded btn-outline-danger">Danger</button>
+  <button class="btn btn-rounded btn-outline-dark">Dark</button>
+  <button class="btn btn-rounded btn-outline-warning">Warning</button>
+  <button class="btn btn-rounded btn-outline-info">Info</button>
+</div>
+
+```javascript
+import React from "react";
+import { CDBBtn, CDBContainer } from "cdbreact";
+
+export const Button = () => {
+  return (
+    <CDBContainer>
+          <CDBBtn color="primary" circle outline>
+            Primary
+          </CDBBtn>
+          <CDBBtn color="secondary" circle outline>
+            Secondary
+          </CDBBtn>
+          <CDBBtn color="success" circle outline>
+            Success
+          </CDBBtn>
+          <CDBBtn color="danger" circle outline>
+            Danger
+          </CDBBtn>
+          <CDBBtn color="dark" circle outline>
+            Dark
+          </CDBBtn>
+          <CDBBtn color="warning" circle outline>
+            Warning
+          </CDBBtn>
+          <CDBBtn color="info" outline circle>
+            Info
+          </CDBBtn>
+    </CDBContainer>
+  );
+};
+```
+
+## Flat Buttons
+
+Give the 'CDBBtn' component the 'flat' attribute to create buttons without button shadows.
+
+<div class="container">
+  <button class="btn btn-flat btn-primary">Primary</button>
+  <button class="btn btn-flat btn-secondary">Secondary</button>
+  <button class="btn btn-flat btn-success">Success</button>
+  <button class="btn btn-flat btn-danger">Danger</button>
+  <button class="btn btn-flat btn-dark">Dark</button>
+  <button class="btn btn-flat btn-warning">Warning</button>
+  <button class="btn btn-flat btn-info">Info</button>
+</div>
+
+```javascript
+import React from "react";
+import { CDBBtn, CDBContainer } from "cdbreact";
+
+export const Button = () => {
+  return (
+    <CDBContainer>
+          <CDBBtn color="primary" flat>
+            Primary
+          </CDBBtn>
+          <CDBBtn color="secondary" flat>
+            Secondary
+          </CDBBtn>
+          <CDBBtn color="success" flat>
+            Success
+          </CDBBtn>
+          <CDBBtn color="danger" flat>
+            Danger
+          </CDBBtn>
+          <CDBBtn color="dark" flat>
+            Dark
+          </CDBBtn>
+          <CDBBtn color="warning" flat>
+            Warning
+          </CDBBtn>
+          <CDBBtn color="info" flat>
+            Info
+          </CDBBtn>
+    </CDBContainer>
+  );
+};
+```
+<i/>
+
+## Label at the side 
+
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+
+Use the 'label' prop to specify the location of your button's text.
+
+<div class="container">
+  <button style="width:200px;" class="btn text-right btn-primary">Primary</button>
+  <button style="width:200px;" class="btn text-right btn-secondary">Secondary</button>
+  <button style="width:200px;" class="btn text-right btn-success">Success</button>
+  <button style="width:200px;" class="btn text-left btn-dark">Dark</button>
+  <button style="width:200px;" class="btn text-left btn-warning"> Warning </button>
+  <button style="width:200px;" class="btn text-left btn-info">Info</button>
+</div>
+
+```javascript
+import React from "react";
+import { CDBBtn, CDBContainer } from "cdbreact";
+
+export const Button = () => {
+  return (
+    <CDBContainer>
+          <CDBBtn color="primary" label="right">Primary</CDBBtn>
+          <CDBBtn color="secondary" label="right">Secondary</CDBBtn>
+          <CDBBtn color="success" label="right">Success</CDBBtn>
+          <CDBBtn color="dark" label="left">Dark</CDBBtn>
+          <CDBBtn color="warning" label="left">Warning</CDBBtn>
+          <CDBBtn color="info" label="left">Info</CDBBtn>
+    </CDBContainer>
+  );
+};
+```
+<i/>
+
+## Large Button ending with Text
+
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+
+Been a pro component, you can use it to make the large end of your text big.
+
+<div class="container">
+  <button style="width:300px; height:100px;" class="btn d-flex align-items-start justify-content-start btn-primary">Primary</button>
+  <button style="width:300px; height:100px;" class="btn d-flex align-items-start justify-content-end btn-secondary">Secondary</button>
+  <button style="width:300px; height:100px;" class="btn d-flex align-items-start justify-content-start btn-success">Success</button>
+  <button style="width:300px; height:100px;" class="btn d-flex align-items-start justify-content-end btn-danger">Danger</button>
+  <button style="width:300px; height:100px;" class="btn d-flex align-items-start justify-content-center btn-dark">Dark</button>
+  <button style="width:300px; height:100px;" class="btn d-flex align-items-start justify-content-center btn-warning"> Warning </button>
+  <button style="width:300px; height:100px;" class="btn d-flex align-items-start justify-content-center btn-info">Info</button>
+</div>
+
+```javascript
+import React from "react";
+import { CDBBtn, CDBContainer } from "cdbreact";
+
+export const Button = () => {
+  return (
+    <CDBContainer>
+          <CDBBtn size="xl" color="primary" endingText="top-left">Primary</CDBBtn>
+          <CDBBtn size="xl" color="secondary" endingText="top-right">Secondary</CDBBtn>
+          <CDBBtn size="xl" color="success" endingText="bottom-left">Success</CDBBtn>
+          <CDBBtn size="xl" color="danger" endingText="bottom-right">Danger</CDBBtn>
+          <CDBBtn size="xl" color="dark" endingText="top">Dark</CDBBtn>
+          <CDBBtn size="xl" color="warning" endingText="bottom">Warning</CDBBtn>
+          <CDBBtn size="xl" color="info" endingText="center">Info</CDBBtn>
+    </CDBContainer>
+  );
+};
+```
+## Block Button
+
+<div class="container">
+  <button class="btn btn-block btn-primary">Primary</button>
+  <button class="btn btn-block btn-secondary">Secondary</button>
+  <button class="btn btn-block btn-success">Success</button>
+  <button class="btn btn-block btn-danger">Danger</button>
+  <button class="btn btn-block btn-dark">Dark</button>
+</div>
+
+```javascript
+import React from "react";
+import { CDBBtn, CDBContainer } from "cdbreact";
+
+export const Button = () => {
+  return (
+    <CDBContainer>
+          <CDBBtn color="primary" block>
+            Primary
+          </CDBBtn>
+          <CDBBtn color="secondary" block>
+            Secondary
+          </CDBBtn>
+          <CDBBtn color="success" block>
+            Success
+          </CDBBtn>
+          <CDBBtn color="danger" block>
+            Danger
+          </CDBBtn>
+          <CDBBtn color="dark" block>
+            Dark
+          </CDBBtn>
+    </CDBContainer>
+  );
+};
+```
+<i/>
+
+## Buttons with Icons
+
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+
+In this tutorial we also use the [CDBIcon](https://www.devwares.com/docs/contrast/react/components/icon) component alongside the `CDBButton` component. The 'CDBIcon' component is nested within the 'CDBBtn' component. Our buttons now have icons associated with them as a result of this.
+
+
+<div class="container">
+  <button class="btn btn-warning">
+    <i class="fa fa-magic"></i>
+    Warning
+  </button>
+  <button class="btn btn-info">
+    Info
+    <i class="fa fa-magic"></i>
+  </button>
+</div>
+
+```javascript
+import React from "react";
+import { CDBBtn, CDBIcon, CDBContainer } from "cdbreact";
+
+export const Button = () => {
+  return (
+    <CDBContainer>
+          <CDBBtn color="warning">
+            <CDBIcon icon="magic" className="ml-1" />
+            Warning
+          </CDBBtn>
+          <CDBBtn color="info">
+            Info
+            <CDBIcon icon="magic" className="mr-1" />
+          </CDBBtn>
+    </CDBContainer>
+  );
+};
+```
+## Button Sizes
+
+Use the'size' attribute to specify how big or small your button should be.
+
+<div class="container">
+  <button class="btn btn-lg btn-primary">
+    Large Button
+  </button>
+  <button class="btn btn-md btn-secondary">
+    Normal Button
+  </button>
+  <button class="btn btn-sm btn-success">
+    Small Button
+  </button>
+</div>
+
+```javascript
+import React from "react";
+import { CDBBtn, CDBContainer } from "cdbreact";
+
+export const Button = () => {
+  return (
+    <CDBContainer>
+          <CDBBtn color="primary" size="large">
+            Large button
+          </CDBBtn>
+          <CDBBtn color="secondary">Normal button</CDBBtn>
+          <CDBBtn color="success" size="small">
+            Small button
+          </CDBBtn>
+    </CDBContainer>
+  );
+};
+```
+## Disabled Buttons
+
+To disable your button, use the 'disabled' property.
+
+<div class="container">
+  <button class="btn btn-secondary disabled">
+    Disabled Button
+  </button>
+</div>
+
+```javascript
+import React from "react";
+import { CDBBtn, CDBContainer } from "cdbreact";
+
+export const Button = () => {
+  return (
+    <CDBContainer>
+          <CDBBtn color="secondary" disabled>
+            Disabled Button
+          </CDBBtn>
+    </CDBContainer>
+  );
+};
+```
+# Contrast React Bootstrap Button Props
+
+The props you get to use with the React Bootstrap Button component will be expanded upon in this section. You'll learn what these props do, how to utilize them in your code, and what their default values are.
+
+Other prop possibilities for the 'CDBButton' component are included in the table below.
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| action         | Boolean      | false        | Adds `btn-action` class, works with Cards | <CDBBtn action ... />  |
+| active         | Boolean      | false        | Adds active class | <CDBBtn active ... />  |
+| block          | Boolean      | false        | Create block level buttons | <CDBBtn block ... />  |
+| circle         | Boolean      | false        | Adds `btn-circle` class, works with stepper | <CDBBtn circle ... />  |
+| className      | String       |              | Adds custom classes | <CDBBtn className="custom-class" ... />  |
+| color          | String       | primary      | Determines button color, accepts CDB predefined color classes | <CDBBtn color="secondary" ... />  |
+| disabled       | Boolean      | false        | Disables button from being clicked | <CDBBtn disabled ... />  |
+| download       | String       |              | Adds download attribute with provided url | <CDBBtn download="https://link_to_your_file.com" ... />  |
+| endingText     | String       |              | Positions the button text in one of the selected positions. These positions include `top-left`, `top-right`, `bottom-left`, `bottom-right`, `top`, `bottom`, `center`.| <CDBBtn endingText="center" ... />  |
+| flat           | Boolean      | false        | Adds flat effect to button. That is button without background and borders | <CDBBtn flat ... />  |
+| innerRef       | function or String |        | Allows to pass Ref string, which will attach to rendered button or a DOM element | <CDBBtn innerRef="buttonRef" ... />  |
+| label          | String       |              | Positions button text `left` or `right`. | <CDBBtn label="left" ... />  |
+| onClick        | function     |              | Will call a function when the button is clicked | <CDBBtn onClick={yourFunction} ... />  |
+| role           | String       |              | Adds role attribute to button | <CDBBtn role="...." ... />  |
+| size           | String       | medium       | Determines button size, available values: `[small, large]`. | <CDBBtn size="large" ... /> |  |
+| social         | String       |              | Adds a social media icon. | <CDBBtn social="fb" ... /> |  |
+| tag            | String       | button       | Changes default tag | <CDBBtn tag="a" ... /> |  |
+| target         | String       | _self        | If used as link, sets target attribute | <CDBBtn href="..." target="_blank" ... /> |  |
+| type           | String       | button       | Adds type attribute to button | <CDBBtn type="submit" ... /> |  |

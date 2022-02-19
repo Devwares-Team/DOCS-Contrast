@@ -1,0 +1,840 @@
+---
+title: "Footer"
+metaTitle: "Footer Component for React Bootstrap"
+metaDescription: "The React Bootstrap Footer adds further navigation to the webpage. It can contain `links`, `business information`, `copyrights`, `buttons`, `forms`, and a variety of other items."
+---
+
+import React from "react";
+import { Link } from "gatsby";
+
+# React Bootstrap  Footer
+
+The React Bootstrap Footer adds further navigation to the webpage. It can contain `links`, `business information`, `copyrights`, `buttons`, `forms`, and a variety of other items.  
+
+You can also  change the color of the footer by adding one of our `color palette` classes.
+
+The Contrast React Bootstrap Footer component provides many predefined styles for various footer layouts. These layouts, like other React Bootstrap components, are adaptable, responsive, and simple to use.
+
+
+## Importing the React Bootstrap Footer Component
+
+You begin by importing `CDBFooter` into your project to use the React Bootstrap Footer component.
+
+```javascript
+import { CDBFooter } from "cdbreact";
+```
+
+## Example 1
+
+This is the default footer layout. Alongside our `CDBFooter` component, we also import the `CDBFooterLink` component to create links in our footer. We also import the `CDBBtn` for creating buttons and `CDBIcon` to use icons in our footer.
+
+<footer class="page-footer shadow">
+  <div class="d-flex flex-column mx-auto py-5" style="width: 80%">
+    <div class="d-flex justify-content-between">
+      <div>
+        <span class="d-flex align-items-center p-0 text-dark">
+          <img alt="logo" src="/img/logo.png" width="30px" />
+          <span class="ml-3 h5 font-weight-bold">Devwares</span>
+        </span>
+        <p class="my-3" style="width: 250px">
+          We are creating High Quality Resources and tools to Aid
+          developers during the developement of their projects
+        </p>
+        <div class="mt-4">
+          <button class="btn btn-dark btn-flat">
+            <i class="fab fa-facebook-f"></i>
+          </button>
+          <button class="btn btn-dark btn-flat">
+            <i class="fab fa-twitter"></i>
+          </button>
+          <button class="btn btn-dark btn-flat">
+            <i class="fab fa-instagram"></i>
+          </button>
+        </div>
+      </div>
+      <div>
+        <p class="h5 mb-4" style="font-weight: 600">Devwares</p>
+        <ul class="p-0" style="list-style: none; cursor: pointer">
+          <li class="my-2">
+            <span>Resources</span>
+          </li>
+          <li class="my-2">
+            <span>About Us</span>
+          </li>
+          <li class="my-2">
+            <span>Contact</span>
+          </li>
+          <li class="my-2">
+            <span>Blog</span>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <p class="h5 mb-4" style="font-weight: 600">Help</p>
+        <ul class="p-0" style="list-style: none; cursor: pointer">
+          <li class="my-2">
+            <span>Support</span>
+          </li>
+          <li class="my-2">
+            <span>Sign Up</span>
+          </li>
+          <li class="my-2">
+            <span>Sign In</span>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <p class="h5 mb-4" style="font-weight: 600">Help</p>
+        <ul class="p-0" style="list-style: none; cursor: pointer">
+          <li class="my-2">
+            <span>Support</span>
+          </li>
+          <li class="my-2">
+            <span>Sign Up</span>
+          </li>
+          <li class="my-2">
+            <span>Sign In</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <small class="text-center mt-5"
+      >&copy; Devwares, 2020. All rights reserved.</small
+    >
+  </div>
+</footer>
+
+```javascript
+import React from "react";
+import { CDBFooter, CDBFooterLink, CDBBtn, CDBIcon, CDBContainer } from "cdbreact";
+
+export const Footer = () => {
+  return (
+    <CDBContainer>
+        <CDBFooter className="shadow">
+            <div className="d-flex flex-column mx-auto py-5" style={{width:"80%"}}>
+                <div className="d-flex justify-content-between flex-wrap">
+                    <div>
+                        <CDBFooterLink href="/" className="d-flex align-items-center p-0 text-dark">
+                            <img alt="logo" src="/img/logo.png" width="30px"/>
+                            <span className="ml-3 h5 font-weight-bold">Devwares</span>
+                        </CDBFooterLink>
+                        <p className="my-3" style={{width:"250px"}}>We are creating High Quality Resources and tools to Aid developers during the developement of their projects</p>
+                        <div className="mt-4">
+                          <CDBBtn size="sm" flat color="dark">
+                            <CDBIcon fab icon="facebook-f"/>
+                          </CDBBtn>
+                          <CDBBtn size="sm" flat color="dark" className="mx-3">
+                            <CDBIcon fab icon="twitter"/>
+                          </CDBBtn>
+                          <CDBBtn size="sm" flat color="dark">
+                            <CDBIcon fab icon="instagram"/>
+                          </CDBBtn>
+                        </div>
+                    </div>
+                    <div>
+                        <p className="h5 mb-4" style={{fontWeight:"600"}}>Devwares</p>
+                        <ul style={{listStyle:"none", cursor:"pointer", padding:"0"}}>
+                            <CDBFooterLink href="/">Resources</CDBFooterLink>
+                            <CDBFooterLink href="/">About Us</CDBFooterLink>
+                            <CDBFooterLink href="/">Contact</CDBFooterLink>
+                            <CDBFooterLink href="/">Blog</CDBFooterLink>
+                        </ul>
+                    </div>
+                    <div>
+                        <p className="h5 mb-4" style={{fontWeight:"600"}}>Help</p>
+                        <ul style={{listStyle:"none", cursor:"pointer", padding:"0"}}>
+                            <CDBFooterLink href="/">Support</CDBFooterLink>
+                            <CDBFooterLink href="/">Sign Up</CDBFooterLink>
+                            <CDBFooterLink href="/">Sign In</CDBFooterLink>
+                        </ul>
+                    </div>
+                    <div>
+                        <p className="h5 mb-4" style={{fontWeight:"600"}}>Help</p>
+                        <ul style={{listStyle:"none", cursor:"pointer", padding:"0"}}>
+                            <CDBFooterLink href="/">Support</CDBFooterLink>
+                            <CDBFooterLink href="/">Sign Up</CDBFooterLink>
+                            <CDBFooterLink href="/">Sign In</CDBFooterLink>
+                        </ul>
+                    </div>
+                </div>
+                <small className="text-center mt-5">&copy; Devwares, 2020. All rights reserved.</small>
+            </div>
+        </CDBFooter>
+    </CDBContainer>
+  );
+};
+```
+## Example 2
+
+<footer class="page-footer shadow">
+  <div class="d-flex flex-column mx-auto py-5" style="width: 80%">
+    <div class="d-flex justify-content-between">
+      <div class="align-self-center">
+        <span class="d-flex align-items-center p-0 text-dark">
+          <img alt="logo" src="/img/logo.png" width="30px" />
+          <span class="ml-3 h5 font-weight-bold">Devwares</span>
+        </span>
+        <div class="mt-5">
+          <button class="btn btn-dark btn-flat">
+            <i class="fab fa-facebook-f"></i>
+          </button>
+          <button class="btn btn-dark btn-flat">
+            <i class="fab fa-twitter"></i>
+          </button>
+          <button class="btn btn-dark btn-flat">
+            <i class="fab fa-instagram"></i>
+          </button>
+        </div>
+      </div>
+      <div>
+        <p class="h5 mb-4" style="font-weight: 600">Devwares</p>
+        <ul class="p-0" style="list-style: none; cursor: pointer">
+          <li class="my-2">
+            <span>Resources</span>
+          </li>
+          <li class="my-2">
+            <span>About Us</span>
+          </li>
+          <li class="my-2">
+            <span>Contact</span>
+          </li>
+          <li class="my-2"><span>Blog</span></li>
+        </ul>
+      </div>
+      <div>
+        <p class="h5 mb-4" style="font-weight: 600">Help</p>
+        <ul class="p-0" style="list-style: none; cursor: pointer">
+          <li class="my-2">
+            <span>Support</span>
+          </li>
+          <li class="my-2">
+            <span>Sign Up</span>
+          </li>
+          <li class="my-2">
+            <span>Sign In</span>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <p class="h5 mb-4" style="font-weight: 600">Help</p>
+        <ul class="p-0" style="list-style: none; cursor: pointer">
+          <li class="my-2">
+            <span>Support</span>
+          </li>
+          <li class="my-2">
+            <span>Sign Up</span>
+          </li>
+          <li class="my-2">
+            <span>Sign In</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <small class="text-center mt-5"
+      >&copy; Devwares, 2020. All rights reserved.</small
+    >
+  </div>
+</footer>
+
+```javascript
+import React from "react";
+import { CDBFooter, CDBFooterLink, CDBBtn, CDBIcon, CDBContainer } from "cdbreact";
+
+export const Footer = () => {
+  return (
+    <CDBContainer>
+        <CDBFooter className="shadow">
+            <div className="d-flex flex-column mx-auto py-5" style={{width:"80%"}}>
+                <div className="d-flex justify-content-between flex-wrap">
+                    <div className="align-self-center">
+                        <CDBFooterLink href="/" className="d-flex align-items-center p-0 text-dark">
+                            <img alt="logo" src="/img/logo.png" width="30px"/>
+                            <span className="ml-3 h5 font-weight-bold">Devwares</span>
+                        </CDBFooterLink>
+                        <div className="mt-5">
+                          <CDBBtn size="sm" flat color="dark" >
+                            <CDBIcon fab icon="facebook-f"/>
+                          </CDBBtn>
+                          <CDBBtn size="sm" flat color="dark" className="mx-3">
+                            <CDBIcon fab icon="twitter"/>
+                          </CDBBtn>
+                          <CDBBtn size="sm" flat color="dark">
+                            <CDBIcon fab icon="instagram"/>
+                          </CDBBtn>
+                        </div>
+                    </div>
+                    <div>
+                        <p className="h5 mb-4" style={{fontWeight:"600"}}>Devwares</p>
+                        <ul style={{listStyle:"none", cursor:"pointer", padding:"0"}}>
+                            <CDBFooterLink href="/">Resources</CDBFooterLink>
+                            <CDBFooterLink href="/">About Us</CDBFooterLink>
+                            <CDBFooterLink href="/">Contact</CDBFooterLink>
+                            <CDBFooterLink href="/">Blog</CDBFooterLink>
+                        </ul>
+                    </div>
+                    <div>
+                        <p className="h5 mb-4" style={{fontWeight:"600"}}>Help</p>
+                        <ul style={{listStyle:"none", cursor:"pointer", padding:"0"}}>
+                            <CDBFooterLink href="/">Support</CDBFooterLink>
+                            <CDBFooterLink href="/">Sign Up</CDBFooterLink>
+                            <CDBFooterLink href="/">Sign In</CDBFooterLink>
+                        </ul>
+                    </div>
+                    <div>
+                        <p className="h5 mb-4" style={{fontWeight:"600"}}>Help</p>
+                        <ul style={{listStyle:"none", cursor:"pointer", padding:"0"}}>
+                            <CDBFooterLink href="/">Support</CDBFooterLink>
+                            <CDBFooterLink href="/">Sign Up</CDBFooterLink>
+                            <CDBFooterLink href="/">Sign In</CDBFooterLink>
+                        </ul>
+                    </div>
+                </div>
+                <small className="text-center mt-5">&copy; Devwares, 2020. All rights reserved.</small>
+            </div>
+        </CDBFooter>
+    </CDBContainer>
+  );
+};
+```
+
+## Example 3
+
+<footer class="page-footer shadow">
+  <div class="d-flex flex-column mx-auto py-5" style="width: 80%">
+    <div class="d-flex justify-content-between">
+      <div>
+        <span class="d-flex align-items-center p-0 text-dark">
+          <img alt="logo" src="/img/logo.png" width="30px" />
+          <span class="ml-3 h5 font-weight-bold">Devwares</span>
+        </span>
+        <p class="my-3" style="width: 250px">
+          We are creating High Quality Resources and tools to Aid
+          developers during the developement of their projects
+        </p>
+      </div>
+      <div>
+        <p class="h5 mb-4" style="font-weight: 600">Devwares</p>
+        <ul class="p-0" style="list-style: none; cursor: pointer">
+          <li class="my-2">
+            <span>Resources</span>
+          </li>
+          <li class="my-2">
+            <span>About Us</span>
+          </li>
+          <li class="my-2">
+            <span>Contact</span>
+          </li>
+          <li class="my-2"><span>Blog</span></li>
+        </ul>
+      </div>
+      <div>
+        <p class="h5 mb-4" style="font-weight: 600">Help</p>
+        <ul class="p-0" style="list-style: none; cursor: pointer">
+          <li class="my-2">
+            <span>Support</span>
+          </li>
+          <li class="my-2">
+            <span>Sign Up</span>
+          </li>
+          <li class="my-2">
+            <span>Sign In</span>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <p class="h5 mb-4" style="font-weight: 600">Help</p>
+        <ul class="p-0" style="list-style: none; cursor: pointer">
+          <li class="my-2">
+            <span>Support</span>
+          </li>
+          <li class="my-2">
+            <span>Sign Up</span>
+          </li>
+          <li class="my-2">
+            <span>Sign In</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <div class="mb-4">
+        <button class="btn btn-dark btn-flat">
+          <i class="fab fa-facebook-f"></i>
+        </button>
+        <button class="btn btn-dark btn-flat">
+          <i class="fab fa-twitter"></i>
+        </button>
+        <button class="btn btn-dark btn-flat">
+          <i class="fab fa-instagram"></i>
+        </button>
+      </div>
+      <small>&copy; Devwares, 2020. All rights reserved.</small>
+    </div>
+  </div>
+</footer>
+
+```javascript
+import React from "react";
+import { CDBFooter, CDBFooterLink, CDBBtn, CDBIcon, CDBContainer } from "cdbreact";
+
+export const Footer = () => {
+  return (
+    <CDBContainer>
+        <CDBFooter className="shadow">
+            <div className="d-flex flex-column mx-auto py-5" style={{width:"80%"}}>
+                <div className="d-flex justify-content-between flex-wrap">
+                    <div>
+                        <CDBFooterLink href="/" className="d-flex align-items-center p-0 text-dark">
+                            <img alt="logo" src="/img/logo.png" width="30px"/>
+                            <span className="ml-3 h5 font-weight-bold">Devwares</span>
+                        </CDBFooterLink>
+                        <p className="my-3" style={{width:"250px"}}>We are creating High Quality Resources and tools to Aid developers during the developement of their projects</p>
+                    </div>
+                    <div>
+                        <p className="h5 mb-4" style={{fontWeight:"600"}}>Devwares</p>
+                        <ul style={{listStyle:"none", cursor:"pointer", padding:"0"}}>
+                            <CDBFooterLink href="/">Resources</CDBFooterLink>
+                            <CDBFooterLink href="/">About Us</CDBFooterLink>
+                            <CDBFooterLink href="/">Contact</CDBFooterLink>
+                            <CDBFooterLink href="/">Blog</CDBFooterLink>
+                        </ul>
+                    </div>
+                    <div>
+                        <p className="h5 mb-4" style={{fontWeight:"600"}}>Help</p>
+                        <ul style={{listStyle:"none", cursor:"pointer", padding:"0"}}>
+                            <CDBFooterLink href="/">Support</CDBFooterLink>
+                            <CDBFooterLink href="/">Sign Up</CDBFooterLink>
+                            <CDBFooterLink href="/">Sign In</CDBFooterLink>
+                        </ul>
+                    </div>
+                    <div>
+                        <p className="h5 mb-4" style={{fontWeight:"600"}}>Help</p>
+                        <ul style={{listStyle:"none", cursor:"pointer", padding:"0"}}>
+                            <CDBFooterLink href="/">Support</CDBFooterLink>
+                            <CDBFooterLink href="/">Sign Up</CDBFooterLink>
+                            <CDBFooterLink href="/">Sign In</CDBFooterLink>
+                        </ul>
+                    </div>
+                </div>
+                <div className="text-center mt-4">
+                    <div className="mb-4">
+                      <CDBBtn size="sm" flat color="dark" >
+                        <CDBIcon fab icon="facebook-f"/>
+                      </CDBBtn>
+                      <CDBBtn size="sm" flat color="dark" className="mx-3">
+                        <CDBIcon fab icon="twitter"/>
+                      </CDBBtn>
+                      <CDBBtn size="sm" flat color="dark">
+                        <CDBIcon fab icon="instagram"/>
+                      </CDBBtn>
+                    </div>
+                    <small>&copy; Devwares, 2020. All rights reserved.</small>
+                </div>
+            </div>
+        </CDBFooter>
+   </CDBContainer>
+  );
+};
+```
+
+## Example 4
+
+<footer class="page-footer shadow">
+  <div class="d-flex flex-column mx-auto py-5" style="width: 80%">
+    <div class="d-flex justify-content-between">
+      <div class="align-self-center">
+        <span class="d-flex align-items-center p-0 text-dark">
+          <img alt="logo" src="/img/logo.png" width="30px" />
+          <span class="ml-4 h5 font-weight-bold">Devwares</span>
+        </span>
+      </div>
+      <div>
+        <p class="h5 mb-4" style="font-weight: 600">Devwares</p>
+        <ul class="p-0" style="list-style: none; cursor: pointer">
+          <li class="my-2">
+            <span>Resources</span>
+          </li>
+          <li class="my-2">
+            <span>About Us</span>
+          </li>
+          <li class="my-2">
+            <span>Contact</span>
+          </li>
+          <li class="my-2"><span>Blog</span></li>
+        </ul>
+      </div>
+      <div>
+        <p class="h5 mb-4" style="font-weight: 600">Help</p>
+        <ul class="p-0" style="list-style: none; cursor: pointer">
+          <li class="my-2">
+            <span>Support</span>
+          </li>
+          <li class="my-2">
+            <span>Sign Up</span>
+          </li>
+          <li class="my-2">
+            <span>Sign In</span>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <p class="h5 mb-4" style="font-weight: 600">Help</p>
+        <ul class="p-0" style="list-style: none; cursor: pointer">
+          <li class="my-2">
+            <span>Support</span>
+          </li>
+          <li class="my-2">
+            <span>Sign Up</span>
+          </li>
+          <li class="my-2">
+            <span>Sign In</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="d-flex justify-content-between align-items-center mt-4">
+      <small>&copy; Devwares, 2020. All rights reserved.</small>
+      <div>
+        <button class="btn btn-dark btn-flat">
+          <i class="fab fa-facebook-f"></i>
+        </button>
+        <button class="btn btn-dark btn-flat">
+          <i class="fab fa-twitter"></i>
+        </button>
+        <button class="btn btn-dark btn-flat">
+          <i class="fab fa-instagram"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+```javascript
+import React from "react";
+import { CDBFooter, CDBFooterLink, CDBBtn, CDBIcon, CDBContainer } from "cdbreact";
+
+export const Footer = () => {
+  return (
+    <CDBContainer>
+        <CDBFooter className="shadow">
+            <div className="d-flex flex-column mx-auto py-5" style={{width:"80%"}}>
+                <div className="d-flex justify-content-between flex-wrap">
+                    <div className="align-self-center">
+                        <CDBFooterLink href="/" className="d-flex align-items-center p-0 text-dark">
+                            <img alt="logo" src="/img/logo.png" width="30px"/>
+                            <span className="ml-4 h5 font-weight-bold">Devwares</span>
+                        </CDBFooterLink>
+                    </div>
+                    <div>
+                        <p className="h5 mb-4" style={{fontWeight:"600"}}>Devwares</p>
+                        <ul style={{listStyle:"none", cursor:"pointer", padding:"0"}}>
+                            <CDBFooterLink href="/">Resources</CDBFooterLink>
+                            <CDBFooterLink href="/">About Us</CDBFooterLink>
+                            <CDBFooterLink href="/">Contact</CDBFooterLink>
+                            <CDBFooterLink href="/">Blog</CDBFooterLink>
+                        </ul>
+                    </div>
+                    <div>
+                        <p className="h5 mb-4" style={{fontWeight:"600"}}>Help</p>
+                        <ul style={{listStyle:"none", cursor:"pointer", padding:"0"}}>
+                            <CDBFooterLink href="/">Support</CDBFooterLink>
+                            <CDBFooterLink href="/">Sign Up</CDBFooterLink>
+                            <CDBFooterLink href="/">Sign In</CDBFooterLink>
+                        </ul>
+                    </div>
+                    <div>
+                        <p className="h5 mb-4" style={{fontWeight:"600"}}>Help</p>
+                        <ul style={{listStyle:"none", cursor:"pointer", padding:"0"}}>
+                            <CDBFooterLink href="/">Support</CDBFooterLink>
+                            <CDBFooterLink href="/">Sign Up</CDBFooterLink>
+                            <CDBFooterLink href="/">Sign In</CDBFooterLink>
+                        </ul>
+                    </div>
+                </div>
+                <div className="d-flex justify-content-between align-items-center mt-4">
+                    <small>&copy; Devwares, 2020. All rights reserved.</small>
+                    <div>
+                      <CDBBtn size="sm" flat color="dark" >
+                        <CDBIcon fab icon="facebook-f"/>
+                      </CDBBtn>
+                      <CDBBtn size="sm" flat color="dark" className="mx-3">
+                        <CDBIcon fab icon="twitter"/>
+                      </CDBBtn>
+                      <CDBBtn size="sm" flat color="dark">
+                        <CDBIcon fab icon="instagram"/>
+                      </CDBBtn>
+                    </div>
+                </div>
+            </div>
+        </CDBFooter>
+    </CDBContainer>
+  );
+};
+```
+
+## Example 5
+
+<footer class="page-footer shadow">
+  <div
+    class="d-flex justify-content-between align-items-center mx-auto py-4 flex-wrap"
+    style="width: 80%"
+  >
+    <div class="d-flex align-items-center">
+      <span class="d-flex align-items-center p-0 text-dark">
+        <img alt="logo" src="/img/logo.png" width="30px" />
+        <span class="ml-4 h5 mb-0 font-weight-bold">Devwares</span>
+      </span>
+      <span
+        style="
+          font-size: 3em;
+          margin: -2rem 0px -1.5rem 1rem;
+          color: #c4c4c4;
+        "
+        >&#8226;</span
+      >
+      <small class="ml-2"
+        >&copy; Devwares, 2020. All rights reserved.</small
+      >
+    </div>
+    <div>
+      <button class="btn btn-dark btn-flat">
+        <i class="fab fa-facebook-f"></i>
+      </button>
+      <button class="btn btn-dark btn-flat">
+        <i class="fab fa-twitter"></i>
+      </button>
+      <button class="btn btn-dark btn-flat">
+        <i class="fab fa-instagram"></i>
+      </button>
+    </div>
+  </div>
+</footer>
+
+```javascript
+import React from "react";
+import { CDBFooter, CDBFooterLink, CDBBtn, CDBIcon, CDBContainer } from "cdbreact";
+
+export const Footer = () => {
+  return (
+    <CDBContainer>
+        <footer className="shadow">
+            <div className="d-flex justify-content-between align-items-center mx-auto py-4 flex-wrap" style={{width:"80%"}}>
+                <div className="d-flex align-items-center">
+                    <a href="/" className="d-flex align-items-center p-0 text-dark">
+                        <img alt="logo" src="/img/logo.png" width="30px"/>
+                        <span className="ml-4 h5 mb-0 font-weight-bold">Devwares</span>
+                    </a>
+                    <span style={{fontSize:"3em", margin:"-2rem 0px -1.5rem 1rem", color:"#C4C4C4"}}>&#8226;</span>
+                    <small className="ml-2">&copy; Devwares, 2020. All rights reserved.</small>
+                </div>
+                <div>
+                  <CDBBtn size="sm" flat color="dark" >
+                    <i class="fab fa-facebook-f"></i>
+                  </CDBBtn>
+                  <CDBBtn size="sm" flat color="dark" className="mx-3">
+                    <i class="fab fa-twitter"></i>
+                  </CDBBtn>
+                  <CDBBtn size="sm" flat color="dark">
+                    <i class="fab fa-instagram"></i>
+                  </CDBBtn>
+                </div>
+            </div>
+        </footer>
+    </CDBContainer>
+  );
+};
+```
+
+## Example 6
+
+<footer class="page-footer shadow">
+  <div class="d-flex flex-column mx-auto py-5" style="width: 80%">
+    <div class="d-flex justify-content-between">
+      <div class="align-self-center">
+        <span class="d-flex align-items-center p-0 text-dark">
+          <img alt="logo" src="/img/logo.png" width="30px" />
+          <span class="ml-4 h5 font-weight-bold">Devwares</span>
+        </span>
+      </div>
+      <div class="d-flex justify-content-between" style="width: 40%">
+        <div>
+          <p class="h5 mb-4" style="font-weight: 600">Devwares</p>
+          <ul class="p-0" style="list-style: none; cursor: pointer">
+            <li class="my-2">
+              <span>Resources</span>
+            </li>
+            <li class="my-2">
+              <span>About Us</span>
+            </li>
+            <li class="my-2">
+              <span>Contact</span>
+            </li>
+            <li class="my-2"><span>Blog</span></li>
+          </ul>
+        </div>
+        <div>
+          <p class="h5 mb-4" style="font-weight: 600">Help</p>
+          <ul class="p-0" style="list-style: none; cursor: pointer">
+            <li class="my-2">
+              <span>Support</span>
+            </li>
+            <li class="my-2">
+              <span>Sign Up</span>
+            </li>
+            <li class="my-2">
+              <span>Sign In</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex justify-content-between align-items-center mt-4">
+      <small>&copy; Devwares, 2020. All rights reserved.</small>
+      <div>
+        <button class="btn btn-dark btn-flat">
+          <i class="fab fa-facebook-f"></i>
+        </button>
+        <button class="btn btn-dark btn-flat">
+          <i class="fab fa-twitter"></i>
+        </button>
+        <button class="btn btn-dark btn-flat">
+          <i class="fab fa-instagram"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+```javascript
+import React from "react";
+import { CDBFooter, CDBFooterLink, CDBBtn, CDBIcon, CDBContainer } from "cdbreact";
+
+export const Footer = () => {
+  return (
+    <CDBContainer>
+        <CDBFooter className="shadow">
+            <div className="d-flex flex-column mx-auto py-5" style={{width:"80%"}}>
+                <div className="d-flex justify-content-between flex-wrap">
+                    <div className="align-self-center">
+                        <CDBFooterLink href="/" className="d-flex align-items-center p-0 text-dark">
+                            <img alt="logo" src="/img/logo.png" width="30px"/>
+                            <span className="ml-4 h5 font-weight-bold">Devwares</span>
+                        </CDBFooterLink>
+                    </div>
+                    <div className="d-flex justify-content-between" style={{width:"40%"}}>
+                        <div>
+                            <p className="h5 mb-4" style={{fontWeight:"600"}}>Devwares</p>
+                            <ul style={{listStyle:"none", cursor:"pointer", padding:"0"}}>
+                                <CDBFooterLink href="/">Resources</CDBFooterLink>
+                                <CDBFooterLink href="/">About Us</CDBFooterLink>
+                                <CDBFooterLink href="/">Contact</CDBFooterLink>
+                                <CDBFooterLink href="/">Blog</CDBFooterLink>
+                            </ul>
+                        </div>
+                        <div>
+                            <p className="h5 mb-4" style={{fontWeight:"600"}}>Help</p>
+                            <ul style={{listStyle:"none", cursor:"pointer", padding:"0"}}>
+                                <CDBFooterLink href="/">Support</CDBFooterLink>
+                                <CDBFooterLink href="/">Sign Up</CDBFooterLink>
+                                <CDBFooterLink href="/">Sign In</CDBFooterLink>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div className="d-flex justify-content-between align-items-center mt-4">
+                    <small>&copy; Devwares, 2020. All rights reserved.</small>
+                    <div>
+                      <CDBBtn size="sm" flat color="dark" >
+                        <CDBIcon fab icon="facebook-f"/>
+                      </CDBBtn>
+                      <CDBBtn size="sm" flat color="dark" className="mx-3">
+                        <CDBIcon fab icon="twitter"/>
+                      </CDBBtn>
+                      <CDBBtn size="sm" flat color="dark">
+                        <CDBIcon fab icon="instagram"/>
+                      </CDBBtn>
+                    </div>
+                </div>
+            </div>
+        </CDBFooter>
+    </CDBContainer>
+  );
+};
+```
+
+## Example 7
+
+<footer class="shadow">
+  <div
+    class="d-flex justify-content-between align-items-center mx-auto py-4 flex-wrap"
+    style="width: 80%"
+  >
+    <span class="d-flex align-items-center p-0 text-dark">
+      <img alt="logo" src="/img/logo.png" width="30px" />
+      <span class="ml-4 h5 font-weight-bold">Devwares</span>
+    </span>
+    <small>&copy; Devwares, 2020. All rights reserved.</small>
+    <div>
+      <button class="btn btn-dark btn-flat">
+        <i class="fab fa-facebook-f"></i>
+      </button>
+      <button class="btn btn-dark btn-flat">
+        <i class="fab fa-twitter"></i>
+      </button>
+      <button class="btn btn-dark btn-flat">
+        <i class="fab fa-instagram"></i>
+      </button>
+    </div>
+  </div>
+</footer>
+
+```javascript
+import React from "react";
+import { CDBFooter, CDBFooterLink, CDBBtn, CDBIcon, CDBContainer } from "cdbreact";
+
+export const Footer = () => {
+  return (
+    <CDBContainer>
+        <CDBFooter className="shadow">
+            <div className="d-flex justify-content-between align-items-center mx-auto py-4 flex-wrap" style={{width:"80%"}}>
+                <CDBFooterLink href="/" className="d-flex align-items-center p-0 text-dark">
+                    <img alt="logo" src="/img/logo.png" width="30px"/>
+                    <span className="ml-4 h5 font-weight-bold">Devwares</span>
+                </CDBFooterLink>
+                <small>&copy; Devwares, 2020. All rights reserved.</small>
+                  <div>
+                  <CDBBtn size="sm" flat color="dark" >
+                    <CDBIcon fab icon="facebook-f"/>
+                  </CDBBtn>
+                  <CDBBtn size="sm" flat color="dark" className="mx-3">
+                    <CDBIcon fab icon="twitter"/>
+                  </CDBBtn>
+                  <CDBBtn size="sm" flat color="dark">
+                    <CDBIcon fab icon="instagram"/>
+                  </CDBBtn>
+                </div>
+            </div>
+        </CDBFooter>
+    </CDBContainer>
+  );
+};
+```
+
+# Contrast React Bootstrap Footer Props
+
+This tutorial will expand on your knowledge of the props available for use with the Contrast React Bootstrap Footer component. You'll learn what these props do, what their default values are, and how you'd use them in your code.
+
+The table below displays the various prop options for the `CDBFooter` component.
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       | Adds custom classes             |Adds custom classes	      |     <CDBFooter className="myClass" ... />  |
+| tag            | function or String | footer | Changes default footer tag | <CDBFooter tag="div" ... />  |
+| color          | String       |              | Defines component's color | <CDBFooter color="blue" .../>  |
+
+
+
+
+In this tutorial we also use the [CDBBtn](https://www.devwares.com/docs/contrast/react/components/buttons) and the [CDBIcon](https://www.devwares.com/docs/contrast/react/components/icon) component, check out our docs to find out more.

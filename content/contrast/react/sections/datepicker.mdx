@@ -1,0 +1,60 @@
+---
+title: "DatePicker"
+metaTitle: "DatePicker Component for React Bootstrap"
+metaDescription: "Building a DatePicker Component using React Bootstrap"
+---
+
+import React from "react";
+import {Link} from "gatsby";
+
+# React Bootstrap DatePicker
+
+React Bootstrap Date picker allows you to pick a date and time with ease.
+
+## Importing the React Bootstrap DatePicker Component
+
+To use the Contrast React Bootstrap DatePicker component, you import `CDBDatePicker` into your project.
+
+```js
+import { CDBDatePicker } from "cdbreact";
+```
+
+<i/>
+
+## Default DatePicker
+
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+
+
+![React Bootstrap DatePicker](https://i.imgur.com/ClWprya.gif)
+
+
+```js
+import React from "react";
+import { CDBDatePicker, CDBContainer } from "cdbreact";
+
+const DatePicker = () => {
+  const [value, onChange] = useState(new Date());
+
+  return (
+    <CDBContainer>
+          <CDBDatePicker onChange={onChange} value={value} />
+    </CDBContainer>
+  );
+};
+
+export default DatePicker;
+```
+
+## API Reference: Contrast React Bootstrap DatePicker Props
+
+This section will build on your information about the props you get to use with the Contrast React Bootstrap DatePicker component. You will find out what these props do, their default values, and how you would use them in your code.
+
+The table below lists other prop options of the `CDBDatePicker` component.
+
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       | Adds custom classes             |Adds custom classes	      |     <CDBDatePicker className="myClass" ... />  |
+| tag            | String       | div          | Changes default input tag | <CDBDatePicker tag="input" ... />  |
+| disable        | Boolean      | false        | Disables DatePicker component | <CDBDatePicker disabled .../>  |

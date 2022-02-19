@@ -1,0 +1,63 @@
+---
+title: "Rating"
+metaTitle: "Rating Component for React Bootstrap"
+metaDescription: "The interactive icons in the React Bootstrap Rating component allow users to share their thoughts on your product."
+
+---
+
+import React from "react";
+import { Link } from "gatsby";
+import rating from "./images/rating.png";
+
+# React Bootstrap Rating
+
+The interactive icons in the React Bootstrap Rating component allow users to share their thoughts on your product. This allows you to obtain input from your product's users in order to improve the product's outcome.
+
+## Importing the React Bootstrap Rating Component
+
+When you wish to use the React Bootstrap Rating component, you need to import `CDBRating` into your project first.
+
+```javascript
+import { CDBRating } from "cdbreact";
+```
+
+## Rating Component
+
+<img src={rating} alt="Contrast React Bootstrap Rating Component" />
+
+```javascript
+import React from "react";
+import { CDBRating, CDBContainer } from "cdbreact";
+
+const Rating = () => {
+  return (
+    <CDBContainer>
+        <CDBRating iconRegular />
+        <CDBRating  iconFaces fillClassName='black-text' iconRegular />
+        <CDBRating feedback/>
+    </CDBContainer>
+  );
+};
+export default  Rating;
+```
+
+## API Reference: Contrast React Bootstrap Rating Props
+
+This section will add on the information you already have about the props will use with the React Bootstrap Rating component. You'll discover what these props do, how to apply them in your code, and what their default values are.
+
+You will see that the table below shows other prop options of the `CDBRating`.
+
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| containerClassName      | String       | | Adds custom classes	to the container      |     <CDBRating containerClassName="myClass" ... />  |
+| tag            | String       | div          | Changes default  tag | <CDBRating tag="li" ... />  |
+| data            | Array       |  [{tooltip: 'Very Bad'}, {tooltip: 'Poor'}, {tooltip: 'Ok'}, {tooltip: 'Good'},{tooltip: 'Excellent'}]         | Sets custom data of icon property.  | <CDBRating data={[{tooltip: 'Very Bad'}, {tooltip: 'Poor'}, {tooltip: 'Ok'}, {tooltip: 'Good'},{tooltip: 'Excellent'}]} ... />  |
+| feedback        | Boolean      | false        | If set to `true`, clicking a star will trigger a popover with a textarea | <CDBRating feedback .../>  |
+| fillClassName        | String      | fiveStars        | Sets custom classes for filled icons  | <CDBRating fillClassName="red-text" .../>  |
+| fillColors         | Boolean or Array[String]      |         |  	Sets custom colors for filled icons  | <CDBRating fillColors={["red-text", "yellow-text"]} .../>  |
+| iconClassName            | String       |           | Sets default icon's classes  | <CDBRating iconClassName="blue-text" ... />  |
+| iconFaces        | Boolean      | false        | Changes icon star for icon face  | <CDBRating iconFaces .../>  |
+| iconSize            | String       | 1x          | Sets size of icons  | <CDBRating iconSize="2x" ... />  |
+| iconRegular        | Boolean      | false        | Sets regular style of icons  | <CDBRating iconRegular .../>  |
+| submitHandler        | function      |         | Returns feedback form value  | <CDBRating summitHandler={handleSubmit} .../>  |

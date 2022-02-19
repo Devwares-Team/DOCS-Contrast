@@ -1,0 +1,248 @@
+---
+title: "InputGroup"
+metaTitle: "InputGroup Component for React Bootstrap"
+metaDescription: "React Bootstrap Input group is used to collect data supplied by the user. It usually consists of buttons, text fields, and other forms of input"
+
+---
+
+import React from "react";
+import { Link } from "gatsby";
+
+# React Bootstrap InputGroup
+
+React Bootstrap Input group is used to collect data supplied by the user. It usually consists of buttons, text fields, and other forms of input.. Your forms will be more engaging and customizable using this component.
+
+## Importing the React Bootstrap InputGroup Component
+
+You can Start by importing `CDBInputGroup` into your project to use the Contrast React Bootstrap InputGroup component.
+
+```javascript
+import { CDBInputGroup } from "cdbreact";
+```
+
+## Basic input with appended text after
+
+This is the default InputGroup 
+
+<div class="container">
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2"/>
+    <div class="input-group-append">
+      <span class="input-group-text" id="basic-addon2">
+          @example.com
+      </span>
+    </div>
+  </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBInputGroup, CDBContainer } from "cdbreact";
+
+const InputGroup = () => {
+  return (
+    <CDBContainer>
+            <CDBInputGroup
+              hint="Recipient's username"
+              containerClassName="mb-3 mt-0"
+              append="@example.com"
+            />
+    </CDBContainer>
+  );
+};
+export default  InputGroup;
+```
+## Basic input with appended text before
+
+<div class="container">
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">@</span>
+    </div>
+    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"/>
+  </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBInputGroup, CDBContainer } from "cdbreact";
+
+const InputGroup = () => {
+  return (
+    <CDBContainer>
+            <CDBInputGroup
+              containerClassName="flex-nowrap mb-3"
+              prepend="@"
+              hint="Username"
+            />
+    </CDBContainer>
+  );
+};
+export default  InputGroup;
+```
+
+## Run function on icon click
+
+<div class="container">
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <i class="input-group-text fa fa-bell" id="basic-addon1"></i>
+    </div>
+    <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1"/>
+  </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBInputGroup, CDBContainer } from "cdbreact";
+
+const InputGroup = () => {
+  return (
+    <CDBContainer>
+            <CDBInputGroup
+              icon="bell"
+              onIconClick={() => alert("Wait! This is an alert!")}
+            />
+    </CDBContainer>
+  );
+};
+export default  InputGroup;
+```
+
+## Small input group
+
+<div class="container">
+  <div class="input-group input-group-sm mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-sm">Small</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1"/>
+  </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBInputGroup, CDBContainer } from "cdbreact";
+
+const InputGroup = () => {
+  return (
+    <CDBContainer>
+            <CDBInputGroup
+              containerClassName="mb-2 mt-0"
+              prepend="Small"
+              size="sm"
+            />
+    </CDBContainer>
+  );
+};
+export default  InputGroup;
+```
+## Large input group
+
+<div class="container">
+  <div class="input-group input-group-lg mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-lg">Large</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1"/>
+  </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBInputGroup, CDBContainer } from "cdbreact";
+
+const InputGroup = () => {
+  return (
+    <CDBContainer>
+            <CDBInputGroup
+              containerClassName="mb-2 mt-0"
+              prepend="Large"
+              size="lg"
+            />
+    </CDBContainer>
+  );
+};
+export default  InputGroup;
+```
+## Input group with checkbox
+
+<div class="container">
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text"><input type="checkbox"/></span>
+    </div>
+    <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1"/>
+  </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBInputGroup, CDBInput, CDBContainer } from "cdbreact";
+
+const InputGroup = () => {
+  return (
+    <CDBContainer>
+            <CDBInputGroup
+              prepend={
+                <div className="input-group-text md-addon">
+                  <input type="checkbox"/>
+                </div>
+              }
+            />
+    </CDBContainer>
+  );
+};
+export default  InputGroup;
+```
+## Basic input
+
+<div class="container">
+  <div class="input-group input-group-lg mb-3">
+    <input type="text" class="form-control" placeholder="Basic Input" aria-label="Username" aria-describedby="basic-addon1"/>
+  </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBInputGroup, CDBInput, CDBContainer } from "cdbreact";
+
+const InputGroup = () => {
+  return (
+    <CDBContainer>
+            <CDBInputGroup/>
+    </CDBContainer>
+  );
+};
+export default  InputGroup;
+```
+
+
+
+# Contrast React Bootstrap InputGroup Props
+
+This section will go over the props that the React Bootstrap InputGroup component has to offer. You'll find out what these props are used for, how to use them, and what their default values are.
+
+Other prop options for the 'CDBInputGroup' component are listed in the table below.
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       | Adds custom classes             |Adds custom classes	      |     <CDBInputGroup className="myClass" ... />  |
+| containerClassName      | String       |             | Adds custom class to wrapper div      |     <CDBInputGroup containerClassName="wrapper" ... />  |
+| containerId      | String       |             | Adds custom Id to wrapper div      |     <CDBInputGroup containerId="id" ... />  |
+| hint      | String       |             | Sets the placeholder for the Input |     <CDBInputGroup hint="placeholder" ... />  |
+| id     | String       |           | Required! Set the id of the input element 	| <CDBInputGroup id="myId" ... />  |
+| input     | node       |           |  	Replaces default input for your custom elements 	| <MDBInputGroup inputs={  <select className="browser-default custom-select" ...>  <option value="0" ...>Choose< .../option>  <option value="1" ...>One< .../option>  <... /select>} .../>  |
+| tag            | String       | div          | Changes default input tag | <CDBInputGroup tag="section" ... />  |
+| label            | String or Boolean      | div          | Adds label for your input | <CDBInputGroup group ... />  |
+| labelClassName            | String | div          | Adds custom class to the label | <CDBInputGroup labelClassName="labelCustomClass" ... />  |
+| append            | Node or String       |  null         |  	Adds suffix for your input | <CDBInputGroup append={<CDBBtn>Send</CDBBtn>} ... /> <CDBInputGroup append="@gmail.com" .../>  |
+| appendClassNames            | String       |           |  Adds custom class to Input Group append element	| <CDBInputGroup appendClassNames="font-italic" .../>  |
+| prependClassNames            | String       |           |  	Adds custom class to Input Group prepend element | <CDBInputGroup prependClassNames="font-italic" .../>  |
+| size     | String       |      lg     | Changes size of the component; available `lg` and `sm` | <CDBInputGroup size="lg" ... /> |  |
+| type     | String       |  text         | The type of the input element | <CDBInputGroup type="textarea" ... /> |  |
+| validate        | Boolean      | false        |  	Adds `.validate` class to the Input component | <CDBInputGroup validate .../>  |
+| value     | Number, Boolean or String       |           |  The value of the input element (use with the controlled input)	| <CDBInputGroup value="I am controlled" onChange={this.handleChange} ... />  |
+| valueDefault     | Number or String       |           |  The default value of the input (use with the uncontrolled input)	| <CDBInputGroup valueDefault="I am uncontrolled" ... />  |
+| arialLabel            | String       |           | Adds custom aria-label text for input element | <CDBInputGroup arialLabel="close" .../>  |
+| material        | Boolean      | false        | Changes component styles for material theme | <CDBInputGroup material .../>  |

@@ -1,0 +1,438 @@
+---
+title: "Panel"
+metaTitle: "Panel Component for React Bootstrap"
+metaDescription: "React Bootstrap Panels are content wrappers that are both dynamic and expandable."
+
+---
+
+import React from "react";
+import {Link} from "gatsby";
+import panelImage from "./images/panelwithprogress.png";
+
+# React Bootstrap Panel
+
+React Bootstrap Panels are content wrappers that are both dynamic and expandable. They may hold a range of content, have contextual background colors, and have strong display choices. They're similar to cards, however they don't have any media attached to them.
+
+## Importing the React Bootstrap Panel Component
+
+Start by importing `CDBPanel` into your project to use the Contrast React Bootstrap Panel component.
+
+```javascript
+import { CDBPanel } from "cdbreact";
+```
+In addition to the `CDBPanel` component, you import the `CDBPanelTitle` component to write titles in your pane, the `CDBPaneText` component to write texts or messages in your pane, and the `CDBPaneImage` component to write pane images.
+
+```javascript
+import { CDBPanel, CDBPanelTitle, CDBPanelText } from "cdbreact";
+```
+
+<i/>
+
+## Panel with Dropdown
+
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+
+ We nest the Contrast React Bootstrap Dropdown component in this tutorial section, [CDBDropDown](https://www.devwares.com/docs/contrast/react/components/dropdown), in the `CDBPanel` component. We now have dropdowns in our panel as a result of this.
+
+<div class="container">
+    <div class="panel" style="width: 25rem">
+        <div class="panel-body">
+          <div class="pane d-flex align-items-center mt-0 mb-3">
+            <img class="pane-img pane-md" src="https://media.istockphoto.com/photos/beautiful-woman-wearing-brown-curly-hairstyle-picture-id495006065?s=170x170" alt="paneImage"/>
+            <div class="ml-3">
+              <h6 class="m-0" style="font-weight:600;">Warren Briggs</h6>
+              <p class="m-0 pane-item">Chicago</p>
+            </div>
+            <div class="dropdown p-0 ml-auto pane-item">
+              <i 
+                class="fa fa-ellipsis-h"
+                id="dropdownMenuButton"
+                data-toggle="dropdown"  
+                aria-expanded="false">
+              </i>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><span class="dropdown-item">Action</span></li>
+                <li><span class="dropdown-item">Another action</span></li>
+                <li><span class="dropdown-item">Something else here</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          </div>
+          <div class="small card-text mt-2">
+            <i class="far fa-thumbs-up mr-1"></i>127 likes
+            <i class="far fa-comment mr-1 ml-2"></i>54 comments
+          </div>
+        </div>
+    </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBPanel, CDBPanelTitle, CDBPanelText, CDBDropDown, CDBDropDownToggle, CDBDropDownMenu, CDBDropDownItem, CDBPane, CDBIcon, CDBPaneImage, CDBContainer } from "cdbreact";
+
+const Panel = () => {
+  return (
+    <CDBContainer>
+            <CDBPanel>
+              <CDBPane>
+                <CDBPaneImage size="md" src="https://media.istockphoto.com/photos/beautiful-woman-wearing-brown-curly-hairstyle-picture-id495006065?s=170x170" />
+                <div className="ml-3">
+                  <CDBPanelTitle>Warren Briggs</CDBPanelTitle>
+                  <CDBPanelText small>Chicago</CDBPanelText>
+                </div>
+                <CDBDropDown className="ml-auto">
+                  <CDBDropDownToggle color="white"><CDBIcon className="text-muted" fas icon="ellipsis-h" /></CDBDropDownToggle>
+                  <CDBDropDownMenu>
+                    <CDBDropDownItem disabled>Edit Profile</CDBDropDownItem>
+                    <CDBDropDownItem divider />
+                    <CDBDropDownItem>Action 1</CDBDropDownItem>
+                    <CDBDropDownItem>Action 2</CDBDropDownItem>
+                  </CDBDropDownMenu>
+                </CDBDropDown>
+              </CDBPane>
+              <CDBPanelText className="my-3">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              </CDBPanelText>
+              <CDBPanelText small>
+                <CDBIcon far icon="thumbs-up"/>127 likes
+                <CDBIcon className="ml-2" far icon="comment"/>54 comments
+              </CDBPanelText>
+            </CDBPanel>
+    </CDBContainer>
+  );
+};
+export default  Panel;
+```
+
+## Panel with Users
+
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+
+  <div class="container">
+      <div class="panel" style="width: 25rem">
+          <div class="panel-img">
+            <img class="w-100" src="/img/cardbg.png" alt="Contrast Panel with users"/> 
+          </div>
+          <div class="panel-body">
+            <div class="panel-title" style="font-size:2em;">
+              Bristol
+            </div>
+            <div class="panel-text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+            <img class="pane-img pane-md" src="/img/pane/pane2.png" alt="Contrast React Bootstrap Panel With Progress component"/>
+            <img class="pane-img pane-md" src="/img/pane/pane3.png" alt="Contrast React Bootstrap Panel With Progress component"/>
+            <img class="pane-img pane-md" src="/img/pane/pane4.png" alt="Contrast React Bootstrap Panel With Progress component"/>
+            
+          </div>
+      </div>
+  </div>
+
+```javascript
+import React from "react";
+import { CDBPanel,CDBPanelTitle, CDBPanelText, CDBCardImage, CDBPaneImage, CDBContainer } from "cdbreact";
+
+const Panel = () => {
+  return (
+    <CDBContainer>
+            <CDBPanel className="p-0">
+              <CDBCardImage className="img-fluid" src="/img/cardbg.png" />
+              <div className="m-3">
+                <CDBPanelTitle tag="h2" >Bristol</CDBPanelTitle>
+                <CDBPanelText className="my-3">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua.
+                </CDBPanelText>
+                <CDBPaneImage size="sm" src="/img/pane/pane1.png" alt="Contrast React Bootstrap Panel With Progress component"/>
+                <CDBPaneImage size="sm" className="mx-2" src="/img/pane/pane2.png" alt="Contrast React Bootstrap Panel With Progress component" />
+                <CDBPaneImage size="sm" src="/img/pane/pane3.png" alt="Contrast React Bootstrap Panel With Progress component" />
+              </div>
+            </CDBPanel>
+    </CDBContainer>
+  );
+};
+export default  Panel;
+```
+<i/>
+
+## Panel with Label
+
+<Link to="/product/contrast-pro"><CDBBadge size="large" className="badge-pro">Pro Component</CDBBadge></Link>
+
+In this tutorial section, we nest the `CDBBadge` component in the `CDBPanel` component. With this, our panel now has badges in it, which can serve as labels.
+
+<div class="container">
+    <div class="panel" style="width: 20rem">
+        <div class="panel-body">
+          <div class="panel-label">
+            <div class="badge bg-dark">Label 1</div>
+            <div class="badge bg-warning mx-1">Label 2</div>
+            <div class="badge bg-danger">Label 3</div>
+          </div>
+          <div class="panel-title font-weight-light" style="font-size:1.8em;">
+            Moon Fevers
+          </div>
+          <div class="panel-text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
+          </div>
+          <img class="pane-img pane-md" src="/img/pane/pane3.png" alt="Contrast React Bootstrap Panel With Progress component"/>
+          <img class="pane-img pane-md" src="/img/pane/pane5.png" alt="Contrast React Bootstrap Panel With Progress component"/>
+        </div>
+    </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBPanel,CDBPanelTitle, CDBPanelText, CDBBadge, CDBIcon, CDBPaneImage, CDBContainer } from "cdbreact";
+
+const Panel = () => {
+  return (
+    <CDBContainer>
+            <CDBPanel>
+              <CDBBadge color="dark" flat>Label 1</CDBBadge>
+              <CDBBadge color="warning" className="mx-1" flat>Label 2</CDBBadge>
+              <CDBBadge color="danger" flat>Label 3</CDBBadge>
+              <div className="mt-3 d-flex align-items-center">
+                <CDBPanelTitle tag="h3" >Moon Fever</CDBPanelTitle>
+                <CDBIcon className="ml-auto" fas icon="chart-line"/>
+              </div>
+              <CDBPanelText className="my-3">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt
+              </CDBPanelText>
+              <CDBPaneImage size="sm" src="/img/pane/pane1.png" alt="Contrast React Bootstrap Panel With Progress component"/>
+              <CDBPaneImage size="sm" src="/img/pane/pane2.png" alt="Contrast React Bootstrap Panel With Progress component"/>
+            </CDBPanel>
+    </CDBContainer>
+  );
+};
+export default  Panel;
+```
+<i/>
+
+## Pane List
+
+<Link to="/product/contrast-pro"><CDBBadge size="large" className="badge-pro">Pro Component</CDBBadge></Link>
+
+  <div class="container">
+    <div class="panel" style="width:20rem;">
+      <div class="panel-body">
+        <div class="d-flex justify-content-between align-item-center mb-1">
+          <p class="mb-0">My Messages</p>
+          <div class="dropdown p-0">
+            <i 
+              class="fa fa-ellipsis-h"
+              id="dropdownMenuButton"
+              data-toggle="dropdown"  
+              aria-expanded="false"
+            ></i>
+            <ul class="dropdown-menu">
+              <li><span class="dropdown-item">Action</span></li>
+              <li><span class="dropdown-item">Another action</span></li>
+              <li><span class="dropdown-item">Something else here</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="pane d-flex align-items-center">
+          <img class="pane-img pane-md" src="/img/pane/pane4.png" alt="Contrast React Bootstrap Panel With Progress component"/>
+          <div class="ml-3">
+            <h6 class="m-0" style="font-weight:600;">Warren Briggs</h6>
+            <p class="m-0 pane-item">Cooking</p>
+          </div>
+          <p class="ml-auto pane-item">5mins Ago</p>
+        </div>
+        <div class="pane d-flex align-items-center">
+          <img class="pane-img pane-md" src="/img/pane/pane5.png" alt="Contrast React Bootstrap Panel With Progress component"/>
+          <div class="ml-3">
+            <h6 class="m-0" style="font-weight:600;">Lu Chen</h6>
+            <p class="m-0 pane-item">Cooking</p>
+          </div>
+          <p class="ml-auto pane-item">5mins Ago</p>
+        </div>
+        <div class="pane d-flex align-items-center">
+          <img class="pane-img pane-md" src="/img/pane/pane1.png" alt="Contrast React Bootstrap Panel With Progress component"/>
+          <div class="ml-3">
+            <h6 class="m-0" style="font-weight:600;">Sam</h6>
+            <p class="m-0 pane-item">Cooking</p>
+          </div>
+          <p class="ml-auto pane-item">5mins Ago</p>
+        </div>
+        <div class="pane d-flex align-items-center">
+          <img class="pane-img pane-md" src="/img/pane/pane2.png" alt="Contrast React Bootstrap Panel With Progress component"/>
+          <div class="ml-3">
+            <h6 class="m-0" style="font-weight:600;">Danny</h6>
+            <p class="m-0 pane-item">Cooking</p>
+          </div>
+          <p class="ml-auto pane-item">5mins Ago</p>
+        </div>
+        <div class="pane d-flex align-items-center">
+          <img class="pane-img pane-md" src="/img/pane/pane3.png" alt="Contrast React Bootstrap Panel With Progress component"/>
+          <div class="ml-3">
+            <h6 class="m-0" style="font-weight:600;">Lilah Loselev</h6>
+            <p class="m-0 pane-item">Cooking</p>
+          </div>
+          <p class="ml-auto pane-item">5mins Ago</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+```javascript
+import React from "react";
+import { CDBPanel,CDBPanelTitle, CDBPanelText, CDBDropDown, CDBDropDownToggle, CDBDropDownMenu, CDBDropDownItem, CDBPane, CDBIcon, CDBPaneImage, CDBContainer } from "cdbreact";
+
+const Panel = () => {
+  return (
+    <CDBContainer>
+            <CDBPanel style={{width:"320px"}}>
+              <CDBPane>
+                <CDBPanelText muted>My Messages</CDBPanelText>
+                <CDBDropDown className="ml-auto">
+                  <CDBDropDownToggle color="white"><CDBIcon className="text-muted" fas icon="ellipsis-h"/></CDBDropDownToggle>
+                  <CDBDropDownMenu>
+                    <CDBDropDownItem disabled>Edit Profile</CDBDropDownItem>
+                    <CDBDropDownItem divider />
+                    <CDBDropDownItem>Action 1</CDBDropDownItem>
+                    <CDBDropDownItem>Action 2</CDBDropDownItem>
+                  </CDBDropDownMenu>
+                </CDBDropDown>
+              </CDBPane>
+              <CDBPane className="mt-4">
+                <CDBPaneImage size="md" src="https://media.istockphoto.com/photos/beautiful-woman-wearing-brown-curly-hairstyle-picture-id495006065?s=170x170" />
+                <div className="ml-3">
+                  <CDBPanelTitle>Warren Briggs</CDBPanelTitle>
+                  <CDBPanelText small>Cooking</CDBPanelText>
+                </div>
+                <CDBPanelText muted small className="ml-auto">5mins ago</CDBPanelText>
+              </CDBPane>
+              <CDBPane className="mt-4">
+                <CDBPaneImage size="md" src="/img/pane/pane1.png" alt="Contrast React Bootstrap Panel With Progress component">
+                  <CDBPanelTitle>Lu Chen</CDBPanelTitle>
+                  <CDBPanelText small>I'll call you back</CDBPanelText>
+                </div>
+                <CDBPanelText muted small className="ml-auto">27mins ago</CDBPanelText>
+              </CDBPane>
+              <CDBPane className="mt-4">
+                <CDBPaneImage size="md" src="/img/pane/pane2.png">
+                  <CDBPanelTitle>Sam</CDBPanelTitle>
+                  <CDBPanelText small>See you at school</CDBPanelText>
+                </div>
+                <CDBPanelText muted small className="ml-auto">active</CDBPanelText>
+              </CDBPane>
+              <CDBPane className="mt-4">
+                <CDBPaneImage size="md" src="/img/pane/pane3.png" />
+                <div className="ml-3">
+                  <CDBPanelTitle >Danny</CDBPanelTitle>
+                  <CDBPanelText small>Yeah</CDBPanelText>
+                </div>
+                <CDBPanelText muted small className="ml-auto">busy</CDBPanelText>
+              </CDBPane>
+              <CDBPane className="mt-4">
+                <CDBPaneImage size="md" src="/img/pane/pane4.png" />
+                <div className="ml-3">
+                  <CDBPanelTitle>Lilah Loselev</CDBPanelTitle>
+                  <CDBPanelText small>Okay sir</CDBPanelText>
+                </div>
+                <CDBPanelText muted small className="ml-auto">1hr ago</CDBPanelText>
+              </CDBPane>
+            </CDBPanel>
+    </CDBContainer>
+  );
+};
+export default  Panel;
+```
+<i/>
+
+## Panel with Progress
+
+<Link to="/product/contrast-pro"><CDBBadge size="large" className="badge-pro">Pro Component</CDBBadge></Link>
+
+Along with the 'CDBPanel' component, we use other React Bootstrap Components in this tutorial. These components are the [CDBDropDown](https://www.devwares.com/docs/contrast/react/components/dropdown) for our panel dropdowns, [CDBProgress](https://www.devwares.com/docs/contrast/react/components/progress) to have progress bars in our panels, [CDBPane](https://www.devwares.com/docs/contrast/react/components/pane), and the [CDBIcon](https://www.devwares.com/docs/contrast/react/components/icon) component for icons in our panels. Check out the docs to get more insight. 
+
+<img src={panelImage} alt="Contrast React Bootstrap Panel With Progress component"/>
+
+
+```javascript
+import React from "react";
+import { CDBPanel,CDBPanelTitle, CDBPanelText, CDBDropDown, CDBDropDownToggle, CDBDropDownMenu, CDBDropDownItem, CDBProgress, CDBPane, CDBIcon, CDBPaneImage, CDBContainer } from "cdbreact";
+
+const Panel = () => {
+  return (
+    <CDBContainer>
+            <CDBPanel>
+              <CDBPane>
+                <CDBPaneImage size="md" src="https://media.istockphoto.com/photos/beautiful-woman-wearing-brown-curly-hairstyle-picture-id495006065?s=170x170" />
+                <div className="ml-3">
+                  <CDBPanelTitle>Warren Briggs</CDBPanelTitle>
+                  <CDBPanelText small>Chicago</CDBPanelText>
+                </div>
+                <CDBDropDown className="ml-auto">
+                  <CDBDropDownToggle color="white"><CDBIcon className="text-muted" fas icon="ellipsis-h" /></CDBDropDownToggle>
+                  <CDBDropDownMenu>
+                    <CDBDropDownItem disabled>Edit Profile</CDBDropDownItem>
+                    <CDBDropDownItem divider />
+                    <CDBDropDownItem>Action 1</CDBDropDownItem>
+                    <CDBDropDownItem>Action 2</CDBDropDownItem>
+                  </CDBDropDownMenu>
+                </CDBDropDown>
+              </CDBPane>
+              <CDBPanelText className="mt-3" small>Instagram</CDBPanelText>
+              <CDBProgress value={75} height={5}/>
+              <CDBPanelText className="mt-2" small>Facebook</CDBPanelText>
+              <CDBProgress value={60} height={5}/>
+              <CDBPanelText className="mt-2" small>Twitter</CDBPanelText>
+              <CDBProgress value={45} height={5}/>
+            </CDBPanel>
+    </CDBContainer>
+  );
+};
+export default  Panel;
+```
+
+
+
+
+## API Reference: Contrast React Bootstrap Panel Props
+
+This session will increase your understanding of the props accessible with the React Bootstrap Pane component. You'll discover what these properties do, what their default values are, and how to use them in your code.
+
+Other prop options for the `CDBPanel` component are included in the table below.
+
+
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       |              |Adds custom classes	      |     <CDBPanel className="myClass" ... />  |
+| tag            | String       | div          | Changes default tag | <CDBPanel tag="input" ... />  |
+| color        | string      |         | Sets the color of the panel | <CDBPanel color="#000" .../>  |
+
+
+## API Reference: Contrast React Bootstrap Panel Title Props
+
+The table below provides the various prop options for the `CDBPanelTitle` component.
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       |              |Adds custom classes	      |     <CDBPanelTitle className="myClass" ... />  |
+| tag            | String       | h6          | Changes default tag | <CDBPanelTitle tag="h5" ... />  |
+
+
+## API Reference: Contrast React Bootstrap Panel Text Prop
+
+The table below provides the various prop options for the 'CDBPanelText' component.
+
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       |              |Adds custom classes	      |     <CDBPanelText className="myClass" ... />  |
+| tag            | String       | p          | Changes default tag | <CDBPanelText tag="p" ... />  |
+| small            | Boolean       | false          | Uses html `small` as component's tag | <CDBPanelText small ... />  |
+| muted            | Boolean       | false          | Mutes the text color | <CDBPanelText muted ... />  |

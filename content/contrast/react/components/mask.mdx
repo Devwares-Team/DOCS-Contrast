@@ -1,0 +1,166 @@
+---
+title: "Mask"
+metaTitle: "Mask Component for React Bootstrap"
+metaDescription: "React Bootstrap Masks conceal an element's visibility by partially or entirely hiding it. Masks are used to increase the visibility of material in a photograph."
+
+---
+
+# React Bootstrap Mask
+
+React Bootstrap Masks conceal an element's visibility by partially or entirely hiding it. Masks are used to increase the visibility of material in a photograph.
+
+## Importing the React Bootstrap Mask Component
+
+You begin by importing `CDBMask` and `CDBView` into your project to use the Contrast React Bootstrap Mask component. The stuff that we are attempting to conceal or partially conceal remains in the `CDBView` component. Then there's the `CDBMask`, which is an overlay or pattern over the content.
+
+```javascript
+import { CDBMask, CDBView } from "cdbreact";
+
+```
+
+## Mask Patterns
+
+The React Bootstrap Mask component, the `CDBMask`, enables you to use a pattern over your content by passing a pattern parameter (range from pattern1 to pattern4) into the 'pattern' prop.
+
+![React Bootstrap Mask ](https://imgur.com/MCquXaE.png)
+![React Bootstrap Mask](https://imgur.com/qzyTCFL.png)
+![React Bootstrap Mask](https://imgur.com/FOb0fkk.png)
+![React Bootstrap Mask](https://imgur.com/FtwM3yj.png)
+
+
+
+
+```javascript
+import React from "react";
+import { CDBMask, CDBView, CDBContainer } from "cdbreact";
+
+export const Mask = () => {
+  return (
+    <CDBContainer>
+            <CDBView>
+              <img
+                src="img/food.jpg"
+                className="img-fluid"
+                alt=""
+                style={{ width: "100%" }}
+              />
+              <CDBMask pattern="pattern1" className="flex-center" />
+            </CDBView>
+            <CDBView>
+              <img
+                src="img/food.jpg"
+                className="img-fluid"
+                alt=""
+                style={{ width: "100%" }}
+              />
+              <CDBMask pattern="pattern2" className="flex-center" />
+            </CDBView>
+            <CDBView>
+              <img
+                src="img/food.jpg"
+                className="img-fluid"
+                alt=""
+                style={{ width: "100%" }}
+              />
+              <CDBMask pattern="pattern3" className="flex-center" />
+            </CDBView>
+            <CDBView>
+              <img
+                src="img/food.jpg"
+                className="img-fluid"
+                alt=""
+                style={{ width: "100%" }}
+              />
+              <CDBMask pattern="pattern4" className="flex-center" />
+            </CDBView>
+    </CDBContainer>
+  );
+};
+```
+## Mask Light Overlay
+
+Use the 'overlay' prop to use a light background color as your overlay over your content. Set the value to the preferred color, inserting the word Light at the end. For example `overlay= "blueLight"`.
+
+![](https://imgur.com/Yoxa6Xr.png)
+![](https://imgur.com/XgzFd30.png)
+
+```javascript
+import React from "react";
+import { CDBMask, CDBView, CDBContainer } from "cdbreact";
+
+export const Mask = () => {
+  return (
+    <CDBContainer>
+            <CDBView>
+              <img
+                src="img/food.jpg"
+                className="img-fluid"
+                alt=""
+                style={{ width: "100%" }}
+              />
+              <CDBMask overlay="blueLight" className="flex-center" />
+            </CDBView>
+            <CDBView>
+              <img
+                src="img/food.jpg"
+                className="img-fluid"
+                alt=""
+                style={{ width: "100%" }}
+              />
+              <CDBMask overlay="redLight" className="flex-center" />
+            </CDBView>
+    </CDBContainer>
+  );
+};
+```
+
+## Mask Strong Overlay
+
+Use the `overlay` component to create an overlay of a thick background color over your content.. Set the value to the color you would like, appending the word Strong at the end. For example `overlay= "blueStrong"`.
+
+
+![](https://imgur.com/Q0y0x7A.png)
+![](https://imgur.com/39KbCT0.png)
+
+```javascript
+import React from "react";
+import { CDBMask, CDBView, CDBContainer } from "cdbreact";
+
+export const Mask = () => {
+  return (
+    <CDBContainer>
+            <CDBView>
+              <img
+                src="img/food.jpg"
+                className="img-fluid"
+                alt=""
+                style={{ width: "100%" }}
+              />
+              <CDBMask overlay="blueStrong" className="flex-center" />
+            </CDBView>
+            <CDBView>
+              <img
+                src="img/food.jpg"
+                className="img-fluid"
+                alt=""
+                style={{ width: "100%" }}
+              />
+              <CDBMask overlay="redStrong" className="flex-center" />
+            </CDBView>
+    </CDBContainer>
+  );
+};
+```
+
+# Contrast React Bootstrap Mask Props
+
+This section will expand on your knowledge of the props available with the Contrast React Bootstrap Mask component. You'll learn what these props do, what their default values are, and how to use them in your code.
+
+Other prop options for the `CDBMask` component are listed in the table below
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       |              |Adds custom classes	      |     <CDBMask className="myClass" ... />  |
+| tag            | String       | div          | Changes default html tag | <CDBMask tag="div" ... />  |
+| overlay        | String       |              | Creates overlay in passed color | <CDBMask overlay="grey-light" .../>  |
+| pattern        | String or Number |              | Creates pattern with chosen style | <CDBMask pattern="1" .../>  |

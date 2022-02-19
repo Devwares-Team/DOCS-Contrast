@@ -1,0 +1,3570 @@
+---
+title: 'DataTable'
+metaTitle: 'DataTable Component for React Bootstrap'
+metaDescription: 'Building a DataTable Component using React Bootstrap can be as easy as building any technology. The DataTable comes with some preety cool functions that help in sorting, searching and pagination of data.'
+---
+
+# React Bootstrap DataTables
+
+React Bootstrap DataTables are components that mix tables with advanced options like searching, sorting and pagination.
+
+## Importing the DataTable Component
+
+To use the Contrast React Bootstrap DateTable component, you import `CDBDateTable` into your project.
+
+```js
+import { CDBDataTable } from 'cdbreact';
+```
+
+In this tutorial we use the [CDBCard](https://www.devwares.com/docs/contrast/react/components/card) component for the table body. Check out the docs for more understanding.
+
+## Default DataTable
+
+![React Bootstrap Default DateTable](https://i.imgur.com/gIkW791.gif)
+
+```js
+import React from 'react';
+import { CDBCard, CDBCardBody, CDBDataTable, CDBContainer } from 'cdbreact';
+
+const DataTable = () => {
+  function testClickEvent(param) {
+    alert('Row Click Event');
+  }
+
+  const data = () => {
+    return {
+      columns: [
+        {
+          label: 'Name',
+          field: 'name',
+          width: 150,
+          attributes: {
+            'aria-controls': 'DataTable',
+            'aria-label': 'Name',
+          },
+        },
+        {
+          label: 'Position',
+          field: 'position',
+          width: 270,
+        },
+        {
+          label: 'Office',
+          field: 'office',
+          width: 200,
+        },
+        {
+          label: 'Age',
+          field: 'age',
+          sort: 'asc',
+          width: 100,
+        },
+        {
+          label: 'Start date',
+          field: 'date',
+          sort: 'disabled',
+          width: 150,
+        },
+        {
+          label: 'Salary',
+          field: 'salary',
+          sort: 'disabled',
+          width: 100,
+        },
+      ],
+      rows: [
+        {
+          name: 'Tiger Nixon',
+          position: 'System Architect',
+          office: 'Edinburgh',
+          age: '61',
+          date: '2011/04/25',
+          salary: '$320',
+          clickEvent: () => testClickEvent(1),
+        },
+        {
+          name: 'Garrett Winters',
+          position: 'Accountant',
+          office: 'Tokyo',
+          age: '63',
+          date: '2011/07/25',
+          salary: '$170',
+        },
+        {
+          name: 'Ashton Cox',
+          position: 'Junior Technical Author',
+          office: 'San Francisco',
+          age: '66',
+          date: '2009/01/12',
+          salary: '$86',
+        },
+        {
+          name: 'Cedric Kelly',
+          position: 'Senior Javascript Developer',
+          office: 'Edinburgh',
+          age: '22',
+          date: '2012/03/29',
+          salary: '$433',
+        },
+        {
+          name: 'Airi Satou',
+          position: 'Accountant',
+          office: 'Tokyo',
+          age: '33',
+          date: '2008/11/28',
+          salary: '$162',
+        },
+        {
+          name: 'Brielle Williamson',
+          position: 'Integration Specialist',
+          office: 'New York',
+          age: '61',
+          date: '2012/12/02',
+          salary: '$372',
+        },
+        {
+          name: 'Herrod Chandler',
+          position: 'Sales Assistant',
+          office: 'San Francisco',
+          age: '59',
+          date: '2012/08/06',
+          salary: '$137',
+        },
+        {
+          name: 'Rhona Davidson',
+          position: 'Integration Specialist',
+          office: 'Tokyo',
+          age: '55',
+          date: '2010/10/14',
+          salary: '$327',
+        },
+        {
+          name: 'Colleen Hurst',
+          position: 'Javascript Developer',
+          office: 'San Francisco',
+          age: '39',
+          date: '2009/09/15',
+          salary: '$205',
+        },
+        {
+          name: 'Sonya Frost',
+          position: 'Software Engineer',
+          office: 'Edinburgh',
+          age: '23',
+          date: '2008/12/13',
+          salary: '$103',
+        },
+        {
+          name: 'Jena Gaines',
+          position: 'Office Manager',
+          office: 'London',
+          age: '30',
+          date: '2008/12/19',
+          salary: '$90',
+        },
+        {
+          name: 'Quinn Flynn',
+          position: 'Support Lead',
+          office: 'Edinburgh',
+          age: '22',
+          date: '2013/03/03',
+          salary: '$342',
+        },
+        {
+          name: 'Charde Marshall',
+          position: 'Regional Director',
+          office: 'San Francisco',
+          age: '36',
+          date: '2008/10/16',
+          salary: '$470',
+        },
+        {
+          name: 'Haley Kennedy',
+          position: 'Senior Marketing Designer',
+          office: 'London',
+          age: '43',
+          date: '2012/12/18',
+          salary: '$313',
+        },
+        {
+          name: 'Tatyana Fitzpatrick',
+          position: 'Regional Director',
+          office: 'London',
+          age: '19',
+          date: '2010/03/17',
+          salary: '$385',
+        },
+        {
+          name: 'Michael Silva',
+          position: 'Marketing Designer',
+          office: 'London',
+          age: '66',
+          date: '2012/11/27',
+          salary: '$198',
+        },
+        {
+          name: 'Paul Byrd',
+          position: 'Chief Financial Officer (CFO)',
+          office: 'New York',
+          age: '64',
+          date: '2010/06/09',
+          salary: '$725',
+        },
+        {
+          name: 'Gloria Little',
+          position: 'Systems Administrator',
+          office: 'New York',
+          age: '59',
+          date: '2009/04/10',
+          salary: '$237',
+        },
+        {
+          name: 'Bradley Greer',
+          position: 'Software Engineer',
+          office: 'London',
+          age: '41',
+          date: '2012/10/13',
+          salary: '$132',
+        },
+        {
+          name: 'Dai Rios',
+          position: 'Personnel Lead',
+          office: 'Edinburgh',
+          age: '35',
+          date: '2012/09/26',
+          salary: '$217',
+        },
+        {
+          name: 'Jenette Caldwell',
+          position: 'Development Lead',
+          office: 'New York',
+          age: '30',
+          date: '2011/09/03',
+          salary: '$345',
+        },
+        {
+          name: 'Yuri Berry',
+          position: 'Chief Marketing Officer (CMO)',
+          office: 'New York',
+          age: '40',
+          date: '2009/06/25',
+          salary: '$675',
+        },
+        {
+          name: 'Caesar Vance',
+          position: 'Pre-Sales Support',
+          office: 'New York',
+          age: '21',
+          date: '2011/12/12',
+          salary: '$106',
+        },
+        {
+          name: 'Doris Wilder',
+          position: 'Sales Assistant',
+          office: 'Sidney',
+          age: '23',
+          date: '2010/09/20',
+          salary: '$85',
+        },
+        {
+          name: 'Angelica Ramos',
+          position: 'Chief Executive Officer (CEO)',
+          office: 'London',
+          age: '47',
+          date: '2009/10/09',
+          salary: '$1',
+        },
+        {
+          name: 'Gavin Joyce',
+          position: 'Developer',
+          office: 'Edinburgh',
+          age: '42',
+          date: '2010/12/22',
+          salary: '$92',
+        },
+        {
+          name: 'Jennifer Chang',
+          position: 'Regional Director',
+          office: 'Singapore',
+          age: '28',
+          date: '2010/11/14',
+          salary: '$357',
+        },
+        {
+          name: 'Brenden Wagner',
+          position: 'Software Engineer',
+          office: 'San Francisco',
+          age: '28',
+          date: '2011/06/07',
+          salary: '$206',
+        },
+        {
+          name: 'Fiona Green',
+          position: 'Chief Operating Officer (COO)',
+          office: 'San Francisco',
+          age: '48',
+          date: '2010/03/11',
+          salary: '$850',
+        },
+        {
+          name: 'Shou Itou',
+          position: 'Regional Marketing',
+          office: 'Tokyo',
+          age: '20',
+          date: '2011/08/14',
+          salary: '$163',
+        },
+        {
+          name: 'Michelle House',
+          position: 'Integration Specialist',
+          office: 'Sidney',
+          age: '37',
+          date: '2011/06/02',
+          salary: '$95',
+        },
+        {
+          name: 'Suki Burks',
+          position: 'Developer',
+          office: 'London',
+          age: '53',
+          date: '2009/10/22',
+          salary: '$114',
+        },
+        {
+          name: 'Prescott Bartlett',
+          position: 'Technical Author',
+          office: 'London',
+          age: '27',
+          date: '2011/05/07',
+          salary: '$145',
+        },
+
+        {
+          name: 'Donna Snider',
+          position: 'Customer Support',
+          office: 'New York',
+          age: '27',
+          date: '2011/01/25',
+          salary: '$112',
+        },
+      ],
+    };
+  };
+  return (
+    <CDBContainer>
+      <CDBCard>
+        <CDBCardBody>
+          <CDBDataTable
+            striped
+            bordered
+            hover
+            entriesOptions={[5, 20, 25]}
+            entries={5}
+            pagesAmount={4}
+            data={data()}
+            materialSearch={true}
+          />
+        </CDBCardBody>
+      </CDBCard>
+    </CDBContainer>
+  );
+};
+
+export default DataTable;
+```
+
+## Not Striped
+
+![React Bootstrap Not Striped DateTable](https://i.imgur.com/YE5dgYk.gif)
+
+```js
+import React from 'react';
+import { CDBCard, CDBCardBody, CDBDataTable, CDBContainer } from 'cdbreact';
+
+const DataTable = () => {
+  function testClickEvent(param) {
+    alert('Row Click Event');
+  }
+
+  const data = () => {
+    return {
+      columns: [
+        {
+          label: 'Name',
+          field: 'name',
+          width: 150,
+          attributes: {
+            'aria-controls': 'DataTable',
+            'aria-label': 'Name',
+          },
+        },
+        {
+          label: 'Position',
+          field: 'position',
+          width: 270,
+        },
+        {
+          label: 'Office',
+          field: 'office',
+          width: 200,
+        },
+        {
+          label: 'Age',
+          field: 'age',
+          sort: 'asc',
+          width: 100,
+        },
+        {
+          label: 'Start date',
+          field: 'date',
+          sort: 'disabled',
+          width: 150,
+        },
+        {
+          label: 'Salary',
+          field: 'salary',
+          sort: 'disabled',
+          width: 100,
+        },
+      ],
+      rows: [
+        {
+          name: 'Tiger Nixon',
+          position: 'System Architect',
+          office: 'Edinburgh',
+          age: '61',
+          date: '2011/04/25',
+          salary: '$320',
+          clickEvent: () => testClickEvent(1),
+        },
+        {
+          name: 'Garrett Winters',
+          position: 'Accountant',
+          office: 'Tokyo',
+          age: '63',
+          date: '2011/07/25',
+          salary: '$170',
+        },
+        {
+          name: 'Ashton Cox',
+          position: 'Junior Technical Author',
+          office: 'San Francisco',
+          age: '66',
+          date: '2009/01/12',
+          salary: '$86',
+        },
+        {
+          name: 'Cedric Kelly',
+          position: 'Senior Javascript Developer',
+          office: 'Edinburgh',
+          age: '22',
+          date: '2012/03/29',
+          salary: '$433',
+        },
+        {
+          name: 'Airi Satou',
+          position: 'Accountant',
+          office: 'Tokyo',
+          age: '33',
+          date: '2008/11/28',
+          salary: '$162',
+        },
+        {
+          name: 'Brielle Williamson',
+          position: 'Integration Specialist',
+          office: 'New York',
+          age: '61',
+          date: '2012/12/02',
+          salary: '$372',
+        },
+        {
+          name: 'Herrod Chandler',
+          position: 'Sales Assistant',
+          office: 'San Francisco',
+          age: '59',
+          date: '2012/08/06',
+          salary: '$137',
+        },
+        {
+          name: 'Rhona Davidson',
+          position: 'Integration Specialist',
+          office: 'Tokyo',
+          age: '55',
+          date: '2010/10/14',
+          salary: '$327',
+        },
+        {
+          name: 'Colleen Hurst',
+          position: 'Javascript Developer',
+          office: 'San Francisco',
+          age: '39',
+          date: '2009/09/15',
+          salary: '$205',
+        },
+        {
+          name: 'Sonya Frost',
+          position: 'Software Engineer',
+          office: 'Edinburgh',
+          age: '23',
+          date: '2008/12/13',
+          salary: '$103',
+        },
+        {
+          name: 'Jena Gaines',
+          position: 'Office Manager',
+          office: 'London',
+          age: '30',
+          date: '2008/12/19',
+          salary: '$90',
+        },
+        {
+          name: 'Quinn Flynn',
+          position: 'Support Lead',
+          office: 'Edinburgh',
+          age: '22',
+          date: '2013/03/03',
+          salary: '$342',
+        },
+        {
+          name: 'Charde Marshall',
+          position: 'Regional Director',
+          office: 'San Francisco',
+          age: '36',
+          date: '2008/10/16',
+          salary: '$470',
+        },
+        {
+          name: 'Haley Kennedy',
+          position: 'Senior Marketing Designer',
+          office: 'London',
+          age: '43',
+          date: '2012/12/18',
+          salary: '$313',
+        },
+        {
+          name: 'Tatyana Fitzpatrick',
+          position: 'Regional Director',
+          office: 'London',
+          age: '19',
+          date: '2010/03/17',
+          salary: '$385',
+        },
+        {
+          name: 'Michael Silva',
+          position: 'Marketing Designer',
+          office: 'London',
+          age: '66',
+          date: '2012/11/27',
+          salary: '$198',
+        },
+        {
+          name: 'Paul Byrd',
+          position: 'Chief Financial Officer (CFO)',
+          office: 'New York',
+          age: '64',
+          date: '2010/06/09',
+          salary: '$725',
+        },
+        {
+          name: 'Gloria Little',
+          position: 'Systems Administrator',
+          office: 'New York',
+          age: '59',
+          date: '2009/04/10',
+          salary: '$237',
+        },
+        {
+          name: 'Bradley Greer',
+          position: 'Software Engineer',
+          office: 'London',
+          age: '41',
+          date: '2012/10/13',
+          salary: '$132',
+        },
+        {
+          name: 'Dai Rios',
+          position: 'Personnel Lead',
+          office: 'Edinburgh',
+          age: '35',
+          date: '2012/09/26',
+          salary: '$217',
+        },
+        {
+          name: 'Jenette Caldwell',
+          position: 'Development Lead',
+          office: 'New York',
+          age: '30',
+          date: '2011/09/03',
+          salary: '$345',
+        },
+        {
+          name: 'Yuri Berry',
+          position: 'Chief Marketing Officer (CMO)',
+          office: 'New York',
+          age: '40',
+          date: '2009/06/25',
+          salary: '$675',
+        },
+        {
+          name: 'Caesar Vance',
+          position: 'Pre-Sales Support',
+          office: 'New York',
+          age: '21',
+          date: '2011/12/12',
+          salary: '$106',
+        },
+        {
+          name: 'Doris Wilder',
+          position: 'Sales Assistant',
+          office: 'Sidney',
+          age: '23',
+          date: '2010/09/20',
+          salary: '$85',
+        },
+        {
+          name: 'Angelica Ramos',
+          position: 'Chief Executive Officer (CEO)',
+          office: 'London',
+          age: '47',
+          date: '2009/10/09',
+          salary: '$1',
+        },
+        {
+          name: 'Gavin Joyce',
+          position: 'Developer',
+          office: 'Edinburgh',
+          age: '42',
+          date: '2010/12/22',
+          salary: '$92',
+        },
+        {
+          name: 'Jennifer Chang',
+          position: 'Regional Director',
+          office: 'Singapore',
+          age: '28',
+          date: '2010/11/14',
+          salary: '$357',
+        },
+        {
+          name: 'Brenden Wagner',
+          position: 'Software Engineer',
+          office: 'San Francisco',
+          age: '28',
+          date: '2011/06/07',
+          salary: '$206',
+        },
+        {
+          name: 'Fiona Green',
+          position: 'Chief Operating Officer (COO)',
+          office: 'San Francisco',
+          age: '48',
+          date: '2010/03/11',
+          salary: '$850',
+        },
+        {
+          name: 'Shou Itou',
+          position: 'Regional Marketing',
+          office: 'Tokyo',
+          age: '20',
+          date: '2011/08/14',
+          salary: '$163',
+        },
+        {
+          name: 'Michelle House',
+          position: 'Integration Specialist',
+          office: 'Sidney',
+          age: '37',
+          date: '2011/06/02',
+          salary: '$95',
+        },
+        {
+          name: 'Suki Burks',
+          position: 'Developer',
+          office: 'London',
+          age: '53',
+          date: '2009/10/22',
+          salary: '$114',
+        },
+        {
+          name: 'Prescott Bartlett',
+          position: 'Technical Author',
+          office: 'London',
+          age: '27',
+          date: '2011/05/07',
+          salary: '$145',
+        },
+
+        {
+          name: 'Donna Snider',
+          position: 'Customer Support',
+          office: 'New York',
+          age: '27',
+          date: '2011/01/25',
+          salary: '$112',
+        },
+      ],
+    };
+  };
+  return (
+    <CDBContainer>
+      <CDBCard>
+        <CDBCardBody>
+          <CDBDataTable
+            bordered
+            hover
+            entriesOptions={[5, 20, 25]}
+            entries={5}
+            pagesAmount={4}
+            data={data()}
+            materialSearch={true}
+          />
+        </CDBCardBody>
+      </CDBCard>
+    </CDBContainer>
+  );
+};
+
+export default DataTable;
+```
+
+## Fixed Height
+
+![React Bootstrap Fixed Height DataTables](https://i.imgur.com/YFD0gPm.gif)
+
+```js
+import React from 'react';
+import { CDBCard, CDBCardBody, CDBDataTable, CDBRow, CDBCol, CDBContainer } from 'cdbreact';
+
+const DataTable = () => {
+  function testClickEvent(param) {
+    alert('Row Click Event');
+  }
+
+  const data = () => {
+    return {
+      columns: [
+        {
+          label: 'Name',
+          field: 'name',
+          width: 150,
+          attributes: {
+            'aria-controls': 'DataTable',
+            'aria-label': 'Name',
+          },
+        },
+        {
+          label: 'Position',
+          field: 'position',
+          width: 270,
+        },
+        {
+          label: 'Office',
+          field: 'office',
+          width: 200,
+        },
+        {
+          label: 'Age',
+          field: 'age',
+          sort: 'asc',
+          width: 100,
+        },
+        {
+          label: 'Start date',
+          field: 'date',
+          sort: 'disabled',
+          width: 150,
+        },
+        {
+          label: 'Salary',
+          field: 'salary',
+          sort: 'disabled',
+          width: 100,
+        },
+      ],
+      rows: [
+        {
+          name: 'Tiger Nixon',
+          position: 'System Architect',
+          office: 'Edinburgh',
+          age: '61',
+          date: '2011/04/25',
+          salary: '$320',
+          clickEvent: () => testClickEvent(1),
+        },
+        {
+          name: 'Garrett Winters',
+          position: 'Accountant',
+          office: 'Tokyo',
+          age: '63',
+          date: '2011/07/25',
+          salary: '$170',
+        },
+        {
+          name: 'Ashton Cox',
+          position: 'Junior Technical Author',
+          office: 'San Francisco',
+          age: '66',
+          date: '2009/01/12',
+          salary: '$86',
+        },
+        {
+          name: 'Cedric Kelly',
+          position: 'Senior Javascript Developer',
+          office: 'Edinburgh',
+          age: '22',
+          date: '2012/03/29',
+          salary: '$433',
+        },
+        {
+          name: 'Airi Satou',
+          position: 'Accountant',
+          office: 'Tokyo',
+          age: '33',
+          date: '2008/11/28',
+          salary: '$162',
+        },
+        {
+          name: 'Brielle Williamson',
+          position: 'Integration Specialist',
+          office: 'New York',
+          age: '61',
+          date: '2012/12/02',
+          salary: '$372',
+        },
+        {
+          name: 'Herrod Chandler',
+          position: 'Sales Assistant',
+          office: 'San Francisco',
+          age: '59',
+          date: '2012/08/06',
+          salary: '$137',
+        },
+        {
+          name: 'Rhona Davidson',
+          position: 'Integration Specialist',
+          office: 'Tokyo',
+          age: '55',
+          date: '2010/10/14',
+          salary: '$327',
+        },
+        {
+          name: 'Colleen Hurst',
+          position: 'Javascript Developer',
+          office: 'San Francisco',
+          age: '39',
+          date: '2009/09/15',
+          salary: '$205',
+        },
+        {
+          name: 'Sonya Frost',
+          position: 'Software Engineer',
+          office: 'Edinburgh',
+          age: '23',
+          date: '2008/12/13',
+          salary: '$103',
+        },
+        {
+          name: 'Jena Gaines',
+          position: 'Office Manager',
+          office: 'London',
+          age: '30',
+          date: '2008/12/19',
+          salary: '$90',
+        },
+        {
+          name: 'Quinn Flynn',
+          position: 'Support Lead',
+          office: 'Edinburgh',
+          age: '22',
+          date: '2013/03/03',
+          salary: '$342',
+        },
+        {
+          name: 'Charde Marshall',
+          position: 'Regional Director',
+          office: 'San Francisco',
+          age: '36',
+          date: '2008/10/16',
+          salary: '$470',
+        },
+        {
+          name: 'Haley Kennedy',
+          position: 'Senior Marketing Designer',
+          office: 'London',
+          age: '43',
+          date: '2012/12/18',
+          salary: '$313',
+        },
+        {
+          name: 'Tatyana Fitzpatrick',
+          position: 'Regional Director',
+          office: 'London',
+          age: '19',
+          date: '2010/03/17',
+          salary: '$385',
+        },
+        {
+          name: 'Michael Silva',
+          position: 'Marketing Designer',
+          office: 'London',
+          age: '66',
+          date: '2012/11/27',
+          salary: '$198',
+        },
+        {
+          name: 'Paul Byrd',
+          position: 'Chief Financial Officer (CFO)',
+          office: 'New York',
+          age: '64',
+          date: '2010/06/09',
+          salary: '$725',
+        },
+        {
+          name: 'Gloria Little',
+          position: 'Systems Administrator',
+          office: 'New York',
+          age: '59',
+          date: '2009/04/10',
+          salary: '$237',
+        },
+        {
+          name: 'Bradley Greer',
+          position: 'Software Engineer',
+          office: 'London',
+          age: '41',
+          date: '2012/10/13',
+          salary: '$132',
+        },
+        {
+          name: 'Dai Rios',
+          position: 'Personnel Lead',
+          office: 'Edinburgh',
+          age: '35',
+          date: '2012/09/26',
+          salary: '$217',
+        },
+        {
+          name: 'Jenette Caldwell',
+          position: 'Development Lead',
+          office: 'New York',
+          age: '30',
+          date: '2011/09/03',
+          salary: '$345',
+        },
+        {
+          name: 'Yuri Berry',
+          position: 'Chief Marketing Officer (CMO)',
+          office: 'New York',
+          age: '40',
+          date: '2009/06/25',
+          salary: '$675',
+        },
+        {
+          name: 'Caesar Vance',
+          position: 'Pre-Sales Support',
+          office: 'New York',
+          age: '21',
+          date: '2011/12/12',
+          salary: '$106',
+        },
+        {
+          name: 'Doris Wilder',
+          position: 'Sales Assistant',
+          office: 'Sidney',
+          age: '23',
+          date: '2010/09/20',
+          salary: '$85',
+        },
+        {
+          name: 'Angelica Ramos',
+          position: 'Chief Executive Officer (CEO)',
+          office: 'London',
+          age: '47',
+          date: '2009/10/09',
+          salary: '$1',
+        },
+        {
+          name: 'Gavin Joyce',
+          position: 'Developer',
+          office: 'Edinburgh',
+          age: '42',
+          date: '2010/12/22',
+          salary: '$92',
+        },
+        {
+          name: 'Jennifer Chang',
+          position: 'Regional Director',
+          office: 'Singapore',
+          age: '28',
+          date: '2010/11/14',
+          salary: '$357',
+        },
+        {
+          name: 'Brenden Wagner',
+          position: 'Software Engineer',
+          office: 'San Francisco',
+          age: '28',
+          date: '2011/06/07',
+          salary: '$206',
+        },
+        {
+          name: 'Fiona Green',
+          position: 'Chief Operating Officer (COO)',
+          office: 'San Francisco',
+          age: '48',
+          date: '2010/03/11',
+          salary: '$850',
+        },
+        {
+          name: 'Shou Itou',
+          position: 'Regional Marketing',
+          office: 'Tokyo',
+          age: '20',
+          date: '2011/08/14',
+          salary: '$163',
+        },
+        {
+          name: 'Michelle House',
+          position: 'Integration Specialist',
+          office: 'Sidney',
+          age: '37',
+          date: '2011/06/02',
+          salary: '$95',
+        },
+        {
+          name: 'Suki Burks',
+          position: 'Developer',
+          office: 'London',
+          age: '53',
+          date: '2009/10/22',
+          salary: '$114',
+        },
+        {
+          name: 'Prescott Bartlett',
+          position: 'Technical Author',
+          office: 'London',
+          age: '27',
+          date: '2011/05/07',
+          salary: '$145',
+        },
+
+        {
+          name: 'Donna Snider',
+          position: 'Customer Support',
+          office: 'New York',
+          age: '27',
+          date: '2011/01/25',
+          salary: '$112',
+        },
+      ],
+    };
+  };
+  return (
+    <CDBContainer>
+      <CDBCard>
+        <CDBCardBody>
+          <CDBDataTable
+            striped
+            bordered
+            hover
+            scrollY
+            maxHeight="50vh"
+            data={data()}
+            materialSearch
+          />
+        </CDBCardBody>
+      </CDBCard>
+    </CDBContainer>
+  );
+};
+
+export default DataTable;
+```
+
+## Disabled Button
+
+![React Bootstrap Disabled Button](https://i.imgur.com/r9A66GD.gif)
+
+```js
+import React from 'react';
+import { CDBCard, CDBCardBody, CDBDataTable, CDBRow, CDBCol, CDBContainer } from 'cdbreact';
+
+const DataTable = () => {
+  function testClickEvent(param) {
+    alert('Row Click Event');
+  }
+
+  const data = () => {
+    return {
+      columns: [
+        {
+          label: 'Name',
+          field: 'name',
+          width: 150,
+          attributes: {
+            'aria-controls': 'DataTable',
+            'aria-label': 'Name',
+          },
+        },
+        {
+          label: 'Position',
+          field: 'position',
+          width: 270,
+        },
+        {
+          label: 'Office',
+          field: 'office',
+          width: 200,
+        },
+        {
+          label: 'Age',
+          field: 'age',
+          sort: 'asc',
+          width: 100,
+        },
+        {
+          label: 'Start date',
+          field: 'date',
+          sort: 'disabled',
+          width: 150,
+        },
+        {
+          label: 'Salary',
+          field: 'salary',
+          sort: 'disabled',
+          width: 100,
+        },
+      ],
+      rows: [
+        {
+          name: 'Tiger Nixon',
+          position: 'System Architect',
+          office: 'Edinburgh',
+          age: '61',
+          date: '2011/04/25',
+          salary: '$320',
+          clickEvent: () => testClickEvent(1),
+        },
+        {
+          name: 'Garrett Winters',
+          position: 'Accountant',
+          office: 'Tokyo',
+          age: '63',
+          date: '2011/07/25',
+          salary: '$170',
+        },
+        {
+          name: 'Ashton Cox',
+          position: 'Junior Technical Author',
+          office: 'San Francisco',
+          age: '66',
+          date: '2009/01/12',
+          salary: '$86',
+        },
+        {
+          name: 'Cedric Kelly',
+          position: 'Senior Javascript Developer',
+          office: 'Edinburgh',
+          age: '22',
+          date: '2012/03/29',
+          salary: '$433',
+        },
+        {
+          name: 'Airi Satou',
+          position: 'Accountant',
+          office: 'Tokyo',
+          age: '33',
+          date: '2008/11/28',
+          salary: '$162',
+        },
+        {
+          name: 'Brielle Williamson',
+          position: 'Integration Specialist',
+          office: 'New York',
+          age: '61',
+          date: '2012/12/02',
+          salary: '$372',
+        },
+        {
+          name: 'Herrod Chandler',
+          position: 'Sales Assistant',
+          office: 'San Francisco',
+          age: '59',
+          date: '2012/08/06',
+          salary: '$137',
+        },
+        {
+          name: 'Rhona Davidson',
+          position: 'Integration Specialist',
+          office: 'Tokyo',
+          age: '55',
+          date: '2010/10/14',
+          salary: '$327',
+        },
+        {
+          name: 'Colleen Hurst',
+          position: 'Javascript Developer',
+          office: 'San Francisco',
+          age: '39',
+          date: '2009/09/15',
+          salary: '$205',
+        },
+        {
+          name: 'Sonya Frost',
+          position: 'Software Engineer',
+          office: 'Edinburgh',
+          age: '23',
+          date: '2008/12/13',
+          salary: '$103',
+        },
+        {
+          name: 'Jena Gaines',
+          position: 'Office Manager',
+          office: 'London',
+          age: '30',
+          date: '2008/12/19',
+          salary: '$90',
+        },
+        {
+          name: 'Quinn Flynn',
+          position: 'Support Lead',
+          office: 'Edinburgh',
+          age: '22',
+          date: '2013/03/03',
+          salary: '$342',
+        },
+        {
+          name: 'Charde Marshall',
+          position: 'Regional Director',
+          office: 'San Francisco',
+          age: '36',
+          date: '2008/10/16',
+          salary: '$470',
+        },
+        {
+          name: 'Haley Kennedy',
+          position: 'Senior Marketing Designer',
+          office: 'London',
+          age: '43',
+          date: '2012/12/18',
+          salary: '$313',
+        },
+        {
+          name: 'Tatyana Fitzpatrick',
+          position: 'Regional Director',
+          office: 'London',
+          age: '19',
+          date: '2010/03/17',
+          salary: '$385',
+        },
+        {
+          name: 'Michael Silva',
+          position: 'Marketing Designer',
+          office: 'London',
+          age: '66',
+          date: '2012/11/27',
+          salary: '$198',
+        },
+        {
+          name: 'Paul Byrd',
+          position: 'Chief Financial Officer (CFO)',
+          office: 'New York',
+          age: '64',
+          date: '2010/06/09',
+          salary: '$725',
+        },
+        {
+          name: 'Gloria Little',
+          position: 'Systems Administrator',
+          office: 'New York',
+          age: '59',
+          date: '2009/04/10',
+          salary: '$237',
+        },
+        {
+          name: 'Bradley Greer',
+          position: 'Software Engineer',
+          office: 'London',
+          age: '41',
+          date: '2012/10/13',
+          salary: '$132',
+        },
+        {
+          name: 'Dai Rios',
+          position: 'Personnel Lead',
+          office: 'Edinburgh',
+          age: '35',
+          date: '2012/09/26',
+          salary: '$217',
+        },
+        {
+          name: 'Jenette Caldwell',
+          position: 'Development Lead',
+          office: 'New York',
+          age: '30',
+          date: '2011/09/03',
+          salary: '$345',
+        },
+        {
+          name: 'Yuri Berry',
+          position: 'Chief Marketing Officer (CMO)',
+          office: 'New York',
+          age: '40',
+          date: '2009/06/25',
+          salary: '$675',
+        },
+        {
+          name: 'Caesar Vance',
+          position: 'Pre-Sales Support',
+          office: 'New York',
+          age: '21',
+          date: '2011/12/12',
+          salary: '$106',
+        },
+        {
+          name: 'Doris Wilder',
+          position: 'Sales Assistant',
+          office: 'Sidney',
+          age: '23',
+          date: '2010/09/20',
+          salary: '$85',
+        },
+        {
+          name: 'Angelica Ramos',
+          position: 'Chief Executive Officer (CEO)',
+          office: 'London',
+          age: '47',
+          date: '2009/10/09',
+          salary: '$1',
+        },
+        {
+          name: 'Gavin Joyce',
+          position: 'Developer',
+          office: 'Edinburgh',
+          age: '42',
+          date: '2010/12/22',
+          salary: '$92',
+        },
+        {
+          name: 'Jennifer Chang',
+          position: 'Regional Director',
+          office: 'Singapore',
+          age: '28',
+          date: '2010/11/14',
+          salary: '$357',
+        },
+        {
+          name: 'Brenden Wagner',
+          position: 'Software Engineer',
+          office: 'San Francisco',
+          age: '28',
+          date: '2011/06/07',
+          salary: '$206',
+        },
+        {
+          name: 'Fiona Green',
+          position: 'Chief Operating Officer (COO)',
+          office: 'San Francisco',
+          age: '48',
+          date: '2010/03/11',
+          salary: '$850',
+        },
+        {
+          name: 'Shou Itou',
+          position: 'Regional Marketing',
+          office: 'Tokyo',
+          age: '20',
+          date: '2011/08/14',
+          salary: '$163',
+        },
+        {
+          name: 'Michelle House',
+          position: 'Integration Specialist',
+          office: 'Sidney',
+          age: '37',
+          date: '2011/06/02',
+          salary: '$95',
+        },
+        {
+          name: 'Suki Burks',
+          position: 'Developer',
+          office: 'London',
+          age: '53',
+          date: '2009/10/22',
+          salary: '$114',
+        },
+        {
+          name: 'Prescott Bartlett',
+          position: 'Technical Author',
+          office: 'London',
+          age: '27',
+          date: '2011/05/07',
+          salary: '$145',
+        },
+
+        {
+          name: 'Donna Snider',
+          position: 'Customer Support',
+          office: 'New York',
+          age: '27',
+          date: '2011/01/25',
+          salary: '$112',
+        },
+      ],
+    };
+  };
+  return (
+    <CDBContainer>
+      <CDBCard>
+        <CDBCardBody>
+          <CDBDataTable striped bordered hover scrollX data={data()} materialSearch />
+        </CDBCardBody>
+      </CDBCard>
+    </CDBContainer>
+  );
+};
+
+export default DataTable;
+```
+
+## Full Pagination
+
+![React Bootstrap Full Pagination DataTables](https://i.imgur.com/2knDIqn.gif)
+
+```js
+import React from 'react';
+import { CDBCard, CDBCardBody, CDBDataTable, CDBRow, CDBCol, CDBContainer } from 'cdbreact';
+
+const DataTable = () => {
+  function testClickEvent(param) {
+    alert('Row Click Event');
+  }
+
+  const data = () => {
+    return {
+      columns: [
+        {
+          label: 'Name',
+          field: 'name',
+          width: 150,
+          attributes: {
+            'aria-controls': 'DataTable',
+            'aria-label': 'Name',
+          },
+        },
+        {
+          label: 'Position',
+          field: 'position',
+          width: 270,
+        },
+        {
+          label: 'Office',
+          field: 'office',
+          width: 200,
+        },
+        {
+          label: 'Age',
+          field: 'age',
+          sort: 'asc',
+          width: 100,
+        },
+        {
+          label: 'Start date',
+          field: 'date',
+          sort: 'disabled',
+          width: 150,
+        },
+        {
+          label: 'Salary',
+          field: 'salary',
+          sort: 'disabled',
+          width: 100,
+        },
+      ],
+      rows: [
+        {
+          name: 'Tiger Nixon',
+          position: 'System Architect',
+          office: 'Edinburgh',
+          age: '61',
+          date: '2011/04/25',
+          salary: '$320',
+          clickEvent: () => testClickEvent(1),
+        },
+        {
+          name: 'Garrett Winters',
+          position: 'Accountant',
+          office: 'Tokyo',
+          age: '63',
+          date: '2011/07/25',
+          salary: '$170',
+        },
+        {
+          name: 'Ashton Cox',
+          position: 'Junior Technical Author',
+          office: 'San Francisco',
+          age: '66',
+          date: '2009/01/12',
+          salary: '$86',
+        },
+        {
+          name: 'Cedric Kelly',
+          position: 'Senior Javascript Developer',
+          office: 'Edinburgh',
+          age: '22',
+          date: '2012/03/29',
+          salary: '$433',
+        },
+        {
+          name: 'Airi Satou',
+          position: 'Accountant',
+          office: 'Tokyo',
+          age: '33',
+          date: '2008/11/28',
+          salary: '$162',
+        },
+        {
+          name: 'Brielle Williamson',
+          position: 'Integration Specialist',
+          office: 'New York',
+          age: '61',
+          date: '2012/12/02',
+          salary: '$372',
+        },
+        {
+          name: 'Herrod Chandler',
+          position: 'Sales Assistant',
+          office: 'San Francisco',
+          age: '59',
+          date: '2012/08/06',
+          salary: '$137',
+        },
+        {
+          name: 'Rhona Davidson',
+          position: 'Integration Specialist',
+          office: 'Tokyo',
+          age: '55',
+          date: '2010/10/14',
+          salary: '$327',
+        },
+        {
+          name: 'Colleen Hurst',
+          position: 'Javascript Developer',
+          office: 'San Francisco',
+          age: '39',
+          date: '2009/09/15',
+          salary: '$205',
+        },
+        {
+          name: 'Sonya Frost',
+          position: 'Software Engineer',
+          office: 'Edinburgh',
+          age: '23',
+          date: '2008/12/13',
+          salary: '$103',
+        },
+        {
+          name: 'Jena Gaines',
+          position: 'Office Manager',
+          office: 'London',
+          age: '30',
+          date: '2008/12/19',
+          salary: '$90',
+        },
+        {
+          name: 'Quinn Flynn',
+          position: 'Support Lead',
+          office: 'Edinburgh',
+          age: '22',
+          date: '2013/03/03',
+          salary: '$342',
+        },
+        {
+          name: 'Charde Marshall',
+          position: 'Regional Director',
+          office: 'San Francisco',
+          age: '36',
+          date: '2008/10/16',
+          salary: '$470',
+        },
+        {
+          name: 'Haley Kennedy',
+          position: 'Senior Marketing Designer',
+          office: 'London',
+          age: '43',
+          date: '2012/12/18',
+          salary: '$313',
+        },
+        {
+          name: 'Tatyana Fitzpatrick',
+          position: 'Regional Director',
+          office: 'London',
+          age: '19',
+          date: '2010/03/17',
+          salary: '$385',
+        },
+        {
+          name: 'Michael Silva',
+          position: 'Marketing Designer',
+          office: 'London',
+          age: '66',
+          date: '2012/11/27',
+          salary: '$198',
+        },
+        {
+          name: 'Paul Byrd',
+          position: 'Chief Financial Officer (CFO)',
+          office: 'New York',
+          age: '64',
+          date: '2010/06/09',
+          salary: '$725',
+        },
+        {
+          name: 'Gloria Little',
+          position: 'Systems Administrator',
+          office: 'New York',
+          age: '59',
+          date: '2009/04/10',
+          salary: '$237',
+        },
+        {
+          name: 'Bradley Greer',
+          position: 'Software Engineer',
+          office: 'London',
+          age: '41',
+          date: '2012/10/13',
+          salary: '$132',
+        },
+        {
+          name: 'Dai Rios',
+          position: 'Personnel Lead',
+          office: 'Edinburgh',
+          age: '35',
+          date: '2012/09/26',
+          salary: '$217',
+        },
+        {
+          name: 'Jenette Caldwell',
+          position: 'Development Lead',
+          office: 'New York',
+          age: '30',
+          date: '2011/09/03',
+          salary: '$345',
+        },
+        {
+          name: 'Yuri Berry',
+          position: 'Chief Marketing Officer (CMO)',
+          office: 'New York',
+          age: '40',
+          date: '2009/06/25',
+          salary: '$675',
+        },
+        {
+          name: 'Caesar Vance',
+          position: 'Pre-Sales Support',
+          office: 'New York',
+          age: '21',
+          date: '2011/12/12',
+          salary: '$106',
+        },
+        {
+          name: 'Doris Wilder',
+          position: 'Sales Assistant',
+          office: 'Sidney',
+          age: '23',
+          date: '2010/09/20',
+          salary: '$85',
+        },
+        {
+          name: 'Angelica Ramos',
+          position: 'Chief Executive Officer (CEO)',
+          office: 'London',
+          age: '47',
+          date: '2009/10/09',
+          salary: '$1',
+        },
+        {
+          name: 'Gavin Joyce',
+          position: 'Developer',
+          office: 'Edinburgh',
+          age: '42',
+          date: '2010/12/22',
+          salary: '$92',
+        },
+        {
+          name: 'Jennifer Chang',
+          position: 'Regional Director',
+          office: 'Singapore',
+          age: '28',
+          date: '2010/11/14',
+          salary: '$357',
+        },
+        {
+          name: 'Brenden Wagner',
+          position: 'Software Engineer',
+          office: 'San Francisco',
+          age: '28',
+          date: '2011/06/07',
+          salary: '$206',
+        },
+        {
+          name: 'Fiona Green',
+          position: 'Chief Operating Officer (COO)',
+          office: 'San Francisco',
+          age: '48',
+          date: '2010/03/11',
+          salary: '$850',
+        },
+        {
+          name: 'Shou Itou',
+          position: 'Regional Marketing',
+          office: 'Tokyo',
+          age: '20',
+          date: '2011/08/14',
+          salary: '$163',
+        },
+        {
+          name: 'Michelle House',
+          position: 'Integration Specialist',
+          office: 'Sidney',
+          age: '37',
+          date: '2011/06/02',
+          salary: '$95',
+        },
+        {
+          name: 'Suki Burks',
+          position: 'Developer',
+          office: 'London',
+          age: '53',
+          date: '2009/10/22',
+          salary: '$114',
+        },
+        {
+          name: 'Prescott Bartlett',
+          position: 'Technical Author',
+          office: 'London',
+          age: '27',
+          date: '2011/05/07',
+          salary: '$145',
+        },
+
+        {
+          name: 'Donna Snider',
+          position: 'Customer Support',
+          office: 'New York',
+          age: '27',
+          date: '2011/01/25',
+          salary: '$112',
+        },
+      ],
+    };
+  };
+  return (
+    <CDBContainer>
+      <CDBCard>
+        <CDBCardBody>
+          <CDBDataTable
+            striped
+            bordered
+            hover
+            scrollX
+            scrollY
+            maxHeight="300xp"
+            data={data()}
+            materialSearch
+            fullPagination
+          />
+        </CDBCardBody>
+      </CDBCard>
+    </CDBContainer>
+  );
+};
+
+export default DataTable;
+```
+
+## Checkbox
+
+![React Bootstrap Checkbox](https://i.imgur.com/gNWiaIb.gif)
+
+```js
+import React from 'react';
+import { CDBCard, CDBCardBody, CDBDataTable, CDBContainer } from 'cdbreact';
+
+const DataTable = () => {
+  function testClickEvent(param) {
+    alert('Row Click Event');
+  }
+
+  const data = () => {
+    return {
+      columns: [
+        {
+          label: 'Name',
+          field: 'name',
+          width: 150,
+          attributes: {
+            'aria-controls': 'DataTable',
+            'aria-label': 'Name',
+          },
+        },
+        {
+          label: 'Position',
+          field: 'position',
+          width: 270,
+        },
+        {
+          label: 'Office',
+          field: 'office',
+          width: 200,
+        },
+        {
+          label: 'Age',
+          field: 'age',
+          sort: 'asc',
+          width: 100,
+        },
+        {
+          label: 'Start date',
+          field: 'date',
+          sort: 'disabled',
+          width: 150,
+        },
+        {
+          label: 'Salary',
+          field: 'salary',
+          sort: 'disabled',
+          width: 100,
+        },
+      ],
+      rows: [
+        {
+          name: 'Tiger Nixon',
+          position: 'System Architect',
+          office: 'Edinburgh',
+          age: '61',
+          date: '2011/04/25',
+          salary: '$320',
+          clickEvent: () => testClickEvent(1),
+        },
+        {
+          name: 'Garrett Winters',
+          position: 'Accountant',
+          office: 'Tokyo',
+          age: '63',
+          date: '2011/07/25',
+          salary: '$170',
+        },
+        {
+          name: 'Ashton Cox',
+          position: 'Junior Technical Author',
+          office: 'San Francisco',
+          age: '66',
+          date: '2009/01/12',
+          salary: '$86',
+        },
+        {
+          name: 'Cedric Kelly',
+          position: 'Senior Javascript Developer',
+          office: 'Edinburgh',
+          age: '22',
+          date: '2012/03/29',
+          salary: '$433',
+        },
+        {
+          name: 'Airi Satou',
+          position: 'Accountant',
+          office: 'Tokyo',
+          age: '33',
+          date: '2008/11/28',
+          salary: '$162',
+        },
+        {
+          name: 'Brielle Williamson',
+          position: 'Integration Specialist',
+          office: 'New York',
+          age: '61',
+          date: '2012/12/02',
+          salary: '$372',
+        },
+        {
+          name: 'Herrod Chandler',
+          position: 'Sales Assistant',
+          office: 'San Francisco',
+          age: '59',
+          date: '2012/08/06',
+          salary: '$137',
+        },
+        {
+          name: 'Rhona Davidson',
+          position: 'Integration Specialist',
+          office: 'Tokyo',
+          age: '55',
+          date: '2010/10/14',
+          salary: '$327',
+        },
+        {
+          name: 'Colleen Hurst',
+          position: 'Javascript Developer',
+          office: 'San Francisco',
+          age: '39',
+          date: '2009/09/15',
+          salary: '$205',
+        },
+        {
+          name: 'Sonya Frost',
+          position: 'Software Engineer',
+          office: 'Edinburgh',
+          age: '23',
+          date: '2008/12/13',
+          salary: '$103',
+        },
+        {
+          name: 'Jena Gaines',
+          position: 'Office Manager',
+          office: 'London',
+          age: '30',
+          date: '2008/12/19',
+          salary: '$90',
+        },
+        {
+          name: 'Quinn Flynn',
+          position: 'Support Lead',
+          office: 'Edinburgh',
+          age: '22',
+          date: '2013/03/03',
+          salary: '$342',
+        },
+        {
+          name: 'Charde Marshall',
+          position: 'Regional Director',
+          office: 'San Francisco',
+          age: '36',
+          date: '2008/10/16',
+          salary: '$470',
+        },
+        {
+          name: 'Haley Kennedy',
+          position: 'Senior Marketing Designer',
+          office: 'London',
+          age: '43',
+          date: '2012/12/18',
+          salary: '$313',
+        },
+        {
+          name: 'Tatyana Fitzpatrick',
+          position: 'Regional Director',
+          office: 'London',
+          age: '19',
+          date: '2010/03/17',
+          salary: '$385',
+        },
+        {
+          name: 'Michael Silva',
+          position: 'Marketing Designer',
+          office: 'London',
+          age: '66',
+          date: '2012/11/27',
+          salary: '$198',
+        },
+        {
+          name: 'Paul Byrd',
+          position: 'Chief Financial Officer (CFO)',
+          office: 'New York',
+          age: '64',
+          date: '2010/06/09',
+          salary: '$725',
+        },
+        {
+          name: 'Gloria Little',
+          position: 'Systems Administrator',
+          office: 'New York',
+          age: '59',
+          date: '2009/04/10',
+          salary: '$237',
+        },
+        {
+          name: 'Bradley Greer',
+          position: 'Software Engineer',
+          office: 'London',
+          age: '41',
+          date: '2012/10/13',
+          salary: '$132',
+        },
+        {
+          name: 'Dai Rios',
+          position: 'Personnel Lead',
+          office: 'Edinburgh',
+          age: '35',
+          date: '2012/09/26',
+          salary: '$217',
+        },
+        {
+          name: 'Jenette Caldwell',
+          position: 'Development Lead',
+          office: 'New York',
+          age: '30',
+          date: '2011/09/03',
+          salary: '$345',
+        },
+        {
+          name: 'Yuri Berry',
+          position: 'Chief Marketing Officer (CMO)',
+          office: 'New York',
+          age: '40',
+          date: '2009/06/25',
+          salary: '$675',
+        },
+        {
+          name: 'Caesar Vance',
+          position: 'Pre-Sales Support',
+          office: 'New York',
+          age: '21',
+          date: '2011/12/12',
+          salary: '$106',
+        },
+        {
+          name: 'Doris Wilder',
+          position: 'Sales Assistant',
+          office: 'Sidney',
+          age: '23',
+          date: '2010/09/20',
+          salary: '$85',
+        },
+        {
+          name: 'Angelica Ramos',
+          position: 'Chief Executive Officer (CEO)',
+          office: 'London',
+          age: '47',
+          date: '2009/10/09',
+          salary: '$1',
+        },
+        {
+          name: 'Gavin Joyce',
+          position: 'Developer',
+          office: 'Edinburgh',
+          age: '42',
+          date: '2010/12/22',
+          salary: '$92',
+        },
+        {
+          name: 'Jennifer Chang',
+          position: 'Regional Director',
+          office: 'Singapore',
+          age: '28',
+          date: '2010/11/14',
+          salary: '$357',
+        },
+        {
+          name: 'Brenden Wagner',
+          position: 'Software Engineer',
+          office: 'San Francisco',
+          age: '28',
+          date: '2011/06/07',
+          salary: '$206',
+        },
+        {
+          name: 'Fiona Green',
+          position: 'Chief Operating Officer (COO)',
+          office: 'San Francisco',
+          age: '48',
+          date: '2010/03/11',
+          salary: '$850',
+        },
+        {
+          name: 'Shou Itou',
+          position: 'Regional Marketing',
+          office: 'Tokyo',
+          age: '20',
+          date: '2011/08/14',
+          salary: '$163',
+        },
+        {
+          name: 'Michelle House',
+          position: 'Integration Specialist',
+          office: 'Sidney',
+          age: '37',
+          date: '2011/06/02',
+          salary: '$95',
+        },
+        {
+          name: 'Suki Burks',
+          position: 'Developer',
+          office: 'London',
+          age: '53',
+          date: '2009/10/22',
+          salary: '$114',
+        },
+        {
+          name: 'Prescott Bartlett',
+          position: 'Technical Author',
+          office: 'London',
+          age: '27',
+          date: '2011/05/07',
+          salary: '$145',
+        },
+
+        {
+          name: 'Donna Snider',
+          position: 'Customer Support',
+          office: 'New York',
+          age: '27',
+          date: '2011/01/25',
+          salary: '$112',
+        },
+      ],
+    };
+  };
+  return (
+    <CDBContainer>
+      <CDBCard>
+        <CDBCardBody>
+          <CDBDataTable striped bordered hover checkbox data={data()} materialSearch />
+        </CDBCardBody>
+      </CDBCard>
+    </CDBContainer>
+  );
+};
+
+export default DataTable;
+```
+
+## No Search
+
+![](https://i.imgur.com/x91p60t.gif)
+
+```js
+import React from 'react';
+import { CDBCard, CDBCardBody, CDBDataTable, CDBRow, CDBCol, CDBContainer } from 'cdbreact';
+
+const DataTable = () => {
+  function testClickEvent(param) {
+    alert('Row Click Event');
+  }
+
+  const data = () => {
+    return {
+      columns: [
+        {
+          label: 'Name',
+          field: 'name',
+          width: 150,
+          attributes: {
+            'aria-controls': 'DataTable',
+            'aria-label': 'Name',
+          },
+        },
+        {
+          label: 'Position',
+          field: 'position',
+          width: 270,
+        },
+        {
+          label: 'Office',
+          field: 'office',
+          width: 200,
+        },
+        {
+          label: 'Age',
+          field: 'age',
+          sort: 'asc',
+          width: 100,
+        },
+        {
+          label: 'Start date',
+          field: 'date',
+          sort: 'disabled',
+          width: 150,
+        },
+        {
+          label: 'Salary',
+          field: 'salary',
+          sort: 'disabled',
+          width: 100,
+        },
+      ],
+      rows: [
+        {
+          name: 'Tiger Nixon',
+          position: 'System Architect',
+          office: 'Edinburgh',
+          age: '61',
+          date: '2011/04/25',
+          salary: '$320',
+          clickEvent: () => testClickEvent(1),
+        },
+        {
+          name: 'Garrett Winters',
+          position: 'Accountant',
+          office: 'Tokyo',
+          age: '63',
+          date: '2011/07/25',
+          salary: '$170',
+        },
+        {
+          name: 'Ashton Cox',
+          position: 'Junior Technical Author',
+          office: 'San Francisco',
+          age: '66',
+          date: '2009/01/12',
+          salary: '$86',
+        },
+        {
+          name: 'Cedric Kelly',
+          position: 'Senior Javascript Developer',
+          office: 'Edinburgh',
+          age: '22',
+          date: '2012/03/29',
+          salary: '$433',
+        },
+        {
+          name: 'Airi Satou',
+          position: 'Accountant',
+          office: 'Tokyo',
+          age: '33',
+          date: '2008/11/28',
+          salary: '$162',
+        },
+        {
+          name: 'Brielle Williamson',
+          position: 'Integration Specialist',
+          office: 'New York',
+          age: '61',
+          date: '2012/12/02',
+          salary: '$372',
+        },
+        {
+          name: 'Herrod Chandler',
+          position: 'Sales Assistant',
+          office: 'San Francisco',
+          age: '59',
+          date: '2012/08/06',
+          salary: '$137',
+        },
+        {
+          name: 'Rhona Davidson',
+          position: 'Integration Specialist',
+          office: 'Tokyo',
+          age: '55',
+          date: '2010/10/14',
+          salary: '$327',
+        },
+        {
+          name: 'Colleen Hurst',
+          position: 'Javascript Developer',
+          office: 'San Francisco',
+          age: '39',
+          date: '2009/09/15',
+          salary: '$205',
+        },
+        {
+          name: 'Sonya Frost',
+          position: 'Software Engineer',
+          office: 'Edinburgh',
+          age: '23',
+          date: '2008/12/13',
+          salary: '$103',
+        },
+        {
+          name: 'Jena Gaines',
+          position: 'Office Manager',
+          office: 'London',
+          age: '30',
+          date: '2008/12/19',
+          salary: '$90',
+        },
+        {
+          name: 'Quinn Flynn',
+          position: 'Support Lead',
+          office: 'Edinburgh',
+          age: '22',
+          date: '2013/03/03',
+          salary: '$342',
+        },
+        {
+          name: 'Charde Marshall',
+          position: 'Regional Director',
+          office: 'San Francisco',
+          age: '36',
+          date: '2008/10/16',
+          salary: '$470',
+        },
+        {
+          name: 'Haley Kennedy',
+          position: 'Senior Marketing Designer',
+          office: 'London',
+          age: '43',
+          date: '2012/12/18',
+          salary: '$313',
+        },
+        {
+          name: 'Tatyana Fitzpatrick',
+          position: 'Regional Director',
+          office: 'London',
+          age: '19',
+          date: '2010/03/17',
+          salary: '$385',
+        },
+        {
+          name: 'Michael Silva',
+          position: 'Marketing Designer',
+          office: 'London',
+          age: '66',
+          date: '2012/11/27',
+          salary: '$198',
+        },
+        {
+          name: 'Paul Byrd',
+          position: 'Chief Financial Officer (CFO)',
+          office: 'New York',
+          age: '64',
+          date: '2010/06/09',
+          salary: '$725',
+        },
+        {
+          name: 'Gloria Little',
+          position: 'Systems Administrator',
+          office: 'New York',
+          age: '59',
+          date: '2009/04/10',
+          salary: '$237',
+        },
+        {
+          name: 'Bradley Greer',
+          position: 'Software Engineer',
+          office: 'London',
+          age: '41',
+          date: '2012/10/13',
+          salary: '$132',
+        },
+        {
+          name: 'Dai Rios',
+          position: 'Personnel Lead',
+          office: 'Edinburgh',
+          age: '35',
+          date: '2012/09/26',
+          salary: '$217',
+        },
+        {
+          name: 'Jenette Caldwell',
+          position: 'Development Lead',
+          office: 'New York',
+          age: '30',
+          date: '2011/09/03',
+          salary: '$345',
+        },
+        {
+          name: 'Yuri Berry',
+          position: 'Chief Marketing Officer (CMO)',
+          office: 'New York',
+          age: '40',
+          date: '2009/06/25',
+          salary: '$675',
+        },
+        {
+          name: 'Caesar Vance',
+          position: 'Pre-Sales Support',
+          office: 'New York',
+          age: '21',
+          date: '2011/12/12',
+          salary: '$106',
+        },
+        {
+          name: 'Doris Wilder',
+          position: 'Sales Assistant',
+          office: 'Sidney',
+          age: '23',
+          date: '2010/09/20',
+          salary: '$85',
+        },
+        {
+          name: 'Angelica Ramos',
+          position: 'Chief Executive Officer (CEO)',
+          office: 'London',
+          age: '47',
+          date: '2009/10/09',
+          salary: '$1',
+        },
+        {
+          name: 'Gavin Joyce',
+          position: 'Developer',
+          office: 'Edinburgh',
+          age: '42',
+          date: '2010/12/22',
+          salary: '$92',
+        },
+        {
+          name: 'Jennifer Chang',
+          position: 'Regional Director',
+          office: 'Singapore',
+          age: '28',
+          date: '2010/11/14',
+          salary: '$357',
+        },
+        {
+          name: 'Brenden Wagner',
+          position: 'Software Engineer',
+          office: 'San Francisco',
+          age: '28',
+          date: '2011/06/07',
+          salary: '$206',
+        },
+        {
+          name: 'Fiona Green',
+          position: 'Chief Operating Officer (COO)',
+          office: 'San Francisco',
+          age: '48',
+          date: '2010/03/11',
+          salary: '$850',
+        },
+        {
+          name: 'Shou Itou',
+          position: 'Regional Marketing',
+          office: 'Tokyo',
+          age: '20',
+          date: '2011/08/14',
+          salary: '$163',
+        },
+        {
+          name: 'Michelle House',
+          position: 'Integration Specialist',
+          office: 'Sidney',
+          age: '37',
+          date: '2011/06/02',
+          salary: '$95',
+        },
+        {
+          name: 'Suki Burks',
+          position: 'Developer',
+          office: 'London',
+          age: '53',
+          date: '2009/10/22',
+          salary: '$114',
+        },
+        {
+          name: 'Prescott Bartlett',
+          position: 'Technical Author',
+          office: 'London',
+          age: '27',
+          date: '2011/05/07',
+          salary: '$145',
+        },
+
+        {
+          name: 'Donna Snider',
+          position: 'Customer Support',
+          office: 'New York',
+          age: '27',
+          date: '2011/01/25',
+          salary: '$112',
+        },
+      ],
+    };
+  };
+  return (
+    <CDBContainer>
+      <CDBCard>
+        <CDBCardBody>
+          <CDBDataTable striped bordered hover data={data()} searching={false} />
+        </CDBCardBody>
+      </CDBCard>
+    </CDBContainer>
+  );
+};
+
+export default DataTable;
+```
+
+## No Sort
+
+![React Bootstrap No Sort DataTable](https://i.imgur.com/og0Z2Ck.gif)
+
+```js
+import React from 'react';
+import { CDBCard, CDBCardBody, CDBDataTable, CDBRow, CDBCol, CDBContainer } from 'cdbreact';
+
+const DataTable = () => {
+  function testClickEvent(param) {
+    alert('Row Click Event');
+  }
+
+  const data = () => {
+    return {
+      columns: [
+        {
+          label: 'Name',
+          field: 'name',
+          width: 150,
+          attributes: {
+            'aria-controls': 'DataTable',
+            'aria-label': 'Name',
+          },
+        },
+        {
+          label: 'Position',
+          field: 'position',
+          width: 270,
+        },
+        {
+          label: 'Office',
+          field: 'office',
+          width: 200,
+        },
+        {
+          label: 'Age',
+          field: 'age',
+          sort: 'asc',
+          width: 100,
+        },
+        {
+          label: 'Start date',
+          field: 'date',
+          sort: 'disabled',
+          width: 150,
+        },
+        {
+          label: 'Salary',
+          field: 'salary',
+          sort: 'disabled',
+          width: 100,
+        },
+      ],
+      rows: [
+        {
+          name: 'Tiger Nixon',
+          position: 'System Architect',
+          office: 'Edinburgh',
+          age: '61',
+          date: '2011/04/25',
+          salary: '$320',
+          clickEvent: () => testClickEvent(1),
+        },
+        {
+          name: 'Garrett Winters',
+          position: 'Accountant',
+          office: 'Tokyo',
+          age: '63',
+          date: '2011/07/25',
+          salary: '$170',
+        },
+        {
+          name: 'Ashton Cox',
+          position: 'Junior Technical Author',
+          office: 'San Francisco',
+          age: '66',
+          date: '2009/01/12',
+          salary: '$86',
+        },
+        {
+          name: 'Cedric Kelly',
+          position: 'Senior Javascript Developer',
+          office: 'Edinburgh',
+          age: '22',
+          date: '2012/03/29',
+          salary: '$433',
+        },
+        {
+          name: 'Airi Satou',
+          position: 'Accountant',
+          office: 'Tokyo',
+          age: '33',
+          date: '2008/11/28',
+          salary: '$162',
+        },
+        {
+          name: 'Brielle Williamson',
+          position: 'Integration Specialist',
+          office: 'New York',
+          age: '61',
+          date: '2012/12/02',
+          salary: '$372',
+        },
+        {
+          name: 'Herrod Chandler',
+          position: 'Sales Assistant',
+          office: 'San Francisco',
+          age: '59',
+          date: '2012/08/06',
+          salary: '$137',
+        },
+        {
+          name: 'Rhona Davidson',
+          position: 'Integration Specialist',
+          office: 'Tokyo',
+          age: '55',
+          date: '2010/10/14',
+          salary: '$327',
+        },
+        {
+          name: 'Colleen Hurst',
+          position: 'Javascript Developer',
+          office: 'San Francisco',
+          age: '39',
+          date: '2009/09/15',
+          salary: '$205',
+        },
+        {
+          name: 'Sonya Frost',
+          position: 'Software Engineer',
+          office: 'Edinburgh',
+          age: '23',
+          date: '2008/12/13',
+          salary: '$103',
+        },
+        {
+          name: 'Jena Gaines',
+          position: 'Office Manager',
+          office: 'London',
+          age: '30',
+          date: '2008/12/19',
+          salary: '$90',
+        },
+        {
+          name: 'Quinn Flynn',
+          position: 'Support Lead',
+          office: 'Edinburgh',
+          age: '22',
+          date: '2013/03/03',
+          salary: '$342',
+        },
+        {
+          name: 'Charde Marshall',
+          position: 'Regional Director',
+          office: 'San Francisco',
+          age: '36',
+          date: '2008/10/16',
+          salary: '$470',
+        },
+        {
+          name: 'Haley Kennedy',
+          position: 'Senior Marketing Designer',
+          office: 'London',
+          age: '43',
+          date: '2012/12/18',
+          salary: '$313',
+        },
+        {
+          name: 'Tatyana Fitzpatrick',
+          position: 'Regional Director',
+          office: 'London',
+          age: '19',
+          date: '2010/03/17',
+          salary: '$385',
+        },
+        {
+          name: 'Michael Silva',
+          position: 'Marketing Designer',
+          office: 'London',
+          age: '66',
+          date: '2012/11/27',
+          salary: '$198',
+        },
+        {
+          name: 'Paul Byrd',
+          position: 'Chief Financial Officer (CFO)',
+          office: 'New York',
+          age: '64',
+          date: '2010/06/09',
+          salary: '$725',
+        },
+        {
+          name: 'Gloria Little',
+          position: 'Systems Administrator',
+          office: 'New York',
+          age: '59',
+          date: '2009/04/10',
+          salary: '$237',
+        },
+        {
+          name: 'Bradley Greer',
+          position: 'Software Engineer',
+          office: 'London',
+          age: '41',
+          date: '2012/10/13',
+          salary: '$132',
+        },
+        {
+          name: 'Dai Rios',
+          position: 'Personnel Lead',
+          office: 'Edinburgh',
+          age: '35',
+          date: '2012/09/26',
+          salary: '$217',
+        },
+        {
+          name: 'Jenette Caldwell',
+          position: 'Development Lead',
+          office: 'New York',
+          age: '30',
+          date: '2011/09/03',
+          salary: '$345',
+        },
+        {
+          name: 'Yuri Berry',
+          position: 'Chief Marketing Officer (CMO)',
+          office: 'New York',
+          age: '40',
+          date: '2009/06/25',
+          salary: '$675',
+        },
+        {
+          name: 'Caesar Vance',
+          position: 'Pre-Sales Support',
+          office: 'New York',
+          age: '21',
+          date: '2011/12/12',
+          salary: '$106',
+        },
+        {
+          name: 'Doris Wilder',
+          position: 'Sales Assistant',
+          office: 'Sidney',
+          age: '23',
+          date: '2010/09/20',
+          salary: '$85',
+        },
+        {
+          name: 'Angelica Ramos',
+          position: 'Chief Executive Officer (CEO)',
+          office: 'London',
+          age: '47',
+          date: '2009/10/09',
+          salary: '$1',
+        },
+        {
+          name: 'Gavin Joyce',
+          position: 'Developer',
+          office: 'Edinburgh',
+          age: '42',
+          date: '2010/12/22',
+          salary: '$92',
+        },
+        {
+          name: 'Jennifer Chang',
+          position: 'Regional Director',
+          office: 'Singapore',
+          age: '28',
+          date: '2010/11/14',
+          salary: '$357',
+        },
+        {
+          name: 'Brenden Wagner',
+          position: 'Software Engineer',
+          office: 'San Francisco',
+          age: '28',
+          date: '2011/06/07',
+          salary: '$206',
+        },
+        {
+          name: 'Fiona Green',
+          position: 'Chief Operating Officer (COO)',
+          office: 'San Francisco',
+          age: '48',
+          date: '2010/03/11',
+          salary: '$850',
+        },
+        {
+          name: 'Shou Itou',
+          position: 'Regional Marketing',
+          office: 'Tokyo',
+          age: '20',
+          date: '2011/08/14',
+          salary: '$163',
+        },
+        {
+          name: 'Michelle House',
+          position: 'Integration Specialist',
+          office: 'Sidney',
+          age: '37',
+          date: '2011/06/02',
+          salary: '$95',
+        },
+        {
+          name: 'Suki Burks',
+          position: 'Developer',
+          office: 'London',
+          age: '53',
+          date: '2009/10/22',
+          salary: '$114',
+        },
+        {
+          name: 'Prescott Bartlett',
+          position: 'Technical Author',
+          office: 'London',
+          age: '27',
+          date: '2011/05/07',
+          salary: '$145',
+        },
+
+        {
+          name: 'Donna Snider',
+          position: 'Customer Support',
+          office: 'New York',
+          age: '27',
+          date: '2011/01/25',
+          salary: '$112',
+        },
+      ],
+    };
+  };
+  return (
+    <CDBContainer>
+      <CDBCard>
+        <CDBCardBody>
+          <CDBDataTable striped bordered hover data={data()} sortable={false} materialSearch />
+        </CDBCardBody>
+      </CDBCard>
+    </CDBContainer>
+  );
+};
+
+export default DataTable;
+```
+
+## No Info
+
+![React Bootstrap No Info](https://i.imgur.com/Aqqein8.gif)
+
+```js
+import React from 'react';
+import { CDBCard, CDBCardBody, CDBDataTable, CDBContainer } from 'cdbreact';
+
+const DataTable = () => {
+  function testClickEvent(param) {
+    alert('Row Click Event');
+  }
+
+  const data = () => {
+    return {
+      columns: [
+        {
+          label: 'Name',
+          field: 'name',
+          width: 150,
+          attributes: {
+            'aria-controls': 'DataTable',
+            'aria-label': 'Name',
+          },
+        },
+        {
+          label: 'Position',
+          field: 'position',
+          width: 270,
+        },
+        {
+          label: 'Office',
+          field: 'office',
+          width: 200,
+        },
+        {
+          label: 'Age',
+          field: 'age',
+          sort: 'asc',
+          width: 100,
+        },
+        {
+          label: 'Start date',
+          field: 'date',
+          sort: 'disabled',
+          width: 150,
+        },
+        {
+          label: 'Salary',
+          field: 'salary',
+          sort: 'disabled',
+          width: 100,
+        },
+      ],
+      rows: [
+        {
+          name: 'Tiger Nixon',
+          position: 'System Architect',
+          office: 'Edinburgh',
+          age: '61',
+          date: '2011/04/25',
+          salary: '$320',
+          clickEvent: () => testClickEvent(1),
+        },
+        {
+          name: 'Garrett Winters',
+          position: 'Accountant',
+          office: 'Tokyo',
+          age: '63',
+          date: '2011/07/25',
+          salary: '$170',
+        },
+        {
+          name: 'Ashton Cox',
+          position: 'Junior Technical Author',
+          office: 'San Francisco',
+          age: '66',
+          date: '2009/01/12',
+          salary: '$86',
+        },
+        {
+          name: 'Cedric Kelly',
+          position: 'Senior Javascript Developer',
+          office: 'Edinburgh',
+          age: '22',
+          date: '2012/03/29',
+          salary: '$433',
+        },
+        {
+          name: 'Airi Satou',
+          position: 'Accountant',
+          office: 'Tokyo',
+          age: '33',
+          date: '2008/11/28',
+          salary: '$162',
+        },
+        {
+          name: 'Brielle Williamson',
+          position: 'Integration Specialist',
+          office: 'New York',
+          age: '61',
+          date: '2012/12/02',
+          salary: '$372',
+        },
+        {
+          name: 'Herrod Chandler',
+          position: 'Sales Assistant',
+          office: 'San Francisco',
+          age: '59',
+          date: '2012/08/06',
+          salary: '$137',
+        },
+        {
+          name: 'Rhona Davidson',
+          position: 'Integration Specialist',
+          office: 'Tokyo',
+          age: '55',
+          date: '2010/10/14',
+          salary: '$327',
+        },
+        {
+          name: 'Colleen Hurst',
+          position: 'Javascript Developer',
+          office: 'San Francisco',
+          age: '39',
+          date: '2009/09/15',
+          salary: '$205',
+        },
+        {
+          name: 'Sonya Frost',
+          position: 'Software Engineer',
+          office: 'Edinburgh',
+          age: '23',
+          date: '2008/12/13',
+          salary: '$103',
+        },
+        {
+          name: 'Jena Gaines',
+          position: 'Office Manager',
+          office: 'London',
+          age: '30',
+          date: '2008/12/19',
+          salary: '$90',
+        },
+        {
+          name: 'Quinn Flynn',
+          position: 'Support Lead',
+          office: 'Edinburgh',
+          age: '22',
+          date: '2013/03/03',
+          salary: '$342',
+        },
+        {
+          name: 'Charde Marshall',
+          position: 'Regional Director',
+          office: 'San Francisco',
+          age: '36',
+          date: '2008/10/16',
+          salary: '$470',
+        },
+        {
+          name: 'Haley Kennedy',
+          position: 'Senior Marketing Designer',
+          office: 'London',
+          age: '43',
+          date: '2012/12/18',
+          salary: '$313',
+        },
+        {
+          name: 'Tatyana Fitzpatrick',
+          position: 'Regional Director',
+          office: 'London',
+          age: '19',
+          date: '2010/03/17',
+          salary: '$385',
+        },
+        {
+          name: 'Michael Silva',
+          position: 'Marketing Designer',
+          office: 'London',
+          age: '66',
+          date: '2012/11/27',
+          salary: '$198',
+        },
+        {
+          name: 'Paul Byrd',
+          position: 'Chief Financial Officer (CFO)',
+          office: 'New York',
+          age: '64',
+          date: '2010/06/09',
+          salary: '$725',
+        },
+        {
+          name: 'Gloria Little',
+          position: 'Systems Administrator',
+          office: 'New York',
+          age: '59',
+          date: '2009/04/10',
+          salary: '$237',
+        },
+        {
+          name: 'Bradley Greer',
+          position: 'Software Engineer',
+          office: 'London',
+          age: '41',
+          date: '2012/10/13',
+          salary: '$132',
+        },
+        {
+          name: 'Dai Rios',
+          position: 'Personnel Lead',
+          office: 'Edinburgh',
+          age: '35',
+          date: '2012/09/26',
+          salary: '$217',
+        },
+        {
+          name: 'Jenette Caldwell',
+          position: 'Development Lead',
+          office: 'New York',
+          age: '30',
+          date: '2011/09/03',
+          salary: '$345',
+        },
+        {
+          name: 'Yuri Berry',
+          position: 'Chief Marketing Officer (CMO)',
+          office: 'New York',
+          age: '40',
+          date: '2009/06/25',
+          salary: '$675',
+        },
+        {
+          name: 'Caesar Vance',
+          position: 'Pre-Sales Support',
+          office: 'New York',
+          age: '21',
+          date: '2011/12/12',
+          salary: '$106',
+        },
+        {
+          name: 'Doris Wilder',
+          position: 'Sales Assistant',
+          office: 'Sidney',
+          age: '23',
+          date: '2010/09/20',
+          salary: '$85',
+        },
+        {
+          name: 'Angelica Ramos',
+          position: 'Chief Executive Officer (CEO)',
+          office: 'London',
+          age: '47',
+          date: '2009/10/09',
+          salary: '$1',
+        },
+        {
+          name: 'Gavin Joyce',
+          position: 'Developer',
+          office: 'Edinburgh',
+          age: '42',
+          date: '2010/12/22',
+          salary: '$92',
+        },
+        {
+          name: 'Jennifer Chang',
+          position: 'Regional Director',
+          office: 'Singapore',
+          age: '28',
+          date: '2010/11/14',
+          salary: '$357',
+        },
+        {
+          name: 'Brenden Wagner',
+          position: 'Software Engineer',
+          office: 'San Francisco',
+          age: '28',
+          date: '2011/06/07',
+          salary: '$206',
+        },
+        {
+          name: 'Fiona Green',
+          position: 'Chief Operating Officer (COO)',
+          office: 'San Francisco',
+          age: '48',
+          date: '2010/03/11',
+          salary: '$850',
+        },
+        {
+          name: 'Shou Itou',
+          position: 'Regional Marketing',
+          office: 'Tokyo',
+          age: '20',
+          date: '2011/08/14',
+          salary: '$163',
+        },
+        {
+          name: 'Michelle House',
+          position: 'Integration Specialist',
+          office: 'Sidney',
+          age: '37',
+          date: '2011/06/02',
+          salary: '$95',
+        },
+        {
+          name: 'Suki Burks',
+          position: 'Developer',
+          office: 'London',
+          age: '53',
+          date: '2009/10/22',
+          salary: '$114',
+        },
+        {
+          name: 'Prescott Bartlett',
+          position: 'Technical Author',
+          office: 'London',
+          age: '27',
+          date: '2011/05/07',
+          salary: '$145',
+        },
+
+        {
+          name: 'Donna Snider',
+          position: 'Customer Support',
+          office: 'New York',
+          age: '27',
+          date: '2011/01/25',
+          salary: '$112',
+        },
+      ],
+    };
+  };
+  return (
+    <CDBContainer>
+      <CDBCard>
+        <CDBCardBody>
+          <CDBDataTable striped bordered hover data={data()} info={false} materialSearch />
+        </CDBCardBody>
+      </CDBCard>
+    </CDBContainer>
+  );
+};
+
+export default DataTable;
+```
+
+## No Pagination
+
+![React Bootstrap DataTable No Pagination](https://i.imgur.com/WxNQdjY.gif)
+
+```js
+import React from 'react';
+import { CDBCard, CDBCardBody, CDBDataTable, CDBRow, CDBCol, CDBContainer } from 'cdbreact';
+
+const DataTable = () => {
+  function testClickEvent(param) {
+    alert('Row Click Event');
+  }
+
+  const data = () => {
+    return {
+      columns: [
+        {
+          label: 'Name',
+          field: 'name',
+          width: 150,
+          attributes: {
+            'aria-controls': 'DataTable',
+            'aria-label': 'Name',
+          },
+        },
+        {
+          label: 'Position',
+          field: 'position',
+          width: 270,
+        },
+        {
+          label: 'Office',
+          field: 'office',
+          width: 200,
+        },
+        {
+          label: 'Age',
+          field: 'age',
+          sort: 'asc',
+          width: 100,
+        },
+        {
+          label: 'Start date',
+          field: 'date',
+          sort: 'disabled',
+          width: 150,
+        },
+        {
+          label: 'Salary',
+          field: 'salary',
+          sort: 'disabled',
+          width: 100,
+        },
+      ],
+      rows: [
+        {
+          name: 'Tiger Nixon',
+          position: 'System Architect',
+          office: 'Edinburgh',
+          age: '61',
+          date: '2011/04/25',
+          salary: '$320',
+          clickEvent: () => testClickEvent(1),
+        },
+        {
+          name: 'Garrett Winters',
+          position: 'Accountant',
+          office: 'Tokyo',
+          age: '63',
+          date: '2011/07/25',
+          salary: '$170',
+        },
+        {
+          name: 'Ashton Cox',
+          position: 'Junior Technical Author',
+          office: 'San Francisco',
+          age: '66',
+          date: '2009/01/12',
+          salary: '$86',
+        },
+        {
+          name: 'Cedric Kelly',
+          position: 'Senior Javascript Developer',
+          office: 'Edinburgh',
+          age: '22',
+          date: '2012/03/29',
+          salary: '$433',
+        },
+        {
+          name: 'Airi Satou',
+          position: 'Accountant',
+          office: 'Tokyo',
+          age: '33',
+          date: '2008/11/28',
+          salary: '$162',
+        },
+        {
+          name: 'Brielle Williamson',
+          position: 'Integration Specialist',
+          office: 'New York',
+          age: '61',
+          date: '2012/12/02',
+          salary: '$372',
+        },
+        {
+          name: 'Herrod Chandler',
+          position: 'Sales Assistant',
+          office: 'San Francisco',
+          age: '59',
+          date: '2012/08/06',
+          salary: '$137',
+        },
+        {
+          name: 'Rhona Davidson',
+          position: 'Integration Specialist',
+          office: 'Tokyo',
+          age: '55',
+          date: '2010/10/14',
+          salary: '$327',
+        },
+        {
+          name: 'Colleen Hurst',
+          position: 'Javascript Developer',
+          office: 'San Francisco',
+          age: '39',
+          date: '2009/09/15',
+          salary: '$205',
+        },
+        {
+          name: 'Sonya Frost',
+          position: 'Software Engineer',
+          office: 'Edinburgh',
+          age: '23',
+          date: '2008/12/13',
+          salary: '$103',
+        },
+        {
+          name: 'Jena Gaines',
+          position: 'Office Manager',
+          office: 'London',
+          age: '30',
+          date: '2008/12/19',
+          salary: '$90',
+        },
+        {
+          name: 'Quinn Flynn',
+          position: 'Support Lead',
+          office: 'Edinburgh',
+          age: '22',
+          date: '2013/03/03',
+          salary: '$342',
+        },
+        {
+          name: 'Charde Marshall',
+          position: 'Regional Director',
+          office: 'San Francisco',
+          age: '36',
+          date: '2008/10/16',
+          salary: '$470',
+        },
+        {
+          name: 'Haley Kennedy',
+          position: 'Senior Marketing Designer',
+          office: 'London',
+          age: '43',
+          date: '2012/12/18',
+          salary: '$313',
+        },
+        {
+          name: 'Tatyana Fitzpatrick',
+          position: 'Regional Director',
+          office: 'London',
+          age: '19',
+          date: '2010/03/17',
+          salary: '$385',
+        },
+        {
+          name: 'Michael Silva',
+          position: 'Marketing Designer',
+          office: 'London',
+          age: '66',
+          date: '2012/11/27',
+          salary: '$198',
+        },
+        {
+          name: 'Paul Byrd',
+          position: 'Chief Financial Officer (CFO)',
+          office: 'New York',
+          age: '64',
+          date: '2010/06/09',
+          salary: '$725',
+        },
+        {
+          name: 'Gloria Little',
+          position: 'Systems Administrator',
+          office: 'New York',
+          age: '59',
+          date: '2009/04/10',
+          salary: '$237',
+        },
+        {
+          name: 'Bradley Greer',
+          position: 'Software Engineer',
+          office: 'London',
+          age: '41',
+          date: '2012/10/13',
+          salary: '$132',
+        },
+        {
+          name: 'Dai Rios',
+          position: 'Personnel Lead',
+          office: 'Edinburgh',
+          age: '35',
+          date: '2012/09/26',
+          salary: '$217',
+        },
+        {
+          name: 'Jenette Caldwell',
+          position: 'Development Lead',
+          office: 'New York',
+          age: '30',
+          date: '2011/09/03',
+          salary: '$345',
+        },
+        {
+          name: 'Yuri Berry',
+          position: 'Chief Marketing Officer (CMO)',
+          office: 'New York',
+          age: '40',
+          date: '2009/06/25',
+          salary: '$675',
+        },
+        {
+          name: 'Caesar Vance',
+          position: 'Pre-Sales Support',
+          office: 'New York',
+          age: '21',
+          date: '2011/12/12',
+          salary: '$106',
+        },
+        {
+          name: 'Doris Wilder',
+          position: 'Sales Assistant',
+          office: 'Sidney',
+          age: '23',
+          date: '2010/09/20',
+          salary: '$85',
+        },
+        {
+          name: 'Angelica Ramos',
+          position: 'Chief Executive Officer (CEO)',
+          office: 'London',
+          age: '47',
+          date: '2009/10/09',
+          salary: '$1',
+        },
+        {
+          name: 'Gavin Joyce',
+          position: 'Developer',
+          office: 'Edinburgh',
+          age: '42',
+          date: '2010/12/22',
+          salary: '$92',
+        },
+        {
+          name: 'Jennifer Chang',
+          position: 'Regional Director',
+          office: 'Singapore',
+          age: '28',
+          date: '2010/11/14',
+          salary: '$357',
+        },
+        {
+          name: 'Brenden Wagner',
+          position: 'Software Engineer',
+          office: 'San Francisco',
+          age: '28',
+          date: '2011/06/07',
+          salary: '$206',
+        },
+        {
+          name: 'Fiona Green',
+          position: 'Chief Operating Officer (COO)',
+          office: 'San Francisco',
+          age: '48',
+          date: '2010/03/11',
+          salary: '$850',
+        },
+        {
+          name: 'Shou Itou',
+          position: 'Regional Marketing',
+          office: 'Tokyo',
+          age: '20',
+          date: '2011/08/14',
+          salary: '$163',
+        },
+        {
+          name: 'Michelle House',
+          position: 'Integration Specialist',
+          office: 'Sidney',
+          age: '37',
+          date: '2011/06/02',
+          salary: '$95',
+        },
+        {
+          name: 'Suki Burks',
+          position: 'Developer',
+          office: 'London',
+          age: '53',
+          date: '2009/10/22',
+          salary: '$114',
+        },
+        {
+          name: 'Prescott Bartlett',
+          position: 'Technical Author',
+          office: 'London',
+          age: '27',
+          date: '2011/05/07',
+          salary: '$145',
+        },
+
+        {
+          name: 'Donna Snider',
+          position: 'Customer Support',
+          office: 'New York',
+          age: '27',
+          date: '2011/01/25',
+          salary: '$112',
+        },
+      ],
+    };
+  };
+  return (
+    <CDBContainer>
+      <CDBRow className="py-3">
+        <CDBCol md="12">
+          <CDBCard>
+            <CDBCardBody>
+              <CDBDataTable striped bordered hover paging={false} data={data()} materialSearch />
+            </CDBCardBody>
+          </CDBCard>
+        </CDBCol>
+      </CDBRow>
+    </CDBContainer>
+  );
+};
+
+export default DataTable;
+```
+
+## API Reference: Contrast React Bootstrap DataTable Props
+
+This section will build on your information about the props you get to use with the Contrast React Bootstrap DataTable component. You will find out what these props do, their default values, and how you would use them in your code.
+
+The table below lists other prop options of the `CDBDataTable` component.
+
+| Name                       |       Type       |                            Default |                                                                                                     Description                                                                                                      |                                                            Example |
+| :------------------------- | :--------------: | ---------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | -----------------------------------------------------------------: |
+| className                  |      String      |                                    |                                                                                         Adds classes to data table component                                                                                         |                           <CDBDataTable className="myClass" ... /> |
+| tag                        |      String      |                                div |                                                                                              Changes default input tag                                                                                               |                                   <CDBDataTable tag="input" ... /> |
+| autoWidth                  |     Boolean      |                              false |                                                                                  Automatically adjust columns width to the content.                                                                                  |                                      <CDBDataTable autoWidth .../> |
+| barReverse                 |     Boolean      |                              false |                                                                                Swaps position of 'search' and 'show entries' elements                                                                                |                                     <CDBDataTable barReverse .../> |
+| bordered                   |     Boolean      |                              false |                                                                                     Adds border on all table's and cell's sides.                                                                                     |                                       <CDBDataTable bordered .../> |
+| borderless                 |     Boolean      |                              false |                                                                                   Disables border on all table's and cell's sides.                                                                                   |                                     <CDBDataTable borderless .../> |
+| btn                        |     Boolean      |                              false |                                                                                Adjust table styles to work with content like buttons                                                                                 |                                            <CDBDataTable btn .../> |
+| dark                       |     Boolean      |                              false |                                                                                        Sets dark color palette of the table.                                                                                         |                                           <CDBDataTable dark .../> |
+| data                       | Object or String |                                    |                                                                                 Attach your data or link to the JSON with your data.                                                                                 |                                    <CDBDataTable data={data} .../> |
+| disableRetreatAfterSorting |     Boolean      |                              false |                                                                                   Disable retreat after sorting to the first page.                                                                                   |                     <CDBDataTable disableRetreatAfterSorting .../> |
+| displayEntries             |     Boolean      |                               true |                                                                                   Determines whether entries is enabled/disabled.                                                                                    |                         <CDBDataTable displayEntries={false} .../> |
+| entries                    |      Number      |                                    |                                                                                            Initial entries amount value.                                                                                             |                                        <CDBDataTable entries .../> |
+| entriesLabel               |      String      |                       Show Entries |                                                                         Change entries label; you can attach jsx code to render f.e. links.                                                                          |                     <CDBDataTable entriesLabel="Show labels" .../> |
+| entriesOptions             |  Array[Number]   |                  [10, 20, 50, 100] |                                                                             Sets entries amount options available to select in dropdown.                                                                             |                  <CDBDataTable entriesOptions={[5, 10, 15 ]} .../> |
+| exportToCSV                |     Boolean      |                              false |                                                  If you add this property the button will appear. By clicking it the .csv file with your table will be downloaded.                                                   |                                    <CDBDataTable exportToCSV .../> |
+| office                     |      String      |                                    |                                                                               Adds a new select to filter table data by column field.                                                                                |                                <CDBDataTable filter="office" .../> |
+| fixed                      |     Boolean      |                              false |                                                                                              Sets fixed columns width.                                                                                               |                                          <CDBDataTable fixed .../> |
+| hover                      |     Boolean      |                              false |                                                                        Adds hover state on table rows (rows are marked on light-grey color).                                                                         |                                          <CDBDataTable hover .../> |
+| info                       |     Boolean      |                               true |                                                                               Determines whether pagination info is enabled/disabled.                                                                                |                                   <CDBDataTable info={false} .../> |
+| infoLabel                  |  Array[String]   | ["Showing", "to", "of", "entries"] |                                                                                          Change text of paging information.                                                                                          | <CDBDataTable infoLabel={["Showing", "to", "of", "entries"]} .../> |
+| maxHeight                  |      String      |                              200px |                                                                      Sets table's maxHeight. You can use px, vh or whatever fits to your needs.                                                                      |                              <CDBDataTable maxHeight="400px" .../> |
+| noBottomColumn             |     Boolean      |                              false |                                                                                               No renders table footer                                                                                                |                                 <CDBDataTable noBottomColumn .../> |
+| noRecordsLabelFound        |      String      |          No matching records found |                                                                                      Sets custom text if no have data to render                                                                                      |   <CDBDataTable noRecordsFoundLabel="Zero records to render" .../> |
+| order                      |  Array[String]   |                              false |                                       Sets initial order. Accepts array of strings, index 0: table field by which you want to sort, index 1: sorting direction ('desc'/'asc').                                       |                        <CDBDataTable order={['age', 'desc']} .../> |
+| pagesAmount                |      Number      |                                  8 |                                                                            Initial number of pages simultaneously visible in pagination.                                                                             |                               <CDBDataTable pagesAmount={10} .../> |
+| paging                     |     Boolean      |                               true |                                                                                  Determines whether pagination is enabled/disabled.                                                                                  |                                 <CDBDataTable paging={false} .../> |
+| paginationLabel            |  Array[String]   |               ["Previous", "Next"] |                                                                                          Change pagination buttons labels.                                                                                           |         <CDBDataTable paginationLabel={["Previous", "Next"]} .../> |
+| responsive                 |     Boolean      |                              false | Makes table scrollable horizontally when screen width is smaller than table content (under 768px). It make use of `overflow-y: hidden` which clips off content that goes beyond the bottom or top edge of the table. |                                     <CDBDataTable responsive .../> |
+| responsiveSm               |     Boolean      |                              false |                                                                           Makes table scrollable horizontally on under 576px wide screens.                                                                           |                                   <CDBDataTable responsiveSm .../> |
+| responsiveMd               |     Boolean      |                              false |                                                                           Makes table scrollable horizontally on under 768px wide screens.                                                                           |                                   <CDBDataTable responsiveMd .../> |
+| responsiveLg               |     Boolean      |                              false |                                                                           Makes table scrollable horizontally on under 992px wide screens.                                                                           |                                   <CDBDataTable responsiveLg .../> |
+| responsiveXl               |     Boolean      |                              false |                                                                          Makes table scrollable horizontally on under 1200px wide screens.                                                                           |                                   <CDBDataTable responsiveXl .../> |
+| searching                  |     Boolean      |                               true |                                                                                  Determines whether searching is enabled/disabled.                                                                                   |                              <CDBDataTable searching={false} .../> |
+| searchLabel                |      String      |                             Search |                                                                                             Change text of search label.                                                                                             |                           <CDBDataTable searchLabel="Search" .../> |
+| scrollX                    |     Boolean      |                              false |                                                       Allows table to be scrolled horizontally. Combine this prop with column's 'width' for the best effects.                                                        |                                        <CDBDataTable scrollX .../> |
+| scrollY                    |     Boolean      |                              false |                                         Allows table to be scrolled vertically if it's content is higher than 200px. Combine it with maxHeight to manipulate table's height.                                         |                                        <CDBDataTable scrollY .../> |
+| sortRows                   |  Array[String]   |                                    |                               Determines row fields which defined as components but should be sortable and searchable. `Row's field component should receive property 'searchValue'!`                                |                  <CDBDataTable autoWidth sortRows=["search"] .../> |
+| sortable                   |     Boolean      |                              false |                                                                                   Determines whether sorting is enabled/disabled.                                                                                    |                                       <CDBDataTable sortable .../> |
+| striped                    |     Boolean      |                              false |                                                                                        Adds zebra-striping to any table row.                                                                                         |                                        <CDBDataTable striped .../> |
+| theadColor                 |      String      |                                    |                                                                                         Sets background color of table head.                                                                                         |                            <CDBDataTable theadColor="indigo" .../> |
+| theadTextWhite             |     Boolean      |                                    |                                                                                        Sets white color of table head's font.                                                                                        |                                 <CDBDataTable theadTextWhite .../> |
+| tbodyColor                 |      String      |                                    |                                                                                         Sets background color of table body.                                                                                         |                            <CDBDataTable tbodyColor="indigo" .../> |
+| tbodyTextWhite             |     Boolean      |                              false |                                                                                        Sets white color of table body's font.                                                                                        |                                 <CDBDataTable tbodyTextWhite .../> |

@@ -1,0 +1,390 @@
+---
+title: 'Autocomplete'
+metaTitle: 'Autocomplete Component for React Bootstrap'
+metaDescription: 'React Bootstrap Autocomplete is a component that predicts words based on the first few letters typed by the user'
+---
+
+import React from 'react';
+import { Link } from 'gatsby';
+
+# React Bootstrap Autocomplete
+
+React Bootstrap Autocomplete or autosuggest is a feature owned by a component that that predicts the words based on the first few letters given by a user while typing it. It takes in an `Array` full of suggestions.
+You can use `↑` and `↓` arrow keys to navigate through options and use the`↵` key to select the required option.
+
+## Importing the React Bootstrap Autocomplete component
+
+You should first import CDBAutocomplete into your project to use the Contrast React Bootstrap Autocomplete Component.
+
+```javascript
+import { CDBAutocomplete } from 'cdbreact';
+```
+
+## Default Autocomplete
+
+<a href="/product/contrast-pro">
+  <span class="badge badge-lg badge-pro">Pro Component</span>
+</a>
+<div class="cdb-form" style="width: 100%">
+  <input type="text" class="form-control" id="cdb-autocomplete" name="q" style="max-width:450px;" />
+  <label>Which country are you from</label>
+</div>
+
+```javascript
+import React from 'react';
+import { CDBAutocomplete, CDBContainer } from 'cdbreact';
+
+export const Autocomplete = () => {
+  const countryList = [
+    'Afghanistan',
+    'Albania',
+    'Algeria',
+    'American Samoa',
+    'Andorra',
+    'Angola',
+    'Anguilla',
+    'Antarctica',
+    'Antigua and Barbuda',
+    'Argentina',
+    'Armenia',
+    'Aruba',
+    'Australia',
+    'Austria',
+    'Azerbaijan',
+    'Bahamas (the)',
+    'Bahrain',
+    'Bangladesh',
+    'Barbados',
+    'Belarus',
+    'Belgium',
+    'Belize',
+    'Benin',
+    'Bermuda',
+    'Bhutan',
+    'Bolivia (Plurinational State of)',
+    'Bonaire, Sint Eustatius and Saba',
+    'Bosnia and Herzegovina',
+    'Botswana',
+    'Bouvet Island',
+    'Brazil',
+    'British Indian Ocean Territory (the)',
+    'Brunei Darussalam',
+    'Bulgaria',
+    'Burkina Faso',
+    'Burundi',
+    'Cabo Verde',
+    'Cambodia',
+    'Cameroon',
+    'Canada',
+    'Cayman Islands (the)',
+    'Central African Republic (the)',
+    'Chad',
+    'Chile',
+    'China',
+    'Christmas Island',
+    'Cocos (Keeling) Islands (the)',
+    'Colombia',
+    'Comoros (the)',
+    'Congo (the Democratic Republic of the)',
+    'Congo (the)',
+    'Cook Islands (the)',
+    'Costa Rica',
+    'Croatia',
+    'Cuba',
+    'Curaçao',
+    'Cyprus',
+    'Czechia',
+    "Côte d'Ivoire",
+    'Denmark',
+    'Djibouti',
+    'Dominica',
+    'Dominican Republic (the)',
+    'Ecuador',
+    'Egypt',
+    'El Salvador',
+    'Equatorial Guinea',
+    'Eritrea',
+    'Estonia',
+    'Eswatini',
+    'Ethiopia',
+    'Falkland Islands (the) [Malvinas]',
+    'Faroe Islands (the)',
+    'Fiji',
+    'Finland',
+    'France',
+    'French Guiana',
+    'French Polynesia',
+    'French Southern Territories (the)',
+    'Gabon',
+    'Gambia (the)',
+    'Georgia',
+    'Germany',
+    'Ghana',
+    'Gibraltar',
+    'Greece',
+    'Greenland',
+    'Grenada',
+    'Guadeloupe',
+    'Guam',
+    'Guatemala',
+    'Guernsey',
+    'Guinea',
+    'Guinea-Bissau',
+    'Guyana',
+    'Haiti',
+    'Heard Island and McDonald Islands',
+    'Holy See (the)',
+    'Honduras',
+    'Hong Kong',
+    'Hungary',
+    'Iceland',
+    'India',
+    'Indonesia',
+    'Iran (Islamic Republic of)',
+    'Iraq',
+    'Ireland',
+    'Isle of Man',
+    'Israel',
+    'Italy',
+    'Jamaica',
+    'Japan',
+    'Jersey',
+    'Jordan',
+    'Kazakhstan',
+    'Kenya',
+    'Kiribati',
+    "Korea (the Democratic People's Republic of)",
+    'Korea (the Republic of)',
+    'Kuwait',
+    'Kyrgyzstan',
+    "Lao People's Democratic Republic (the)",
+    'Latvia',
+    'Lebanon',
+    'Lesotho',
+    'Liberia',
+    'Libya',
+    'Liechtenstein',
+    'Lithuania',
+    'Luxembourg',
+    'Macao',
+    'Madagascar',
+    'Malawi',
+    'Malaysia',
+    'Maldives',
+    'Mali',
+    'Malta',
+    'Marshall Islands (the)',
+    'Martinique',
+    'Mauritania',
+    'Mauritius',
+    'Mayotte',
+    'Mexico',
+    'Micronesia (Federated States of)',
+    'Moldova (the Republic of)',
+    'Monaco',
+    'Mongolia',
+    'Montenegro',
+    'Montserrat',
+    'Morocco',
+    'Mozambique',
+    'Myanmar',
+    'Namibia',
+    'Nauru',
+    'Nepal',
+    'Netherlands (the)',
+    'New Caledonia',
+    'New Zealand',
+    'Nicaragua',
+    'Niger (the)',
+    'Nigeria',
+    'Niue',
+    'Norfolk Island',
+    'Northern Mariana Islands (the)',
+    'Norway',
+    'Oman',
+    'Pakistan',
+    'Palau',
+    'Palestine, State of',
+    'Panama',
+    'Papua New Guinea',
+    'Paraguay',
+    'Peru',
+    'Philippines (the)',
+    'Pitcairn',
+    'Poland',
+    'Portugal',
+    'Puerto Rico',
+    'Qatar',
+    'Republic of North Macedonia',
+    'Romania',
+    'Russian Federation (the)',
+    'Rwanda',
+    'Réunion',
+    'Saint Barthélemy',
+    'Saint Helena, Ascension and Tristan da Cunha',
+    'Saint Kitts and Nevis',
+    'Saint Lucia',
+    'Saint Martin (French part)',
+    'Saint Pierre and Miquelon',
+    'Saint Vincent and the Grenadines',
+    'Samoa',
+    'San Marino',
+    'Sao Tome and Principe',
+    'Saudi Arabia',
+    'Senegal',
+    'Serbia',
+    'Seychelles',
+    'Sierra Leone',
+    'Singapore',
+    'Sint Maarten (Dutch part)',
+    'Slovakia',
+    'Slovenia',
+    'Solomon Islands',
+    'Somalia',
+    'South Africa',
+    'South Georgia and the South Sandwich Islands',
+    'South Sudan',
+    'Spain',
+    'Sri Lanka',
+    'Sudan (the)',
+    'Suriname',
+    'Svalbard and Jan Mayen',
+    'Sweden',
+    'Switzerland',
+    'Syrian Arab Republic',
+    'Taiwan',
+    'Tajikistan',
+    'Tanzania, United Republic of',
+    'Thailand',
+    'Timor-Leste',
+    'Togo',
+    'Tokelau',
+    'Tonga',
+    'Trinidad and Tobago',
+    'Tunisia',
+    'Turkey',
+    'Turkmenistan',
+    'Turks and Caicos Islands (the)',
+    'Tuvalu',
+    'Uganda',
+    'Ukraine',
+    'United Arab Emirates (the)',
+    'United Kingdom of Great Britain and Northern Ireland (the)',
+    'United States Minor Outlying Islands (the)',
+    'United States of America (the)',
+    'Uruguay',
+    'Uzbekistan',
+    'Vanuatu',
+    'Venezuela (Bolivarian Republic of)',
+    'Viet Nam',
+    'Virgin Islands (British)',
+    'Virgin Islands (U.S.)',
+    'Wallis and Futuna',
+    'Western Sahara',
+    'Yemen',
+    'Zambia',
+    'Zimbabwe',
+    'Åland Islands',
+  ];
+
+  return (
+    <CDBContainer>
+      <CDBAutocomplete label="Which country are you from" suggestions={countryList} />
+    </CDBContainer>
+  );
+};
+```
+
+## Autocomplete usage within a Card
+
+Other than the CDBAutocomplete component, we'll be using other Contrast React Bootstrap components in this section. These components are [CDBIcon](https://www.devwares.com/docs/contrast/react/components/icon), [CDBCard](https://www.devwares.com/docs/contrast/react/components/card), [CDBBtn](https://www.devwares.com/docs/contrast/react/components/buttons), [CDBCardBody](https://www.devwares.com/docs/contrast/react/components/card), [CDBInput](https://www.devwares.com/docs/contrast/react/components/input) to follow up on this tutorial, please check out the docs on these components.
+
+```javascript
+import React from 'react';
+import {
+  CDBAutocomplete,
+  CDBIcon,
+  CDBCard,
+  CDBBtn,
+  CDBCardBody,
+  CDBInput,
+  CDBContainer,
+} from 'cdbreact';
+
+export const Autocomplete = () => {
+  return (
+    <CDBContainer>
+      <CDBCard style={{ width: '100%' }}>
+        <CDBCardBody className="mx-4">
+          <div className="text-center">
+            <h3 className="dark-grey-text mb-5">
+              <strong>Sign in</strong>
+            </h3>
+          </div>
+          <CDBInput label="Your email" group type="email" validate error="wrong" success="right" />
+          <CDBInput label="Your password" group type="password" validate containerClass="mb-0" />
+          <CDBAutocomplete
+            suggestions={['White', 'Black', 'Green', 'Blue', 'Yellow', 'Red']}
+            label="Choose a Color"
+          />
+          <div className="text-center pt-3 mb-3">
+            <CDBBtn type="button" gradient="blue" className="mx-0 btn-block">
+              Sign in
+            </CDBBtn>
+          </div>
+          <p
+            className="dark-grey-text text-right d-flex justify-content-center mb-3 pt-2"
+            style={{ fontSize: '0.8rem' }}
+          >
+            or Sign up with:
+          </p>
+          <div className="row my-3 d-flex justify-content-center">
+            <CDBBtn type="button" color="white" circle className="mr-md-3">
+              <CDBIcon fab icon="facebook-f" className="blue-text text-center" />
+            </CDBBtn>
+            <CDBBtn type="button" color="white" circle className="mr-md-3">
+              <CDBIcon fab icon="twitter" className="blue-text" />
+            </CDBBtn>
+            <CDBBtn type="button" color="white" circle className="z-depth-1a">
+              <CDBIcon fab icon="google-plus-g" className="blue-text" />
+            </CDBBtn>
+          </div>
+        </CDBCardBody>
+      </CDBCard>
+    </CDBContainer>
+  );
+};
+```
+
+## Autocomplete With the "getValue" Callback Prop
+
+A 'getValue' prop is also available in the Contrast React Bootstrap Autocomplete component. This property accepts a function that is called whenever the input value changes, i.e. on every `onChange` event.
+
+[IMAGE HERE](https://www.google.com/)
+
+```javascript
+import React from 'react';
+import { CDBAutocomplete } from 'cdbreact';
+
+export const Autocomplete = () => {
+  const suggestions = ['Football', 'Basketball', 'Baseball', 'Sprint', 'Wrestling'];
+
+  const useValue = value => {
+    alert(value);
+  };
+
+  return <CDBAutocomplete suggestions={suggestions} label="Choose a sport" getValue={useValue} />;
+};
+```
+
+# Contrast React Bootstrap Autocomplete Props
+
+This section will broaden on the props available with the Contrast React Bootstrap Autocomplete component. You'll learn what these props do, how to use them, and what their default values are.
+
+The table below lists other prop options of the `CDBAutocomplete` component.
+
+| Name        |   Type   |     Default |              Description              |                                              Example |
+| :---------- | :------: | ----------: | :-----------------------------------: | ---------------------------------------------------: |
+| suggestions |  Array   | empty array |        Suggestions to display         | <CDBAutocomplete suggestions={[item1, item2]} ... /> |
+| getValue    | function |             | Returns input value on onChange event |          <CDBAutocomplete getValue={logValue} ... /> |
+| label       |  String  |             |   Sets label for Autocomplete input   |   <CDBAutocomplete label="Select your country" .../> |

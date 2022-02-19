@@ -1,0 +1,204 @@
+---
+title: "Breadcrumb"
+metaTitle: "Breadcrumb Component for React Bootstrap"
+metaDescription: "React Bootstrap Breadcrumb shows where a user is on a website or in a Web application. It is a navigational tool that allows users to trace their journeys and keep track of where they are on the website."
+---
+
+import React from "react";
+import {Link} from "gatsby";
+
+FIX THIS
+
+# React Bootstrap Breadcrumb
+
+React Bootstrap Breadcrumb shows where a user is on a website or in a Web application. It is a navigational tool that allows users to trace their journeys and keep track of where they are on the website.
+
+
+## Importing the React Bootstrap Breadcrumb component
+
+
+You can start by importing 'CDBBreadcrumb' into your project to use the React Bootstrap Breadcrumb component. 
+
+
+```javascript
+import { CDBBreadcrumb } from "cdbreact";
+```
+
+## Default BreadCrumb
+
+See the following Bootstrap Breadcrumb examples
+  <div class="container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">Home</li>
+          <li class="breadcrumb-item">Library</li>
+          <li class="breadcrumb-item active" aria-current="page">Data</li>
+        </ol>
+    </nav>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">Home</li>
+          <li class="breadcrumb-item active" aria-current="page">Library</li>
+        </ol>
+    </nav>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item active">Home</li>
+        </ol>
+    </nav>
+  </div>
+
+```javascript
+import React from "react";
+import { CDBBreadcrumb, CDBContainer } from "cdbreact";
+
+export const Breadcrumb = () => {
+  return (
+    <CDBContainer>
+            <CDBBreadcrumb color="none">
+              <li className="breadcrumb-item" >Home</li>
+              <li className="breadcrumb-item">Library</li>
+              <li className="breadcrumb-item active">Data</li>
+            </CDBBreadcrumb>
+            <CDBBreadcrumb color="none">
+              <li className="breadcrumb-item">Home</li>
+              <li className="breadcrumb-item active">Library</li>
+            </CDBBreadcrumb>
+            <CDBBreadcrumb color="none">
+              <li className="breadcrumb-item active">Home</li>
+            </CDBBreadcrumb>
+    </CDBContainer>
+  );
+};
+```
+
+<i/>
+
+## Breadcrumb with Icons
+
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+
+We may nest icons in the React Bootstrap Breadcrumb component so that our breadcrumbs can have icons. To accomplish this, we append our 'CDBIcon' component to our 'CDBBreadcrumb' component.
+
+  <div class="container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb align-items-center">
+          <li class="breadcrumb-item">Home</li>
+          <i class="fa fa-angle-double-right mx-2"></i>
+          <li class="breadcrumb-item">Library</li>
+          <i class="fa fa-angle-double-right mx-2"></i>
+          <li class="breadcrumb-item active" aria-current="page">Data</li>
+        </ol>
+    </nav>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb align-items-center">
+          <li class="breadcrumb-item">Home</li>
+          <i class="fa fa-angle-double-right mx-2"></i>
+          <li class="breadcrumb-item active" aria-current="page">Library</li>
+        </ol>
+    </nav>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item active">Home</li>
+        </ol>
+    </nav>
+  </div>
+
+```javascript
+import React from "react";
+import { CDBBreadcrumb, CDBIcon, CDBContainer } from "cdbreact";
+
+export const Breadcrumb = () => {
+  return (
+    <CDBContainer>
+            <CDBBreadcrumb color="none" className="align-items-center">
+              <li className="breadcrumb-item" ><CDBLink className="p-0" to="#">Home</CDBLink></li>
+              <CDBIcon className="mx-2 text-muted" fas icon="angle-double-right"/>
+              <li className="breadcrumb-item"><CDBLink className="p-0" to="#">Library</CDBLink></li>
+              <CDBIcon className="mx-2 text-muted" fas icon="angle-double-right"/>
+              <li className="breadcrumb-item active">Data</li>
+            </CDBBreadcrumb>
+            <CDBBreadcrumb color="none" className="align-items-center">
+              <li className="breadcrumb-item"><CDBLink className="p-0" to="#">Home</CDBLink></li>
+              <CDBIcon className="mx-2 text-muted" fas icon="angle-double-right"/>
+              <li className="breadcrumb-item active">Library</li>
+            </CDBBreadcrumb>
+            <CDBBreadcrumb color="none">
+              <li className="breadcrumb-item active">Home</li>
+            </CDBBreadcrumb>
+    </CDBContainer>
+  );
+};
+```
+
+<i/>
+
+## Breadcrumb with colors
+
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+
+  This React Bootstrap Breadcrumb is a pro component with colors. You can use any color to build this breadcrumbs. you can check out the ones we have below.
+
+  <div class="container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb align-items-center bg-dark">
+          <li class="breadcrumb-item text-white">Home</li>
+          <i class="fa fa-angle-double-right mx-2"></i>
+          <li class="breadcrumb-item text-white">Library</li>
+          <i class="fa fa-angle-double-right mx-2"></i>
+          <li class="breadcrumb-item text-white active" aria-current="page">Data</li>
+        </ol>
+    </nav>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb align-items-center bg-primary">
+          <li class="breadcrumb-item text-white">Home</li>
+          <i class="fa fa-angle-double-right mx-2"></i>
+          <li class="breadcrumb-item text-white active" aria-current="page">Library</li>
+        </ol>
+    </nav>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-info">
+          <li class="breadcrumb-item text-white active">Home</li>
+        </ol>
+    </nav>
+  </div>
+
+```javascript
+import React from "react";
+import { CDBBreadcrumb, CDBIcon, CDBContainer } from "cdbreact";
+
+export const Breadcrumb = () => {
+  return (
+    <CDBContainer>
+            <CDBBreadcrumb color="dark" className="align-items-center text-white">
+              <li className="breadcrumb-item" ><CDBLink className="p-0 text-white" to="#">Home</CDBLink></li>
+              <CDBIcon className="mx-2 text-muted" fas icon="angle-double-right"/>
+              <li className="breadcrumb-item"><CDBLink className="p-0 text-white" to="#">Library</CDBLink></li>
+              <CDBIcon className="mx-2 text-muted" fas icon="angle-double-right"/>
+              <li className="breadcrumb-item">Data</li>
+            </CDBBreadcrumb>
+            <CDBBreadcrumb className="align-items-center">
+              <li className="breadcrumb-item"><CDBLink className="p-0 text-white" to="#">Home</CDBLink></li>
+              <CDBIcon className="mx-2 text-muted" fas icon="angle-double-right"/>
+              <li className="breadcrumb-item">Library</li>
+            </CDBBreadcrumb>
+            <CDBBreadcrumb color="info">
+              <li className="breadcrumb-item">Home</li>
+            </CDBBreadcrumb>
+    </CDBContainer>
+  );
+};
+```
+
+## API Reference: Contrast React Bootstrap Breadcrumb Props
+
+The props you get to use with the Contrast React Bootstrap Breadcrumb component will be expanded on in this section. You'll learn what these props are for, how to utilize them in your code, and what their default values are.
+
+Other CDBBreadcrumb component props are included in the table below.
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       | Adds custom classes             |Adds custom classes	      |     <CDBBreadcrumb className="myClass" ... />  |
+| color          | String       | primary      | Determines breadcrumb background color, accepts CDB predefined color classes: `primary` `secondary` `success` `danger` `warning` `info` `light` `dark` | <CDBBreadcrumb color="primary" ... />  |
+| light          | Boolean      | false        | Sets font color to white | <CDBBreadcrumb color="dark" light .../>  |
+| uppercase      | Boolean      | false        | Transforms breadcrumbs text to uppercase   | <CDBBreadcrumb color="secondary" uppercase .../>  |

@@ -1,0 +1,280 @@
+---
+title: "Box"
+metaTitle: "Box Component for React Bootstrap"
+metaDescription: "React Bootstrap boxes are layout components that assist in the development of CSS utility components."
+---
+## FIX THIS
+
+
+# React Bootstrap Box
+
+React Bootstrap boxes are layout components that assist in the development of CSS utility components.
+
+Depending on the value of the 'tag' prop, the React Bootstrap Box component can become any element from 'React.ElementType' such as 'div','span', 'image', 'video', and so on. A 'div' element is the default.
+  
+  <div class="container">
+    <span>Span</span>
+    <div>Div</div>
+    <p>Paragraph</p>
+    <section>Section</section>
+  </div>
+
+## Importing the React Bootstrap Box component
+
+You begin by importing 'CDBBox' into your project to use the React Bootstrap Box component.
+
+```javascript
+import { CDBBox } from "cdbreact";
+```
+
+The 'tag' prop accepts a value that represents the HTML element that the 'CDBBox' component is trying to replicate.
+
+```javascript
+import React from "react";
+import { CDBBox, CDBContainer } from "cdbreact";
+
+export const Box = () => {
+  return (
+    <CDBContainer>
+            <CDBBox tag="span">
+              Span
+            </CDBBox>
+            <CDBBox tag="div">
+              Div
+            </CDBBox>
+            <CDBBox tag="p">
+              Paragraph
+            </CDBBox>
+            <CDBBox tag="section">
+              Section
+            </CDBBox>
+    </CDBContainer>
+  );
+};
+```
+## Display
+
+You can use any display CSS style from Bootstrap 4 to the 'CDBox' component with the React Bootstrap component, such as 'd-none', 'd-flex', and so on.
+
+<div class="container">
+  <div class="d-flex">Display FLex</div>
+  <div class="d-block">Display Block</div>
+  <div class="d-inline">Display Inline</div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBBox, CDBContainer } from "cdbreact";
+
+export const Box = () => {
+  return (
+    <CDBContainer>
+            <CDBBox display="flex">
+              Display Flex
+            </CDBBox>
+            <CDBBox display="block">
+              Display Block
+            </CDBBox>
+            <CDBBox display="none">
+              Dislpay None
+            </CDBBox>
+            <CDBBox display="inline">
+              Display Inline
+            </CDBBox>
+    </CDBContainer>
+  );
+};
+```
+
+## Flex
+
+With React Bootstrap, we can apply CSS flexbox styles. To accomplish this, we adjust the 'display' prop on the 'CDBBox' component.
+
+Just like in ordinary CSS Flex, we can utilize props like 'justifyContent', 'flex', 'alignItems', 'alignContent', and 'alignSelf'.
+
+
+
+   <div class="container">
+     <div class="d-flex justify-content-center">
+        Justify Content Center
+      </div>
+      <div class="d-flex justify-content-end">
+        Justify Content End
+      </div>
+      <div class="d-flex flex-column">
+        <p>Column</p>
+        <p>Column</p>
+        <p>Column</p>
+      </div>
+      <div class="d-flex" flex="row">
+        <p>Row</p>
+        <p>Row</p>
+        <p>Row</p>
+      </div>
+      <div>
+        <div class="d-flex flex-fill">
+          <div as="p">Fill</div>
+        </div>
+        <div class="d-flex flex-row align-items-start">
+          Align Items Start
+        </div>
+        <div class="d-flex flex-row align-items-center">
+          Align Items Center
+        </div>
+        <div class="d-flex align-content-start">
+          Align Content Start
+        </div>
+        <div class="d-flex align-content-center">
+          Align Content Center
+        </div>
+        <div class="d-flex align-self-start">
+          Align Self Start
+        </div>
+        <div class="d-flex align-self-center">
+          Align Self Center
+        </div>
+      </div>
+    </div>
+
+```javascript
+import React from "react";
+import { CDBBox, CDBContainer } from "cdbreact";
+
+export const Box = () => {
+  return (
+    <CDBContainer>
+            <CDBBox display="flex" justifyContent="center">
+              Justify Content Center
+            </CDBBox>
+            <CDBBox display="flex" justifyContent="end">
+              Justify Content End
+            </CDBBox>
+            <CDBBox display="flex" flex="column">
+              <CDBBox tag="p">Column</CDBBox>
+              <CDBBox tag="p">Column</CDBBox>
+              <CDBBox tag="p">Column</CDBBox>
+            </CDBBox>
+            <CDBBox display="flex" flex="row">
+              <CDBBox tag="p">Row</CDBBox>
+              <CDBBox tag="p">Row</CDBBox>
+              <CDBBox tag="p">Row</CDBBox>
+            </CDBBox>
+            <CDBBox display="none">
+              <CDBBox display="flex" flex="fill">
+                <CDBBox tag="p">Fill</CDBBox>
+              </CDBBox>
+              <CDBBox display="flex" flex="row" alignItems="start">
+                Align Items Start
+              </CDBBox>
+              <CDBBox display="flex" flex="row" alignItems="center">
+                Align Items Center
+              </CDBBox>
+              <CDBBox display="flex" alignContent="start">
+                Align Content Start
+              </CDBBox>
+              <CDBBox display="flex" alignContent="center">
+                Align Content Center
+              </CDBBox>
+              <CDBBox display="flex" alignSelf="start">
+                Align Self Start
+              </CDBBox>
+              <CDBBox display="flex" alignSelf="center">
+                Align Self Center
+              </CDBBox>
+            </CDBBox>
+    </CDBContainer>
+  );
+};
+```
+
+## Colors
+
+To give your CDBBox component text colors, use the 'color' prop. The code displayed below will enable you give your text colors of your choice.
+
+  <div class="container">
+    <div class="text-danger">Red Color</div>
+    <div class="text-success">Green Color</div>
+    <div class="text-warning">Yellow Color</div>
+    <div class="text-primary">Blue Color</div>
+  </div>
+
+```javascript
+import React from "react";
+import { CDBBox, CDBContainer } from "cdbreact";
+
+export const Box = () => {
+  return (
+    <CDBContainer>
+            <CDBBox color="red">
+              Red Color
+            </CDBBox>
+            <CDBBox color="green">
+              Green Color
+            </CDBBox>
+            <CDBBox color="yellow">
+              Pink Color
+            </CDBBox>
+            <CDBBox color="blue">
+              Blue Color
+            </CDBBox>
+    </CDBContainer>
+  );
+};
+```
+## Background Colors
+
+To give the 'CDBBox' component a background color, use the 'bg' prop. The code below will allow you to add the background color for your project.
+
+
+  <div class="container">
+    <div class="bg-success">Success Background</div>
+    <div class="bg-secondary">Secondary Background</div>
+    <div class="bg-danger">Danger Background</div>
+    <div class="bg-warning">Warning Background</div>
+  </div>
+
+```javascript
+import React from "react";
+import { CDBBox, CDBContainer } from "cdbreact";
+
+export const Box = () => {
+  return (
+    <CDBContainer>
+            <CDBBox bg="success">
+              Success Background
+            </CDBBox>
+            <CDBBox bg="secondary">
+              Secondary Background
+            </CDBBox>
+            <CDBBox bg="danger">
+              Danger Background
+            </CDBBox>
+            <CDBBox bg="warning">
+              Warning Background
+            </CDBBox>
+    </CDBContainer>
+  );
+};
+```
+
+
+## API Reference: Contrast React Bootstrap Box Props
+
+The props you get to use with the Contrast React Bootstrap Box component will be elaborated upon in this section. You'll learn what these props do, how to utilize them in your code, and what their default values are.
+
+
+Other CDBBox component prop options are included in the table below.
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       | Adds custom classes             |Adds custom classes	      |     <CDBBox className="myClass" ... />  |
+| color          | String       |              | Change color of text in the CDBox component. Choose one of these from CDB: `red`, `pink`, `purple`, `deep-purple`, `indigo`, `blue`, `light-blue`, `cyan`, `teal`, `green`, `light-green`, `yellow`, `amber`, `orange`, `deep-orange`, `brown`, `grey`, `blue-grey`, `cdb-color white`. You can also chose default colors from Bootstrap like: `primary`, `secondary`, `success`, `info`, `default,` `warning`, `danger`, `dark`, `muted`, `light`.  | <CDBBox color="pink" ... />  |
+| alignContent   | String       |              | Set align-content class to children of CDBox. Choose one of these: `start`, `end`, `center`, `between`, `stretch`, `around`.  | <CDBBox alignContent="start" .../>  |
+| alignItems     | String       |              | Set align-items class to children of CDBox. Choose one of these: `start`, `end`, `center`, `between`, `stretch`.    | <CDBBox alignItems="start" .../>  |
+| alignSelf      | String       |              | Set align-self class to children of CDBox. Choose one of these: `start`, `end`, `center`, `between`, `stretch`.    | <CDBBox alignSelf="start" .../>  |
+| bgColor        | String       |              | Sets background color of the box component. Choose one of these: `primary`, `secondary`, `success`, `danger`, `warning`, `info`, `light`, `dark`  | <CDBBox bgColor="light" .../>  |
+| display        | String       |              | Set display to element. Choose one of these: `none`, `inline`, `inline-block`, `block`, `table`, `table-row`, `table-cell`, `flex`, `inline-flex`.    | <CDBBox display="inline" ...> |
+| flex           | String       |              | Set flex class to children of CDBox. Choose one of these: `row`, `column`, `row-reverse`, `column-reverse`, `wrap`, `nowrap`, `wrap-reverse`, `fill`, `grow-0`, `grow-0`, `shrink-0`, `shrink-1`, `center`.      | <CDBBox flex="column" .../>  |
+| justifyContent | String       |              | Set justify-content to children od CDBox. Choose one of these: `start`, `end`, `center`, `between`, `around`.     | <CDBBox justifyContent="start" ...> |
+| m              | String or Number|              | With margin you can set margin top/bottom/right/left/x/y from 0 to 5. You can use string or number.      | <CDBox m="5" .../>, <CDBox mt="1" .../>, <CDBox mb="4" .../>, <CDBox my={2} .../>, <CDBox mx={4} .../> |
+| p              | String or Number|              | With padding you can set padding top/bottom/right/left/x/y from 0 to 5. You can use string or number.      | <CDBox p="5" .../>, <CDBox pt="1" .../>, <CDBox pb="4" .../>, <CDBox py={2} .../>, <CDBox px={4} .../> |

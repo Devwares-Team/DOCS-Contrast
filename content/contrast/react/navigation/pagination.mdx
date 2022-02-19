@@ -1,0 +1,283 @@
+---
+title: "Pagination"
+metaTitle: "Pagination Component for React Bootstrap"
+metaDescription: "Building a Pagination Component using React Bootstrap"
+
+---
+
+import React from "react";
+
+# React Bootstrap Pagination
+
+React Bootstrap Pagination is a component used to indicate a series of related content across multiple pages and enables navigation across them.
+
+We use a large block of connected links for our pagination, making links hard to miss and easily scalable while providing large hit areas. Pagination is built with a list of HTML elements so screen readers can announce the number of available links. We use a wrapping `<nav>` element to identify it as a navigation section to screen readers and other assistive technologies.
+
+
+## Importing the React Bootstrap Pagination Component
+
+To use the Contrast React Bootstrap Pagination component, you import `CDBPagination` into your project. 
+
+```js
+import { CDBPagination } from "cdbreact";
+```
+
+Alongside the `CDBPagination` component, we also import the `CDBPageItem`, representing an item in the `CDBPagination` component. Next, we imported the `CDBPageLink` component, this component acts as a link.
+
+```js
+import { CDBPagination, CDBPageLink, CDBPageItem, CDBContainer } from "cdbreact";
+```
+
+## Default Pagination 
+
+<div class="container">
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item">
+        <span class="page-link page-link-round" href="#">Prev</span>
+      </li>
+      <li class="page-item">
+        <span class="page-link page-link-round" href="#">1</span>
+      </li>
+      <li class="page-item">
+        <span class="page-link page-link-round" href="#">2</span>
+      </li>
+      <li class="page-item">
+        <span class="page-link page-link-round" href="#">3</span>
+      </li>
+      <li class="page-item">
+        <span class="page-link page-link-round" href="#">Next</span>
+      </li>
+    </ul>
+  </nav>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item">
+        <span class="page-link page-link-round text-white bg-success" href="#">Prev</span>
+      </li>
+      <li class="page-item">
+        <span class="page-link page-link-round text-white bg-success" href="#">1</span>
+      </li>
+      <li class="page-item">
+        <span class="page-link page-link-round text-white bg-success" href="#">2</span>
+      </li>
+      <li class="page-item">
+        <span class="page-link page-link-round text-white bg-success" href="#">3</span>
+      </li>
+      <li class="page-item">
+        <span class="page-link page-link-round text-white bg-success" href="#">Next</span>
+      </li>
+    </ul>
+  </nav>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination pagination-secondary">
+      <li class="page-item">
+        <span class="page-link text-white bg-secondary" href="#">Prev</span>
+      </li>
+      <li class="page-item">
+        <span class="page-link text-white bg-secondary" href="#">1</span>
+      </li>
+      <li class="page-item">
+        <span class="page-link text-white bg-secondary" href="#">2</span>
+      </li>
+      <li class="page-item">
+        <span class="page-link text-white bg-secondary" href="#">3</span>
+      </li>
+      <li class="page-item"><span class="page-link text-white bg-secondary" href="#">Next</span></li>
+    </ul>
+  </nav>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination pagination-sm">
+      <li class="page-item">
+        <span class="page-link text-dark bg-warning" href="#">Prev</span>
+      </li>
+      <li class="page-item">
+        <span class="page-link text-dark bg-warning" href="#">1</span>
+      </li>
+      <li class="page-item">
+        <span class="page-link text-dark bg-warning" href="#">2</span>
+      </li>
+      <li class="page-item">
+        <span class="page-link text-dark bg-warning" href="#">3</span>
+      </li>
+      <li class="page-item"><span class="page-link text-dark bg-warning" href="#">Next</span></li>
+    </ul>
+  </nav>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination pagination-sm">
+      <li class="page-item">
+        <span class="page-link text-dark bg-white" href="#">Prev</span>
+      </li>
+      <li class="page-item">
+        <span class="page-link text-dark bg-white" href="#">1</span>
+      </li>
+      <li class="page-item">
+        <span class="page-link text-dark bg-white" href="#">2</span>
+      </li>
+      <li class="page-item">
+        <span class="page-link text-dark bg-white" href="#">3</span>
+      </li>
+      <li class="page-item"><span class="page-link text-dark bg-white" href="#">Next</span></li>
+    </ul>
+  </nav>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item">
+        <span class="page-link text-dark bg-light" href="#">Prev</span>
+      </li>
+      <li class="page-item">
+        <span class="page-link text-dark bg-light" href="#">1</span>
+      </li>
+      <li class="page-item">
+        <span class="page-link text-dark bg-light" href="#">2</span>
+      </li>
+      <li class="page-item">
+        <span class="page-link text-dark bg-light" href="#">3</span>
+      </li>
+      <li class="page-item"><span class="page-link text-dark bg-light" href="#">Next</span></li>
+    </ul>
+  </nav>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item">
+        <span class="page-link text-white bg-danger" href="#">Prev</span>
+      </li>
+      <li class="page-item">
+        <span class="page-link text-white bg-danger" href="#">1</span>
+      </li>
+      <li class="page-item">
+        <span class="page-link text-white bg-danger" href="#">2</span>
+      </li>
+      <li class="page-item">
+        <span class="page-link text-white bg-danger" href="#">3</span>
+      </li>
+      <li class="page-item"><span class="page-link text-white bg-danger" href="#">Next</span></li>
+    </ul>
+  </nav>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item">
+        <span class="page-link" href="#">Prev</span>
+      </li>
+      <li class="page-item">
+        <span class="page-link" href="#">1</span>
+      </li>
+      <li class="page-item">
+        <span class="page-link" href="#">2</span>
+      </li>
+      <li class="page-item">
+        <span class="page-link" href="#">3</span>
+      </li>
+      <li class="page-item"><span class="page-link" href="#">Next</span></li>
+    </ul>
+  </nav>
+</div>
+
+```js
+import React from "react";
+import { CDBPagination, CDBPageLink, CDBPageItem, CDBContainer } from "cdbreact";
+
+const Pagination = () => {
+  return (
+    <CDBContainer>
+        <CDBPagination circle>
+          <CDBPageLink>Prev</CDBPageLink>
+          <CDBPageItem>1</CDBPageItem>
+          <CDBPageItem>2</CDBPageItem>
+          <CDBPageItem>3</CDBPageItem>
+          <CDBPageLink>Next</CDBPageLink>
+        </CDBPagination>
+        <CDBPagination circle size="big" color="success">
+          <CDBPageLink>Prev</CDBPageLink>
+          <CDBPageItem>1</CDBPageItem>
+          <CDBPageItem>2</CDBPageItem>
+          <CDBPageItem>3</CDBPageItem>
+          <CDBPageLink>Next</CDBPageLink>
+        </CDBPagination>
+        <CDBPagination size="small" color="secondary">
+          <CDBPageLink>Prev</CDBPageLink>
+          <CDBPageItem>1</CDBPageItem>
+          <CDBPageItem>2</CDBPageItem>
+          <CDBPageItem>3</CDBPageItem>
+          <CDBPageLink>Next</CDBPageLink>
+        </CDBPagination>
+        <CDBPagination color="warning" sm>
+          <CDBPageLink>Prev</CDBPageLink>
+          <CDBPageItem>1</CDBPageItem>
+          <CDBPageItem>2</CDBPageItem>
+          <CDBPageItem>3</CDBPageItem>
+          <CDBPageLink>Next</CDBPageLink>
+        </CDBPagination>
+        <CDBPagination color="white" sm>
+          <CDBPageLink>Prev</CDBPageLink>
+          <CDBPageItem>1</CDBPageItem>
+          <CDBPageItem>2</CDBPageItem>
+          <CDBPageItem>3</CDBPageItem>
+          <CDBPageLink>Next</CDBPageLink>
+        </CDBPagination>
+        <CDBPagination color="light">
+          <CDBPageLink>Prev</CDBPageLink>
+          <CDBPageItem>1</CDBPageItem>
+          <CDBPageItem>2</CDBPageItem>
+          <CDBPageItem>3</CDBPageItem>
+          <CDBPageLink>Next</CDBPageLink>
+        </CDBPagination>
+        <CDBPagination color="danger">
+          <CDBPageLink>Prev</CDBPageLink>
+          <CDBPageItem>1</CDBPageItem>
+          <CDBPageItem>2</CDBPageItem>
+          <CDBPageItem>3</CDBPageItem>
+          <CDBPageLink>Next</CDBPageLink>
+        </CDBPagination>
+        <CDBPagination>
+          <CDBPageLink>Prev</CDBPageLink>
+          <CDBPageItem>1</CDBPageItem>
+          <CDBPageItem>2</CDBPageItem>
+          <CDBPageItem>3</CDBPageItem>
+          <CDBPageLink>Next</CDBPageLink>
+        </CDBPagination>
+    </CDBContainer>
+  );
+};
+export default  Pagination;
+```
+
+
+## API Reference: Contrast React Bootstrap Pagination Props
+
+This section will build on your information about the props you get to use with the Contrast React Bootstrap Pagination component. You will find out what these props do, their default values, and how you would use them in your code.
+
+The table below lists other prop options of the `CDBPagination` component.
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       | Adds custom classes             |Adds custom classes	      |     <CDBPagination className="myClass" ... />  |
+| tag            | String       | ul          | Changes default pagination tag | <CDBPagination tag="ol" ... />  |
+| size            | String       |           | Changes size of pagination component. Choose from `lg` and `sm` | <CDBPagination size="sm" ... />  |
+| sm        | Boolean      | false        | Changes the size of pagination component to `sm` | <CDBPagination sm .../>  |
+| circle        | Boolean      | false        | Changes the shape of pagination component to circular | <CDBPagination circle .../>  |
+| color            | String       | dark          |  	Changes default pagination buttons color; available values: `[blue, red, teal, dark-grey, dark, blue-grey, amber, purple]` | <CDBPagination color="red" ... />  |
+
+
+## API Reference: Contrast React Bootstrap Pagination Item Props
+
+The table below lists other prop options of the `CDBPageItem` component.
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       |              |Adds custom classes	      |     <CDBPageItem className="myClass" ... />  |
+| tag            | String       | li         | Changes default pagination tag | <CDBPageItem tag="li" ... />  |
+| disable        | Boolean      | false        | Disables item from being clicked | <CDBPageItem disabled .../>  |
+| active        | Boolean      | false        | Sets active state of the button | <CDBPageItem active .../>  |
+
+
+## API Reference: Contrast React Bootstrap Pagination Link Props
+
+The table below lists other prop options of the `CDBPageLink` component.
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       |              |Adds custom classes	      |     <CDBPageLink className="myClass" ... />  |
+| tag            | String       | li         | Changes default pagination tag | <CDBPageLink tag="li" ... />  |
+| disable        | Boolean      | false        | Disables item from being clicked | <CDBPageLink disabled .../>  |
+| active        | Boolean      | false        | Sets active state of the button | <CDBPageLink active .../>  |

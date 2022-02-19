@@ -1,0 +1,192 @@
+---
+title: "Alert"
+metaTitle: "React Alert Component - Bootstrap React"
+metaDescription: "React Bootstrap Alerts - React Bootstrap Alerts built with the latest Bootstrap 5 monitor the webpages and provide useful feedbacks. "
+---
+
+import React from "react";
+
+# React Bootstrap Alerts
+
+React Bootstrap Alerts keep track of any changes that happen on the website and provide feedbacks messages to users after specific actions are carried out. 
+
+With React Bootstrap Alerts we call users attention to certain things as alerts are usually top and center of a webpage, making them a hard to miss, they are really easy to create and even easier with the React Bootstrap library, Contrast.
+
+## Importing the Contrast Alert Component
+
+Contrast Alerts are available for any length of text, as well as an optional dismiss button. 
+
+To use the Contrast Alerts in your project, we start by importing the `CDBAlert` component in your project.
+
+```javascript
+import { CDBAlert } from "cdbreact";
+
+```
+
+## Default Alerts
+
+We create alerts with the Contrast library by wrapping the content we want to alert our users with the `CDBAlert` component. To define the background color of our alert, we set the `color` prop on the `CDBAlert` component to the color code we want our alert to have (e.g. primary, secondary, success etc.)
+
+
+
+  <div
+    class="alert alert-primary"
+    style="width: 100%;"
+    role="alert"
+  >
+    A straightforward alert with a React Boostrap (contrast)design. Take a look!
+  </div>
+  <div
+    class="alert alert-secondary"
+    style="width: 100%"
+    role="alert"
+  >
+    A straightforward alert with a React Boostrap (contrast)design. Take a look!
+  </div>
+  <div
+    class="alert alert-success"
+    style="width: 100%"
+    role="alert"
+  >
+   A straightforward alert with a React Boostrap (contrast)design. Take a look!
+  </div>
+  <div
+    class="alert alert-danger"
+    style="width: 100%"
+    role="alert"
+  >
+     A straightforward alert with a React Boostrap (contrast)design. Take a look!
+  </div>
+  <div
+    class="alert alert-warning"
+    style="width: 100%"
+    role="alert"
+  >
+     A straightforward alert with a React Boostrap (contrast)design. Take a look!
+  </div>
+  <div class="alert alert-info" style="width: 100%" role="alert">
+     A straightforward alert with a React Boostrap (contrast)design. Take a look!
+  </div>
+
+  <div class="alert alert-dark" style="width: 100%" role="alert">
+     A straightforward alert with a React Boostrap (contrast)design. Take a look!
+  </div>
+
+```javascript
+import React from "react";
+import { CDBAlert, CDBContainer } from "cdbreact";
+
+const Alert = () => {
+  return (
+    <CDBContainer>
+        <CDBAlert color="primary">
+           A straightforward alert with a React Boostrap (contrast)design. Take a look!
+        </CDBAlert>
+        <CDBAlert color="secondary">
+           A straightforward alert with a React Boostrap (contrast)design. Take a look!
+        </CDBAlert>
+        <CDBAlert color="success">
+           A straightforward alert with a React Boostrap (contrast)design. Take a look!
+        </CDBAlert>
+        <CDBAlert color="danger">
+           A straightforward alert with a React Boostrap (contrast)design. Take a look!
+        </CDBAlert>
+        <CDBAlert color="warning">
+           A straightforward alert with a React Boostrap (contrast)design. Take a look!
+        </CDBAlert>
+        <CDBAlert color="dark">
+           A straightforward alert with a React Boostrap (contrast)design. Take a look!
+        </CDBAlert>
+    </CDBContainer>
+  );
+};
+
+export default Alert;
+```
+
+## Additional Content
+
+Sometimes we want our webpages to pop and add more context to the text or message we want our alert to convey, we can do all of that with the React Bootstrap alerts Contrast gives us.
+
+Our alerts can also contain additional HTML elements like headings, paragraphs and dividers.
+
+
+  <div
+    class="alert alert-primary"
+    style="width: 100%;"
+    role="alert"
+  >
+    <h4 class="alert-heading">Well done!</h4>
+    <p>You did, indeed, read this important alert message. This example text will be a little longer so you can see how spacing within an alert works with this type of content.</p>
+    <hr></hr>
+    <p class="mb-0">Use margin utilities whenever possible to keep things neat and tidy.</p>
+  </div>
+
+
+```javascript
+import React from "react";
+import { CDBAlert, CDBContainer } from "cdbreact";
+
+const Alert = () => {
+  return (
+    <CDBContainer>
+        <CDBAlert color="primary">
+            <h4 class="alert-heading">Well done!</h4>
+            <p>You did, indeed, read this important alert message. This example text will be a little longer so you can see how spacing within an alert works with this type of content</p>
+            <hr/>
+            <p class="mb-0">Use margin utilities whenever possible to keep things neat and tidy</p>
+        </CDBAlert>
+    </CDBContainer>
+  );
+};
+
+export default Alert;
+```
+
+## Dismissing
+
+Using the Contrast React Alert component, you can dismiss any alert inline by adding the `dismiss` prop Below is a live action demo.
+
+<div>
+    <div
+      class="alert alert-danger alert-dismissible fade show"
+      role="alert"
+    >
+      <strong>Holy guacamole!</strong> You should check in on some of the fields listed below.
+      <button
+        type="button"
+        class="btn-close"
+        data-dismiss="alert"
+        aria-label="Close"
+      ></button>
+    </div>
+  </div>
+
+```javascript
+import React from "react";
+import { CDBAlert, CDBContainer } from "cdbreact";
+
+const Alert = () => {
+  return (
+    <CDBContainer>
+      <CDBAlert color="danger" dismiss>
+        <strong>Holy guacamole!</strong> You should check in on some of the fields listed below.
+      </CDBAlert>
+    </CDBContainer>
+  );
+};
+
+export default Alert;
+```
+# Contrast React Bootstrap Alert Props
+
+This section will expand on your knowledge of the props available with the Contrast React Bootstrap Alert component. You'll learn what these props do, what their default values are, and how to use them in your code.
+
+Other prop options for the React Bootstrap Contrast Alert component are listed in the table below.
+
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+|  className     | String       | Adds custom classes             |Adds custom classes	      |     <CDBAlert className="myClass" ... />  |
+| color          | String       | primary      | Sets color of the alert. Choose one of the following: 'primary,"secondary,"success,' 'danger,' 'warning,' 'info,' 'light,' 'dark' | <CDBAlert color="primary" ... />  |
+

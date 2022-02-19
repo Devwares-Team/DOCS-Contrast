@@ -1,0 +1,286 @@
+---
+title: "Select 2"
+metaTitle: "Select Component for React Bootstrap"
+metaDescription: "The React Bootstrap Select component is the pro version of the React Bootstrap `Select2` component,"
+
+---
+
+import React from "react";
+import {Link} from "gatsby";
+import select2a from "./images/select1.png";
+import select2b from "./images/select2.png";
+import select2c from "./images/select3.png";
+import select2d from "./images/select4.png";
+
+# React Bootstrap Select 2
+
+The React Bootstrap Select component is the pro version of the React Bootstrap `Select2` component,, [CDBSelect](https://www.devwares.com/docs/contrast/react/components/select). For your select button, there are several predefined styles. To use in your project, get the CDB pro version.
+
+
+## Importing the Contrast Select2 Component
+
+Import 'CDBSelect2' into your app to use the Contrast React Bootstrap Rating component.
+
+```javascript
+import { CDBSelect2 } from "cdbreact";
+```
+
+<i/>
+
+## Select Button
+
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+
+<div>
+  <img src={select2a} alt="Contrast React Bootstrap Default Select2 button" />
+</div>
+
+```javascript
+import React from "react";
+import { CDBSelect2, CDBContainer } from "cdbreact";
+
+export const Select = () => {
+  const [option] = useState([
+    {
+      text: "Select Option",
+      icon:"stack-overflow",
+    },
+    {
+      text: "Another Option",
+      icon:"reddit",
+    },
+    {
+      text: "Option 3",
+      icon:"instagram",
+    },
+    {
+      text: "Option 4",
+    },
+    {
+      text: "Last Option",
+    },
+  ]);
+  return (
+    <CDBContainer>
+            <CDBSelect2 options={option} iconBrand selected="Choose an option" color="white"/>
+    </CDBContainer>
+  );
+};
+```
+<i/>
+
+## Disabled Select Button
+
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+
+
+
+To make the select button inactive, use the `disabled` prop.
+
+<img src={select2b} alt="Contrast React Bootstrap Disabled Select2 Button" />
+
+```javascript
+import React from "react";
+import { CDBSelect2, CDBContainer } from "cdbreact";
+
+export const Select = () => {
+  const [option] = useState([
+    {
+      text: "Select Option",
+      icon:"stack-overflow",
+    },
+    {
+      text: "Another Option",
+      icon:"reddit",
+    },
+    {
+      text: "Option 3",
+      icon:"instagram",
+    },
+    {
+      text: "Option 4",
+    },
+    {
+      text: "Last Option",
+    },
+  ]);
+  return (
+    <CDBContainer>
+          <CDBSelect2 options={option} iconBrand selected="Choose an option" disabled color="none" />
+    </CDBContainer>
+  );
+};
+```
+<i/>
+
+## Colored Select Button
+
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+
+You can change the background color of the select button with the 'color' prop.
+
+<img src={select2c} alt="Contrast React Bootstrap Colored Select2 Button" />
+
+
+```javascript
+import React from "react";
+import { CDBSelect2, CDBContainer } from "cdbreact";
+
+export const Select = () => {
+  const [option] = useState([
+    {
+      text: "Select Option",
+      icon:"stack-overflow",
+    },
+    {
+      text: "Another Option",
+      icon:"reddit",
+    },
+    {
+      text: "Option 3",
+      icon:"instagram",
+    },
+    {
+      text: "Option 4",
+    },
+    {
+      text: "Last Option",
+    },
+  ]);
+  return (
+    <CDBContainer>
+            <CDBSelect2 options={option} iconBrand selected="Choose an option" color="primary" />
+            <CDBSelect2 options={option} iconBrand selected="Choose an option" color="secondary" />
+            <CDBSelect2 options={option} iconBrand selected="Choose an option" color="success" />
+            <CDBSelect2 options={option} iconBrand selected="Choose an option" color="warning" />
+            <CDBSelect2 options={option} iconBrand selected="Choose an option" color="dark" />
+    </CDBContainer>
+  );
+};
+```
+<i/>
+
+
+## Colored Buttons with Hover Color
+
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+
+The `hoverColor` component adds a hover effect to your selected options.
+
+<img src={select2d} alt="Contrast React Bootstrap Colored Select2 Buttons with Hover" />
+
+
+```javascript
+import React from "react";
+import { CDBSelect2, CDBContainer } from "cdbreact";
+
+export const Select = () => {
+  const [option] = useState([
+    {
+      text: "Select Option",
+      icon:"stack-overflow",
+    },
+    {
+      text: "Another Option",
+      icon:"reddit",
+    },
+    {
+      text: "Option 3",
+      icon:"instagram",
+    },
+    {
+      text: "Option 4",
+    },
+    {
+      text: "Last Option",
+    },
+  ]);
+  return (
+    <CDBContainer>
+            <CDBSelect2 options={option} iconBrand selected="Choose an option" hoverColor color="danger" />
+    </CDBContainer>
+  );
+};
+```
+<i/>
+
+## CDBSelect
+
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+
+<div>
+  <select class="select px-2 w-50">
+    <option>Options</option>
+    <option>
+      Select Option
+    </option>
+    <option>
+      Another Option
+    </option>
+    <option>
+      Option 3
+    </option>
+    <option>
+      Option 4
+    </option>
+    <option>
+      Last Option
+    </option>
+  </select>
+</div>
+
+```javascript
+import React from "react";
+import { CDBSelect, CDBContainer } from "cdbreact";
+
+export const Select = () => {
+  const option = useState([
+    {
+      text: "Select Option",
+      icon:"stack-overflow",
+    },
+    {
+      text: "Another Option",
+      icon:"reddit",
+    },
+    {
+      text: "Option 3",
+      icon:"instagram",
+    },
+    {
+      text: "Option 4",
+    },
+    {
+      text: "Last Option",
+    },
+  ]);
+  return (
+    <CDBContainer>
+            <CDBSelect selected="Options" options={option}/>
+    </CDBContainer>
+  );
+};
+```
+
+## API Reference: Contrast React Bootstrap Select2 Props
+
+
+The props you get to use with the Contrast React Bootstrap Select2 component will be elaborated on in this section. You'll understand what these props are for, how to use them in your code, and what their default values are.
+
+Other 'CDBSelect2' prop options are listed below in the table
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       |              |Adds custom classes	      |     <CDBSelect2 className="myClass" ... />  |
+| tag            | String       | div          | Changes default tag | <CDBSelect2 tag="div" ... />  |
+| disable        | Boolean      | false        | If `true` - the option wont be clickable. | <CDBSelect2 disabled .../>  |
+| color          | String       |              |  	Sets colorful hover effect on select options. | <CDBSelect2 color="primary" ... />  |
+| iconSize       | String       |              | Sets size of icon brand in select option | <CDBSelect2 iconSize="20px" ... />  |
+| iconBrand      | Boolean      | false        | adds icon to the select option | <CDBSelect2 iconBrand .../>  |
+| iconLight      | Boolean      | false        | Sets the icon light | <CDBSelect2 iconLight .../>  |
+| iconRegular    | Boolean      | false        | Sets the icon regular | <CDBSelect2 iconRegular .../> |  |
+| iconClass      | String       |              | Adds custom class to icon | <CDBSelect2 iconClass="myClass" ... />  |
+| options        | Array of Objects |              | Sets options array as source of data. This property is used in alternative `Select` version. | <CDBSelect2 options={options}" ... />  |
+| hoverColor     | Boolean      | false        | Sets hover effect on select options.| <CDBSelect2 hoverColor .../> |  |
+| selected       | String       |              | Set default select text content. | <CDBSelect2 selected="Choose one" ... />  |
+| optionClassName  | String       |              | Adds custom classes to options | <CDBSelect2 optionClassName="my-class" ... />  |

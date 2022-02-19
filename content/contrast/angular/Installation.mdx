@@ -1,0 +1,67 @@
+---
+title: "Installation"
+---
+
+Step by step guide on how to install `ng-cdbangular`
+
+## Install CDBAngular
+
+To install ng-cdbangular, in your command line type:
+
+```bash
+npm install --save ng-cdbangular
+```
+
+or
+
+```bash
+yarn add ng-cdbangular
+```
+
+## Usage
+
+Add bootstrap-css-only to angular.json
+```jsx
+"styles": [
+  "node_modules/bootstrap-css-only/css/bootstrap.min.css"
+]
+```
+
+Import preferred module in app.module.ts
+```jsx
+import { AlertModule } from 'ng-cdbangular';
+
+@NgModule({
+  imports: [
+    AlertModule
+  ]
+})
+```
+
+In app.component.html
+```jsx
+<CDBAlert color="success">
+  A simple alert built with contrast design check it out!
+</CDBAlert>
+<CDBAlert color="danger" [dismiss]=true>
+  A simple alert built with contrast design check it out!
+</CDBAlert>
+```
+
+You can also import all cdbangular modules this way
+```jsx
+import { CDBFreeModule } from 'ng-cdbangular';
+
+@NgModule({
+  imports: [
+    CDBFreeModule,
+  ]
+})
+```
+
+>***Run Your App:***
+
+`ng serve --o`
+
+
+

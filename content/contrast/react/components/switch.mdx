@@ -1,0 +1,55 @@
+---
+title: "Switch"
+metaTitle: "Switch Component for React Bootstrap"
+metaDescription: "A React Bootstrap switch is a simple component that allows a user to choose between two predefined alternatives. It can serves as a responsive switch, just like the on and off switch.
+"
+
+---
+
+import React from "react";
+import { Link } from "gatsby";
+import switch1 from "./images/switch.png";
+
+# React Bootstrap Switch
+
+A React Bootstrap switch is a simple component that allows a user to choose between two predefined alternatives. It can serves as a responsive switch, just like the on and off switch.
+
+## Importing the React Bootstrap Switch Component
+
+Import 'CDBSwitch' into your project to use the Contrast React Bootstrap Switch component.
+
+```javascript
+import { CDBSwitch } from "cdbreact";
+```
+
+## Switch 
+
+Change the initial setting of the switch to be on by using the 'checked' property.
+
+<img src={switch1} alt="Contrast React Bootstrap Switch" />
+
+
+```javascript
+import React from "react";
+import { CDBSwitch, CDBContainer } from "cdbreact";
+
+export const Switch = () => {
+  return (
+    <CDBContainer>
+        <CDBSwitch />
+        <CDBSwitch checked />
+    </CDBContainer>
+  );
+};
+```
+
+## API Reference: Contrast React Bootstrap Switch Props
+
+This section will expand on the props you'll be using with the Contrast React Bootstrap Switch component. You'll learn what these props do, how to utilize them, and what their default values are.
+
+Other `CDBSwitch` prop possibilities are included in the table below.`.
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| tag            | String       | div          | Changes default input tag | <CDBSwitch tag="div" ... />  |
+| checked        | Boolean      | false        | Sets the initial state of switch to ON | <CDBSwitch checked .../>  |

@@ -1,0 +1,59 @@
+---
+title: "TimePicker"
+metaTitle: "TimePicker Component for React Bootstrap"
+metaDescription: "Building a TimePicker Component using React Bootstrap"
+
+---
+
+import React from "react";
+import {Link} from "gatsby";
+import timepickerImg from "../components/images/timepicker.png";
+
+# React Bootstrap TimePicker
+
+React Bootstrap time picker is a component which uses a dialog to select a single time in `hours:minutes` format. The selected time is indicated by the filled circle at the end of the clock hand.
+
+## Importing the React Bootstrap TimePicker Component
+
+To use the Contrast React Bootstrap TimePicker component, you import `CDBTimePicker` into your project.
+
+```js
+import { CDBTimePicker } from "cdbreact";
+```
+
+<i/>
+
+## Default TimePicker
+
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+
+<img src={timepickerImg} width="300px" alt="Contrast React Bootstrap TimePicker"/>
+
+```js
+import React from "react";
+import { CDBTimePicker, CDBContainer } from "cdbreact";
+
+export const TimePicker = () => {
+  return (
+    <CDBContainer>
+        <CDBTimePicker placeholder="10:05 AM" theme="classic" colorPalette="dark" />
+    </CDBContainer>
+  );
+};
+```
+
+## API Reference: Contrast React Bootstrap TimePicker Props
+
+This section will build on your information about the props you get to use with the Contrast React Bootstrap TimePicker component. You will find out what these props do, their default values, and how you would use them in your code.
+
+The table below lists other prop options of the `CDBTimePicker` component.
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| placeholder    | String       |              | `Required!` Sets placeholder for time indicator input | <CDBTimePicker placeholder="placeholder" ... />  |
+| time           | String       |              | Sets the time | <CDBTimePicker time="09:30:30 AM" ... />  |
+| className      | String       | Adds custom classes             |Adds custom classes	      |     <CDBTimePicker className="myClass" ... />  |
+| theme          | String       |              | Sets the theme of the time picker. Can be either `material`, `classic` or `neomorphism` | <CDBTimePicker theme="classic" ... />  |
+| colorPalette   | String       | light        | Changes the color palette of the time picker. Can be either `light` or `dark` | <CDBTimePicker colorPalette="dark" ... />  |
+| tag            | String       | div          | Changes default input tag | <CDBCheckbox tag="input" ... />  |
+| disable        | Boolean      | false        | Disables TimePicker component | <CDBTimePicker disabled .../>  |

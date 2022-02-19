@@ -1,0 +1,142 @@
+---
+title: "Radio"
+metaTitle: "Radio Component for React Bootstrap"
+metaDescription: "Building a Radio Component using React Bootstrap"
+
+---
+
+import React from "react";
+import {Link} from "gatsby";
+
+# React Bootstrap Radio
+
+
+A React Bootstrap radio button is a component that lets a user to select one of several options from a list, whereas `Checkboxes` are used to pick multiple options.
+
+## Importing the React Bootstrap Radio Component
+
+You can Import `CDBRadio` into your project to use the Contrast React Bootstrap Radio component.
+
+
+```javascript
+import { CDBRadio} from "cdbreact";
+```
+
+<i/>
+
+## Radio Button
+
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+
+<div class="container">
+  <div class="custom-radio">
+      <input type="radio" id="customRadio5" name="customRadio2" class="custom-radio-input text-danger"/>
+      <label class="custom-control-label" for="customRadio5">Choice 1</label>
+  </div>
+  <div class="custom-radio">
+      <input type="radio" id="customRadio6" name="customRadio3" class="custom-radio-input text-success"/>
+      <label class="custom-control-label" for="customRadio6">Choice 2</label>
+  </div>
+  <div class="custom-radio">
+      <input type="radio" id="customRadio7" name="customRadi4" class="custom-radio-input text-dark"/>
+      <label class="custom-control-label" for="customRadio7">Choice 3</label>
+  </div>   
+</div>
+
+```javascript
+import React from "react";
+import { CDBRadio, CDBContainer } from "cdbreact";
+
+export const Radio = () => {
+  return (
+    <CDBContainer>
+          <CDBRadio
+            value="Choice 1"
+            fill="#eb7434"
+            colorfill="#eb7434"
+          />
+          <CDBRadio value="Choice 2" fill="green" colorfill="red"/>
+          <CDBRadio
+            value="Choice 3"
+            fill="#000000"
+            colorfill="#000000"
+          />
+    </CDBContainer>
+  );
+};
+```
+<i/>
+
+## Radio Group
+
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+
+Creating several radio buttons can be time-consuming and, frankly, can be easy with the React Bootstrap RadioGroup component.
+
+You can simply do this using the `CDBRadioGroup` component which has a 'answers' prop. This  `answers` prop accepts a list of options and generates a number of radio buttons.
+
+
+<div class="container">
+    <div class="custom-radio">
+        <input type="radio" id="customRadio1" name="customRadio" class="custom-radio-input text-danger"/>
+        <label class="custom-control-label" for="customRadio1">Choice 1</label>
+    </div>
+    <div class="custom-radio">
+        <input type="radio" id="customRadio2" name="customRadio" class="custom-radio-input text-danger"/>
+        <label class="custom-control-label" for="customRadio2">Choice 2</label>
+    </div>
+    <div class="custom-radio">
+        <input type="radio" id="customRadio3" name="customRadio" class="custom-radio-input text-danger"/>
+        <label class="custom-control-label" for="customRadio3">Choice 3</label>
+    </div>
+    <div class="custom-radio">
+        <input type="radio" id="customRadio4" name="customRadio" class="custom-radio-input text-danger"/>
+        <label class="custom-control-label" for="customRadio4">Choice 4</label>
+    </div>
+</div>
+
+
+```javascript
+import React from "react";
+import { CDBRadioGroup, CDBContainer } from "cdbreact";
+
+export const Radio = () => {
+  return (
+    <CDBContainer>
+          <CDBRadioGroup
+            fill="#eb7434"
+            colorfill="#eb7434"
+            answers={['Choice 1', 'Choice 2', 'Choice 3', 'Choice 4']}
+          />
+    </CDBContainer>
+  );
+};
+```
+
+
+## API Reference: Contrast React Bootstrap Radio Props
+
+
+This lesson will expand your understanding of the props that may be used with the Contrast React Bootstrap Radio component. You'll discover what these properties perform, what their default values are, and how you'd use them in your code.
+
+The table below provides the `CDBRadio` various prop options.
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       |              |Adds custom classes	      |     <CDBRadio className="myClass" ... />  |
+| fill           | String       | #455ff5      | Sets the color of the unselected radio button | <CDBRadio fill="#000000" ... />  |
+| colorfill      | String       |              | Sets the color of the selected radio button | <CDBRadio colorFill="#000000" ... />  |
+| value          | String       |              | The value of the input element | <CDBRadio value="Choice1" ... />  |
+
+## API Reference: Contrast React Bootstrap Radio Group Properties
+
+## API Reference: Contrast Radio Group Props
+
+The table below provides the `CDBRadioGroup` various prop options.
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       |              |Adds custom classes	      |     <CDBRadioGroup className="myClass" ... />  |
+| fill           | String       | #455ff5      | Sets the color of the unselected radio button | <CDBRadioGroup fill="#000000" ... />  |
+| colorfill      | String       |              | Sets the color of the selected radio button | <CDBRadioGroup colorFill="#000000" ... />  |
+| answers        | Array        | []           | The list of values of the input element | <CDBRadioGroup answers={[choice1, choice2, choice3]} ... />  |

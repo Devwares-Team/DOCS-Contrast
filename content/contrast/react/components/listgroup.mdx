@@ -1,0 +1,333 @@
+---
+title: "LIstGroup"
+metaTitle: "LIstGroup Component for React Bootstrap"
+metaDescription: "React Bootstrap List group is a versatile component that can display both simple and complex custom information."
+
+---
+
+import React from "react";
+import {Link} from "gatsby";
+
+# React Bootstrap ListGroup
+
+React Bootstrap List group is a versatile component that can display both simple and complex custom information.
+
+## Importing the React Bootstrap ListGroup component
+
+Start by importing `CDBListGroup` into your project to use the Contrast React Bootstrap ListGroup component. Then you import the `CDBListGroupItem` for the list group's items.
+
+```javascript
+import { CDBListGroup, CDBListGroupItem } from "cdbreact";
+```
+
+## Default ListGroup
+
+<div class="container">
+  <ul class="list-group" style="width: 28rem">
+    <li class="list-group-item">List Group</li>
+    <li class="list-group-item">List Group</li>
+    <li class="list-group-item">List Group</li>
+    <li class="list-group-item">List Group</li>
+    <li class="list-group-item">List Group</li>
+  </ul>
+</div>
+
+```javascript
+import React from "react";
+import { CDBListGroup, CDBListGroupItem, CDBContainer } from "cdbreact";
+
+const LIstGroup = () => {
+  return (
+    <CDBContainer>
+            <CDBListGroup style={{ width: "30rem" }}>
+              <CDBListGroupItem>List Group </CDBListGroupItem>
+              <CDBListGroupItem>List Group</CDBListGroupItem>
+              <CDBListGroupItem>List Group</CDBListGroupItem>
+              <CDBListGroupItem>List Group</CDBListGroupItem>
+              <CDBListGroupItem>List Group</CDBListGroupItem>
+              <CDBListGroupItem>List Group</CDBListGroupItem>
+            </CDBListGroup>
+    </CDBContainer>
+  );
+};
+export default  LIstGroup;
+```
+## List Group as Link
+
+The `href` attribute on the `CDBLIstGroupItem` makes the list group item behave as a `Link` element.
+
+<div class="container">
+  <ul class="list-group" style="width: 28rem">
+    <li class="list-group-item list-group-item-action active">List Group</li>
+    <li class="list-group-item">List Group</li>
+    <li class="list-group-item">List Group</li>
+    <li class="list-group-item">List Group</li>
+    <li class="list-group-item">List Group Link</li>
+    <li class="list-group-item">List Group</li>
+  </ul>
+</div>
+
+
+```javascript
+import React from "react";
+import { CDBListGroup, CDBListGroupItem, CDBContainer } from "cdbreact";
+
+const LIstGroup = () => {
+  return (
+    <CDBContainer>
+            <CDBListGroup style={{ width: "30rem" }}>
+              <CDBListGroupItem href="#" active>
+                List Group
+              </CDBListGroupItem>
+              <CDBListGroupItem href="#" hover>
+                List Group
+              </CDBListGroupItem>
+              <CDBListGroupItem href="#" hover>
+                List Group
+              </CDBListGroupItem>
+              <CDBListGroupItem href="#" hover>
+                List Group
+              </CDBListGroupItem>
+              <CDBListGroupItem href="#" hover>
+                List Group Link
+              </CDBListGroupItem>
+              <CDBListGroupItem href="#" hover>
+                List Group
+              </CDBListGroupItem>
+            </CDBListGroup>
+    </CDBContainer>
+  );
+};
+export default  LIstGroup;
+```
+
+## Label
+
+In this part of the tutorial we imported a component [CDBBadge](https://www.devwares.com/docs/contrast/react/components/badge) alongside `CDBListGroup` and the `CDBLIstGroupItem`. 
+
+<div class="container">
+  <div class="list-group" style="width: 28rem">
+    <div
+      class="list-group-item d-flex justify-content-between align-items-center"
+    >
+      List Group
+      <div class="badge bg-primary">19</div>
+    </div>
+    <div
+      class="list-group-item d-flex justify-content-between align-items-center"
+    >
+      List Group
+      <div class="badge bg-secondary">19</div>
+    </div>
+    <div
+      class="list-group-item d-flex justify-content-between align-items-center"
+    >
+      List Group
+      <div class="badge bg-success">19</div>
+    </div>
+    <div
+      class="list-group-item d-flex justify-content-between align-items-center"
+    >
+      List Group
+      <div class="badge bg-danger">19</div>
+    </div>
+    <div
+      class="list-group-item d-flex justify-content-between align-items-center"
+    >
+      List Group
+      <div class="badge bg-info">19</div>
+    </div>
+    <div
+      class="list-group-item d-flex justify-content-between align-items-center"
+    >
+      List Group
+      <div class="badge bg-warning">19</div>
+    </div>
+  </div>
+</div>
+
+
+```javascript
+import React from "react";
+import { CDBListGroup, CDBListGroupItem, CDBBadge, CDBContainer } from "cdbreact";
+
+const LIstGroup = () => {
+  return (
+    <CDBContainer>
+            <CDBListGroup style={{ width: "30rem" }}>
+              <CDBListGroupItem className="d-flex justify-content-between align-items-center">
+                List Group <CDBBadge color="primary">19</CDBBadge>
+              </CDBListGroupItem>
+              <CDBListGroupItem className="d-flex justify-content-between align-items-center">
+                List Group
+                <CDBBadge color="secondary">19</CDBBadge>
+              </CDBListGroupItem>
+              <CDBListGroupItem className="d-flex justify-content-between align-items-center">
+                List Group
+                <CDBBadge color="success">19</CDBBadge>
+              </CDBListGroupItem>
+              <CDBListGroupItem className="d-flex justify-content-between align-items-center">
+                List Group
+                <CDBBadge color="danger">19</CDBBadge>
+              </CDBListGroupItem>
+              <CDBListGroupItem className="d-flex justify-content-between align-items-center">
+                List Group<CDBBadge color="info">19</CDBBadge>
+              </CDBListGroupItem>
+              <CDBListGroupItem className="d-flex justify-content-between align-items-center">
+                List Group<CDBBadge color="warning">19</CDBBadge>
+              </CDBListGroupItem>
+            </CDBListGroup>
+    </CDBContainer>
+  );
+};
+export default  LIstGroup;
+```
+## Color List Group
+
+The background color of the `CDBListGroupItem` is influenced by the `color` prop.
+
+<div class="container">
+  <ul class="list-group" style="width: 28rem">
+    <li class="list-group-item list-group-item-primary">List Group</li>
+    <li class="list-group-item list-group-item-secondary">List Group</li>
+    <li class="list-group-item list-group-item-success">List Group</li>
+    <li class="list-group-item list-group-item-danger">List Group</li>
+    <li class="list-group-item list-group-item-info">List Group Link</li>
+    <li class="list-group-item list-group-item-warning">List Group</li>
+  </ul>
+</div>
+
+
+```javascript
+import React from "react";
+import { CDBListGroup, CDBListGroupItem, CDBContainer } from "cdbreact";
+
+const LIstGroup = () => {
+  return (
+    <CDBContainer>
+            <CDBListGroup style={{ width: "30rem" }}>
+              <CDBListGroupItem color="primary">List Group </CDBListGroupItem>
+              <CDBListGroupItem color="secondary">List Group</CDBListGroupItem>
+              <CDBListGroupItem color="success">List Group</CDBListGroupItem>
+              <CDBListGroupItem color="danger">List Group</CDBListGroupItem>
+              <CDBListGroupItem color="info">List Group Link</CDBListGroupItem>
+              <CDBListGroupItem color="warning">List Group</CDBListGroupItem>
+            </CDBListGroup>
+    </CDBContainer>
+  );
+};
+export default  LIstGroup;
+```
+
+<i/>
+
+## Icons
+
+<Link to="/product/contrast-pro"><CDBBadge size="large" className="badge-pro">Pro Component</CDBBadge></Link>
+
+You can have icons in your list group items by nesting a `CDBIcon` component in a `CDBLIstGroupItem`. However, only pro users have access to this feature.
+
+<div class="container">
+  <div class="list-group" style="width: 28rem">
+    <div
+      class="list-group-item d-flex align-items-center"
+    >
+      <i class="fab fa-facebook px-3"></i>
+      List Group
+    </div>
+    <div
+      class="list-group-item d-flex align-items-center"
+    >
+      <i class="fab fa-facebook fa-2x px-3"></i>
+      List Group
+    </div>
+    <div
+      class="list-group-item d-flex align-items-center"
+    >
+      <i class="fab fa-facebook fa-2x px-3"></i>
+      List Group
+    </div>
+    <div
+      class="list-group-item d-flex align-items-center"
+    >
+      <i class="fab fa-facebook fa-2x px-3"></i>
+      List Group
+    </div>
+    <div
+      class="list-group-item d-flex align-items-center"
+    >
+      <i class="fab fa-facebook fa-2x px-3"></i>
+      List Group
+    </div>
+    <div
+      class="list-group-item d-flex align-items-center"
+    >
+      <i class="fab fa-facebook fa-2x px-3"></i>
+      List Group
+    </div>
+  </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBListGroup, CDBListGroupItem, CDBIcon, CDBContainer } from "cdbreact";
+
+const LIstGroup = () => {
+  return (
+    <CDBContainer>
+            <CDBListGroup style={{ width: "30rem" }}>
+              <CDBListGroupItem>
+                <CDBIcon fab icon="facebook" className="mr-3" />
+                List Group
+              </CDBListGroupItem>
+              <CDBListGroupItem>
+                <CDBIcon fab icon="facebook" size="2x" className="mr-3" />
+                List Group
+              </CDBListGroupItem>
+              <CDBListGroupItem>
+                <CDBIcon fab icon="facebook" size="2x" className="mr-3" />
+                List Group
+              </CDBListGroupItem>
+              <CDBListGroupItem>
+                <CDBIcon fab icon="facebook" size="2x" className="mr-3" />
+                List Group
+              </CDBListGroupItem>
+              <CDBListGroupItem>
+                <CDBIcon fab icon="facebook" size="2x" className="mr-3" />
+                List Group
+              </CDBListGroupItem>
+              <CDBListGroupItem>
+                <CDBIcon fab icon="facebook" size="2x" className="mr-3" />
+                List Group
+              </CDBListGroupItem>
+            </CDBListGroup>
+    </CDBContainer>
+  );
+};
+export default  LIstGroup;
+```
+# API
+
+This section will explain the props available with the Contrast React Bootstrap ListGroup component. You will discover what these props do, their default values, and how you would use them in your code.
+
+## API Reference: Contrast React Bootstrap ListGroup Props
+
+Other CDBListGroup component prop options are listed in the table below.
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       |              |Adds custom classes	      |     <CDBLIstGroup className="myClass" ... />  |
+| tag            | function or String       | ul          | Changes default input tag | <CDBLIstGroup tag="ul" ... />  |
+
+## API Reference: Contrast React Bootstrap LIstGroupItem Properties
+
+Other prop options for the `CDBListGroupItem` component are listed in the table below.
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       |              |Adds custom classes	      |     <CDBLIstGroupItem className="myClass" ... />  |
+| tag            | function or String       | li          | Changes default input tag | <CDBLIstGroupItem tag="li" ... />  |
+| active        | Boolean      | false        | Adds default active state to item | <CDBLIstGroupItem active .../>  |
+| color            | String       |           | Changes Item background and text color, accepts `["primary", "default", "secondary", "success", "dark", "danger", "info", "warning", "white" ]` | <CDBLIstGroupItem color="primary" ... />  |
+| disable        | Boolean      | false        | Disables item from being clicked | <CDBLIstGroupItem disabled .../>  |
+| hover        | Boolean      | false        | Adds hover effect (slightly background color change) | <CDBLIstGroupItem hover .../>  |

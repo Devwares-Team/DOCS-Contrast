@@ -1,0 +1,649 @@
+---
+title: "Widgets"
+metaTitle: "Widgets using React Bootstrap"
+metaDescription: "Building Widgets with React Bootstrap"
+---
+
+import React from "react";
+import {Link} from "gatsby";
+import ratingcard from "./components/images/cardrating.png";
+
+
+## React Bootstrap Widgets
+
+Bootstrap 5 Widgets are third-party applications that are embedded into the website's body as a stand-alone feature. 
+
+An example of a website widget is the direct contact widget, which allows your users to contact you easily like the one found on our website.
+
+## Using React Bootstrap Widget 
+
+In this tutorial we use the [CDBCard](https://www.devwares.com/docs/contrast/react/components/card) component to create our widgets. Check our docs for more information on the `CDBCard` component. 
+
+```js
+import { CDBCard, CDBCardBody, CDBCardTitle, CDBCardText, CDBCardImage } from "cdbreact";
+```
+
+
+## Blog Card
+
+
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+
+<div class="card" style="width: 25rem">
+  <div class="card-body p-1">
+    <div class="pane border-bottom p-3">
+      <img
+        class="pane-img pane-sm"
+        src="/img/pane/pane2.png"
+      />
+      <p class="card-text m-0 ml-3">techlead</p>
+      <div class="dropdown ml-auto">
+        <button
+          class="btn btn-white btn-flat mr-0"
+          type="button"
+          id="dropdownMenuButton"
+          data-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <i class="text-dark fa fa-ellipsis-h"></i>
+        </button>
+        <ul
+          class="dropdown-menu"
+          aria-labelledby="dropdownMenuButton"
+        >
+          <li>
+            <span class="dropdown-item disabled" href="#"
+              >Edit Profile</span>
+          </li>
+          <li><span class="dropdown-item divider" href="#"></span></li>
+          <li><span class="dropdown-item" href="#">Action 1</span></li>
+          <li><span class="dropdown-item" href="#">Action 2</span></li>
+        </ul>
+      </div>
+    </div>
+    <img
+      class="card-img img-fluid rounded-0 my-3"
+      src="/img/cardbg.png"
+    />
+    <div class="mx-2 mb-4">
+      <h2 class="card-title">A Dummy blog title sample</h2>
+      <p class="card-text text-muted mb-5">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+        do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo
+      </p>
+      <div>
+        <button class="btn btn-dark py-1 px-2">
+          <i class="fa fa-arrow-up pl-0"></i> 11
+        </button>
+        <button class="btn btn-dark py-1 px-2">
+          <i class="fa fa-arrow-down pl-0"></i>
+          2
+        </button>
+      </div>
+      <div class="my-2">
+        <button flat class="p-0 btn btn-flat">
+          <i class="fa fa-comments"></i>
+          21.4k
+        </button>
+        <button class="p-0 btn btn-flat">
+          <i class="fa fa-share"></i>
+          Share
+        </button>
+        <button class="btn btn-warning text-dark py-1">
+          <i class="fa fa-save"></i>
+          Save
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+```js
+import React from "react";
+import { CDBCard, CDBDropDown, CDBDropDownMenu, CDBDropDownToggle, CDBDropDownItem, CDBPane, CDBPaneImage, CDBCardImage, CDBBtn, CDBCardBody, CDBCardTitle, CDBCardText, CDBIcon, CDBContainer } from "cdbreact";
+
+export const Card = () => {
+  return (
+    <CDBContainer>
+          <CDBCard style={{width: "25rem"}}>
+            <CDBCardBody className="p-1">
+              <CDBPane className="border-bottom p-3">
+                <CDBPaneImage size="xs" src="https://media.istockphoto.com/photos/beautiful-woman-wearing-brown-curly-hairstyle-picture-id495006065?s=170x170" />
+                <CDBCardText className="m-0 ml-3">techlead</CDBCardText>
+                <CDBDropDown className="ml-auto">
+                  <CDBDropDownToggle color="white"><CDBIcon className="text-muted" fas icon="ellipsis-h" /></CDBDropDownToggle>
+                  <CDBDropDownMenu>
+                    <CDBDropDownItem disabled>Edit Profile</CDBDropDownItem>
+                    <CDBDropDownItem divider />
+                    <CDBDropDownItem>Action 1</CDBDropDownItem>
+                    <CDBDropDownItem>Action 2</CDBDropDownItem>
+                  </CDBDropDownMenu>
+                </CDBDropDown>
+              </CDBPane>
+              <CDBCardImage
+                className="img-fluid my-3"
+                src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg"
+              />
+              <div className="mx-2 mb-4">
+                <CDBCardTitle>A Dummy blog title sample</CDBCardTitle>
+                <CDBCardText className="text-muted mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</CDBCardText>
+                <div>
+                  <CDBBtn color="dark" className="py-1 mr-2"><CDBIcon className="pl-0" fas icon="arrow-up"/>11</CDBBtn>
+                  <CDBBtn color="dark" className="py-1"><CDBIcon className="pl-0" fas icon="arrow-down"/>2</CDBBtn>
+                </div>
+                <div className="my-2">
+                  <CDBBtn flat color="none" className="p-0"><CDBIcon far icon="comments"/>21.4k</CDBBtn>
+                  <CDBBtn flat color="none" className="p-0 mx-4"><CDBIcon fas icon="share"/>Share</CDBBtn>
+                  <CDBBtn color="warning" className="py-1"><CDBIcon far icon="save"/>Save</CDBBtn>
+                </div>
+              </div>
+            </CDBCardBody>
+          </CDBCard>
+    </CDBContainer>
+  );
+};
+```
+
+Our widget above has a dropdown, icons, and buttons. To have these things in your project you would have to import the [CDBDropDown](https://www.devwares.com/docs/contrast/react/components/dropdown) ( and dropdown affiliated components, see in the docs), [CDBIcons](https://www.devwares.com/docs/contrast/react/components/icon), [CDBBtn](https://www.devwares.com/docs/contrast/react/components/buttons). 
+
+We also import [CDBPane](https://www.devwares.com/docs/contrast/react/components/pane) for the top of this widget.
+
+<i/>
+
+## Widget Cards
+
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+
+<div class="card" style="width: 25rem">
+  <div class="card-body">
+    <div class="lead">Total Downloads</div>
+    <h2 class="card-title">1,057,891</h2>
+    <p class="small text-muted">
+      Oct 1 - Dec 31,<i class="fa fa-globe"></i> Worldwide
+    </p>
+  </div>
+</div>
+
+
+```js
+import React from "react";
+import { CDBCard, CDBCardBody, CDBCardTitle, CDBCardText, CDBIcon, CDBContainer } from "cdbreact";
+
+export const Card = () => {
+  return (
+    <CDBContainer>
+          <CDBCard style={{width: "25rem"}}>
+            <CDBCardBody>
+              <CDBCardTitle className="lead">Total Downloads</CDBCardTitle>
+              <CDBCardTitle tag="h2">1,057,891</CDBCardTitle>
+              <CDBCardText className="small text-muted">Oct 1 - Dec 31,<CDBIcon fas icon="globe"/> Worldwide</CDBCardText>
+            </CDBCardBody>
+          </CDBCard>
+    </CDBContainer>
+  );
+};
+```
+<i/>
+
+## Counter Card
+
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+
+<div class="card" style="width: 25rem">
+  <div class="card-body">
+    <i class="fas fa-line-chart fa-2x p-4 bg-primary"></i>
+    <div class="mt-2 lead">Customers</div>
+    <h2 class="card-title" style="font-size:1.8em;">852k</h2>
+    <p class="small text-muted">
+      Oct 1 - Dec 31,<i class="fa fa-globe"></i> Worldwide
+    </p>
+    <p class="text-success">
+      <i class="fa fa-angle-up"></i> 27.4%
+      <span style="font-size: 0.9em" class="ml-2 text-muted"
+        >Since last quarter</span
+      >
+    </p>
+  </div>
+</div>
+
+
+```js
+import React from "react";
+import { CDBCard, CDBCardBody, CDBCardTitle, CDBCardText, CDBIcon, CDBContainer } from "cdbreact";
+
+export const Card = () => {
+  return (
+    <CDBContainer>
+          <CDBCard style={{width: "25rem"}}>
+            <CDBCardBody>
+              <CDBIcon size="2x" className="p-4 bg-primary" fas icon="chart-line"/>
+              <CDBCardTitle className="lead">Customers</CDBCardTitle>
+              <CDBCardTitle tag="h2">852k</CDBCardTitle>
+              <CDBCardText className="small text-muted">Oct 1 - Dec 31,<CDBIcon fas icon="globe"/> Worldwide</CDBCardText>
+              <CDBCardText className="text-success">
+                <CDBIcon fas icon="angle-up"/> 27.4%
+                <span style={{fontSize:"0.9em"}} className="ml-2 text-muted">Since last quarter</span>
+              </CDBCardText>
+            </CDBCardBody>
+          </CDBCard>
+    </CDBContainer>
+  );
+};
+```
+<i/>
+
+## Invoices
+
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+
+<div class="card" style="width: 25rem">
+  <div class="card-body p-0">
+    <div class="pane py-2 px-3 border-bottom">
+      <div>
+        <h2 class="card-title mb-3 mt-0 lead">Order History</h2>
+        <p class="text-muted">
+          Manage billing information and view receipts
+        </p>
+      </div>
+    </div>
+    <div class="pane py-2 px-3 border-bottom">
+      <div>
+        <h2 class="card-title mb-3 mt-0 h6">Invoice #120345</h2>
+        <p class="text-muted">Billed August 21, 2019</p>
+      </div>
+      <button class="btn btn-flat btn-sm btn-outline-success ml-auto">
+        Pay now
+      </button>
+    </div>
+    <div class="pane py-2 px-3">
+      <div>
+        <h2 class="card-title mb-3 mt-0 h6">Invoice #120344</h2>
+        <p class="text-muted">Billed July 21, 2019</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+```js
+import React from "react";
+import { CDBCard, CDBPane, CDBBtn, CDBCardBody, CDBCardTitle, CDBCardText, CDBContainer } from "cdbreact";
+
+export const Card = () => {
+  return (
+    <CDBContainer>
+          <CDBCard style={{width: "25rem"}}>
+            <CDBCardBody className="p-0">
+              <CDBPane className="py-3 px-3 border-bottom">
+                <div>
+                  <CDBCardTitle className="mb-3 mt-0 lead" >Order History</CDBCardTitle>
+                  <CDBCardText className="text-muted">Manage billing information and view receipts</CDBCardText>
+                </div>
+              </CDBPane>
+              <CDBPane className="py-3 px-3 border-bottom">
+                <div>
+                  <CDBCardTitle className="mb-3 mt-0 h6" >Invoice #120345</CDBCardTitle>
+                  <CDBCardText className="text-muted">Billed August 21, 2019</CDBCardText>
+                </div>
+                <CDBBtn outline size="small" className="ml-auto" color="success" flat>Pay now</CDBBtn>
+              </CDBPane>
+              <CDBPane className="py-3 px-3">
+                <div>
+                  <CDBCardTitle className="mb-3 mt-0 h6" >Invoice #120344</CDBCardTitle>
+                  <CDBCardText className="text-muted">Billed July 21, 2019</CDBCardText>
+                </div>
+              </CDBPane>
+            </CDBCardBody>
+          </CDBCard>
+    </CDBContainer>
+  );
+};
+```
+<i/>
+
+## Ratings
+
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+
+<img src={ratingcard} alt="ratingcard"/>
+
+```js
+import React from "react";
+import { CDBCard, CDBProgress, CDBRating, CDBCardBody, CDBCardTitle, CDBCardText, CDBIcon, CDBContainer } from "cdbreact";
+
+export const Card = () => {
+  return (
+    <CDBContainer>
+          <CDBCard style={{width: "25rem"}}>
+            <CDBCardBody>
+              <CDBCardTitle className="lead">Average Rating</CDBCardTitle>
+              <CDBCardTitle tag="h2">4.7</CDBCardTitle>
+              <CDBRating feedback/>
+              <CDBCardText className="text-muted">Based on 231,156 ratings</CDBCardText>
+              <div className="text-muted">
+                <div className="d-flex align-items-center">
+                  <span>5</span>
+                  <CDBIcon fas icon="star" className="mr-3"/>
+                  <CDBProgress value={50} colors="success"/>
+                </div>
+                <div className="d-flex align-items-center">
+                  <span>4</span>
+                  <CDBIcon fas icon="star" className="mr-3"/>
+                  <CDBProgress value={40} colors="warning"/>
+                </div>
+                <div className="d-flex align-items-center">
+                  <span>3</span>
+                  <CDBIcon fas icon="star" className="mr-3"/>
+                  <CDBProgress value={30} colors="primary"/>
+                </div>
+                <div className="d-flex align-items-center">
+                  <span>2</span>
+                  <CDBIcon fas icon="star" className="mr-3"/>
+                  <CDBProgress value={20} colors="dark"/>
+                </div>
+                <div className="d-flex align-items-center">
+                  <span>1</span>
+                  <CDBIcon fas icon="star" className="mr-3"/>
+                  <CDBProgress value={10} colors="danger"/>
+                </div>
+              </div>
+            </CDBCardBody>
+          </CDBCard>
+    </CDBContainer>
+  );
+};
+```
+<i/>
+
+## Events
+
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+
+
+<div class="card" style="width: 25rem">
+  <h2
+    class="card-title lead p-4 border-bottom"
+    style="font-weight: 600"
+  >
+    Events
+  </h2>
+  <div class="pane border-bottom p-3">
+    <i
+      class="far fa-3x fa-calendar-alt text-danger ml-2"
+      aria-hidden="true"
+    ></i>
+    <div class="ml-3">
+      <h2 class="card-title mb-1 lead" style="font-weight: 600">
+        Newmarket Nights
+      </h2>
+      <p class="card-text mb-2">Organized by University of Oxford</p>
+      <p class="card-text mb-0 small text-muted">Time: 6:00AM</p>
+      <p class="card-text mb-0 small text-muted">
+        Place: Cambridge Boat Club, Cambridge
+      </p>
+    </div>
+  </div>
+  <div class="pane border-bottom p-3">
+    <i
+      class="far fa-3x fa-calendar-alt text-danger"
+      aria-hidden="true"
+    ></i>
+    <div class="ml-3">
+      <h2 class="card-title mb-1 lead" style="font-weight: 600">
+        Noco Hemp Expo
+      </h2>
+      <p class="card-text mb-2">Organized by University of Oxford</p>
+      <p class="card-text mb-0 small text-muted">
+        Thu, 12 Sep - Sat, 18 Sep 2020
+      </p>
+      <p class="card-text mb-0 small text-muted">
+        Place: Denver Expo Club, USA
+      </p>
+    </div>
+  </div>
+  <div class="pane border-bottom p-3">
+    <i
+      class="far fa-3x fa-calendar-alt text-danger ml-2"
+      aria-hidden="true"
+    ></i>
+    <div class="ml-3">
+      <h2 class="card-title mb-1 lead" style="font-weight: 600">
+        Canadian National Exhibition (CNE)
+      </h2>
+      <p class="card-text mb-2">Organized by University of Oxford</p>
+      <p class="card-text mb-0 small text-muted">
+        Fri, 20 Sep - Mon, 07 Oct 2020
+      </p>
+      <p class="card-text mb-0 small text-muted">
+        Place: Toronto , Canada
+      </p>
+    </div>
+  </div>
+  <p class="card-text p-4 text-center pointer border-top">See All</p>
+</div>
+
+```js
+import React from "react";
+import { CDBCard, CDBPane, CDBCardBody, CDBCardTitle, CDBCardText, CDBIcon, CDBContainer } from "cdbreact";
+
+export const Card = () => {
+  return (
+    <CDBContainer>
+          <CDBCard style={{width: "25rem"}}>
+            <CDBCardTitle className="lead p-4 border-bottom">Events</CDBCardTitle>
+            <CDBCardBody className="py-0">
+              <CDBPane className="border-bottom pb-2">
+                <CDBIcon size="4x" far icon="calendar-alt text-danger"/>
+                <div className="ml-3">
+                  <CDBCardTitle className="mb-1 font-weight-bold lead">New market Nights</CDBCardTitle>
+                  <CDBCardText className="mb-2">Organized by University of Oxford</CDBCardText>
+                  <CDBCardText className="mb-0 small text-muted">Time: 6:00AM</CDBCardText>
+                  <CDBCardText className="mb-0 small text-muted">Place: Cambridge Boat Club, Cambridge</CDBCardText>
+                </div>
+              </CDBPane>
+              <CDBPane className="border-bottom pb-2">
+                <CDBIcon size="4x" far icon="calendar-alt text-danger"/>
+                <div className="ml-3">
+                  <CDBCardTitle className="mb-1 font-weight-bold lead">Noco Hemp Expo</CDBCardTitle>
+                  <CDBCardText className="mb-2">Organized by University of Oxford</CDBCardText>
+                  <CDBCardText className="mb-0 small text-muted">Thu, 12 Sep - Sat, 18 Sep 2020</CDBCardText>
+                  <CDBCardText className="mb-0 small text-muted">PPlace: Denver Expo Club, USA</CDBCardText>
+                </div>
+              </CDBPane>
+              <CDBPane className="pb-2">
+                <CDBIcon size="4x" far icon="calendar-alt text-danger"/>
+                <div className="ml-3">
+                  <CDBCardTitle className="mb-1 font-weight-bold lead">Canadian National Exhibition (CNE)</CDBCardTitle>
+                  <CDBCardText className="mb-2">Organized by University of Oxford</CDBCardText>
+                  <CDBCardText className="mb-0 small text-muted">Fri, 20 Sep - Mon, 07 Oct 2020</CDBCardText>
+                  <CDBCardText className="mb-0 small text-muted">Place: Toronto , Canada</CDBCardText>
+                </div>
+              </CDBPane>
+            </CDBCardBody>
+            <CDBCardText className="p-4 text-center pointer border-top">See All</CDBCardText>
+          </CDBCard>
+    </CDBContainer>
+  );
+};
+```
+
+<i/>
+
+## Alerts and Notifications
+
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+
+We use [CDBCheckbox](https://www.devwares.com/docs/contrast/react/components/checkbox) to enable our widget have checkboxes in them.
+
+<div class="card" style="width: 25rem">
+  <div class="card-body py-0">
+    <h2 class="card-title lead m-0 py-3 border-bottom">
+      Alerts & Notifications
+    </h2>
+    <div class="pane py-3 border-bottom">
+      <div>
+        <div class="card-title my-0 mb-2 h6">Company News</div>
+        <p class="small m-0">
+          Get Rocket news, announcements, and product updates
+        </p>
+      </div>
+      <div class="custom-check ml-auto">
+        <input
+          class="custom-check-input"
+          type="checkbox"
+          value=""
+          id="defaultCheck1"
+        />
+        <label class="custom-check-label" for="defaultCheck1">
+        </label>
+      </div>
+    </div>
+    <div class="pane py-3 border-bottom">
+      <div>
+        <div class="card-title my-0 mb-2 h6">Account Activity</div>
+        <p class="small m-0">
+          Get important notifications about you or activity you've
+          missed
+        </p>
+      </div>
+      <div class="custom-check ml-auto">
+        <input
+          class="custom-check-input"
+          type="checkbox"
+          value=""
+          id="defaultCheck2"
+          checked
+        />
+        <label class="custom-check-label" for="defaultCheck2">
+        </label>
+      </div>
+    </div>
+    <div class="pane py-3">
+      <div>
+        <h2 class="card-title my-0 mb-2 h6">Meetups Near You</h2>
+        <p class="small m-0">
+          Get an email when a Dribbble Meetup is posted close to my
+          location
+        </p>
+      </div>
+      <div class="custom-check ml-auto">
+        <input
+          class="custom-check-input"
+          type="checkbox"
+          value=""
+          id="defaultCheck3"
+        />
+        <label class="custom-check-label" for="defaultCheck3">
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+
+```js
+import React from "react";
+import { CDBCard, CDBPane, CDBCheckbox, CDBCardBody, CDBCardTitle, CDBContainer } from "cdbreact";
+
+export const Card = () => {
+  return (
+    <CDBContainer>
+          <CDBCard style={{width: "25rem"}}>
+            <CDBCardBody className="py-0">
+              <CDBCardTitle className="lead m-0 py-3 border-bottom">Alerts & Notifications</CDBCardTitle>
+              <CDBPane className="py-3 border-bottom">
+                <div>
+                  <CDBCardTitle className="my-0 mb-2 h6" >Company News</CDBCardTitle>
+                  <p className="small m-0">Get Rocket news, announcements, and product updates</p>
+                </div>
+                <CDBCheckbox className="ml-auto"/>
+              </CDBPane>
+              <CDBPane className="py-3 border-bottom">
+                <div>
+                  <CDBCardTitle className="my-0 mb-2 h6" >Account Activity</CDBCardTitle>
+                  <p className="small m-0">Get important notifications about you or activity you've missed</p>
+                </div>
+                <CDBCheckbox className="ml-auto"/>
+              </CDBPane>
+              <CDBPane className="py-3">
+                <div>
+                  <CDBCardTitle className="my-0 mb-2 h6" >Meetups Near You</CDBCardTitle>
+                  <p className="small m-0">Get an email when a Dribbble Meetup is posted close to my location</p>
+                </div>
+                <CDBCheckbox className="ml-auto"/>
+              </CDBPane>
+            </CDBCardBody>
+          </CDBCard>
+    </CDBContainer>
+  );
+};
+```
+
+# API
+
+In this section you will find advanced information about these widgets. You will find out which modules are required, what are the possibilities of configuring the component, and what events and methods you can use to work with it.
+
+
+## API Reference: Contrast React Bootstrap Card Properties
+
+The table below shows the configuration options of the `CDBCard` component.
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       |              |Adds custom classes	      |     <CDBCard className="myClass" ... />  |
+| tag            | String       | div          | Changes default input tag | <CDBCard tag="div" ... />  |
+| color          | String       |              | Sets background color | <CDBCard color="dark" .../>  |
+| border         | Boolean      | false        | Gives border | <CDBCard border .../>  |
+
+
+
+## API Reference: Contrast React Bootstrap Card Body Properties
+
+The table below shows the configuration options of the `CDBCardBody` component.
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       |              |Adds custom classes	      |   <CDBCardBody className="myClass" ... />  |
+| tag            | function or String       | div          | Changes default `html` tag | <CDBCardBody tag="div" ... />  |
+| cascade        | Boolean      | false        | Switches the CardBody to cascade style mode | <CDBCardBody cascade .../>  |
+
+
+## API Reference: Contrast React Bootstrap Card Image Properties
+
+The table below shows the configuration options of the `CDBCardImage` component.
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       | Adds custom classes             |Adds custom classes	      |     <CDBCardImage className="myClass" ... />  |
+| tag            | function or String       | img          | Changes default `html` tag | <CDBCardImage tag="div" ... />  |
+| cascade        | Boolean      | false        | Switches the CardBody to cascade style mode | <CDBCardImage cascade .../>  |
+| hover          | Boolean      | false        | Switches on hover behaviour | <CDBCardImage hover .../>  |
+| overlay        | String       | white-light  | Sets the color of hover overlay | <CDBCardImage overlay="white-light" ... />  |
+| src            | String       |              | Source of the image | <CDBCardImage src="image_src" ... />  |
+| top            | Boolean      | false        | Makes image fluid | <CDBCardImage top .../>  |
+
+
+## API Reference: Contrast React Bootstrap Card Text Properties
+
+The table below shows the configuration options of the `CDBCardText` component.
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       |              |Adds custom classes	      |     <CDBCardText className="myClass" ... />  |
+| tag            | function or String       | p          | Changes default `html` tag | <CDBCardText tag="p" ... />  |
+| muted          | Boolean      | false        | Mutes the text color | <CDBCardText muted .../>  |
+| small          | Boolean      | false        | Uses html `small` as component's tag | <CDBCardText small .../>  |
+
+
+## API Reference: Contrast React Bootstrap Card Title Properties
+
+The table below shows the configuration options of the `CDBCardTitle` component.
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       |              |Adds custom classes	      |     <CDBCardTitle className="myClass" ... />  |
+| tag            | function or String       | h4          | Changes default `html` tag | <CDBCardTitle tag="h1" ... />  |
+| sub            | Boolean      | false        | Styles title as subtitle | <CDBCardTitle sub .../>  |

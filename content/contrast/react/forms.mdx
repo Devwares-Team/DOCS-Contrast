@@ -1,0 +1,1820 @@
+---
+title: "Forms"
+metaTitle: "React Bootstrap Forms"
+metaDescription: "These are React Bootstrap forms "
+---
+
+import React from "react";
+import { BrowserRouter as Router } from 'react-router-dom';
+
+
+# React Bootstrap Forms
+
+React Bootstrap forms are input-based components which are designed to collect users data. Used as login, subscribe or contact form, all can be easily customized.
+
+The Contrast React Bootstrap forms have predefined form logins, form registers, form subscriptions or form contacts and other layout forms varying in their design are all at your disposal. Each of them offers a different type of functionality.
+
+## Creating a Contrast React Bootstrap form
+
+To create a form with Contrast React Bootstrap, we use input fields. To use that in our project you have to import `CDBInput`.
+
+```javascript
+import { CDBInput } from "cdbreact";
+```
+
+Alongside the `CDBInput` component we use the [CDBCard](https://www.devwares.com/docs/contrast/react/components/card) component for the form body, the [CDBBtn](https://www.devwares.com/docs/contrast/react/components/buttons) for creating the form button.
+
+```javascript
+import { CDBInput, CDBCard, CDBBtn } from "cdbreact";
+```
+
+
+
+## Default Form Login
+
+Use the [CDBIcon](https://www.devwares.com/docs/contrast/react/components/icon) component to put icons in your form and the `CDBLink` for creating links in your form.
+
+
+<div class="container">
+  <div class="border d-flex flex-column" style="width:30rem;">
+    <div class="mx-4 p-3">
+      <div class="text-center mt-4 mb-4">
+        <p class="h4"> Sign in </p>
+      </div>
+      <div class="cdb-form">
+          <input type="email" class="form-control border-top-0 border-left-0 border-right-0"/>
+          <label>E-mail</label>
+      </div>
+      <div class="cdb-form">
+          <input type="password" class="form-control border-top-0 border-left-0 border-right-0"/>
+          <label>Password</label>
+      </div>
+      <div class="d-flex flex-wrap justify-content-center align-items-center">
+        <input type="checkbox" class="mr-1"/>
+        <p class="m-0">Remember me</p>
+        <span class="text-primary ml-3" href="#">Forgot Password ?</span>
+      </div>
+      <button class="btn btn-dark btn-block my-3">
+          Sign in
+      </button>
+      <p class="text-center">Not a member? <span class="text-primary" href="#">Register</span></p>
+      <p class="text-center"> or sign in with</p>
+      <div class="my-3 d-flex justify-content-center">
+        <button class="m-0 btn btn-flat">
+          <i class="fab fa-facebook-f"></i>
+        </button>
+        <button class="m-0 btn btn-flat">
+          <i class="fab fa-twitter"></i>
+        </button>
+        <button class="m-0 btn btn-flat">
+          <i class="fab fa-google-plus-g"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBInput, CDBCard, CDBCardBody, CDBIcon, CDBBtn, CDBLink, CDBContainer } from "cdbreact";
+
+const Forms = () => {
+  return (
+    <CDBContainer>
+            <CDBCard style={{ width: "30rem" }}>
+              <CDBCardBody className="mx-4">
+                <div className="text-center mt-4 mb-2">
+                  <p className="h4"> Sign in </p>
+                </div>
+                <CDBInput material hint="E-mail" type="email" />
+                <CDBInput material hint="Password" type="password" />
+                <div className="d-flex flex-wrap justify-content-center align-items-center">
+                  <CDBInput type="Checkbox" />
+                  <p className="m-0">Remember me</p>
+                  <CDBLink to="#">Forgot Password ?</CDBLink>
+                </div>
+                <CDBBtn
+                  color="dark"
+                  className="btn-block my-3 mx-0" >
+                    Sign in
+                </CDBBtn>
+                <p className="text-center">Not a member? <CDBLink className="d-inline p-0" to="#">Register</CDBLink></p>
+                <p className="text-center"> or sign in with</p>
+                <div className="row my-3 d-flex justify-content-center">
+                  <CDBBtn
+                    color="white"
+                    style={{boxShadow:"none"}}
+                  >
+                    <CDBIcon fab icon="facebook-f" />
+                  </CDBBtn>
+                  <CDBBtn
+                    color="white"
+                    className="m-0"
+                    style={{boxShadow:"none"}}
+                  >
+                    <CDBIcon fab icon="twitter" />
+                  </CDBBtn>
+                  <CDBBtn
+                    color="white"
+                    style={{boxShadow:"none"}}
+                  >
+                    <CDBIcon fab icon="google-plus-g"/>
+                  </CDBBtn>
+                </div>
+              </CDBCardBody>
+            </CDBCard>
+    </CDBContainer>
+  );
+};
+export default  Forms;
+```
+
+## Contrast Form Login
+
+<div class="container">
+  <div class="border d-flex flex-column" style="width:30rem;">
+    <div style="background:black;" class="text-center text-white">
+      <p class="h5 mt-2 py-4 font-weight-bold">Sign in</p>
+    </div>
+    <div class="mx-4 mt-4 p-3">
+      <div class="cdb-form">
+          <input type="email" class="form-control"/>
+          <label>E-mail</label>
+      </div>
+      <div class="cdb-form">
+          <input type="password" class="form-control"/>
+          <label>Password</label>
+      </div>
+      <div class="mt-5 d-flex flex-wrap justify-content-center align-items-center">
+        <input type="checkbox" class="mr-2"/>
+        <p class="m-0">Remember me</p>
+        <span href="#" class="text-primary ml-3">Forgot Password ?</span>
+      </div>
+      <button class="btn btn-block btn-outline-dark my-3" >
+          Sign in
+      </button>
+      <p class="text-center">Not a member? <span class="text-primary" href="#">Register</span></p>
+      <p class="text-center"> or sign in with</p>
+      <div class="my-3 d-flex justify-content-center">
+        <button class="btn m-0">
+          <i class="fab fa-facebook-f"></i>
+        </button>
+        <button class="btn m-0">
+          <i class="fab fa-twitter"></i>
+        </button>
+        <button class="btn m-0">
+          <i class="fab fa-linkedin-in"></i>
+        </button>
+        <button class="btn m-0">
+          <i class="fab fa-github"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBInput, CDBCheckbox, CDBCard, CDBCardBody, CDBIcon, CDBBtn, CDBLink, CDBContainer } from "cdbreact";
+
+const Forms = () => {
+  return (
+    <CDBContainer>
+            <CDBCard style={{ width: "30rem" }}>
+              <div style={{ background:"black" }} className="text-center text-white">
+                <p className="h5 mt-2 py-4 font-weight-bold">Sign in</p>
+              </div>
+              <CDBCardBody className="mx-4">
+                <CDBInput label="Email" type="email"/>
+                <CDBInput label="Password" type="password"/>
+                <div className="mt-5 d-flex flex-wrap justify-content-center align-items-center">
+                  <CDBCheckbox className="mr-2"/>
+                  <p className="m-0">Remember me</p>
+                  <CDBLink to="#">Forgot Password ?</CDBLink>
+                </div>
+                <CDBBtn
+                  color="dark"
+                  outline
+                  className="btn-block my-3 mx-0" >
+                    Sign in
+                </CDBBtn>
+                <p className="text-center">Not a member? <CDBLink className="d-inline p-0" to="#">Register</CDBLink></p>
+                <p className="text-center"> or sign in with</p>
+                <div className="row my-3 d-flex justify-content-center">
+                  <CDBBtn
+                    color="white"
+                    className="m-0"
+                    outline
+                  >
+                    <CDBIcon fab icon="facebook-f" />
+                  </CDBBtn>
+                  <CDBBtn
+                    color="white"
+                    className="m-0"
+                    outline
+                  >
+                    <CDBIcon fab icon="twitter" />
+                  </CDBBtn>
+                  <CDBBtn
+                    color="white"
+                    className="m-0"
+                    outline
+                  >
+                    <CDBIcon fab icon="linkedin-in" />
+                  </CDBBtn>
+                  <CDBBtn
+                    color="white"
+                    className="m-0"
+                    outline
+                  >
+                    <CDBIcon fab icon="github"/>
+                  </CDBBtn>
+                </div>
+              </CDBCardBody>
+            </CDBCard>
+    </CDBContainer>
+  );
+};
+export default  Forms;
+```
+
+## Default Form Register
+
+<div class="container">
+  <div class="border d-flex flex-column" style="width:30rem;">
+    <div class="mx-4 p-3">
+      <div class="text-center mt-4 mb-2">
+        <p class="h4 mb-5"> Sign up </p>
+      </div>
+      <div class="row mb-n4">
+        <div class="col">
+          <div class="cdb-form">
+              <input type="email" class="form-control border-top-0 border-left-0 border-right-0"/>
+              <label>First Name</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="cdb-form">
+              <input type="text" class="form-control border-top-0 border-left-0 border-right-0"/>
+              <label>Last Name</label>
+          </div>
+        </div>
+        <div class="cdb-form">
+            <input type="email" class="form-control border-top-0 border-left-0 border-right-0"/>
+            <label>E-mail</label>
+        </div>
+        <div class="cdb-form">
+            <input type="password" class="form-control border-top-0 border-left-0 border-right-0"/>
+            <label>Password</label>
+        </div>
+        <p class="text-muted text-center small">At least 8 characters and 1 digit</p>
+        <div class="cdb-form">
+            <input type="text" class="form-control border-top-0 border-left-0 border-right-0"/>
+            <label>Phone number</label>
+        </div>
+        <p class="text-muted text-center small">Optional - for two step authentication</p>
+      </div>
+      <div class="d-flex justify-content-center align-items-center mt-4">
+        <input class="mr-2" type="checkbox" />
+        <p class="m-0">Subscribe to our newsletter</p>
+      </div>
+      <button
+        class="btn btn-block my-3 btn-dark" >
+          Sign up
+      </button>
+      <p class="text-center"> or sign up with</p>
+      <div class="mb-3 d-flex justify-content-center">
+        <button
+          class="m-0 btn btn-flat"
+        >
+          <i class="fab fa-facebook-f"></i>
+        </button>
+        <button
+          class="m-0 btn btn-flat"
+        >
+          <i class="fab fa-twitter"></i>
+        </button>
+        <button
+          class="m-0 btn btn-flat"
+        >
+          <i class="fab fa-google-plus-g"></i>
+        </button>
+      </div>
+        <p class="text-center m-0">Already have an account? <span class="text-primary" href="#">Sign In</span></p>
+      <hr/>
+      <p class="text-center">By clicking <em>Sign up</em> you agree to our <span class="text-primary" href="#">terms of service</span></p>
+    </div>
+  </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBInput, CDBCard, CDBCardBody, CDBIcon, CDBBtn, CDBLink, CDBContainer } from "cdbreact";
+
+const Forms = () => {
+  return (
+    <CDBContainer>
+            <CDBCard style={{ width: "30rem" }}>
+              <CDBCardBody className="mx-4">
+                <div className="text-center mt-4 mb-2">
+                  <p className="h4"> Sign up </p>
+                </div>
+                <div className="form-row mb-n4">
+                  <div className="col"><CDBInput material hint="First name" type="text" /></div>
+                  <div className="col"><CDBInput material hint="Last name" type="text" /></div>
+                </div>
+                <CDBInput material hint="E-mail" type="email" />
+                <p className="text-muted text-center small mt-n4">At least 8 characters and 1 digit</p>
+                <CDBInput material hint="Password" type="password" />
+                <CDBInput material hint="Phone number" type="text" />
+                <p className="text-muted text-center small mt-n4">Optional - for two step authentication</p>
+                <div className="d-flex justify-content-center align-items-center mt-4">
+                  <CDBInput type="Forms" />
+                  <p className="m-0">Subscribe to our newsletter</p>
+                </div>
+                <CDBBtn
+                  color="dark"
+                  className="btn-block my-3 mx-0" >
+                    Sign up
+                </CDBBtn>
+                <p className="text-center"> or sign up with</p>
+                <div className="row mb-3 d-flex justify-content-center">
+                  <CDBBtn
+                    color="white"
+                    className="m-0"
+                    style={{boxShadow:"none"}}
+                  >
+                    <CDBIcon fab icon="facebook-f" />
+                  </CDBBtn>
+                  <CDBBtn
+                    color="white"
+                    className="m-0"
+                    style={{boxShadow:"none"}}
+                  >
+                    <CDBIcon fab icon="twitter" />
+                  </CDBBtn>
+                  <CDBBtn
+                    color="white"
+                    className="m-0"
+                    style={{boxShadow:"none"}}
+                  >
+                    <CDBIcon fab icon="google-plus-g"/>
+                  </CDBBtn>
+                </div>
+                  <p className="text-center m-0">Already have an account? <CDBLink className="d-inline p-0" to="#">Sign In</CDBLink></p>
+                <hr/>
+                <p className="text-center">By clicking <em>Sign up</em> you agree to our <CDBLink className="d-inline p-0" to="#">terms of service</CDBLink></p>
+              </CDBCardBody>
+            </CDBCard>
+    </CDBContainer>
+  );
+};
+export default  Forms;
+```
+## Contrast Form Register
+
+<div class="container">
+  <div class="border d-flex flex-column" style="width:30rem;">
+    <div class="text-center text-white" style="background:black;">
+      <p class="h5 mt-2 py-4 font-weight-bold"> Sign up </p>
+    </div>
+    <div class="mx-4 mt-4 p-3">
+      <div class="row mb-n4">
+        <div class="col">
+          <div class="cdb-form">
+              <input type="email" class="form-control"/>
+              <label>First Name</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="cdb-form">
+              <input type="text" class="form-control"/>
+              <label>Last Name</label>
+          </div>
+        </div>
+        <div class="cdb-form">
+            <input type="email" class="form-control"/>
+            <label>E-mail</label>
+        </div>
+        <div class="cdb-form">
+            <input type="password" class="form-control"/>
+            <label>Password</label>
+        </div>
+        <p class="text-muted text-center small mt-n3">At least 8 characters and 1 digit</p>
+        <div class="cdb-form">
+            <input type="text" class="form-control"/>
+            <label>Phone number</label>
+        </div>
+        <p class="text-muted text-center small mt-n3">Optional - for two step authentication</p>
+      </div>
+      <div class="d-flex justify-content-center align-items-center mt-4">
+        <input class="mr-2" type="checkbox" />
+        <p class="m-0">Subscribe to our newsletter</p>
+      </div>
+      <button
+        class="btn btn-block my-3 btn-outline-dark" >
+          Sign up
+      </button>
+      <p class="text-center"> or sign up with</p>
+      <div class="mb-3 d-flex justify-content-center">
+        <button
+          class="m-0 btn"
+        >
+          <i class="fab fa-facebook-f"></i>
+        </button>
+        <button
+          class="m-0 btn"
+        >
+          <i class="fab fa-twitter"></i>
+        </button>
+        <button
+          class="m-0 btn"
+        >
+          <i class="fab fa-linkedin-in"></i>
+        </button>
+        <button
+          class="m-0 btn"
+        >
+          <i class="fab fa-github"></i>
+        </button>
+      </div>
+        <p class="text-center m-0">Already have an account? <span class="text-primary" href="#">Sign In</span></p>
+      <hr/>
+      <p class="text-center">By clicking <em>Sign up</em> you agree to our <span class="text-primary" href="#">terms of service</span></p>
+    </div>
+  </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBInput, CDBCheckbox, CDBCard, CDBCardBody, CDBIcon, CDBBtn, CDBLink, CDBContainer } from "cdbreact";
+
+const Forms = () => {
+  return (
+    <CDBContainer>
+            <CDBCard style={{ width: "30rem" }}>
+              <div className="text-center text-white" style={{background:"black"}}>
+                <p className="h5 mt-2 py-4 font-weight-bold"> Sign up </p>
+              </div>
+              <CDBCardBody className="mx-4">
+                <div className="form-row mb-n4">
+                  <div className="col"><CDBInput label="First name" type="text" /></div>
+                  <div className="col"><CDBInput label="Last name" type="text" /></div>
+                </div>
+                <CDBInput label="E-mail" type="email" />
+                <p className="text-muted text-center small mt-n4">At least 8 characters and 1 digit</p>
+                <CDBInput label="Password" type="password" />
+                <CDBInput label="Phone number" type="text" />
+                <p className="text-muted text-center small mt-n4">Optional - for two step authentication</p>
+                <div className="d-flex justify-content-center align-items-center mt-4">
+                  <CDBCheckbox className="mr-2"/>
+                  <p className="m-0">Subscribe to our newsletter</p>
+                </div>
+                <CDBBtn
+                  color="dark"
+                  outline
+                  className="btn-block my-3 mx-0" >
+                    Sign up
+                </CDBBtn>
+                <p className="text-center"> or sign up with</p>
+                <div className="row mb-3 d-flex justify-content-center">
+                  <CDBBtn
+                    color="white"
+                    className="m-0"
+                    outline
+                  >
+                    <CDBIcon fab icon="facebook-f" />
+                  </CDBBtn>
+                  <CDBBtn
+                    color="white"
+                    className="m-0"
+                    outline
+                  >
+                    <CDBIcon fab icon="twitter" />
+                  </CDBBtn>
+                  <CDBBtn
+                    color="white"
+                    className="m-0"
+                    outline
+                  >
+                    <CDBIcon fab icon="linkedin-in" />
+                  </CDBBtn>
+                  <CDBBtn
+                    color="white"
+                    className="m-0"
+                    outline
+                  >
+                    <CDBIcon fab icon="github"/>
+                  </CDBBtn>
+                </div>
+                <p className="text-center m-0">Already have an account? <CDBLink className="d-inline p-0" to="#">Sign In</CDBLink></p>
+                <hr/>
+                <p className="text-center">By clicking <em>Sign up</em> you agree to our <CDBLink className="d-inline p-0" to="#">terms of service</CDBLink></p>
+              </CDBCardBody>
+            </CDBCard>
+    </CDBContainer>
+  );
+};
+export default  Forms;
+```
+## Default Form Subscription
+
+<div class="container">
+  <div class="border d-flex flex-column" style="width:30rem;">
+    <div class="mx-4 p-3">
+      <div class="text-center mt-4 mb-2">
+        <p class="h4">Subscribe</p>
+      </div>
+      <p class="text-center mt-4 font-weight-light">Join our mailing list. We write rarely, but only the best content.</p>
+      <p class="text-center"><span class="font-weight-light text-primary mb-4" href="#">See the last newsletter</span></p>
+      <div class="cdb-form">
+          <input type="text" class="form-control border-top-0 border-left-0 border-right-0"/>
+          <label>Name</label>
+      </div>
+      <div class="cdb-form">
+          <input type="email" class="form-control border-top-0 border-left-0 border-right-0"/>
+          <label>E-mail</label>
+      </div>
+      <button
+        class="btn btn-dark btn-block my-3" >
+          Subscribe
+      </button>
+    </div>
+  </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBInput, CDBCard, CDBCardBody, CDBBtn, CDBLink, CDBContainer } from "cdbreact";
+
+const Forms = () => {
+  return (
+    <CDBContainer>
+            <CDBCard style={{ width: "30rem" }}>
+              <CDBCardBody className="mx-4">
+                <div className="text-center mt-4 mb-2">
+                  <p className="h4">Subscribe</p>
+                </div>
+                <p className="text-center mt-4 font-weight-light">Join our mailing list. We write rarely, but only the best content.</p>
+                <CDBLink className="text-center p-0 font-weight-light" to="#">See the last newsletter</CDBLink>
+                <CDBInput material hint="Name" type="text" />
+                <CDBInput material hint="E-mail" type="email" />
+                <CDBBtn
+                  color="dark"
+                  className="btn-block my-3 mx-0" >
+                    Subscribe
+                </CDBBtn>
+              </CDBCardBody>
+            </CDBCard>
+    </CDBContainer>
+  );
+};
+export default  Forms;
+```
+## Contrast Form Subscription
+
+<div class="container">
+  <div class="border d-flex flex-column" style="width:30rem;">
+    <div class="text-center text-white" style="background:black;">
+      <p class="h5 mt-2 py-4 font-weight-bold">Subscribe</p>
+    </div>
+    <div class="mx-4 p-3">
+      <p class="text-center mt-2">Join our mailing list. We write rarely, but only the best content.</p>
+      <p class="text-center"><span class="text-primary" href="#">See the last newsletter</span></p>
+      <div class="cdb-form">
+          <input type="text" class="form-control"/>
+          <label>Name</label>
+      </div>
+      <div class="cdb-form">
+          <input type="email" class="form-control"/>
+          <label>E-mail</label>
+      </div>
+      <button
+        class="btn btn-block btn-outline-dark my-3" >
+          Subscribe
+      </button>
+    </div>
+  </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBInput, CDBCard, CDBCardBody, CDBBtn, CDBLink, CDBContainer } from "cdbreact";
+
+const Forms = () => {
+  return (
+    <CDBContainer>
+            <CDBCard style={{ width: "30rem" }}>
+              <div className="text-center text-white" style={{ background: "black" }}>
+                <p className="h5 mt-2 py-4 font-weight-bold">Subscribe</p>
+              </div>
+              <CDBCardBody className="mx-4">
+                <p className="text-center mt-2">Join our mailing list. We write rarely, but only the best content.</p>
+                <CDBLink className="text-center p-0" to="#">See the last newsletter</CDBLink>
+                <CDBInput label="Name" type="text" />
+                <CDBInput label="E-mail" type="email" />
+                <CDBBtn
+                  color="dark"
+                  outline
+                  className="btn-block my-3 mx-0" >
+                    Subscribe
+                </CDBBtn>
+              </CDBCardBody>
+            </CDBCard>
+    </CDBContainer>
+  );
+};
+export default  Forms;
+```
+## Default Form Contact
+
+<div class="container">
+  <div class="border d-flex flex-column" style="width:30rem;">
+    <div class="mx-4 p-3">
+      <div class="text-center mt-4 mb-5">
+        <p class="h4"> Contact us </p>
+      </div>
+      <div class="cdb-form">
+          <input type="text" class="form-control border-top-0 border-left-0 border-right-0" />
+          <label>Name</label>
+      </div>
+      <div class="cdb-form">
+          <input type="email" class="form-control border-top-0 border-left-0 border-right-0" />
+          <label>E-mail</label>
+      </div>
+      <p class="text-center m-0">Subject</p>
+      <select class="select w-100">
+        <option>Resources</option>
+        <option>Docs</option>
+        <option>Contact</option>
+      </select>
+      <div class="cdb-form mt-4">
+          <textarea class="form-control border-top-0 border-left-0 border-right-0"></textarea>
+          <label>Message</label>
+      </div>
+      <div class="d-flex justify-content-center align-items-center mt-4">
+        <input class="mr-2" type="checkbox" />
+        <p class="m-0">Send me a copy of this message</p>
+      </div>
+      <button
+        class="btn btn-block btn-dark my-3" >
+          Send
+      </button>
+    </div>
+  </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBInput, CDBCard, CDBCardBody, CDBBtn, CDBSelect, CDBContainer } from "cdbreact";
+
+const Forms = () => {
+    const option = [
+    {
+      text: "Feature request",
+      value: "1",
+    },
+    {
+      text: "Report a bug",
+      value: "2",
+    },
+    {
+      text: "Help",
+      value: "3",
+      icon:"question-circle",
+    },
+  ];
+  return (
+    <CDBContainer>
+            <CDBCard style={{ width: "30rem" }}>
+              <CDBCardBody className="mx-4">
+                <div className="text-center mt-4 mb-2">
+                  <p className="h4"> Contact us </p>
+                </div>
+                <CDBInput material hint="Name" type="text" />
+                <CDBInput material hint="E-mail" type="email" />
+                <p className="text-center m-0">Subject</p>
+                <CDBSelect options={option} selected="Feedback"/>
+                <CDBInput hint="Message" type="textarea" />
+                <div className="d-flex justify-content-center align-items-center mt-4">
+                  <CDBInput material type="Checkbox" />
+                  <p className="m-0">Send me a copy of this message</p>
+                </div>
+                <CDBBtn
+                  color="dark"
+                  className="btn-block my-3 mx-0" >
+                    Send
+                </CDBBtn>
+              </CDBCardBody>
+            </CDBCard>
+    </CDBContainer>
+  );
+};
+export default  Forms;
+```
+## Contrast Form Contact
+
+<div class="container">
+  <div class="border d-flex flex-column" style="width:30rem;">
+    <div style="background:black;" class="text-center text-white mb-4">
+      <p class="h5 mt-2 py-4 font-weight-bold">Contact Us</p>
+    </div>
+    <div class="mx-4 p-3">
+      <div class="cdb-form">
+          <input type="text" class="form-control"/>
+          <label>Name</label>
+      </div>
+      <div class="cdb-form">
+          <input type="email" class="form-control"/>
+          <label>E-mail</label>
+      </div>
+      <p class="text-center m-0 text-muted">Subject</p>
+      <select class="select w-100">
+        <option>Resources</option>
+        <option>Docs</option>
+        <option>Contact</option>
+      </select>
+      <div class="cdb-form mt-4">
+          <textarea class="form-control"></textarea>
+          <label>Message</label>
+      </div>
+      <div class="d-flex justify-content-center align-items-center mt-4">
+        <input class="mr-2" type="checkbox"/>
+        <p class="m-0">Send me a copy of this message</p>
+      </div>
+      <button
+        class="btn btn-block btn-outline-dark my-3" >
+          Send
+      </button>
+    </div>
+  </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBInput, CDBSelect2, CDBCard, CDBCardBody, CDBBtn, CDBContainer } from "cdbreact";
+
+const Forms = () => {
+    const option = [
+    {
+      text: "Feature request",
+      value: "1",
+    },
+    {
+      text: "Report a bug",
+      value: "2",
+    },
+    {
+      text: "Help",
+      value: "3",
+      icon:"question-circle",
+    },
+  ];
+  return (
+    <CDBContainer>
+            <CDBCard style={{ width: "30rem" }}>
+              <div style={{ background:"black" }} className="text-center text-white">
+                <p className="h5 mt-2 py-4 font-weight-bold">Contact Us</p>
+              </div>
+              <CDBCardBody className="mx-4">
+                <CDBInput label="Name" type="text" />
+                <CDBInput label="E-mail" type="email" />
+                <p className="text-center m-0 text-muted">Subject</p>
+                <CDBSelect2 color="white" options={option} selected="Feedback"/>
+                <CDBInput label="Message" type="textarea" />
+                <div className="d-flex justify-content-center align-items-center mt-4">
+                  <CDBInput type="Checkbox" />
+                  <p className="m-0">Send me a copy of this message</p>
+                </div>
+                <CDBBtn
+                  color="dark"
+                  outline
+                  className="btn-block my-3 mx-0" >
+                    Send
+                </CDBBtn>
+              </CDBCardBody>
+            </CDBCard>
+    </CDBContainer>
+  );
+};
+export default  Forms;
+```
+
+## Login Form with Icons
+
+<div class="container">
+  <div class="border d-flex flex-column" style="width:30rem;">
+    <div class="mx-4 p-3">
+      <div class="text-center my-4">
+        <p class="h4 font-weight-bold"> Sign in </p>
+      </div>
+      <div class="cdb-form">
+          <i class="fa fa-envelope prefix"></i>
+          <input type="email" class="form-control"/>
+          <label>E-mail</label>
+      </div>
+      <div class="cdb-form">
+          <i class="fa fa-lock prefix"></i>
+          <input type="password" class="form-control"/>
+          <label>Password</label>
+      </div>
+      <button
+        style="width:40%;"
+        class="btn btn-success btn-block mt-5 mx-auto">
+          Login
+      </button>
+    </div>
+  </div>
+</div>
+
+
+```javascript
+import React from "react";
+import { CDBInput, CDBCard, CDBCardBody, CDBBtn, CDBContainer } from "cdbreact";
+
+const Forms = () => {
+  return (
+    <CDBContainer>
+            <CDBCard style={{ width: "30rem" }}>
+              <CDBCardBody className="mx-4">
+                <div className="text-center mt-4 mb-2">
+                  <p className="h4 font-weight-bold"> Sign in </p>
+                </div>
+                <CDBInput label="E-mail" type="email" icon="envelope" iconClass="text-muted"/>
+                <CDBInput label="Password" type="password" icon="lock" iconClass="text-muted"/>
+                <CDBBtn
+                  color="success"
+                  style={{width:"40%"}}
+                  className="btn-block mt-5 mx-auto" >
+                    Login
+                </CDBBtn>
+              </CDBCardBody>
+            </CDBCard>
+    </CDBContainer>
+  );
+};
+export default  Forms;
+```
+## Login Form with Outside Label
+
+<div class="container">
+  <div class="border d-flex flex-column" style="width:30rem;">
+    <div class="mx-4 p-3">
+      <div class="text-center mt-4 mb-4">
+        <p class="h4"> Sign in </p>
+      </div>
+        <label htmlFor="defaultLoginEmail" class="text-muted">
+          Your email
+        </label>
+      <div class="cdb-form">
+        <input type="email" id="defaultLoginEmail" class="form-control"/>
+      </div>
+        <label htmlFor="defaultLoginPassword" class="text-muted">
+          Your password
+        </label>
+      <div class="cdb-form">
+        <input type="password" id="defaultLoginPassword" class="form-control"/>
+      </div>
+      <button
+        style="width:40%;"
+        class="btn btn-primary btn-block mt-5 mx-auto">
+          Login
+      </button>
+    </div>
+  </div>
+</div>
+
+
+```javascript
+import React from "react";
+import { CDBInput, CDBCard, CDBCardBody, CDBBtn, CDBContainer } from "cdbreact";
+
+const Forms = () => {
+  return (
+    <CDBContainer>
+            <CDBCard style={{ width: "30rem" }}>
+              <CDBCardBody className="mx-4">
+                <div className="text-center mt-4 mb-4">
+                  <p className="h4"> Sign in </p>
+                </div>
+                <label htmlFor="defaultLoginEmail" className="text-muted m-0">
+                  Your email
+                </label>
+                <CDBInput id="defaultLoginEmail" className="mt-n3" type="email" />
+                <label htmlFor="defaultLoginPassword" className="text-muted m-0">
+                  Your password
+                </label>
+                <CDBInput id="defaultLoginPassword" className="mt-n3" type="password" />
+                <CDBBtn
+                  color="primary"
+                  style={{width:"40%"}}
+                  className="btn-block mt-5 mx-auto" >
+                    Login
+                </CDBBtn>
+              </CDBCardBody>
+            </CDBCard>
+    </CDBContainer>
+  );
+};
+export default  Forms;
+```
+## Sign Up Form with Icon
+
+<div class="container">
+  <div class="border d-flex flex-column" style="width:30rem;">
+    <div class="mx-4 p-3">
+      <div class="text-center my-4">
+        <p class="h4 font-weight-bold"> Sign in </p>
+      </div>
+      <div class="cdb-form">
+          <i class="fa fa-user prefix text-muted"></i>
+          <input type="text" class="form-control"/>
+          <label>Your name</label>
+      </div>
+      <div class="cdb-form">
+          <i class="fa fa-envelope prefix text-muted"></i>
+          <input type="email" class="form-control"/>
+          <label>Your Email</label>
+      </div>
+      <div class="cdb-form">
+          <i class="fa fa-exclamation-triangle prefix text-muted"></i>
+          <input type="email" class="form-control"/>
+          <label>Confirm your Email</label>
+      </div>
+      <div class="cdb-form">
+          <i class="fa fa-lock prefix text-muted"></i>
+          <input type="password" class="form-control"/>
+          <label>Your Password</label>
+      </div>
+      <button
+        style="width:40%;"
+        class="btn btn-primary btn-block mt-5 mx-auto">
+          Register
+      </button>
+    </div>
+  </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBInput, CDBCard, CDBCardBody, CDBBtn, CDBContainer } from "cdbreact";
+
+const Forms = () => {
+  return (
+    <CDBContainer>
+            <CDBCard style={{ width: "30rem" }}>
+              <CDBCardBody className="mx-4">
+                <div className="text-center mt-4 mb-2">
+                  <p className="h4 font-weight-bold"> Sign up </p>
+                </div>
+                <CDBInput label="Your name" type="text" icon="user" iconClass="text-muted"/>
+                <CDBInput label="Your email" type="email" icon="envelope" iconClass="text-muted"/>
+                <CDBInput label="Confirm your email" type="email" icon="exclamation-triangle" iconClass="text-muted"/>
+                <CDBInput label="Your Password" type="password" icon="lock" iconClass="text-muted"/>
+                <CDBBtn
+                  color="primary"
+                  style={{width:"40%"}}
+                  className="btn-block mt-5 mx-auto" >
+                    Register
+                </CDBBtn>
+              </CDBCardBody>
+            </CDBCard>
+    </CDBContainer>
+  );
+};
+export default  Forms;
+```
+## Sign Up Form Outside Label
+
+<div class="container">
+  <div class="border d-flex flex-column" style="width:30rem;">
+    <div class="mx-4 p-3">
+      <div class="text-center mt-4 mb-4">
+        <p class="h4"> Sign in </p>
+      </div>
+        <label htmlFor="defaultLoginName" class="text-muted">
+          Your name
+        </label>
+      <div class="cdb-form">
+        <input type="text" id="defaultLoginName" class="form-control"/>
+      </div>
+        <label htmlFor="defaultLoginEmail1" class="text-muted">
+          Your email
+        </label>
+      <div class="cdb-form">
+        <input type="email" id="defaultLoginEmail1" class="form-control"/>
+      </div>
+        <label htmlFor="confirmLoginEmail1" class="text-muted">
+          Confirm your Email
+        </label>
+      <div class="cdb-form">
+        <input type="email" id="confirmLoginEmail1" class="form-control"/>
+      </div>
+        <label htmlFor="defaultLoginPassword1" class="text-muted">
+          Your password
+        </label>
+      <div class="cdb-form">
+        <input type="password" id="defaultLoginPassword1" class="form-control"/>
+      </div>
+      <button
+        style="width:40%;"
+        class="btn btn-danger btn-block mt-5 mx-auto">
+          Register
+      </button>
+    </div>
+  </div>
+</div>
+
+
+```javascript
+import React from "react";
+import { CDBInput, CDBCard, CDBCardBody, CDBBtn, CDBContainer } from "cdbreact";
+
+const Forms = () => {
+  return (
+    <CDBContainer>
+            <CDBCard style={{ width: "30rem" }}>
+              <CDBCardBody className="mx-4">
+                <div className="text-center mt-4 mb-2">
+                  <p className="h4"> Sign up </p>
+                </div>
+                <label htmlFor="defaultRegisterName" className="text-muted m-0">
+                  Your name
+                </label>
+                <CDBInput id="defaultRegisterName" className="mt-n3" type="text" />
+                <label htmlFor="defaultRegisterEmail" className="text-muted m-0">
+                  Your email
+                </label>
+                <CDBInput id="defaultRegisterEmail" className="mt-n3" type="email" />
+                <label htmlFor="defaultRegisterEmailConfirm" className="text-muted m-0">
+                  Confirm your email
+                </label>
+                <CDBInput id="defaultRegisterEmailConfirm" className="mt-n3" type="email" />
+                <label htmlFor="defaultRegisterPassword" className="text-muted m-0">
+                  Your password
+                </label>
+                <CDBInput id="defaultRegisterPassword" className="mt-n3" type="password"/>
+                <CDBBtn
+                  color="danger"
+                  style={{width:"40%"}}
+                  className="btn-block mt-5 mx-auto" >
+                    Register
+                </CDBBtn>
+              </CDBCardBody>
+            </CDBCard>
+    </CDBContainer>
+  );
+};
+export default  Forms;
+```
+## Subscription Form with Icon
+
+  <div class="container">
+    <div class="border d-flex flex-column" style="width:30rem;">
+      <div class="mx-4 p-3">
+        <div class="text-center my-4">
+          <p class="h4 font-weight-bold"> Subscribe </p>
+        </div>
+        <div class="cdb-form">
+            <i class="fa fa-user prefix text-muted"></i>
+            <input type="text" class="form-control"/>
+            <label>Your Name</label>
+        </div>
+        <div class="cdb-form">
+            <i class="fa fa-envelope prefix text-muted"></i>
+            <input type="email" class="form-control"/>
+            <label>Your Email</label>
+        </div>
+        <button
+          style="width:40%;"
+          class="btn btn-outline-primary btn-block mt-5 mx-auto">
+            Send
+            <i class="fa fa-paper-plane"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+```javascript
+import React from "react";
+import { CDBInput, CDBCard, CDBCardBody, CDBIcon, CDBBtn, CDBContainer } from "cdbreact";
+
+const Forms = () => {
+  return (
+    <CDBContainer>
+            <CDBCard style={{ width: "30rem" }}>
+              <CDBCardBody className="mx-4">
+                <div className="text-center mt-4 mb-2">
+                  <p className="h4 font-weight-bold"> Subscribe </p>
+                </div>
+                <CDBInput label="Your name" type="text" icon="user" iconClass="text-muted"/>
+                <CDBInput label="Your email" type="email" icon="envelope" iconClass="text-muted"/>
+                <CDBBtn
+                  outline
+                  color="primary"
+                  style={{width:"40%"}}
+                  className="btn-block mt-5 mx-auto" >
+                  Send
+                  <CDBIcon far icon="paper-plane"/>
+                </CDBBtn>
+              </CDBCardBody>
+            </CDBCard>
+    </CDBContainer>
+  );
+};
+export default  Forms;
+```
+## Subscription Form with Outside Label
+
+<div class="container">
+  <div class="border d-flex flex-column" style="width:30rem;">
+    <div class="mx-4 p-3">
+      <div class="text-center mt-4 mb-4">
+        <p class="h4"> Subscribe </p>
+      </div>
+        <label htmlFor="defaultLoginName2" class="text-muted">
+          Your Name
+        </label>
+      <div class="cdb-form">
+        <input type="text" id="defaultLoginName2" class="form-control"/>
+      </div>
+        <label htmlFor="defaultLoginEmail2" class="text-muted">
+          Your email
+        </label>
+      <div class="cdb-form">
+        <input type="email" id="defaultLoginEmail2" class="form-control"/>
+      </div>
+      <button
+        style="width:40%;"
+        class="btn btn-outline-danger btn-block mt-5 mx-auto">
+          Send
+          <i class="fa fa-paper-plane"></i>
+      </button>
+    </div>
+  </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBInput, CDBCard, CDBCardBody, CDBIcon, CDBBtn, CDBContainer } from "cdbreact";
+
+const Forms = () => {
+  return (
+    <CDBContainer>
+            <CDBCard style={{ width: "30rem" }}>
+              <CDBCardBody className="mx-4">
+                <div className="text-center mt-4 mb-2">
+                  <p className="h4"> Subscribe </p>
+                </div>
+                <label htmlFor="defaultSubscribeName" className="text-muted m-0">
+                  Your name
+                </label>
+                <CDBInput id="defaultSubscribeName" className="mt-n3" type="text" />
+                <label htmlFor="defaultSubscribeEmail" className="text-muted m-0">
+                  Your email
+                </label>
+                <CDBInput id="defaultSubscribeEmail" className="mt-n3" type="email" />
+                <CDBBtn
+                  outline
+                  color="danger"
+                  style={{width:"40%"}}
+                  className="btn-block mt-5 mx-auto" >
+                  Send
+                  <CDBIcon far icon="paper-plane"/>
+                </CDBBtn>
+              </CDBCardBody>
+            </CDBCard>
+    </CDBContainer>
+  );
+};
+export default  Forms;
+```
+## Contact Form with Icon
+
+<div class="container">
+  <div class="border d-flex flex-column" style="width:30rem;">
+    <div class="mx-4 p-3">
+      <div class="text-center my-4">
+        <p class="h4 font-weight-bold"> Write to us </p>
+      </div>
+      <div class="cdb-form">
+          <i class="fa fa-user prefix text-muted"></i>
+          <input type="text" class="form-control"/>
+          <label>Your name</label>
+      </div>
+      <div class="cdb-form">
+          <i class="fa fa-envelope prefix text-muted"></i>
+          <input type="email" class="form-control"/>
+          <label>Your Email</label>
+      </div>
+      <div class="cdb-form">
+          <i class="fa fa-tags prefix text-muted"></i>
+          <input type="text" class="form-control"/>
+          <label>Subject</label>
+      </div>
+      <div class="cdb-form">
+          <i class="fa fa-envelope prefix text-muted"></i>
+          <input type="text" class="form-control"/>
+          <label>Your Message</label>
+      </div>
+      <button
+        style="width:40%;"
+        class="btn btn-outline-secondary btn-block mt-5 mx-auto">
+          Send
+          <i class="fa fa-paper-plane"></i>
+      </button>
+    </div>
+  </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBInput, CDBCard, CDBCardBody, CDBIcon, CDBBtn, CDBContainer } from "cdbreact";
+
+const Forms = () => {
+  return (
+    <CDBContainer>
+            <CDBCard style={{ width: "30rem" }}>
+              <CDBCardBody className="mx-4">
+                <div className="text-center mt-4 mb-2">
+                  <p className="h4 font-weight-bold"> Write to Us </p>
+                </div>
+                <CDBInput label="Your name" type="text" icon="user" iconClass="text-muted"/>
+                <CDBInput label="Your email" type="email" icon="envelope" iconClass="text-muted"/>
+                <CDBInput label="Subject" type="text" icon="tags" iconClass="text-muted"/>
+                <CDBInput label="Your message" type="textarea" icon="pencil-alt" iconClass="text-muted"/>
+                <CDBBtn
+                  outline
+                  color="secondary"
+                  style={{width:"40%"}}
+                  className="btn-block mt-5 mx-auto" >
+                  Send
+                  <CDBIcon far icon="paper-plane"/>
+                </CDBBtn>
+              </CDBCardBody>
+            </CDBCard>
+    </CDBContainer>
+  );
+};
+export default  Forms;
+```
+## Contact Form without Icon
+
+<div class="container">
+  <div class="border d-flex flex-column" style="width:30rem;">
+    <div class="mx-4 p-3">
+      <div class="text-center mt-4 mb-4">
+        <p class="h4"> Write to us </p>
+      </div>
+        <label htmlFor="defaultLoginName3" class="text-muted">
+          Your name
+        </label>
+      <div class="cdb-form">
+        <input type="text" id="defaultLoginName3" class="form-control"/>
+      </div>
+        <label htmlFor="defaultLoginEmail3" class="text-muted">
+          Your email
+        </label>
+      <div class="cdb-form">
+        <input type="email" id="defaultLoginEmail3" class="form-control"/>
+      </div>
+        <label htmlFor="confirmLoginEmail3" class="text-muted">
+          Subject
+        </label>
+      <div class="cdb-form">
+        <input type="text" id="confirmLoginEmail3" class="form-control"/>
+      </div>
+        <label htmlFor="defaultLoginPassword3" class="text-muted">
+          Your message
+        </label>
+      <div class="cdb-form">
+        <textarea id="defaultLoginPassword3" class="form-control"></textarea>
+      </div>
+      <button
+        style="width:40%;"
+        class="btn btn-outline-secondary btn-block mt-5 mx-auto">
+          Send
+          <i class="fa fa-paper-plane"></i>
+      </button>
+    </div>
+  </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBInput, CDBCard, CDBCardBody, CDBIcon, CDBBtn, CDBContainer } from "cdbreact";
+
+const Forms = () => {
+  return (
+    <CDBContainer>
+            <CDBCard style={{ width: "30rem" }}>
+              <CDBCardBody className="mx-4">
+                <div className="text-center mt-4 mb-4">
+                  <p className="h4"> Write to Us </p>
+                </div>
+                <label htmlFor="defaultContactName" className="text-muted m-0">
+                  Your name
+                </label>
+                <CDBInput id="defaultContactName" className="mt-n3" type="text" />
+                <label htmlFor="defaultContactEmail" className="text-muted m-0">
+                  Your email
+                </label>
+                <CDBInput id="defaultContactEmail" className="mt-n3" type="email" />
+                <label htmlFor="defaultContactSubject" className="text-muted m-0">
+                  Subject
+                </label>
+                <CDBInput id="defaultContactSubject" className="mt-n3" type="text" />
+                <label htmlFor="defaultContactMessage" className="text-muted m-0">
+                  Your message
+                </label>
+                <CDBInput id="defaultContactMessage" className="mt-n3" type="textarea" />
+                <CDBBtn
+                  outline
+                  color="secondary"
+                  style={{width:"40%"}}
+                  className="btn-block mt-5 mx-auto" >
+                  Send
+                  <CDBIcon far icon="paper-plane"/>
+                </CDBBtn>
+              </CDBCardBody>
+            </CDBCard>
+    </CDBContainer>
+  );
+};
+export default  Forms;
+```
+## Form Login
+
+<div class="container">
+  <div class="border d-flex flex-column" style="width:30rem;">
+    <div class="mx-4 p-3">
+      <div class="text-center my-4">
+        <p class="h4 font-weight-bold"> Sign in </p>
+      </div>
+      <div class="cdb-form">
+          <input type="email" class="form-control"/>
+          <label>E-mail</label>
+      </div>
+      <div class="cdb-form">
+          <input type="password" class="form-control"/>
+          <label>Password</label>
+      </div>
+      <p class="mt-n3 text-right"><span class="text-primary" href="#">Forgot Password ?</span></p>
+      <button
+        class="btn btn-dark btn-block my-4 mx-0">
+          Sign in
+      </button>
+      <p class="text-center"> or sign in with</p>
+      <div class="my-3 d-flex justify-content-center">
+        <button
+          class="m-0 btn"
+        >
+          <i class="fab fa-facebook-f"></i>
+        </button>
+        <button
+          class="m-0 btn"
+        >
+          <i class="fab fa-twitter"></i>
+        </button>
+        <button
+          class="m-0 btn"
+        >
+          <i class="fab fa-google-plus-g"></i>
+        </button>
+      </div>
+      <hr/>
+      <p class="text-center">Not a member? <span class="text-primary" href="#">Sign up</span></p>
+    </div>
+  </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBInput, CDBCard, CDBCardBody, CDBIcon, CDBBtn, CDBContainer } from "cdbreact";
+
+const Forms = () => {
+  return (
+    <CDBContainer>
+            <CDBCard style={{ width: "30rem" }}>
+              <CDBCardBody className="mx-4">
+                <div className="text-center mt-4 mb-2">
+                  <p className="h4 font-weight-bold"> Sign in </p>
+                </div>
+                <CDBInput label ="E-mail" type="email" />
+                <CDBInput label ="Password" type="password" />
+                <p className="mt-n3 text-right"><CDBLink className="p-0" to="#">Forgot Password ?</CDBLink></p>
+                <CDBBtn
+                  color="dark"
+                  className="btn-block my-4 mx-0" >
+                    Sign in
+                </CDBBtn>
+                <p className="text-center"> or sign in with</p>
+                <div className="row my-3 d-flex justify-content-center">
+                  <CDBBtn
+                    color="white"
+                    className="m-0"
+                  >
+                    <CDBIcon fab icon="facebook-f" />
+                  </CDBBtn>
+                  <CDBBtn
+                    color="white"
+                    className="m-0"
+                  >
+                    <CDBIcon fab icon="twitter" />
+                  </CDBBtn>
+                  <CDBBtn
+                    color="white"
+                    className="m-0"
+                  >
+                    <CDBIcon fab icon="google-plus-g"/>
+                  </CDBBtn>
+                </div>
+                <hr/>
+                <p className="text-center">Not a member? <CDBLink className="d-inline p-0" to="#">Sign up</CDBLink></p>
+              </CDBCardBody>
+            </CDBCard>
+    </CDBContainer>
+  );
+};
+export default  Forms;
+```
+## Sign Up
+
+<div class="container">
+  <div class="border d-flex flex-column" style="width:30rem;">
+    <div class="mx-4 p-3">
+      <div class="text-center my-4">
+        <p class="h4"> Sign up </p>
+      </div>
+      <div class="cdb-form">
+          <input type="email" class="form-control"/>
+          <label>E-mail</label>
+      </div>
+      <div class="cdb-form">
+          <input type="password" class="form-control"/>
+          <label>Password</label>
+      </div>
+      <div class="d-flex align-items-center">
+        <input type="checkbox"/>
+        <p class="mb-0 ml-3">Accept the <span class="text-primary" href="#">terms and conditions</span></p>
+      </div>
+      <div class="d-flex mt-4 align-items-center">
+        <button
+          style="width:30%; background:linear-gradient(0deg, rgba(152,117,196,1) 0%, rgba(169,208,213,0.8746849081429446) 100%);"
+          class="btn btn-block" >
+            Sign up
+        </button>
+        <p class="ml-auto mb-0">Have an account? <span class="text-primary" href="#">Log in</span></p>
+      </div>
+    </div>
+    <div class="pt-4" style="background:linear-gradient(0deg, rgba(152,117,196,1) 0%, rgba(169,208,213,0.8746849081429446) 100%);">
+      <p class="text-center m-0"> or sign up with</p>
+      <div class="mb-3 d-flex justify-content-center">
+        <button
+          class="m-0 btn"
+        >
+          <i class="fab fa-facebook-f"></i>
+        </button>
+        <button
+          class="m-0 btn"
+        >
+          <i class="fab fa-twitter"></i>
+        </button>
+        <button
+          class="m-0 btn"
+        >
+          <i class="fab fa-google-plus-g"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBInput, CDBCard, CDBCheckbox, CDBCardBody, CDBLink,CDBIcon, CDBBtn, CDBContainer } from "cdbreact";
+
+const Forms = () => {
+  return (
+    <CDBContainer>
+            <CDBCard style={{ width: "30rem" }}>
+              <CDBCardBody className="mx-4">
+                <div className="text-center mt-4 mb-2">
+                  <p className="h4"> Sign up </p>
+                </div>
+                <CDBInput label ="E-mail" type="email" />
+                <CDBInput label ="Password" type="password" />
+                <div className="d-flex align-items-center">
+                  <CDBCheckbox className="mr-2"/>
+                  <p className="mb-0 ml-2">Accept the <CDBLink className="d-inline p-0" to="#">terms and conditions</CDBLink></p>
+                </div>
+                <div className="d-flex mt-4 align-items-center">
+                  <CDBBtn
+                    color="none"
+                    style={{width:"30%", background:"linear-gradient(0deg, rgba(37,212,214,1) 0%, rgba(110,112,200,1) 100%)"}}
+                    className="btn-block mx-0" >
+                      Sign up
+                  </CDBBtn>
+                  <p className="ml-auto mb-0">Have an account? <CDBLink className="d-inline p-0" to="#">Log in</CDBLink></p>
+                </div>
+              </CDBCardBody>
+              <div className="pt-4" style={{background:"linear-gradient(0deg, rgba(37,212,214,1) 0%, rgba(110,112,200,1) 100%)"}}>
+                <p className="text-center m-0"> or sign up with</p>
+                <div className="row mb-3 d-flex justify-content-center">
+                  <CDBBtn
+                    color="none"
+                    className="m-0"
+                  >
+                    <CDBIcon fab icon="facebook-f" />
+                  </CDBBtn>
+                  <CDBBtn
+                    color="none"
+                    className="m-0"
+                  >
+                    <CDBIcon fab icon="twitter" />
+                  </CDBBtn>
+                  <CDBBtn
+                    color="none"
+                    className="m-0"
+                  >
+                    <CDBIcon fab icon="google-plus-g"/>
+                  </CDBBtn>
+                </div>
+              </div>
+            </CDBCard>
+    </CDBContainer>
+  );
+};
+export default  Forms;
+```
+## Login Form
+
+<div class="container">
+  <div class="border d-flex flex-column" style="width:30rem;">
+    <div style="background:linear-gradient(0deg, rgba(152,117,196,1) 0%, rgba(169,208,213,0.8746849081429446) 100%);" class="text-center mb-4">
+      <p class="h5 mt-2 mt-5 mb-2 font-weight-bold">Login</p>
+      <div class="mb-3 d-flex justify-content-center">
+        <button
+          class="m-0 btn btn-flat"
+        >
+          <i class="fab fa-facebook-f"></i>
+        </button>
+        <button
+          class="m-0 btn btn-flat"
+        >
+          <i class="fab fa-twitter"></i>
+        </button>
+        <button
+          class="m-0 btn btn-flat"
+        >
+          <i class="fab fa-linkedin-in"></i>
+        </button>
+        <button
+          class="m-0 btn btn-flat"
+        >
+          <i class="fab fa-github"></i>
+        </button>
+      </div>
+    </div>
+    <div class="mx-4 p-3">
+      <div class="cdb-form">
+          <input type="email" class="form-control"/>
+          <label>E-mail</label>
+      </div>
+      <div class="cdb-form">
+          <input type="password" class="form-control"/>
+          <label>Password</label>
+      </div>
+      <p class="text-right">Forgot <span class="text-primary ml-auto" href="#">Password ?</span></p>
+      <button
+        style="width:40%; background:linear-gradient(0deg, rgba(152,117,196,1) 0%, rgba(169,208,213,0.8746849081429446) 100%);"
+        class="btn btn-block my-3 mx-0 font-weight-bold" >
+          Login
+      </button>
+      <p class=" text-right mt-4">Don't have an account? <span class="text-primary" href="#">Sign Up</span></p>
+    </div>
+  </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBInput, CDBCard, CDBCardBody, CDBLink,CDBIcon, CDBBtn, CDBContainer } from "cdbreact";
+
+const Forms = () => {
+  return (
+    <CDBContainer>
+            <CDBCard style={{ width: "30rem" }}>
+              <div style={{ background:"linear-gradient(0deg, rgba(37,212,214,1) 0%, rgba(110,112,200,1) 100%)" }} className="text-center">
+                <p className="h5 mt-2 mt-5 mb-2 font-weight-bold">Login</p>
+                <div className="row mb-3 d-flex justify-content-center">
+                  <CDBBtn
+                    color="none"
+                    className="m-0"
+                    flat
+                  >
+                    <CDBIcon fab icon="facebook-f" />
+                  </CDBBtn>
+                  <CDBBtn
+                    color="none"
+                    className="m-0"
+                    flat
+                  >
+                    <CDBIcon fab icon="twitter" />
+                  </CDBBtn>
+                  <CDBBtn
+                    color="none"
+                    className="m-0"
+                    flat
+                  >
+                    <CDBIcon fab icon="linkedin-in" />
+                  </CDBBtn>
+                  <CDBBtn
+                    color="none"
+                    className="m-0"
+                    flat
+                  >
+                    <CDBIcon fab icon="github"/>
+                  </CDBBtn>
+                </div>
+              </div>
+              <CDBCardBody className="mx-4">
+                <CDBInput label="E-mail" type="email" />
+                <CDBInput label="Password" type="password" />
+                <p className="text-right">Forgot <CDBLink className="d-inline p-0 ml-auto" to="#">Password ?</CDBLink></p>
+                <CDBBtn
+                color="none"
+                  style={{width:"40%", background:"linear-gradient(0deg, rgba(37,212,214,1) 0%, rgba(110,112,200,1) 100%)"}}
+                  className="btn-block my-3 mx-0 font-weight-bold" >
+                    Login
+                </CDBBtn>
+                <p className=" text-right mt-4">Don't have an account? <CDBLink className="d-inline p-0" to="#">Sign Up</CDBLink></p>
+
+              </CDBCardBody>
+            </CDBCard>
+    </CDBContainer>
+  );
+};
+export default  Forms;
+```
+## Sign Up with Background Image
+
+<div class="container">
+  <div class="border d-flex flex-column view" style="width:30rem; background:url(https://images.unsplash.com/photo-1528287942171-fbe365d1d9ac?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&w=1200&cs=srgb&ixid=eyJh); background-size:cover;">
+    <div class="mask rgba-dark-strong"></div>
+    <div class="mx-4 p-3" style="z-index:2;">
+      <div class="text-center my-5">
+        <p class="h4 font-weight-bold text-white"> Sign up </p>
+      </div>
+      <div class="cdb-form">
+          <input type="email" class="form-control border-top-0 border-left-0 border-right-0"/>
+          <label class="bg-transparent">E-mail</label>
+      </div>
+      <div class="cdb-form">
+          <input type="password" class="form-control border-top-0 border-left-0 border-right-0"/>
+          <label class="bg-transparent">Password</label>
+      </div>
+      <div class="d-flex mt-3 align-items-center justify-content-center">
+        <input type="checkbox"/>
+        <p class="text-white mb-0 ml-2">Accept the <span class="text-primary" href="#">terms and conditions</span></p>
+      </div>
+      <button
+        class="btn btn-block my-4" >
+          Sign up
+      </button>
+      <p class="text-white text-center mb-5">Have an account? <span class="text-primary" href="#">Log in</span></p>
+    </div>
+  </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBInput, CDBCard, CDBCardBody, CDBLink, CDBMask, CDBCheckbox, CDBBtn, CDBContainer } from "cdbreact";
+
+const Forms = () => {
+  return (
+    <CDBContainer>
+            <CDBCard style={{ width: "30rem", background:"url(https://images.unsplash.com/photo-1528287942171-fbe365d1d9ac?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&w=1200&cs=srgb&ixid=eyJh)", backgroundSize:"cover"}}>
+              <CDBMask overlay="darkStrong" className="flex-center" />
+              <CDBCardBody className="mx-4" style={{zIndex:"2"}}>
+                <div className="text-center mt-5 mb-2">
+                  <p className="h4 font-weight-bold text-white"> Sign up </p>
+                </div>
+                <CDBInput material label ="E-mail" type="email" />
+                <CDBInput material label ="Password" type="password" />
+                <div className="d-flex mt-3 align-items-center justify-content-center">
+                  <CDBCheckbox/>
+                  <p className="text-white mb-0 ml-2">Accept the <CDBLink className="d-inline p-0" to="#">terms and conditions</CDBLink></p>
+                </div>
+                <CDBBtn
+                  color="primary"
+                  className="btn-block mx-0 my-4" >
+                    Sign up
+                </CDBBtn>
+                <p className="text-white text-center mb-5">Have an account? <CDBLink className="d-inline p-0" to="#">Log in</CDBLink></p>
+              </CDBCardBody>
+            </CDBCard>
+    </CDBContainer>
+  );
+};
+export default  Forms;
+```
+
+
+## API Reference: Contrast React Bootstrap Input Props
+
+This section will build on your information about the props you get to use with the Contrast React Bootstrap Input component. You will find out what these props do, their default values, and how you would use them in your code.
+
+The table below lists other prop options of the `CDBInput` component.
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       |              |Adds custom classes	      |     <CDBInput className="myClass" ... />  |
+| tag            | String       | div          | Changes default input tag | <CDBInput tag="input" ... />  |
+| containerClass     | String       |           | Adds custom class to wrapping div | <CDBInput containerClass="wrapper" ... />  |
+| error     | String       |           |  	Sets the error message for the labels data-error attribute | <CDBInput error="Ouch!" ... />  |
+| hint     | String       |           |  	Sets the placeholder for the Input | <CDBInput hint="Placeholder" ... />  |
+| value     | Number, Boolean or String       |           |  The value of the input element (use with the controlled input)	| <CDBInput value="I am controlled" onChange={this.handleChange} ... />  |
+| material        | Boolean      | false        | Changes component styles for material theme | <CDBInput material .../>  |
+| valueDefault     | Number or String       |           |  The default value of the input (use with the uncontrolled input)	| <CDBInput valueDefault="I am uncontrolled" ... />  |
+| id     | String       |           | Required! Set the id of the input element 	| <CDBInput id="myId" ... />  |
+| label     | String       |           | Add label to the component; you can attach jsx elements (f.e. links) 	| <CDBInput label="My custom input" ... />  |
+| labelClass     | String       |           | Add custom class to label | <CDBInput labelClass="My custom label class" ... />  |
+| labelId     | String       |           | Sets custom id to label | <CDBInput labelId="myId" ... /> |  |
+| size     | String       |      lg     | Changes size of the component; available `lg` and `sm` | <CDBInput size="lg" ... /> |  |
+| success     | String       |           | Sets the success message for the labels data-success attribute | <CDBInput success="Great!" ... /> |  |
+| type     | String       |  text         | The type of the input element | <CDBInput type="checkbox" ... /> |  |
+| inputRef     | Object or function       |           |  	Allows to attach React Ref to the input component; accepts only Callback Ref | <CDBInput inputRef={ref => this.myRef = ref } .../>  |
+| icon     | String       |           |  Adds font awesome icon	| <CDBInput icon="caret-right" ... />  |
+| iconBrand     | String       |           |  Use this property to set brand icon (`fab`)	| <CDBInput icon="twitter" iconBrand ... />  |
+| iconLight     | String       |           |  Use this property to set light icon (`fal`)	| <CDBInput icon="twitter" iconLight ... />  |
+| iconRegular     | String       |           |  Use this property to set regular icon (`far`)	| <CDBInput icon="twitter" iconRegular ... />  |
+| iconClass     | String       |           | Adds custom classes to icon element | <CDBInput icon="caret-right" iconClass="my-class" ... /> |  |
+| disable        | Boolean      | false        | Disables Input component | <CDBInput disabled .../>  |
+| group        | Boolean      | false        | Add .form-group class to the wrapping div | <CDBInput error .../>  |
+| filled        | Boolean      | false        | Add filled-in style to checkbox/radio button | <CDBInput type="checkbox" filled .../>  |
+| validate        | Boolean      | false        |  	Adds `.validate` class to the Input component | <CDBInput validate .../>  |
+| gap        | Boolean      | false        | Creates gap inside checkbox/radio button | <CDBInput type="checkbox" gap .../>  |
+
+
+## API Reference: Contrast React Bootstrap Card Props
+
+
+The table below lists other prop options of the `CDBCard` component.
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       |              |Adds custom classes	      |     <CDBCard className="myClass" ... />  |
+| tag            | String       | div          | Changes default input tag | <CDBCard tag="div" ... />  |
+| color          | String       |              | Sets background color | <CDBCard color="dark" .../>  |
+| border         | Boolean      | false        | Gives border | <CDBCard border .../>  |
+
+
+## API Reference: Contrast React Bootstrap Card Body Props
+
+The table below lists other prop options of the `CDBCardBody` component.
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       |              |Adds custom classes	      |   <CDBCardBody className="myClass" ... />  |
+| tag            | function or String       | div          | Changes default `html` tag | <CDBCardBody tag="div" ... />  |
+| cascade        | Boolean      | false        | Switches the CardBody to cascade style mode | <CDBCardBody cascade .../>  |
+
+## API Reference: Contrast React Bootstrap Card Image Props
+
+The table below lists other prop options of the `CDBCardImage` component.
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       | Adds custom classes             |Adds custom classes	      |     <CDBCardImage className="myClass" ... />  |
+| tag            | function or String       | img          | Changes default `html` tag | <CDBCardImage tag="div" ... />  |
+| cascade        | Boolean      | false        | Switches the CardBody to cascade style mode | <CDBCardImage cascade .../>  |
+| hover          | Boolean      | false        | Switches on hover behaviour | <CDBCardImage hover .../>  |
+| overlay        | String       | white-light  | Sets the color of hover overlay | <CDBCardImage overlay="white-light" ... />  |
+| src            | String       |              | Source of the image | <CDBCardImage src="image_src" ... />  |
+| top            | Boolean      | false        | Makes image fluid | <CDBCardImage top .../>  |
+
+## API Reference: Contrast React Bootstrap Card Text Props
+
+
+The table below lists other prop options of the `CDBCardText` component.
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       |              |Adds custom classes	      |     <CDBCardText className="myClass" ... />  |
+| tag            | function or String       | p          | Changes default `html` tag | <CDBCardText tag="p" ... />  |
+| muted          | Boolean      | false        | Mutes the text color | <CDBCardText muted .../>  |
+| small          | Boolean      | false        | Uses html `small` as component's tag | <CDBCardText small .../>  |
+
+
+## API Reference: Contrast React Bootstrap Card Title Props
+
+The table below lists other prop options of the `CDBCardTitle` component.
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       |              |Adds custom classes	      |     <CDBCardTitle className="myClass" ... />  |
+| tag            | function or String       | h4          | Changes default `html` tag | <CDBCardTitle tag="h1" ... />  |
+| sub            | Boolean      | false        | Styles title as subtitle | <CDBCardTitle sub .../>  |
+
+
+

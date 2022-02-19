@@ -1,0 +1,110 @@
+---
+title: "Checkbox"
+metaTitle: "Checkbox Component for React Bootstrap"
+metaDescription: "React Bootstrap Checkbox is a component that allows a user to select numerous options. It's widely used in forms and surveys."
+---
+
+import React from "react";
+import {Link} from "gatsby";
+
+FIX THIS 
+
+# React Bootstrap Checkbox
+
+React Bootstrap Checkbox is a component that allows a user to select numerous options. It's widely used in forms and surveys.
+
+The 'CDBInput' component or the 'CDBCheckbox' component, which comes with a specified style, can be used to create a checkbox in Contrast React Bootstrap ( only available for pro users ).
+
+## Using the "CDBInput" component.
+
+Import the 'CDBInput' component and update the value of the 'type' prop to 'checkbox' to use the default Contrast React Bootstrap Checkbox component.
+
+<div class="container">
+      <input type="checkbox" id="check"/>
+      <label class="custom-check-label ml-1" for="check"> Click</label>
+</div>
+
+```javascript
+import React from "react";
+import { CDBInput, CDBContainer } from "cdbreact";
+
+const Checkbox = () => {
+  return (
+    <CDBContainer>
+            <CDBInput type="checkbox"/>
+    </CDBContainer>
+  );
+};
+export default  Checkbox;
+```
+<i/>
+
+## CDBCheckbox
+
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+
+<div class="container">
+    <div class="custom-check">
+        <input class="custom-check-input" type="checkbox" id="defaultCheck1"/>
+        <label class="custom-check-label ml-1" for="defaultCheck1">
+          Contrast checkbox
+        </label>
+    </div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBCheckbox, CDBContainer } from "cdbreact";
+
+const Checkbox = () => {
+  return (
+    <CDBContainer>
+            <CDBCheckbox/>
+    </CDBContainer>
+  );
+};
+export default  Checkbox;
+```
+
+<i/>
+
+## Disabled state
+
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+
+The 'disabled' property of the 'CDBCheckbox' component is set to false. To prevent the ability to click the checkbox, add the 'disabled' boolean property to 'CDBCheckbox.'
+
+  <div class="container">
+      <div class="custom-check">
+          <input class="custom-check-input" type="checkbox" value="" id="defaultCheck2" disabled/>
+          <label class="custom-check-label" for="defaultCheck1">
+            Disabled checkbox
+          </label>
+      </div>
+  </div>
+
+```javascript
+import React from "react";
+import { CDBCheckbox, CDBContainer } from "cdbreact";
+
+const Checkbox = () => {
+  return (
+    <CDBContainer>
+            <CDBCheckbox disabled/>
+    </CDBContainer>
+  );
+};
+export default  Checkbox;
+```
+
+# Contrast React Bootstrap Checkbox Properties
+
+This section will elaborate on the props available with the Contrast React Bootstrap Checkbox component. You'll learn what these props do, how to utilize them, and what their default values are.
+
+Other prop options for the 'CDBCheckbox' component are listed in the table below.
+
+| Name            | Type        | Default      |   Description| Example      |
+| ------------- | ---------- | ----------- | ---------- | ----------- |
+| className      | String       |              |Adds custom classes	      |     <CDBCheckbox className="myClass" ... />  |
+| tag            | String       | div          | Changes default input tag | <CDBCheckbox tag="input" ... />  |
+| disable        | Boolean      | false        | Disables Checkbox component | <CDBCheckbox disabled .../>  |

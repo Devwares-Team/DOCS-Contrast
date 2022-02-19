@@ -1,0 +1,710 @@
+---
+title: "Charts"
+metaTitle: "Chart Component for React Bootstrap"
+metaDescription: "Building a Chart Component using React Bootstrap"
+---
+
+# React Bootstrap Charts
+
+
+React Bootstrap Charts are pictorial representation or diagrams that showcases data or values in an organized manner. CDBReact Bootstrap charts have easy-to-use syntax, responsive and flexible. There are twelve types of charts available for your use. To gain more insight on how to use the charts check out [react chartsjs](https://github.com/reactchartjs).
+
+
+## Line Chart
+
+![React Bootstrap Line Chart](https://imgur.com/9HDtKg0.gif)
+
+```javascript
+import React, { useState } from "react";
+import { Line } from "react-chartjs-2";
+import { CDBContainer } from "cdbreact";
+
+const Chart = () => {
+
+  const [data] = useState({
+    labels: [
+      "Eating",
+      "Drinking",
+      "Sleeping",
+      "Designing",
+      "Coding",
+      "Cycling",
+      "Running",
+    ],
+    datasets: [
+      {
+        label: "My First dataset",
+        backgroundColor: "rgba(194, 116, 161, 0.5)",
+        borderColor: "rgb(194, 116, 161)",
+        data: [65, 59, 90, 81, 56, 55, 40],
+      },
+      {
+        label: "My Second dataset",
+        backgroundColor: "rgba(71, 225, 167, 0.5)",
+        borderColor: "rgb(71, 225, 167)",
+        data: [28, 48, 40, 19, 96, 27, 100],
+      },
+    ],
+  })
+  
+  return (
+      <CDBContainer>
+        <h3 className="mt-5">Line chart</h3>
+        <Line data={data} options={{ responsive: true }} />
+      </CDBContainer>
+  );
+
+}
+
+export default Chart;
+
+```
+
+## Dynamically Refreshed Line chart
+
+![ React Bootstrap Dynamically Refreshed Line Chart](https://imgur.com/O30EnRU.gif)
+
+```javascript
+import React, { useState, useEffect } from "react";
+import { Line } from "react-chartjs-2";
+import { CDBContainer } from "cdbreact";
+
+const Chart = () => {
+
+  const [data, setData] = useState({
+    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    datasets: [
+      {
+        label: 'My First dataset',
+        fill: false,
+        lineTension: 0.1,
+        backgroundColor: 'rgba(194, 116, 161, 0.5)',
+        borderColor: 'rgb(194, 116, 161)',
+        borderCapStyle: 'butt',
+        borderDash: [],
+        borderDashOffset: 0.0,
+        borderJoinStyle: 'miter',
+        pointBorderColor: 'rgba(75,192,192,1)',
+        pointBackgroundColor: '#fff',
+        pointBorderWidth: 1,
+        pointHoverRadius: 5,
+        pointHoverBackgroundColor: 'rgba(71, 225, 167, 0.5)',
+        pointHoverBorderColor: 'rgb(71, 225, 167)',
+        pointHoverBorderWidth: 2,
+        pointRadius: 1,
+        pointHitRadius: 10,
+        data: [65, 59, 80, 81, 56, 55, 40]
+      }
+    ]
+  });
+  
+  useEffect(() => {
+
+    setInterval(function(){
+      var oldDataSet = data.datasets[0];
+      var newData = [];
+
+      for(var x=0; x< data.labels.length; x++){
+        newData.push(Math.floor(Math.random() * 100));
+      }
+
+      var newDataSet = {
+        ...oldDataSet
+      };
+
+      newDataSet.data = newData;
+
+      var newState = {
+        ...data,
+        datasets: [newDataSet]
+      };
+
+      setData(newState);
+    }, 5000);
+
+  }, [])
+
+  return (
+    <CDBContainer>
+      <h3 className="mt-5">Dynamicly Refreshed Line chart</h3>
+      <Line data={data} options={{ responsive: true }} />
+    </CDBContainer>
+  );
+}
+
+export default Chart;
+
+```
+
+## Scatter Chart
+
+![React Bootstrap Scatter Chart](https://imgur.com/BlOe1mV.gif)
+
+```javascript
+import React, { useState } from "react";
+import { Scatter } from "react-chartjs-2";
+import { CDBContainer } from "cdbreact";
+
+const Chart = () => {
+
+  const [data] = useState({
+    labels: ['Bubble'],
+    datasets: [
+      {
+        label: 'My First dataset',
+        fill: false,
+        lineTension: 0.1,
+        backgroundColor: 'rgba(194, 116, 161, 0.5)',
+        borderColor: 'rgb(194, 116, 161)',
+        borderCapStyle: 'butt',
+        borderDash: [],
+        borderDashOffset: 0.0,
+        borderJoinStyle: 'miter',
+        pointBorderColor: 'rgba(194, 116, 161, 0.5)',
+        pointBackgroundColor: '#fff',
+        pointBorderWidth: 1,
+        pointHoverRadius: 5,
+        pointHoverBackgroundColor: 'rgba(75,192,192,1)',
+        pointHoverBorderColor: 'rgba(220,220,220,1)',
+        pointHoverBorderWidth: 2,
+        pointRadius: 1,
+        pointHitRadius: 10,
+        data: [
+          { x: 65, y: 75 },
+          { x: 75, y: 12 },
+          { x: 89, y: 54 },
+          { x: 94, y: 23 },
+          { x: 59, y: 49 },
+          { x: 80, y: 90 },
+          { x: 81, y: 29 },
+          { x: 56, y: 36 },
+          { x: 55, y: 25 },
+          { x: 40, y: 18 },
+        ]
+      }
+    ]
+  });
+
+  return (
+    <CDBContainer>
+      <h3 className="mt-5">Scatter chart</h3>
+      <Scatter data={data} options={{ responsive: true }}/>
+    </CDBContainer>
+  );
+}
+
+export default Chart;
+
+```
+
+## Bubble Chart
+
+![React bootstrap bubble chart](https://imgur.com/7aLsM7g.gif)
+
+```javascript
+import React, { useState } from "react";
+import { Bubble } from "react-chartjs-2";
+import { CDBContainer } from "cdbreact";
+
+const Chart = () => {
+
+  const [data] = useState({
+    labels: ['Bubble'],
+    datasets: [
+      {
+        label: 'My First dataset',
+        fill: false,
+        lineTension: 0.1,
+        backgroundColor: 'rgba(194, 116, 161, 0.5)',
+        borderColor: 'rgb(194, 116, 161)',
+        borderCapStyle: 'butt',
+        borderDash: [],
+        borderDashOffset: 0.0,
+        borderJoinStyle: 'miter',
+        pointBorderColor: 'rgba(194, 116, 161, 0.5)',
+        pointBackgroundColor: '#fff',
+        pointBorderWidth: 1,
+        pointHoverRadius: 5,
+        pointHoverBackgroundColor: 'rgba(75,192,192,1)',
+        pointHoverBorderColor: 'rgba(220,220,220,1)',
+        pointHoverBorderWidth: 2,
+        pointRadius: 1,
+        pointHitRadius: 10,
+        data: [
+          { x: 65, y: 75 },
+          { x: 75, y: 12 },
+          { x: 89, y: 54 },
+          { x: 94, y: 23 },
+          { x: 59, y: 49 },
+          { x: 80, y: 90 },
+          { x: 81, y: 29 },
+          { x: 56, y: 36 },
+          { x: 55, y: 25 },
+          { x: 40, y: 18 },
+        ]
+      }
+    ]
+  });
+
+  return (
+      <CDBContainer>
+        <h3 className="mt-5">Bubble chart</h3>
+        <Bubble data={data} options={{ responsive: true }} />
+      </CDBContainer>
+  );
+}
+
+export default Chart;
+
+```
+
+
+## Bar Chart
+
+![React bootstrap bar chart](https://imgur.com/8zqswzF.gif)
+
+```javascript
+import React, { useState } from "react";
+import { Bar } from "react-chartjs-2";
+import { CDBContainer } from "cdbreact";
+
+const Chart = () => {
+
+  const [data] = useState({
+    labels: [
+      "Eating",
+      "Drinking",
+      "Sleeping",
+      "Designing",
+      "Coding",
+      "Cycling",
+      "Running",
+    ],
+    datasets: [
+      {
+        label: "My First dataset",
+        backgroundColor: "rgba(194, 116, 161, 0.5)",
+        borderColor: "rgb(194, 116, 161)",
+        data: [65, 59, 90, 81, 56, 55, 40],
+      },
+      {
+        label: "My Second dataset",
+        backgroundColor: "rgba(71, 225, 167, 0.5)",
+        borderColor: "rgb(71, 225, 167)",
+        data: [28, 48, 40, 19, 96, 27, 100],
+      },
+    ],
+  })
+
+  return (
+      <CDBContainer>
+        <h3 className="mt-5">Bar chart</h3>
+        <Bar data={data} options={{ responsive: true }} />
+      </CDBContainer>
+  );
+}
+
+export default Chart;
+
+```
+
+## Horizontal Bar Chart
+
+![React bootstrap horizontal bar chart](https://imgur.com/ldHGhNw.gif)
+
+```javascript
+import React, { useState } from "react";
+import { HorizontalBar } from "react-chartjs-2";
+import { CDBContainer } from "cdbreact";
+
+const Chart = () => {
+
+  const [data] = useState({
+    labels: [
+      "Eating",
+      "Drinking",
+      "Sleeping",
+      "Designing",
+      "Coding",
+      "Cycling",
+      "Running",
+    ],
+    datasets: [
+      {
+        label: "My First dataset",
+        backgroundColor: "rgba(194, 116, 161, 0.5)",
+        borderColor: "rgb(194, 116, 161)",
+        data: [65, 59, 90, 81, 56, 55, 40],
+      },
+      {
+        label: "My Second dataset",
+        backgroundColor: "rgba(71, 225, 167, 0.5)",
+        borderColor: "rgb(71, 225, 167)",
+        data: [28, 48, 40, 19, 96, 27, 100],
+      },
+    ],
+  })
+
+  return (
+    
+      <CDBContainer>
+        <h3 className="mt-5">Horizontal Bar chart</h3>
+        <HorizontalBar data={data} options={{ responsive: true }}/>
+      </CDBContainer>
+      
+  );
+}
+
+export default Chart;
+
+```
+
+## Dynamically Refreshed Bar Chart
+
+![React bootstrap dynamically refreshed bar chart](https://imgur.com/HA9U93y.gif)
+
+```javascript
+import React, { useState, useEffect } from "react";
+import { Bar } from "react-chartjs-2";
+import { CDBContainer } from "cdbreact";
+
+const Chart = () => {
+
+  const [data, setData] = useState({
+    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    datasets: [
+      {
+        label: 'My First dataset',
+        fill: false,
+        lineTension: 0.1,
+        backgroundColor: 'rgba(194, 116, 161, 0.5)',
+        borderColor: 'rgb(194, 116, 161)',
+        borderCapStyle: 'butt',
+        borderDash: [],
+        borderDashOffset: 0.0,
+        borderJoinStyle: 'miter',
+        pointBorderColor: 'rgba(75,192,192,1)',
+        pointBackgroundColor: '#fff',
+        pointBorderWidth: 1,
+        pointHoverRadius: 5,
+        pointHoverBackgroundColor: 'rgba(71, 225, 167, 0.5)',
+        pointHoverBorderColor: 'rgb(71, 225, 167)',
+        pointHoverBorderWidth: 2,
+        pointRadius: 1,
+        pointHitRadius: 10,
+        data: [65, 59, 80, 81, 56, 55, 40]
+      }
+    ]
+  });
+  
+  useEffect(() => {
+
+    setInterval(function(){
+      var oldDataSet = data.datasets[0];
+      var newData = [];
+
+      for(var x=0; x< data.labels.length; x++){
+        newData.push(Math.floor(Math.random() * 100));
+      }
+
+      var newDataSet = {
+        ...oldDataSet
+      };
+
+      newDataSet.data = newData;
+
+      var newState = {
+        ...data,
+        datasets: [newDataSet]
+      };
+
+      setData(newState);
+    }, 5000);
+
+  }, [])
+
+  return (
+    
+      <CDBContainer>
+        <h3 className="mt-5">Dynamicly Refreshed Bar chart</h3>
+        <Bar data={data} options={{ responsive: true }} />
+      </CDBContainer>
+      
+  );
+}
+
+export default Chart;
+
+```
+
+## Pie Chart
+
+![React bootstrap pie chart](https://imgur.com/cRrFtIE.gif)
+
+```javascript
+import React, { useState } from "react";
+import { Pie } from "react-chartjs-2";
+import { CDBContainer } from "cdbreact";
+
+const Chart = () => {
+
+  const [data] = useState({
+    labels: [
+      "Eating",
+      "Drinking",
+      "Sleeping",
+      "Designing",
+      "Coding",
+      "Cycling",
+      "Running",
+    ],
+    datasets: [
+      {
+        label: "My First dataset",
+        backgroundColor: "rgba(194, 116, 161, 0.5)",
+        borderColor: "rgb(194, 116, 161)",
+        data: [65, 59, 90, 81, 56, 55, 40],
+      },
+      {
+        label: "My Second dataset",
+        backgroundColor: "rgba(71, 225, 167, 0.5)",
+        borderColor: "rgb(71, 225, 167)",
+        data: [28, 48, 40, 19, 96, 27, 100],
+      },
+    ],
+  })
+
+  return (
+    <CDBContainer>
+      <h3 className="mt-5">Pie chart</h3>
+      <Pie data={data} options={{ responsive: true }} />
+    </CDBContainer>
+  );
+}
+
+export default Chart;
+
+```
+
+## Doughnut Chart
+
+![React bootstrap doughnut chart](https://imgur.com/BzCOS7U.gif)
+
+```javascript
+import React, { useState } from "react";
+import { Doughnut } from "react-chartjs-2";
+import { CDBContainer } from "cdbreact";
+
+const Chart = () => {
+
+  const [data] = useState({
+    labels: [
+      "Eating",
+      "Drinking",
+      "Sleeping",
+      "Designing",
+      "Coding",
+      "Cycling",
+      "Running",
+    ],
+    datasets: [
+      {
+        label: "My First dataset",
+        backgroundColor: "rgba(194, 116, 161, 0.5)",
+        borderColor: "rgb(194, 116, 161)",
+        data: [65, 59, 90, 81, 56, 55, 40],
+      },
+      {
+        label: "My Second dataset",
+        backgroundColor: "rgba(71, 225, 167, 0.5)",
+        borderColor: "rgb(71, 225, 167)",
+        data: [28, 48, 40, 19, 96, 27, 100],
+      },
+    ],
+  })
+
+  return (
+    <CDBContainer>
+      <h3 className="mt-5">Doughnut chart</h3>
+      <Doughnut data={data} options={{ responsive: true }} />
+    </CDBContainer>
+  );
+}
+
+export default Chart;
+
+```
+
+## Dynamically Refreshed Doughnut Chart
+
+![React bootstrap dynamically refreshed doughnut chart](https://imgur.com/Gx1LcLU.gif)
+
+```javascript
+import React, { useState, useEffect } from "react";
+import { Doughnut } from "react-chartjs-2";
+import { CDBContainer } from "cdbreact";
+
+const Chart = () => {
+
+  const [data, setData] = useState({
+    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    datasets: [
+      {
+        label: 'My First dataset',
+        fill: false,
+        lineTension: 0.1,
+        backgroundColor: 'rgba(194, 116, 161, 0.5)',
+        borderColor: 'rgb(194, 116, 161)',
+        borderCapStyle: 'butt',
+        borderDash: [],
+        borderDashOffset: 0.0,
+        borderJoinStyle: 'miter',
+        pointBorderColor: 'rgba(75,192,192,1)',
+        pointBackgroundColor: '#fff',
+        pointBorderWidth: 1,
+        pointHoverRadius: 5,
+        pointHoverBackgroundColor: 'rgba(71, 225, 167, 0.5)',
+        pointHoverBorderColor: 'rgb(71, 225, 167)',
+        pointHoverBorderWidth: 2,
+        pointRadius: 1,
+        pointHitRadius: 10,
+        data: [65, 59, 80, 81, 56, 55, 40]
+      }
+    ]
+  });
+  
+  useEffect(() => {
+
+    setInterval(function(){
+      var oldDataSet = data.datasets[0];
+      var newData = [];
+
+      for(var x=0; x< data.labels.length; x++){
+        newData.push(Math.floor(Math.random() * 100));
+      }
+
+      var newDataSet = {
+        ...oldDataSet
+      };
+
+      newDataSet.data = newData;
+
+      var newState = {
+        ...data,
+        datasets: [newDataSet]
+      };
+
+      setData(newState);
+    }, 5000);
+
+  }, [])
+
+  return (
+    <CDBContainer>
+      <h3 className="mt-5">Dynamicly Refreshed Doughnut chart</h3>
+      <Doughnut data={data} options={{ responsive: true }} />
+    </CDBContainer>
+  );
+}
+
+export default Chart;
+
+```
+
+## Polar Chart
+
+![React bootstrap pie chart](https://imgur.com/dk13E08.gif)
+
+```javascript
+import React, { useState } from "react";
+import { Polar } from "react-chartjs-2";
+import { CDBContainer } from "cdbreact";
+
+const Chart = () => {
+
+  const [data] = useState({
+    labels: [
+      "Eating",
+      "Drinking",
+      "Sleeping",
+      "Designing",
+      "Coding",
+      "Cycling",
+      "Running",
+    ],
+    datasets: [
+      {
+        label: "My First dataset",
+        backgroundColor: "rgba(194, 116, 161, 0.5)",
+        borderColor: "rgb(194, 116, 161)",
+        data: [65, 59, 90, 81, 56, 55, 40],
+      },
+      {
+        label: "My Second dataset",
+        backgroundColor: "rgba(71, 225, 167, 0.5)",
+        borderColor: "rgb(71, 225, 167)",
+        data: [28, 48, 40, 19, 96, 27, 100],
+      },
+    ],
+  })
+
+  return (
+    <CDBContainer>
+      <h3 className="mt-5">Polar chart</h3>
+      <Polar data={data} options={{ responsive: true }} />
+    </CDBContainer>
+  );
+}
+
+export default Chart;
+
+```
+
+## Radar Chart
+
+![React bootstrap radar chart](https://imgur.com/rTzZkzJ.gif)
+
+```javascript
+import React, { useState } from "react";
+import { Radar } from "react-chartjs-2";
+import { CDBContainer } from "cdbreact";
+
+const Chart = () => {
+
+  const [data] = useState({
+    labels: [
+      "Eating",
+      "Drinking",
+      "Sleeping",
+      "Designing",
+      "Coding",
+      "Cycling",
+      "Running",
+    ],
+    datasets: [
+      {
+        label: "My First dataset",
+        backgroundColor: "rgba(194, 116, 161, 0.5)",
+        borderColor: "rgb(194, 116, 161)",
+        data: [65, 59, 90, 81, 56, 55, 40],
+      },
+      {
+        label: "My Second dataset",
+        backgroundColor: "rgba(71, 225, 167, 0.5)",
+        borderColor: "rgb(71, 225, 167)",
+        data: [28, 48, 40, 19, 96, 27, 100],
+      },
+    ],
+  })
+
+  return (
+      <CDBContainer>
+        <h3 className="mt-5">Radar chart</h3>
+        <Radar data={data} options={{ responsive: true }} />
+      </CDBContainer>
+  );
+}
+
+export default Chart;
+
+```

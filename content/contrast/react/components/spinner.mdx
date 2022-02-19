@@ -1,0 +1,119 @@
+---
+title: "Spinner"
+metaTitle: "Spinner Component for React Bootstrap"
+metaDescription: "
+React Bootstrap Spinner is an animation that helps improve the user experience by keeping visitors engaged while the page is loading."
+
+---
+
+import React from "react";
+
+# React Bootstrap Spinner
+
+
+React Bootstrap Spinner is an animation that helps improve the user experience by keeping visitors engaged while the page is loading.
+
+## Importing the React Bootstrap Spinner Component
+
+You import `CDBSpinner` into your project to use the Contrast React Bootstrap Spinner component.
+
+```javascript
+import { CDBSpinner } from "cdbreact";
+```
+
+## Default Spinner
+
+The `CDBSpinner` component takes in characteristics like danger and success, which are 'color' prop values, to give the spinner a background color.
+
+<div class="container d-flex">
+  <div class="spinner text-primary">loading...</div>
+  <div class="spinner text-danger">loading...</div>
+  <div class="spinner text-success">loading...</div>
+  <div class="spinner text-warning">loading...</div>
+  <div class="spinner text-info">loading...</div>
+  <div class="spinner">loading...</div>
+  <div class="spinner text-secondary">loading...</div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBSpinner, CDBContainer } from "cdbreact";
+
+export const Spinner = () => {
+  return (
+    <CDBContainer>
+          <CDBSpinner />
+          <CDBSpinner danger />
+          <CDBSpinner success />
+          <CDBSpinner warning />
+          <CDBSpinner info />
+          <CDBSpinner dark />
+          <CDBSpinner secondary />
+    </CDBContainer>
+  );
+};
+```
+## Multicolor Spinner
+
+
+To give your spinner multiple colors, use the `multicolor` attribute.
+
+<div class="container">
+  <div class="spinner spinner-muilticolor">loading...</div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBSpinner, CDBContainer } from "cdbreact";
+
+export const Spinner = () => {
+  return (
+    <CDBContainer>
+          <CDBSpinner multicolor />
+    </CDBContainer>
+  );
+};
+```
+
+## Size Variations
+
+Use the `size` attribute to indicate how big or small your spinner should be.
+            
+<div class="container d-flex">
+  <div class="spinner spinner-lg text-primary">loading...</div>
+  <div class="spinner text-secondary">loading...</div>
+  <div class="spinner spinner-sm text-success">loading...</div>
+</div>
+
+```javascript
+import React from "react";
+import { CDBSpinner, CDBContainer } from "cdbreact";
+
+export const Spinner = () => {
+  return (
+    <CDBContainer>
+          <CDBSpinner size="big" />
+          <CDBSpinner secondary />
+          <CDBSpinner success size="small" />
+    </CDBContainer>
+  );
+};
+```
+
+## API Reference: Contrast React Bootstrap Spinner Props
+
+This section will expand on the props you'll be using with the Contrast React Bootstrap Spinner component. You'll learn what these props do, how to utilize them, and what their default values are.
+
+The table below details the `CDBSpinner 's ` other prop selections.
+
+| Name            | Type        | Default      |   Description| Example      |
+| :------------- | :----------: | -----------: | :----------: | -----------: |
+| className      | String       | Adds custom classes             |Adds custom classes	      |     <CDBSpinner className="myClass" ... />  |
+| tag            | String       | div          | Changes default input tag | <CDBSpinner tag="input" ... />  |
+| size           | String       |              | Changes the spinner's size. Choose one of the following keywords: 'large' or'small'. | <CDBSpinner size="big" ... />  |
+| success        | Boolean      | false        | Changes the color of the spinner to green | <CDBSpinner success .../>  |
+| secondary      | Boolean      | false        | Changes the color of the spinner to purple| <CDBSpinner secondary .../>  |
+| dark           | Boolean      | false        | Changes the color of the spinner to black | <CDBSpinner dark .../>  |
+| info           | Boolean      | false        | Changes the color of the spinner to teal | <CDBSpinner info .../>  |
+| danger         | Boolean      | false        | Changes the color of the spinner to red | <CDBSpinner danger .../>  |
+| warning        | Boolean      | false        | Changes the color of the spinner to yellow | <CDBSpinner warning .../>  |
