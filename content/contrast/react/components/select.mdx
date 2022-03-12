@@ -1,11 +1,8 @@
 ---
-title: "Select"
-metaTitle: "Select Component for React Bootstrap"
-metaDescription: "React Bootstrap Select is a very useful component that the `↑` and `↓` arrow keys can be used to browse through options and the `↵` key to select the required option (works for stateful select)."
-
----
-
-import React from "react";
+title: 'Select'
+metaTitle: 'Select Component for React Bootstrap'
+metaDescription: 'React Bootstrap Select is a very useful component that the `↑` and `↓` arrow keys can be used to browse through options and the `↵` key to select the required option (works for stateful select).'
+---import React from 'react';
 
 # React Bootstrap Select
 
@@ -17,11 +14,11 @@ React Bootstrap Select is a very useful component that the `↑` and `↓` arrow
 
 For you to use the React Bootstrap Select components, you will need to import `CDBSelect` into your project.
 
-```javascript
-import { CDBSelect } from "cdbreact";
+```js
+import { CDBSelect } from 'cdbreact';
 ```
 
-## CDB Select 
+## CDB Select
 
 The `CDBSelect` prop takes in an `option` prop whose value is an array of different user options.
 
@@ -34,29 +31,29 @@ The `CDBSelect` prop takes in an `option` prop whose value is an array of differ
   </select>
 </div>
 
-```javascript
-import React, { useState } from "react";
-import { CDBSelect, CDBContainer } from "cdbreact";
+```js
+import React, { useState } from 'react';
+import { CDBSelect, CDBContainer } from 'cdbreact';
 
 export const Select = () => {
-const [option] = useState([
+  const [option] = useState([
     {
-      text: "Option 1",
-      value: "1",
+      text: 'Option 1',
+      value: '1',
     },
     {
-      text: "Option 2",
-      value: "2",
+      text: 'Option 2',
+      value: '2',
     },
     {
-      text: "Option 3",
-      value: "3",
+      text: 'Option 3',
+      value: '3',
     },
   ]);
 
   return (
     <CDBContainer>
-        <CDBSelect options={option} selected="Choose an option"/>
+      <CDBSelect options={option} selected="Choose an option" />
     </CDBContainer>
   );
 };
@@ -68,9 +65,9 @@ This section will elaborate on the props available with the Contrast React Boots
 
 You can check other props options of the `CDBSelect` on the table below.
 
-| Name            | Type        | Default      |   Description| Example      |
-| :------------- | :----------: | -----------: | :----------: | -----------: |
-| className      | String       | Adds custom classes             |Adds custom classes	      |     <CDBSelect className="myClass" ... />  |
-| tag            | String       | div          | Changes default tag | <CDBSelect tag="input" ... />  |
-| selected       | String       |              | Set default select text content. | <CDBSelect2 selected="Choose one" ... />  |
-| options        | Array of Objects |              | Sets options array as source of data. This property is used in alternative `Select****2` version. | <CDBSelect2 options={options}" ... />  |
+| Name      |       Type       |             Default |                                            Description                                            |                                  Example |
+| :-------- | :--------------: | ------------------: | :-----------------------------------------------------------------------------------------------: | ---------------------------------------: |
+| className |      String      | Adds custom classes |                                        Adds custom classes                                        |    <CDBSelect className="myClass" ... /> |
+| tag       |      String      |                 div |                                        Changes default tag                                        |            <CDBSelect tag="input" ... /> |
+| selected  |      String      |                     |                                 Set default select text content.                                  | <CDBSelect2 selected="Choose one" ... /> |
+| options   | Array of Objects |                     | Sets options array as source of data. This property is used in alternative `Select****2` version. |    <CDBSelect2 options={options}" ... /> |

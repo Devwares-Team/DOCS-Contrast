@@ -119,7 +119,7 @@ Use the `height` property to customize your progress bar height.
 
 ###### Script
 
-```javascript
+```js
     <script src="../build/cdbbootstrap.js"></script>
     <script>
       [].slice

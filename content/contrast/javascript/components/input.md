@@ -12,7 +12,8 @@ Create an input field in your project by using the `input` element. Next, we uti
 
 ![Bootstrap Input Default](./images/input1.png)
 
-###### html
+
+<inputExample1 />
 
 ```html
 <div class="cs-form">

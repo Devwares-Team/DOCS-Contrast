@@ -313,7 +313,7 @@ The `hoverColor` property adds a hover effect to your choose options.
 
 ###### Script
 
-```javascript
+```js
     <script>
       const select = document.querySelectorAll('.select2')
       for (let i = 0; i < select.length; i++) {

@@ -8,7 +8,6 @@ metaDescription: "Users can interact with your website using the React Bootstrap
 import React from "react";
 import {Link} from "gatsby";
 
-FIX THIS
 
 # React Bootstrap Button
 
@@ -18,7 +17,7 @@ Users can interact with your website using the React Bootstrap button. In terms 
 
 You begin by importing the CDBButton component into your project to use the React Bootstrap Button component.
 
-```javascript
+```js
 import { CDBBtn } from "cdbreact";
 ```
 
@@ -26,30 +25,22 @@ import { CDBBtn } from "cdbreact";
 
 The `color` prop affects the background color of the button.
 
-<div class="container">
-  <button class="btn btn-primary">Primary</button>
-  <button class="btn btn-secondary">Secondary</button>
-  <button class="btn btn-success">Success</button>
-  <button class="btn btn-danger">Danger</button>
-  <button class="btn btn-dark">Dark</button>
-  <button class="btn btn-warning">Warning</button>
-  <button class="btn btn-info">Info</button>
-</div>
+<buttonExample1 />
 
-```javascript
+```js
 import React from "react";
 import { CDBBtn, CDBContainer } from "cdbreact";
 
 export const Button = () => {
   return (
     <CDBContainer>
-          <CDBBtn color="primary">Primary</CDBBtn>
-          <CDBBtn color="secondary">Secondary</CDBBtn>
-          <CDBBtn color="success">Success</CDBBtn>
-          <CDBBtn color="danger">Danger</CDBBtn>
-          <CDBBtn color="dark">Dark</CDBBtn>
-          <CDBBtn color="warning">Warning</CDBBtn>
-          <CDBBtn color="info">Info</CDBBtn>
+      <CDBBtn color="primary">Primary</CDBBtn>
+      <CDBBtn color="secondary">Secondary</CDBBtn>
+      <CDBBtn color="danger">Danger</CDBBtn>
+      <CDBBtn color="success">Success</CDBBtn>
+      <CDBBtn color="dark">Dark</CDBBtn>
+      <CDBBtn color="warning">Warning</CDBBtn>
+      <CDBBtn color="info">Info</CDBBtn>
     </CDBContainer>
   );
 };
@@ -59,44 +50,36 @@ export const Button = () => {
 
 The 'circle' attribute is used on the React Bootstrap buttons to make them more rounded.
 
-<div class="container">
-  <button class="btn btn-rounded btn-primary">Primary</button>
-  <button class="btn btn-rounded btn-secondary">Secondary</button>
-  <button class="btn btn-rounded btn-success">Success</button>
-  <button class="btn btn-rounded btn-danger">Danger</button>
-  <button class="btn btn-rounded btn-dark">Dark</button>
-  <button class="btn btn-rounded btn-warning">Warning</button>
-  <button class="btn btn-rounded btn-info">Info</button>
-</div>
+<buttonExample2 />
 
-```javascript
+```js
 import React from "react";
 import { CDBBtn, CDBContainer } from "cdbreact";
 
 export const Button = () => {
   return (
     <CDBContainer>
-          <CDBBtn color="primary" circle>
-            Primary
-          </CDBBtn>
-          <CDBBtn color="secondary" circle>
-            Secondary
-          </CDBBtn>
-          <CDBBtn color="success" circle>
-            Success
-          </CDBBtn>
-          <CDBBtn color="danger" circle>
-            Danger
-          </CDBBtn>
-          <CDBBtn color="dark" circle>
-            Dark
-          </CDBBtn>
-          <CDBBtn color="warning" circle>
-            Warning
-          </CDBBtn>
-          <CDBBtn color="info" circle>
-            Info
-          </CDBBtn>
+      <CDBBtn color="primary" circle>
+        Primary
+      </CDBBtn>
+      <CDBBtn color="secondary" circle>
+        Secondary
+      </CDBBtn>
+      <CDBBtn color="danger" circle>
+        Danger
+      </CDBBtn>
+      <CDBBtn color="success" circle>
+        Success
+      </CDBBtn>
+      <CDBBtn color="dark" circle>
+        Dark
+      </CDBBtn>
+      <CDBBtn color="warning" circle>
+        Warning
+      </CDBBtn>
+      <CDBBtn color="info" circle>
+        Info
+      </CDBBtn>
     </CDBContainer>
   );
 };
@@ -105,18 +88,9 @@ export const Button = () => {
 
 To give your button merely an outline, use the 'outline' button.
 
-<div class="container">
-  <button class="btn btn-outline-primary">Primary</button>
-  <button class="btn btn-outline-secondary">Secondary</button>
-  <button class="btn btn-outline-success">Success</button>
-  <button class="btn btn-outline-danger">Danger</button>
-  <button class="btn btn-outline-dark">Dark</button>
-  <button class="btn btn-outline-warning">Warning</button>
-  <button class="btn btn-outline-info">Info</button>
-</div>
-  
+ <buttonExample3 /> 
 
-```javascript
+```js
 import React from "react";
 import { CDBBtn, CDBContainer } from "cdbreact";
 
@@ -163,7 +137,7 @@ To create the circular outline buttons, we'll use the React Bootstrap components
   <button class="btn btn-rounded btn-outline-info">Info</button>
 </div>
 
-```javascript
+```js
 import React from "react";
 import { CDBBtn, CDBContainer } from "cdbreact";
 
@@ -210,7 +184,7 @@ Give the 'CDBBtn' component the 'flat' attribute to create buttons without butto
   <button class="btn btn-flat btn-info">Info</button>
 </div>
 
-```javascript
+```js
 import React from "react";
 import { CDBBtn, CDBContainer } from "cdbreact";
 
@@ -259,7 +233,7 @@ Use the 'label' prop to specify the location of your button's text.
   <button style="width:200px;" class="btn text-left btn-info">Info</button>
 </div>
 
-```javascript
+```js
 import React from "react";
 import { CDBBtn, CDBContainer } from "cdbreact";
 
@@ -294,7 +268,7 @@ Been a pro component, you can use it to make the large end of your text big.
   <button style="width:300px; height:100px;" class="btn d-flex align-items-start justify-content-center btn-info">Info</button>
 </div>
 
-```javascript
+```js
 import React from "react";
 import { CDBBtn, CDBContainer } from "cdbreact";
 
@@ -322,7 +296,7 @@ export const Button = () => {
   <button class="btn btn-block btn-dark">Dark</button>
 </div>
 
-```javascript
+```js
 import React from "react";
 import { CDBBtn, CDBContainer } from "cdbreact";
 
@@ -368,7 +342,7 @@ In this tutorial we also use the [CDBIcon](https://www.devwares.com/docs/contras
   </button>
 </div>
 
-```javascript
+```js
 import React from "react";
 import { CDBBtn, CDBIcon, CDBContainer } from "cdbreact";
 
@@ -403,7 +377,7 @@ Use the'size' attribute to specify how big or small your button should be.
   </button>
 </div>
 
-```javascript
+```js
 import React from "react";
 import { CDBBtn, CDBContainer } from "cdbreact";
 
@@ -431,7 +405,7 @@ To disable your button, use the 'disabled' property.
   </button>
 </div>
 
-```javascript
+```js
 import React from "react";
 import { CDBBtn, CDBContainer } from "cdbreact";
 

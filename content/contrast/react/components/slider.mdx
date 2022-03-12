@@ -1,49 +1,45 @@
 ---
-title: "Slider"
-metaTitle: "Slider Component for React Bootstrap"
+title: 'Slider'
+metaTitle: 'Slider Component for React Bootstrap'
 metaDescription: "The React Bootstrap Slider simplifies controlling the volume of sound on a video or the progress of a video you're watching extremely simpler"
-
----
-
-import React from "react";
+---import React from 'react';
 
 # React Bootstrap Slider
 
 The React Bootstrap Slider is a component that allows users to choose a value from a set of options on a sliding bar. The React Bootstrap Slider simplifies controlling the volume of sound on a video or the progress of a video you're watching extremely simpler.
 
-
 Applications of a React Bootstrap slider:
 
-* Brightness
-* Volume increase/decrease
-* Video Progression.
+- Brightness
+- Volume increase/decrease
+- Video Progression.
 
 ## Importing the React Bootstrap Slider Component
 
 Import `CDBSlider` into your project to use the Contrast React Bootstrap Slider component.
 
-```javascript
-import { CDBSlider } from "cdbreact";
+```js
+import { CDBSlider } from 'cdbreact';
 ```
 
-## Default Slider 
+## Default Slider
 
 <div class="container">
   <input type="range" class="custom-range" id="customRange1" min="0" max="100" value="20" />
 </div>
 
-```javascript
-import React from "react";
-import { CDBSlider, CDBContainer } from "cdbreact";
+```js
+import React from 'react';
+import { CDBSlider, CDBContainer } from 'cdbreact';
 
 const Slider = () => {
   return (
     <CDBContainer>
-     <CDBSlider value={value} setValue={setValue} style={{ width: "100%" }} />
+      <CDBSlider value={value} setValue={setValue} style={{ width: '100%' }} />
     </CDBContainer>
   );
 };
-export default  Slider;
+export default Slider;
 ```
 
 ## API Reference: Contrast React Bootstrap Slider Props
@@ -52,20 +48,20 @@ This section will elaborate on the props available with the React Bootstrap Slid
 
 Other `CDBSlider` prop options are included in the table below.
 
-| Name            | Type        | Default      |   Description| Example      |
-| :------------- | :----------: | -----------: | :----------: | -----------: |
-| className      | String       |              |Adds custom classes	      |     <CDBSlider className="myClass" ... />  |
-| value      | Number or String       |              | Slider's value - useful for additional data binding and edge use-cases	|     <CDBSlider value={49} ... />  |
-| tag            | String       | div          | Changes default input tag | <CDBSlider tag="input" ... />  |
-| disable        | Boolean      | false        | Disables Slider component | <CDBSlider disabled .../>  |
-| min            | Number       |  0         | Sets the lowest Slider's value  | <CDBSlider min={10} ... />  |
-| max            | Number       |  100         | Sets the highest Slider's value  | <CDBSlider max={70} ... />  |
-| step           | Number       |  1         | Specifies the interval between valid values in a number-based input.  | <CDBSlider step={0.1} ... />  |
-| size            | String       |           | Changes size of slider component. Choose from `lg` and `sm` | <CDBSlider size="sm" ... />  |
-| variant            | String       | dark          |  	Changes default slider color; available values: `[blue, red, teal, dark-grey, dark, blue-grey, amber, purple]` | <CDBSlider variant="red" ... />  |
-| onChange            | function       |           | Returns slider value, on onChange event | <CDBSlider onChange={handleChange} ... />  |
-| onAfterChange            | function       |           | executes a function after Change event | <CDBSlider onAfterChange={handleAfterChange} ... />  |
-| tooltip            | String       |          | Displays the current value of the slider. Can choose from `auto`, `on` or `off` | <CDBSlider tooltip="on" ... />  |
-| tooltipPlacement          | String       |          | Selects where to place tooltip. Can choose from `top` or `bottom` | <CDBSlider tooltipPlacement="top" ... />  |
-| tooltipLabel          | function       |          | Sets the label of the tooltip | <CDBSlider tooltipLabel={yourFunction} ... />  |
-| tooltipStyle          | Object       |          | Customize the style of the tooltip | <CDBSlider tooltipStyle={{ color: "red"}} ... />  |
+| Name             |       Type       | Default |                                                  Description                                                   |                                             Example |
+| :--------------- | :--------------: | ------: | :------------------------------------------------------------------------------------------------------------: | --------------------------------------------------: |
+| className        |      String      |         |                                              Adds custom classes                                               |               <CDBSlider className="myClass" ... /> |
+| value            | Number or String |         |                     Slider's value - useful for additional data binding and edge use-cases                     |                        <CDBSlider value={49} ... /> |
+| tag              |      String      |     div |                                           Changes default input tag                                            |                       <CDBSlider tag="input" ... /> |
+| disable          |     Boolean      |   false |                                           Disables Slider component                                            |                           <CDBSlider disabled .../> |
+| min              |      Number      |       0 |                                         Sets the lowest Slider's value                                         |                          <CDBSlider min={10} ... /> |
+| max              |      Number      |     100 |                                        Sets the highest Slider's value                                         |                          <CDBSlider max={70} ... /> |
+| step             |      Number      |       1 |                      Specifies the interval between valid values in a number-based input.                      |                        <CDBSlider step={0.1} ... /> |
+| size             |      String      |         |                          Changes size of slider component. Choose from `lg` and `sm`                           |                         <CDBSlider size="sm" ... /> |
+| variant          |      String      |    dark | Changes default slider color; available values: `[blue, red, teal, dark-grey, dark, blue-grey, amber, purple]` |                     <CDBSlider variant="red" ... /> |
+| onChange         |     function     |         |                                    Returns slider value, on onChange event                                     |           <CDBSlider onChange={handleChange} ... /> |
+| onAfterChange    |     function     |         |                                     executes a function after Change event                                     | <CDBSlider onAfterChange={handleAfterChange} ... /> |
+| tooltip          |      String      |         |                Displays the current value of the slider. Can choose from `auto`, `on` or `off`                 |                      <CDBSlider tooltip="on" ... /> |
+| tooltipPlacement |      String      |         |                       Selects where to place tooltip. Can choose from `top` or `bottom`                        |            <CDBSlider tooltipPlacement="top" ... /> |
+| tooltipLabel     |     function     |         |                                         Sets the label of the tooltip                                          |       <CDBSlider tooltipLabel={yourFunction} ... /> |
+| tooltipStyle     |      Object      |         |                                       Customize the style of the tooltip                                       |    <CDBSlider tooltipStyle={{ color: "red"}} ... /> |

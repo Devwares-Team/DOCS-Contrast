@@ -15,7 +15,7 @@ The `↑` and `↓` arrow keys can be used to traverse through options, and the 
 
 ######Script
 
-```Javascript
+```js
     <script defer type="module">
       var demo1 = new CDBAutocomplete({
         selector: '#cdb-autocomplete',

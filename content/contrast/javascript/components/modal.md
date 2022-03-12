@@ -468,7 +468,7 @@ It is extremely adaptable, allowing you to easily change the size, position, and
 
 ###### Script
 
-```javascript
+```js
    <script type="text/javascript" src="../js/jquery.min.js"></script>
     <script
       type="text/javascript"

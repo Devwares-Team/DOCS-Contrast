@@ -40,7 +40,7 @@ The `src` attribute denotes the location of the material you want to play. The `
 
 ######Script
 
-```Javascript
+```js
     <script>
       new CDB.IFrame(document.querySelector('#cdb-iframe1'));
       new CDB.IFrame(document.querySelector('#cdb-iframe2'));
@@ -67,7 +67,7 @@ Use the id `cdb-iframe2` to include the Contrast Bootstrap 5 Customized Iframe i
 
 ######Script
 
-```Javascript
+```js
     <script>
       new CDB.IFrame(document.querySelector('#cdb-iframe1'));
       new CDB.IFrame(document.querySelector('#cdb-iframe2'));

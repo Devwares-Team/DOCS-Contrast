@@ -5,7 +5,6 @@ metaDescription: "React Bootstrap Collapse is a content toggler component. It's 
 "
 ---
 
-
 # React Bootstrap Collapse
 
 React Bootstrap Collapse is a content toggler component. It's useful for collecting a lot of text and/or visuals into expandable and collapsible pieces.
@@ -16,9 +15,8 @@ Collapse is a tool for displaying and hiding content. Buttons or anchors serve a
 
 Begin by importing 'CDBCollapse' into your project to use the React Bootstrap Collapse component. We'll also use the [CDBBtn](https://www.devwares.com/docs/contrast/react/components/buttons) component in this tutorial, To learn more, see our docs.
 
-
-```javascript
-import { CDBCollapse } from "cdbreact";
+```js
+import { CDBCollapse } from 'cdbreact';
 ```
 
 ## Default Collapse .
@@ -31,18 +29,18 @@ The `toggleCollapse` function toggles between true and false for the `collapseID
 
 ![React Bootstrap Collapse](https://i.imgur.com/PqwJe4o.gif)
 
-```javascript
-import React from "react";
-import { CDBBtn, CDBCollapse, CDBContainer } from "cdbreact";
+```js
+import React from 'react';
+import { CDBBtn, CDBCollapse, CDBContainer } from 'cdbreact';
 
 class Collapse extends Component {
   state = {
-    collapseID: "",
+    collapseID: '',
   };
 
-  toggleCollapse = (collapseID) => () => {
-    this.setState((prevState) => ({
-      collapseID: prevState.collapseID !== collapseID ? collapseID : "",
+  toggleCollapse = collapseID => () => {
+    this.setState(prevState => ({
+      collapseID: prevState.collapseID !== collapseID ? collapseID : '',
     }));
   };
 
@@ -51,31 +49,30 @@ class Collapse extends Component {
       <CDBContainer>
         <div
           style={{
-            margin: "auto",
-            width: "80%",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            minHeight: "100vh",
+            margin: 'auto',
+            width: '80%',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            minHeight: '100vh',
           }}
         >
           <CDBBtn
             color="primary"
-            onClick={this.toggleCollapse("basicCollapse")}
-            style={{ marginBottom: "1rem" }}
+            onClick={this.toggleCollapse('basicCollapse')}
+            style={{ marginBottom: '1rem' }}
           >
             COLLAPSE BUTTON
           </CDBBtn>
           <CDBCollapse id="basicCollapse" isOpen={this.state.collapseID}>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+              dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+              mollit anim id est laborum
             </p>
           </CDBCollapse>
         </div>
@@ -85,21 +82,18 @@ class Collapse extends Component {
 }
 ```
 
-
 # Contrast React Bootstrap Collapse Props
 
 The props you get to use with the React Bootstrap Collapse component will be expanded upon in this section. You'll learn what these props do, how to utilize them in your code, and what their default values are.
 
 Other prop alternatives for the 'CDBCollapse' component are listed in the table below.
 
-
-
-| Name            | Type        | Default      |   Description| Example      |
-| :------------- | :----------: | -----------: | :----------: | -----------: |
-| className      | String       |              |Adds custom classes	      |     <CDBCollapse className="myClass" ... />  |
-| delay          | Number or Object | {show: 350, hide: 350} | Defines how many milliseconds the open/close event are delayed | <CDBCollapse delay={{show: 3000, hide: 7000}} ... />  |
-| disable        | Boolean      | false        | Disables Collapse component | <CDBCollapse disabled .../>  |
-| navbar         | Boolean      | false        | Adds `navbar-collapse` bootstrap class to class name property    |     <CDBCollapse navbar ... />  |
-| isOpen         | String or Boolean |         | Defines if accordion is opened or closed	      |     <CDBCollapse isOpen ... />  |
-| onOpened       | function     |              | Defines the function which fires when Accordion has opened  |     <CDBCollapse onOpened={yourFunction} ... />  |
-| onClosed       | function     |              | Defines the function which fires when Accordion has closed  |     <CDBCollapse onClosed={yourFunction} ... />  |
+| Name      |       Type        |                Default |                          Description                           |                                              Example |
+| :-------- | :---------------: | ---------------------: | :------------------------------------------------------------: | ---------------------------------------------------: |
+| className |      String       |                        |                      Adds custom classes                       |              <CDBCollapse className="myClass" ... /> |
+| delay     | Number or Object  | {show: 350, hide: 350} | Defines how many milliseconds the open/close event are delayed | <CDBCollapse delay={{show: 3000, hide: 7000}} ... /> |
+| disable   |      Boolean      |                  false |                  Disables Collapse component                   |                          <CDBCollapse disabled .../> |
+| navbar    |      Boolean      |                  false | Adds `navbar-collapse` bootstrap class to class name property  |                           <CDBCollapse navbar ... /> |
+| isOpen    | String or Boolean |                        |            Defines if accordion is opened or closed            |                           <CDBCollapse isOpen ... /> |
+| onOpened  |     function      |                        |   Defines the function which fires when Accordion has opened   |          <CDBCollapse onOpened={yourFunction} ... /> |
+| onClosed  |     function      |                        |   Defines the function which fires when Accordion has closed   |          <CDBCollapse onClosed={yourFunction} ... /> |

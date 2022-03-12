@@ -4,44 +4,44 @@ metaTitle: "SmoothScroll Component for React Bootstrap"
 metaDescription: "
 Bootstrap React  smooth scroll is an animated movement from one point on the page to another."
 
----
-
-import React from "react";
-import { Link } from "gatsby";
-import smoothImage from "./images/smoothscroll.png"
+---import React from 'react';
+import { Link } from 'gatsby';
+import smoothImage from './images/smoothscroll.png';
 
 # React Bootstrap SmoothScroll
 
-
-Bootstrap React  smooth scroll is an animated movement from one point on the page to another.
+Bootstrap React smooth scroll is an animated movement from one point on the page to another.
 
 ## Importing the React Bootstrap SmoothScroll Component
 
 Import CDBSmoothScroll into your project to use the Contrast React Bootstrap SmoothScroll component.
 
-```javascript
-import { CDBSmoothScroll } from "cdbreact";
+```js
+import { CDBSmoothScroll } from 'cdbreact';
 ```
 
 ## Default SmoothScroll
 
+<img src={smoothImage} alt="React Bootstrap SmoothScroll" />
 
-<img src={smoothImage} alt="React Bootstrap SmoothScroll"/>
-
-
-```javascript
-import React from "react";
-import { CDBSmoothScroll, CDBContainer } from "cdbreact";
+```js
+import React from 'react';
+import { CDBSmoothScroll, CDBContainer } from 'cdbreact';
 
 export const SmoothScroll = () => {
-
-  const text = `Duis gravida porta mi ut ornare. Maecenas vel leo arcu. Praesent tincidunt est augue, id cursus dolor malesuada sit amet. Nullam vel leo quis purus tempus convallis vitae volutpat sem. Vestibulum blandit sodales aliquam. Aenean mauris erat, iaculis vel suscipit id, fringilla eu mauris. Vivamus sapien nulla, condimentum nec venenatis sit amet, lobortis eu magna. Nulla orci augue, cursus vitae velit nec, consectetur vehicula magna. Phasellus ornare et justo et maximus. In in tortor vitae diam vulputate dictum. Sed egestas scelerisque lacus vel interdum. Curabitur ex elit, semper ut diam ut, imperdiet dapibus arcu. Phasellus eget elit et est gravida ornare.`
+  const text = `Duis gravida porta mi ut ornare. Maecenas vel leo arcu. Praesent tincidunt est augue, id cursus dolor malesuada sit amet. Nullam vel leo quis purus tempus convallis vitae volutpat sem. Vestibulum blandit sodales aliquam. Aenean mauris erat, iaculis vel suscipit id, fringilla eu mauris. Vivamus sapien nulla, condimentum nec venenatis sit amet, lobortis eu magna. Nulla orci augue, cursus vitae velit nec, consectetur vehicula magna. Phasellus ornare et justo et maximus. In in tortor vitae diam vulputate dictum. Sed egestas scelerisque lacus vel interdum. Curabitur ex elit, semper ut diam ut, imperdiet dapibus arcu. Phasellus eget elit et est gravida ornare.`;
 
   return (
     <div className="text-white">
-      <CDBSmoothScroll to="section1" className="p-3 bg-warning mr-3">Section 1</CDBSmoothScroll>
-      <CDBSmoothScroll to="section2" className="p-3 bg-primary mr-3">Section 2</CDBSmoothScroll>
-      <CDBSmoothScroll to="section3"  className="p-3 bg-success">Section 3</CDBSmoothScroll>
+      <CDBSmoothScroll to="section1" className="p-3 bg-warning mr-3">
+        Section 1
+      </CDBSmoothScroll>
+      <CDBSmoothScroll to="section2" className="p-3 bg-primary mr-3">
+        Section 2
+      </CDBSmoothScroll>
+      <CDBSmoothScroll to="section3" className="p-3 bg-success">
+        Section 3
+      </CDBSmoothScroll>
 
       <CDBContainer className="bg-warning p-4 mt-3" id="section1">
         {text}
@@ -60,19 +60,18 @@ export const SmoothScroll = () => {
 ## Disabled state
 
 To disable the SmoothScroll component, simply add the `disabled` boolean property to `CDBSmoothScroll`.
+<CDBContainer>
+  <CDBSmoothScroll to="end" colors="primary" disabled />
+</CDBContainer>
 
-   <CDBContainer>
-            <CDBSmoothScroll to="end" colors="primary" disabled/>
-    </CDBContainer>
-
-```javascript
-import React from "react";
-import { CDBSmoothScroll, CDBContainer } from "cdbreact";
+```js
+import React from 'react';
+import { CDBSmoothScroll, CDBContainer } from 'cdbreact';
 
 export const SmoothScroll = () => {
   return (
     <CDBContainer>
-            <CDBSmoothScroll disabled/>
+      <CDBSmoothScroll disabled />
     </CDBContainer>
   );
 };
@@ -84,8 +83,8 @@ This section will go over the props that come with the Contrast React Bootstrap 
 
 The table below lists extra prop options for the `CDBSmoothScroll`.
 
-| Name            | Type        | Default      |   Description| Example      |
-| :------------- | :----------: | -----------: | :----------: | -----------: |
-| className      | String       | Adds custom classes             |Adds custom classes	      |     <CDBSmoothScroll className="myClass" ... />  |
-| tag            | String       | div          | Changes default input tag | <CDBSmoothScroll tag="input" ... />  |
-| disable        | Boolean      | false        | Disables SmoothScroll component | <CDBSmoothScroll disabled .../>  |
+| Name      |  Type   |             Default |           Description           |                                     Example |
+| :-------- | :-----: | ------------------: | :-----------------------------: | ------------------------------------------: |
+| className | String  | Adds custom classes |       Adds custom classes       | <CDBSmoothScroll className="myClass" ... /> |
+| tag       | String  |                 div |    Changes default input tag    |         <CDBSmoothScroll tag="input" ... /> |
+| disable   | Boolean |               false | Disables SmoothScroll component |             <CDBSmoothScroll disabled .../> |

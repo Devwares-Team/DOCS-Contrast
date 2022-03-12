@@ -1,17 +1,16 @@
 ---
-title: "Accordion"
-metaTitle: "Accordion Component for React Bootstrap"
-metaDescription: "React Bootstrap Accordion is used to toggle large amount of items."
+title: 'Accordion'
+metaTitle: 'Accordion Component for React Bootstrap'
+metaDescription: 'React Bootstrap Accordion is used to toggle large amount of items.'
 ---
 
-import React from "react";
-import accordion1 from "./images/accordiondefault.png";
-import accordion2 from "./images/accordionwithouticon.png";
+import React from 'react';
+import accordion1 from './images/accordiondefault.png';
+import accordion2 from './images/accordionwithouticon.png';
 
 # React Bootstrap Accordion
 
 React Bootstrap Accordion is a UI element that consists of vertically stacked lists that hides and exposes text blocks, pieces of information with a single click. This piece of design element makes for a great user experience as they increase interaction between the user and the website.
-
 
 As a result of this component toggling the React Bootstrap Accordion are useful in websites as they reduce the number of page a user has to scroll through.
 
@@ -21,18 +20,17 @@ As a result of this component toggling the React Bootstrap Accordion are useful 
 - Accordions can be used in pages showcasing the products offered on an online stores.
 - Data Tables can be constructed using the react bootstrap accordion component.
 
-
 ## Importing the React Bootstrap Accordion component
 
-To use the Contrast React Bootstrap Accordion component, you would need to import it into your project. 
+To use the Contrast React Bootstrap Accordion component, you would need to import it into your project.
 
-```javascript
-import { CDBAccordion } from "cdbreact";
+```js
+import { CDBAccordion } from 'cdbreact';
 ```
 
 ## Default Accordion
 
-<img src={accordion1} alt="React Bootstrap Accordion Default"/>
+<img src={accordion1} alt="React Bootstrap Accordion Default" />
 
 The Contrast Bootstrap Accordion component takes in a `data` prop. This `data` prop takes in an array of objects, that holds the content that the accordion is supposed to toggle.
 
@@ -41,7 +39,7 @@ In each of the object present in the `data` array, we have these different prop-
 - `title` : This prop takes in a parameter that defines the title of the accordion section.
 - `content` : This prop holds the content we want in the accordion.
 
-```javascript
+```js
 import React from "react";
 import { CDBAccordion, CDBContainer } from "cdbreact";
 
@@ -72,15 +70,15 @@ export const Accordion = () => {
 };
 ```
 
-The CDBReact Bootstrap Accordion component's 'data' prop receives an object value. This value represents the information that appears in your Accordion. 
+The CDBReact Bootstrap Accordion component's 'data' prop receives an object value. This value represents the information that appears in your Accordion.
 
 ## Accordion without Icon
 
-<img src={accordion2} alt="React Bootstrap Accordion without Icon"/>
+<img src={accordion2} alt="React Bootstrap Accordion without Icon" />
 
 To create an accordion with hidden caret icons, you pass the `hideIcon` attribute to the component.
 
-```javascript
+```js
 import React from "react";
 import { CDBAccordion, CDBContainer } from "cdbreact";
 
@@ -113,17 +111,16 @@ export const Accordion = () => {
 };
 ```
 
-
 # Contrast React Bootstrap Accordion Props
 
 This section will build on your information about the props you get to use with the CDBReact Bootstrap Accordion component. You will find out what these props do, their default values, and how you would use them in your code.
 
 The table below lists the prop options of the `CDBAccordion` component to personalize your Accordion.
 
-| Name            | Type        | Default      |   Description| Example      |
-| :------------- | :----------: | -----------: | :----------: | -----------: |
-| accordionClass | String       | |Adds custom classes	      |     <CDBAccordion accordionClass="myClass" ... />  |
-| accordionHeaderClass | String |              |Adds custom classes for the accordion header|     <CDBAccordion accordionHeaderClass="myHeaderClass" ... />  |
-| accordionBodyClass | String   |              |Adds custom classes for the accordion body|     <CDBAccordion accordionBodyClass="myBodyClass" ... />  |
-| tag            | String       | div          | Changes default Accordion tag | <CDBAccordion tag="Accordion" ... />  |
-| hideIcon       | Boolean      | false        | Hides Accordion icon | <CDBAccordion hideIcon .../>  |
+| Name                 |  Type   | Default |                 Description                  |                                                   Example |
+| :------------------- | :-----: | ------: | :------------------------------------------: | --------------------------------------------------------: |
+| accordionClass       | String  |         |             Adds custom classes              |             <CDBAccordion accordionClass="myClass" ... /> |
+| accordionHeaderClass | String  |         | Adds custom classes for the accordion header | <CDBAccordion accordionHeaderClass="myHeaderClass" ... /> |
+| accordionBodyClass   | String  |         |  Adds custom classes for the accordion body  |     <CDBAccordion accordionBodyClass="myBodyClass" ... /> |
+| tag                  | String  |     div |        Changes default Accordion tag         |                      <CDBAccordion tag="Accordion" ... /> |
+| hideIcon             | Boolean |   false |             Hides Accordion icon             |                              <CDBAccordion hideIcon .../> |

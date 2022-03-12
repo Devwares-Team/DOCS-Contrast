@@ -14,9 +14,10 @@ Bootstrap has a range of button styles, each with its own logical function and a
 
 Giving the buttons the classes `btn` and `btn-primary` (primary designating our button's background color) lets them to use the Contrast Bootstrap button's predefined style.
 
-![Bootstrap Box](./images/buttonbasic.png)
+<buttonExample1 />
 
-###### html
+<!-- ![Bootstrap Box](./images/buttonbasic.png) -->
+
 
 ```html
 <button class="btn btn-primary">Primary</button>
@@ -34,83 +35,71 @@ Giving the buttons the classes `btn` and `btn-primary` (primary designating our 
 
 The class `btn-rounded` provides our Contrast Bootstrap Button a more rounded look.
 
-![Bootstrap Circular Buttons](./images/buttoncircle.png)
+<buttonExample2 />
 
-###### html
 
 ```html
-<button type="button" class="btn btn-rounded btn-primary">
-  Primary
-</button>
-<button type="button" class="btn btn-rounded btn-secondary">
-  Secondary
-</button>
-<button type="button" class="btn btn-rounded btn-success">
-  Success
-</button>
-<button type="button" class="btn btn-rounded btn-danger">
-  Danger
-</button>
-<button type="button" class="btn btn-rounded btn-warning">
-  Warning
-</button>
-<button type="button" class="btn btn-rounded btn-info">Info</button>
-<button type="button" class="btn btn-rounded btn-light">Light</button>
-<button type="button" class="btn btn-rounded btn-dark">Dark</button>
-<button type="button" class="btn btn-rounded btn-link">Link</button>
+
+<button class="btn btn-primary btn-rounded">Primary</button>
+<button class="btn btn-secondary btn-rounded">Secondary</button>
+<button class="btn btn-rounded btn-success">Success</button>
+<button class="btn btn-danger btn-rounded">Danger</button>
+<button  class="btn btn-warning btn-rounded">Warning</button>
+<button class="btn btn-info btn-rounded">Info</button>
+<button class="btn btn-light btn-light btn-rounded">Light</button>
+<button class="btn btn-light btn-dark btn-rounded">Dark</button>
+
 ```
 
 ## Outline Buttons
 
 We use the `class` `btn-outline-primary` to make our buttons have only an outline and no background color. The color of the outline of your button is determined by the last word applied to the class name.
 
-![Bootstrap  Outline Buttons](./images/buttonoutline.png)
+<buttonExample3 />
 
-###### html
 
 ```html
-<button type="button" class="btn btn-outline-primary">Primary</button>
-<button type="button" class="btn btn-outline-secondary">
-  Secondary
-</button>
-<button type="button" class="btn btn-outline-success">Success</button>
-<button type="button" class="btn btn-outline-danger">Danger</button>
-<button type="button" class="btn btn-outline-warning">Warning</button>
-<button type="button" class="btn btn-outline-info">Info</button>
-<button type="button" class="btn btn-outline-light">Light</button>
-<button type="button" class="btn btn-outline-dark">Dark</button>
-<button type="button" class="btn btn-link">Link</button>
+
+<button className="btn btn-outline-primary">Primary</button>
+<button className="btn btn-outline-secondary">Secondary</button>
+<button className="btn btn-outline-success">Success</button>
+<button className="btn btn-outline-danger">Danger</button>
+<button className="btn btn-outline-warning">Warning</button>
+<button className="btn btn-outline-info">Info</button>
+<button className="btn btn-outline-light">Light</button>
+<button className="btn btn-outline-dark">Dark</button>
+
 ```
 
 ## Button Sizes
 
 We can use the terms `btn-sm` (small size buttons), `btn-md` (medium or default sized button), and finally `btn-lg` to express how big or small we want our button to be ( a large sized button).
 
-![Bootstrap Button Sizes](./images/buttonsize.png)
+<buttonExample4 />
 
-###### html
 
 ```html
-<button type="button" class="btn btn-primary btn-lg">Large button</button>
-<button type="button" class="btn btn-secondary btn-md">
-  Normal button
-</button>
-<button type="button" class="btn btn-success btn-sm">
-  Small button
-</button>
+
+<button className="btn btn-danger btn-xl">Xl</button>
+<button className="btn btn-primary btn-lg">Lg</button>
+<button className="btn btn-secondary btn-md">Md</button>
+<button className="btn btn-success btn-sm">Sm</button>
+
 ```
+
+<i/>
 
 ## Buttons with Icons
 
 <a href="/product/bootstrap-contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></a>
 
-![Bootstrap Buttons with Icons](./images/buttonwithicon.png)
+<buttonExample5 />
 
 On our website, we use the `i` element to add icons. We can have icons on our button by nesting a `i` tag in our button.
 
-###### html
 
 ```html
+
 <button type="button" class="btn btn-primary">
   <i class="fa fa-book"></i>
   <span> Primary </span>
@@ -139,7 +128,9 @@ On our website, we use the `i` element to add icons. We can have icons on our bu
   <i class="fa fa-lock"></i>
   <span> Lock </span>
 </button>
+
 ```
+<i/>
 
 ## Block Button
 
@@ -165,4 +156,31 @@ To make our Contrast Bootstrap 5 Button a block element, which means it will tak
 <button type="button" class="btn btn-block btn-light">Light</button>
 <button type="button" class="btn btn-block btn-dark">Dark</button>
 <button type="button" class="btn btn-block btn-link">Link</button>
+
 ```
+
+<i/>
+
+## Button Gradients
+
+<a href="/product/bootstrap-contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></a>
+
+We can customize the styles of our Contrast Bootstrap 5 Buttons to have a gradient background.
+
+
+<buttonExample6 />
+
+```html
+
+<button className="btn btn-gradient-primary">Primary</button>
+<button className="btn btn-gradient-secondary">Secondary</button>
+<button className="btn btn-gradient-success">Success</button>
+<button className="btn btn-gradient-danger">Danger</button>
+<button className="btn btn-gradient-warning">Warning</button>
+<button className="btn btn-gradient-info">Info</button>
+<button className="btn btn-gradient-light">Light</button>
+<button className="btn btn-gradient-dark">Dark</button>
+
+```
+
+<i/>

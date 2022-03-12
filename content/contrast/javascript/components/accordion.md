@@ -21,7 +21,7 @@ Applications of Bootstrap Accordion are:
 ![Bootstrap Accordion](https://i.imgur.com/jg2QM8n.gif)
 
 ###### Script
-```Javascript
+```js
       [].slice
         .call(document.querySelectorAll('[role=cdb-accordion]'))
         .forEach(progress => {
@@ -68,7 +68,7 @@ With Contrast Bootstrap Accordion, you can construct an Accordion without the ca
 ![Bootstrap Accordion with icons](./images/accordionwithouticon.png)
 
 ###### Script
-```Javascript
+```js
       [].slice
         .call(document.querySelectorAll('[role=cdb-accordion]'))
         .forEach(progress => {

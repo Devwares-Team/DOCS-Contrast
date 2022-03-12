@@ -24,7 +24,7 @@ Bootstrap 5 Date picker is a component in our Contrast Library that makes it pos
 
 ###### Script
 
-```javascript
+```js
 <script>
   const elem = document.querySelector('input[name="foo"]'); const datepicker = new
   CDB.Datepicker(elem, {});

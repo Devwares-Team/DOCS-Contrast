@@ -95,7 +95,7 @@ This is a guide to adding Bootstrap 5 popovers to any element on your website. T
 
 ###### Script
 
-```javascript
+```js
    <script src="bootstrap/bootstrap.bundle.min.js"></script>
     <script>
       // Example 1

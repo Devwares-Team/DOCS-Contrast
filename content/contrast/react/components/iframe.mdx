@@ -1,11 +1,8 @@
 ---
-title: "Iframe"
-metaTitle: "Iframe Component for React Bootstrap"
-metaDescription: "React Bootstrap IFrame is a container for another document that is embedded into the current HTML text."
-
----
-
-import React from "react";
+title: 'Iframe'
+metaTitle: 'Iframe Component for React Bootstrap'
+metaDescription: 'React Bootstrap IFrame is a container for another document that is embedded into the current HTML text.'
+---import React from 'react';
 
 # React Bootstrap Iframe
 
@@ -15,36 +12,35 @@ The React Bootstrap Iframe, like all React Bootstrap Components, is extremely re
 
 ## Importing the React Bootstrap Iframe Component
 
-
 To begin using the Contrast React Bootstrap Iframe component, import `CDBIframe` into your project.
 
-```javascript
-import { CDBIframe } from "cdbreact";
+```js
+import { CDBIframe } from 'cdbreact';
 ```
 
-## Default Iframe 
+## Default Iframe
 
 <div class="container">
-	<iframe
-	  id="cdb-iframe1"
-	  class="cdb-iframe w-100 h-100"
-	  style="min-height:350px;"
-	  src="https://www.youtube.com/embed/LebxiFwmYBc"
-	  title="main video"
-	  allowFullScreen
-	  frameBorder="10"
-	  ratio="4x3"
-	></iframe>
+  <iframe
+    id="cdb-iframe1"
+    class="cdb-iframe w-100 h-100"
+    style="min-height:350px;"
+    src="https://www.youtube.com/embed/LebxiFwmYBc"
+    title="main video"
+    allowFullScreen
+    frameBorder="10"
+    ratio="4x3"
+  ></iframe>
 </div>
 
-```javascript
-import React from "react";
-import { CDBIframe, CDBContainer } from "cdbreact";
+```js
+import React from 'react';
+import { CDBIframe, CDBContainer } from 'cdbreact';
 
 export const Iframe = () => {
   return (
     <CDBContainer>
-      <CDBIframe src="https://www.youtube.com/embed/xnczyP2jSR0"/>
+      <CDBIframe src="https://www.youtube.com/embed/xnczyP2jSR0" />
     </CDBContainer>
   );
 };
@@ -56,21 +52,19 @@ This section will expand on your knowledge of the props available for use with t
 
 The table below provides the various prop options for the `CDBIframe` component.
 
-
-| Name            | Type        | Default      |   Description| Example      |
-| :------------- | :----------: | -----------: | :----------: | -----------: |
-| className      | String       | Adds custom classes             |Adds custom classes	      |     <CDBIframe className="myClass" ... />  |
-| url            | String       |              | `Required`. The iframe url | <CDBIframe url="https://www.youtube.com/embed/xnczyP2jSR0" ... />  |
-| allowFullScreen | Boolean      | false        | If set, applies the allowFullScreen param | <CDBIframe allowFullScreen .../>  |
-| height         | Number       |              |  	Defines component height | <CDBIframe height={300} .../>  |
-| width          | Number       |              |  	Defines component width | <CDBIframe width={300} .../> |  |
-| id             | String       |              |  	Adds id to the element | <CDBIframe id="my_id" .../>  |
-| name           | String       |              | Adds name attribute | <CDBIframe name="myIframe" .../>  |
-| onLoad         | function     |              |  	Function fired on onLoad event | <CDBIframe onLoad={handleLoad} .../>  |
-| onMouseOut     | function     |              |  	Function fired on onMouseOut event | <CDBIframe onMouseOut={handleEvent} .../>  |
-| onMouseOver    | function     |              |  	Function fired on onMouseOver event | <CDBIframe onMouseOver={handleEvent} .../>  |
-| ratio          | String       |              |  	Defines component ratio. Choose from "1by1", "4by3", "16by9" and "21by9"  | <CDBIframe ratio="1by1" .../>  |
-| sandbox        | String       |              | Adds optional sandbox values: (`no value`) -	Applies all restrictions, `allow-forms` -	Allows form submission, `allow-modals` 	Allows to open modal windows, `allow-orientation-lock` 	Allows to lock the screen orientation, `allow-pointer-lock` 	Allows to use the Pointer Lock API, `allow-popups` 	Allows popups, `allow-popups-to-escape-sandbox` 	Allows popups to open new windows without inheriting the sandboxing, `allow-presentation` 	Allows to start a presentation session, `allow-same-origin` 	Allows the iframe content to be treated as being from the same origin, `allow-scripts `	Allows to run scripts, `allow-top-navigation` 	Allows the iframe content to navigate its top-level browsing context, `allow-top-navigation-by-user-activation` 	Allows the iframe content to navigate its top-level browsing context, but only if initiated by user | <CDBIframe sandbox .../>  |
-| title          | String       |              | Defines component title | <CDBIframe title="my_title" .../>  |
-| style          | Object       |              | Add's additional styles. | <CDBIframe style={{color: 'red'}}.../> |  |
-
+| Name            |   Type   |             Default |                                                                                                                                                                                                                                                                                                                                                                                                                            Description                                                                                                                                                                                                                                                                                                                                                                                                                             |                                                           Example |
+| :-------------- | :------: | ------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | ----------------------------------------------------------------: |
+| className       |  String  | Adds custom classes |                                                                                                                                                                                                                                                                                                                                                                                                                        Adds custom classes                                                                                                                                                                                                                                                                                                                                                                                                                         |                             <CDBIframe className="myClass" ... /> |
+| url             |  String  |                     |                                                                                                                                                                                                                                                                                                                                                                                                                     `Required`. The iframe url                                                                                                                                                                                                                                                                                                                                                                                                                     | <CDBIframe url="https://www.youtube.com/embed/xnczyP2jSR0" ... /> |
+| allowFullScreen | Boolean  |               false |                                                                                                                                                                                                                                                                                                                                                                                                             If set, applies the allowFullScreen param                                                                                                                                                                                                                                                                                                                                                                                                              |                                  <CDBIframe allowFullScreen .../> |
+| height          |  Number  |                     |                                                                                                                                                                                                                                                                                                                                                                                                                      Defines component height                                                                                                                                                                                                                                                                                                                                                                                                                      |                                     <CDBIframe height={300} .../> |
+| width           |  Number  |                     |                                                                                                                                                                                                                                                                                                                                                                                                                      Defines component width                                                                                                                                                                                                                                                                                                                                                                                                                       |                                      <CDBIframe width={300} .../> |  |
+| id              |  String  |                     |                                                                                                                                                                                                                                                                                                                                                                                                                       Adds id to the element                                                                                                                                                                                                                                                                                                                                                                                                                       |                                       <CDBIframe id="my_id" .../> |
+| name            |  String  |                     |                                                                                                                                                                                                                                                                                                                                                                                                                        Adds name attribute                                                                                                                                                                                                                                                                                                                                                                                                                         |                                  <CDBIframe name="myIframe" .../> |
+| onLoad          | function |                     |                                                                                                                                                                                                                                                                                                                                                                                                                   Function fired on onLoad event                                                                                                                                                                                                                                                                                                                                                                                                                   |                              <CDBIframe onLoad={handleLoad} .../> |
+| onMouseOut      | function |                     |                                                                                                                                                                                                                                                                                                                                                                                                                 Function fired on onMouseOut event                                                                                                                                                                                                                                                                                                                                                                                                                 |                         <CDBIframe onMouseOut={handleEvent} .../> |
+| onMouseOver     | function |                     |                                                                                                                                                                                                                                                                                                                                                                                                                Function fired on onMouseOver event                                                                                                                                                                                                                                                                                                                                                                                                                 |                        <CDBIframe onMouseOver={handleEvent} .../> |
+| ratio           |  String  |                     |                                                                                                                                                                                                                                                                                                                                                                                              Defines component ratio. Choose from "1by1", "4by3", "16by9" and "21by9"                                                                                                                                                                                                                                                                                                                                                                                              |                                     <CDBIframe ratio="1by1" .../> |
+| sandbox         |  String  |                     | Adds optional sandbox values: (`no value`) - Applies all restrictions, `allow-forms` - Allows form submission, `allow-modals` Allows to open modal windows, `allow-orientation-lock` Allows to lock the screen orientation, `allow-pointer-lock` Allows to use the Pointer Lock API, `allow-popups` Allows popups, `allow-popups-to-escape-sandbox` Allows popups to open new windows without inheriting the sandboxing, `allow-presentation` Allows to start a presentation session, `allow-same-origin` Allows the iframe content to be treated as being from the same origin, `allow-scripts` Allows to run scripts, `allow-top-navigation` Allows the iframe content to navigate its top-level browsing context, `allow-top-navigation-by-user-activation` Allows the iframe content to navigate its top-level browsing context, but only if initiated by user |                                          <CDBIframe sandbox .../> |
+| title           |  String  |                     |                                                                                                                                                                                                                                                                                                                                                                                                                      Defines component title                                                                                                                                                                                                                                                                                                                                                                                                                       |                                 <CDBIframe title="my_title" .../> |
+| style           |  Object  |                     |                                                                                                                                                                                                                                                                                                                                                                                                                      Add's additional styles.                                                                                                                                                                                                                                                                                                                                                                                                                      |                            <CDBIframe style={{color: 'red'}}.../> |  |

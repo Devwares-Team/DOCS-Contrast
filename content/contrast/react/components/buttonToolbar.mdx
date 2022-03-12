@@ -1,11 +1,11 @@
 ---
-title: "ButtonToolbar"
-metaTitle: "ButtonToolbar Component for React Bootstrap"
-metaDescription: "To use the Contrast React Bootstrap ButtonToolbar component, you start up by importing the `CDBButton` component into your project."
+title: 'ButtonToolbar'
+metaTitle: 'ButtonToolbar Component for React Bootstrap'
+metaDescription: 'To use the Contrast React Bootstrap ButtonToolbar component, you start up by importing the `CDBButton` component into your project.'
 ---
 
-import React from "react";
-import { Link } from "gatsby";
+import React from 'react';
+import { Link } from 'gatsby';
 
 # React Bootstrap ButtonToolbar
 
@@ -15,42 +15,55 @@ For more complicated components, combine sets of button groups into button toolb
 
 To use the Contrast React Bootstrap ButtonToolbar component, you start up by importing the `CDBButton` component into your project.
 
-```javascript
-import { CDBBtnTb } from "cdbreact";
+```js
+import { CDBBtnTb } from 'cdbreact';
 ```
 
 ## Default ButtonToolbar
 
 In this section of the tutorial we also use the [CDBBtn](https://www.devwares.com/docs/contrast/react/components/buttons) component to create buttons, and the [CDBBtnGrp](https://www.devwares.com/docs/contrast/react/components/buttonGroup) alongside the `CDBBtnTb`. Check out our docs for more information.
- 
- 
+
 <div class="container">
-  <div
-  class="btn-toolbar"
-  role="toolbar"
-  aria-label="Toolbar with button groups"
-  >
+  <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
     <div class="btn-group mr-2" role="group" aria-label="First group">
-      <button type="button" class="btn btn-primary">click me</button>
-      <button type="button" class="btn btn-secondary">click me</button>
-      <button type="button" class="btn btn-info">click me</button>
+      <button type="button" class="btn btn-primary">
+        click me
+      </button>
+      <button type="button" class="btn btn-secondary">
+        click me
+      </button>
+      <button type="button" class="btn btn-info">
+        click me
+      </button>
     </div>
     <div class="btn-group mr-2" role="group" aria-label="First group">
-      <button type="button" class="btn btn-sm btn-primary">click me</button>
-      <button type="button" class="btn btn-sm btn-secondary">click me</button>
-      <button type="button" class="btn btn-sm btn-info">click me</button>
+      <button type="button" class="btn btn-sm btn-primary">
+        click me
+      </button>
+      <button type="button" class="btn btn-sm btn-secondary">
+        click me
+      </button>
+      <button type="button" class="btn btn-sm btn-info">
+        click me
+      </button>
     </div>
     <div class="btn-group mr-2" role="group" aria-label="First group">
-      <button type="button" class="btn btn-primary">click me</button>
-      <button type="button" class="btn btn-secondary">click me</button>
-      <button type="button" class="btn btn-info">click me</button>
+      <button type="button" class="btn btn-primary">
+        click me
+      </button>
+      <button type="button" class="btn btn-secondary">
+        click me
+      </button>
+      <button type="button" class="btn btn-info">
+        click me
+      </button>
     </div>
   </div>
 </div>
 
-```javascript
-import React from "react";
-import { CDBBtnTb, CDBBtn, CDBBtnGrp, CDBContainer } from "cdbreact";
+```js
+import React from 'react';
+import { CDBBtnTb, CDBBtn, CDBBtnGrp, CDBContainer } from 'cdbreact';
 
 export const ButtonToolbar = () => {
   return (
@@ -66,7 +79,7 @@ export const ButtonToolbar = () => {
           <CDBBtn color="secondary">click me</CDBBtn>
           <CDBBtn color="success">click me</CDBBtn>
         </CDBBtnGrp>
-        <CDBBtnGrp >
+        <CDBBtnGrp>
           <CDBBtn color="danger">click me</CDBBtn>
           <CDBBtn color="dark">click me</CDBBtn>
           <CDBBtn color="warning">click me</CDBBtn>
@@ -77,14 +90,13 @@ export const ButtonToolbar = () => {
 };
 ```
 
-
 # Contrast React Bootstrap ButtonToolbar Props
 
 This section will build on your information about the props you get to use with the Contrast React Bootstrap ButtonToolbar component. You will find out what these props do, their default values, and how you would use them in your code.
 
 Other choices for the 'CDBBtnTb' component are included in the table below.
 
-| Name            | Type        | Default      |   Description| Example      |
-| :------------- | :----------: | -----------: | :----------: | -----------: |
-| className      | String       | Adds custom classes             |Adds custom classes	      |     <CDBBtnTb className="myClass" ... />  |
-| role           | String       | toolbar      | Change default component's role | <CDBBtnTb role="toolbar" ... />  |
+| Name      |  Type  |             Default |           Description           |                              Example |
+| :-------- | :----: | ------------------: | :-----------------------------: | -----------------------------------: |
+| className | String | Adds custom classes |       Adds custom classes       | <CDBBtnTb className="myClass" ... /> |
+| role      | String |             toolbar | Change default component's role |      <CDBBtnTb role="toolbar" ... /> |

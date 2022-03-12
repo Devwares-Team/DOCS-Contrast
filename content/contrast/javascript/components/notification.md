@@ -272,7 +272,7 @@ Toasts are little notifications that are meant to look like the push notificatio
 
 ###### Script
 
-```javascript
+```js
     <script src="../build/cdbbootstrap.js"></script>
     <script>
       var toastElList = [].slice.call(

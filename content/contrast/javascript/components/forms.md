@@ -1082,6 +1082,6 @@ Predefined Form logins, Form registers, Form subscriptions, Form contacts, and o
 
 ###### Script
 
-```javascript
+```js
 <script type="module" src="../js/cdb.js" defer></script>
 ```

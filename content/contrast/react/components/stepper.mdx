@@ -2,10 +2,8 @@
 title: "Stepper"
 metaTitle: "Stepper Component for React Bootstrap"
 metaDescription: "React Bootstrap Stepper is a component that shows content in the form of a process with user-defined milestones."
-
 ---
-
-import React from "react";
+import React from 'react';
 import {Link} from "gatsby";
 
 # React Bootstrap Stepper
@@ -27,10 +25,71 @@ Examples of React Bootstrap steps use:
 
 Import `CDBStepper` into your project to use the React Bootstrap Stepper component. After that, you import `CDBStep`. The component `CDBStep` is nested within the component `CDBStepper`. They represent the many steps of the process.
 
-```javascript
+```js link=github.com/Devwares-Team/Contrast-Docs/blob/master/content/contrast/react/components/stepper.mdx
+
 import { CDBStepper, CDBStep } from "cdbreact";
+
 ```
 
+<i/>
+
+
+
+## Horizontal Stepper
+
+<stepperExample2 />
+
+```js link=github.com/Devwares-Team/Contrast-Docs/blob/master/content/contrast/react/components/stepper.mdx
+
+import React, { useState } from "react";
+import { CDBStepper, CDBStep, CDBInput, CDBBtn, CDBContainer } from "cdbreact";
+
+
+export const Stepper = () => {
+  const [active, setActive] = useState(1);
+
+  const handleNextPrevClick = a => setActive(a);
+  return (
+      <CDBStepper>
+        <CDBStep
+          id={1}
+          icon="pencil-alt"
+          name="Basic Information"
+          handleClick={() => handleNextPrevClick(1)}
+          active={active}
+          component={<Step1 handleNextPrevClick={handleNextPrevClick} />}
+        />
+        <CDBStep
+          id={2}
+          icon="info-circle"
+          name="Personal Data"
+          handleClick={() => handleNextPrevClick(2)}
+          active={active}
+          component={<Step2 handleNextPrevClick={handleNextPrevClick} />}
+        />
+        <CDBStep
+          id={3}
+          icon="book-reader"
+          name="Terms and Conditions"
+          handleClick={() => handleNextPrevClick(3)}
+          active={active}
+          component={<Step3 handleNextPrevClick={handleNextPrevClick} />}
+        />
+        <CDBStep
+          id={4}
+          icon="check"
+          name="Finish"
+          handleClick={() => handleNextPrevClick(4)}
+          active={active}
+          component={<Step4 handleNextPrevClick={handleNextPrevClick} />}
+        />
+      </CDBStepper>
+  );
+};
+
+export default Stepper;
+
+```
 <i/>
 
 ## Vertical Stepper
@@ -42,420 +101,72 @@ The `CDBStepper` accepts a `direction` parameter that specifies the stepper's or
 
 Alongside our `CDBStepper`, we also import [CDBIcon](https://www.devwares.com/docs/contrast/react/components/icon) for our icons, [CDBInput](https://www.devwares.com/docs/contrast/react/components/input) for the input fields, and the [CDBButton](https://www.devwares.com/docs/contrast/react/components/buttons) for our buttons.
 
-![React Bootstrap Vertical Stepper](https://i.imgur.com/khiy8Dd.gif)
+Each `CDBStep` component accepts a component props that defines the component to render when that step is active
 
-```javascript
+<stepperExample1 />
+
+```js link=github.com/Devwares-Team/Contrast-Docs/blob/master/content/contrast/react/components/stepper.mdx
+
 import React, { useState } from "react";
 import { CDBStepper, CDBStep, CDBInput, CDBBtn, CDBContainer } from "cdbreact";
 
+
 export const Stepper = () => {
+  const [active, setActive] = useState(1);
 
-	const [active, setActive] = useState(1)
-
-  const handleNextPrevClick = (a) => {
-		setActive(a)
+  const handleNextPrevClick = a => {
+    setActive(a);
   };
-
-  const handleSubmission = () => {
-    alert("Form submitted!");
-  };
-
   return (
-    <CDBContainer className="d-flex">
-            <CDBContainer style={{ height: "500px", width: "150px" }}>
-              <CDBStepper direction="vertical">
-                <CDBStep
-                  id={1}
-                  far
-                  icon="folder-open"
-                  name="Basic Information"
-                  handleClick={() => handleNextPrevClick(1)}
-                  active={active}
-                />
-                <CDBStep
-                  id={2}
-                  icon="pencil-alt"
-                  name="Personal Data"
-                  handleClick={() => handleNextPrevClick(2)}
-                  active={active}
-                />
-                <CDBStep
-                  id={3}
-                  icon="dragon"
-                  name="Terms and Conditions"
-                  handleClick={() => handleNextPrevClick(3)}
-                  active={active}
-                />
-                <CDBStep
-                  id={4}
-                  icon="check"
-                  name="Finish"
-                  handleClick={() => handleNextPrevClick(4)}
-                  active={active}
-                />
-              </CDBStepper>
-            </CDBContainer>
-            <CDBContainer
-              style={{
-                height: "500px",
-                width: "100%",
-                display: "flex",
-                alignItems: "center",
-              }}
-            >
-              {active === 1 && (
-                <CDBContainer md="12">
-                  <h3
-                    className="font-weight-bold pl-0 my-4 "
-                    style={{
-                      width: "100%",
-                      fontSize: "30px",
-                      textAlign: "center",
-                    }}
-                  >
-                    Your Information
-                  </h3>
-                  <CDBInput label="Email" className="mt-4" />
-                  <CDBInput label="username" className="mt-4" />
-                  <CDBInput label="Password" className="mt-4" />
-                  <CDBInput label="Repeat Password" className="mt-4" />
-                  <CDBBtn
-                    color="dark"
-                    block
-                    flat
-                    className="float-right"
-                    onClick={() => handleNextPrevClick(2)}
-                  >
-                    Next
-                  </CDBBtn>
-                </CDBContainer>
-              )}
-              {active === 2 && (
-                <CDBContainer md="12">
-                  <h3
-                    className="font-weight-bold pl-0 my-4"
-                    style={{
-                      width: "100%",
-                      fontSize: "30px",
-                      textAlign: "center",
-                    }}
-                  >
-                    Personal Data
-                  </h3>
-                  <CDBInput label="First Name" className="mt-3" />
-                  <CDBInput label="Second Name" className="mt-3" />
-                  <CDBInput label="Surname" className="mt-3" />
-                  <CDBInput label="Address" type="textarea" rows="2" />
-                  <CDBBtn
-                    color="light"
-                    flat
-                    className="float-left"
-                    onClick={() => handleNextPrevClick(1)}
-                  >
-                    Previous
-                  </CDBBtn>
-                  <CDBBtn
-                    color="dark"
-                    flat
-                    className="float-right"
-                    onClick={() => handleNextPrevClick(3)}
-                  >
-                    Next
-                  </CDBBtn>
-                </CDBContainer>
-              )}
-              {active === 3 && (
-                <CDBContainer md="12">
-                  <h3
-                    className="font-weight-bold pl-0 my-4"
-                    style={{
-                      width: "100%",
-                      fontSize: "30px",
-                      textAlign: "center",
-                    }}
-                  >
-                    Terms and conditions
-                  </h3>
-                  <CDBInput
-                    label="I agreee to the terms and conditions"
-                    type="checkbox"
-                    id="checkbox3"
-                  />
-                  <CDBInput
-                    label="I want to receive newsletter"
-                    type="checkbox"
-                    id="checkbox4"
-                  />
-                  <CDBBtn
-                    color="light"
-                    className="float-left"
-                    flat
-                    onClick={() => handleNextPrevClick(2)}
-                  >
-                    Previous
-                  </CDBBtn>
-                  <CDBBtn
-                    color="dark"
-                    className="float-right"
-                    flat
-                    onClick={() => handleNextPrevClick(4)}
-                  >
-                    Next
-                  </CDBBtn>
-                </CDBContainer>
-              )}
-              {active === 4 && (
-                <CDBContainer md="12">
-                  <h3
-                    className="font-weight-bold pl-0 my-4"
-                    style={{
-                      width: "100%",
-                      fontSize: "30px",
-                      textAlign: "center",
-                    }}
-                  >
-                    Finish
-                  </h3>
-                  <h2 className="text-center font-weight-bold my-4">
-                    Registration completed!
-                  </h2>
-                  <CDBBtn
-                    color="light"
-                    flat
-                    className="float-left"
-                    onClick={() => handleNextPrevClick(3)}
-                  >
-                    Previous
-                  </CDBBtn>
-                  <CDBBtn
-                    color="success"
-                    flat
-                    className="float-right"
-                    onClick={handleSubmission}
-                  >
-                    submit
-                  </CDBBtn>
-                </CDBContainer>
-              )}
-            </CDBContainer>
-    </CDBContainer>
+      <CDBStepper direction="vertical" >
+        <CDBStep
+          id={1}
+          icon="pencil-alt"
+          name="Basic Information"
+          handleClick={() => handleNextPrevClick(1)}
+          active={active}
+          component={<Step1 handleNextPrevClick={handleNextPrevClick} />}
+        />
+        <CDBStep
+          id={2}
+          icon="info-circle"
+          name="Personal Data"
+          handleClick={() => handleNextPrevClick(2)}
+          active={active}
+          component={<Step2 handleNextPrevClick={handleNextPrevClick} />}
+        />
+        <CDBStep
+          id={3}
+          icon="book-reader"
+          name="Terms and Conditions"
+          handleClick={() => handleNextPrevClick(3)}
+          active={active}
+          component={<Step3 handleNextPrevClick={handleNextPrevClick} />}
+        />
+        <CDBStep
+          id={4}
+          icon="check"
+          name="Finish"
+          handleClick={() => handleNextPrevClick(4)}
+          active={active}
+          component={<Step4 handleNextPrevClick={handleNextPrevClick} />}
+        />
+      </CDBStepper>
   );
 };
-```
-<i/>
 
-## Horizontal Stepper
+export default Stepper;
 
-<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
-
-![React Bootstrap Horizontal Stepper](https://i.imgur.com/eQMikuS.gif)
-```javascript
-import React, { useState } from "react";
-import { CDBstepper, CDBstep, CDBinput, CDBbtn, CDBcontainer } from "cdbreact";
- 
- export const Stepper = () => {
-
-	const [active, setActive] = useState(1)
-
-  const handleNextPrevClick = (a) => {
-		setActive(a)
-  };
-
-  const handleSubmission = () => {
-    alert("Form submitted!");
-  };
-
-  return (
-    <CDBContainer>
-            <CDBContainer>
-              <CDBStepper direction="horizontal">
-                <CDBStep
-                  id={1}
-                  far
-                  icon="folder-open"
-                  name="Basic Information"
-                  handleClick={() => handleNextPrevClick(1)}
-                  active={active}
-                />
-                <CDBStep
-                  id={2}
-                  icon="pencil-alt"
-                  name="Personal Data"
-                  handleClick={() => handleNextPrevClick(2)}
-                  active={active}
-                />
-                <CDBStep
-                  id={3}
-                  icon="dragon"
-                  name="Terms and Conditions"
-                  handleClick={() => handleNextPrevClick(3)}
-                  active={active}
-                />
-                <CDBStep
-                  id={4}
-                  icon="check"
-                  name="Finish"
-                  handleClick={() => handleNextPrevClick(4)}
-                  active={active}
-                />
-              </CDBStepper>
-            </CDBContainer>
-            <CDBContainer
-              style={{
-                height: "500px",
-                width: "100%",
-                display: "flex",
-                alignItems: "center",
-              }}
-            >
-              {active === 1 && (
-                <CDBContainer md="12">
-                  <h3
-                    className="font-weight-bold pl-0 my-4 "
-                    style={{
-                      width: "100%",
-                      fontSize: "30px",
-                      textAlign: "center",
-                    }}
-                  >
-                    Your Information
-                  </h3>
-                  <CDBInput label="Email" className="mt-4" />
-                  <CDBInput label="username" className="mt-4" />
-                  <CDBInput label="Password" className="mt-4" />
-                  <CDBInput label="Repeat Password" className="mt-4" />
-                  <CDBBtn
-                    color="dark"
-                    block
-                    flat
-                    className="float-right"
-                    onClick={() => handleNextPrevClick(2)}
-                  >
-                    Next
-                  </CDBBtn>
-                </CDBContainer>
-              )}
-              {active === 2 && (
-                <CDBContainer md="12">
-                  <h3
-                    className="font-weight-bold pl-0 my-4"
-                    style={{
-                      width: "100%",
-                      fontSize: "30px",
-                      textAlign: "center",
-                    }}
-                  >
-                    Personal Data
-                  </h3>
-                  <CDBInput label="First Name" className="mt-3" />
-                  <CDBInput label="Second Name" className="mt-3" />
-                  <CDBInput label="Surname" className="mt-3" />
-                  <CDBInput label="Address" type="textarea" rows="2" />
-                  <CDBBtn
-                    color="light"
-                    flat
-                    className="float-left"
-                    onClick={() => handleNextPrevClick(1)}
-                  >
-                    Previous
-                  </CDBBtn>
-                  <CDBBtn
-                    color="dark"
-                    flat
-                    className="float-right"
-                    onClick={() => handleNextPrevClick(3)}
-                  >
-                    Next
-                  </CDBBtn>
-                </CDBContainer>
-              )}
-              {active === 3 && (
-                <CDBContainer md="12">
-                  <h3
-                    className="font-weight-bold pl-0 my-4"
-                    style={{
-                      width: "100%",
-                      fontSize: "30px",
-                      textAlign: "center",
-                    }}
-                  >
-                    Terms and conditions
-                  </h3>
-                  <CDBInput
-                    label="I agreee to the terms and conditions"
-                    type="checkbox"
-                    id="checkbox3"
-                  />
-                  <CDBInput
-                    label="I want to receive newsletter"
-                    type="checkbox"
-                    id="checkbox4"
-                  />
-                  <CDBBtn
-                    color="light"
-                    className="float-left"
-                    flat
-                    onClick={() => handleNextPrevClick(2)}
-                  >
-                    Previous
-                  </CDBBtn>
-                  <CDBBtn
-                    color="dark"
-                    className="float-right"
-                    flat
-                    onClick={() => handleNextPrevClick(4)}
-                  >
-                    Next
-                  </CDBBtn>
-                </CDBContainer>
-              )}
-              {active === 4 && (
-                <CDBContainer md="12">
-                  <h3
-                    className="font-weight-bold pl-0 my-4"
-                    style={{
-                      width: "100%",
-                      fontSize: "30px",
-                      textAlign: "center",
-                    }}
-                  >
-                    Finish
-                  </h3>
-                  <h2 className="text-center font-weight-bold my-4">
-                    Registration completed!
-                  </h2>
-                  <CDBBtn
-                    color="light"
-                    flat
-                    className="float-left"
-                    onClick={() => handleNextPrevClick(3)}
-                  >
-                    Previous
-                  </CDBBtn>
-                  <CDBBtn
-                    color="success"
-                    flat
-                    className="float-right"
-                    onClick={handleSubmission}
-                  >
-                    submit
-                  </CDBBtn>
-                </CDBContainer>
-              )}
-            </CDBContainer>
-    </CDBContainer>
-  );
-};
 ```
 
 <i/>
 
-## Stepper Without Icons
+## Stepper Without Icons and Headers
 
-<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+<stepperExample3 />
 
+```js link=github.com/Devwares-Team/Contrast-Docs/blob/master/content/contrast/react/components/stepper.mdx
 
-```javascript
 import React, { useState } from "react";
 import { CDBStepper, CDBStep, CDBContainer } from "cdbreact";
 
@@ -466,186 +177,39 @@ export const Stepper = () => {
   const handleNextPrevClick = (a) => {
 		setActive(a)
   };
-
-  const handleSubmission = () => {
-    alert("Form submitted!");
-  };
-
   return (
-    <CDBContainer>
-            <CDBContainer>
-              <CDBStepper direction="horizontal">
-                <CDBStep
-                  id={1}
-                  name="Basic Information"
-                  handleClick={() => handleNextPrevClick(1)}
-                  active={active}
-                />
-                <CDBStep
-                  id={2}
-                  name="Personal Data"
-                  handleClick={() => handleNextPrevClick(2)}
-                  active={active}
-                />
-                <CDBStep
-                  id={3}
-                  name="Terms and Conditions"
-                  handleClick={() => handleNextPrevClick(3)}
-                  active={active}
-                />
-                <CDBStep
-                  id={4}
-                  name="Finish"
-                  handleClick={() => handleNextPrevClick(4)}
-                  active={active}
-                />
-              </CDBStepper>
-            </CDBContainer>
-            <CDBContainer
-              style={{
-                height: "500px",
-                width: "100%",
-                display: "flex",
-                alignItems: "center",
-              }}
-            >
-              {active === 1 && (
-                <CDBContainer md="12">
-                  <h3
-                    className="font-weight-bold pl-0 my-4 "
-                    style={{
-                      width: "100%",
-                      fontSize: "30px",
-                      textAlign: "center",
-                    }}
-                  >
-                    Your Information
-                  </h3>
-                  <CDBInput label="Email" className="mt-4" />
-                  <CDBInput label="username" className="mt-4" />
-                  <CDBInput label="Password" className="mt-4" />
-                  <CDBInput label="Repeat Password" className="mt-4" />
-                  <CDBBtn
-                    color="dark"
-                    block
-                    flat
-                    className="float-right"
-                    onClick={() => handleNextPrevClick(2)}
-                  >
-                    Next
-                  </CDBBtn>
-                </CDBContainer>
-              )}
-              {active === 2 && (
-                <CDBContainer md="12">
-                  <h3
-                    className="font-weight-bold pl-0 my-4"
-                    style={{
-                      width: "100%",
-                      fontSize: "30px",
-                      textAlign: "center",
-                    }}
-                  >
-                    Personal Data
-                  </h3>
-                  <CDBInput label="First Name" className="mt-3" />
-                  <CDBInput label="Second Name" className="mt-3" />
-                  <CDBInput label="Surname" className="mt-3" />
-                  <CDBInput label="Address" type="textarea" rows="2" />
-                  <CDBBtn
-                    color="light"
-                    flat
-                    className="float-left"
-                    onClick={() => handleNextPrevClick(1)}
-                  >
-                    Previous
-                  </CDBBtn>
-                  <CDBBtn
-                    color="dark"
-                    flat
-                    className="float-right"
-                    onClick={() => handleNextPrevClick(3)}
-                  >
-                    Next
-                  </CDBBtn>
-                </CDBContainer>
-              )}
-              {active === 3 && (
-                <CDBContainer md="12">
-                  <h3
-                    className="font-weight-bold pl-0 my-4"
-                    style={{
-                      width: "100%",
-                      fontSize: "30px",
-                      textAlign: "center",
-                    }}
-                  >
-                    Terms and conditions
-                  </h3>
-                  <CDBInput
-                    label="I agreee to the terms and conditions"
-                    type="checkbox"
-                    id="checkbox3"
-                  />
-                  <CDBInput
-                    label="I want to receive newsletter"
-                    type="checkbox"
-                    id="checkbox4"
-                  />
-                  <CDBBtn
-                    color="light"
-                    className="float-left"
-                    flat
-                    onClick={() => handleNextPrevClick(2)}
-                  >
-                    Previous
-                  </CDBBtn>
-                  <CDBBtn
-                    color="dark"
-                    className="float-right"
-                    flat
-                    onClick={() => handleNextPrevClick(4)}
-                  >
-                    Next
-                  </CDBBtn>
-                </CDBContainer>
-              )}
-              {active === 4 && (
-                <CDBContainer md="12">
-                  <h3
-                    className="font-weight-bold pl-0 my-4"
-                    style={{
-                      width: "100%",
-                      fontSize: "30px",
-                      textAlign: "center",
-                    }}
-                  >
-                    Finish
-                  </h3>
-                  <h2 className="text-center font-weight-bold my-4">
-                    Registration completed!
-                  </h2>
-                  <CDBBtn
-                    color="light"
-                    flat
-                    className="float-left"
-                    onClick={() => handleNextPrevClick(3)}
-                  >
-                    Previous
-                  </CDBBtn>
-                  <CDBBtn
-                    color="success"
-                    flat
-                    className="float-right"
-                    onClick={handleSubmission}
-                  >
-                    submit
-                  </CDBBtn>
-                </CDBContainer>
-              )}
-            </CDBContainer>
-    </CDBContainer>
-  );
+      <CDBStepper direction="horizontal" showTitle={false} showTooltip={false}>
+        <CDBStep
+          id={1}
+          name="Basic Information"
+          handleClick={() => handleNextPrevClick(1)}
+          active={active}
+          component={<Step1 handleNextPrevClick={handleNextPrevClick} />}
+        />
+        <CDBStep
+          id={2}
+          name="Personal Data"
+          handleClick={() => handleNextPrevClick(2)}
+          active={active}
+          component={<Step2 handleNextPrevClick={handleNextPrevClick} />}
+        />
+        <CDBStep
+          id={3}
+          name="Terms and Conditions"
+          handleClick={() => handleNextPrevClick(3)}
+          active={active}
+          component={<Step3 handleNextPrevClick={handleNextPrevClick} />}
+        />
+        <CDBStep
+          id={4}
+          name="Finish"
+          handleClick={() => handleNextPrevClick(4)}
+          active={active}
+          component={<Step4 handleNextPrevClick={handleNextPrevClick} />}
+        />
+      </CDBStepper>
+  )
+
 };
 ```
 
@@ -662,6 +226,7 @@ Other options for the 'CDBStep' are listed in the table below.
 | far, fab, fas  | Boolean      |              | Defines Font Awesome style. Recommend to use with icon props | <CDBStep fas .../>  |
 | name           | String       |              | Specifies the text content within CDBStep's tooltip which is visible on hover event | <CDBStep name="label" ... />  |
 | icon           | String       |              |  	Defines icon used within CDBStep | <CDBStep icon="folder-open" ... />  |
+| component           | Node       |   <div />           |  	Defines  the component that shows when the step is active | <CDBStep component={<div/>} ... />  |
 
 ## API Reference: Contrast React Bootstrap Stepper Props
 
@@ -672,3 +237,6 @@ Other options for the `CDBStepper` are listed in the table below.
 | Name            | Type        | Default      |   Description| Example      |
 | :------------- | :----------: | -----------: | :----------: | -----------: |
 | direction      | String       | horizontal   | `Required!` Controls the orientation of generated stepper. Can be either `vertical` or `horizontal`     |     <CDBStepper direction="vertical" ... />  |
+|  stepSize    | number       | 45   |   defines size of steps    |     <CDBStepper stepSize={50} ... />  |
+| showTooltip      | boolean       | true   |  defines whether tooltip popper is shown    |     <CDBStepper showTooltip ... />  | h
+| showTitle     | boolean       |  true  |  defines whether title is shown |     <CDBStepper showTitle ... />  |

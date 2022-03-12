@@ -28,7 +28,7 @@ The `options` array represents the many values you are allowing the user to choo
 
 ###### Script
 
-```javascript
+```js
   <script src="../build/cdbbootstrap.js"></script>
   <script>
     var multiSelect1 = new CDB.MultiSelect('.multiselect', {

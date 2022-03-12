@@ -78,7 +78,7 @@ We may use the Bootstrap Alert Component to give our div element the alert `clas
 
 ###### Script
 
-```javascript
+```js
 <script>
   document.querySelector('#dismiss1').addEventListener('click', () => {
     var alertNode = document.querySelector('#alert1');
