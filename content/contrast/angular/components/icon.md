@@ -2,12 +2,13 @@
 title: "Icon"
 metaTitle: "Angular Bootstrap Icon Component"
 metaDescription: "Angular Bootstrap Icon is an element which is used for dismissing components like modals and alerts"
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/angular/components/icon.md"
 ---
 
 
-# Angular Bootstrap Icon
+# Contrast Angular Bootstrap Icon
 
-Angular Bootstrap Icon is an element which is used for dismissing components like modals and alerts. See how easy implementation is.
+Contrast Angular Bootstrap Icons are representative symbols or elements that can serve as a link, provide information, or simply be aesthetic.
 
 <i/>
 
@@ -15,18 +16,18 @@ Angular Bootstrap Icon is an element which is used for dismissing components lik
 
 To use the Contrast Angular Bootstrap Icon component in your project you need to import `IconModule`.
 
-```typescript
+```ts
 import {IconModule } from 'cdbangular';
 ```
 
-## Default Icon
+## Default Icons
 
 Use the [fab] prop to indicate that we want to use brand icons in our project. The `icon` prop indicates the icon we want to use.
 
 ![Angular Bootstrap Icon Default](./images/icon1.png)
 
 
-###### html
+###### HTML
 ```html
 <CDBBtn color="primary">
     <CDBIcon [fab]=true icon="stack-overflow"></CDBIcon>
@@ -55,15 +56,13 @@ Use the [fab] prop to indicate that we want to use brand icons in our project. T
 ```
 
 
-<i/>
-
 ## Border Icons
 
 Set the [border] prop to `true` to allow your icons have borders.
 
 ![Angular Bootstrap Border Icons](./images/icon2.png)
 
-###### html
+###### HTML
 ```html
 <CDBIcon [fab]=true [border]=true icon="stack-overflow"></CDBIcon>
 <CDBIcon [fab]=true [border]=true icon="facebook"></CDBIcon>
@@ -73,7 +72,6 @@ Set the [border] prop to `true` to allow your icons have borders.
 <CDBIcon [fab]=true [border]=true icon="google"></CDBIcon>
 ```
 
-<i/>
 
 ## Spin Icons
 
@@ -81,7 +79,7 @@ Set your [spin] prop to `true` to spin your icons.
 
 ![Angular Bootstrap Icons Spin](./images/spinicon.gif)
 
-###### html
+###### HTML
 ```html
 <CDBIcon [fab]=true [spin]=true icon="stack-overflow"></CDBIcon>
 <CDBIcon [fab]=true [spin]=true icon="facebook"></CDBIcon>
@@ -90,7 +88,7 @@ Set your [spin] prop to `true` to spin your icons.
 <CDBIcon [fab]=true [spin]=true icon="instagram"></CDBIcon>
 <CDBIcon [fab]=true [spin]=true icon="google"></CDBIcon>
 ```
-<i/>
+
 
 ## Pull Icons
 
@@ -98,12 +96,10 @@ Use the `pull` prop to indicate the direction you want your icon to face.
 
 ![Angular Bootstrap Icons Pull](./images/icon4.png)
 
-###### html
+###### HTML
 ```html
 <CDBIcon [fab]=true pull="left" icon="stack-overflow"></CDBIcon>
 ```
-
-<i/>
 
 ## Pulse Icons
 
@@ -111,7 +107,7 @@ Use the [pulse] prop to spin your icons a little faster
 
 ![Angular Bootstrap Icons Pulse](./images/pulseicon.gif)
 
-###### html
+###### HTML
 ```html
 <CDBIcon [fab]=true [pulse]=true icon="stack-overflow"></CDBIcon>
 <CDBIcon [fab]=true [pulse]=true icon="facebook"></CDBIcon>
@@ -120,19 +116,18 @@ Use the [pulse] prop to spin your icons a little faster
 <CDBIcon [fab]=true [pulse]=true icon="instagram"></CDBIcon>
 <CDBIcon [fab]=true [pulse]=true icon="google"></CDBIcon>
 ```
-<i/>
+
 
 ## Flip Icons
 
 ![Angular Bootstrap Icons Flip](./images/icon6.png)
 
-###### html
+###### HTML
 ```html
 <CDBIcon [fab]=true flip="horizontal" icon="stack-overflow"></CDBIcon>
 <CDBIcon [fab]=true flip="vertical" icon="facebook"></CDBIcon>
 ```
 
-<i/>
 
 ## Rotate Icons
 
@@ -140,13 +135,12 @@ Use the `rotate` prop to specify the angle to rotate your icons by.
 
 ![Angular Bootstrap Icons Rotate](./images/icon7.png)
 
-###### html
+###### HTML
 ```html
 <CDBIcon [fab]=true rotate="90" icon="stack-overflow"></CDBIcon>
 <CDBIcon [fab]=true rotate="180" icon="facebook"></CDBIcon>
 ```
 
-<i/>
 
 ## Sizes
 
@@ -154,7 +148,7 @@ Use the `size` prop to define how little or how large you want your icons to be.
 
 ![Angular Bootstrap Icons Sizes](./images/icon8.png)
 
-###### html
+###### HTML
 ```html
 <CDBIcon icon="facebook" [fab]=true size="lg"></CDBIcon>
 <CDBIcon [fab]=true icon="facebook" size="2x"></CDBIcon>
@@ -175,14 +169,14 @@ The table below lists other prop options of the `CDBIcon` component.
 | class          | String       |              |Adds custom classes	      |     class="myClass" |
 | icon           | String       |              | `Required!` The Font Awesome icon name, which you want to use | icon="facebook" |
 | border         | Boolean      | false        |  	Adds border around icon | border=true |
-| brand          | Boolean      | false        |  Sets brand icon category; `alias: fab`	| [brand]=true icon="chevron" |
-| fab            | Boolean      | false        |  Sets brand icon category; `alias: brand`	| [fab]=true icon="twitter" |
-| fal            | Boolean      | false        |  Sets light icon category; `alias: light`	| [fal]=true icon="user" |
-| far            | Boolean      | false        |  Sets light icon category; `alias: regular`	| [far]=true icon="user" |
+| brand          | Boolean      | false        |  Sets brand icon category; `alias: brand`	| [brand]=true icon="chevron" |
+| fab            | Boolean      | false        |  Sets brand icon category; `alias: fab`	| [fab]=true icon="twitter" |
+| fal            | Boolean      | false        |  Sets light icon category; `alias: fal`	| [fal]=true icon="user" |
+| far            | Boolean      | false        |  Sets light icon category; `alias: far`	| [far]=true icon="user" |
 | fixed          | Boolean      | false        | Sets fixed with of icons (i.e. inside list) | fixed=true icon="user" |
 | flip           | String       |              | Flips icon; acceptable props: `horizontal` or `vertical` | flip="vertical" icon="user" |
 | inverse        | Boolean      | false        | Sets alternative icon color | inverse=true icon="user" |
-| light          | Boolean      | false        | Sets light icon category; `alias: fal` | light=true icon="facebook" |
+| light          | Boolean      | false        | Sets light icon category; `alias: light` | light=true icon="facebook" |
 | list           | Boolean      | false        | Adds `fa-li` to the className | list=true icon="facebook" |
 | pull           | String       |              | Pulls icon to the `right` or `left` | pull="left" icon="user" |
 | pulse          | Boolean      | false        | Rotates icon in 8 steps | pulse=true icon="facebook" |

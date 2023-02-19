@@ -2,12 +2,13 @@
 title: "Collapse"
 metaTitle: "Angular Bootstrap Collapse Component"
 metaDescription: "Angular Bootstrap Collapse is a component which toggles content"
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/angular/components/collapse.md"
 ---
 
 
-# Angular Bootstrap Collapse
+# Contrast Angular Bootstrap Collapse
 
-Angular Bootstrap Collapse is a component which toggles content. Useful for grouping great amount of texts and/or graphics into expanding and collapsing items.
+Contrast Angular Bootstrap Collapse is a component which toggles content. It is useful for grouping great amount of texts and/or graphics into collapsible items.
 
 Contrast Angular Bootstrap Collapse is used to show and hide content. Buttons or anchors are used as triggers that are mapped to specific elements you toggle. Collapsing an element will animate the `height` from its current value to `0`.
 
@@ -15,7 +16,7 @@ Contrast Angular Bootstrap Collapse is used to show and hide content. Buttons or
 
 To use the Contrast Angular Bootstrap Collapse component in your project you need to import `CollapseModule`.
 
-```typescript
+```ts
 import {CollapseModule } from 'cdbangular';
 ```
 
@@ -23,7 +24,7 @@ import {CollapseModule } from 'cdbangular';
 
 ![Angular Bootstrap Collapse Default](https://i.imgur.com/PqwJe4o.gif)
 
-###### html
+###### HTML
 ```html
 <CDBBtn color="primary" style="margin-bottom: 1rem" (click)="content.toggleCollapse()">
     COLLAPSE BUTTON
@@ -45,7 +46,7 @@ import {CollapseModule } from 'cdbangular';
 
 ![Angular Bootstrap Collapse Opened](https://i.imgur.com/PqwJe4o.gif)
 
-###### html
+###### HTML
 ```html
 <CDBBtn color="secondary" style="margin-bottom: 1rem" (click)="content2.toggleCollapse()">
     COLLAPSE BUTTON
@@ -69,11 +70,11 @@ import {CollapseModule } from 'cdbangular';
 
 # API
 
-This section will build on your information about the props you get to use with the Contrast Angular Bootstrap Collapse component. You will find out what these props do, their default values, and how you would use them in your code.
 
 ## API Reference: Contrast Collapse Bootstrap Inputs
 
-The table below lists other prop options of the `CDBCollapse` component.
+This section will build on your information about the props you get to use with the Contrast Angular Bootstrap Collapse component. You will find out what these props do, their default values, and how you would use them in your code.
+The table below lists the prop options for  `CDBCollapse` component.
 
 | Name            | Type        | Default      |   Description| Example      |
 | :------------- | :----------: | -----------: | :----------: | -----------: |

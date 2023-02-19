@@ -2,21 +2,21 @@
 title: "Iframe"
 metaTitle: "Angular Bootstrap Iframe Component"
 metaDescription: "Angular Bootstrap IFrame is an HTML document which is embedded in another HTML doc on a web page"
-
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/angular/components/iframe.md"
 ---
 
-# Angular Bootstrap Iframe
+# Contrast Angular Bootstrap Iframe
 
-Angular Bootstrap IFrame is used to embed another document within the current HTML document.
+Contrast Angular Bootstrap IFrame is a component used to embed another HTML document within the current HTML document.
 
-The Contrast Angular Bootstrap Iframe, like every other Contrast React Bootstrap Components, is very responsive. The `CDBIframe` has callback props that enable us to fire functions at various events making it more interactive.
+The Contrast Angular Bootstrap IFrame, like every other Contrast Angular Bootstrap Components, is very responsive. The `CDBIframe` has callback props that enable us to fire functions at various events making it more interactive.
 
 
 ## Importing the Contrast Angular Bootstrap Iframe Module
 
 To use the Contrast Angular Bootstrap Iframe component in your project you need to import `IframeModule`.
 
-```typescript
+```ts
 import {IframeModule } from 'cdbangular';
 ```
 
@@ -24,13 +24,13 @@ import {IframeModule } from 'cdbangular';
 
 ![Angular Bootstrap Iframe Default](./images/iframe.png)
 
-###### html
+###### HTML
 
 ```html
 <CDBIframe src="https://www.youtube.com/embed/xnczyP2jSR0"/>
 ```
 
-# Contrast Angular Bootstrap Iframe Props
+# API Reference: Contrast Angular Bootstrap Iframe Props
 
 This section will build on your information about the props you get to use with the Contrast Angular Bootstrap Iframe component. You will find out what these props do, their default values, and how you would use them in your code.
 

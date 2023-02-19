@@ -2,32 +2,33 @@
 title: "Forms"
 metaTitle: "Angular Bootstrap Forms"
 metaDescription: "These are Contrast Bootstrap Angular Components "
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/angular/forms.md"
 ---
 
 # Angular Bootstrap Forms
 
-Angular Bootstrap forms are input-based components which are designed to collect users data. Used as login, subscribe or contact form, all can be easily customized.
+Angular Bootstrap forms are input-based components which are designed to collect users data. You can easily customize Contrast Bootstrap Angular Forms into login, subscription, or contact forms.
 
-The Contrast Angular Bootstrap forms have predefined form logins, form registers, form subscriptions or form contacts and other layout forms varying in their design are all at your disposal. Each of them offers a different type of functionality.
+The Contrast Angular Bootstrap Forms have predefined login forms, registration forms, subscription forms, contact forms and other layout forms varying in design, each offering a unique type of functionality.
 
 ## Importing the Contrast Angular Bootstrap Forms Module
 
 To use the Contrast Angular Bootstrap Forms component in your project you need to import `FormsModule`.
 
-```typescript
+```ts
 import {FormsModule} from '@angular/forms';
 ```
 
-## Default Form Login
+## Default Login Form
 
-To create a Contrast Angular Bootstrap Form we use nested [CDBInput](https://www.devwares.com/docs/contrast/angular/components/input) components on a [CDBCard](https://www.devwares.com/docs/contrast/angular/components/card), this card makes up the for body. The [CDBBtn](https://www.devwares.com/docs/contrast/angular/components/buttons) for creating the form button.
+To create a Contrast Angular Bootstrap Form we use nested [CDBInput](https://www.devwares.com/docs/contrast/angular/components/input) components on a [CDBCard](https://www.devwares.com/docs/contrast/angular/components/card), this card makes up the form's body. The [CDBBtn](https://www.devwares.com/docs/contrast/angular/components/buttons) for creating the form button.
 
 We also use the [CDBIcon](https://www.devwares.com/docs/contrast/angular/components/icon) component to put icons in your form and the `CDBLink` for creating links in your form.
 
 
 ![Angular Bootstrap Form Login](./images/1.png)
 
-###### html
+###### HTML
 ```html
 <CDBCard>
     <CDBCardBody class="mx-4">
@@ -61,8 +62,8 @@ We also use the [CDBIcon](https://www.devwares.com/docs/contrast/angular/compone
     </CDBCardBody>
 </CDBCard>
 ```
-###### typescript
-```typescript
+###### TypeScript
+```TS
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -99,11 +100,11 @@ export class FormsComponent implements OnInit {
 ```
 
 
-## Contrast Form Login
+## Contrast Login Form
 
 ![Angular Bootstrap Form Login](./images/2.png)
 
-###### html
+###### HTML
 ```html
 <CDBCard>
     <div style="background: black" class="text-center text-white">
@@ -140,8 +141,8 @@ export class FormsComponent implements OnInit {
     </CDBCardBody>
 </CDBCard>
 ```
-###### typescript
-```typescript
+###### TypeScript
+```TS
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -177,11 +178,11 @@ export class FormsComponent implements OnInit {
 }
 ```
 
-## Default Form Register
+## Default Register Form
 
 ![Angular Bootstrap Form Register Default](./images/3.png)
 
-###### html
+###### HTML
 
 ```html
 <CDBCard>
@@ -231,8 +232,8 @@ export class FormsComponent implements OnInit {
     </CDBCardBody>
 </CDBCard>
 ```
-###### typescript
-```typescript
+###### TypeScript
+```TS
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -267,11 +268,11 @@ export class FormsComponent implements OnInit {
   ngOnInit(): void {}
 }
 ```
-## Contrast Form Register
+## Contrast Register Form
 
 ![Angular Bootstrap Form Login](./images/4.png)
 
-###### html
+###### HTML
 ```html
 <CDBCard>
     <div class="text-center text-white" style="background: black">
@@ -323,8 +324,8 @@ export class FormsComponent implements OnInit {
     </CDBCardBody>
 </CDBCard>
 ```
-###### typescript
-```typescript
+###### TypeScript
+```TS
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -359,11 +360,11 @@ export class FormsComponent implements OnInit {
   ngOnInit(): void {}
 }
 ```
-## Default Form Subscription
+## Default Subscription Form
 
 ![Angular Bootstrap Form Subscription](./images/5.png)
 
-###### html
+###### HTML
 ```html
 <CDBCard>
     <CDBCardBody class="mx-4">
@@ -381,8 +382,8 @@ export class FormsComponent implements OnInit {
     </CDBCardBody>
 </CDBCard>
 ```
-###### typescript
-```typescript
+###### TypeScript
+```TS
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -417,11 +418,11 @@ export class FormsComponent implements OnInit {
   ngOnInit(): void {}
 }
 ```
-## Contrast Form Submission
+## Contrast Submission Form
 
 ![Angular Bootstrap Form Submission](./images/6.png)
 
-###### html
+###### HTML
 ```html
 <CDBCard>
     <div class="text-center text-white" style="background: black">
@@ -438,8 +439,8 @@ export class FormsComponent implements OnInit {
     </CDBCardBody>
 </CDBCard>
 ```
-###### typescript
-```typescript
+###### TypeScript
+```ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -474,11 +475,11 @@ export class FormsComponent implements OnInit {
   ngOnInit(): void {}
 }
 ```
-## Default Form Contact
+## Default Contact Form
 
 ![Angular Bootstrap Form Contact](./images/7.png)
 
-###### html
+###### HTML
 ```html
 <CDBCard>
     <CDBCardBody class="mx-4">
@@ -500,8 +501,8 @@ export class FormsComponent implements OnInit {
     </CDBCardBody>
 </CDBCard>
 ```
-###### typescript
-```typescript
+###### TypeScript
+```ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -536,11 +537,11 @@ export class FormsComponent implements OnInit {
   ngOnInit(): void {}
 }
 ```
-## Contrast Form Contact
+## Contrast Contact Form
 
 ![Angular Bootstrap Form Contact](./images/8.png)
 
-###### html
+###### HTML
 ```html
 <CDBCard>
     <div style="background: black" class="text-center text-white">
@@ -562,8 +563,8 @@ export class FormsComponent implements OnInit {
     </CDBCardBody>
 </CDBCard>
 ```
-###### typescript
-```typescript
+###### TypeScript
+```ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -603,7 +604,7 @@ export class FormsComponent implements OnInit {
 
 ![Angular Bootstrap Form Login with Icons](./images/9.png)
 
-###### html
+###### HTML
 ```html
 <CDBCard>
     <CDBCardBody class="mx-4">
@@ -618,8 +619,8 @@ export class FormsComponent implements OnInit {
     </CDBCardBody>
 </CDBCard>
 ```
-###### typescript
-```typescript
+###### TypeScript
+```ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -658,7 +659,7 @@ export class FormsComponent implements OnInit {
 
 ![Angular Bootstrap Form Login](./images/10.png)
 
-###### html
+###### HTML
 ```html
 <CDBCard>
     <CDBCardBody class="mx-4">
@@ -679,8 +680,8 @@ export class FormsComponent implements OnInit {
     </CDBCardBody>
 </CDBCard>
 ```
-###### typescript
-```typescript
+###### TypeScript
+```ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -719,7 +720,7 @@ export class FormsComponent implements OnInit {
 
 ![Angular Bootstrap Form Sign Up with Icons](./images/11.png)
 
-###### html
+###### HTML
 ```html
 <CDBCard>
     <CDBCardBody class="mx-4">
@@ -737,8 +738,8 @@ export class FormsComponent implements OnInit {
     </CDBCardBody>
 </CDBCard>
 ```
-###### typescript
-```typescript
+###### TypeScript
+```ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -777,7 +778,7 @@ export class FormsComponent implements OnInit {
 
 ![Angular Bootstrap Form Sign Up with Label](./images/12.png)
 
-###### html
+###### HTML
 ```html
 <CDBCard>
     <CDBCardBody class="mx-4">
@@ -806,8 +807,8 @@ export class FormsComponent implements OnInit {
     </CDBCardBody>
 </CDBCard>
 ```
-###### typescript
-```typescript
+###### TypeScript
+```ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -846,7 +847,7 @@ export class FormsComponent implements OnInit {
 
 ![Angular Bootstrap Form Subscription with Icon](./images/13.png)
 
-###### html
+###### HTML
 ```html
 <CDBCard>
     <CDBCardBody class="mx-4">
@@ -862,8 +863,8 @@ export class FormsComponent implements OnInit {
     </CDBCardBody>
 </CDBCard>
 ```
-###### typescript
-```typescript
+###### TypeScript
+```ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -902,7 +903,7 @@ export class FormsComponent implements OnInit {
 
 ![Angular Bootstrap Form Login](./images/14.png)
 
-###### html
+###### HTML
 ```html
 <CDBCard>
     <CDBCardBody class="mx-4">
@@ -924,8 +925,8 @@ export class FormsComponent implements OnInit {
     </CDBCardBody>
 </CDBCard>
 ```
-###### typescript
-```typescript
+###### TypeScript
+```ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -964,7 +965,7 @@ export class FormsComponent implements OnInit {
 
 ![Angular Bootstrap Form with Icon](./images/15.png)
 
-###### html
+###### HTML
 ```html
 <CDBCard>
     <CDBCardBody class="mx-4">
@@ -982,8 +983,8 @@ export class FormsComponent implements OnInit {
     </CDBCardBody>
 </CDBCard>
 ```
-###### typescript
-```typescript
+###### TypeScript
+```ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -1023,7 +1024,7 @@ export class FormsComponent implements OnInit {
 
 ![Angular Bootstrap Form Login](./images/16.png)
 
-###### html
+###### HTML
 ```html
 <CDBCard>
     <CDBCardBody class="mx-4">
@@ -1053,8 +1054,8 @@ export class FormsComponent implements OnInit {
     </CDBCardBody>
 </CDBCard>
 ```
-###### typescript
-```typescript
+###### TypeScript
+```ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -1089,11 +1090,11 @@ export class FormsComponent implements OnInit {
   ngOnInit(): void {}
 }
 ```
-## Form Login
+## Login Form
 
 ![Angular Bootstrap Form Login](./images/17.png)
 
-###### html
+###### HTML
 ```html
 <CDBCard>
     <CDBCardBody class="mx-4">
@@ -1126,8 +1127,8 @@ export class FormsComponent implements OnInit {
     </CDBCardBody>
 </CDBCard>
 ```
-###### typescript
-```typescript
+###### TypeScript
+```ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -1162,11 +1163,11 @@ export class FormsComponent implements OnInit {
   ngOnInit(): void {}
 }
 ```
-## Sign Up
+## Sign Up Form
 
 ![Angular Bootstrap Form Login](./images/18.png)
 
-###### html
+###### HTML
 ```html
 <CDBCard>
     <CDBCardBody class="mx-4">
@@ -1208,8 +1209,8 @@ export class FormsComponent implements OnInit {
     </div>
 </CDBCard>
 ```
-###### typescript
-```typescript
+###### TypeScript
+```ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -1248,7 +1249,7 @@ export class FormsComponent implements OnInit {
 
 ![Angular Bootstrap Form Login](./images/19.png)
 
-###### html
+###### HTML
 ```html
 <CDBCard>
     <div style="background: linear-gradient(0deg, rgba(37,212,214,1) 0%, rgba(110,112,200,1) 100%)"
@@ -1286,8 +1287,8 @@ export class FormsComponent implements OnInit {
     </CDBCardBody>
 </CDBCard>
 ```
-###### typescript
-```typescript
+###### TypeScript
+```ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -1322,11 +1323,11 @@ export class FormsComponent implements OnInit {
   ngOnInit(): void {}
 }
 ```
-## Sign Up with Background Image
+## Sign Up Form with Background Image
 
 ![Angular Bootstrap Form Sign Up with Background Image](./images/20.png)
 
-###### html
+###### HTML
 ```html
 <CDBCard
     style=" background: url(https://images.unsplash.com/photo-1528287942171-fbe365d1d9ac?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&w=1200&cs=srgb&ixid=eyJh); background-size: cover; position: relative;">
@@ -1356,8 +1357,8 @@ export class FormsComponent implements OnInit {
     </div>
 </CDBCard>
 ```
-###### typescript
-```typescript
+###### TypeScript
+```ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -1400,7 +1401,7 @@ export class FormsComponent implements OnInit {
 ![Angular Bootstrap Form SignIn](./images/23.png)
 
 
-###### html
+###### HTML
 ```html
 <CDBCard class="shadow">
     <CDBCardBody class="p-5">
@@ -1585,8 +1586,8 @@ export class FormsComponent implements OnInit {
     </CDBCardBody>
 </CDBCard>
 ```
-###### typescript
-```typescript
+###### TypeScript
+```ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -1638,7 +1639,7 @@ The table below lists other prop options of the `CDBInput` component.
 | material        | Boolean      | false        | Changes component styles for material theme | material=true |
 | valueDefault     | Number or String       |           |  The default value of the input (use with the uncontrolled input)	| valueDefault="I am uncontrolled" |
 | id     | String       |           | Required! Set the id of the input element 	| id="myId" |
-| label     | String       |           | Add label to the component; you can attach jsx elements (f.e. links) 	| label="My custom input" |
+| label     | String       |           | Add label to the component; you can attach HTML elements (f.e. links) 	| label="My custom input" |
 | labelClass     | String       |           | Add custom class to label | labelClass="My custom label class" |
 | labelId     | String       |           | Sets custom id to label | labelId="myId" |
 | size     | String       |      lg     | Changes size of the component; available `lg` and `sm` | size="lg" |
@@ -1676,7 +1677,7 @@ The table below lists other prop options of the `CDBCardBody` component.
 | Name            | Type        | Default      |   Description| Example      |
 | :------------- | :----------: | -----------: | :----------: | -----------: |
 | class      | String       |              |Adds custom classes	      |   class="myClass" |
-| cascade        | Boolean      | false        | Switches the CardBody to cascade style mode | cascade=true |
+| cascade        | Boolean      | false        | Switches the card's body to cascade style mode | cascade=true |
 
 
 ## API Reference: Contrast Angular Bootstrap Card Image Props
@@ -1686,8 +1687,8 @@ The table below lists other prop options of the `CDBCardImage` component.
 | Name            | Type        | Default      |   Description| Example      |
 | :------------- | :----------: | -----------: | :----------: | -----------: |
 | class      | String       | |Adds custom classes	      |     class="myClass" |
-| cascade        | Boolean      | false        | Switches the CardBody to cascade style mode | cascade=true |
-| hover          | Boolean      | false        | Switches on hover behaviour | hover=true  |
+| cascade        | Boolean      | false        | Switches the card's body to cascade style mode | cascade=true |
+| hover          | Boolean      | false        | Switches on hover behavior | hover=true  |
 | overlay        | String       | white-light  | Sets the color of hover overlay | overlay="white-light" |
 | src            | String       |              | Source of the image | src="image_src" |
 | top            | Boolean      | false        | Makes image fluid | top=true |

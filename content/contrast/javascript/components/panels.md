@@ -2,10 +2,12 @@
 
 title: 'Panel'
 metaTitle: 'Bootstrap 5 Panels - Bootstrap CSS tutorial'
-metaDescription: 'Bootstrap 5 Panels are content containers that are flexible and expandable, allowing for a wide range of content, contextual backdrop colors, and sophisticated display choice.'
----# Bootstrap 5 Panel
+metaDescription: 'Bootstrap 5 Panels are content containers that are flexible and expandable, allowing for a wide range of content, contextual backdrop colors, and elegant display choice.'
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/javascript/components/panels.md"
+---
+# Bootstrap 5 Panel
 
-Bootstrap 5 Panels are content containers that are flexible and expandable, allowing for a wide range of content, contextual backdrop colors, and sophisticated display choices. Panels are like cards, however they don't have any media.
+Bootstrap 5 Panels are content containers that are flexible and expandable, allowing a wide range of content, contextual backdrop colors, and elegant display choices. Panels are like cards, however they don't have any media.
 
 <i/>
 
@@ -13,9 +15,9 @@ Bootstrap 5 Panels are content containers that are flexible and expandable, allo
 
 The `panel` class allows us to have the Contrast Bootstrap 5 Panel predefined styles in your project. We also use the Contrast Bootstrap Dropdown in our Panel example below, visit [here](https://www.devwares.com/docs/contrast/javascript/components/dropdown) for more information on contrast dropdowns.
 
-![Bootstrap Panel With Dropdown](./images/panelwithdropdown.png)
+<Panels1/>
 
-###### html
+###### HTML
 
 ```html
 <div class="panel" style="width: 25rem">
@@ -56,15 +58,13 @@ The `panel` class allows us to have the Contrast Bootstrap 5 Panel predefined st
 </div>
 ```
 
-<i/>
-
 ## Panel with Users
 
 We use other classes to define the different parts of the panel, the `panel-title` for writing out the titles in your panel, `panel-text` for text, and `panel-img` for holding images in your panel.
 
-![Bootstrap Panel With Users](./images/panelwithusers.png)
+<Panels2/>
 
-###### html
+###### HTML
 
 ```html
 <div class="panel" style="width: 25rem">
@@ -96,15 +96,13 @@ We use other classes to define the different parts of the panel, the `panel-titl
 </div>
 ```
 
-<i/>
-
 ## Panel with Label
 
 In this section of the tutorial we also use the Contrast Bootstrap Badge alongside the bootstrap panel, to understand the Bootstrap badge and how to use it in your project, go to [here](https://www.devwares.com/docs/contrast/javascript/components/badge).
 
-![Bootstrap Panel With Label](./images/panelwithlabel.png)
+<Panels3/>
 
-###### html
+###### HTML
 
 ```html
 <div class="panel" style="width: 25rem">
@@ -134,13 +132,11 @@ In this section of the tutorial we also use the Contrast Bootstrap Badge alongsi
 </div>
 ```
 
-<i/>
-
 ## Pane List
 
-![Bootstrap Panel List](./images/panellist.png)
+<Panels4/>
 
-###### html
+###### HTML
 
 ```html
 <div class="panel" style="width: 25rem">
@@ -231,68 +227,51 @@ In this section of the tutorial we also use the Contrast Bootstrap Badge alongsi
 </div>
 ```
 
-<i/>
 
 ## Panel with Progress
 
 We also use the Contrast Bootstrap Progress in our Panel example below, visit [here](https://www.devwares.com/docs/contrast/javascript/components/progress) for more information on contrast dropdowns.
 
-![Bootstrap Panel With Progress](./images/panelwithprogress.png)
+<Panels5/>
 
-###### html
+###### HTML
 
 ```html
-            <div class="panel" style="width: 25rem">
-                <div class="panel-body">
-                  <div class="pane d-flex align-items-center mt-0">
-                    <img class="pane-img" src="https://media.istockphoto.com/photos/beautiful-woman-wearing-brown-curly-hairstyle-picture-id495006065?s=170x170" alt=""/>
-                    <div class="ml-3">
-                      <h6 class="m-0" style="font-weight:600;">Warren Briggs</h6>
-                      <p class="m-0 pane-item">Cooking</p>
-                    </div>
-                    <p class="ml-auto pane-item">5mins Ago</p>
-                  </div>
+<div class="panel" style="width: 25rem">
+  <div class="panel-body">
+    <div class="pane d-flex align-items-center mt-0">
+      <img
+        class="pane-img"
+        src="https://media.istockphoto.com/photos/beautiful-woman-wearing-brown-curly-hairstyle-picture-id495006065?s=170x170"
+        alt=""
+      />
+      <div class="ml-3">
+        <h6 class="m-0" style="font-weight:600;">Warren Briggs</h6>
+        <p class="m-0 pane-item">Cooking</p>
+      </div>
+      <p class="ml-auto pane-item">5mins Ago</p>
+    </div>
 
-                  <div class="progress-container">
-                    <div class="progress-text pane-item">Instagram</div>
-                    <div
-                      class="progress progress-primary"
-                      role="progress"
-                      min="0"
-                      max="100"
-                      value="20"
-                    >
-                      <div class="progress-bar"></div>
-                    </div>
-                  </div>
+    <div class="progress-container">
+      <div class="progress-text pane-item">Instagram</div>
+      <div class="progress progress-primary" role="progress" min="0" max="100" value="20">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
 
-                  <div class="progress-container">
-                    <div class="progress-text progress-text-secondary">Twitter</div>
-                    <div
-                      class="progress progress-secondary"
-                      role="progress"
-                      min="0"
-                      max="100"
-                      value="30"
-                    >
-                      <div class="progress-bar"></div>
-                    </div>
-                  </div>
+    <div class="progress-container">
+      <div class="progress-text progress-text-secondary">Twitter</div>
+      <div class="progress progress-secondary" role="progress" min="0" max="100" value="30">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
 
-                  <div class="progress-container">
-                    <div class="progress-text progress-text-danger">Facebook</div>
-                    <div
-                      class="progress progress-danger"
-                      role="progress"
-                      min="0"
-                      max="100"
-                      value="80"
-                    >
-                      <div class="progress-bar"></div>
-                    </div>
-                  </div>
-
-                </div>
-            </div>
-        </div>
+    <div class="progress-container">
+      <div class="progress-text progress-text-danger">Facebook</div>
+      <div class="progress progress-danger" role="progress" min="0" max="100" value="80">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+  </div>
+</div>
 ```

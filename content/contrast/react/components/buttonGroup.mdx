@@ -1,21 +1,22 @@
 ---
 title: "ButtonGroup"
-metaTitle: "ButtonGroup Component for React Bootstrap"
-metaDescription: "A button group in React Bootstrap wraps a bunch of buttons into a single line or stack in a vertical column. The Button Group component generates a group to which buttons can be added. Of course, a button group can only have one button selected at any given moment."
+metaTitle: "ButtonGroup Component for React Bootstrap 5"
+metaDescription: "A button group in React Bootstrap 5 wraps a bunch of buttons into a single line or stack in a vertical column. The Button Group component generates a group to which buttons can be added. Of course, a button group can only have one button selected at any given moment."
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/react/components/buttonGroup.mdx"
 ---
 
 import React from "react";
 import {Link} from "gatsby";
 
 
-# React Bootstrap ButtonGroup
+# React Bootstrap 5 ButtonGroup
 
-A button group in React Bootstrap wraps a bunch of buttons into a single line or stack in a vertical column. The Button Group component generates a group to which buttons can be added. Of course, a button group can only have one button selected at any given moment. As a result, selecting a button in a button group deselects all of the other buttons in the group.
+A button group in React Bootstrap 5 wraps a bunch of buttons into a single line or stack in a vertical column. The Button Group component generates a group to which buttons can be added. Of course, a button group can only have one button selected at any given moment. As a result, selecting a button in a button group deselects all of the other buttons in the group.
 
 The visual look of the buttons on the screen has nothing to do with button groupings. Instead, button groups merely organize the buttons into logical groups.
 The Button Group component controls whether a group of buttons is chosen or not.
 
-Applications of React Bootstrap button group:
+Applications of React Bootstrap 5 button group:
 
 We can see the application of these component on our:
 
@@ -23,28 +24,21 @@ We can see the application of these component on our:
 * Group of licenses you can purchase on our website Pro page
 
 
-## Importing the Contrast React Bootstrap ButtonGroup component
+## Importing the Contrast React Bootstrap 5 ButtonGroup component
 
-Start by importing 'CDBBtnGrp' into your project to use the Contrast React Bootstrap ButtonGroup component.
+Start by importing 'CDBBtnGrp' into your project to use the Contrast React Bootstrap 5 ButtonGroup component.
 
 ```js
 import { CDBBtnGrp } from "cdbreact";
 ```
 
-## Multicolored Button Groups
+## Basic Button Groups
 
 Alongside the `CDBBtnGrp` component, we imported the `CDBBtn` component to create our buttons.
 
-The `color` prop also affects the Contrast React Bootstrap ButtonGroup, as it gives the buttons in the ButtonGroup a background color, depending on the values passed into the prop.
+The `color` prop also affects the Contrast React Bootstrap 5 ButtonGroup, as it gives the buttons in the ButtonGroup a background color, depending on the values passed into the prop.
 
-  <div class="container">
-    <button type="button" class="btn btn-primary">Click me</button>
-    <button type="button" class="btn btn-secondary">Click me</button>
-    <button type="button" class="btn btn-success">Click me</button>
-    <button type="button" class="btn btn-danger">Click me</button>
-    <button type="button" class="btn btn-dark">Click me</button>
-  <button type="button" class="btn btn-warning">Click me</button>
-  </div>
+<buttonGroupExample1 />
 
 ```js
 import React from "react";
@@ -53,33 +47,20 @@ import { CDBBtnGrp, CDBBtn, CDBContainer } from "cdbreact";
 const ButtonGroup = () => {
   return (
     <CDBContainer>
-          <CDBBtnGrp size="lg">
-            <CDBBtn color="primary">click me</CDBBtn>
-            <CDBBtn color="secondary">click me</CDBBtn>
-            <CDBBtn color="success">click me</CDBBtn>
-            <CDBBtn color="danger">click me</CDBBtn>
-            <CDBBtn color="dark">click me</CDBBtn>
-            <CDBBtn color="warning">click me</CDBBtn>
-          </CDBBtnGrp>
+      <CDBBtnGrp>
+        <CDBBtn color="primary">Left</CDBBtn>
+        <CDBBtn color="primary">Middle</CDBBtn>
+        <CDBBtn color="primary">Right</CDBBtn>
+      </CDBBtnGrp>
     </CDBContainer>
   );
-  export default ButtonGroup;
 };
+
+export default ButtonGroup;
 ```
 ## Rect Secondary Medium with Space Between
 
-  <div class="container">
-    <div class="mb-2">
-      <button type="button" class="btn m-0 btn-primary">Click me</button>
-      <button type="button" class="btn m-0 btn-secondary">Click me</button>
-      <button type="button" class="btn m-0 btn-success">Click me</button>
-    </div>
-    <div>
-      <button type="button" class="btn m-0 btn-danger">Click me</button>
-      <button type="button" class="btn m-0 btn-dark">Click me</button>
-      <button type="button" class="btn m-0 btn-warning">Click me</button>
-    </div>
-  </div>
+<buttonGroupExample6 />
 
 ```js
 import React from "react";
@@ -88,34 +69,29 @@ import { CDBBtnGrp, CDBBtn, CDBContainer } from "cdbreact";
 const ButtonGroup = () => {
   return (
     <CDBContainer>
-          <CDBBtnGrp>
-            <CDBBtn color="primary">click me</CDBBtn>
-            <CDBBtn color="secondary">click me</CDBBtn>
-            <CDBBtn color="success">click me</CDBBtn>
+          <CDBBtnGrp size="md" >
+            <CDBBtn  color="primary">click me</CDBBtn>
+            <CDBBtn  color="secondary">click me</CDBBtn>
+            <CDBBtn  color="success">click me</CDBBtn>
           </CDBBtnGrp>
-          <CDBBtnGrp>
-            <CDBBtn color="danger">click me</CDBBtn>
-            <CDBBtn color="dark">click me</CDBBtn>
-            <CDBBtn color="warning">click me</CDBBtn>
+          <CDBBtnGrp size="md>
+            <CDBBtn  color="danger">click me</CDBBtn>
+            <CDBBtn  color="dark">click me</CDBBtn>
+            <CDBBtn  color="warning">click me</CDBBtn>
           </CDBBtnGrp>
     </CDBContainer>
   );
-  export default ButtonGroup;
+ 
 };
+
+ export default ButtonGroup;
 ```
 
 ## Rect Secondary Small
 
-With the Contrast React Bootstrap ButtonGroup you can give every button wrapped up in the CDBButtonGroup component a particular size. This is a lot easier than giving each of the buttons a `className` to affect the styling.
+With the Contrast React Bootstrap 5 ButtonGroup you can give every button wrapped up in the CDBButtonGroup component a particular size. This is a lot easier than giving each of the buttons a `className` to affect the styling.
 
-  <div class="container">
-    <button type="button" class="btn btn-sm m-0 btn-primary">Click me</button>
-    <button type="button" class="btn btn-sm m-0 btn-secondary">Click me</button>
-    <button type="button" class="btn btn-sm m-0 btn-success">Click me</button>
-    <button type="button" class="btn btn-sm m-0 btn-danger">Click me</button>
-    <button type="button" class="btn btn-sm m-0 btn-dark">Click me</button>
-  <button type="button" class="btn btn-sm m-0 btn-warning">Click me</button>
-  </div>
+<buttonGroupExample7 />
 
 ```js
 import React from "react";
@@ -125,31 +101,26 @@ const ButtonGroup = () => {
   return (
     <CDBContainer>
           <CDBBtnGrp size="sm">
-            <CDBBtn color="primary">click me</CDBBtn>
-            <CDBBtn color="secondary">click me</CDBBtn>
-            <CDBBtn color="success">click me</CDBBtn>
-            <CDBBtn color="danger">click me</CDBBtn>
-            <CDBBtn color="dark">click me</CDBBtn>
-            <CDBBtn color="warning">click me</CDBBtn>
+            <CDBBtn  color="primary">click me</CDBBtn>
+            <CDBBtn  color="secondary">click me</CDBBtn>
+            <CDBBtn  color="success">click me</CDBBtn>
+            <CDBBtn  color="danger">click me</CDBBtn>
+            <CDBBtn  color="dark">click me</CDBBtn>
+            <CDBBtn  color="warning">click me</CDBBtn>
           </CDBBtnGrp>
     </CDBContainer>
   );
-  export default ButtonGroup;
+  
 };
+
+export default ButtonGroup;
 ```
 ## Vertical Rect Secondary Large
 
 Make a set of buttons appear vertically stacked rather than horizontally.The `vertical size` prop with a value of `large` gives the buttons an extra padding at the top and padding at the bottom.
 
  
-  <div class="container btn-group-vertical">
-    <button type="button" class="btn btn-lg btn-primary">Click me</button>
-    <button type="button" class="btn btn-lg btn-secondary">Click me</button>
-    <button type="button" class="btn btn-lg btn-success">Click me</button>
-    <button type="button" class="btn btn-lg btn-danger">Click me</button>
-    <button type="button" class="btn btn-lg btn-dark">Click me</button>
-    <button type="button" class="btn btn-lg btn-warning">Click me</button>
-  </div>
+<buttonGroupExample8 />
 
 ```js
 import React from "react";
@@ -159,31 +130,24 @@ const ButtonGroup = () => {
   return (
     <CDBContainer>
           <CDBBtnGrp vertical size="lg">
-            <CDBBtn color="primary">click me</CDBBtn>
-            <CDBBtn color="secondary">click me</CDBBtn>
-            <CDBBtn color="success">click me</CDBBtn>
-            <CDBBtn color="danger">click me</CDBBtn>
-            <CDBBtn color="dark">click me</CDBBtn>
-            <CDBBtn color="warning">click me</CDBBtn>
+            <CDBBtn  color="primary">click me</CDBBtn>
+            <CDBBtn  color="secondary">click me</CDBBtn>
+            <CDBBtn  color="success">click me</CDBBtn>
+            <CDBBtn  color="danger">click me</CDBBtn>
+            <CDBBtn  color="dark">click me</CDBBtn>
+            <CDBBtn  color="warning">click me</CDBBtn>
           </CDBBtnGrp>
     </CDBContainer>
   );
-  export default ButtonGroup;
+
 };
+  export default ButtonGroup;
 ```
 ## Vertical Rect Secondary Medium
 
-The'vertical-size'prop of the Contrast React Bootstrap ButtonGroup is set to medium by default. This vertically stacks the buttons in a button group without adding any top or bottom padding.
+The'vertical-size'prop of the Contrast React Bootstrap 5 ButtonGroup is set to medium by default. This vertically stacks the buttons in a button group without adding any top or bottom padding.
 
-
-  <div class="container btn-group-vertical">
-    <button type="button" class="btn btn-md btn-primary">Click me</button>
-    <button type="button" class="btn btn-md btn-secondary">Click me</button>
-    <button type="button" class="btn btn-md btn-success">Click me</button>
-    <button type="button" class="btn btn-md btn-danger">Click me</button>
-    <button type="button" class="btn btn-md btn-dark">Click me</button>
-    <button type="button" class="btn btn-md btn-warning">Click me</button>
-  </div>
+<buttonGroupExample9 />
 
 ```js
 import React from "react";
@@ -192,7 +156,7 @@ import { CDBBtnGrp, CDBBtn, CDBContainer } from "cdbreact";
 const ButtonGroup = () => {
   return (
     <CDBContainer>
-          <CDBBtnGrp vertical>
+          <CDBBtnGrp vertical size="md">
             <CDBBtn color="primary">click me</CDBBtn>
             <CDBBtn color="secondary">click me</CDBBtn>
             <CDBBtn color="success">click me</CDBBtn>
@@ -202,22 +166,15 @@ const ButtonGroup = () => {
           </CDBBtnGrp>
     </CDBContainer>
   );
-  export default ButtonGroup;
+  
 };
+export default ButtonGroup;
 ```
 ## Vertical Rect Secondary Small
 
-The vertical size prop of the Contrast React Bootstrap ButtonGroup is also set to tiny, which minimizes the top and bottom paddings in the buttons contained in the CDBButtonGroup.
+The vertical size prop of the Contrast React Bootstrap 5 ButtonGroup is also set to tiny, which minimizes the top and bottom paddings in the buttons contained in the CDBButtonGroup.
 
-
-  <div class="container btn-group-vertical">
-    <button type="button" class="btn btn-sm btn-primary">Click me</button>
-    <button type="button" class="btn btn-sm btn-secondary">Click me</button>
-    <button type="button" class="btn btn-sm btn-success">Click me</button>
-    <button type="button" class="btn btn-sm btn-danger">Click me</button>
-    <button type="button" class="btn btn-sm btn-dark">Click me</button>
-    <button type="button" class="btn btn-sm btn-warning">Click me</button>
-  </div>
+<buttonGroupExample10 />
 
 ```js
 import React from "react";
@@ -227,17 +184,18 @@ const ButtonGroup = () => {
   return (
     <CDBContainer>
           <CDBBtnGrp vertical size="sm">
-            <CDBBtn color="primary">click me</CDBBtn>
-            <CDBBtn color="secondary">click me</CDBBtn>
-            <CDBBtn color="success">click me</CDBBtn>
-            <CDBBtn color="danger">click me</CDBBtn>
-            <CDBBtn color="dark">click me</CDBBtn>
-            <CDBBtn color="warning">click me</CDBBtn>
+            <CDBBtn  color="primary">click me</CDBBtn>
+            <CDBBtn  color="secondary">click me</CDBBtn>
+            <CDBBtn  color="success">click me</CDBBtn>
+            <CDBBtn  color="danger">click me</CDBBtn>
+            <CDBBtn  color="dark">click me</CDBBtn>
+            <CDBBtn  color="warning">click me</CDBBtn>
           </CDBBtnGrp>
     </CDBContainer>
   );
-  export default ButtonGroup;
+ 
 };
+ export default ButtonGroup;
 ```
 
 <i/>
@@ -246,17 +204,9 @@ const ButtonGroup = () => {
 
 <Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
 
-In this section of the tutorial, we also use the [CDBIcon](https://www.devwares.com/docs/contrast/react/components/icon) component alongside the `CDBButtonGroup`. You can find more information in our docs about how to use the Contrast React Bootstrap Icon in your project. You swipe the texts in the buttons for an icon with the Contrast React Bootstrap 'CDBButtonGroup' component.
+In this section of the tutorial, we also use the [CDBIcon](https://www.devwares.com/docs/contrast/react/components/icon) component alongside the `CDBButtonGroup`. You can find more information in our docs about how to use the Contrast React Bootstrap 5 Icon in your project. You swipe the texts in the buttons for an icon with the Contrast React Bootstrap 5 'CDBButtonGroup' component.
 
-  <div class="container">
-    <button type="button" class="btn m-0 btn-sm btn-primary"><i class="fab fa-twitter"></i></button>
-    <button type="button" class="btn m-0 btn-sm btn-secondary"><i class="fab fa-facebook-f"></i></button>
-    <button type="button" class="btn m-0 btn-sm btn-success"><i class="fab fa-reddit"></i></button>
-    <button type="button" class="btn m-0 btn-sm btn-danger"><i class="fab fa-instagram"></i></button>
-    <button type="button" class="btn m-0 btn-sm btn-dark"><i class="fab fa-imdb"></i></button>
-    <button type="button" class="btn m-0 btn-sm btn-warning"><i class="fab fa-stack-overflow"></i></button>
-  </div>
-
+<buttonGroupExample11 />
 
 ```js
 import React from "react";
@@ -275,34 +225,15 @@ const ButtonGroup = () => {
           </CDBBtnGrp>
     </CDBContainer>
   );
-  export default ButtonGroup;
+ 
 };
+ export default ButtonGroup;
 ```
 ## Button Group with Dropdown
 
 In this tutorial we also use the [CDBIcon](https://www.devwares.com/docs/contrast/react/components/icon) for our icons, [CDBBtn](https://www.devwares.com/docs/contrast/react/components/buttons) to create buttons, and the [CDBDropdown](https://www.devwares.com/docs/contrast/react/components/dropdown) component to create our dropdowns alongside the `CDBButtonGroup` component. 
 
-  <div class="container d-flex">
-    <button type="button" class="btn m-0 btn-md btn-primary">Click me</button>
-    <button type="button" class="btn m-0 btn-md btn-secondary">Click me</button>
-    <button type="button" class="btn m-0 btn-md btn-success">Click me</button>
-    <div class="dropdown">
-      <button
-        class="btn m-0 btn-warning text-dark dropdown-toggle"
-        type="button"
-        id="dropdownMenuButton"
-        data-toggle="dropdown"
-        aria-expanded="false"
-      >
-        Dropdown
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-      </ul>
-    </div>
-  </div>
+<buttonGroupExample12 />
 
 ```js
 import React from "react";
@@ -327,8 +258,10 @@ const ButtonGroup = () => {
           </CDBBtnGrp>
     </CDBContainer>
   );
-  export default ButtonGroup;
+ 
 };
+
+ export default ButtonGroup;
 ```
 
 # API
@@ -338,7 +271,7 @@ In this section you will find advanced information about the ButtonGroup compone
 ## Contrast ButtonGroup Import Statement
 You need to import the Contrast ButtonGroup component first before using it. Then import any other needed components.
 
-# Contrast React Bootstrap ButtonGroup Props
+# Contrast React Bootstrap 5 ButtonGroup Props
 
 ## API Reference: Contrast ButtonGroup Properties
 
@@ -346,10 +279,10 @@ The table below shows the configuration options of the `CDBBtnGrp` component.
 
 | Name            | Type        | Default      |   Description| Example      |
 | :------------- | :----------: | -----------: | :----------: | -----------: |
-| className      | String       |              |Adds custom classes	      |     <CDBBtnGrp className="myClass" ... />  |
-| role           | String       | group        | Change default component's role | <CDBBtnGrp role="group" ... />  |
-| size           | String       | medium       |  	Determines buttons size, available values: `[sm, lg]`. | <CDBBtnGrp size="lg" ... />  |
-| vertical       | Boolean      | false        | Changes group orientation to vertical | <CDBBtnGrp vertical .../>  |
+| className      | String       |              |Adds custom classes	      |     `<CDBBtnGrp className="myClass" ... />`  |
+| role           | String       | group        | Change default component's role | `<CDBBtnGrp role="group" ... />`  |
+| size           | String       | medium       |  	Determines buttons size, available values: `[sm, lg]`. | `<CDBBtnGrp size="lg" ... />`  |
+| vertical       | Boolean      | false        | Changes group orientation to vertical |  `<CDBBtnGrp vertical .../>`  |
 
 
 

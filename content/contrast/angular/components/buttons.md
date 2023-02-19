@@ -2,17 +2,18 @@
 title: "Button"
 metaTitle: "Angular Bootstrap Button"
 metaDescription: "Angular Bootstrap Buttons are components that trigger wanted user interactions"
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/angular/components/buttons.md"
 ---
 
-# Angular Bootstrap Button
+# Contrast Angular Bootstrap Button
 
-Angular Bootstrap button allows users to interact with your website. They are easy to customize in terms of size, shape, and color. They include several predefined button styles, each serving its semantic purpose, with a few extras thrown in for more control.
+Contrast Angular Bootstrap button allows users to interact with your website. They are easy to customize in terms of size, shape, and color. They include  a number of pre-defined button styles, each with its own logical function, and a few extras thrown in for more control.
 
 ## Importing the Contrast Angular Bootstrap Button Module
 
 To use the Contrast Angular Bootstrap Button component in your project you need to import `ButtonModule`.
 
-```typescript
+```ts
 import {ButtonModule } from 'cdbangular';
 ```
 
@@ -22,7 +23,7 @@ Use the `color` prop to give your buttons a background color.
 
 ![Angular Bootstrap Button Basic Button Styling](./images/buttonbasic.png)
 
-###### html
+###### HTML
 ```html
 <CDBBtn color="primary">Primary</CDBBtn>
 <CDBBtn color="secondary">Secondary</CDBBtn>
@@ -41,7 +42,7 @@ Set the [circle] prop to `true` to make your buttons more rounded
 
 ![image info](./images/buttoncircle.png)
 
-###### html
+###### HTML
 ```html
 <CDBBtn color="primary" [circle]=true>
     Primary
@@ -77,7 +78,7 @@ Set the [outline] prop to `true` to have only the outline of the button colored.
 
 ![Angular Bootstrap Buttons Outline](./images/buttonoutline.png)
 
-###### html
+###### HTML
 ```html
 <CDBBtn color="primary" [outline]=true>
     Primary
@@ -106,7 +107,7 @@ Set the [outline] prop to `true` to have only the outline of the button colored.
 
 ![Angular Bootstrap Buttons Circular Outline](./images/buttonroundedoutline.png)
 
-###### html
+###### HTML
 ```html
 <CDBBtn color="primary" [circle]=true [outline]=true>
     Primary
@@ -137,7 +138,7 @@ Use the [flat] buttons to remove the button shadow.
 
 ![Angular Bootstrap Buttons Flat](./images/buttonflat.png)
 
-###### html
+###### HTML
 ```html
 <CDBBtn color="primary" [flat]=true>
     Primary
@@ -167,54 +168,14 @@ Use the [flat] buttons to remove the button shadow.
     Light
 </CDBBtn>
 ```
-<i/>
-
-## Label at the side
-
-Use the `label` prop to define the position of your label.
-
-![Angular Bootstrap Button Label at the Side](./images/buttonlabelatside.png)
-
-###### html
-```html
-<CDBBtn color="primary" label="right">Primary</CDBBtn>
-<CDBBtn color="secondary" label="right">Secondary</CDBBtn>
-<CDBBtn color="success" label="right">Success</CDBBtn>
-<CDBBtn color="danger">Danger</CDBBtn>
-<CDBBtn color="dark" label="left">Dark</CDBBtn>
-<CDBBtn color="warning" label="left">Warning</CDBBtn>
-<CDBBtn color="info" label="left">Info</CDBBtn>
-<CDBBtn color="white" label="left">White</CDBBtn>
-<CDBBtn color="light" label="left">Light</CDBBtn>
-```
-<i/>
-
-## Large Button ending with Text
-
-Use the `endingText` to define where your text is positioned.
-
-![Angular Bootstrap Buttons Large ending with Text](./images/buttonlargewithendingtext.png)
-
-###### html
-```html
-<CDBBtn style="width: 250px; height: 80px" color="primary" endingText="top-left">Primary</CDBBtn>
-<CDBBtn style="width: 250px; height: 80px" color="secondary" endingText="top-right">Secondary</CDBBtn>
-<CDBBtn style="width: 250px; height: 80px" color="success" endingText="bottom-left">Success</CDBBtn>
-<CDBBtn style="width: 250px; height: 80px" color="danger" endingText="bottom-right">Danger</CDBBtn>
-<CDBBtn style="width: 250px; height: 80px" color="dark" endingText="top">Dark</CDBBtn>
-<CDBBtn style="width: 250px; height: 80px" color="warning" endingText="bottom">Warning</CDBBtn>
-<CDBBtn style="width: 250px; height: 80px" color="info" endingText="center">Info</CDBBtn>
-<CDBBtn style="width: 250px; height: 80px" color="white" endingText="center">White</CDBBtn>
-<CDBBtn style="width: 250px; height: 80px" color="light" endingText="center">Light</CDBBtn>
-```
 
 ## Block Button
 
-Set the [block] prop to true to make the button take the entire width.
+Set the [block] prop to true to set the button's width to 100%.
 
 ![Angular Bootstrap Button Block](./images/buttonblock.png)
 
-###### html
+###### HTML
 ```html
 <CDBBtn color="primary" [block]=true>
     Primary
@@ -244,15 +205,14 @@ Set the [block] prop to true to make the button take the entire width.
     Light
 </CDBBtn>
 ```
-<i/>
 
 ## Buttons with Icons
 
-Nest the [CDBIcon](https://www.devwares.com/docs/contrast/react/components/icon) in your `CDBBtn` to have icons in your buttons.
+Nest the [CDBIcon](https://www.devwares.com/docs/contrast/angular/components/icon) in your `CDBBtn` to have icons in your buttons.
 
 ![Angular Bootstrap Button with Icons](./images/buttonwithicons.png)
 
-###### html
+###### HTML
 ```html
 <CDBBtn color="warning">
     <CDBIcon icon="magic" class="ml-1"></CDBIcon>
@@ -270,7 +230,7 @@ Use the `size` prop to define how little or large you want your buttons to be.
 
 ![Angular Bootstrap Button Sizes](./images/buttonsize.png)
 
-###### html
+###### HTML
 ```html
 <CDBBtn color="primary" size="xl">Extra Large button</CDBBtn>
 <CDBBtn color="secondary" size="large">Large button</CDBBtn>
@@ -284,7 +244,7 @@ Set the [disabled] prop to true to disable the button.
 
 ![Angular Bootstrap Button Disabled](./images/disabledbutton.png)
 
-###### html
+###### HTML
 ```html
 <CDBBtn color="secondary" [disabled]=true>
     Disabled Button
@@ -294,7 +254,7 @@ Set the [disabled] prop to true to disable the button.
 
 ## API Reference: Contrast Angular Bootstrap Button Props
 
-This section will build on your information about the props you get to use with the Contrast Angular Bootstrap Breadcrumb component. You will find out what these props do, their default values, and how you would use them in your code.
+This section will build on your information about the props you get to use with the Contrast Angular Bootstrap Button component. You will find out what these props do, their default values, and how you would use them in your code.
 
 The table below lists other prop options of the `CDBBtn` component.
 
@@ -307,7 +267,7 @@ The table below lists other prop options of the `CDBBtn` component.
 | class          | String       |              |                   | class="custom-class" |
 | color          | String       | primary      | Determines button color, accepts CDB predefined color classes | color="secondary" |
 | disabled       | Boolean      | false        | Disables button from being clicked | disabled=true |
-| download       | String       |              | Adds download attribute with provided url | download="https://link_to_your_file.com" |
+| download       | String       |              | Adds download attribute with provided URL | download="https://link_to_your_file.com" |
 | endingText     | String       |              | Positions the button text in one of the selected positions. These positions include `top-left`, `top-right`, `bottom-left`, `bottom-right`, `top`, `bottom`, `center`.| endingText="center" |
 | flat           | Boolean      | false        | Adds flat effect to button. That is button without background and borders | flat=true |
 | innerRef       | function or String |        | Allows to pass Ref string, which will attach to rendered button or a DOM element | innerRef="buttonRef" |

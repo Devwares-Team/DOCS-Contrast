@@ -2,19 +2,20 @@
 title: 'Checkbox'
 metaTitle: 'Bootstrap 5 Checkbox - Bootstrap CSS tutorial'
 metaDescription: 'Building a Checkbox Component using the Contrast Bootstrap  Package'
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/javascript/components/checkbox.md"
 ---
 
 # Bootstrap 5 Checkbox
 
-Bootstrap 5 Checkbox is a component that allows a user to make multiple selections. This term is commonly used in forms and surveys.
+Bootstrap 5 Checkbox is a component that allows a user to make multiple selections. This component is commonly used in forms and surveys.
 
 They are used to pick one or more items from a list, whereas `radios` are used to select one option from several.
 
 ## Default Checkbox
 
-![Bootstrap Checkbox Default](./images/checkbox1.png)
+<Checkbox1/>
 
-###### html
+###### HTML
 
 ```html
 <div class="custom-check">
@@ -36,9 +37,9 @@ They are used to pick one or more items from a list, whereas `radios` are used t
 
 <a href="/product/bootstrap-contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></a>
 
-![Bootstrap Checkbox Inline](./images/checkbox02.png)
+<Checkbox2/>
 
-###### html
+###### HTML
 
 ```html
 <div class="custom-check form-check-inline">
@@ -56,13 +57,13 @@ They are used to pick one or more items from a list, whereas `radios` are used t
 </div>
 ```
 
-## Different Styling for Checkbox
+## Styled Checkboxes
 
 <a href="/product/bootstrap-contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></a>
 
-![Bootstrap Checkbox](./images/checkboxstyle.png)
+<Checkbox3/>
 
-###### html
+###### HTML
 
 ```html
 <div class="custom-check">

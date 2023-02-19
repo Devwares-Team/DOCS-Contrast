@@ -1,20 +1,21 @@
 ---
 title: 'Autocomplete'
 metaTitle: 'Autocomplete Component for React Bootstrap'
-metaDescription: 'React Bootstrap Autocomplete is a component that predicts words based on the first few letters typed by the user'
+metaDescription: 'React Bootstrap 5 Autocomplete is a component that predicts words based on the first few letters typed by the user'
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/react/components/autocomplete.mdx"
 ---
 
 import React from 'react';
 import { Link } from 'gatsby';
 
-# React Bootstrap Autocomplete
+# React Bootstrap 5 Autocomplete
 
-React Bootstrap Autocomplete or autosuggest is a feature owned by a component that that predicts the words based on the first few letters given by a user while typing it. It takes in an `Array` full of suggestions.
+React Bootstrap 5 Autocomplete or autosuggest is a feature owned by a component that that predicts the words based on the first few letters given by a user while typing it. It takes in an `Array` full of suggestions.
 You can use `↑` and `↓` arrow keys to navigate through options and use the`↵` key to select the required option.
 
-## Importing the React Bootstrap Autocomplete component
+## Importing the React Bootstrap 5 Autocomplete component
 
-You should first import CDBAutocomplete into your project to use the Contrast React Bootstrap Autocomplete Component.
+You should first import CDBAutocomplete into your project to use the Contrast React Bootstrap 5 Autocomplete Component.
 
 ```js
 import { CDBAutocomplete } from 'cdbreact';
@@ -34,7 +35,7 @@ import { CDBAutocomplete } from 'cdbreact';
 import React from 'react';
 import { CDBAutocomplete, CDBContainer } from 'cdbreact';
 
-export const Autocomplete = () => {
+const Autocomplete = () => {
   const countryList = [
     'Afghanistan',
     'Albania',
@@ -293,11 +294,12 @@ export const Autocomplete = () => {
     </CDBContainer>
   );
 };
+export default Autocomplete;
 ```
 
 ## Autocomplete usage within a Card
 
-Other than the CDBAutocomplete component, we'll be using other Contrast React Bootstrap components in this section. These components are [CDBIcon](https://www.devwares.com/docs/contrast/react/components/icon), [CDBCard](https://www.devwares.com/docs/contrast/react/components/card), [CDBBtn](https://www.devwares.com/docs/contrast/react/components/buttons), [CDBCardBody](https://www.devwares.com/docs/contrast/react/components/card), [CDBInput](https://www.devwares.com/docs/contrast/react/components/input) to follow up on this tutorial, please check out the docs on these components.
+Other than the CDBAutocomplete component, we'll be using other Contrast React Bootstrap 5 components in this section. These components are [CDBIcon](https://www.devwares.com/docs/contrast/react/components/icon), [CDBCard](https://www.devwares.com/docs/contrast/react/components/card), [CDBBtn](https://www.devwares.com/docs/contrast/react/components/buttons), [CDBCardBody](https://www.devwares.com/docs/contrast/react/components/card), [CDBInput](https://www.devwares.com/docs/contrast/react/components/input) to follow up on this tutorial, please check out the docs on these components.
 
 ```js
 import React from 'react';
@@ -311,7 +313,7 @@ import {
   CDBContainer,
 } from 'cdbreact';
 
-export const Autocomplete = () => {
+ const Autocomplete = () => {
   return (
     <CDBContainer>
       <CDBCard style={{ width: '100%' }}>
@@ -354,11 +356,12 @@ export const Autocomplete = () => {
     </CDBContainer>
   );
 };
+expot default Autocomplete
 ```
 
 ## Autocomplete With the "getValue" Callback Prop
 
-A 'getValue' prop is also available in the Contrast React Bootstrap Autocomplete component. This property accepts a function that is called whenever the input value changes, i.e. on every `onChange` event.
+A 'getValue' prop is also available in the Contrast React Bootstrap 5 Autocomplete component. This property accepts a function that is called whenever the input value changes, i.e. on every `onChange` event.
 
 [IMAGE HERE](https://www.google.com/)
 
@@ -377,9 +380,9 @@ export const Autocomplete = () => {
 };
 ```
 
-# Contrast React Bootstrap Autocomplete Props
+# Contrast React Bootstrap 5 Autocomplete Props
 
-This section will broaden on the props available with the Contrast React Bootstrap Autocomplete component. You'll learn what these props do, how to use them, and what their default values are.
+This section will broaden on the props available with the Contrast React Bootstrap 5 Autocomplete component. You'll learn what these props do, how to use them, and what their default values are.
 
 The table below lists other prop options of the `CDBAutocomplete` component.
 

@@ -1,289 +1,315 @@
 ---
-title: "Icon"
-metaTitle: "Icon Component for React Bootstrap"
-metaDescription: "React Bootstrap Icons are little images or symbols that can serve as a link, transmit information, or are merely aesthetic"
+title: 'Icon'
+metaTitle: 'Icon Component for React Bootstrap'
+metaDescription: 'React Bootstrap 5 Icons are little images or symbols that can serve as a link, transmit information, or are merely aesthetic'
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/react/components/icon.mdx"
 ---
 
-import React from "react";
-import {Link} from "gatsby";
+import React from 'react';
+import { Link } from 'gatsby';
 
-# React Bootstrap Icon
+# React Bootstrap 5 Icon
 
-React Bootstrap Icons are little images or symbols that can serve as a link, transmit information, or are merely aesthetic.
+React Bootstrap 5 Icons are little images or symbols that can serve as a link, transmit information, or are merely aesthetic.
 
-The Contrast React Bootstrap Icon component allows you to use brand icons with predefined designs in your project, such as Twitter, Facebook, and Stack Overflow. However, only Pro users have access to this function.
+The Contrast React Bootstrap 5 Icon component allows you to use brand icons with predefined designs in your project, such as Twitter, Facebook, and Stack Overflow. However, only Pro users have access to this function.
 
-<i/>
+<i />
 
-## Importing the React Bootstrap Icon Component
+## Importing the React Bootstrap 5 Icon Component
 
-To begin using the React Bootstrap Icon component, import `CDBIcon` into your project.
+To begin using the React Bootstrap 5 Icon component, import `CDBIcon` into your project.
 
 ```js
-import { CDBIcon } from "cdbreact";
+import { CDBIcon } from 'cdbreact';
 ```
 
 ## Default Icon
 
-<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+The `CDBIcon` component can be nestled inside another React Bootstrap 5 Component, in this case, the `CDBBtn`. Our buttons now have icons on them as a result of this.
 
-The `CDBIcon` component can be nestled inside another React Bootstrap Component, in this case, the `CDBBtn`. Our buttons now have icons on them as a result of this.
-
-
-<button type="button" class="btn btn-primary">
-  <i class="fab fa-stack-overflow"></i>
-  <span> click me </span>
-</button>
-<button type="button" class="btn btn-secondary">
-  <i class="fab fa-facebook"></i>
-  <span>click me </span>
-</button>
-<button type="button" class="btn btn-success">
-  <i class="fab fa-reddit"></i>
-  <span> click me </span>
-</button>
-<button type="button" class="btn btn-danger">
-  <i class="fab fa-twitter"></i>
-  <span> click me </span>
-</button>
-<button type="button" class="btn btn-dark">
-  <i class="fab fa-instagram"></i>
-  <span> click me </span>
-</button>
-<button type="button" class="btn btn-warning">
-  <i class="fab fa-google"></i>
-  <span> click me </span>
-</button>
-
+<div
+  class="element"
+  style="border: 2px solid #f4f4f4; margin: 0 20px; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center;
+    padding: 20px; align-items: center "
+>
+  <button type="button" class="btn btn-primary" style="background: #3b82f6">
+    <i class="fab fa-stack-overflow"></i>
+    <span> click me </span>
+  </button>
+  <button type="button" class="btn btn-secondary" style="background: #6366f1">
+    <i class="fab fa-facebook"></i>
+    <span>click me </span>
+  </button>
+  <button type="button" class="btn btn-success" style="background: #22c55e">
+    <i class="fab fa-reddit"></i>
+    <span> click me </span>
+  </button>
+  <button type="button" class="btn btn-danger" style="background: #ef4444">
+    <i class="fab fa-twitter"></i>
+    <span> click me </span>
+  </button>
+  <button type="button" class="btn btn-dark" style="background: #111827">
+    <i class="fab fa-instagram"></i>
+    <span> click me </span>
+  </button>
+  <button type="button" class="btn btn-warning" style="background: #eab308">
+    <i class="fab fa-google"></i>
+    <span> click me </span>
+  </button>
+</div>
 
 ```js
-import React from "react";
-import { CDBBtn, CDBIcon, CDBContainer } from "cdbreact";
+import React from 'react';
+import { CDBBtn, CDBIcon, CDBContainer } from 'cdbreact';
 
 export const Icon = () => {
   return (
     <CDBContainer>
-          <CDBBtn color="primary">
-            <CDBIcon fab icon="stack-overflow" />
-            click me
-          </CDBBtn>
-          <CDBBtn color="secondary">
-            <CDBIcon fab icon="facebook" />
-            click me
-          </CDBBtn>
-          <CDBBtn color="success">
-            <CDBIcon fab icon="reddit" />
-            click me
-          </CDBBtn>
-          <CDBBtn color="danger">
-            <CDBIcon fab icon="twitter" />
-            click me
-          </CDBBtn>
-          <CDBBtn color="dark">
-            <CDBIcon fab icon="instagram" />
-            click me
-          </CDBBtn>
-          <CDBBtn color="warning">
-            <CDBIcon fab icon="google" />
-            click me
-          </CDBBtn>
+      <CDBBtn color="primary">
+        <CDBIcon fab icon="stack-overflow" />
+        click me
+      </CDBBtn>
+      <CDBBtn color="secondary">
+        <CDBIcon fab icon="facebook" />
+        click me
+      </CDBBtn>
+      <CDBBtn color="success">
+        <CDBIcon fab icon="reddit" />
+        click me
+      </CDBBtn>
+      <CDBBtn color="danger">
+        <CDBIcon fab icon="twitter" />
+        click me
+      </CDBBtn>
+      <CDBBtn color="dark">
+        <CDBIcon fab icon="instagram" />
+        click me
+      </CDBBtn>
+      <CDBBtn color="warning">
+        <CDBIcon fab icon="google" />
+        click me
+      </CDBBtn>
     </CDBContainer>
   );
 };
 ```
 
-
-<i/>
+<i />
 
 ## Border Icons
 
-
 To give your icons a light, thin border, try the `fab border icon` prop.
 
-<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
-
-<div class="container">
+<div
+  class="element"
+  style="border: 2px solid #f4f4f4; margin: 0 20px; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center;
+    padding: 20px; align-items: center"
+>
+  <div class="container">
     <i class="fab fa-stack-overflow icon-border"></i>
     <i class="fab fa-facebook icon-border"></i>
     <i class="fab fa-reddit icon-border"></i>
     <i class="fab fa-twitter icon-border"></i>
     <i class="fab fa-instagram icon-border"></i>
     <i class="fab fa-google icon-border"></i>
+  </div>
 </div>
 
-
 ```js
-import React from "react";
-import { CDBIcon, CDBContainer } from "cdbreact";
+import React from 'react';
+import { CDBIcon, CDBContainer } from 'cdbreact';
 
 export const Icon = () => {
   return (
     <CDBContainer>
-          <CDBIcon fab border icon="stack-overflow" />
-          <CDBIcon fab border icon="facebook" />
-          <CDBIcon fab border icon="reddit" />
-          <CDBIcon fab border icon="twitter" />
-          <CDBIcon fab border icon="instagram" />
-          <CDBIcon fab border icon="google" />
+      <CDBIcon fab border icon="stack-overflow" />
+      <CDBIcon fab border icon="facebook" />
+      <CDBIcon fab border icon="reddit" />
+      <CDBIcon fab border icon="twitter" />
+      <CDBIcon fab border icon="instagram" />
+      <CDBIcon fab border icon="google" />
     </CDBContainer>
   );
 };
 ```
 
-<i/>
+<i />
 
 ## Spin Icons
 
-<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
+To spin your icons, you can use the `fab spin icon` prop.
 
-To spin your icons, you can use the `fab spin icon` prop. 
-
-<div class="container">
+<div
+  class="element"
+  style="border: 2px solid #f4f4f4; margin: 0 20px; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center;
+    padding: 20px; align-items: center"
+>
+  <div class="container">
     <i class="fab p-2 fa-stack-overflow icon-spin"></i>
     <i class="fab p-2 fa-facebook icon-spin"></i>
     <i class="fab p-2 fa-reddit icon-spin"></i>
     <i class="fab p-2 fa-twitter icon-spin"></i>
     <i class="fab p-2 fa-instagram icon-spin"></i>
     <i class="fab p-2 fa-google icon-spin"></i>
+  </div>
 </div>
 
 ```js
-import React from "react";
-import { CDBIcon, CDBContainer } from "cdbreact";
+import React from 'react';
+import { CDBIcon, CDBContainer } from 'cdbreact';
 
 export const Icon = () => {
   return (
     <CDBContainer>
-          <CDBIcon fab spin icon="stack-overflow" />
-          <CDBIcon fab spin icon="facebook" />
-          <CDBIcon fab spin icon="reddit" />
-          <CDBIcon fab spin icon="twitter" />
-          <CDBIcon fab spin icon="instagram" />
-          <CDBIcon fab spin icon="google" />
+      <CDBIcon fab spin icon="stack-overflow" />
+      <CDBIcon fab spin icon="facebook" />
+      <CDBIcon fab spin icon="reddit" />
+      <CDBIcon fab spin icon="twitter" />
+      <CDBIcon fab spin icon="instagram" />
+      <CDBIcon fab spin icon="google" />
     </CDBContainer>
   );
 };
 ```
-<i/>
+
+<i />
 
 ## Pull Icons
 
-<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
-
 To shift the direction your prop is facing, use the `fab pull` prop.
 
-<div class="container">
+<div
+  class="element"
+  style="border: 2px solid #f4f4f4; margin: 0 20px; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center;
+    padding: 20px; align-items: center"
+>
+  <div class="container">
     <i class="fab fa-stack-overflow icon-pull"></i>
+  </div>
 </div>
 
 ```js
-import React from "react";
-import { CDBIcon, CDBContainer } from "cdbreact";
+import React from 'react';
+import { CDBIcon, CDBContainer } from 'cdbreact';
 
 export const Icon = () => {
   return (
     <CDBContainer>
-          <CDBIcon fab pull="left" icon="stack-overflow" />
+      <CDBIcon fab pull="left" icon="stack-overflow" />
     </CDBContainer>
   );
 };
 ```
 
-<i/>
+<i />
 
 ## Pulse Icons
 
-<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
-
 You can use the `fab pulse icon` prop to make your icons spin quicker than the `fab spin icon` would.
 
-<div class="container">
+<div
+  class="element"
+  style="border: 2px solid #f4f4f4; margin: 0 20px; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center;
+    padding: 20px; align-items: center"
+>
+  <div class="container">
     <i class="fab p-1 fa-stack-overflow icon-pulse"></i>
     <i class="fab p-1 fa-facebook icon-pulse"></i>
     <i class="fab p-1 fa-reddit icon-pulse"></i>
     <i class="fab p-1 fa-twitter icon-pulse"></i>
     <i class="fab p-1 fa-instagram icon-pulse"></i>
     <i class="fab p-1 fa-google icon-pulse"></i>
+  </div>
 </div>
 
 ```js
-import React from "react";
-import { CDBIcon, CDBContainer } from "cdbreact";
+import React from 'react';
+import { CDBIcon, CDBContainer } from 'cdbreact';
 
 export const Icon = () => {
   return (
     <CDBContainer>
-          <CDBIcon fab pulse icon="stack-overflow" />
-          <CDBIcon fab pulse icon="facebook" />
-          <CDBIcon fab pulse icon="reddit" />
-          <CDBIcon fab pulse icon="twitter" />
-          <CDBIcon fab pulse icon="instagram" />
-          <CDBIcon fab pulse icon="google" />
+      <CDBIcon fab pulse icon="stack-overflow" />
+      <CDBIcon fab pulse icon="facebook" />
+      <CDBIcon fab pulse icon="reddit" />
+      <CDBIcon fab pulse icon="twitter" />
+      <CDBIcon fab pulse icon="instagram" />
+      <CDBIcon fab pulse icon="google" />
     </CDBContainer>
   );
 };
 ```
-<i/>
 
-## Flip Icons
-
-<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
-
-<div class="container">
+<i /> ## Flip Icons
+<div
+  class="element"
+  style="border: 2px solid #f4f4f4; margin: 0 20px; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center;
+    padding: 20px; align-items: center"
+>
+  <div class="container">
     <i class="fab p-1 fa-stack-overflow fa-flip-vertical"></i>
     <i class="fab p-1 fa-facebook fa-flip-vertical"></i>
+  </div>
 </div>
 
 ```js
-import React from "react";
-import { CDBIcon, CDBContainer } from "cdbreact";
+import React from 'react';
+import { CDBIcon, CDBContainer } from 'cdbreact';
 
 export const Icon = () => {
   return (
     <CDBContainer>
-          <CDBIcon fab flip="horizontal" icon="stack-overflow" />
-          <CDBIcon fab flip="vertical" icon="facebook" />
+      <CDBIcon fab flip="horizontal" icon="stack-overflow" />
+      <CDBIcon fab flip="vertical" icon="facebook" />
     </CDBContainer>
   );
 };
 ```
 
-<i/>
+<i />
 
 ## Rotate Icons
 
-<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
-
 To indicate the angle at which your icon should be rotated, use the `fab rotate` prop.
 
-<div class="container">
+<div
+  class="element"
+  style="border: 2px solid #f4f4f4; margin: 0 20px; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center;
+    padding: 20px; align-items: center"
+>
+  <div class="container">
     <i class="fab p-1 fa-stack-overflow icon-rotate"></i>
     <i class="fab p-1 fa-facebook icon-rotate"></i>
+  </div>
 </div>
 
 ```js
-import React from "react";
-import { CDBIcon, CDBContainer } from "cdbreact";
+import React from 'react';
+import { CDBIcon, CDBContainer } from 'cdbreact';
 
 export const Icon = () => {
   return (
     <CDBContainer>
-          <CDBIcon fab rotate="90" icon="stack-overflow" />
-          <CDBIcon fab rotate="180" icon="facebook" />
+      <CDBIcon fab rotate="90" icon="stack-overflow" />
+      <CDBIcon fab rotate="180" icon="facebook" />
     </CDBContainer>
   );
 };
 ```
 
-<i/>
+<i />
 
 ## Sizes
 
 The 'size' prop is used to indicate how big or small the icon should be. You can use this props to change the size of your Icon.
 
-<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
-
-<div class="container">
+<div
+  class="element"
+  style="border: 2px solid #f4f4f4; margin: 0 20px; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center;
+    padding: 20px; align-items: center"
+>
+  <div class="container">
     <i class="fab p-1 fa-facebook fa-sm"></i>
     <i class="fab p-1 fa-facebook fa-md"></i>
     <i class="fab p-1 fa-facebook fa-lg"></i>
@@ -291,50 +317,51 @@ The 'size' prop is used to indicate how big or small the icon should be. You can
     <i class="fab p-1 fa-facebook fa-3x"></i>
     <i class="fab p-1 fa-facebook fa-4x"></i>
     <i class="fab p-1 fa-facebook fa-5x"></i>
+  </div>
 </div>
 
 ```js
-import React from "react";
-import { CDBIcon, CDBContainer } from "cdbreact";
+import React from 'react';
+import { CDBIcon, CDBContainer } from 'cdbreact';
 
 export const Icon = () => {
   return (
     <CDBContainer>
-          <CDBIcon fab icon="facebook" size="sm" />
-          <CDBIcon fab icon="facebook" size="md" />
-          <CDBIcon fab icon="facebook" size="lg" />
-          <CDBIcon fab icon="facebook" size="2x" />
-          <CDBIcon fab icon="facebook" size="3x" />
-          <CDBIcon fab icon="facebook" size="4x" />
-          <CDBIcon fab icon="facebook" size="5x" />
+      <CDBIcon fab icon="facebook" size="sm" />
+      <CDBIcon fab icon="facebook" size="md" />
+      <CDBIcon fab icon="facebook" size="lg" />
+      <CDBIcon fab icon="facebook" size="2x" />
+      <CDBIcon fab icon="facebook" size="3x" />
+      <CDBIcon fab icon="facebook" size="4x" />
+      <CDBIcon fab icon="facebook" size="5x" />
     </CDBContainer>
   );
 };
 ```
 
-# Contrast React Bootstrap Icon Props
+# Contrast React Bootstrap 5 Icon Props
 
-This tutorial will expand on your knowledge of the props available with the React Bootstrap Icon component. You'll learn what these props do, what their default values are, and how to use them in your code.
+This tutorial will expand on your knowledge of the props available with the React Bootstrap 5 Icon component. You'll learn what these props do, what their default values are, and how to use them in your code.
 
 Other prop options for the 'CDBIcon' component are included in the table below.
 
-| Name            | Type        | Default      |   Description| Example      |
-| :------------- | :----------: | -----------: | :----------: | -----------: |
-| className      | String       | Adds custom classes             |Adds custom classes	      |     <CDBIcon className="myClass" ... />  |
-| icon           | String       |              | `Required!` The Font Awesome icon name, which you want to use | <CDBIcon icon="facebook" ... />  |
-| border         | Boolean      | false        |  	Adds border around icon | <CDBIcon border .../>  |
-| brand          | Boolean      | false        |  Sets brand icon category; `alias: fab`	| <CDBIcon brand icon="chevron" .../>  |
-| fab            | Boolean      | false        |  Sets brand icon category; `alias: brand`	| <CDBIcon fab icon="twitter" .../>  |
-| fal            | Boolean      | false        |  Sets light icon category; `alias: light`	| <CDBIcon fal icon="user" .../>  |
-| far            | Boolean      | false        |  Sets light icon category; `alias: regular`	| <CDBIcon far icon="user" .../>  |
-| fixed          | Boolean      | false        | Sets fixed with of icons (i.e. inside list) | <CDBIcon fixed icon="user" .../>  |
-| flip           | String       |              | Flips icon; acceptable props: `horizontal` or `vertical` | <CDBIcon flip="vertical" icon="user" .../>  |
-| inverse        | Boolean      | false        | Sets alternative icon color | <CDBIcon inverse icon="user" .../>  |
-| light          | Boolean      | false        | Sets light icon category; `alias: fal` | <CDBIcon light icon="facebook" .../> |  |
-| list           | Boolean      | false        | Adds `fa-li` to the className | <CDBIcon list icon="facebook" .../> |  |
-| pull           | String       |              | Pulls icon to the `right` or `left` | <CDBIcon pull="left" icon="user" .../>  |
-| pulse          | Boolean      | false        | Rotates icon in 8 steps | <CDBIcon pulse icon="facebook" .../> |  |
-| rotate         | String       |              | Rotates icon by `90`, `180` or `270` degrees | <CDBIcon rotate="90" icon="facebook" .../> |  |
-| size           | String       |              |  	Increase icon size; accepts parameters: [`lg`, `2x`, `3x`, `4x`, `5x`] | <CDBIcon size="5x" icon="facebook" .../> |  |
-| spin           | Boolean      | false        | Spins the icon, you can combine this prop with `pulse` | <CDBIcon spin  .../> |  |
-| stack          | String       |              | Use class `fa-stack` on wrapper to stack multiple icons; use `1x` for regular sized icon and `2x` for larger one | <span className="fa-stack" ...> <CDBIcon far icon="square" stack="2x" .../> <CDBIcon fab icon="twitter" stack="1x" .../> <.../span> |
+| Name      |  Type   |             Default |                                                   Description                                                    |                                                                                                                             Example |
+| :-------- | :-----: | ------------------: | :--------------------------------------------------------------------------------------------------------------: | ----------------------------------------------------------------------------------------------------------------------------------: |
+| className | String  | Adds custom classes |                                               Adds custom classes                                                |                                                                                                 <CDBIcon className="myClass" ... /> |
+| icon      | String  |                     |                          `Required!` The Font Awesome icon name, which you want to use                           |                                                                                                     <CDBIcon icon="facebook" ... /> |
+| border    | Boolean |               false |                                             Adds border around icon                                              |                                                                                                               <CDBIcon border .../> |
+| brand     | Boolean |               false |                                      Sets brand icon category; `alias: fab`                                      |                                                                                                 <CDBIcon brand icon="chevron" .../> |
+| fab       | Boolean |               false |                                     Sets brand icon category; `alias: brand`                                     |                                                                                                   <CDBIcon fab icon="twitter" .../> |
+| fal       | Boolean |               false |                                     Sets light icon category; `alias: light`                                     |                                                                                                      <CDBIcon fal icon="user" .../> |
+| far       | Boolean |               false |                                    Sets light icon category; `alias: regular`                                    |                                                                                                      <CDBIcon far icon="user" .../> |
+| fixed     | Boolean |               false |                                   Sets fixed with of icons (i.e. inside list)                                    |                                                                                                    <CDBIcon fixed icon="user" .../> |
+| flip      | String  |                     |                             Flips icon; acceptable props: `horizontal` or `vertical`                             |                                                                                          <CDBIcon flip="vertical" icon="user" .../> |
+| inverse   | Boolean |               false |                                           Sets alternative icon color                                            |                                                                                                  <CDBIcon inverse icon="user" .../> |
+| light     | Boolean |               false |                                      Sets light icon category; `alias: fal`                                      |                                                                                                <CDBIcon light icon="facebook" .../> |  |
+| list      | Boolean |               false |                                          Adds `fa-li` to the className                                           |                                                                                                 <CDBIcon list icon="facebook" .../> |  |
+| pull      | String  |                     |                                       Pulls icon to the `right` or `left`                                        |                                                                                              <CDBIcon pull="left" icon="user" .../> |
+| pulse     | Boolean |               false |                                             Rotates icon in 8 steps                                              |                                                                                                <CDBIcon pulse icon="facebook" .../> |  |
+| rotate    | String  |                     |                                   Rotates icon by `90`, `180` or `270` degrees                                   |                                                                                          <CDBIcon rotate="90" icon="facebook" .../> |  |
+| size      | String  |                     |                      Increase icon size; accepts parameters: [`lg`, `2x`, `3x`, `4x`, `5x`]                      |                                                                                            <CDBIcon size="5x" icon="facebook" .../> |  |
+| spin      | Boolean |               false |                              Spins the icon, you can combine this prop with `pulse`                              |                                                                                                                 <CDBIcon spin .../> |  |
+| stack     | String  |                     | Use class `fa-stack` on wrapper to stack multiple icons; use `1x` for regular sized icon and `2x` for larger one | <span className="fa-stack" ...> <CDBIcon far icon="square" stack="2x" .../> <CDBIcon fab icon="twitter" stack="1x" .../> <.../span> |

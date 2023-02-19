@@ -1,30 +1,32 @@
 ---
-title: 'Iframe'
-metaTitle: 'Bootstrap 5 Iframe - Bootstrap CSS tutorial'
-metaDescription: 'Bootstrap 5 IFrame is a web page that has an HTML document that is embedded in another HTML document.'
----# Bootstrap 5 Iframe
+title: 'IFrame'
+metaTitle: 'Bootstrap 5 IFrame - Bootstrap CSS tutorial'
+metaDescription: 'Bootstrap 5 IFrame is a web element that has an HTML document embedded in another HTML document.'
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/javascript/components/iframe.md"
+---
+# Bootstrap 5 IFrame
 
-Bootstrap 5 IFrame is a web page that has an HTML document that is embedded in another HTML document. IFrames are used to display content from other websites.
+Bootstrap 5 IFrame is a web element that has an HTML document  embedded in another HTML document. IFrames are used to display content from other websites.
 
 You may use the Bootstrap integration to put the IFrame's content inside a modal to make it even more interactive and fun.
 
 Bootstrap 5 IFrames are fully responsive components that change to the screen size, so you don't have to worry about your content quality.
 
-Application of Iframes:
+Application of IFrames:
 
 - Video tutorial
 - Promotional video presentation
 - Google Maps in contact section
 
-## Default Iframe
+## Default IFrame
 
-Use the id `cdb-iframe1` for the default iframe and the class `cdb-iframe` for the Bootstrap 5 Iframe in your project.
+Use the id `cdb-iframe1` for the default IFrame and the class `cdb-iframe` for the Bootstrap 5 IFrame in your project.
 
-The `src` attribute denotes the location of the material you want to play. The `ratio` attribute specifies the width-to-height ratio in pixels. The `allowFullScreen` parameter enables your Iframe to be full-screen.
+The `src` attribute denotes the location of the material you want to play. The `ratio` attribute specifies the width-to-height ratio in pixels. The `allowFullScreen` parameter enables your IFrame to be full-screen.
 
-![Bootstrap Iframe Default](./images/iframe.png)
+<Iframe1/>
 
-######html
+###### HTML
 
 ```html
 <div
@@ -38,20 +40,20 @@ The `src` attribute denotes the location of the material you want to play. The `
 ></div>
 ```
 
-######Script
+###### JavaScript
 
 ```js
     <script>
       new CDB.IFrame(document.querySelector('#cdb-iframe1'));
-      new CDB.IFrame(document.querySelector('#cdb-iframe2'));
+      new CDB.IFrame(document.querySelector('#cdb-iframe1'));
     </script>
 ```
 
-## Iframe Customized
+## IFrame Customized
 
-Use the id `cdb-iframe2` to include the Contrast Bootstrap 5 Customized Iframe in your project.
+Use the id `cdb-iframe` to include the Contrast Bootstrap 5 Customized IFrame in your project.
 
-######html
+###### HTML
 
 ```html
 <div
@@ -65,11 +67,11 @@ Use the id `cdb-iframe2` to include the Contrast Bootstrap 5 Customized Iframe i
 ></div>
 ```
 
-######Script
+###### JavaScript
 
 ```js
-    <script>
-      new CDB.IFrame(document.querySelector('#cdb-iframe1'));
-      new CDB.IFrame(document.querySelector('#cdb-iframe2'));
-    </script>
+<script>
+  new CDB.IFrame(document.querySelector('#cdb-iframe1')); new
+  CDB.IFrame(document.querySelector('#cdb-iframe2'));
+</script>
 ```

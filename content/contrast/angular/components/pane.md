@@ -1,20 +1,20 @@
 ---
 title: "Pane"
-metaTitle: "Angular Bootstrap Pane ="
+metaTitle: "Angular Bootstrap Pane "
 metaDescription: "Angular Bootstrap Pane is a component used in displaying information like a card"
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/angular/components/pane.md"
 ---
 
-# Angular Bootstrap Pane
+# Contrast Angular Bootstrap Pane
 
-Angular Bootstrap Pane is a component used in displaying information like a card. It is typically used in Chat UIs.
+Contrast Angular Bootstrap Pane is a component used in displaying information like a card. It is typically used in Chat UIs.
 
-<i/>
 
 ## Importing the Contrast Angular Bootstrap Pane Module
 
 To use the Contrast Angular Bootstrap Pane component in your project you need to import `PaneModule`.
 
-```typescript
+```ts
 import {PaneModule } from 'cdbangular';
 ```
 
@@ -26,7 +26,7 @@ We also import the [CDBIcon](https://www.devwares.com/docs/contrast/angular/comp
 
 ![Angular Bootstrap Pane](./images/panewithlocation.png)
 
-###### html
+###### HTML
 ```html
 <CDBPanel class="pan">
     <CDBPane>
@@ -43,7 +43,7 @@ We also import the [CDBIcon](https://www.devwares.com/docs/contrast/angular/comp
     </CDBPane>
 </CDBPanel>
 ```
-<i/>
+
 
 ## Pane with Dropdown
 
@@ -51,7 +51,7 @@ In this tutorial section, we nest the Contrast Angular Bootstrap Dropdown compon
 
 ![image info](./images/panewithdropdown.png)
 
-###### html
+###### HTML
 ```html
 <CDBPanel class="pan" >
     <CDBPane>

@@ -3,17 +3,17 @@
 title: 'Sidebar'
 metaTitle: 'Bootstrap 5 Sidebar'
 metaDescription: 'The Bootstrap 5 Sidebar is a vertical navigation component that can include icons, dropdowns, avatars, and search forms in addition to typical text links.'
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/javascript/navigation/sidebar.md"
 ---import React from 'react';
 import { Link } from 'gatsby';
 
 # Bootstrap 5 Sidebar
 
-The Bootstrap 5 Sidebar is a vertical navigation component that is fully customized to contain icons, dropdown, avatars and Call to action buttons in addition to typical text links.
+The Bootstrap 5 Sidebar is a vertical navigation component that is fully customized to contain icons, dropdown, avatars and call to action buttons in addition to typical text links.
 
-By its clarity and simplicity, it remarkably increases User Experience. It allows you to navigate through small applications as well as vast portals swiftly. Multiple link embedding functionality enables you to implement more advanced content categorization, essential for more significant projects.
+It significantly improves user experience due to its clarity and simplicity. It allows you to quickly move through little apps as well as large platforms. The ability to incorporate multiple links allows you to perform more extensive content classification, which is almost necessary in larger applications.
 
 Thanks to CDB, you can quickly implement Sidebar in your projects using different, alluring Side Menus.
-It significantly improves User Experience due to its clarity and simplicity. It allows you to quickly move through little apps as well as large platforms. The ability to incorporate multiple links allows you to perform more extensive content classification, which is almost necessary in larger applications.
 
 You can quickly add Sidebar in your own projects with Contrast Design Bootstrap by utilizing one of the many attractive Side Menus.
 

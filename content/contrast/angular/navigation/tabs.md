@@ -2,22 +2,21 @@
 title: "Tab"
 metaTitle: "Angular Bootstrap Tab"
 metaDescription: "Angular Bootstrap Tabs are components which separate content placed in the same wrapper, but in the separate pane. Only one pane can be displayed at the time"
-
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/angular/navigation/tabs.md"
 ---
 
-# Angular Bootstrap Tab
+# Contrast Angular Bootstrap Tab
 
-Angular Bootstrap Tabs are components which separate content placed in the same wrapper, but in the separate pane. Only one pane can be displayed at the time.
+Contrast Angular Bootstrap Tabs are components which separate content placed in the same wrapper, but in the separate pane. Only one pane can be displayed at the time.
 
 Bootstrap tabs are components which separate content placed in the same wrapper, but in the separate pane. Only one pane can be displayed at the time. Tabs available in CDB share general markup and styles, as well as the `.nav`ed element managing the active and disabled states.
 
-<i/>
 
 ## Importing the Contrast Angular Bootstrap Tab Module
 
 To use the Contrast Angular Bootstrap Tab component in your project you need to import `TabModule`.
 
-```typescript
+```ts
 import {TabModule } from 'cdbangular';
 ```
 
@@ -25,7 +24,7 @@ import {TabModule } from 'cdbangular';
 
 ![Angular Bootstrap Tab Default](https://imgur.com/PR8nMiM.gif)
 
-###### html
+###### HTML
 ```html
 <CDBNav [tab]=true class="mt-5">
     <CDBTabLink link to="/tab" [active]="content.activeTab === '1'" (click)="content.setActiveTab('1')">
@@ -75,13 +74,12 @@ import {TabModule } from 'cdbangular';
     </CDBTabPane>
 </CDBTabContent>
 ```
-<i/>
 
 ## Tab Justified
 
 ![Angular Bootstrap Tab Justified](https://imgur.com/JNq6N3p.gif)
 
-###### html
+###### HTML
 ```html
 <CDBNav [tab]=true [justified]=true class="mt-5">
     <CDBTabLink link to="/tab" [active]="content2.activeTab === '1'" (click)="content2.setActiveTab('1')">
@@ -132,13 +130,12 @@ import {TabModule } from 'cdbangular';
 </CDBTabContent>
 ```
 
-<i/>
 
 ## Tab with Icons
 
 ![Angular Bootstrap Tab with Icons](https://imgur.com/VPYMDeL.gif)
 
-###### html
+###### HTML
 ```html
 <CDBNav [tab]=true [justified]=true class="mt-5">
     <CDBTabLink link to="/tab" [active]="content3.activeTab === '1'" (click)="content3.setActiveTab('1')">

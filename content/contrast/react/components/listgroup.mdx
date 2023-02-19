@@ -1,20 +1,20 @@
 ---
-title: "LIstGroup"
-metaTitle: "LIstGroup Component for React Bootstrap"
-metaDescription: "React Bootstrap List group is a versatile component that can display both simple and complex custom information."
-
+title: "ListGroup"
+metaTitle: "ListGroup Component for React Bootstrap 5"
+metaDescription: "React Bootstrap 5 List group is a versatile component that can display both simple and complex custom information."
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/react/components/listgroup.mdx"
 ---
 
 import React from "react";
 import {Link} from "gatsby";
 
-# React Bootstrap ListGroup
+# React Bootstrap 5 ListGroup
 
-React Bootstrap List group is a versatile component that can display both simple and complex custom information.
+React Bootstrap 5 List group is a versatile component that can display both simple and complex custom information.
 
-## Importing the React Bootstrap ListGroup component
+## Importing the React Bootstrap 5 ListGroup component
 
-Start by importing `CDBListGroup` into your project to use the Contrast React Bootstrap ListGroup component. Then you import the `CDBListGroupItem` for the list group's items.
+Start by importing `CDBListGroup` into your project to use the Contrast React Bootstrap 5 ListGroup component. Then you import the `CDBListGroupItem` for the list group's items.
 
 ```js
 import { CDBListGroup, CDBListGroupItem } from "cdbreact";
@@ -72,33 +72,22 @@ The `href` attribute on the `CDBLIstGroupItem` makes the list group item behave 
 import React from "react";
 import { CDBListGroup, CDBListGroupItem, CDBContainer } from "cdbreact";
 
-const LIstGroup = () => {
+const ListGroup = () => {
   return (
     <CDBContainer>
-            <CDBListGroup style={{ width: "30rem" }}>
-              <CDBListGroupItem href="#" active>
-                List Group
-              </CDBListGroupItem>
-              <CDBListGroupItem href="#" hover>
-                List Group
-              </CDBListGroupItem>
-              <CDBListGroupItem href="#" hover>
-                List Group
-              </CDBListGroupItem>
-              <CDBListGroupItem href="#" hover>
-                List Group
-              </CDBListGroupItem>
-              <CDBListGroupItem href="#" hover>
-                List Group Link
-              </CDBListGroupItem>
-              <CDBListGroupItem href="#" hover>
-                List Group
-              </CDBListGroupItem>
-            </CDBListGroup>
+      <CDBListGroup style={{ width: "30rem" }}>
+        <CDBListGroupItem active>List Group</CDBListGroupItem>
+        <CDBListGroupItem hover>List Group</CDBListGroupItem>
+        <CDBListGroupItem hover>List Group</CDBListGroupItem>
+        <CDBListGroupItem hover>List Group</CDBListGroupItem>
+        <CDBListGroupItem hover>List Group</CDBListGroupItem>
+        <CDBListGroupItem hover>List Group</CDBListGroupItem>
+      </CDBListGroup>
     </CDBContainer>
   );
 };
-export default  LIstGroup;
+export default ListGroup;
+
 ```
 
 ## Label
@@ -308,9 +297,9 @@ export default  LIstGroup;
 ```
 # API
 
-This section will explain the props available with the Contrast React Bootstrap ListGroup component. You will discover what these props do, their default values, and how you would use them in your code.
+This section will explain the props available with the Contrast React Bootstrap 5 ListGroup component. You will discover what these props do, their default values, and how you would use them in your code.
 
-## API Reference: Contrast React Bootstrap ListGroup Props
+## API Reference: Contrast React Bootstrap 5 ListGroup Props
 
 Other CDBListGroup component prop options are listed in the table below.
 
@@ -319,7 +308,7 @@ Other CDBListGroup component prop options are listed in the table below.
 | className      | String       |              |Adds custom classes	      |     <CDBLIstGroup className="myClass" ... />  |
 | tag            | function or String       | ul          | Changes default input tag | <CDBLIstGroup tag="ul" ... />  |
 
-## API Reference: Contrast React Bootstrap LIstGroupItem Properties
+## API Reference: Contrast React Bootstrap 5 LIstGroupItem Properties
 
 Other prop options for the `CDBListGroupItem` component are listed in the table below.
 

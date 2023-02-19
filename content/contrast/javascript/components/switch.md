@@ -1,18 +1,21 @@
 ---
+
 title: 'Switch'
 metaTitle: 'Bootstrap 5 Switch - Bootstrap CSS tutorial'
 metaDescription: 'The Contrast Bootstrap 5 Switch is a simple component that may be used to activate one of two choices.'
----# Bootstrap 5 Switch
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/javascript/components/switch.md"
+---
+# Bootstrap 5 Switch
 
-The Contrast Bootstrap 5 Switch is a simple component that may be used to activate one of two choices. It's most commonly used as an on/off switch.
+The Contrast Bootstrap 5 Switch is a simple component that can be used to toggle between two options. It is mostly used as a switch.
 
-It's commonly utilized in a variety of forms because it's extremely simple to use and reduces the amount of time required to fill out all of the fields.
+It is commonly utilized in forms because of its simplicity and efficiency.
 
 ## Contrast Bootstrap 5 Switch
 
-![Bootstrap Switch](./images/boxswitch.png)
+<Switch1/>
 
-###### html
+###### HTML
 
 ```html
 <label class="custom-switch">
@@ -28,11 +31,11 @@ It's commonly utilized in a variety of forms because it's extremely simple to us
 
 ## Rounded Switch
 
-To make your switch more rounded, use the `custom-switch-rounded` command.
+To make your switch have a rounded border, use the `custom-switch-rounded` command.
 
-![Bootstrap Switch Rounded](./images/roundswitch.png)
+<Switch2/>
 
-###### html
+###### HTML
 
 ```html
 <label class="custom-switch custom-switch-rounded">

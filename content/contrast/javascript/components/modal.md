@@ -2,21 +2,22 @@
 title: 'Modal'
 metaTitle: 'Bootstrap 5 Modal - Bootstrap CSS tutorial '
 metaDescription: 'The Bootstrap 5 modal is a small but strong and multifunctional popup.'
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/javascript/components/modal.md"
 ---
 
 # Bootstrap 5 Modal
 
-The Bootstrap 5 modal is a small but strong and multifunctional popup.
+The Bootstrap 5 modal is a lightweight yet powerful and multifunctional popup.
 
-It is a dialog box/popup window that can be used for light boxes, user notifications, UI upgrades, e-commerce components, and a variety of other applications.
+It is a dialog box or popup window that can be used for light boxes, user notifications, UI upgrades, e-commerce components, and a variety of other applications.
 
-It is extremely adaptable, allowing you to easily change the size, position, and content to meet your mental image. They're quick to respond and have simple syntax.
+It is incredibly flexible, with the ability to simply change the size, position, and content to meet your design. It is efficient and uses simple syntax.
 
 ## Custom Modal
 
-![Bootstrap Modal Custom](https://imgur.com/z99wzWH.gif)
+<Modal1/>
 
-###### html
+###### HTML
 
 ```html
 <button type="button" class="btn btn-dark btn-flat" data-toggle="modal" data-target="#customModal1">
@@ -60,192 +61,185 @@ It is extremely adaptable, allowing you to easily change the size, position, and
 
 ## Modal Sizes
 
-![Bootstrap Modal Sizes](https://imgur.com/h8y6UlS.gif)
+<Modal2/>
 
-###### html
+###### HTML
 
 ```html
-          <button
-            type="button"
-            class="btn btn-light btn-flat"
-            data-toggle="modal"
-            data-target="#customModal2"
-          >
-            Small Modal
-          </button>
-          <div
-            class="modal fade"
-            id="customModal2"
-            tabindex="-1"
-            role="dialog"
-            aria-labelledby="exampleModalLabel"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog modal-sm">
-              <div class="card">
-                <div class="card-body">
-                  <div class="card-title">Title</div>
-                  <p class="card-text">
-                     Quisque a varius augue. Etiam volutpat ipsum nec mi porttitor, nec fermentum enim fermentum. Curabitur metus eros, scelerisque vel urna a, condimentum molestie mauris. Aliquam blandit congue risus ac sollicitudin. Proin tempus bibendum sem. Morbi pulvinar a metus sit amet ullamcorper.
-                  </p>
-                  <div class="d-flex">
-                    <div class="d-flex justify-content-start" style="flex: 50%">
-                      <button class="btn btn-dark btn-flat">Label</button>
-                    </div>
-                    <div class="d-flex justify-content-end" style="flex: 50%">
-                      <button
-                        class="btn btn-light btn-flat close"
-                        type="button"
-                        data-dismiss="modal"
-                      >
-                        Cancel
-                      </button>
-                      <button class="btn btn-dark btn-flat">Done</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+<button
+  type="button"
+  class="btn btn-light btn-flat"
+  data-toggle="modal"
+  data-target="#customModal2"
+>
+  Small Modal
+</button>
+<div
+  class="modal fade"
+  id="customModal2"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-sm">
+    <div class="card">
+      <div class="card-body">
+        <div class="card-title">Title</div>
+        <p class="card-text">
+          Quisque a varius augue. Etiam volutpat ipsum nec mi porttitor, nec fermentum enim
+          fermentum. Curabitur metus eros, scelerisque vel urna a, condimentum molestie mauris.
+          Aliquam blandit congue risus ac sollicitudin. Proin tempus bibendum sem. Morbi pulvinar a
+          metus sit amet ullamcorper.
+        </p>
+        <div class="d-flex">
+          <div class="d-flex justify-content-start" style="flex: 50%">
+            <button class="btn btn-dark btn-flat">Label</button>
           </div>
-
-          <button
-            type="button"
-            class="btn btn-light btn-flat"
-            data-toggle="modal"
-            data-target="#customModal3"
-          >
-            Medium Modal
-          </button>
-          <div
-            class="modal fade"
-            id="customModal3"
-            tabindex="-1"
-            role="dialog"
-            aria-labelledby="exampleModalLabel"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog">
-              <div class="card">
-                <div class="card-body">
-                  <div class="card-title">Title</div>
-                  <p class="card-text">
-                    Quisque a varius augue. Etiam volutpat ipsum nec mi porttitor, nec fermentum enim fermentum. Curabitur metus eros, scelerisque vel urna a, condimentum molestie mauris. Aliquam blandit congue risus ac sollicitudin. Proin tempus bibendum sem. Morbi pulvinar a metus sit amet ullamcorper.
-                  </p>
-                  <div class="d-flex">
-                    <div class="d-flex justify-content-start" style="flex: 50%">
-                      <button class="btn btn-dark btn-flat">Label</button>
-                    </div>
-                    <div class="d-flex justify-content-end" style="flex: 50%">
-                      <button
-                        class="btn btn-light close"
-                        type="button"
-                        data-dismiss="modal"
-                      >
-                        Cancel
-                      </button>
-                      <button class="btn btn-dark btn-flat">Done</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <button
-            type="button"
-            class="btn btn-light btn-flat"
-            data-toggle="modal"
-            data-target="#customModal4"
-          >
-            Large Modal
-          </button>
-          <div
-            class="modal fade"
-            id="customModal4"
-            tabindex="-1"
-            role="dialog"
-            aria-labelledby="exampleModalLabel"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog modal-lg">
-              <div class="card">
-                <div class="card-body">
-                  <div class="card-title">Title</div>
-                  <p class="card-text">
-                      Quisque a varius augue. Etiam volutpat ipsum nec mi porttitor, nec fermentum enim fermentum. Curabitur metus eros, scelerisque vel urna a, condimentum molestie mauris. Aliquam blandit congue risus ac sollicitudin. Proin tempus bibendum sem. Morbi pulvinar a metus sit amet ullamcorper.
-                  </p>
-                  <div class="d-flex">
-                    <div class="d-flex justify-content-start" style="flex: 50%">
-                      <button class="btn btn-dark btn-flat">Label</button>
-                    </div>
-                    <div class="d-flex justify-content-end" style="flex: 50%">
-                      <button
-                        class="btn btn-light btn-flat close"
-                        type="button"
-                        data-dismiss="modal"
-                      >
-                        Cancel
-                      </button>
-                      <button class="btn btn-dark btn-flat">Done</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <button
-            type="button"
-            class="btn btn-light btn-flat"
-            data-toggle="modal"
-            data-target="#customModal5"
-          >
-            Fluid Modal
-          </button>
-          <div
-            class="modal fade"
-            id="customModal5"
-            tabindex="-1"
-            role="dialog"
-            aria-labelledby="exampleModalLabel"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog modal-fluid">
-              <div class="card">
-                <div class="card-body">
-                  <div class="card-title">Title</div>
-                  <p class="card-text">
-                    Quisque a varius augue. Etiam volutpat ipsum nec mi porttitor, nec fermentum enim fermentum. Curabitur metus eros, scelerisque vel urna a, condimentum molestie mauris. Aliquam blandit congue risus ac sollicitudin. Proin tempus bibendum sem. Morbi pulvinar a metus sit amet ullamcorper.
-                  </p>
-                  <div class="d-flex">
-                    <div class="d-flex justify-content-start" style="flex: 50%">
-                      <button class="btn btn-light btn-flat">Label</button>
-                    </div>
-                    <div class="d-flex justify-content-end" style="flex: 50%">
-                      <button
-                        class="btn btn-light btn-flat close"
-                        type="button"
-                        data-dismiss="modal"
-                      >
-                        Cancel
-                      </button>
-                      <button class="btn btn-dark btn-flat">Done</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="d-flex justify-content-end" style="flex: 50%">
+            <button class="btn btn-light btn-flat close" type="button" data-dismiss="modal">
+              Cancel
+            </button>
+            <button class="btn btn-dark btn-flat">Done</button>
           </div>
         </div>
       </div>
-      
+    </div>
+  </div>
+</div>
+
+<button
+  type="button"
+  class="btn btn-light btn-flat"
+  data-toggle="modal"
+  data-target="#customModal3"
+>
+  Medium Modal
+</button>
+<div
+  class="modal fade"
+  id="customModal3"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="card">
+      <div class="card-body">
+        <div class="card-title">Title</div>
+        <p class="card-text">
+          Quisque a varius augue. Etiam volutpat ipsum nec mi porttitor, nec fermentum enim
+          fermentum. Curabitur metus eros, scelerisque vel urna a, condimentum molestie mauris.
+          Aliquam blandit congue risus ac sollicitudin. Proin tempus bibendum sem. Morbi pulvinar a
+          metus sit amet ullamcorper.
+        </p>
+        <div class="d-flex">
+          <div class="d-flex justify-content-start" style="flex: 50%">
+            <button class="btn btn-dark btn-flat">Label</button>
+          </div>
+          <div class="d-flex justify-content-end" style="flex: 50%">
+            <button class="btn btn-light close" type="button" data-dismiss="modal">
+              Cancel
+            </button>
+            <button class="btn btn-dark btn-flat">Done</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button
+  type="button"
+  class="btn btn-light btn-flat"
+  data-toggle="modal"
+  data-target="#customModal4"
+>
+  Large Modal
+</button>
+<div
+  class="modal fade"
+  id="customModal4"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="card">
+      <div class="card-body">
+        <div class="card-title">Title</div>
+        <p class="card-text">
+          Quisque a varius augue. Etiam volutpat ipsum nec mi porttitor, nec fermentum enim
+          fermentum. Curabitur metus eros, scelerisque vel urna a, condimentum molestie mauris.
+          Aliquam blandit congue risus ac sollicitudin. Proin tempus bibendum sem. Morbi pulvinar a
+          metus sit amet ullamcorper.
+        </p>
+        <div class="d-flex">
+          <div class="d-flex justify-content-start" style="flex: 50%">
+            <button class="btn btn-dark btn-flat">Label</button>
+          </div>
+          <div class="d-flex justify-content-end" style="flex: 50%">
+            <button class="btn btn-light btn-flat close" type="button" data-dismiss="modal">
+              Cancel
+            </button>
+            <button class="btn btn-dark btn-flat">Done</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button
+  type="button"
+  class="btn btn-light btn-flat"
+  data-toggle="modal"
+  data-target="#customModal5"
+>
+  Fluid Modal
+</button>
+<div
+  class="modal fade"
+  id="customModal5"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-fluid">
+    <div class="card">
+      <div class="card-body">
+        <div class="card-title">Title</div>
+        <p class="card-text">
+          Quisque a varius augue. Etiam volutpat ipsum nec mi porttitor, nec fermentum enim
+          fermentum. Curabitur metus eros, scelerisque vel urna a, condimentum molestie mauris.
+          Aliquam blandit congue risus ac sollicitudin. Proin tempus bibendum sem. Morbi pulvinar a
+          metus sit amet ullamcorper.
+        </p>
+        <div class="d-flex">
+          <div class="d-flex justify-content-start" style="flex: 50%">
+            <button class="btn btn-light btn-flat">Label</button>
+          </div>
+          <div class="d-flex justify-content-end" style="flex: 50%">
+            <button class="btn btn-light btn-flat close" type="button" data-dismiss="modal">
+              Cancel
+            </button>
+            <button class="btn btn-dark btn-flat">Done</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 ```
 
 ## Modal Positions
 
-![Bootstrap Modal Positions](https://imgur.com/sT4ZwEV.gif)
+<Modal3/>
 
-###### html
+###### HTML
 
 ```html
 <div class="blockcode">
@@ -272,18 +266,17 @@ It is extremely adaptable, allowing you to easily change the size, position, and
           <div class="card-body">
             <div class="card-title">Title</div>
             <p class="card-text">
-                Quisque a varius augue. Etiam volutpat ipsum nec mi porttitor, nec fermentum enim fermentum. Curabitur metus eros, scelerisque vel urna a, condimentum molestie mauris. Aliquam blandit congue risus ac sollicitudin. Proin tempus bibendum sem. Morbi pulvinar a metus sit amet ullamcorper.
+              Quisque a varius augue. Etiam volutpat ipsum nec mi porttitor, nec fermentum enim
+              fermentum. Curabitur metus eros, scelerisque vel urna a, condimentum molestie mauris.
+              Aliquam blandit congue risus ac sollicitudin. Proin tempus bibendum sem. Morbi
+              pulvinar a metus sit amet ullamcorper.
             </p>
             <div class="d-flex">
               <div class="d-flex justify-content-start" style="flex: 50%">
                 <button class="btn btn-dark btn-flat">Label</button>
               </div>
               <div class="d-flex justify-content-end" style="flex: 50%">
-                <button
-                  class="btn btn-light btn-flat close"
-                  type="button"
-                  data-dismiss="modal"
-                >
+                <button class="btn btn-light btn-flat close" type="button" data-dismiss="modal">
                   Cancel
                 </button>
                 <button class="btn btn-dark btn-flat">Done</button>
@@ -315,18 +308,17 @@ It is extremely adaptable, allowing you to easily change the size, position, and
           <div class="card-body">
             <div class="card-title">Title</div>
             <p class="card-text">
-                Quisque a varius augue. Etiam volutpat ipsum nec mi porttitor, nec fermentum enim fermentum. Curabitur metus eros, scelerisque vel urna a, condimentum molestie mauris. Aliquam blandit congue risus ac sollicitudin. Proin tempus bibendum sem. Morbi pulvinar a metus sit amet ullamcorper.
+              Quisque a varius augue. Etiam volutpat ipsum nec mi porttitor, nec fermentum enim
+              fermentum. Curabitur metus eros, scelerisque vel urna a, condimentum molestie mauris.
+              Aliquam blandit congue risus ac sollicitudin. Proin tempus bibendum sem. Morbi
+              pulvinar a metus sit amet ullamcorper.
             </p>
             <div class="d-flex">
               <div class="d-flex justify-content-start" style="flex: 50%">
                 <button class="btn btn-dark btn-flat">Label</button>
               </div>
               <div class="d-flex justify-content-end" style="flex: 50%">
-                <button
-                  class="btn btn-light close"
-                  type="button"
-                  data-dismiss="modal"
-                >
+                <button class="btn btn-light close" type="button" data-dismiss="modal">
                   Cancel
                 </button>
                 <button class="btn btn-dark btn-flat">Done</button>
@@ -358,18 +350,17 @@ It is extremely adaptable, allowing you to easily change the size, position, and
           <div class="card-body">
             <div class="card-title">Title</div>
             <p class="card-text">
-                Quisque a varius augue. Etiam volutpat ipsum nec mi porttitor, nec fermentum enim fermentum. Curabitur metus eros, scelerisque vel urna a, condimentum molestie mauris. Aliquam blandit congue risus ac sollicitudin. Proin tempus bibendum sem. Morbi pulvinar a metus sit amet ullamcorper.
+              Quisque a varius augue. Etiam volutpat ipsum nec mi porttitor, nec fermentum enim
+              fermentum. Curabitur metus eros, scelerisque vel urna a, condimentum molestie mauris.
+              Aliquam blandit congue risus ac sollicitudin. Proin tempus bibendum sem. Morbi
+              pulvinar a metus sit amet ullamcorper.
             </p>
             <div class="d-flex">
               <div class="d-flex justify-content-start" style="flex: 50%">
                 <button class="btn btn-dark btn-flat">Label</button>
               </div>
               <div class="d-flex justify-content-end" style="flex: 50%">
-                <button
-                  class="btn btn-light btn-flat close"
-                  type="button"
-                  data-dismiss="modal"
-                >
+                <button class="btn btn-light btn-flat close" type="button" data-dismiss="modal">
                   Cancel
                 </button>
                 <button class="btn btn-dark btn-flat">Done</button>
@@ -401,18 +392,17 @@ It is extremely adaptable, allowing you to easily change the size, position, and
           <div class="card-body">
             <div class="card-title">Title</div>
             <p class="card-text">
-                Quisque a varius augue. Etiam volutpat ipsum nec mi porttitor, nec fermentum enim fermentum. Curabitur metus eros, scelerisque vel urna a, condimentum molestie mauris. Aliquam blandit congue risus ac sollicitudin. Proin tempus bibendum sem. Morbi pulvinar a metus sit amet ullamcorper.
+              Quisque a varius augue. Etiam volutpat ipsum nec mi porttitor, nec fermentum enim
+              fermentum. Curabitur metus eros, scelerisque vel urna a, condimentum molestie mauris.
+              Aliquam blandit congue risus ac sollicitudin. Proin tempus bibendum sem. Morbi
+              pulvinar a metus sit amet ullamcorper.
             </p>
             <div class="d-flex">
               <div class="d-flex justify-content-start" style="flex: 50%">
                 <button class="btn btn-light btn-flat">Label</button>
               </div>
               <div class="d-flex justify-content-end" style="flex: 50%">
-                <button
-                  class="btn btn-light btn-flat close"
-                  type="button"
-                  data-dismiss="modal"
-                >
+                <button class="btn btn-light btn-flat close" type="button" data-dismiss="modal">
                   Cancel
                 </button>
                 <button class="btn btn-dark btn-flat">Done</button>
@@ -444,18 +434,17 @@ It is extremely adaptable, allowing you to easily change the size, position, and
           <div class="card-body">
             <div class="card-title">Title</div>
             <p class="card-text">
-                Quisque a varius augue. Etiam volutpat ipsum nec mi porttitor, nec fermentum enim fermentum. Curabitur metus eros, scelerisque vel urna a, condimentum molestie mauris. Aliquam blandit congue risus ac sollicitudin. Proin tempus bibendum sem. Morbi pulvinar a metus sit amet ullamcorper.
+              Quisque a varius augue. Etiam volutpat ipsum nec mi porttitor, nec fermentum enim
+              fermentum. Curabitur metus eros, scelerisque vel urna a, condimentum molestie mauris.
+              Aliquam blandit congue risus ac sollicitudin. Proin tempus bibendum sem. Morbi
+              pulvinar a metus sit amet ullamcorper.
             </p>
             <div class="d-flex">
               <div class="d-flex justify-content-start" style="flex: 50%">
                 <button class="btn btn-light btn-flat">Label</button>
               </div>
               <div class="d-flex justify-content-end" style="flex: 50%">
-                <button
-                  class="btn btn-light btn-flat close"
-                  type="button"
-                  data-dismiss="modal"
-                >
+                <button class="btn btn-light btn-flat close" type="button" data-dismiss="modal">
                   Cancel
                 </button>
                 <button class="btn btn-dark btn-flat">Done</button>
@@ -464,9 +453,12 @@ It is extremely adaptable, allowing you to easily change the size, position, and
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
 ```
 
-###### Script
+###### JavaScript
 
 ```js
    <script type="text/javascript" src="../js/jquery.min.js"></script>
@@ -477,3 +469,5 @@ It is extremely adaptable, allowing you to easily change the size, position, and
     ></script>
     <script type="text/javascript" src="../js/popper.min.js"></script>
 ```
+
+You can check out how to build a modal using Contrast Bootstrap [here](https://www.devwares.com/blog/how-to-create-a-bootstrap5-modal/)

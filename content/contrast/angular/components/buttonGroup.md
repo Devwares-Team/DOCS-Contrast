@@ -2,11 +2,12 @@
 title: "ButtonGroup"
 metaTitle: "Angular Bootstrap ButtonGroup"
 metaDescription: "Angular Bootstrap Buttons are components that trigger wanted user interactions"
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/angular/components/buttonGroup.md"
 ---
 
-# Angular Bootstrap ButtonGroup
+# Contrast Angular Bootstrap ButtonGroup
 
-Angular Bootstrap ButtonGroup are components that trigger wanted user interactions. Angular Bootstrap Contrast ButtonGroups are easy to customize in terms of their size, shape and color.
+Contrast Angular Bootstrap ButtonGroup is a set of buttons vertically arranged in a straight line or stack. They are easy to customize in terms of their size, shape and color.
 
 Examples of Angular Bootstrap button group use:
 
@@ -17,7 +18,7 @@ Examples of Angular Bootstrap button group use:
 
 To use the Contrast Angular Bootstrap ButtonGroup component in your project you need to import `ButtonGroupModule`.
 
-```typescript
+```ts
 import {ButtongroupModule } from 'cdbangular';
 ```
 
@@ -27,7 +28,7 @@ Use `color` prop to give your buttons in your button group a background color.
 
 ![Angular Bootstrap Button Groups Multicolored](./images/buttongroup1.png)
 
-###### html
+###### HTML
 ```html
   <CDBBtnGrp size="lg">
     <CDBBtn color="primary">click me</CDBBtn>
@@ -42,7 +43,7 @@ Use `color` prop to give your buttons in your button group a background color.
 
 ![Angular Bootstrap Button Group Rect Secondary Medium with Space Between ](./images/buttongroup2.png)
 
-###### html
+###### HTML
 ```html
   <CDBBtnGrp>
     <CDBBtn color="primary">click me</CDBBtn>
@@ -62,7 +63,7 @@ Use the `size` prop to define how little or large you want the buttons in your b
 
 ![Angular Bootstrap Button Group Rect Secondary Small](./images/buttongroup3.png)
 
-###### html
+###### HTML
 ```html
   <CDBBtnGrp size="sm">
     <CDBBtn color="primary">click me</CDBBtn>
@@ -80,7 +81,7 @@ Make a set of buttons appear vertically stacked rather than horizontally.
 
 ![Angular Bootstrap Button Group Vertical Rect Secondary Large](./images/buttongroup4.png)
 
-###### html
+###### HTML
 ```html
   <CDBBtnGrp [vertical]=true size="lg">
     <CDBBtn color="primary">click me</CDBBtn>
@@ -98,7 +99,7 @@ Make a set of buttons appear vertically stacked rather than horizontally.
 
 ![Angular Bootstrap Button Group Vertical Rect Secondary Medium](./images/buttongroup5.png)
 
-###### html
+###### HTML
 ```html
   <CDBBtnGrp [vertical]=true>
     <CDBBtn color="primary">click me</CDBBtn>
@@ -114,7 +115,7 @@ Make a set of buttons appear vertically stacked rather than horizontally.
 
 ![Angular Bootstrap Button Group Vertical Rect Secondary Small](./images/buttongroup6.png)
 
-###### html
+###### HTML
 ```html
   <CDBBtnGrp [vertical]=true size="sm">
     <CDBBtn color="primary">click me</CDBBtn>
@@ -130,21 +131,21 @@ Make a set of buttons appear vertically stacked rather than horizontally.
 
 ## Button Group with Icon
 
-Use the [CDBIcon](https://www.devwares.com/docs/contrast/react/components/icon) component to have icons in your buttons.
+Use the [CDBIcon](https://www.devwares.com/docs/contrast/angular/components/icon) component to have icons in your buttons.
 
 
 ![Angular Bootstrap Button Group with Icon](./images/buttongroup7.png)
 
-###### html
+###### HTML
 ```html
- <CDBBtnGrp>
-    <CDBBtn color="primary"><CDBIcon [fab]=true icon="twitter"/></CDBBtn>
-    <CDBBtn color="secondary"><CDBIcon [fab]=true icon="facebook"/></CDBBtn>
-    <CDBBtn color="success"><CDBIcon [fab]=true icon="reddit"/></CDBBtn>
-    <CDBBtn color="danger"><CDBIcon [fab]=true icon="instagram"/></CDBBtn>
-    <CDBBtn color="dark"><CDBIcon [fab]=true icon="imdb"/></CDBBtn>
-    <CDBBtn color="warning"><CDBIcon [fab]=true icon="stack-overflow"/></CDBBtn>
-  </CDBBtnGrp>
+<CDBBtnGrp>
+    <CDBBtn color="primary"><CDBIcon [fab]=true icon="twitter"></CDBIcon></CDBBtn>
+    <CDBBtn color="secondary"><CDBIcon [fab]=true icon="facebook"></CDBIcon></CDBBtn>
+    <CDBBtn color="success"><CDBIcon [fab]=true icon="reddit"></CDBIcon></CDBBtn>
+    <CDBBtn color="danger"><CDBIcon [fab]=true icon="instagram"></CDBIcon></CDBBtn>
+    <CDBBtn color="dark"><CDBIcon [fab]=true icon="imdb"></CDBIcon></CDBBtn>
+    <CDBBtn color="warning"><CDBIcon [fab]=true icon="stack-overflow"></CDBIcon></CDBBtn>
+</CDBBtnGrp>
 ```
 ## Button Group with Dropdown
 
@@ -152,7 +153,7 @@ Use the [CDBDropDown](https://www.devwares.com/docs/contrast/angular/components/
 
 ![Angular Bootstrap Button Group with Dropdown](./images/buttongroup8.png)
 
-###### html
+###### HTML
 ```html
 <CDBBtnGrp>
     <CDBBtn color="primary">click me</CDBBtn>

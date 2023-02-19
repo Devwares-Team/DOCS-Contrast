@@ -2,32 +2,75 @@
 title: 'Installation'
 metaTitle: 'Installing Contrast in your project'
 metaDescription: 'This is a step by step guilde on installing cdbreact in your project'
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/react/Installation.mdx"
 ---
 
 Step by step guide on how to install `cdbreact`
 
-## Prerequisites:
+## Prerequisites
 
-To use CDBReact in your project, you have to install React. CDBReact works with Node versions 6 or higher.
+To use CDBReact in your project, you have to install Node.js LTS.
 
-### Install CDB React
+## Install CDBReact
 
-To install cdbreact, go to your terminal or command prompt and run the command:
+**Step 1:** Create a React App using create-react-app
+````bash
+npx create-react-app <appname>
+````
 
-> NPM
+**Step 2:** Navigate to app's directory
+````bash
+cd <appname>
+````
 
-`npm install --save cdbreact`
+**Step 3:** Install `cdbreact` using `npm` or `yarn`
+````bash 
+npm install --save cdbreact
+````
+or
+````bash
+yarn add cdbreact
+````
+ 
 
-> Yarn
+ **Step 4:** Launch your app
+````bash
+npm run start
+````
+or
+````bash 
+yarn start
+````
 
-`yarn add cdbreact`
 
-> **_To run Your App:_**
+## Usage with Gatsby.js
 
-> NPM
+Step by step guide on how to use `cdbreact` in a Gatsby.js project
 
-`npm run start`
+**Step 1:** Create a new Gatsby application
+````bash
+npm init gatsby
+````
+Answer the questions that show up to get your application initialized as shown below.
 
-> Yarn
+- name of your site - `<app-name>`
+- folder name - `<folder>/<app-name>`
+- choose between JavaScript or TypeScript - (Choose one)
+- CMS - No (or I'll add it later)
+- styling system - No (or I'll add it later)
 
-`yarn start`
+
+**Step 2:** Navigate to app's directory
+````bash
+cd <appname>
+````
+
+**Step 3:** Install `cdbreact` using `npm`:
+````bash 
+npm install --save cdbreact
+````
+
+ **Step 4:** Launch your app
+````bash
+npm start
+````

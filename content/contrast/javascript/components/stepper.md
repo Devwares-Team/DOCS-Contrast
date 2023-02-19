@@ -3,30 +3,107 @@
 title: 'Stepper'
 metaTitle: 'Bootstrap 5 Stepper - Bootstrap CSS tutorial'
 metaDescription: 'Bootstrap 5 Stepper is a component that shows content in the form of a process with user milestones. ootstrap stepper are useful in some many ways.'
----# Bootstrap 5 Stepper
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/javascript/components/stepper.md"
+---
+
+<ProAlertJavaScript/>
+
+# Bootstrap 5 Stepper
 
 Bootstrap 5 Stepper is a component that shows content in the form of a process with user milestones. The steps that follow are separated and linked by buttons.
 
 This is an excellent solution for a variety of registration forms in which you don't want to overwhelm the user with too many fields and queries.
 
-The Contrast Bootstrap 5 Stepper can be positioned both vertically and horizontally. Bootstrap stepper are useful in some many ways.
+The Contrast Bootstrap 5 Stepper can be positioned both vertically and horizontally. Bootstrap steppers are useful in many ways.
 
-Examples of places Bootstrap 5 stepper can be used include:
+Examples of instances Bootstrap 5 stepper can be used include:
 
 - Registration form
 - Payment gateway
 - Tutorial with steps
 
-See the following Bootstrap 5 stepper examples:
+See the following Bootstrap 5 Stepper examples:
+
+<stepperAlert1 />
 
 <i/>
 
-## Basic Vertical Stepper
+# Add Script
+
+We add dynamicity and interactivity to our stepper with JavaScript, we use `querySelector` to select an element. We then create a new stepper object using the `new` keyword from CDB, passing it the element we just targeted as an argument.
+
+Each stepper instance can be created with the following javascript code snippet. This gives you access to the event handlers and listeners available for the stepper.
+
+```html
+<script>
+  const stepper = document.querySelector('#stepper');
+  new CDB.Stepper(stepper);
+</script>
+```
+
+## Horizontal Stepper
+This is the basic stepper component with an horizontally arranged content.
+<stepperExample2 />
+
+```html
+<div height="800px" class="stepper" id="stepper">
+  <div class="steps-container">
+    <div class="steps">
+      <div class="step" icon="fa fa-pencil-alt" id="1">
+        <div class="step-title">
+          <span class="step-number">01</span>
+          <div class="step-text">Basic Information</div>
+        </div>
+      </div>
+      <div class="step" icon="fa fa-info-circle" id="2">
+        <div class="step-title">
+          <span class="step-number">02</span>
+          <div class="step-text">Personal Data</div>
+        </div>
+      </div>
+      <div class="step" icon="fa fa-book-reader" id="3">
+        <div class="step-title">
+          <span class="step-number">03</span>
+          <div class="step-text">Terms and Conditions</div>
+        </div>
+      </div>
+      <div class="step" icon="fa fa-check" id="4">
+        <div class="step-title">
+          <span class="step-number">04</span>
+          <div class="step-text">Finish</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="stepper-content-container">
+    <div class="stepper-content fade-in" stepper-label="1">
+      <div>Step 1</div>
+    </div>
+    <div class="stepper-content fade-in" stepper-label="2">
+      <div>Step 2</div>
+    </div>
+    <div class="stepper-content fade-in" stepper-label="3">
+      <div>Step 3</div>
+    </div>
+    <div class="stepper-content fade-in" stepper-label="4">
+      <div>Step 4</div>
+    </div>
+  </div>
+</div>
+```
+
+<i/>
+
+## Vertical Stepper
+
+<a href="/product/bootstrap-contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></a>
+
+Set the `direction` attribute of the stepper HTML elment to `vertical` to arrange its content vertically.
 
 <stepperExample1 />
 
 ```html
-<div direction="vertical" height="800px" class="stepper">
+<div direction="vertical" height="800px" class="stepper" id="stepper">
   <div class="steps-container">
     <div class="steps">
       <div class="step" icon="fa fa-pencil-alt" id="1">
@@ -78,63 +155,16 @@ See the following Bootstrap 5 stepper examples:
 </div>
 ```
 
-## Horizontal Stepper
-
-<stepperExample2 />
-
-```html
-<div height="800px" class="stepper" id="stepper2">
-  <div class="steps-container">
-    <div class="steps">
-      <div class="step" icon="fa fa-pencil-alt" id="1">
-        <div class="step-title">
-          <span class="step-number">01</span>
-          <div class="step-text">Basic Information</div>
-        </div>
-      </div>
-      <div class="step" icon="fa fa-info-circle" id="2">
-        <div class="step-title">
-          <span class="step-number">02</span>
-          <div class="step-text">Personal Data</div>
-        </div>
-      </div>
-      <div class="step" icon="fa fa-book-reader" id="3">
-        <div class="step-title">
-          <span class="step-number">03</span>
-          <div class="step-text">Terms and Conditions</div>
-        </div>
-      </div>
-      <div class="step" icon="fa fa-check" id="4">
-        <div class="step-title">
-          <span class="step-number">04</span>
-          <div class="step-text">Finish</div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="stepper-content-container">
-    <div class="stepper-content fade-in" stepper-label="1">
-      <div>Step 1</div>
-    </div>
-    <div class="stepper-content fade-in" stepper-label="2">
-      <div>Step 2</div>
-    </div>
-    <div class="stepper-content fade-in" stepper-label="3">
-      <div>Step 3</div>
-    </div>
-    <div class="stepper-content fade-in" stepper-label="4">
-      <div>Step 4</div>
-    </div>
-  </div>
-</div>
-```
+<i/>
 
 ## Stepper Without Icons and Headers
+
+<a href="/product/bootstrap-contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></a>
 
 <stepperExample3 />
 
 ```html
-<div height="800px" class="stepper" id="stepper2">
+<div height="800px" class="stepper" id="stepper">
   <div class="steps-container">
     <div class="steps">
       <div class="step" icon="fa fa-pencil-alt" id="1"></div>
@@ -160,19 +190,6 @@ See the following Bootstrap 5 stepper examples:
 </div>
 ```
 
-# Script
-
-We add dynamicity and interactivity to our stepper with JavaScript, we use `querySelector` to select an element. We then create a new stepper object using the `new` keyword from CDB, passing it the element we just targeted as an argument.
-
-Each stepper instance can be created with the following javascript code snippet. This gives you access to the event handlers and listeners available for the stepper.
-
-```html
-<script src="/build/constrast-bootstrap-pro/js/cdb.js"></script>
-<script>
-  const stepper = document.querySelector('#stepper');
-  new CDB.Stepper(stepper);
-</script>
-```
 
 ## Classes and Events Reference: Contrast Bootstrap Stepper
 

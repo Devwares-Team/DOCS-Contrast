@@ -1,7 +1,8 @@
 ---
 title: "Button"
-metaTitle: "Button Component for React Bootstrap"
-metaDescription: "Users can interact with your website using the React Bootstrap button. In terms of size, form, and color, they are simple to alter."
+metaTitle: "Button Component for React Bootstrap 5"
+metaDescription: "Users can interact with your website using the React Bootstrap 5 button. In terms of size, form, and color, they are simple to alter."
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/react/components/buttons.mdx"
 ---
 
 
@@ -9,13 +10,13 @@ import React from "react";
 import {Link} from "gatsby";
 
 
-# React Bootstrap Button
+# React Bootstrap 5 Button (Contrast)
 
-Users can interact with your website using the React Bootstrap button. In terms of size, form, and color, they are simple to alter. They include a number of pre-defined button styles, each with its own semantic function and a few more controls.
+Users can interact with your website using the React Bootstrap 5 button. In terms of size, form, and color, they are simple to alter. They include a number of pre-defined button styles, each with its own semantic function and a few more controls.
 
-## Importing the React Bootstrap Button component
+## Importing the React Bootstrap 5 Button component
 
-You begin by importing the CDBButton component into your project to use the React Bootstrap Button component.
+You begin by importing the CDBButton component (Contrast) into your project to use the React Bootstrap Button component.
 
 ```js
 import { CDBBtn } from "cdbreact";
@@ -48,7 +49,7 @@ export const Button = () => {
 
 ## Circular Buttons
 
-The 'circle' attribute is used on the React Bootstrap buttons to make them more rounded.
+The 'circle' attribute is used on the React Bootstrap 5 buttons to make them more rounded.
 
 <buttonExample2 />
 
@@ -86,7 +87,7 @@ export const Button = () => {
 ```
 ## Outline Buttons
 
-To give your button merely an outline, use the 'outline' button.
+Using the react bootstrap button, you can give your button merely an outline, by using the prop 'outline' on the button.
 
  <buttonExample3 /> 
 
@@ -125,17 +126,10 @@ export const Button = () => {
 
 ## Circular Outline Buttons
 
-To create the circular outline buttons, we'll use the React Bootstrap components for buttons
+To create the circular outline buttons, we'll use the React Bootstrap 5 components for buttons
 
-<div class="container">
-  <button class="btn btn-rounded btn-outline-primary">Primary</button>
-  <button class="btn btn-rounded btn-outline-secondary">Secondary</button>
-  <button class="btn btn-rounded btn-outline-success">Success</button>
-  <button class="btn btn-rounded btn-outline-danger">Danger</button>
-  <button class="btn btn-rounded btn-outline-dark">Dark</button>
-  <button class="btn btn-rounded btn-outline-warning">Warning</button>
-  <button class="btn btn-rounded btn-outline-info">Info</button>
-</div>
+<buttonExample7 />
+
 
 ```js
 import React from "react";
@@ -174,15 +168,7 @@ export const Button = () => {
 
 Give the 'CDBBtn' component the 'flat' attribute to create buttons without button shadows.
 
-<div class="container">
-  <button class="btn btn-flat btn-primary">Primary</button>
-  <button class="btn btn-flat btn-secondary">Secondary</button>
-  <button class="btn btn-flat btn-success">Success</button>
-  <button class="btn btn-flat btn-danger">Danger</button>
-  <button class="btn btn-flat btn-dark">Dark</button>
-  <button class="btn btn-flat btn-warning">Warning</button>
-  <button class="btn btn-flat btn-info">Info</button>
-</div>
+<buttonExample8 />
 
 ```js
 import React from "react";
@@ -218,7 +204,7 @@ export const Button = () => {
 ```
 <i/>
 
-## Label at the side 
+<!-- ## Label at the side 
 
 <Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
 
@@ -321,7 +307,7 @@ export const Button = () => {
     </CDBContainer>
   );
 };
-```
+``` -->
 <i/>
 
 ## Buttons with Icons
@@ -331,16 +317,7 @@ export const Button = () => {
 In this tutorial we also use the [CDBIcon](https://www.devwares.com/docs/contrast/react/components/icon) component alongside the `CDBButton` component. The 'CDBIcon' component is nested within the 'CDBBtn' component. Our buttons now have icons associated with them as a result of this.
 
 
-<div class="container">
-  <button class="btn btn-warning">
-    <i class="fa fa-magic"></i>
-    Warning
-  </button>
-  <button class="btn btn-info">
-    Info
-    <i class="fa fa-magic"></i>
-  </button>
-</div>
+<buttonExample10 />
 
 ```js
 import React from "react";
@@ -365,17 +342,7 @@ export const Button = () => {
 
 Use the'size' attribute to specify how big or small your button should be.
 
-<div class="container">
-  <button class="btn btn-lg btn-primary">
-    Large Button
-  </button>
-  <button class="btn btn-md btn-secondary">
-    Normal Button
-  </button>
-  <button class="btn btn-sm btn-success">
-    Small Button
-  </button>
-</div>
+<buttonExample4 />
 
 ```js
 import React from "react";
@@ -384,13 +351,13 @@ import { CDBBtn, CDBContainer } from "cdbreact";
 export const Button = () => {
   return (
     <CDBContainer>
-          <CDBBtn color="primary" size="large">
-            Large button
-          </CDBBtn>
-          <CDBBtn color="secondary">Normal button</CDBBtn>
-          <CDBBtn color="success" size="small">
-            Small button
-          </CDBBtn>
+      <CDBBtn color="primary" size="large">
+        Large button
+      </CDBBtn>
+      <CDBBtn color="secondary">Normal button</CDBBtn>
+      <CDBBtn color="success" size="small">
+        Small button
+      </CDBBtn>
     </CDBContainer>
   );
 };
@@ -399,11 +366,7 @@ export const Button = () => {
 
 To disable your button, use the 'disabled' property.
 
-<div class="container">
-  <button class="btn btn-secondary disabled">
-    Disabled Button
-  </button>
-</div>
+<buttonExample11 />
 
 ```js
 import React from "react";
@@ -419,30 +382,30 @@ export const Button = () => {
   );
 };
 ```
-# Contrast React Bootstrap Button Props
+# Contrast React Bootstrap 5 Button Props
 
-The props you get to use with the React Bootstrap Button component will be expanded upon in this section. You'll learn what these props do, how to utilize them in your code, and what their default values are.
+The props you get to use with the React Bootstrap 5 Button component will be expanded upon in this section. You'll learn what these props do, how to utilize them in your code, and what their default values are.
 
 Other prop possibilities for the 'CDBButton' component are included in the table below.
 
-| Name            | Type        | Default      |   Description| Example      |
-| :------------- | :----------: | -----------: | :----------: | -----------: |
-| action         | Boolean      | false        | Adds `btn-action` class, works with Cards | <CDBBtn action ... />  |
-| active         | Boolean      | false        | Adds active class | <CDBBtn active ... />  |
-| block          | Boolean      | false        | Create block level buttons | <CDBBtn block ... />  |
-| circle         | Boolean      | false        | Adds `btn-circle` class, works with stepper | <CDBBtn circle ... />  |
-| className      | String       |              | Adds custom classes | <CDBBtn className="custom-class" ... />  |
-| color          | String       | primary      | Determines button color, accepts CDB predefined color classes | <CDBBtn color="secondary" ... />  |
-| disabled       | Boolean      | false        | Disables button from being clicked | <CDBBtn disabled ... />  |
-| download       | String       |              | Adds download attribute with provided url | <CDBBtn download="https://link_to_your_file.com" ... />  |
-| endingText     | String       |              | Positions the button text in one of the selected positions. These positions include `top-left`, `top-right`, `bottom-left`, `bottom-right`, `top`, `bottom`, `center`.| <CDBBtn endingText="center" ... />  |
-| flat           | Boolean      | false        | Adds flat effect to button. That is button without background and borders | <CDBBtn flat ... />  |
-| innerRef       | function or String |        | Allows to pass Ref string, which will attach to rendered button or a DOM element | <CDBBtn innerRef="buttonRef" ... />  |
-| label          | String       |              | Positions button text `left` or `right`. | <CDBBtn label="left" ... />  |
-| onClick        | function     |              | Will call a function when the button is clicked | <CDBBtn onClick={yourFunction} ... />  |
-| role           | String       |              | Adds role attribute to button | <CDBBtn role="...." ... />  |
-| size           | String       | medium       | Determines button size, available values: `[small, large]`. | <CDBBtn size="large" ... /> |  |
-| social         | String       |              | Adds a social media icon. | <CDBBtn social="fb" ... /> |  |
-| tag            | String       | button       | Changes default tag | <CDBBtn tag="a" ... /> |  |
-| target         | String       | _self        | If used as link, sets target attribute | <CDBBtn href="..." target="_blank" ... /> |  |
-| type           | String       | button       | Adds type attribute to button | <CDBBtn type="submit" ... /> |  |
+| Name            | Type        | Default      |   Description| Example            |
+| :------------- | :----------: | -----------: | :----------: | ----------------------------: |
+| action         | Boolean      | false        | Adds `btn-action` class, works with Cards | `<CDBBtn action ... />`  |
+| active         | Boolean      | false        | Adds active class | `<CDBBtn active ... />`  |
+| block          | Boolean      | false        | Create block level buttons | `<CDBBtn block ... />`  |
+| circle         | Boolean      | false        | Adds `btn-circle` class, works with stepper | `<CDBBtn circle ... />`  |
+| className      | String       |              | Adds custom classes | `<CDBBtn className="custom-class" ... />`  |
+| color          | String       | primary      | Determines button color, accepts CDB predefined color classes | `<CDBBtn color="secondary" ... />`  |
+| disabled       | Boolean      | false        | Disables button from being clicked | `<CDBBtn disabled ... />`  |
+| download       | String       |              | Adds download attribute with provided url | `<CDBBtn download="https://link_to_your_file.com" ... />`  |
+| endingText     | String       |              | Positions the button text in one of the selected positions. These positions include `top-left`, `top-right`, `bottom-left`, `bottom-right`, `top`, `bottom`, `center`.| `<CDBBtn endingText="center" ... />`  |
+| flat           | Boolean      | false        | Adds flat effect to button. That is button without background and borders | `<CDBBtn flat ... />`  |
+| innerRef       | function or String |        | Allows to pass Ref string, which will attach to rendered button or a DOM element | `<CDBBtn innerRef="buttonRef" ... />`  |
+| label          | String       |              | Positions button text `left` or `right`. | `<CDBBtn label="left" ... />`  |
+| onClick        | function     |              | Will call a function when the button is clicked | `<CDBBtn onClick={yourFunction} ... />`  |
+| role           | String       |              | Adds role attribute to button | `<CDBBtn role="...." ... />`  |
+| size           | String       | medium       | Determines button size, available values: `[small, large]`. | `<CDBBtn size="large" ... />` |
+| social         | String       |              | Adds a social media icon. | `<CDBBtn social="fb" ... />` |
+| tag            | String       | button       | Changes default tag | `<CDBBtn tag="a" ... />` |
+| target         | String       | _self        | If used as link, sets target attribute | `<CDBBtn href="..." target="_blank" ... />` |
+| type           | String       | button       | Adds type attribute to button | `<CDBBtn type="submit" ... />` |

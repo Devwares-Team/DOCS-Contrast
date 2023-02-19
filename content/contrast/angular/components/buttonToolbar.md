@@ -2,17 +2,18 @@
 title: "ButtonToolbar"
 metaTitle: "Angular Bootstrap ButtonToolbar"
 metaDescription: "Angular Bootstrap ButtonToolbar combines sets of button groups into button toolbars for more complex components"
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/angular/components/buttonToolbar.md"
 ---
 
-# Angular Bootstrap ButtonToolbar
+# Contrast Angular Bootstrap ButtonToolbar
 
-Angular Bootstrap ButtonToolbar combines sets of button groups into button toolbars for more complex components. Use utility classes as needed to space out groups, buttons, and more.
+Contrast Angular Bootstrap ButtonToolbar combines sets of button groups into button toolbars for more complex components. Use utility classes as needed to space out groups, buttons, and more.
 
 ## Importing the Contrast Angular Bootstrap ButtonToolbar Module
 
 To use the Contrast Angular Bootstrap ButtonToolbar component in your project you need to import `ButtonToolbarModule`.
 
-```typescript
+```ts
 import {ButtontoolbarModule } from 'cdbangular';
 ```
 
@@ -22,7 +23,7 @@ Use the `color` prop to define the background color of the buttons in your butto
 
 ![Angular Bootstrap ButtonToolbar ](./images/buttontoolbar.png)
 
-###### html
+###### HTML
 ```html
       <CDBBtnTb>
         <CDBBtnGrp className="mr-2">

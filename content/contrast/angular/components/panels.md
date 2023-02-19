@@ -2,20 +2,20 @@
 title: "Panel"
 metaTitle: "Angular Bootstrap Panel Component"
 metaDescription: "Angular Bootstrap Panels are the flexible and extensible content containers with multiple variants, which include a wide variety of content, contextual background colors, and powerful display options"
-
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/angular/components/panels.md"
 ---
 
-# Angular Bootstrap Panel
+# Contrast Angular Bootstrap Panel
 
-Angular Bootstrap Panels are the flexible and extensible content containers with multiple variants, which include a wide variety of content, contextual background colors, and powerful display options. Panels are similar to cards, but they don't include media.
+Contrast Angular Bootstrap Panels are the flexible and extensible content containers with multiple variants, which include a wide variety of content, contextual background colors, and powerful display options. Panels are similar to cards, but they don't include media.
 
-<i/>
+
 
 ## Importing the Contrast Angular Bootstrap Panel Module
 
 To use the Contrast Angular Bootstrap Panel component in your project you need to import `PanelModule`.
 
-```typescript
+```ts
 import {PanelModule } from 'cdbangular';
 ```
 
@@ -23,11 +23,11 @@ import {PanelModule } from 'cdbangular';
 
 Alongside the `CDBPanel` component, we use other Contrast Angular Components, these components are, the `CDBPanelTitle` component to write titles in your pane, the `CDBPanelText` component to write texts or messages in your pane, the `CDBPaneImage`  component for your pane images. 
 
-To embed the Contrast Angular Bootstrap Dropdown in our Panel, we nest the Dropdown component, [CDBDropDown](https://www.devwares.com/docs/contrast/react/components/dropdown), in the `CDBPanel` component. 
+To embed the Contrast Angular Bootstrap Dropdown in our Panel, we nest the Dropdown component, [CDBDropDown](https://www.devwares.com/docs/contrast/angular/components/dropdown), in the `CDBPanel` component. 
 
 ![Angular Bootstrap Panel Component](./images/panelwithdropdown.png)
 
-###### html
+###### HTML
 ```html
 <CDBPanel>
     <CDBPane>
@@ -60,13 +60,13 @@ To embed the Contrast Angular Bootstrap Dropdown in our Panel, we nest the Dropd
     </CDBPanelText>
 </CDBPanel>
 ```
-<i/>
+
 
 ## Panel with Users
 
 ![Angular Bootstrap Panel with Users](./images/panelwithusers.png)
 
-###### html
+###### HTML
 ```html
 <CDBPanel class="p-0">
     <CDBCardImage cdbClass="img-fluid"
@@ -86,15 +86,14 @@ To embed the Contrast Angular Bootstrap Dropdown in our Panel, we nest the Dropd
     </div>
 </CDBPanel>
 ```
-<i/>
 
 ## Panel with Label
 
-In this tutorial section, we create our panel label with the Contrast Angular Bootstrap Badge, nest the [CDBDropDown](https://www.devwares.com/docs/contrast/react/components/dropdown) component in the `CDBPanel` component. With this, our panel now has badges in it, which can serve as labels.
+In this tutorial section, we create our panel label with the Contrast Angular Bootstrap Badge, nest the [CDBDropDown](https://www.devwares.com/docs/contrast/angular/components/dropdown) component in the `CDBPanel` component. With this, our panel now has badges in it, which can serve as labels.
 
 ![Angular Bootstrap Panel with Label](./images/panelwithlabel.png)
 
-###### html
+###### HTML
 ```html
 <CDBPanel>
     <CDBBadge color="dark" [flat]=true>Label 1</CDBBadge>
@@ -114,7 +113,6 @@ In this tutorial section, we create our panel label with the Contrast Angular Bo
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ7ntUU7AzmOxa5HB8zS83sa-JFHEfZJAoI2A&usqp=CAU" ></CDBPaneImage>
 </CDBPanel>
 ```
-<i/>
 
 ## Pane List
 
@@ -122,7 +120,7 @@ In this tutorial section, we create our panel label with the Contrast Angular Bo
 
 ![Angular Bootstrap Pane List](./images/panellist.png)
 
-###### html
+###### HTML
 ```html
 <CDBPanel>
     <CDBPane>
@@ -186,15 +184,14 @@ In this tutorial section, we create our panel label with the Contrast Angular Bo
     </CDBPane>
 </CDBPanel>
 ```
-<i/>
 
 ## Panel with Progress
 
-In this tutorial we use other Contrast React Bootstrap Components alongside the `CDBPanel` component. These components are the [CDBDropDown](https://www.devwares.com/docs/contrast/react/components/dropdown) for our panel dropdowns, [CDBProgress](https://www.devwares.com/docs/contrast/react/components/progress) to have progress bars in our panels, [CDBPane](https://www.devwares.com/docs/contrast/react/components/pane), and the [CDBIcon](https://www.devwares.com/docs/contrast/react/components/icon) component for icons in our panels. Check out the docs to get more insight. 
+In this tutorial we use other Contrast Angular Bootstrap Components alongside the `CDBPanel` component. These components are the [CDBDropDown](https://www.devwares.com/docs/contrast/angular/components/dropdown) for our panel dropdowns, [CDBProgress](https://www.devwares.com/docs/contrast/angular/components/progress) to have progress bars in our panels, [CDBPane](https://www.devwares.com/docs/contrast/angular/components/pane), and the [CDBIcon](https://www.devwares.com/docs/contrast/angular/components/icon) component for icons in our panels. Check out the docs to get more insight. 
 
 ![Angular Bootstrap Panel with Progress](./images/panelwithprogress.png)
 
-###### html
+###### HTML
 ```html
 <CDBPanel>
     <CDBPane>
@@ -225,11 +222,10 @@ In this tutorial we use other Contrast React Bootstrap Components alongside the 
 </CDBPanel>
 ```
 
-# API
+## API Reference: Contrast Panel Properties
 
-This section will build on your information about the props you get to use with the Contrast React Bootstrap Pane component. You will find out what these props do, their default values, and how you would use them in your code.
 
-## API Reference: Contrast Panel Inputs
+This section will build on your information about the props you get to use with the Contrast Angular Bootstrap Pane component. You will find out what these props do, their default values, and how you would use them in your code.
 
 The table below lists other prop options of the `CDBPanel` component.
 

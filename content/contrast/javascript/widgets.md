@@ -1,15 +1,16 @@
 ---
 title: 'Widgets'
 metaTitle: 'Bootstrap 5 Widgets - Bootstrap CSS tutorial'
-metaDescription: 'These are Contrast Bootstrap Components'
+metaDescription: 'These are Contrast Design Bootstrap Components'
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/javascript/widgets.md"
 ---
 
-Bootstrap 5 Widgets are stand-alone third-party applications that are inserted within the website's body.
+Bootstrap 5 Widgets are stand-alone third-party components that can be used within a webpage's body tag.
 
-The direct contact widget, like the one on our website, is an example of a website widget that allows your users to easily contact you.
+The direct contact widget, like the one on our website, is an example of a widget that allows users to contact you easily.
 
-To make our widgets, we use the Contrast Bootstrap Card component. Check out our documentation to learn more about the contrast bootstrap card and how to utilize it in your project [here](https://www.devwares.com/docs/contrast/javascript/components/card).
-
+To make our widgets, we use the CDBootstrap Card component. Check out our [documentation](https://www.devwares.com/docs/contrast/javascript/components/card) to learn more about the contrast design bootstrap card and how to utilize it in your project.
+<br/><br/>
 <i/>
 
 ## Blog Card
@@ -77,10 +78,10 @@ To make our widgets, we use the Contrast Bootstrap Card component. Check out our
   </div>
 </div>
 ```
-
+<br/><br/>
 <i/>
 
-## Widget Cards
+## Widget Card
 
 ![Bootstrap Widget Cards](./images/cardwidget.png)
 
@@ -95,7 +96,7 @@ To make our widgets, we use the Contrast Bootstrap Card component. Check out our
   </div>
 </div>
 ```
-
+<br/><br/>
 <i/>
 
 ## Counter Card
@@ -118,7 +119,7 @@ To make our widgets, we use the Contrast Bootstrap Card component. Check out our
   </div>
 </div>
 ```
-
+<br/><br/>
 <i/>
 
 ## Invoices
@@ -156,7 +157,7 @@ To make our widgets, we use the Contrast Bootstrap Card component. Check out our
   </div>
 </div>
 ```
-
+<br/><br/>
 <i/>
 
 ## Ratings
@@ -252,7 +253,7 @@ Use the Contrast Bootstrap Progress to put progress bar in your widgets, check o
   </div>
 </div>
 ```
-
+<br/><br/>
 <i/>
 
 ## Events
@@ -312,7 +313,7 @@ Use the Contrast Bootstrap Progress to put progress bar in your widgets, check o
   <p class="card-text p-4 text-center pointer border-top">See All</p>
 </div>
 ```
-
+<br/><br/>
 <i/>
 
 ## Alerts and Notifications

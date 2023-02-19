@@ -1,17 +1,18 @@
 ---
 title: "Pane"
-metaTitle: "Pane Component for React Bootstrap"
-metaDescription: "React Bootstrap Pane Component is part of a window that gives the user more information or quick access to common software functionality."
+metaTitle: "Pane Component for React Bootstrap 5"
+metaDescription: "React Bootstrap 5 Pane Component is part of a window that gives the user more information or quick access to common software functionality."
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/react/components/pane.mdx"
 ---
 
 import React from "react";
 import {Link} from "gatsby";
 
-React Bootstrap Pane Component is part of a window that gives the user more information or quick access to common software functionality. A common example is a preview pane, a pane with a location etc.
+React Bootstrap 5 Pane Component is part of a window that gives the user more information or quick access to common software functionality. A common example is a preview pane, a pane with a location etc.
 
-## Importing the React Bootstrap Pane Component
+## Importing the React Bootstrap 5 Pane Component
 
-You begin by importing `CDBPane` into your project to use the Contrast React Bootstrap Pane component.
+You begin by importing `CDBPane` into your project to use the Contrast React Bootstrap 5 5 Pane component.
 
 ```js
 import { CDBPane } from "cdbreact";
@@ -30,19 +31,25 @@ import { CDBPane } from "cdbreact";
 We also import the [CDBIcon](https://www.devwares.com/docs/contrast/react/components/icon). We can have icons in our pane by nesting the `CDBIcon` in our `CDBPane`.
 
 <div class="container">
-  <div class="panel" style="width: 400px">
-    <div class="pane">
+  <div class="panel" style="width: 400px; border-radius: 15px">
+    <div class="pane" style="padding: 14px; display: flex; align-items: center;
+    box-sizing: border-box;">
       <img
-        class="pane-img"
+        className="pane-img rounded-full mr-4" style=" overflow: hidden;
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+    margin-left: 1rem"
         src="https://media.istockphoto.com/photos/beautiful-woman-wearing-brown-curly-hairstyle-picture-id495006065?s=170x170"
       />
       <div class="ml-3">
-        <div class="font-weight-bold">Warren Briggs</div>
+        <div class="font-weight-bold" style="font-size: 1.2rem">Warren Briggs</div>
         <p class="panel-text mb-0">Australia</p>
-      </div>
-      <p class="ml-auto mb-0 text-danger">
+        <p class="ml-auto mb-0 text-danger">
         300m <i class="fas fa-map-marker-alt"></i>
       </p>
+      </div>
+      
     </div>
   </div>
 </div>
@@ -55,14 +62,15 @@ import { CDBPanel, CDBPane, CDBPanelTitle, CDBPanelText, CDBPaneImage, CDBIcon, 
 export const Pane = () => {
   return (
     <CDBContainer>
-            <CDBPanel style={{width:"400px"}}>
+            <CDBPanel style={{width:"400px", borderRadius: "12px"}}>
               <CDBPane>
-                <CDBPaneImage size="md" src="https://media.istockphoto.com/photos/beautiful-woman-wearing-brown-curly-hairstyle-picture-id495006065?s=170x170" />
-                <div className="ml-3">
-                  <CDBPanelTitle>Warren Briggs</CDBPanelTitle>
-                  <CDBPanelText small>Australia</CDBPanelText>
+                <CDBPaneImage size="lg"   src="https://media.istockphoto.com/photos/beautiful-woman-wearing-brown-curly-hairstyle-picture-id495006065?s=170x170" />
+                <div className="ml-4" style={{marginLeft: "22px", marginTop:"9px"}}>
+                  <CDBPanelTitle style={{fontSize:"17px"}}>Warren Briggs</CDBPanelTitle>
+                  <CDBPanelText style={{fontSize:"15px"}}>Australia</CDBPanelText>
+                  <p style={{fontSize:"12px", color:"#bb2124"}}>{"300m"} <CDBIcon fas icon="map-marker-alt" /></p>  
                 </div>
-                <p className="ml-auto mb-0 text-danger">300m <CDBIcon fas icon="map-marker-alt" /></p>
+                  
               </CDBPane>
             </CDBPanel>
     </CDBContainer>
@@ -75,13 +83,20 @@ export const Pane = () => {
 
 <Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
 
-The React Bootstrap Dropdown component is nestled in this tutorial area, [CDBDropDown](https://www.devwares.com/docs/contrast/react/components/dropdown), in the `CDBPane` component. , We now have dropdowns in our pane as a result of this.
+The React Bootstrap 5 5 Dropdown component is nestled in this tutorial area, [CDBDropDown](https://www.devwares.com/docs/contrast/react/components/dropdown), in the `CDBPane` component. , We now have dropdowns in our pane as a result of this.
 
 <div class="container">
-  <div class="panel" style="width: 400px">
-    <div class="pane">
+  <div class="panel" style="width: 400px; height: 6rem; border-radius: 15px;">
+    <div class="pane" style= " display: flex; align-items: center;
+    box-sizing: border-box;">
       <img
-        class="pane-img pane-md"
+        class="pane-img pane-md" style ="border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+    margin-left: 0.5rem;
+    "
         src="https://media.istockphoto.com/photos/beautiful-woman-wearing-brown-curly-hairstyle-picture-id495006065?s=170x170"
       />
       <div class="ml-3">
@@ -118,14 +133,17 @@ import { CDBPane, CDBDropDownItem, CDBDropDown, CDBDropDownMenu, CDBDropDownTogg
 export const Pane = () => {
   return (
     <CDBContainer>
-            <CDBPanel style={{width:"400px", padding:"10px"}}>
-              <CDBPane>
-                <CDBPaneImage size="md" src="https://media.istockphoto.com/photos/beautiful-woman-wearing-brown-curly-hairstyle-picture-id495006065?s=170x170" />
-                <div className="ml-3">
+            <CDBPanel style={{width:"400px",  borderRadius: "12px"}}>
+              <CDBPane style={{display: "flex", justifyContent: "space-between", alignItems: "center", flexDirection: "row"}}>
+                <div style={{display: "flex", justifyContent: "space-between", alignItems: "center", flexDirection: "row"}}>
+                <CDBPaneImage size="lg" src="/img/pane/pane1.png" />
+                <div style={{marginLeft: "22px"}}>
                   <CDBPanelTitle>Warren Briggs</CDBPanelTitle>
                   <CDBPanelText small>Breakfast</CDBPanelText>
                 </div>
-                <CDBDropDown className="ml-auto">
+                </div>
+                
+                <CDBDropDown style={{marginLeft: "22px"}}>
                   <CDBDropDownToggle color="white"><CDBIcon className="text-muted" fas icon="ellipsis-h"/></CDBDropDownToggle>
                   <CDBDropDownMenu>
                     <CDBDropDownItem disabled>Edit Profile</CDBDropDownItem>
@@ -133,7 +151,7 @@ export const Pane = () => {
                     <CDBDropDownItem>Action 1</CDBDropDownItem>
                     <CDBDropDownItem>Action 2</CDBDropDownItem>
                   </CDBDropDownMenu>
-                </CDBDropDown>
+                </CDBDropDown>          
               </CDBPane>
             </CDBPanel>
     </CDBContainer>
@@ -142,10 +160,10 @@ export const Pane = () => {
 ```
 
 
-## Contrast React Bootstrap Pane Props
+## Contrast React Bootstrap 5 5 Pane Props
 
 
-This section will elaborate on the props available with the React Bootstrap Pane component. You'll learn what these props do, how to utilize them, and what their default values are.
+This section will elaborate on the props available with the React Bootstrap 5 5 Pane component. You'll learn what these props do, how to utilize them, and what their default values are.
 
 Other prop options for the 'CDBPane' component are listed in the table below.
 

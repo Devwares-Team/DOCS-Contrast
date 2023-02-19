@@ -1,19 +1,20 @@
 ---
 title: "DatePicker"
-metaTitle: "DatePicker Component for React Bootstrap"
-metaDescription: "Building a DatePicker Component using React Bootstrap"
+metaTitle: "DatePicker Component for React Bootstrap 5"
+metaDescription: "Building a DatePicker Component using React Bootstrap 5"
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/react/sections/datepicker.mdx"
 ---
 
 import React from "react";
 import {Link} from "gatsby";
 
-# React Bootstrap DatePicker
+# React Bootstrap 5 DatePicker
 
-React Bootstrap Date picker allows you to pick a date and time with ease.
+React Bootstrap 5 Date picker allows you to pick a date and time with ease.
 
-## Importing the React Bootstrap DatePicker Component
+## Importing the React Bootstrap 5 DatePicker Component
 
-To use the Contrast React Bootstrap DatePicker component, you import `CDBDatePicker` into your project.
+To use the Contrast React Bootstrap 5 DatePicker component, you import `CDBDatePicker` into your project.
 
 ```js
 import { CDBDatePicker } from "cdbreact";
@@ -26,7 +27,7 @@ import { CDBDatePicker } from "cdbreact";
 <Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
 
 
-![React Bootstrap DatePicker](https://i.imgur.com/ClWprya.gif)
+<datePickerExample1 />
 
 
 ```js
@@ -38,7 +39,7 @@ const DatePicker = () => {
 
   return (
     <CDBContainer>
-          <CDBDatePicker onChange={onChange} value={value} />
+        <CDBDatePicker onChange={onChange} value={value} color="dark" />
     </CDBContainer>
   );
 };
@@ -46,9 +47,24 @@ const DatePicker = () => {
 export default DatePicker;
 ```
 
-## API Reference: Contrast React Bootstrap DatePicker Props
+## Default Styles
 
-This section will build on your information about the props you get to use with the Contrast React Bootstrap DatePicker component. You will find out what these props do, their default values, and how you would use them in your code.
+You can customize `CDBDatePicker`with our default colors styles 
+
+```js
+
+    <CDBDatePicker onChange={onChange} value={value} color="primary" />
+    <CDBDatePicker onChange={onChange} value={value} color="secondary" />
+    <CDBDatePicker onChange={onChange} value={value} color="success" />
+    <CDBDatePicker onChange={onChange} value={value} color="danger" />
+    <CDBDatePicker onChange={onChange} value={value} color="dark" />
+    <CDBDatePicker onChange={onChange} value={value} color="warning" />
+    <CDBDatePicker onChange={onChange} value={value} color="info" />
+
+```
+## API Reference: Contrast React Bootstrap 5 DatePicker Props
+
+This section will build on your information about the props you get to use with the Contrast React Bootstrap 5 DatePicker component. You will find out what these props do, their default values, and how you would use them in your code.
 
 The table below lists other prop options of the `CDBDatePicker` component.
 

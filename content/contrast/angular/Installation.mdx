@@ -1,67 +1,46 @@
 ---
 title: "Installation"
+metaTitle: 'Installing Contrast in your project'
+metaDescription: 'This is a step by step guilde on installing ng-cdbangular in your project'
+githubUrl : "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/angular/Installation.mdx"
 ---
 
 Step by step guide on how to install `ng-cdbangular`
 
-## Install CDBAngular
+## Prerequisites
+Before you begin, make sure you have Angular CLI and Node.js LTS installed (Angular 15 requires Node.js version ^14.20 or higher).
 
-To install ng-cdbangular, in your command line type:
+To install Contrast Design Bootstrap Angular (Free) in your project, type the command below in your terminal. 
 
+## Install NG-CDBAngular
+**Step 1:** Create a new Angular App using Angular CLI
+````bash
+ng new <appname>
+````
+Answer the questions that show up to get your application initialized.
+
+**Step 2:** Navigate to app's directory
+````bash
+cd <appname>
+````
+
+**Step 3:** Install `ng-cdbangular` using `npm` or `yarn`
 ```bash
 npm install --save ng-cdbangular
 ```
-
 or
-
 ```bash
 yarn add ng-cdbangular
 ```
 
-## Usage
-
-Add bootstrap-css-only to angular.json
-```jsx
+**Step 4:** Add Contrast Design Bootstrap styles to the `angular.json` file
+```json
 "styles": [
-  "node_modules/bootstrap-css-only/css/bootstrap.min.css"
+  "node_modules/ng-cdbangular/assets/scss/cdb.scss"
 ]
 ```
 
-Import preferred module in app.module.ts
-```jsx
-import { AlertModule } from 'ng-cdbangular';
-
-@NgModule({
-  imports: [
-    AlertModule
-  ]
-})
-```
-
-In app.component.html
-```jsx
-<CDBAlert color="success">
-  A simple alert built with contrast design check it out!
-</CDBAlert>
-<CDBAlert color="danger" [dismiss]=true>
-  A simple alert built with contrast design check it out!
-</CDBAlert>
-```
-
-You can also import all cdbangular modules this way
-```jsx
-import { CDBFreeModule } from 'ng-cdbangular';
-
-@NgModule({
-  imports: [
-    CDBFreeModule,
-  ]
-})
-```
-
->***Run Your App:***
-
-`ng serve --o`
-
-
-
+**Step 4:** Launch your app
+````bash
+ng serve -o
+````

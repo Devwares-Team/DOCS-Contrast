@@ -1,18 +1,19 @@
 ---
 
-title: 'LIstGroup'
+title: 'ListGroup'
 metaTitle: 'Bootstrap 5 ListGroup - Bootstrap CSS tutorial'
 metaDescription: 'Bootstrap 5 List group is one of our interesting components that you can use in your web applications to display simple lists of elements as well as complex ones.'
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/javascript/components/listgroup.md"
+---
+# Bootstrap 5 LIstGroup
 
----# Bootstrap 5 LIstGroup
-
-Bootstrap 5 List group is one of our interesting components that you can use in your web applications to display simple lists of elements as well as complex ones
+Bootstrap 5 List group is one of our interesting components that you can use in your web applications to display simple lists of elements as well as complex ones.
 
 ## List Group with Badges
 
-![Bootstrap ListGroup With Badges](./images/listgroup1.png)
+<Listgroup1/>
 
-###### html
+###### HTML
 
 ```html
 <ul class="list-group" style="width: 28rem">
@@ -26,9 +27,9 @@ Bootstrap 5 List group is one of our interesting components that you can use in 
 
 ## List Group as Link
 
-![Bootstrap ListGroup as Link](./images/listgroup2.png)
+<Listgroup2/>
 
-###### html
+###### HTML
 
 ```html
 <div class="list-group" style="width: 28rem">
@@ -52,9 +53,9 @@ Bootstrap 5 List group is one of our interesting components that you can use in 
 
 ## Label
 
-![Bootstrap ListGroup Label](./images/listgroup3.png)
+<Listgroup3/>
 
-###### html
+###### HTML
 
 ```html
 <div class="list-group" style="width: 28rem">
@@ -91,9 +92,9 @@ Bootstrap 5 List group is one of our interesting components that you can use in 
 
 ## Color List Group
 
-![Bootstrap ListGroup Color](./images/listgroup4.png)
+<Listgroup4/>
 
-###### html
+###### HTML
 
 ```html
 <ul class="list-group" style="width: 28rem">

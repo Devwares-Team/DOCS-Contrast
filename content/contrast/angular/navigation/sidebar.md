@@ -2,14 +2,14 @@
 title: "Sidebar"
 metaTitle: "Angular Bootstrap Sidebar"
 metaDescription: "Angular Bootstrap Sidebar is a vertical navigation component which apart from traditional, text links, might embed icons, dropdowns, avatars or search forms"
-
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/angular/navigation/sidebar.md"
 ---
 
-# Angular Bootstrap Sidebar
+# Contrast Angular Bootstrap Sidebar
 
-Angular Bootstrap Sidebar is a vertical navigation component which apart from traditional text links, might embed icons, dropdowns, avatars, or search forms.
+Contrast Angular Bootstrap Sidebar is a vertical navigation component which contains  links, icons, dropdowns, avatars, or search forms.
 
-By its clarity and simplicity, it remarkably increases User Experience. It allows you to navigate through small applications as well as vast portals swiftly. Multiple link embedding functionality enables you to implement more advanced content categorization, essential for more significant projects.
+By its clarity and simplicity, it remarkably increases user experience. It allows you to navigate through small applications as well as vast portals swiftly. Multiple link embedding functionality enables you to implement more advanced content categorization, essential for more significant projects.
 
 Thanks to CDB, you can quickly implement Sidebar in your projects using different, alluring Side Menus.
 
@@ -19,7 +19,7 @@ Navigation on the left is a live demo of the Sidebar.
 
 To use the Contrast Angular Bootstrap Sidebar component in your project you need to import `SidebarModule`.
 
-```typescript
+```ts
 import {SidebarModule } from 'cdbangular';
 ```
 
@@ -42,7 +42,7 @@ With CDB Angular Bootstrap Sidebar we can add our own styling, as we can see in 
 ###### Collapsed
 ![Angular Bootstrap Sidebar Collapsed](./images/side2.png)
 
-###### html
+###### HTML
 ```angular
 <div class="app" style="display: flex; height: 100vh; overflow:scroll initial">
     <CDBSidebar textColor="#ffffff" backgroundColor="#333333">
@@ -91,7 +91,7 @@ With the Contrast Angular Bootstrap Sidebar PRO package, we get access to the `C
 
 ![Angular Bootstrap Sidebar Default](./images/sidebar.png)
 
-###### html
+###### HTML
 ```angular
 <CDBSidebar textColor="#f4f4f4" backgroundColor="#000000">
     <CDBSidebarHeader [prefix]="icon">

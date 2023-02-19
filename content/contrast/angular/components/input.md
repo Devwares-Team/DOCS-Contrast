@@ -2,18 +2,18 @@
 title: "Input"
 metaTitle: "Angular Bootstrap Input Component"
 metaDescription: "Angular Bootstrap Input is a special field which is used in order to receive data from the user"
-
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/angular/components/input.md"
 ---
 
-# Angular Bootstrap Input
+# Contrast Angular Bootstrap Input
 
-Angular Bootstrap Input is a special field which is used in order to receive data from the user. Used mostly in a variety of web-based forms. You can use material design version or default bootstrap style.
+Contrast Angular Bootstrap Input is a special field which is used to receive data from the user. It is used mostly in a variety of web-based forms. You can use material design version or default bootstrap style.
 
 ## Importing the Contrast Angular Bootstrap Input Module
 
 To use the Contrast Angular Bootstrap Input component in your project you need to import `InputModule`.
 
-```typescript
+```ts
 import {InputModule } from 'cdbangular';
 ```
 
@@ -25,11 +25,11 @@ The `label` property is used to tell you user what kind of data to input in that
 
 The `type` property describes what type of data we want to collect in the input field, ranging from text, emails, to passwords and checkboxes etc. 
 
-The [background] property takes in a boolean that if set to true gives our input a background.
+The [background] property takes in a Boolean that if set to true gives our input a background.
 
 ![Angular Bootstrap Input Default](./images/input1.png)
 
-###### html
+###### HTML
 ```html
 <CDBInput id="username" label="Username"></CDBInput>
 <CDBInput hint="Your e-mail" type="email"></CDBInput>
@@ -46,7 +46,7 @@ Use the `size` prop to define how little or large you want your input field to b
 
 ![Angular Bootstrap Input Size](./images/inputsizing.png)
 
-###### html
+###### HTML
 ```html
 <CDBInput label="Your e-mail" type="email" size="sm"></CDBInput>
 <CDBInput type="number" label="Your Number" size="lg"></CDBInput>
@@ -58,7 +58,7 @@ Use the `icon` property to nest icons in your input.
 
 ![Angular Bootstrap Input with Icons](./images/inputwithicons.png)
 
-###### html
+###### HTML
 ```html
 <CDBInput label="Username" type="text" icon="user"></CDBInput>
 <CDBInput label="Password" type="password" icon="bell"></CDBInput>
@@ -68,7 +68,7 @@ Use the `icon` property to nest icons in your input.
 
 ![Angular Bootstrap Input with MD](./images/inputwithmd.png)
 
-###### html
+###### HTML
 ```html
 <CDBInput [material]=true label="Your e-mail" type="email"></CDBInput>
 <CDBInput [material]=true type="number" label="Your Number"></CDBInput>
@@ -80,7 +80,7 @@ Use the `hint` property to give your input fields a placeholder.
 
 ![Angular Bootstrap Input Placeholder](./images/inputplaceholder.png)
 
-###### html
+###### HTML
 ```html
 <CDBInput hint="Your e-mail" type="email"></CDBInput>
 <CDBInput type="number" hint="Your Number"></CDBInput>
@@ -91,7 +91,7 @@ Set your [disabled] property to `true` to disable your input fields.
 
 ![Angular Bootstrap Input Disabled](./images/inputdisabled.png)
 
-###### html
+###### HTML
 ```html
 <CDBInput hint="Your e-mail" type="email" [disabled]=true></CDBInput>
 <CDBInput type="number" hint="Your Number" [disabled]=true></CDBInput>
@@ -102,16 +102,16 @@ Give the `type` property a value of `textarea` to give your input field a large 
 
 ![Angular Bootstrap Input TextArea](./images/inputtextarea.png)
 
-###### html
+###### HTML
 ```html
 <CDBInput label="Your name" type="textarea"></CDBInput>
-<CDBInput label="Your story" type="textarea" [material]=true rows=20 cols=30></CDBInput>
+<CDBInput label="Your story" type="textarea" [material]=true [rows]=20 [cols]=30></CDBInput>
 ```
 ## Background
 
 ![image info](./images/inputbackground.png)
 
-###### html
+###### HTML
 ```html
 <CDBInput hint="Your e-mail" type="email" [background]=true></CDBInput>
 <CDBInput type="number" hint="Your Number" [background]=true></CDBInput>

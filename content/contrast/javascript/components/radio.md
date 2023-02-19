@@ -1,18 +1,21 @@
 ---
+
 title: 'Radio'
 metaTitle: 'Bootstrap 5 Radio - Bootstrap CSS tutorial'
-metaDescription: "A Bootstrap 5 radio button is a component limit the user to only one option from a list of preset selections, whereas 'Checkboxes' are used to select multiple alternatives"
----# Bootstrap 5 Radio
+metaDescription: "Bootstrap 5 Radio is a component that limits users to make only one selection from a list of preset options, whereas Checkboxes are used to select multiple options"
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/javascript/components/radio.md"
+---
+# Bootstrap 5 Radio
 
-A Bootstrap 5 radio button is a component limit the user to only one option from a list of preset selections, whereas `Checkboxes` are used to select multiple alternatives
+Bootstrap 5 Radio is a component that limits users to make a selection from a list of preset options, whereas `Checkboxes` are used to select multiple options
 
 <i/>
 
 ## Single Radio
 
-![Bootstrap Radio Default](./images/radio1.png)
+<Radio1/>
 
-###### html
+###### HTML
 
 ```html
 <div class="custom-radio">
@@ -31,18 +34,15 @@ A Bootstrap 5 radio button is a component limit the user to only one option from
   <input type="radio" id="customRadio4" name="customRadio" class="custom-radio-input" />
   <label class="custom-control-label" for="customRadio4">radio4</label>
 </div>
->
 ```
-
-<i/>
 
 ## Bootstrap Radio Group with Colors
 
-Contrast Bootstrap 5 Radio Button allows you to make several radio buttons.
+Contrast Bootstrap 5 Radio allows you to make radio buttons styled with colors.
 
-![Bootstrap Radio Group With Colors](./images/radio2.png)
+<Radio2/>
 
-###### html
+###### HTML
 
 ```html
             <div class="custom-radio">

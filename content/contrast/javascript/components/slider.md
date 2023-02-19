@@ -1,14 +1,17 @@
 ---
+
 title: 'Slider'
 metaTitle: 'Bootstrap Slider - Bootstrap CSS tutorial'
-metaDescription: 'The React Bootstrap 5 Slider is an interactive component that allows users to choose a value from a range of potential values on a sliding bar.'
----# Bootstrap 5 Slider
+metaDescription: 'The Contrast Bootstrap 5 Slider is an interactive component that allows users to choose a value from a range of values using a sliding bar.'
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/javascript/components/slider.md"
+---
+# Bootstrap 5 Slider
 
-The React Bootstrap 5 Slider is an interactive component that allows users to choose a value from a range of potential values on a sliding bar.
+The Contrast Bootstrap 5 Slider is an interactive component that allows users to choose a value from a range of values using a sliding bar.
 
 ## Slider
 
-![Bootstrap Slider](./images/slider1.png)
+<Slider1/>
 
 ```html
 <label for="customRange1">Example range</label>
