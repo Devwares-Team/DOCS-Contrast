@@ -2,11 +2,13 @@
 title: 'DataTable'
 metaTitle: 'Bootstrap 5 DataTables - Bootstrap CSS tutorial'
 metaDescription: 'Bootstrap 5 DataTables combine tables with additional features such as searching, sorting, and pagination.'
----# Bootstrap 5 DataTables
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/javascript/table/datatables.md"
+---
+# Bootstrap 5 DataTables
 
 Bootstrap 5 DataTables combine tables with additional features such as searching, sorting, and pagination.
 
-## NonStriped DataTable
+## Non-Striped DataTable
 
 The `table` class is used to include the Contrast Bootstrap DataTables predefined styles in your project, while the `table-bordered` class adds borders to your datatable.
 
@@ -487,7 +489,7 @@ The `table` class is used to include the Contrast Bootstrap DataTables predefine
 
 ![Bootstrap DataTable Striped](./images/datatable.png)
 
-###### html
+###### HTML
 
 ```html
 <div class="container">

@@ -2,18 +2,18 @@
 title: "Spinner"
 metaTitle: "Angular Bootstrap Spinner"
 metaDescription: "Angular Bootstrap Spinner is animation that is used to keep visitors entertained while the page is still loading, which helps to increase the user experience"
-
+githubURl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/angular/components/spinner.md"
 ---
 
-# Angular Bootstrap Spinner
+# Contrast Angular Bootstrap Spinner
 
-Angular Bootstrap Spinner is animation that is used to keep visitors entertained while the page is still loading, which helps to increase the user experience.
+Contrast Angular Bootstrap Spinner is an animation used to indicate a running process. It helps to improve users' experience on websites or web applications.
 
 ## Importing the Contrast Angular Bootstrap Spinner Module
 
 To use the Contrast Angular Bootstrap Spinner component in your project you need to import `SpinnerModule`.
 
-```typescript
+```ts
 import {SpinnerModule } from 'cdbangular';
 ```
 
@@ -25,7 +25,7 @@ The `CDBSpinner` component takes in a `color` prop, this prop allows us to give 
 
 ![Angular Bootstrap Spinner Default](./images/spinner1.gif)
 
-###### html
+###### HTML
 ```html
 <CDBSpinner ></CDBSpinner>
 <CDBSpinner color='danger' ></CDBSpinner>
@@ -41,7 +41,7 @@ Set the `multicolor` prop to `true` to give your spinner multiple colors.
 
 ![Angular Bootstrap Spinner Multicolor](./images/spinner2.gif)
 
-###### html
+###### HTML
 ```html
 <CDBSpinner [multicolor]=true ></CDBSpinner>
 ```
@@ -52,7 +52,7 @@ Use the `size` prop to specify how large or little you want your spinner to be. 
 
 ![Angular Bootstrap Spinner Size Variations](./images/spinner3.gif)
 
-###### html
+###### HTML
 ```html
 <CDBSpinner size="big" ></CDBSpinner>
 <CDBSpinner color='secondary' ></CDBSpinner>

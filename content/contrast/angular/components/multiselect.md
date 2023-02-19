@@ -2,12 +2,12 @@
 title: "Multiselect"
 metaTitle: "Angular Bootstrap Multiselect Component "
 metaDescription: "Angular Bootstrap Multiselect is a form control, that after the click displays a collapsable list of multiple values which can be used in forms, menus or surveys"
-
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/angular/components/multiselect.md"
 ---
 
-# Angular Bootstrap Multiselect
+# Contrast Angular Bootstrap Multiselect
 
-Angular Bootstrap Multiselect is a form control, that after the click displays a collapsable list of multiple values which can be used in forms, menus or surveys.
+Contrast Angular Bootstrap Multiselect is a form control component. It displays a collapsible list of multiple options which can be used in forms, menus or surveys.
 
 Multiselect enables you to use `↑` and `↓` arrow keys to navigate through options and use `↵` key to select required option.
 
@@ -17,7 +17,7 @@ Multiselect enables you to use `↑` and `↓` arrow keys to navigate through op
 
 To use the Contrast Angular Bootstrap Multiselect component in your project you need to import `MultiselectModule`.
 
-```typescript
+```ts
 import {MultiselectModule } from 'cdbangular';
 ```
 
@@ -27,12 +27,12 @@ The Contrast Angular Bootstrap Multiselect Component takes in an `options` param
 
 ![Angular Bootstrap Mutiselect Basic](./images/multiselect1.png)
 
-###### html
+###### HTML
 ```html
 <CDBMultiselect [options]='option' selected="Value"></CDBMultiselect>
 ```
-###### typescript
-```typescript
+###### TypeScript
+```ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -84,7 +84,6 @@ export class MultiselectComponent implements OnInit {
   ngOnInit(): void {}
 }
 ```
-<i/>
 
 ## Multiselect with Search
 
@@ -92,12 +91,12 @@ Set the [search] property to `true` to enale users search for these options.
 
 ![Angular Bootstrap Multiselect with search](./images/multiselect2.png)
 
-###### html
+###### HTML
 ```html
 <CDBMultiselect color="secondary" [search]=true [options]='option' selected="Value"></CDBMultiselect>
 ```
-###### typescript
-```typescript
+###### TypeScript
+```ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -150,18 +149,17 @@ export class MultiselectComponent implements OnInit {
 }
 ```
 
-<i/>
 
 ## Multiselect with Submit Option
 
 ![Angular Bootstrap Multiselect with Submit Option](./images/multiselect3.png)
 
-###### html
+###### HTML
 ```html
 <CDBMultiselect color="dark" [submit]=true [options]='option' selected="Value" ></CDBMultiselect>
 ```
-###### typescript
-```typescript
+###### TypeScript
+```ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -213,18 +211,18 @@ export class MultiselectComponent implements OnInit {
   ngOnInit(): void {}
 }
 ```
-<i/>
+
 
 ## Multiselect with Limited Options
 
 ![Angular Bootstrap with Limited Options](./images/multiselect4.png)
 
-###### html
+###### HTML
 ```html
 <CDBMultiselect color="danger" [limitedOptions]=true [options]='option' selected="Value" ></CDBMultiselect>
 ```
-###### typescript
-```typescript
+###### TypeScript
+```ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({

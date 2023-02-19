@@ -1,19 +1,19 @@
 ---
 title: "Rating"
 metaTitle: "Angular Bootstrap Rating "
-metaDescription: "Angular Bootstrap 5-star rating plugin can be used to allow the users to share their opinion about the product, documentation page, photo and more"
-
+metaDescription: "Angular Bootstrap consists of interactive icons, which allow users to share their experience or thoughts on a product or service. It helps to gain insights from a product users' feedback in order to improve the product.  "
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/angular/components/rating.md"
 ---
 
-# Angular Bootstrap Rating
+# Contrast Angular Bootstrap Rating
 
-Angular Bootstrap 5-star rating plugin can be used to allow the users to share their opinion about the product, documentation page, photo and more.
+Contrast Angular Bootstrap Rating is made up of interactive icons, which allow users to share their experience or thoughts on a product or service. It helps to gain insights from a product users' feedback in order to improve the product.  
 
 ## Importing the Contrast Angular Bootstrap Rating Module
 
 To use the Contrast Angular Bootstrap Rating component in your project you need to import `RatingModule`.
 
-```typescript
+```ts
 import {RatingModule } from 'cdbangular';
 ```
 
@@ -21,7 +21,7 @@ import {RatingModule } from 'cdbangular';
 
 ![Angular Bootstrap Rating Default](./images/rating.png)
 
-###### html
+###### HTML
 ```html
 <CDBRating [iconRegular]=true></CDBRating>
 <CDBRating [iconFaces]=true fillClass='black-text' [iconRegular]=true></CDBRating>

@@ -2,13 +2,20 @@
 title: "Badges"
 metaTitle: "Angular Bootstrap Badge"
 metaDescription: "Angular Bootstrap Badge component is a small count and labeling component"
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/angular/components/badge.md"
 ---
 
-# Angular Bootstrap Badges
+# Contrast Angular Bootstrap Badges
 
-Angular Bootstrap Badge component is a small count and labeling component.
+Contrast Angular Bootstrap Badge component is a small count and labeling component. It is used to display notifications such unread messages, missed phone call and suchlike.
 
 Badges scale to match the size of the immediate parent element by using relative font sizing and `em` units.
+
+## Importing the Contrast Angular Bootstrap Badge Module
+
+```ts
+import {BadgeModule } from 'cdbangular';
+```
 
 ## Default Badges 
 
@@ -16,7 +23,7 @@ Use the `color` prop to give your badges a background color. The `color` prop ta
 
 ![Angular Bootstrap Badges](./images/badgepill.png)
 
-###### html
+###### HTML
 ```html
 <CDBBadge color="primary">
     Primary
@@ -46,7 +53,7 @@ Set the `borderType` property to `pill` to make badges more rounded.
 
 ![Angular Bootstrap Badges Pill](./images/badgepillround.png)
 
-###### html
+###### HTML
 ```html
   <CDBBadge color="primary" borderType="pill">
     Primary
@@ -77,7 +84,7 @@ Use the `size` prop to define how little or large you want your badges to be. Th
 
 ![Angular Bootstrap Badge Contextual Variations](./images/badgesizevariations.png)
 
-###### html
+###### HTML
 ```html
   <CDBBadge color="secondary" size="large">
     Large
@@ -94,7 +101,7 @@ Use the `flat` property to remove the button shadow.
 
 ![Angular Bootstrap Badge Flat](./images/flatbadges.png)
 
-###### html
+###### HTML
 ```html
   <CDBBadge color="primary" flat>
     Flat Primary
@@ -118,7 +125,6 @@ Use the `flat` property to remove the button shadow.
     Flat Dark
   </CDBBadge>
 ```
-<i/>
 
 ## Badges with Icons
 
@@ -126,7 +132,7 @@ Use the [CDBIcon](https://www.devwares.com/docs/contrast/angular/components/icon
 
 ![Angular Bootstrap Badge Icons](./images/badgewithiconsandroundedbadges.png)
 
-###### html
+###### HTML
 ```html
   <CDBBadge color="secondary">
     <CDBIcon fab icon="facebook-f" />
@@ -160,8 +166,6 @@ Use the [CDBIcon](https://www.devwares.com/docs/contrast/angular/components/icon
   </CDBBadge>
 ```
 
-<i/>
-
 ## Rounded Badges with Icons
 
 Set the `borderType` property to `pill` to make badges more rounded.
@@ -169,7 +173,7 @@ Use `CDBIcon` to add icons to a badge.
 
 ![Angular Bootstrap Badges Rounded with Icons](./images/badgewithiconsandroundedbadges.png)
 
-###### html
+###### HTML
 ```html
   <CDBBadge color="secondary">
     <CDBIcon fab icon="facebook-f" />

@@ -1,21 +1,21 @@
 ---
 title: "Panel"
-metaTitle: "Panel Component for React Bootstrap"
-metaDescription: "React Bootstrap Panels are content wrappers that are both dynamic and expandable."
-
+metaTitle: "Panel Component for React Bootstrap 5"
+metaDescription: "React Bootstrap 5 Panels are content wrappers that are both dynamic and expandable."
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/react/components/panels.mdx"
 ---
 
 import React from "react";
 import {Link} from "gatsby";
 import panelImage from "./images/panelwithprogress.png";
 
-# React Bootstrap Panel
+# React Bootstrap 5 Panel
 
-React Bootstrap Panels are content wrappers that are both dynamic and expandable. They may hold a range of content, have contextual background colors, and have strong display choices. They're similar to cards, however they don't have any media attached to them.
+React Bootstrap 5 Panels are content wrappers that are both dynamic and expandable. They may hold a range of content, have contextual background colors, and have strong display choices. They're similar to cards, however they don't have any media attached to them.
 
-## Importing the React Bootstrap Panel Component
+## Importing the React Bootstrap 5 Panel Component
 
-Start by importing `CDBPanel` into your project to use the Contrast React Bootstrap Panel component.
+Start by importing `CDBPanel` into your project to use the Contrast React Bootstrap 5 Panel component.
 
 ```js
 import { CDBPanel } from "cdbreact";
@@ -32,18 +32,18 @@ import { CDBPanel, CDBPanelTitle, CDBPanelText } from "cdbreact";
 
 <Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
 
- We nest the Contrast React Bootstrap Dropdown component in this tutorial section, [CDBDropDown](https://www.devwares.com/docs/contrast/react/components/dropdown), in the `CDBPanel` component. We now have dropdowns in our panel as a result of this.
+ We nest the Contrast React Bootstrap 5 Dropdown component in this tutorial section, [CDBDropDown](https://www.devwares.com/docs/contrast/react/components/dropdown), in the `CDBPanel` component. We now have dropdowns in our panel as a result of this.
 
 <div class="container">
-    <div class="panel" style="width: 25rem">
+    <div class="panel" style="width: 25rem; border-radius: 15px">
         <div class="panel-body">
-          <div class="pane d-flex align-items-center mt-0 mb-3">
-            <img class="pane-img pane-md" src="https://media.istockphoto.com/photos/beautiful-woman-wearing-brown-curly-hairstyle-picture-id495006065?s=170x170" alt="paneImage"/>
+          <div class="pane d-flex align-items-center mt-0 mb-3 ">
+            <img class="pane-img pane-md rounded-full" style="height: 4rem; width:4rem " src="https://media.istockphoto.com/photos/beautiful-woman-wearing-brown-curly-hairstyle-picture-id495006065?s=170x170" alt="paneImage"/>
             <div class="ml-3">
-              <h6 class="m-0" style="font-weight:600;">Warren Briggs</h6>
+              <h6 class="m-0" style="fontWeight:600;">Warren Briggs</h6>
               <p class="m-0 pane-item">Chicago</p>
             </div>
-            <div class="dropdown p-0 ml-auto pane-item">
+            <div class="dropdown p-3 ml-auto pane-item">
               <i 
                 class="fa fa-ellipsis-h"
                 id="dropdownMenuButton"
@@ -64,7 +64,7 @@ import { CDBPanel, CDBPanelTitle, CDBPanelText } from "cdbreact";
           </div>
           <div class="small card-text mt-2">
             <i class="far fa-thumbs-up mr-1"></i>127 likes
-            <i class="far fa-comment mr-1 ml-2"></i>54 comments
+            <i class="far fa-comment mr-1 ml-2"  style={{marginLeft: "15px"}}></i>54 comments
           </div>
         </div>
     </div>
@@ -77,60 +77,86 @@ import { CDBPanel, CDBPanelTitle, CDBPanelText, CDBDropDown, CDBDropDownToggle, 
 const Panel = () => {
   return (
     <CDBContainer>
-            <CDBPanel>
-              <CDBPane>
-                <CDBPaneImage size="md" src="https://media.istockphoto.com/photos/beautiful-woman-wearing-brown-curly-hairstyle-picture-id495006065?s=170x170" />
-                <div className="ml-3">
-                  <CDBPanelTitle>Warren Briggs</CDBPanelTitle>
-                  <CDBPanelText small>Chicago</CDBPanelText>
-                </div>
-                <CDBDropDown className="ml-auto">
-                  <CDBDropDownToggle color="white"><CDBIcon className="text-muted" fas icon="ellipsis-h" /></CDBDropDownToggle>
-                  <CDBDropDownMenu>
-                    <CDBDropDownItem disabled>Edit Profile</CDBDropDownItem>
-                    <CDBDropDownItem divider />
-                    <CDBDropDownItem>Action 1</CDBDropDownItem>
-                    <CDBDropDownItem>Action 2</CDBDropDownItem>
-                  </CDBDropDownMenu>
-                </CDBDropDown>
-              </CDBPane>
-              <CDBPanelText className="my-3">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              </CDBPanelText>
-              <CDBPanelText small>
-                <CDBIcon far icon="thumbs-up"/>127 likes
-                <CDBIcon className="ml-2" far icon="comment"/>54 comments
-              </CDBPanelText>
-            </CDBPanel>
+           <CDBPanel style={{ width: "25rem", borderRadius: "15px" }}>
+                  <CDBPane style={{display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center"}}>
+                    <div style={{display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center"}}>
+                    <CDBPaneImage style={{width: "4rem", height: "4rem"}} src="https://media.istockphoto.com/photos/beautiful-woman-wearing-brown-curly-hairstyle-picture-id495006065?s=170x170" alt="paneImage"/>
+                    <div style={{marginLeft: "12px"}}>
+                      <CDBPanelTitle style={{ fontWeight: "600" }}>Warren Briggs</CDBPanelTitle>
+                      <CDBPanelText small>Chicago</CDBPanelText>
+                    </div>
+                    </div>
+                    <CDBDropDown className="ml-auto">
+                      <CDBDropDownToggle color="white"><CDBIcon className="text-muted" fas icon="ellipsis-h" /></CDBDropDownToggle>
+                      <CDBDropDownMenu>
+                        <CDBDropDownItem disabled>Action</CDBDropDownItem>
+                        <CDBDropDownItem divider />
+                        <CDBDropDownItem>Another action</CDBDropDownItem>
+                        <CDBDropDownItem>Something else here</CDBDropDownItem>
+                      </CDBDropDownMenu>
+                    </CDBDropDown>
+                  </CDBPane>
+                  <CDBPanelText className="my-3">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  </CDBPanelText>
+                  <CDBPanelText style={{ fontWeight: "600" }} small>
+                    <CDBIcon far icon="thumbs-up" />127 likes
+                    <CDBIcon className="ml-2" far icon="comment" style={{marginLeft: "15px"}}/>54 comments
+                  </CDBPanelText>
+                </CDBPanel>
     </CDBContainer>
   );
 };
 export default  Panel;
+
 ```
+
+<i/>
+
 
 ## Panel with Users
 
 <Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
 
+In this tutorial section, we nest the `CDBPaneImage` component in the `CDBPanel` component. With this, our panel now has user images in it.
+
   <div class="container">
-      <div class="panel" style="width: 25rem">
+      <div class="panel" style="width: 20rem; border-radius: 15px">
           <div class="panel-img">
-            <img class="w-100" src="/img/cardbg.png" alt="Contrast Panel with users"/> 
+            <img class="w-100" style="border-radius: 15px" src="https://images.unsplash.com/photo-1581274050302-581149d3b4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80" alt="Contrast Panel with users"/> 
           </div>
           <div class="panel-body">
             <div class="panel-title" style="font-size:2em;">
               Bristol
             </div>
-            <div class="panel-text">
+            <p class="panel-text">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <div style="display: flex;">
+            <div style="flex: 50%; padding: 2px">
+            <img class="pane-img pane-md" style="border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    width: 3rem;
+    height: 3rem;"   src="https://i.imgur.com/eltDhxZ.png"/>
+    </div>
+         <div style="flex: 50%; padding: 2px">
+            <img class="pane-img pane-md" style="border-radius: 50%;
+    overflow: hidden;
+    width: 3rem;
+    height: 3rem; margin-right: 2rem"   src="https://media.istockphoto.com/photos/beautiful-woman-wearing-brown-curly-hairstyle-picture-id495006065?s=170x170"/>
+    </div>
+    <div style="flex: 50%; padding: 2px">
+          <img class="pane-img pane-md" style="border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    width: 3rem;
+    height: 3rem; margin-right: 2rem"   src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ7ntUU7AzmOxa5HB8zS83sa-JFHEfZJAoI2A&usqp=CAU"/>
+    </div>
             </div>
-            <img class="pane-img pane-md" src="/img/pane/pane2.png" alt="Contrast React Bootstrap Panel With Progress component"/>
-            <img class="pane-img pane-md" src="/img/pane/pane3.png" alt="Contrast React Bootstrap Panel With Progress component"/>
-            <img class="pane-img pane-md" src="/img/pane/pane4.png" alt="Contrast React Bootstrap Panel With Progress component"/>
-            
           </div>
       </div>
   </div>
@@ -142,34 +168,40 @@ import { CDBPanel,CDBPanelTitle, CDBPanelText, CDBCardImage, CDBPaneImage, CDBCo
 const Panel = () => {
   return (
     <CDBContainer>
-            <CDBPanel className="p-0">
-              <CDBCardImage className="img-fluid" src="/img/cardbg.png" />
-              <div className="m-3">
-                <CDBPanelTitle tag="h2" >Bristol</CDBPanelTitle>
-                <CDBPanelText className="my-3">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua.
-                </CDBPanelText>
-                <CDBPaneImage size="sm" src="/img/pane/pane1.png" alt="Contrast React Bootstrap Panel With Progress component"/>
-                <CDBPaneImage size="sm" className="mx-2" src="/img/pane/pane2.png" alt="Contrast React Bootstrap Panel With Progress component" />
-                <CDBPaneImage size="sm" src="/img/pane/pane3.png" alt="Contrast React Bootstrap Panel With Progress component" />
-              </div>
-            </CDBPanel>
+            <CDBPanel  style={{ width: "20rem", borderRadius: "15px" }}>
+                  <CDBCardImage  style={{ borderRadius: "8px" }} src="https://images.unsplash.com/photo-1581274050302-581149d3b4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80" />
+                  <div style={{padding: "0.6rem"}}>
+                    <CDBPanelTitle tag="h4" style={{ fontWeight: "600" }}>Bristol</CDBPanelTitle>
+                    <CDBPanelText className="my-3">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                      tempor incididunt ut labore et dolore magna aliqua.
+                    </CDBPanelText>
+                    <div style={{display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingLeft: "12px", paddingRight: "32px"}}>
+                    <CDBPaneImage style={{width: "3rem", height: "3rem}} src="https://i.imgur.com/eltDhxZ.png"/>
+                    <CDBPaneImage style={{width: "3rem", height: "3rem}}   src="https://media.istockphoto.com/photos/beautiful-woman-wearing-brown-curly-hairstyle-picture-id495006065?s=170x170"/>
+                    <CDBPaneImage style={{width: "3rem", height: "3rem}}  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ7ntUU7AzmOxa5HB8zS83sa-JFHEfZJAoI2A&usqp=CAU" alt="Contrast React Bootstrap 5 Panel With Progress component" />
+                    </div>
+                   
+                  </div>
+                </CDBPanel>
     </CDBContainer>
   );
 };
+
+
+
 export default  Panel;
 ```
 <i/>
 
 ## Panel with Label
 
-<Link to="/product/contrast-pro"><CDBBadge size="large" className="badge-pro">Pro Component</CDBBadge></Link>
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
 
 In this tutorial section, we nest the `CDBBadge` component in the `CDBPanel` component. With this, our panel now has badges in it, which can serve as labels.
 
 <div class="container">
-    <div class="panel" style="width: 20rem">
+    <div class="panel" style="width: 20rem; border-radius: 15px">
         <div class="panel-body">
           <div class="panel-label">
             <div class="badge bg-dark">Label 1</div>
@@ -183,8 +215,22 @@ In this tutorial section, we nest the `CDBBadge` component in the `CDBPanel` com
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua.
           </div>
-          <img class="pane-img pane-md" src="/img/pane/pane3.png" alt="Contrast React Bootstrap Panel With Progress component"/>
-          <img class="pane-img pane-md" src="/img/pane/pane5.png" alt="Contrast React Bootstrap Panel With Progress component"/>
+          <div style= "display: flex;">
+          <div style="flex: 33%; padding: 2px">
+          <img class="pane-img pane-md" style="border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    width: 3rem;
+    height: 3rem;"   src="https://media.istockphoto.com/photos/beautiful-woman-wearing-brown-curly-hairstyle-picture-id495006065?s=170x170"/>
+    </div>
+    <div style="flex: 33%; padding: 2px; margin-right: 8rem">
+          <img class="pane-img pane-md" style="border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    width: 3rem;
+    height: 3rem;"   src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ7ntUU7AzmOxa5HB8zS83sa-JFHEfZJAoI2A&usqp=CAU"/>
+      </div>
+    </div>
         </div>
     </div>
 </div>
@@ -196,21 +242,23 @@ import { CDBPanel,CDBPanelTitle, CDBPanelText, CDBBadge, CDBIcon, CDBPaneImage, 
 const Panel = () => {
   return (
     <CDBContainer>
-            <CDBPanel>
-              <CDBBadge color="dark" flat>Label 1</CDBBadge>
-              <CDBBadge color="warning" className="mx-1" flat>Label 2</CDBBadge>
-              <CDBBadge color="danger" flat>Label 3</CDBBadge>
-              <div className="mt-3 d-flex align-items-center">
-                <CDBPanelTitle tag="h3" >Moon Fever</CDBPanelTitle>
-                <CDBIcon className="ml-auto" fas icon="chart-line"/>
-              </div>
-              <CDBPanelText className="my-3">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt
-              </CDBPanelText>
-              <CDBPaneImage size="sm" src="/img/pane/pane1.png" alt="Contrast React Bootstrap Panel With Progress component"/>
-              <CDBPaneImage size="sm" src="/img/pane/pane2.png" alt="Contrast React Bootstrap Panel With Progress component"/>
-            </CDBPanel>
+            <CDBPanel style={{ width: "22rem", borderRadius: "15px" }}>
+                  <div style={{display: "flex", flexDirection: "row", justifyContent: "start", alignItems: "start"}}>
+                  <CDBBadge  style={{borderRadius: "0px", fontSize: "10px", color: "white", marginRight: "12px", backgroundColor: "black" }}>Label 1</CDBBadge>
+                  <CDBBadge   style={{borderRadius: "0px", fontSize: "10px", color: "white", marginRight: "12px", backgroundColor: "#f9e076"}}>Label 2</CDBBadge>
+                  <CDBBadge style={{borderRadius: "0px", fontSize: "10px", color: "white", marginRight: "12px" , backgroundColor: "#e3242b"}} >Label 3</CDBBadge>
+                  </div>
+                  <div className="mt-3 d-flex align-items-center">
+                    <CDBPanelTitle tag="h3"  style={{fontWeight: "700"}} >Moon Fevers</CDBPanelTitle>
+                   
+                  </div>
+                  <CDBPanelText className="my-3">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt
+                  </CDBPanelText>
+                  <CDBPaneImage style={{height: 3rem , width: "3rem"}} src="https://media.istockphoto.com/photos/beautiful-woman-wearing-brown-curly-hairstyle-picture-id495006065?s=170x170 style={{marginRight: "22px"}}/>
+                  <CDBPaneImage style={{height: "3rem", width: "3rem"}}  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ7ntUU7AzmOxa5HB8zS83sa-JFHEfZJAoI2A&usqp=CAU" />
+                </CDBPanel>
     </CDBContainer>
   );
 };
@@ -220,10 +268,10 @@ export default  Panel;
 
 ## Pane List
 
-<Link to="/product/contrast-pro"><CDBBadge size="large" className="badge-pro">Pro Component</CDBBadge></Link>
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
 
   <div class="container">
-    <div class="panel" style="width:20rem;">
+    <div class="panel" style="width:20rem; border-radius: 15px">
       <div class="panel-body">
         <div class="d-flex justify-content-between align-item-center mb-1">
           <p class="mb-0">My Messages</p>
@@ -241,45 +289,65 @@ export default  Panel;
             </ul>
           </div>
         </div>
-        <div class="pane d-flex align-items-center">
-          <img class="pane-img pane-md" src="/img/pane/pane4.png" alt="Contrast React Bootstrap Panel With Progress component"/>
+        <div class="pane d-flex align-items-center mb-2">
+          <img class="pane-img pane-md" style="border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    width: 3rem;
+    height: 3rem;"   src="https://media.istockphoto.com/photos/beautiful-woman-wearing-brown-curly-hairstyle-picture-id495006065?s=170x170"/>
           <div class="ml-3">
             <h6 class="m-0" style="font-weight:600;">Warren Briggs</h6>
             <p class="m-0 pane-item">Cooking</p>
           </div>
-          <p class="ml-auto pane-item">5mins Ago</p>
+          <p class="ml-auto pane-item">6mins Ago</p>
         </div>
-        <div class="pane d-flex align-items-center">
-          <img class="pane-img pane-md" src="/img/pane/pane5.png" alt="Contrast React Bootstrap Panel With Progress component"/>
+        <div class="pane d-flex align-items-center mb-2">
+           <img class="pane-img pane-md" style="border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    width: 3rem;
+    height: 3rem;"   src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ7ntUU7AzmOxa5HB8zS83sa-JFHEfZJAoI2A&usqp=CAU"/>
           <div class="ml-3">
             <h6 class="m-0" style="font-weight:600;">Lu Chen</h6>
             <p class="m-0 pane-item">Cooking</p>
           </div>
-          <p class="ml-auto pane-item">5mins Ago</p>
+          <p class="ml-auto pane-item">10mins Ago</p>
         </div>
-        <div class="pane d-flex align-items-center">
-          <img class="pane-img pane-md" src="/img/pane/pane1.png" alt="Contrast React Bootstrap Panel With Progress component"/>
+        <div class="pane d-flex align-items-center mb-2">
+          <img class="pane-img pane-md" style="border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    width: 3rem;
+    height: 3rem;"   src="https://i.imgur.com/eltDhxZ.png"/>
           <div class="ml-3">
             <h6 class="m-0" style="font-weight:600;">Sam</h6>
             <p class="m-0 pane-item">Cooking</p>
           </div>
-          <p class="ml-auto pane-item">5mins Ago</p>
+          <p class="ml-auto pane-item">15mins Ago</p>
         </div>
-        <div class="pane d-flex align-items-center">
-          <img class="pane-img pane-md" src="/img/pane/pane2.png" alt="Contrast React Bootstrap Panel With Progress component"/>
+        <div class="pane d-flex align-items-center mb-2">
+          <img class="pane-img pane-md" style="border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    width: 3rem;
+    height: 3rem;"   src="https://media.istockphoto.com/photos/beautiful-woman-wearing-brown-curly-hairstyle-picture-id495006065?s=170x170"/>
           <div class="ml-3">
             <h6 class="m-0" style="font-weight:600;">Danny</h6>
             <p class="m-0 pane-item">Cooking</p>
           </div>
-          <p class="ml-auto pane-item">5mins Ago</p>
+          <p class="ml-auto pane-item">30mins Ago</p>
         </div>
-        <div class="pane d-flex align-items-center">
-          <img class="pane-img pane-md" src="/img/pane/pane3.png" alt="Contrast React Bootstrap Panel With Progress component"/>
+        <div class="pane d-flex align-items-center ">
+          <img class="pane-img pane-md" style="border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    width: 3rem;
+    height: 3rem;"   src="https://media.istockphoto.com/photos/beautiful-woman-wearing-brown-curly-hairstyle-picture-id495006065?s=170x170"/>
           <div class="ml-3">
             <h6 class="m-0" style="font-weight:600;">Lilah Loselev</h6>
             <p class="m-0 pane-item">Cooking</p>
           </div>
-          <p class="ml-auto pane-item">5mins Ago</p>
+          <p class="ml-auto pane-item">45mins Ago</p>
         </div>
       </div>
     </div>
@@ -292,58 +360,81 @@ import { CDBPanel,CDBPanelTitle, CDBPanelText, CDBDropDown, CDBDropDownToggle, C
 const Panel = () => {
   return (
     <CDBContainer>
-            <CDBPanel style={{width:"320px"}}>
-              <CDBPane>
-                <CDBPanelText muted>My Messages</CDBPanelText>
-                <CDBDropDown className="ml-auto">
-                  <CDBDropDownToggle color="white"><CDBIcon className="text-muted" fas icon="ellipsis-h"/></CDBDropDownToggle>
-                  <CDBDropDownMenu>
-                    <CDBDropDownItem disabled>Edit Profile</CDBDropDownItem>
-                    <CDBDropDownItem divider />
-                    <CDBDropDownItem>Action 1</CDBDropDownItem>
-                    <CDBDropDownItem>Action 2</CDBDropDownItem>
-                  </CDBDropDownMenu>
-                </CDBDropDown>
-              </CDBPane>
-              <CDBPane className="mt-4">
-                <CDBPaneImage size="md" src="https://media.istockphoto.com/photos/beautiful-woman-wearing-brown-curly-hairstyle-picture-id495006065?s=170x170" />
-                <div className="ml-3">
-                  <CDBPanelTitle>Warren Briggs</CDBPanelTitle>
-                  <CDBPanelText small>Cooking</CDBPanelText>
-                </div>
-                <CDBPanelText muted small className="ml-auto">5mins ago</CDBPanelText>
-              </CDBPane>
-              <CDBPane className="mt-4">
-                <CDBPaneImage size="md" src="/img/pane/pane1.png" alt="Contrast React Bootstrap Panel With Progress component">
-                  <CDBPanelTitle>Lu Chen</CDBPanelTitle>
-                  <CDBPanelText small>I'll call you back</CDBPanelText>
-                </div>
-                <CDBPanelText muted small className="ml-auto">27mins ago</CDBPanelText>
-              </CDBPane>
-              <CDBPane className="mt-4">
-                <CDBPaneImage size="md" src="/img/pane/pane2.png">
-                  <CDBPanelTitle>Sam</CDBPanelTitle>
-                  <CDBPanelText small>See you at school</CDBPanelText>
-                </div>
-                <CDBPanelText muted small className="ml-auto">active</CDBPanelText>
-              </CDBPane>
-              <CDBPane className="mt-4">
-                <CDBPaneImage size="md" src="/img/pane/pane3.png" />
-                <div className="ml-3">
-                  <CDBPanelTitle >Danny</CDBPanelTitle>
-                  <CDBPanelText small>Yeah</CDBPanelText>
-                </div>
-                <CDBPanelText muted small className="ml-auto">busy</CDBPanelText>
-              </CDBPane>
-              <CDBPane className="mt-4">
-                <CDBPaneImage size="md" src="/img/pane/pane4.png" />
-                <div className="ml-3">
-                  <CDBPanelTitle>Lilah Loselev</CDBPanelTitle>
-                  <CDBPanelText small>Okay sir</CDBPanelText>
-                </div>
-                <CDBPanelText muted small className="ml-auto">1hr ago</CDBPanelText>
-              </CDBPane>
-            </CDBPanel>
+           <CDBPanel style={{ width: "22rem", borderRadius: "15px" }}>
+                  <CDBPane>
+                    <CDBPanelText muted>My Messages</CDBPanelText>
+                    <CDBDropDown className="ml-auto">
+                      <CDBDropDownToggle color="white"><CDBIcon className="text-muted" fas icon="ellipsis-h" /></CDBDropDownToggle>
+                      <CDBDropDownMenu>
+                        <CDBDropDownItem disabled>Edit Profile</CDBDropDownItem>
+                        <CDBDropDownItem divider />
+                        <CDBDropDownItem>Action 1</CDBDropDownItem>
+                        <CDBDropDownItem>Action 2</CDBDropDownItem>
+                      </CDBDropDownMenu>
+                    </CDBDropDown>
+                  </CDBPane>
+                  <CDBPane style={{marginTop: "12px" , display: "flex", flexDirection: "row", justifyContent: "between", alignItems: "center" }}>
+                    <div style={{display: "flex" , flexDirection: "start", alignItems: "start", flex: 1}}>
+                    <CDBPaneImage  style={{height: "3rem", width: "3rem"}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ7ntUU7AzmOxa5HB8zS83sa-JFHEfZJAoI2A&usqp=CAU" />
+                    <div style={{marginLeft: "12px"}}>
+                      <CDBPanelTitle style={{ fontWeight: "600" }}>Warren Briggs</CDBPanelTitle>
+                      <CDBPanelText small>Cooking</CDBPanelText>
+                    </div>
+                    </div>
+                    <div style={{flex: 0.5}}>
+                    <CDBPanelText muted small style={{textAlign: "end"}}>5mins ago</CDBPanelText>
+                    </div>
+                  </CDBPane>
+                
+                  <CDBPane style={{marginTop: "12px" , display: "flex", flexDirection: "row", justifyContent: "between", alignItems: "center" }}>
+                    <div style={{display: "flex" , flexDirection: "start", alignItems: "start", flex: 1}}>
+                    <CDBPaneImage style={{height: "3rem", width: "3rem"}} src="https://media.istockphoto.com/photos/beautiful-woman-wearing-brown-curly-hairstyle-picture-id495006065?s=170x170" />
+                    <div style={{marginLeft: "12px"}}>
+                      <CDBPanelTitle style={{ fontWeight: "600" }}>Lu Chen</CDBPanelTitle>
+                      <CDBPanelText small>Cooking</CDBPanelText>
+                    </div>
+                    </div>
+                    <div style={{flex: 0.5}}>
+                    <CDBPanelText muted small style={{textAlign: "end"}}>10mins ago</CDBPanelText>
+                    </div>
+                  </CDBPane>
+                  <CDBPane style={{marginTop: "12px" , display: "flex", flexDirection: "row", justifyContent: "between", alignItems: "center" }}>
+                    <div style={{display: "flex" , flexDirection: "start", alignItems: "start", flex: 1}}>
+                    <CDBPaneImage style={{height: "3rem", width: "3rem"}}  src="https://i.imgur.com/eltDhxZ.png"/>
+                    <div style={{marginLeft: "12px"}}>
+                      <CDBPanelTitle style={{ fontWeight: "600" }}>Sam</CDBPanelTitle>
+                      <CDBPanelText small>Cooking</CDBPanelText>
+                    </div>
+                    </div>
+                    <div style={{flex: 0.5}}>
+                    <CDBPanelText muted small style={{textAlign: "end"}}>15mins ago</CDBPanelText>
+                    </div>
+                  </CDBPane>
+                  <CDBPane style={{marginTop: "12px" , display: "flex", flexDirection: "row", justifyContent: "between", alignItems: "center" }}>
+                    <div style={{display: "flex" , flexDirection: "start", alignItems: "start", flex: 1}}>
+                    <CDBPaneImage style={{height: "3rem", width: "3rem"}} src="https://media.istockphoto.com/photos/beautiful-woman-wearing-brown-curly-hairstyle-picture-id495006065?s=170x170" />
+                    <div style={{marginLeft: "12px"}}>
+                      <CDBPanelTitle style={{ fontWeight: "600" }}>Danny</CDBPanelTitle>
+                      <CDBPanelText small>Cooking</CDBPanelText>
+                    </div>
+                    </div>
+                    <div style={{flex: 0.5}}>
+                    <CDBPanelText muted small style={{textAlign: "end"}}>30mins ago</CDBPanelText>
+                    </div>
+                  </CDBPane>
+                  <CDBPane style={{marginTop: "12px" , display: "flex", flexDirection: "row", justifyContent: "between", alignItems: "center" }}>
+                    <div style={{display: "flex" , flexDirection: "start", alignItems: "start", flex: 1}}>
+                    <CDBPaneImage style={{height: "3rem", width: "3rem"}} src="https://media.istockphoto.com/photos/beautiful-woman-wearing-brown-curly-hairstyle-picture-id495006065?s=170x170" />
+                    <div style={{marginLeft: "12px"}}>
+                      <CDBPanelTitle style={{ fontWeight: "600" }}>Lilah Loselev</CDBPanelTitle>
+                      <CDBPanelText small>Cooking</CDBPanelText>
+                    </div>
+                    </div>
+                    <div style={{flex: 0.5}}>
+                    <CDBPanelText muted small style={{textAlign: "end"}}>45mins ago</CDBPanelText>
+                    </div>
+                  </CDBPane>
+                </CDBPanel>
     </CDBContainer>
   );
 };
@@ -353,11 +444,11 @@ export default  Panel;
 
 ## Panel with Progress
 
-<Link to="/product/contrast-pro"><CDBBadge size="large" className="badge-pro">Pro Component</CDBBadge></Link>
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
 
-Along with the 'CDBPanel' component, we use other React Bootstrap Components in this tutorial. These components are the [CDBDropDown](https://www.devwares.com/docs/contrast/react/components/dropdown) for our panel dropdowns, [CDBProgress](https://www.devwares.com/docs/contrast/react/components/progress) to have progress bars in our panels, [CDBPane](https://www.devwares.com/docs/contrast/react/components/pane), and the [CDBIcon](https://www.devwares.com/docs/contrast/react/components/icon) component for icons in our panels. Check out the docs to get more insight. 
+Along with the 'CDBPanel' component, we use other React Bootstrap 5 Components in this tutorial. These components are the [CDBDropDown](https://www.devwares.com/docs/contrast/react/components/dropdown) for our panel dropdowns, [CDBProgress](https://www.devwares.com/docs/contrast/react/components/progress) to have progress bars in our panels, [CDBPane](https://www.devwares.com/docs/contrast/react/components/pane), and the [CDBIcon](https://www.devwares.com/docs/contrast/react/components/icon) component for icons in our panels. Check out the docs to get more insight. 
 
-<img src={panelImage} alt="Contrast React Bootstrap Panel With Progress component"/>
+<img src={panelImage} alt="Contrast React Bootstrap 5 Panel With Progress component"/>
 
 
 ```js
@@ -367,30 +458,32 @@ import { CDBPanel,CDBPanelTitle, CDBPanelText, CDBDropDown, CDBDropDownToggle, C
 const Panel = () => {
   return (
     <CDBContainer>
-            <CDBPanel>
-              <CDBPane>
-                <CDBPaneImage size="md" src="https://media.istockphoto.com/photos/beautiful-woman-wearing-brown-curly-hairstyle-picture-id495006065?s=170x170" />
-                <div className="ml-3">
-                  <CDBPanelTitle>Warren Briggs</CDBPanelTitle>
-                  <CDBPanelText small>Chicago</CDBPanelText>
-                </div>
-                <CDBDropDown className="ml-auto">
-                  <CDBDropDownToggle color="white"><CDBIcon className="text-muted" fas icon="ellipsis-h" /></CDBDropDownToggle>
-                  <CDBDropDownMenu>
-                    <CDBDropDownItem disabled>Edit Profile</CDBDropDownItem>
-                    <CDBDropDownItem divider />
-                    <CDBDropDownItem>Action 1</CDBDropDownItem>
-                    <CDBDropDownItem>Action 2</CDBDropDownItem>
-                  </CDBDropDownMenu>
-                </CDBDropDown>
-              </CDBPane>
-              <CDBPanelText className="mt-3" small>Instagram</CDBPanelText>
-              <CDBProgress value={75} height={5}/>
-              <CDBPanelText className="mt-2" small>Facebook</CDBPanelText>
-              <CDBProgress value={60} height={5}/>
-              <CDBPanelText className="mt-2" small>Twitter</CDBPanelText>
-              <CDBProgress value={45} height={5}/>
-            </CDBPanel>
+             <CDBPanel style={{ width: "320px", borderRadius: "15px" }}>
+                  <CDBPane>
+                    <div style={{display: "flex" , flex: 1, }}>
+                    <CDBPaneImage size="md" src="/img/pane/pane1.png" />
+                    <div style={{marginTop: "6px" , marginLeft: "12px"}}>
+                      <CDBPanelTitle style={{ fontWeight: "600" }}>Warren Briggs</CDBPanelTitle>
+                      <CDBPanelText small>Chicago</CDBPanelText>
+                    </div>
+                    </div>
+                    <CDBDropDown style={{flex: 0.5}}>
+                      <CDBDropDownToggle color="white"><CDBIcon className="text-muted" fas icon="ellipsis-h" /></CDBDropDownToggle>
+                      <CDBDropDownMenu>
+                        <CDBDropDownItem disabled>Edit Profile</CDBDropDownItem>
+                        <CDBDropDownItem divider />
+                        <CDBDropDownItem>Action 1</CDBDropDownItem>
+                        <CDBDropDownItem>Action 2</CDBDropDownItem>
+                      </CDBDropDownMenu>
+                    </CDBDropDown>
+                  </CDBPane>
+                  <CDBPanelText style={{ fontWeight: "600", marginTop: "15px" }}  small>Instagram</CDBPanelText>
+                  <CDBProgress value={75} height={5}></CDBProgress>
+                  <CDBPanelText style={{ fontWeight: "600", marginTop: "15px" }} small>Facebook</CDBPanelText>
+                  <CDBProgress value={60} height={5}></CDBProgress>
+                  <CDBPanelText style={{ fontWeight: "600", marginTop: "15px" }}  small>Twitter</CDBPanelText>
+                  <CDBProgress value={45} height={5}></CDBProgress>
+                </CDBPanel>
     </CDBContainer>
   );
 };
@@ -400,9 +493,9 @@ export default  Panel;
 
 
 
-## API Reference: Contrast React Bootstrap Panel Props
+## API Reference: Contrast React Bootstrap 5 Panel Props
 
-This session will increase your understanding of the props accessible with the React Bootstrap Pane component. You'll discover what these properties do, what their default values are, and how to use them in your code.
+This session will increase your understanding of the props accessible with the React Bootstrap 5 Pane component. You'll discover what these properties do, what their default values are, and how to use them in your code.
 
 Other prop options for the `CDBPanel` component are included in the table below.
 
@@ -415,7 +508,7 @@ Other prop options for the `CDBPanel` component are included in the table below.
 | color        | string      |         | Sets the color of the panel | <CDBPanel color="#000" .../>  |
 
 
-## API Reference: Contrast React Bootstrap Panel Title Props
+## API Reference: Contrast React Bootstrap 5 Panel Title Props
 
 The table below provides the various prop options for the `CDBPanelTitle` component.
 
@@ -425,7 +518,7 @@ The table below provides the various prop options for the `CDBPanelTitle` compon
 | tag            | String       | h6          | Changes default tag | <CDBPanelTitle tag="h5" ... />  |
 
 
-## API Reference: Contrast React Bootstrap Panel Text Prop
+## API Reference: Contrast React Bootstrap 5 Panel Text Prop
 
 The table below provides the various prop options for the 'CDBPanelText' component.
 

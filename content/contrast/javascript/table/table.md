@@ -2,17 +2,19 @@
 title: 'Table'
 metaTitle: 'Bootstrap 5 Fixed DataTables - Bootstrap CSS tutorial'
 metaDescription: 'Bootstrap 5 Tables are component with basic tables features.'
----# Bootstrap 5 Table
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/javascript/table/table.md"
+---
+# Bootstrap 5 Table
 
 Bootstrap 5 Tables are a component that includes basic table functionality. They enable you to compile large amounts of data and show it in a logical and ordered manner.
 
-Additional advantages of Bootstrap tables include responsiveness and the ability to customize table styles. Add buttons, checkboxes, panels, and a variety of other items to your tables to make them more appealing. You can also use advanced data table features such as sorting, searching, and pagination.
+Additional advantages of Bootstrap tables include responsiveness and the ability to customize table styles. Buttons, checkboxes, panels, and suchlike can be added to your tables to make them look more appealing. You can also use advanced data table features such as sorting, searching, and pagination.
 
 ## Default Table
 
 ![Bootstrap Table Default](./images/table1.png)
 
-###### Html
+###### HTML
 
 ```html
 <div class="container">
@@ -373,7 +375,7 @@ Additional advantages of Bootstrap tables include responsiveness and the ability
 
 ![Bootstrap Tables Responsive](./images/table9.png)
 
-###### Html
+###### HTML
 
 ```html
 <div class="container">

@@ -2,37 +2,39 @@
 title: "Widgets"
 metaTitle: "Angular Bootstrap Widgets"
 metaDescription: "These are Contrast Bootstrap Angular Components "
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/angular/widgets.md"
 ---
 
 These are some components that can be found in the Contrast Bootstrap Angular library
 
 <i/>
 
-## React Bootstrap Widgets
+## Contrast Bootstrap Angular Widgets
 
 Bootstrap 5 Widgets are third-party applications that are embedded into the website's body as a stand-alone feature. 
 
-An example of a website widget is the direct contact widget, which allows your users to contact you easily like the one found on our website.
+An example of Contrast Angular Bootstrap widget is the direct contact widget; like we have on our website, which allows your users to contact you easily.
 
 ## Importing the Contrast Angular Bootstrap Card Module
 
 To use the Contrast Angular Bootstrap Card component in your project you need to import `CardModule`.
 
-```typescript
+```TS
 import {CardModule } from 'cdbangular';
 ```
 
 ## Blog Card
 
-We use the [CDBCard](https://www.devwares.com/docs/contrast/react/components/card) component to create our widgets. Check our docs for more information on the `CDBCard` component. 
-
-Our widget above has a dropdown, icons, and buttons. To have these things in your project you would have to import the [CDBDropDown](https://www.devwares.com/docs/contrast/react/components/dropdown) ( and dropdown affiliated components, see in the docs), [CDBIcons](https://www.devwares.com/docs/contrast/react/components/icon), [CDBBtn](https://www.devwares.com/docs/contrast/react/components/buttons). 
-
-We also import [CDBPane](https://www.devwares.com/docs/contrast/react/components/pane) for the top of this widget.
+We use the [CDBCard](https://www.devwares.com/docs/contrast/angular/components/card) component to create our widgets. Check our docs for more information on the `CDBCard` component. 
 
 ![Angular Bootstrap Widget](./images/cardblog.png)
 
-###### html
+The widget above has a dropdown, icons, and buttons. To have these things in your project you would have to import the [CDBDropDown](https://www.devwares.com/docs/contrast/angular/components/dropdown) ( and dropdown affiliated components, see in the docs), [CDBIcons](https://www.devwares.com/docs/contrast/angular/components/icon), [CDBBtn](https://www.devwares.com/docs/contrast/angular/components/buttons). 
+
+We also import [CDBPane](https://www.devwares.com/docs/contrast/angular/components/pane) for the top of this widget.
+
+
+###### HTML
 ```html
 <CDBCard style="width: 25rem">
     <CDBCardBody class="p-1">
@@ -88,15 +90,12 @@ We also import [CDBPane](https://www.devwares.com/docs/contrast/react/components
 </CDBCard>
 ```
 
-<i/>
 
 ## Widget Cards
 
-
-
 ![Angular Bootstrap Cards Widget](./images/cardwidget.png)
 
-###### html
+###### HTML
 ```html
 <CDBCard style="width: 25rem">
     <CDBCardBody>
@@ -107,13 +106,13 @@ We also import [CDBPane](https://www.devwares.com/docs/contrast/react/components
     </CDBCardBody>
 </CDBCard>
 ```
-<i/>
+
 
 ## Counter Card
 
 ![Angular Bootstrap Card Counter](./images/cardcounter.png)
 
-###### html
+###### HTML
 ```html
 <CDBCard style="width: 25rem">
     <CDBCardBody>
@@ -132,13 +131,13 @@ We also import [CDBPane](https://www.devwares.com/docs/contrast/react/components
     </CDBCardBody>
 </CDBCard>
 ```
-<i/>
+
 
 ## Invoices
 
 ![Angular Bootstrap Widget Invoice](./images/cardinvoicelist.png)
 
-###### html
+###### HTML
 ```html
 <CDBCard style="width: 25rem">
     <CDBCardBody class="p-0">
@@ -166,13 +165,13 @@ We also import [CDBPane](https://www.devwares.com/docs/contrast/react/components
     </CDBCardBody>
 </CDBCard>
 ```
-<i/>
+
 
 ## Ratings
 
 ![Angular Bootstrap Widgets Ratings](./images/cardrating.png)
 
-###### html
+###### HTML
 ```html
 <CDBCard style="width: 25rem">
     <CDBCardBody>
@@ -184,39 +183,38 @@ We also import [CDBPane](https://www.devwares.com/docs/contrast/react/components
             <div class="d-flex align-items-center">
                 <span>5</span>
                 <CDBIcon [fas]=true icon="star" class="mr-3"></CDBIcon>
-                <CDBProgress value=50 color="success"></CDBProgress>
+                <CDBProgress [value]=50 color="success"></CDBProgress>
             </div>
             <div class="d-flex align-items-center">
                 <span>4</span>
                 <CDBIcon [fas]=true icon="star" class="mr-3"></CDBIcon>
-                <CDBProgress value=40 color="warning"></CDBProgress>
+                <CDBProgress [value]=40 color="warning"></CDBProgress>
             </div>
             <div class="d-flex align-items-center">
                 <span>3</span>
                 <CDBIcon [fas]=true icon="star" class="mr-3"></CDBIcon>
-                <CDBProgress value=30 color="primary"></CDBProgress>
+                <CDBProgress [value]=30 color="primary"></CDBProgress>
             </div>
             <div class="d-flex align-items-center">
                 <span>2</span>
                 <CDBIcon [fas]=true icon="star" class="mr-3"></CDBIcon>
-                <CDBProgress value=20 color="dark"></CDBProgress>
+                <CDBProgress [value]=20 color="dark"></CDBProgress>
             </div>
             <div class="d-flex align-items-center">
                 <span>1</span>
                 <CDBIcon [fas]=true icon="star" class="mr-3"></CDBIcon>
-                <CDBProgress value=10 color="danger"></CDBProgress>
+                <CDBProgress [value]=10 color="danger"></CDBProgress>
             </div>
         </div>
     </CDBCardBody>
 </CDBCard>
 ```
-<i/>
 
 ## Events
 
 ![Angular Bootstrap Widget Event](./images/cardeventlist.png)
 
-###### html
+###### HTML
 ```html
 <CDBCard style="width: 25rem">
     <CDBCardTitle class="lead p-4 border-bottom" style="font-weight: 600">Events</CDBCardTitle>
@@ -254,15 +252,12 @@ We also import [CDBPane](https://www.devwares.com/docs/contrast/react/components
 </CDBCard>
 ```
 
-<i/>
 
 ## Alerts and Notifications
 
-
-
 ![Angular Bootstrap Widget Alerts and Notifications](./images/cardalertsandnotifications.png)
 
-###### html
+###### HTML
 ```html
 <CDBCard style="width: 25rem">
     <CDBCardBody class="py-0">
@@ -315,7 +310,7 @@ The table below lists other prop options of the `CDBCardBody` component.
 | Name            | Type        | Default      |   Description| Example      |
 | :------------- | :----------: | -----------: | :----------: | -----------: |
 | class      | String       |              |Adds custom classes	      |   class="myClass" |
-| cascade        | Boolean      | false        | Switches the CardBody to cascade style mode | cascade=true |
+| cascade        | Boolean      | false        | Switches the card's body to cascade style mode | cascade=true |
 
 
 ## API Reference: Contrast Angular Bootstrap Card Image Properties
@@ -326,7 +321,7 @@ The table below lists other prop options of the `CDBCardBodyImage` component.
 | Name            | Type        | Default      |   Description| Example      |
 | :------------- | :----------: | -----------: | :----------: | -----------: |
 | class      | String       | |Adds custom classes	      |     class="myClass" |
-| cascade        | Boolean      | false        | Switches the CardBody to cascade style mode | cascade=true |
+| cascade        | Boolean      | false        | Switches the card's body image to cascade style mode | cascade=true |
 | hover          | Boolean      | false        | Switches on hover behaviour | hover=true  |
 | overlay        | String       | white-light  | Sets the color of hover overlay | overlay="white-light" |
 | src            | String       |              | Source of the image | src="image_src" |

@@ -2,6 +2,7 @@
 title: 'Badges'
 metaTitle: 'Bootstrap 5 Badges - Bootstrap CSS tutorial'
 metaDescription: 'Bootstrap 5 Badges are used for indication and for displaying messages.'
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/javascript/components/badge.md"
 ---
 
 # Bootstrap 5 Badges
@@ -12,9 +13,9 @@ Bootstrap 5 Badges are used to convey and show messages. Badges can be used to d
 
 Using relative font sizing and `em` units, the Contrast Bootstrap 5 Badge scales to fit the size of the immediate parent element.
 
-![Bootstrap Badge ](./images/badgepill.png)
+<JsBadges1/>
 
-###### html
+###### HTML
 
 ```html
 <button class="btn btn-dark">
@@ -35,9 +36,9 @@ Using relative font sizing and `em` units, the Contrast Bootstrap 5 Badge scales
 
 The Contrast Bootstrap 5 Badge adds a `class` of `badge-pill` to your span. This gives the badges a more rounded appearance.
 
-![Bootstrap Badges Pill](./images/badgepillround.png)
+<JsBadges2/>
 
-###### html
+###### HTML
 
 ```html
 <span class="badge badge-pill bg-primary">Primary</span>
@@ -52,11 +53,11 @@ The Contrast Bootstrap 5 Badge adds a `class` of `badge-pill` to your span. This
 
 ## Contextual Variations
 
-To define how little or how large you want your Contrast Bootstrap badge to be, give your `span` element a `class` of badge and append the size code of the badge you want (lg for a large badge, and sm for small). For example `<span class="badge badge-lg ">Large</span>`.
+To define the size of Contrast Bootstrap badge , give your `span` element a `class` of badge and append the size code of the badge you want (lg for a large badge, and sm for small). For example `<span class="badge badge-lg ">Large</span>`.
 
-![Bootstrap Badges Contextual Variations](./images/badgesizevariations.png)
+<JsBadges3 />
 
-###### html
+###### HTML
 
 ```html
 <span class="badge badge-lg bg-primary">Large</span>
@@ -68,12 +69,20 @@ To define how little or how large you want your Contrast Bootstrap badge to be, 
 
 To remove shadows from your badges, use the `badge-flat` class.
 
-![Bootstrap Badges Flat](./images/flatbadges.png)
+<JsBadges4 />
 
-###### html
+###### HTML
 
 ```html
-<span class="badge badge-flat bg-dark">Flat Badge</span>
+<div>
+  <span class="badge badge-flat bg-dark">Flat Badge Dark</span>
+  <span class="badge badge-flat bg-primary">Flat Badge Primary</span>
+  <span class="badge badge-flat bg-secondary">Flat Badge Secondary</span>
+  <span class="badge badge-flat bg-success">Flat Badge Success</span>
+  <span class="badge badge-flat bg-danger">Flat Badge Danger</span>
+  <span class="badge badge-flat bg-warning">Flat Badge Warning</span>
+  <span class="badge badge-flat bg-info">Flat Badge Info</span>
+</div>
 ```
 
 ## Badges with Icons
@@ -82,9 +91,9 @@ To remove shadows from your badges, use the `badge-flat` class.
 
 We can nest the icon element in our `badge` span to allowus use icons in our badges.
 
-![Bootstrap Badges with Icons](./images/badgewithiconsandroundedbadges.png)
+<JsBadges5/>
 
-###### html
+###### HTML
 
 ```html
 <span class="badge bg-primary"><i class="fa fa-facebook"></i></span>

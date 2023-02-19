@@ -1,16 +1,19 @@
 ---
+
 title: 'Spinner'
 metaTitle: 'Bootstrap 5 Spinner - Bootstrap CSS tutorial'
 metaDescription: 'The Bootstrap 5 Spinner is an animation that serves to improve the user experience by keeping visitors amused while the website is loaded'
----# Bootstrap 5 Spinner
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/javascript/components/spinner.md"
+---
+# Bootstrap 5 Spinner
 
-The Bootstrap 5 Spinner is an animation that serves to improve the user experience by keeping visitors amused while the website is loaded
+The Bootstrap 5 Spinner is an animation used to indicate a running process. It helps to improve users' experience on websites or web applications.
 
 ## Spinner Types
 
 ![Bootstrap 5 Spinner](./images/spinner1.gif)
 
-###### html
+###### HTML
 
 ```html
 <div class="spinner">loading...</div>
@@ -25,10 +28,9 @@ The Bootstrap 5 Spinner is an animation that serves to improve the user experien
 ## Multicolor Spinner
 
 To indicate that you want your spinner to have various colors, give it the class `spinner-multicolor`.
+<Spinner1/>
 
-![Bootstrap Spinner MultiColor](./images/spinner2.gif)
-
-###### html
+###### HTML
 
 ```html
 <div class="spinner spinner-muilticolor">loading...</div>
@@ -36,13 +38,13 @@ To indicate that you want your spinner to have various colors, give it the class
 
 ## Size Variations
 
-Contrast Bootstrap 5 Spinners allow you to choose how small or huge your spinner should be.
+Contrast Bootstrap 5 Spinners allow you to specify a size for your spinner.
 
-For a larger spinner, use the'spinner-lg' class, and for a smaller spinner, use the 'spinner-sm' class. A Contrast Bootstrap 5 Spinner's default size is medium.
+For a large spinner, use the'spinner-lg' class, and for a small spinner, use the 'spinner-sm' class. A Contrast Bootstrap 5 Spinner's default size is medium.
 
-![Bootstrap Spinner Size Variations](./images/spinner3.gif)
+<Spinner2/>
 
-###### html
+###### HTML
 
 ```html
 <div class="spinner spinner-lg text-info">loading...</div>

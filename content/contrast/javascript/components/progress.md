@@ -1,12 +1,15 @@
 ---
+
 title: 'Progress'
 metaTitle: 'Bootstrap 5 Progress - Bootstrap CSS tutorial'
-metaDescription: 'Bootstrap 5 Progress bar is a component that shows the progress of a process in which the user is involved.'
----# Bootstrap 5 Progress
+metaDescription: 'Bootstrap 5 Progress  is a component that shows the progress of a process in which the user is involved.'
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/javascript/components/progress.md"
+---
+# Bootstrap 5 Progress
 
-Bootstrap 5 Progress bar is a component that shows the progress of a process in which the user is involved. Color, shape, and animation can all be altered.
+Bootstrap 5 Progress is a component that shows a user's progress in a process or an activity. The color, shape, and animation of this component can all be altered.
 
-If your website takes too long to load, including a simple progress bar will make your user feel less anxious. The requested content will be available in a few seconds.”.
+Bootstrap 5 Progress can be used to show the progress of an activity with delay, this increases the users' experience on your websites or web applications.
 
 ## Rect Progress Default
 
@@ -14,9 +17,9 @@ Use a `class` of `progress` to integrate Contrast Bootstrap 5 into your project.
 
 Use a `progress-bar` class to build the real progress bar.
 
-![Bootstrap Progress Rect Default](./images/progress3.png)
+<Progress1/>
 
-###### html
+###### HTML
 
 ```html
 <div class="progress-container">
@@ -31,9 +34,9 @@ Use a `progress-bar` class to build the real progress bar.
 
 You can customize the color of your progress bar with the Contrast Bootstrap 5 Progress. To do so, give your progress `div` a progress class and add the color code (e.g. primary, secondary, success, etc.) you desire for your progress bar to it.. For example `<div class = "progress progress-secondary"></div>`
 
-![Bootstrap Progress Rect Color Variants](./images/progress4.png)
+<Progress2/>
 
-###### html
+###### HTML
 
 ```html
 <div class="progress-container">
@@ -83,9 +86,9 @@ You can customize the color of your progress bar with the Contrast Bootstrap 5 P
 
 Use the `height` property to customize your progress bar height.
 
-![Bootstrap Progress Rect Bar With Height](./images/progress5.png)
+<Progress3/>
 
-###### html
+###### HTML
 
 ```html
           <div class="progress-container">
@@ -117,7 +120,7 @@ Use the `height` property to customize your progress bar height.
         </div>
 ```
 
-###### Script
+###### JavaScript
 
 ```js
     <script src="../build/cdbbootstrap.js"></script>

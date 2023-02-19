@@ -1,61 +1,87 @@
 ---
 title: 'Getting Started'
+metaTitle: 'Setting up Contrast Design Bootstrap JavaScript in our project'
+metaDescription: 'Ways to set up Contrast Design Bootstrap JavaScript in our project'
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/javascript/index.md"
 ---
 
-# Contrast Design Bootstrap (Free)
+# Contrast Design Bootstrap
 
-> Elegant UI Kit and reusable components for building mobile-first, responsive webistes and web apps
+> Well crafted and elegant Bootstrap 5 UI kit Library featuring over 2000+ basic components and 10000+ premium components for building mobile-first, responsive websites and web apps using clean UI components
 
-[![NPM](https://img.shields.io/npm/v/ng-cdbangular.svg)](https://www.npmjs.com/package/ng-cdbangular) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-![npm](https://img.shields.io/npm/dw/ng-cdbangular)
+[![NPM](https://img.shields.io/npm/v/cdbootstrap.svg)](https://www.npmjs.com/package/cdbootstrap) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) ![npm](https://img.shields.io/npm/dm/cdbootstrap)
 
-## Install CDBootstrap
+## Usage
 
-### Prerequisites
+Be sure to have `cdbootstrap` installed in your project, you can follow the guides on our [installation](https://www.devwares.com/docs/contrast/javascript/Installation/) page to get `cdbootstrap` working on your project.
 
-Before starting project make sure to install Node LTS (12.x.x recommended).
+Below are some examples to show you how you can build your project using `cdbootstrap` components.
 
-To install cdbootstrap, in your command line type:
+#### Alert Component Demo
 
-### NPM
-
-```bash
-npm install cdboostrap
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cdbootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cdbootstrap/css/cdb.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/cdbootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cdbootstrap/js/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cdbootstrap/js/cdb.min.js"></script>
+    <title>Alert Component Demo</title>
+  </head>
+  <body>
+    <div>
+      <div class="alert alert-primary">
+        A simple alert built with contrast design check it out!
+      </div>
+      <div class="alert alert-success">
+        A simple alert built with contrast design check it out!
+      </div>
+      <div class="alert alert-danger">
+        A simple alert built with contrast design check it out!
+      </div>
+    </div>
+  </body>
+</html>
 ```
 
-or
+#### Button Component Demo
 
-### YARN
-
-```bash
-yarn add cdbootstrap
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cdbootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cdbootstrap/css/cdb.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/cdbootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cdbootstrap/js/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cdbootstrap/js/cdb.min.js"></script>
+    <title>Button Component Demo</title>
+  </head>
+  <body>
+    <div>
+      <button class="btn btn-primary">Primary</button>
+      <button class="btn btn-secondary">Secondary</button>
+      <button class="btn btn-success">Success</button>
+      <button class="btn btn-danger">Danger</button>
+    </div>
+  </body>
+</html>
 ```
 
-Note that after installation you have access to all the cdbootstrap resources and do not have to go through the step below
+`cdbootstrap` can be used on your projects to fit your projects needs. Yes, it's that easy! Check out the documentation for the components to see how you can use them.
 
-## CDN
 
-Installation via CDN is one of the easiest methods of integrating CDBootstrap UI KIT with your project. Just copy the latest compiled JS script tag and CSS link tag to the application.
-Add cdbootstrap to your project from our cdn directly into your html file
+## Browser support
 
-### CSS
-
-```jsx
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cdbootstrap@1.0.0/css/bootstrap.min.css"/>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cdbootstrap@1.0.0/css/cdb.min.css"/>
-```
-
-### JS
-
-```jsx
-  <script src="https://cdn.jsdelivr.net/npm/cdbootstrap@1.0.0/js/bootstrap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/cdbootstrap@1.0.0/js/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/cdbootstrap@1.0.0/js/cdb.min.js"></script>
-```
-
-# Browser support
-
-## Browsers supported
+### Browsers supported
 
 |         | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="Edge / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>Safari | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>Opera |
 | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -64,7 +90,7 @@ Add cdbootstrap to your project from our cdn directly into your html file
 
 ## Documentation
 
-[Check out our documentation here](https://www.devwares.com/docs/contrast/angular/index)
+[Check out our documentation here](https://www.devwares.com/docs/contrast/javascript/index)
 
 ## PRO Version
 

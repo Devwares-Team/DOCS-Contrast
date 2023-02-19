@@ -2,19 +2,19 @@
 title: "Mask"
 metaTitle: "Angular Bootstrap Mask Component"
 metaDescription: "Angular Bootstrap Masks alter the visibility of an element by either partially or fully hiding it"
-
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/angular/components/mask.md"
 ---
 
-# Angular Bootstrap Mask
+# Contrast Bootstrap Mask
 
-Angular Bootstrap Masks alter the visibility of an element by either partially or fully hiding it. Contrast Design Angular Masks are used to make content more visible in the picture.
+Contrast Angular Bootstrap Masks alter the visibility of an element by either partially or fully hiding it. Contrast Design Angular Masks are used to make content more visible in the picture.
 
 ## Importing the Contrast Angular Bootstrap Mask Module
 
 To use the Contrast Angular Bootstrap Mask component in your project you need to import `MaskModule`.
 
 
-```typescript
+```ts
 import {MaskModule } from 'cdbangular';
 ```
 
@@ -22,14 +22,14 @@ We use two Contrast components `CDBMask` and `CDBView`. The content that we are 
 
 ## Mask Patterns
 
-The Contrast React Bootstrap Mask component, the `CDBMask`, allows you to pass in a pattern parameter ( ranging from pattern1 to pattern4) into the `pattern` prop to use a pattern over your content.
+The Contrast Angular Bootstrap Mask component, the `CDBMask`, allows you to pass in a pattern parameter ( ranging from pattern1 to pattern4) into the `pattern` prop to use a pattern over your content.
 
 ![Angular Bootstrap Mask Patterns](https://imgur.com/MCquXaE.png)
 ![Angular Bootstrap Mask Patterns](https://imgur.com/qzyTCFL.png)
 ![Angular Bootstrap Mask Patterns](https://imgur.com/FOb0fkk.png)
 ![Angular Bootstrap Mask Patterns](https://imgur.com/FtwM3yj.png)
 
-###### html
+###### HTML
 ```html
 <CDBView>
     <img src="../../../assets/../../../assets/img/food.jpg" class="img-fluid" alt="" style="width: 100%" />
@@ -55,7 +55,7 @@ Use the' overlay' prop to use a light background color as your overlay over your
 ![Angular Bootstrap Mask Light Overlay](https://imgur.com/Yoxa6Xr.png)
 ![Angular Bootstrap Mask Light Overlay](https://imgur.com/XgzFd30.png)
 
-###### html
+###### HTML
 ```html
 <CDBView>
     <img src="../../../assets/img/food.jpg" class="img-fluid" alt="" style="width: 100%" />
@@ -74,7 +74,7 @@ Use the' overlay' prop to use a thick background color as your overlay over your
 ![Angular Bootstrap Mask Strong Overlay](https://imgur.com/Q0y0x7A.png)
 ![Angular Bootstrap Mask Strong Overlay](https://imgur.com/39KbCT0.png)
 
-###### html
+###### HTML
 ```html
 <CDBView>
     <img src="../../../assets/img/food.jpg" class="img-fluid" alt="" style="width: 100%" />

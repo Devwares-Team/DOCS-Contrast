@@ -1,8 +1,9 @@
 ---
 title: "Sections"
-metaTitle: "Angular Bootstrap React Components"
-metaDescription: "These are Angular Bootstrap React Components "
+metaTitle: "Angular Bootstrap Angular Components"
+metaDescription: "These are Angular Bootstrap Angular Components "
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/angular/sections.md"
 ---
 
-These are some compoennts that can be found in the Angular Bootstrap React library
+These are some components that can be found in the Contrast Bootstrap Angular library
 

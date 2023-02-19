@@ -1,19 +1,26 @@
 ---
 title: 'Autocomplete'
-metaTitle: 'Bootstrap 5 Animations - Bootstrap CSS tutorial '
+metaTitle: 'Bootstrap 5 Autocomplete - Bootstrap CSS tutorial '
 metaDescription: 'Bootstrap 5 Autocomplete makes it easy to write anything, it simply anticipates the words you want to write based on the first few letters written by a user. '
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/javascript/components/autocomplete.md"
 ---
 
 # Bootstrap Autocomplete
 
-Bootstrap 5 Autocomplete anticipates words based on the first few letters typed by the user. It accepts a list of suggestions in the form of a `Array`.
+Bootstrap 5 Autocomplete is a powerful tool designed to help developers quickly and easily create dynamic, data-driven web pages. The Autocomplete feature allows users to quickly filter through large data sets and find the information they need.
+
+It accepts a list of suggestions in the form of an `Array`.
 The `↑` and `↓` arrow keys can be used to traverse through options, and the `↵` key can be used to choose the required option.
+
+The bootstrap autocomplete also provides a variety of customization options for developers to ensure that the user experience is tailored to the specific needs of their website or application.
+
+The bootstrap autocomplete feature is composed of three main components: an input field, a list of suggestions, and a selection field. The input field is an HTML input field that accepts user input. When a user types in the field, the Autocomplete feature will automatically generate a list of suggestions based on the input. The user then selects the desired item from the list, and the Autocomplete feature will populate the selection field with the selected item.
 
 ## Default Autocomplete
 
-![Bootstrap Autocomplete](./images/autocomplete1.png)
+<Autocomplete1/>
 
-######Script
+###### JavaScript
 
 ```js
     <script defer type="module">
@@ -64,7 +71,7 @@ The `↑` and `↓` arrow keys can be used to traverse through options, and the 
     </script>
 ```
 
-######HTML
+###### HTML
 
 ```html
 <div class="cdb-form" style="width: 100%">

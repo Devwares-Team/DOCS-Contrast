@@ -2,11 +2,12 @@
 title: 'DatePicker'
 metaTitle: 'Bootstrap 5 DatePicker - Bootstrap CSS tutorial'
 metaDescription: 'Pick a specific date and time with Bootstrap 5 DatePicker'
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/javascript/components/datepicker.md"
 ---
 
 # Bootstrap 5 DatePicker
 
-Bootstrap 5 Date picker is a component in our Contrast Library that makes it possible for you to pick a date and time easily in your web applications.
+Bootstrap 5 DatePicker is a component in the Contrast Design Library that makes it possible for you to pick a date and time easily in your web applications.
 
 ## Default DatePicker
 
@@ -14,7 +15,7 @@ Bootstrap 5 Date picker is a component in our Contrast Library that makes it pos
 
 ![Bootstrap DatePicker Default](https://i.imgur.com/ClWprya.gif)
 
-###### html
+###### HTML
 
 ```html
 <div class="datepicker-container">
@@ -22,7 +23,7 @@ Bootstrap 5 Date picker is a component in our Contrast Library that makes it pos
 </div>
 ```
 
-###### Script
+###### JavaScript
 
 ```js
 <script>

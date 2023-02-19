@@ -2,7 +2,9 @@
 title: 'Fixed DataTable'
 metaTitle: 'Bootstrap 5 Fixed DataTables - Bootstrap CSS tutorial'
 metaDescription: 'Bootstrap 5 DataTables combine tables with additional features such as searching, sorting, and pagination.'
----# Fixed DataTables
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/javascript/table/fixed_datatables.md"
+---
+# Fixed DataTables
 
 Bootstrap 5 DataTables combine tables with additional features such as searching, sorting, and pagination.
 
@@ -12,7 +14,7 @@ Default Fixed DataTable example.
 
 ![image info](./images/datatable.png)
 
-###### html
+###### HTML
 
 ```html
 <CDBCard style="margin: 1rem;">

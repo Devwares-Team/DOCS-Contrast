@@ -2,12 +2,12 @@
 title: "Table"
 metaTitle: "Angular Bootstrap Table"
 metaDescription: "Angular Bootstrap Tables are component with basic tables features. They let you aggregate a huge amount of data and present it in a clear and orderly way"
-
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/angular/table/table.md"
 ---
 
-# Angular Bootstrap Table
+# Contrast Angular Bootstrap Table
 
-Angular Bootstrap Tables are component with basic tables features. They let you aggregate a huge amount of data and present it in a clear and orderly way.
+Contrast Angular Bootstrap Tables are component with basic tables features. They let you aggregate a huge amount of data and present it in a clear and orderly way.
 
 Angular Bootstrap tables provide additional benefits like responsiveness, and the possibility to manipulate the styles of the tables. You can enhance your tables by adding buttons, checkboxes, panels, and many other additional elements. You can also use an advanced data tables options like sort, search or pagination.
 
@@ -15,7 +15,7 @@ Angular Bootstrap tables provide additional benefits like responsiveness, and th
 
 To use the Contrast Angular Bootstrap Table component in your project you need to import `TableModule`.
 
-```typescript
+```ts
 import {TableModule } from 'cdbangular';
 ```
 
@@ -23,7 +23,7 @@ import {TableModule } from 'cdbangular';
 
 ![Angular Bootstrap Table](./images/table1.png)
 
-###### html
+###### HTML
 ```html
 <table CdbTable>
     <thead>
@@ -41,8 +41,8 @@ import {TableModule } from 'cdbangular';
     </tbody>
 </table>
 ```
-###### typescript
-```typescript
+###### TypeScript
+```ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -121,7 +121,7 @@ export class TableComponent implements OnInit {
 
 ![Angular Bootstrap Table Head Options](./images/table2.png)
 
-###### html
+###### HTML
 ```html
 <table CdbTable>
     <thead class="text-white thead-dark">
@@ -154,8 +154,8 @@ export class TableComponent implements OnInit {
     </tbody>
 </table>
 ```
-###### typescript
-```typescript
+###### TypeScript
+```ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -235,9 +235,9 @@ Set the `striped` prop to true, to give your table have stripes.
 
 ![Angular Bootstrap Table Striped](./images/table3.png)
 
-###### html
+###### HTML
 ```html
-<table CdbTable striped="true">
+<table CdbTable [striped]="true">
     <thead>
         <tr>
             <th *ngFor="let head of headElements" scope="col">{{head}} </th>
@@ -253,8 +253,8 @@ Set the `striped` prop to true, to give your table have stripes.
     </tbody>
 </table>
 ```
-###### typescript
-```typescript
+###### TypeScript
+```ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -334,9 +334,9 @@ Give the table a `bordered` prop to true to give your table borders.
 
 ![Angular Bootstrap Table](./images/table4.png)
 
-###### html
+###### HTML
 ```html
-<table CdbTable bordered="true">
+<table CdbTable [bordered]="true">
     <thead>
         <tr>
             <th *ngFor="let head of headElements" scope="col">{{head}} </th>
@@ -352,8 +352,8 @@ Give the table a `bordered` prop to true to give your table borders.
     </tbody>
 </table>
 ```
-###### typescript
-```typescript
+###### TypeScript
+```ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -434,9 +434,9 @@ Set the `borderless` prop to true for your table to have no borders.
 
 ![Angular Bootstrap Table Borderless](./images/table5.png)
 
-###### html
+###### HTML
 ```html
-<table CdbTable borderless="true">
+<table CdbTable [borderless]="true">
     <thead>
         <tr>
             <th *ngFor="let head of headElements" scope="col">{{head}} </th>
@@ -452,8 +452,8 @@ Set the `borderless` prop to true for your table to have no borders.
     </tbody>
 </table>
 ```
-###### typescript
-```typescript
+###### TypeScript
+```ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -526,14 +526,14 @@ export class TableComponent implements OnInit {
   ngOnInit(): void {}
 }
 ```
-## Hover able Rows
+## Hoverable Rows
 
 
 ![Angular Bootstrap Rows Hoverable](./images/table6.png)
 
-###### html
+###### HTML
 ```html
-<table CdbTable hoverable="true">
+<table CdbTable [hoverable]="true">
     <thead>
         <tr>
             <th *ngFor="let head of headElements" scope="col">{{head}} </th>
@@ -549,8 +549,8 @@ export class TableComponent implements OnInit {
     </tbody>
 </table>
 ```
-###### typescript
-```typescript
+###### TypeScript
+```ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -627,9 +627,9 @@ export class TableComponent implements OnInit {
 
 ![Angular Bootstrap Table Small](./images/table7.png)
 
-###### html
+###### HTML
 ```html
-<table CdbTable small="true">
+<table CdbTable [small]="true">
     <thead>
         <tr>
             <th *ngFor="let head of headElements" scope="col">{{head}} </th>
@@ -645,8 +645,8 @@ export class TableComponent implements OnInit {
     </tbody>
 </table>
 ```
-###### typescript
-```typescript
+###### TypeScript
+```ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -723,7 +723,7 @@ export class TableComponent implements OnInit {
 
 ![Angular Bootstrap Table Captions](./images/table8.png)
 
-###### html
+###### HTML
 ```html
 <table CdbTable>
     <caption>List of users</caption>
@@ -742,8 +742,8 @@ export class TableComponent implements OnInit {
     </tbody>
 </table>
 ```
-###### typescript
-```typescript
+###### TypeScript
+```ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -820,9 +820,9 @@ export class TableComponent implements OnInit {
 
 ![Angular Bootstrap Tables Responsive ](./images/table9.png)
 
-###### html
+###### HTML
 ```html
-<table CdbTable responsive="true">
+<table CdbTable [responsive]="true">
 
     <thead>
         <tr>
@@ -847,8 +847,8 @@ export class TableComponent implements OnInit {
 </table>
 ```
 
-###### typescript
-```typescript
+###### TypeScript
+```ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -922,9 +922,9 @@ export class TableComponent implements OnInit {
 }
 ```
 
-## API Reference: Contrast React Bootstrap Table Props
+## API Reference: Contrast Angular Bootstrap Table Props
 
-This section will build on your information about the props you get to use with the Contrast React Bootstrap Table component. You will find out what these props do, their default values, and how you would use them in your code.
+This section will build on your information about the props you get to use with the Contrast Angular Bootstrap Table component. You will find out what these props do, their default values, and how you would use them in your code.
 
 
 The table below lists other prop options of the `CDBTable` component.

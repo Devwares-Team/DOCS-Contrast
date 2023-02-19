@@ -1,20 +1,23 @@
 ---
+
 title: 'DataTable'
 metaTitle: 'Bootstrap 5 DataTable - Bootstrap CSS tutorial'
 metaDescription: 'Bootstrap 5 DataTables that combine tables with sophisticated features like searching, sorting, and pagination.'
----# Bootstrap 5 DataTables
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/javascript/components/datatables.md"
+---
+# Bootstrap 5 DataTables
 
-Bootstrap 5 DataTables that combine tables with sophisticated features like searching, sorting, and pagination.
+Bootstrap 5 DataTables that combine tables with extensive set of features like searching, sorting, and pagination.
 
 ## Default DataTable
 
-Use the `table` class to construct a Bootstrap 5 DataTable with Contrast preset styles. Our DataTable has boundaries thanks to the `table-bordered` class, and the `table-striped` class provides each row a different color.
+The `table` class is used to construct a Bootstrap 5 DataTable with Contrast preset styles. DataTables with boundaries can be created by adding  the `table-bordered` class, and the `table-striped` class provides each row a different color.
 
 The `data-table1` defines which row (`data-table1` for odd, and `data-table2` for even) gets a different color.
 
-![Bootstrap DataTable Default](https://i.imgur.com/gIkW791.gif)
+<Datatables1/>
 
-###### html
+###### HTML
 
 ```html
 <div class="card card p-5" style="width: 100%">
@@ -477,11 +480,11 @@ The `data-table1` defines which row (`data-table1` for odd, and `data-table2` fo
 </div>
 ```
 
-## Not Striped DataTable
+## Non-Striped DataTable
 
-![ Bootstrap DataTable Not Striped](https://i.imgur.com/YE5dgYk.gif)
+<Datatables2/>
 
-###### html
+###### HTML
 
 ```html
 <div class="card card p-5" style="width: 100%">

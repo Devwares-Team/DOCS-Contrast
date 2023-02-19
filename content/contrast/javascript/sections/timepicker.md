@@ -1,10 +1,13 @@
 ---
+
 title: 'TimePicker'
 metaTitle: 'Bootstrap 5 TimePicker'
 metaDescription: 'Bootstrap 5 TimePicker is a component that allows you to choose a single time in `hours:minutes` format via a dialog.'
----# Bootstrap 5 TimePicker
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/javascript/sections/timepicker.md"
+---
+# Bootstrap 5 TimePicker
 
-Bootstrap 5 TimePicker is a component that allows you to choose a single time in `hours:minutes` format via a dialog. The filled circle at the end of the clock hand indicates the specified time.
+Bootstrap 5 TimePicker is a dialog-based time input component that allows you to choose time in `hours:minutes` format. The filled circle at the end of the clock hand indicates the specified time.
 
 <i/>
 
@@ -14,9 +17,9 @@ You can use the Contrast Bootstrap 5 form predefined styling in your project wit
 
 To define that this is a time picker input field, use the `type` property in your `input` element.
 
-![Bootstrap TimePicker](./images/timepicker.png)
+<Timepicker1/>
 
-###### html
+###### HTML
 
 ```html
 <div class="cs-form">

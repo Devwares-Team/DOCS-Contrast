@@ -1,16 +1,17 @@
 ---
-title: 'DropDown'
+title: 'Dropdown'
 metaTitle: 'Bootstrap Dropdown - Bootstrap CSS tutorial'
 metaDescription: 'Bootstrap 5 Dropdown is a toggleable menu embedding additional links or content.'
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/javascript/components/dropdown.md"
 ---
 
-# Bootstrap 5 DropDown
+# Bootstrap 5 Dropdown
 
 Dropdown in Bootstrap 5 is a toggleable menu that can contain additional links or content. You can create complex navigation and link classification with it.
 
-Dropdowns are vital parts in more complex navigation systems because they allow you to place all of the most relevant links in our navigation bar (or other component acting as navigation - such as SideNav)
+Dropdowns are vital parts in more complex navigation systems because they allow you to place all of the most relevant links in our navigation bar (or other navigational components).
 
-CDB dropdowns are not only highly functional, but they are also really appealing visually. After they open a link, it gives them these distinctive Material Design effects like shadows, vibrant hues, and attractive waves.
+CDB dropdowns are not only highly functional, but they are also really appealing visually. When dropdown items are clicked, they generate certain distinctive Material Design effects such as shadows, vibrant hues, and attractive waves.
 
 It's an intentional design decision that they're toggled by clicking rather than hovering. Why?
 
@@ -20,9 +21,9 @@ The Bootstrap Contrast By modifying props and prop values, we can give our dropd
 
 ## Dark Toggle Bar
 
-![Bootstrap Dropdown](./images/dropdown1.png)
+<Dropdown1/>
 
-###### html
+###### HTML
 
 ```html
 <div class="dropdown">
@@ -42,11 +43,11 @@ The Bootstrap Contrast By modifying props and prop values, we can give our dropd
 </div>
 ```
 
-## Primary Toggler with Caret
+## Primary Toggle Bar with Caret
 
-![Bootstrap Dropdown Primary Toggle With Caret](./images/dropdown2.png)
+<Dropdown2/>
 
-###### html
+###### HTML
 
 ```html
 <div class="dropdown">
@@ -68,9 +69,9 @@ The Bootstrap Contrast By modifying props and prop values, we can give our dropd
 
 ## Secondary Toggle Bar
 
-![Bootstrap Dropdown Secondary Toggle Bar](./images/dropdown3.png)
+<Dropdown3/>
 
-###### html
+###### HTML
 
 ```html
 <div class="btn-group dropright">
@@ -92,9 +93,9 @@ The Bootstrap Contrast By modifying props and prop values, we can give our dropd
 
 ## Danger Toggle Bar
 
-![Bootstrap Dropdown Danger Toggle Bar](./images/dropdown4.png)
+<Dropdown4/>
 
-###### html
+###### HTML
 
 ```html
 <div class="btn-group dropup">
@@ -116,9 +117,9 @@ The Bootstrap Contrast By modifying props and prop values, we can give our dropd
 
 ## Success Toggle Bar
 
-![Bootstrap Dropdown Success Toggle Bar](./images/dropdown5.png)
+<Dropdown5/>
 
-###### html
+###### HTML
 
 ```html
 <div class="btn-group dropleft">
@@ -138,17 +139,17 @@ The Bootstrap Contrast By modifying props and prop values, we can give our dropd
 </div>
 ```
 
-## Large DropDown
+## Large Dropdown
 
-![Bootstrap Dropdown Large](./images/dropdown6.png)
+<Dropdown6/>
 
-###### html
+###### HTML
 
 ```html
 <div class="container">
   <div class="dropdown">
     <button
-      class="btn btn-dark btn-lg dropdown-toggle"
+      class="btn btn-light btn-lg dropdown-toggle"
       type="button"
       id="dropdownMenuButton"
       data-toggle="dropdown"
@@ -165,9 +166,9 @@ The Bootstrap Contrast By modifying props and prop values, we can give our dropd
 
 ## Small Dropdown
 
-![image info](./images/dropdown7.png)
+<Dropdown7/>
 
-###### html
+###### HTML
 
 ```html
 <div class="container">
@@ -198,9 +199,9 @@ The Bootstrap Contrast By modifying props and prop values, we can give our dropd
 
 ## Disabled Danger Toggle Bar
 
-![Bootstrap Dropdown Disable Danger Toggle Bar](./images/dropdown8.png)
+<Dropdown8/>
 
-###### html
+###### HTML
 
 ```html
 <div class="container">
@@ -220,9 +221,9 @@ The Bootstrap Contrast By modifying props and prop values, we can give our dropd
 
 ## Menu with Header
 
-![Bootstrap Dropdown Menu with Header](./images/dropdown9.png)
+<Dropdown9/>
 
-###### html
+###### HTML
 
 ```html
 <div class="container">
@@ -248,9 +249,9 @@ The Bootstrap Contrast By modifying props and prop values, we can give our dropd
 
 ## Menu with Divider
 
-![Bootstrap Dropdown Menu with Divider](./images/dropdown10.png)
+<Dropdown10/>
 
-###### html
+###### HTML
 
 ```html
 <div class="container">
@@ -279,9 +280,9 @@ The Bootstrap Contrast By modifying props and prop values, we can give our dropd
 
 ## Disabled Menu Items
 
-![Bootstrap Dropdown Disabled Menu Items](./images/dropdown11.png)
+<Dropdown11/>
 
-###### html
+###### HTML
 
 ```html
 <div class="container">
@@ -307,9 +308,9 @@ The Bootstrap Contrast By modifying props and prop values, we can give our dropd
 
 ## Active Menu Items
 
-![Bootstrap Dropdown Active Menu Items](./images/dropdown12.png)
+<Dropdown12/>
 
-###### html
+###### HTML
 
 ```html
 <div class="container">

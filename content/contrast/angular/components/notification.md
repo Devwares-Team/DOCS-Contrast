@@ -2,22 +2,22 @@
 title: "Notification"
 metaTitle: "Angular Bootstrap Notification Component"
 metaDescription: "Angular Bootstrap Push notifications to your visitors with a toast, a lightweight and easily customizable alert message"
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/angular/components/notification.md"
 ---
 
 # Angular Bootstrap Notification
 
-Angular Bootstrap Push notifications to your visitors with a toast, a lightweight and easily customizable alert message.
+Contrast Angular Bootstrap Notifications send information to your websites or web apps visitors with a toast, a lightweight and easily customizable alert message.
 
 Toasts are lightweight notifications designed to mimic the push notifications that have been popularized by mobile and desktop operating systems. They’re built with flexbox, so they’re easy to align and position.
 
 
-<i/>
 
 ## Importing the Contrast Angular Bootstrap Notification Module
 
 To use the Contrast Angular Bootstrap Notification component in your project you need to import `NotificationModule`.
 
-```typescript
+```ts
 import {NotificationModule } from 'cdbangular';
 ```
 
@@ -31,7 +31,7 @@ Use the `title` prop for your notification title, `message` and `texts` prop for
 
 ![Angular Bootstrap Notification Custom](./images/notification1.png)
 
-###### html
+###### HTML
 ```html
 <CDBNotification [show]=true [fade]=true [autohide]='2' title="Contrast" message="Hello, world! This is a primary message."
     text="11 mins ago" ></CDBNotification>
@@ -40,14 +40,13 @@ Use the `title` prop for your notification title, `message` and `texts` prop for
 <CDBNotification [show]=true [fade]=true iconClassName="text-secondary" title="Contrast"
     message="Hello, world! This is a primary message." text="11 mins ago" ></CDBNotification>
 ```
-<i/>
 
 ## Notification with Hidden Message
 
 ![Angular Bootstrap Notification with Hidden Message](./images/notification2.png)
 
 
-###### html
+###### HTML
 ```html
 <CDBNotification [show]=true [fade]=true [hideMessages]=true [autohide]='5' title="Contrast"
     message="Hello, world! This is a primary message." text="11 mins ago" ></CDBNotification>
@@ -57,7 +56,7 @@ Use the `title` prop for your notification title, `message` and `texts` prop for
     message="Hello, world! This is a primary message." text="11 mins ago" ></CDBNotification>
 ```
 
-<i/>
+
 
 
 ## Icon Box
@@ -65,7 +64,7 @@ Use the `title` prop for your notification title, `message` and `texts` prop for
 
 ![Angular Bootstrap Notification](./images/notification2.png)
 
-###### html
+###### HTML
 ```html
 <CDBNotification [show]=true [fade]=true color="success" title="Contrast" message="Hello, world! This is a primary message."
     text="11 mins ago" ></CDBNotification>
@@ -78,7 +77,7 @@ Use the `title` prop for your notification title, `message` and `texts` prop for
     text="11 mins ago" ></CDBNotification>
 ```
 
-<i/>
+
 
 ## Notification with Icons
 
@@ -87,7 +86,7 @@ The Contrast Angular Bootstrap Notification component allows you to change the i
 ![Angular Bootstrap Notifications with Icons](./images/notification3.png)
 
 
-###### html
+###### HTML
 ```html
 <CDBNotification [show]=true [fade]=true title="Contrast" icon="award" message="Hello, world! This is a primary message."
     text="11 mins ago" ></CDBNotification>
@@ -99,7 +98,7 @@ The Contrast Angular Bootstrap Notification component allows you to change the i
 <CDBNotification [show]=true [fade]=true iconClassName="text-success" icon="car-crash" title="Contrast"
     message="Hello, world! This is a primary message." text="11 mins ago" ></CDBNotification>
 ```
-<i/>
+
 
 ## Positioning
 
@@ -107,7 +106,7 @@ The `position` property indicates where on the website you want the notification
 
 ![Angular Bootstrap Notification Positioning](./images/notification4.png)
 
-###### html
+###### HTML
 ```html
 <CDBNotification [show]=true [fade]=true title="Contrast" message="Hello, world! This is a positioned notification."
     text="11 mins ago" position="top-left" ></CDBNotification>

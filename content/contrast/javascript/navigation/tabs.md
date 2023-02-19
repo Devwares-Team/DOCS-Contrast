@@ -1,20 +1,23 @@
 ---
+
 title: 'Tab'
 metaTitle: 'Bootstrap 5 Tab'
 metaDescription: 'Bootstrap 5 Tabs are components that divide content that is wrapped in the same wrapper but displayed in a distinct pane. At any given time, only one pane can be seen.'
----# Bootstrap 5 Tab
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/javascript/navigation/tabs.md"
+---
+# Bootstrap 5 Tab
 
 Bootstrap 5 Tabs are components that divide content that is wrapped in the same wrapper but displayed in a distinct pane. At any given time, only one pane can be seen.
 
-Bootstrap tabs are components that divide content that is wrapped in the same wrapper but displayed in a distinct pane. At any given time, only one pane can be seen. The `.nav`ed element manages the active and disabled states in CDB tabs, as well as the overall markup and styles.
+Bootstrap tabs are components that divide content that is wrapped in the same wrapper but displayed in a distinct pane. At any given time, only one pane can be seen. The element with `nav` class manages the active and disabled states in CDB tabs, as well as the overall markup and styles.
 
 <i/>
 
 ## Default Tab
 
-![Bootstrap Tab Default](https://imgur.com/PR8nMiM.gif)
+<Tabs1/>
 
-###### html
+###### HTML
 
 ```html
 <ul class="nav nav-tabs mb-3" id="ex1" role="tablist">
@@ -73,13 +76,11 @@ Bootstrap tabs are components that divide content that is wrapped in the same wr
 </div>
 ```
 
-<i/>
+## Justified Tab 
 
-## Tab Justified
+<Tabs2/>
 
-![Bootstrap Tab Justified](https://imgur.com/JNq6N3p.gif)
-
-###### html
+###### HTML
 
 ```html
 <ul class="nav nav-tabs nav-justified mb-3" id="ex1" role="tablist">
@@ -145,13 +146,11 @@ Bootstrap tabs are components that divide content that is wrapped in the same wr
 </div>
 ```
 
-<i/>
+## Filled Tabs
 
-## Tabs fill
+<Tabs3/>
 
-![Bootstrap Tabs Fill](https://imgur.com/VPYMDeL.gif)
-
-###### html
+###### HTML
 
 ```html
 <ul class="nav nav-tabs nav-fill mb-3" id="ex1" role="tablist">
@@ -210,11 +209,11 @@ Bootstrap tabs are components that divide content that is wrapped in the same wr
 </div>
 ```
 
-## Tabs Vertical
+## Vertical Tabs
 
-![Bootstrap Tabs Vertical](https://imgur.com/VPYMDeL.gif)
+<Tabs4/>
 
-###### html
+###### HTML
 
 ```html
 <div class="row">

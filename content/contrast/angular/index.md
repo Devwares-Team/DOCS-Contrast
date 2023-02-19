@@ -1,54 +1,33 @@
 ---
 title: "Getting Started"
+metaTitle: 'Setting up Contrast Design Bootstrap Angular in our project'
+metaDescription: 'Ways to set up Contrast Design Bootstrap Angular in our project'
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/angular/index.md"
 ---
 
-# Contrast Design Bootstrap Angular (Free)
+# Contrast Design Bootstrap Angular
 
-> Elegant UI Kit and reusable components for building mobile-first, responsive webistes and web apps
+> Angular 15 & Bootstrap 5  Elegant UI Kit and reusable components for building mobile-first, responsive websites and web apps
 
-[![NPM](https://img.shields.io/npm/v/ng-cdbangular.svg)](https://www.npmjs.com/package/ng-cdbangular) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-![npm](https://img.shields.io/npm/dw/ng-cdbangular)
+[![NPM](https://img.shields.io/npm/v/ng-cdbangular.svg)](https://www.npmjs.com/package/ng-cdbangular)  [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)  ![npm](https://img.shields.io/npm/dw/ng-cdbangular)
 
-## Install
 
-```bash
-npm install --save ng-cdbangular
-```
-
-or
-
-```bash
-yarn add ng-cdbangular
-```
 
 ## Usage
+Be sure to have `ng-cdbangular` installed in your project, you can follow the guides on our [installation](https://www.devwares.com/docs/contrast/angular/Installation/) page to get `ng-cdbangular` working on your project.
 
-Add bootstrap-css-only to angular.json
-```jsx
-"styles": [
-  "node_modules/bootstrap-css-only/css/bootstrap.min.css"
-]
-```
+Below is an example to show you how you can build your project using `ng-cdbangular` components.
 
 Import preferred module in app.module.ts
 ```jsx
-import { AlertModule } from 'ng-cdbangular';
+import { AlertModule, ButtonModule } from 'ng-cdbangular';
 
 @NgModule({
   imports: [
-    AlertModule
+    AlertModule,
+    ButtonModule
   ]
 })
-```
-
-In app.component.html
-```jsx
-<CDBAlert color="success">
-  A simple alert built with contrast design check it out!
-</CDBAlert>
-<CDBAlert color="danger" [dismiss]=true>
-  A simple alert built with contrast design check it out!
-</CDBAlert>
 ```
 
 You can also import all cdbangular modules this way
@@ -61,6 +40,28 @@ import { CDBFreeModule } from 'ng-cdbangular';
   ]
 })
 ```
+
+In app.component.html
+```jsx
+<CDBAlert color="success">
+  A simple alert built with contrast design check it out!
+</CDBAlert>
+<CDBAlert color="danger" [dismiss]=true>
+  A simple alert built with contrast design check it out!
+</CDBAlert>
+
+<CDBBtn color="primary">Primary</CDBBtn>
+<CDBBtn color="secondary">Secondary</CDBBtn>
+<CDBBtn color="success">Success</CDBBtn>
+<CDBBtn color="danger">Danger</CDBBtn>
+<CDBBtn color="dark">Dark</CDBBtn>
+<CDBBtn color="warning">Warning</CDBBtn>
+<CDBBtn color="info">Info</CDBBtn>
+<CDBBtn color="white">White</CDBBtn>
+<CDBBtn color="light">Light</CDBBtn>
+```
+
+`ng-cdbangular` can be used on your projects to fit your projects needs. Yes, it's that easy! Check out the documentation for the components to see how you can use them.
 
 # Browser support
 

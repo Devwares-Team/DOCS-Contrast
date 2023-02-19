@@ -2,6 +2,7 @@
 title: 'Notification'
 metaTitle: 'Bootstrap 5 Notifications - Bootstrap CSS tutorial'
 metaDescription: 'With a toast, a lightweight and easily customized alert message, Bootstrap 5 notifications is used to send information to your visitors.'
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/javascript/components/notification.md"
 ---
 
 # Bootstrap 5 Notification
@@ -14,9 +15,9 @@ Toasts are little notifications that are meant to look like the push notificatio
 
 ## Custom Notification Types
 
-![Bootstrap Notification Custom](./images/notification1.png)
+<Notification1 />
 
-###### html
+###### HTML
 
 ```html
 <div class="notification mb-3" id="dismiss1">
@@ -68,13 +69,11 @@ Toasts are little notifications that are meant to look like the push notificatio
 </div>
 ```
 
-<i/>
+## Icon Box Color
 
-## Change Color of Icon Box
+<Notification2/>
 
-![Bootstrap Notification Icon Color](./images/notification2.png)
-
-###### html
+###### HTML
 
 ```html
 <div class="notification mb-3">
@@ -156,13 +155,11 @@ Toasts are little notifications that are meant to look like the push notificatio
 </div>
 ```
 
-<i/>
-
 ## Notification with Icons
 
-![Bootstrap Notifications with Icons](./images/notification3.png)
+<Notification3/>
 
-###### html
+###### HTML
 
 ```html
 <div class="notification mb-3">
@@ -270,7 +267,7 @@ Toasts are little notifications that are meant to look like the push notificatio
 </div>
 ```
 
-###### Script
+###### JavaScript
 
 ```js
     <script src="../build/cdbbootstrap.js"></script>

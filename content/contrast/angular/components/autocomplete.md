@@ -2,18 +2,19 @@
 title: "Autocomplete"
 metaTitle: "Angular Bootstrap Autocomplete"
 metaDescription: "Angular Bootstrap Autocomplete is a component which predicts your next input based on the first few characters you entered"
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/angular/components/autocomplete.md"
 ---
 
-# Angular Bootstrap Autocomplete
+# Contrast Angular Bootstrap Autocomplete
 
-Angular Bootstrap Autocomplete is a component which predicts your next input based on the first few characters you entered. It takes in an `Array` full of suggestions.
+Contrast Angular Bootstrap Autocomplete component predicts words based on the first few letters typed by the users. It accepts a list of suggestions in the form of an `Array`.
 You can use `↑` and `↓` arrow keys to navigate through options and use `↵` key to select required option.
 
 ## Importing the Contrast Angular Bootstrap Autocomplete Module
 
 To use the Contrast Angular Bootstrap Autocomplete in your app, you start off by importing the AutocompleteModule.
 
-```typescript
+```ts
 import {AutocompleteModule } from 'cdbangular';
 ```
 
@@ -22,7 +23,7 @@ import {AutocompleteModule } from 'cdbangular';
 ![Angular Bootstrap Autocomplete Default](./images/autocomplete1.png)
 
 ###### Typescript
-```typescript
+```ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -296,16 +297,16 @@ export class AutocompleteComponent implements OnInit {
 <CDBAutocomplete label="Which country are you from" [suggestions]=countryList></CDBAutocomplete>
 ```
 
-The `CDBAutocomplete` component takes in a label which tells the user usually the range of options of the component, the `[suggestions]` takes in an object as a list of options the user can choose from.
+The `CDBAutocomplete` component takes in a label which serves a placeholder to inform users, what data is contained in the Autocomplete component, the `[suggestions]` takes in an object as a list of options the user can choose from.
 
 ## Usage within a Card
 
-In this section of the tutorial we also use other Contrast Angular Bootstrap Components aside the `CDBAutocomplete`, these components are the [CDBIcon](https://www.devwares.com/docs/contrast/react/components/icon) component for icons in our project, the [CDBCard](https://www.devwares.com/docs/contrast/react/components/card) for creating our autocomplete card , the [CDBBtn](https://www.devwares.com/docs/contrast/react/components/buttons) component for creating our buttons ( signin, signup etc.), the [CDBCardBody](https://www.devwares.com/docs/contrast/react/components/card) component for creating the card body , and the [CDBInput](https://www.devwares.com/docs/contrast/react/components/input) component for our autocomplete input field. 
+In this section of the tutorial we also use other Contrast Angular Bootstrap Components aside the `CDBAutocomplete`, these components are the [CDBIcon](https://www.devwares.com/docs/contrast/angular/components/icon) component for icons in our project, the [CDBCard](https://www.devwares.com/docs/contrast/angular/components/card) for creating our autocomplete card , the [CDBBtn](https://www.devwares.com/docs/contrast/angular/components/buttons) component for creating our buttons ( signin, signup etc.), the [CDBCardBody](https://www.devwares.com/docs/contrast/angular/components/card) component for creating the card body , and the [CDBInput](https://www.devwares.com/docs/contrast/angular/components/input) component for our autocomplete input field. 
 
 ![Angular Bootstrap Autocomplete usage within a card](./images/autocompleteusage.png)
 
 ###### Typescript
-```typescript
+```ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -363,7 +364,7 @@ export class AutocompleteComponent implements OnInit {
 
 ## Contrast Angular Bootstrap Autocomplete Props
 
-This section will build on your information about the props you get to use with the Contrast React Bootstrap Autocomplete component. You will find out what these props do, their default values, and how you would use them in your code.
+This section will build on your information about the props you get to use with the Contrast Angular Bootstrap Autocomplete component. You will find out what these props do, their default values, and how you would use them in your code.
 
 The table below lists other prop options of the `CDBAutocomplete` component.
 

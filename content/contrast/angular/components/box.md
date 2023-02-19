@@ -2,20 +2,21 @@
 title: "Box"
 metaTitle: "Angular Bootstrap Box"
 metaDescription: "Angular Bootstrap boxes are layout components which help to write build components for of the CSS utility needs"
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/angular/components/box.md"
 ---
 
-# Angular Bootstrap Box
+# Contrast Angular Bootstrap Box
 
-Angular Bootstrap boxes are layout components which help to write build components for of the CSS utility needs.
+Contrast Angular Bootstrap boxes are layout components which help to create build components for of the CSS utility needs.
 
-Angular Bootstrap Box component can become any element from `ElementType` like `div`, `span`, `img`, `video` etc. depending on the value of the `tag` prop. The default is a `div` element.
+Contrast Angular Bootstrap Box component can become any element from `ElementType` like `div`, `span`, `img`, `video` etc. depending on the value of the `tag` prop. The default is a `div` element.
 
 
 ## Importing the Contrast Angular Bootstrap Box Module
 
 To use the Contrast Angular Bootstrap Box component in your project you need to import `BoxModule`.
 
-```typescript
+```ts
 import {BoxModule } from 'cdbangular';
 ```
 
@@ -41,11 +42,11 @@ Use the `tag` prop to indicate the HTML element you are trying to imitate with t
 ```
 ## Display
 
-With Contrast Angular Bootstrap component you can set any display CSS style from Bootstrap 4 to CDBox component like `d-none`, `d-flex` etc.
+With Contrast Angular Bootstrap Box component, you can set any CSS display style from Bootstrap 5 like `d-none`, `d-flex` etc.
 
 ![Angular Bootstrap Box](./images/boxdisplay.png)
 
-###### html
+###### HTML
 ```html
 <CDBBox display="flex">
   Display Flex
@@ -69,7 +70,7 @@ We can use props like `justifyContent`, `flex`, `alignItems`, `alignContent`, `a
 
 ![Angular Bootstrap Box Flex](./images/boxflex.png)
 
-###### html
+###### HTML
 ```html
 <CDBBox display="flex" justifyContent="center">
   Justify Content Center
@@ -114,11 +115,11 @@ We can use props like `justifyContent`, `flex`, `alignItems`, `alignContent`, `a
 
 ## Colors
 
-With CDBox component you can set text CSS colors to element between `CDBox` component.
+With CDBox component you can set element's text color.
 
 ![Angular Bootstrap Box colors](./images/boxcolor.png)
 
-###### html
+###### HTML
 ```html
 <CDBBox color="red">
   Red Color
@@ -139,7 +140,7 @@ Use the `bg` prop to set the background color of your box.
 
 ![Angular Bootstrap Box Bakground colors](./images/boxbackgroundcolors.png)
 
-###### html
+###### HTML
 ```html
 <CDBBox bg="success">
   Success Background
@@ -157,7 +158,7 @@ Use the `bg` prop to set the background color of your box.
 
 ## Contrast Angular Bootstrap Box Props
 
-This section will build on your information about the props you get to use with the Contrast React Bootstrap Autocomplete component. You will find out what these props do, their default values, and how you would use them in your code.
+This section will build on your information about the props you get to use with the Contrast Angular Bootstrap Box component. You will find out what these props do, their default values, and how you would use them in your code.
 
 The table below lists other prop options of the `CDBBox` component.
 

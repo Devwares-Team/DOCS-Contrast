@@ -2,6 +2,7 @@
 title: 'Forms'
 metaTitle: 'Bootstrap 5 Forms - Bootstrap CSS tutorial'
 metaDescription: 'Bootstrap 5 forms are input-based components which are designed to collect users data. All of these forms, whether used as a login, subscription, or contact form, may be readily altered.'
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/javascript/components/forms.md"
 ---
 
 # Bootstrap 5 Forms
@@ -10,57 +11,56 @@ Bootstrap 5 forms are input-based components that are used to collect informatio
 
 Predefined Form logins, Form registers, Form subscriptions, Form contacts, and other layout forms with varied designs are all available in Contrast Bootstrap. Each of them has an own set of capabilities.
 
-## Default Form Login
+## Default Login Form
 
-![Bootstrap Form Login](./images/1.png)
+<Form1/>
 
-###### html
+###### HTML
 
 ```html
-	        <div class="border d-flex flex-column" style="width:30rem;">
-	              <div class="mx-4 p-3">
-	                <div class="text-center mt-4 mb-4">
-	                  <p class="h4"> Sign in </p>
-	                </div>
-		            <div class="cs-form">
-		                <input type="email" class="form-control border-top-0 border-left-0 border-right-0">
-		                <label>E-mail</label>
-		            </div>
-		            <div class="cs-form">
-		                <input type="password" class="form-control border-top-0 border-left-0 border-right-0">
-		                <label>Password</label>
-		            </div>
-	                <div class="d-flex flex-wrap justify-content-center align-items-center">
-	                  <input type="checkbox" class="mr-1"/>
-	                  <p class="m-0">Remember me</p>
-	                  <a class="text-decoration-none ml-3" href="#">Forgot Password ?</a>
-	                </div>
-	                <button class="btn btn-dark btn-block my-3" >
-	                    Sign in
-	                </button>
-	                <p class="text-center">Not a member? <a class="text-decoration-none" href="#">Register</a></p>
-	                <p class="text-center"> or sign in with</p>
-	                <div class="my-3 d-flex justify-content-center">
-	                  <button class="m-0 btn btn-flat">
-	                    <i class="fab fa-facebook-f"></i>
-	                  </button>
-	                  <button class="m-0 btn btn-flat">
-	                    <i class="fab fa-twitter"></i>
-	                  </button>
-	                  <button class="m-0 btn btn-flat">
-	                    <i class="fab fa-google-plus-g"></i>
-	                  </button>
-	                </div>
-	              </div>
-	        </div>
-        </div>
+<div class="border d-flex flex-column" style="width:30rem;">
+  <div class="mx-4 p-3">
+    <div class="text-center mt-4 mb-4">
+      <p class="h4">Sign in</p>
+    </div>
+    <div class="cs-form">
+      <input type="email" class="form-control border-top-0 border-left-0 border-right-0" />
+      <label>E-mail</label>
+    </div>
+    <div class="cs-form">
+      <input type="password" class="form-control border-top-0 border-left-0 border-right-0" />
+      <label>Password</label>
+    </div>
+    <div class="d-flex flex-wrap justify-content-center align-items-center">
+      <input type="checkbox" class="mr-1" />
+      <p class="m-0">Remember me</p>
+      <a class="text-decoration-none ml-3" href="#">Forgot Password ?</a>
+    </div>
+    <button class="btn btn-dark btn-block my-3">
+      Sign in
+    </button>
+    <p class="text-center">Not a member? <a class="text-decoration-none" href="#">Register</a></p>
+    <p class="text-center">or sign in with</p>
+    <div class="my-3 d-flex justify-content-center">
+      <button class="m-0 btn btn-flat">
+        <i class="fab fa-facebook-f"></i>
+      </button>
+      <button class="m-0 btn btn-flat">
+        <i class="fab fa-twitter"></i>
+      </button>
+      <button class="m-0 btn btn-flat">
+        <i class="fab fa-google-plus-g"></i>
+      </button>
+    </div>
+  </div>
+</div>
 ```
 
-## Contrast Form Login
+## Contrast Login Form
 
-![Bootstrap Form Login](./images/2.png)
+<Form2/>
 
-###### html
+###### HTML
 
 ```html
 <div class="border d-flex flex-column" style="width:30rem;">
@@ -104,11 +104,11 @@ Predefined Form logins, Form registers, Form subscriptions, Form contacts, and o
 </div>
 ```
 
-## Default Form Register
+## Default Register Form
 
-![Bootstrap Form Register](./images/3.png)
+<Form3/>
 
-###### html
+###### HTML
 
 ```html
 <div class="border d-flex flex-column" style="width:30rem;">
@@ -175,11 +175,11 @@ Predefined Form logins, Form registers, Form subscriptions, Form contacts, and o
 </div>
 ```
 
-## Contrast Form Register
+## Contrast Register Form
 
-![Bootstrap Form Register](./images/4.png)
+<Form4/>
 
-###### html
+###### HTML
 
 ```html
 <div class="border d-flex flex-column" style="width:30rem;">
@@ -249,11 +249,11 @@ Predefined Form logins, Form registers, Form subscriptions, Form contacts, and o
 </div>
 ```
 
-## Default Form Subscription
+## Default Subscription Form
 
-![Bootstrap Form Subscription](./images/5.png)
+<Form5/>
 
-###### html
+###### HTML
 
 ```html
 <div class="border d-flex flex-column" style="width:30rem;">
@@ -282,11 +282,11 @@ Predefined Form logins, Form registers, Form subscriptions, Form contacts, and o
 </div>
 ```
 
-## Contrast Form Submission
+## Contrast Subscription Form
 
-![image info](./images/6.png)
+<Form6/>
 
-###### html
+###### HTML
 
 ```html
 <div class="border d-flex flex-column" style="width:30rem;">
@@ -311,14 +311,13 @@ Predefined Form logins, Form registers, Form subscriptions, Form contacts, and o
     </button>
   </div>
 </div>
->
 ```
 
-## Default Form Contact
+## Default Contact Form
 
-![Bootstrap Form Contact](./images/7.png)
+<Form7/>
 
-###### html
+###### HTML
 
 ```html
 <div class="border d-flex flex-column" style="width:30rem;">
@@ -355,11 +354,11 @@ Predefined Form logins, Form registers, Form subscriptions, Form contacts, and o
 </div>
 ```
 
-## Contrast Form Contact
+## Contrast Contact Form
 
-![Bootstrap Form Contact](./images/8.png)
+<Form8/>
 
-###### html
+###### HTML
 
 ```html
 <div class="border d-flex flex-column" style="width:30rem;">
@@ -398,9 +397,9 @@ Predefined Form logins, Form registers, Form subscriptions, Form contacts, and o
 
 ## Login Form with Icons
 
-![Bootstrap Form Login With Icons](./images/9.png)
+<Form9/>
 
-###### html
+###### HTML
 
 ```html
 <div class="border d-flex flex-column" style="width:30rem;">
@@ -426,11 +425,11 @@ Predefined Form logins, Form registers, Form subscriptions, Form contacts, and o
 >
 ```
 
-## Login Form with Outside Label
+## Login Form with Label
 
-![Bootstrap Form Login with Outside Label](./images/10.png)
+<Form10/>
 
-###### html
+###### HTML
 
 ```html
 <div class="border d-flex flex-column" style="width:30rem;">
@@ -459,9 +458,9 @@ Predefined Form logins, Form registers, Form subscriptions, Form contacts, and o
 
 ## Sign Up Form with Icon
 
-![image info](./images/11.png)
+<Form11/>
 
-###### html
+###### HTML
 
 ```html
 <div class="border d-flex flex-column" style="width:30rem;">
@@ -496,11 +495,11 @@ Predefined Form logins, Form registers, Form subscriptions, Form contacts, and o
 </div>
 ```
 
-## Sign Up Form Outside Label
+## Sign Up Form with Label
 
-![Bootstrap Form Sign Up Outside Label](./images/12.png)
+<Form12/>
 
-###### html
+###### HTML
 
 ```html
 <div class="border d-flex flex-column" style="width:30rem;">
@@ -541,9 +540,9 @@ Predefined Form logins, Form registers, Form subscriptions, Form contacts, and o
 
 ## Subscription Form with Icon
 
-![Bootstrap Form Subscription with Icon](./images/13.png)
+<Form13/>
 
-###### html
+###### HTML
 
 ```html
 <div class="border d-flex flex-column" style="width:30rem;">
@@ -571,9 +570,9 @@ Predefined Form logins, Form registers, Form subscriptions, Form contacts, and o
 
 ## Subscription Form without Icon
 
-![Bootstrap Form Subscription without Icon](./images/14.png)
+<Form14a/>
 
-###### html
+###### HTML
 
 ```html
 <div class="border d-flex flex-column" style="width:30rem;">
@@ -603,9 +602,9 @@ Predefined Form logins, Form registers, Form subscriptions, Form contacts, and o
 
 ## Contact Form with Icon
 
-![Bootstrap Form Contact With Icon](./images/15.png)
+<Form15/>
 
-###### html
+###### HTML
 
 ```html
 <div class="border d-flex flex-column" style="width:30rem;">
@@ -641,11 +640,11 @@ Predefined Form logins, Form registers, Form subscriptions, Form contacts, and o
 </div>
 ```
 
-## Contact Form with Outside Label
+## Contact Form with Label
 
-![Bootstrap Form Contact With Outside Label](./images/16.png)
+<Form16/>
 
-###### html
+###### HTML
 
 ```html
 <div class="border d-flex flex-column" style="width:30rem;">
@@ -685,11 +684,11 @@ Predefined Form logins, Form registers, Form subscriptions, Form contacts, and o
 </div>
 ```
 
-## Form Login
+## Login Form
 
-![Bootstrap Form Login](./images/17.png)
+<Form17/>
 
-###### html
+###### HTML
 
 ```html
 <div class="border d-flex flex-column" style="width:30rem;">
@@ -727,11 +726,11 @@ Predefined Form logins, Form registers, Form subscriptions, Form contacts, and o
 </div>
 ```
 
-## Sign Up
+## Sign Up Form
 
-![Bootstrap Form Sign Up](./images/18.png)
+![Bootstrap Form Sign Up](./images/form18.png)
 
-###### html
+###### HTML
 
 ```html
 <div class="border d-flex flex-column" style="width:30rem;">
@@ -787,9 +786,9 @@ Predefined Form logins, Form registers, Form subscriptions, Form contacts, and o
 
 ## Login Form
 
-![Bootstrap Form Login](./images/19.png)
+![Bootstrap Form Login](./images/form19.png)
 
-###### html
+###### HTML
 
 ```html
 <div class="border d-flex flex-column" style="width:30rem;">
@@ -836,11 +835,11 @@ Predefined Form logins, Form registers, Form subscriptions, Form contacts, and o
 </div>
 ```
 
-## Sign Up with Background Image
+## Sign Up Form with Background Image
 
-![Bootstrap Form Sign Up With Background Image](./images/20.png)
+![Bootstrap Form Sign Up With Background Image](./images/form20.png)
 
-###### html
+###### HTML
 
 ```html
 <div
@@ -878,11 +877,12 @@ Predefined Form logins, Form registers, Form subscriptions, Form contacts, and o
 
 ## Sign In Forms
 
-![Bootstrap Form Sign In](./images/21.png)
-![Bootstrap Form Sign In](./images/22.png)
-![Bootstrap Form Sign In](./images/23.png)
+![Bootstrap Form Sign In](./images/form21a.png)
+![Bootstrap Form Sign up](./images/form21b.png)
+![Bootstrap Form Sign In](./images/form21c.png)
+![Bootstrap Form Sign up](./images/form21d.png)
 
-###### html
+###### HTML
 
 ```html
       <div class="header">Sign In forms

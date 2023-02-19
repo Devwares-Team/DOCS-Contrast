@@ -1,22 +1,23 @@
 ---
 title: 'Icon'
-metaTitle: 'Bootstrap 5 Forms - Bootstrap CSS tutorial'
+metaTitle: 'Bootstrap 5 Icons - Bootstrap CSS tutorial'
 metaDescription: 'Bootstrap 5 Icons are little symbols or images that can serve as a link, provide information, or simply be aesthetic.'
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/javascript/components/icon.md"
 ---
 
 # Bootstrap 5 Icon
 
-Bootstrap 5 Icons are little symbols or images that can serve as a link, provide information, or simply be aesthetic.
+Bootstrap 5 Icons are representative symbols or images that can serve as a link, provide information, or simply be aesthetic.
 
-The Contrast Bootstrap Icon component allows you to incorporate brand icons (such as Twitter, Facebook, and Stack Overflow) in your project with predefined styles. However, only pro users have access to this feature.
+The Contrast Bootstrap 5 Icon component allows you to incorporate brand icons (such as Twitter, Facebook, and Stack Overflow) in your project with predefined styles. However, only pro users have access to this feature. You can learn more on [How to add Icons to your Bootstrap 5 Project](https://www.devwares.com/blog/how-to-add-icons-to-your-bootstrap-5-project/)
 
 <i/>
 
-## Default Icon
+## Default Icons
 
-![Bootstrap Icon Default](./images/icon1.png)
+<icon1/>
 
-###### html
+###### HTML
 
 ```html
 <button type="button" class="btn btn-primary">
@@ -49,15 +50,13 @@ The Contrast Bootstrap Icon component allows you to incorporate brand icons (suc
 </button>
 ```
 
-<i/>
-
 ## Border Icons
 
 To give your icons a border, use the `icon-border` property.
 
-![Bootstrap Icons Border](./images/icon2.png)
+<Icon2/>
 
-###### html
+###### HTML
 
 ```html
 <i class="fa fa-book icon-border"></i>
@@ -69,15 +68,13 @@ To give your icons a border, use the `icon-border` property.
 <i class="fa fa-lock icon-border"></i>
 ```
 
-<i/>
-
 ## Spin Icons
 
 Use the `icon-spin` class to spin your Contrast Bootstrap 5 icons.
 
-![Bootstrap Icon Spin](./images/spinicon.gif)
+<Icon3/>
 
-###### html
+###### HTML
 
 ```html
 <i class="fa fa-book icon-spin"></i>
@@ -89,27 +86,23 @@ Use the `icon-spin` class to spin your Contrast Bootstrap 5 icons.
 <i class="fa fa-lock icon-spin"></i>
 ```
 
-<i/>
-
 ## Pull Icons
 
-![Bootstrap Icon Pull](./images/icon4.png)
+<Icon4/>
 
-###### html
+###### HTML
 
 ```html
 <i class="fa fa-book icon-pull"></i>
 ```
 
-<i/>
-
 ## Pulse Icons
 
 To make your icons spin a little quicker, use the `icon-pulse` class.
 
-![Bootstrap Icons Pulse](./images/pulseicon.gif)
+<Icon5/>
 
-###### html
+###### HTML
 
 ```html
 <i class="fa fa-book icon-pulse"></i>
@@ -121,31 +114,28 @@ To make your icons spin a little quicker, use the `icon-pulse` class.
 <i class="fa fa-lock icon-pulse"></i>
 ```
 
-<i/>
-
 ## Rotate Icons
 
-![Bootstrap Icons Rotate](./images/icon7.png)
+<Icon6/>
 
-###### html
+###### HTML
 
 ```html
-<i class="fa fa-user icon-rotate"></i>
-<i class="fa fa-check icon-rotate"></i>
+<i class="fa fa-user icon-rotate"></i> <i class="fa fa-check icon-rotate"></i>
 ```
-
-<i/>
 
 ## Sizes
 
 Use the icon class, then append the size code to determine how small or huge you want your icon to be (lg for large, and sm for small). The size is set to medium by default.
 
-![Bootstrap Icon Sizes](./images/icon8.png)
+<Icon7/>
 
-###### html
+###### HTML
 
 ```html
 <i class="fa fa-user icon-lg"></i>
 <i class="fa fa-user icon"></i>
 <i class="fa fa-user icon-sm"></i>
 ```
+
+Adding Icons is simple with the bootstrap 5 UI kit. You can check out

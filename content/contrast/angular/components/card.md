@@ -2,30 +2,31 @@
 title: "Card"
 metaTitle: "Angular Bootstrap Card Component"
 metaDescription: "Angular Bootstrap card is a flexible and extensible content container"
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/angular/components/card.md"
 ---
 
-# Angular Bootstrap Card
+# Contrast Angular Bootstrap Card
 
-An Angular Bootstrap card is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options.
+ Contrast  Angular Bootstrap card is a flexible and configurable content container. It includes several headers and footers options, a wide variety of content, contextual background colors, and powerful display options.
 Card components display content build of different elements with characteristic shadows, depth and hover effects.
 
 ## Importing the Contrast Angular Bootstrap Card Module
 
 To use the Contrast Angular Bootstrap Card component in your project you need to import `CardModule`.
 
-```typescript
+```ts
 import {CardModule } from 'cdbangular';
 ```
 
 ## Default Card
 
-Cards are built with as little markup and styles as possible, but still manage to deliver a ton of control and customization.
+Contrast Angular Bootstrap Cards are built with as little markup and styles as possible, but still manage to deliver a ton of control and customization.
 
 Alongside the `CDBCard` component other components we use to create our card are the `CDBCardImage` component for holding images in our card, the `CDBCardBody` for the body of the card, the `CDBCardTitle` component, which is for writing titles, and `CDBCardText` for texts in our card.
 
 ![Angular Bootstrap Card Default](./images/cardsbasic.png)
 
-###### html
+###### HTML
 ```html
 <CDBCard style="width: 25rem">
     <CDBCardImage class="img-fluid" src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg">
@@ -44,7 +45,7 @@ Alongside the `CDBCard` component other components we use to create our card are
 
 ![Angular Bootstrap Card Simple](./images/cardsimple.png)
 
-###### html
+###### HTML
 ```html
 <CDBCard style="width: 25rem">
     <CDBCardBody>
@@ -82,7 +83,7 @@ Set the [border] property to true to give your cards borders.
 
 ![Angular Bootstrap Cards Bordered](./images/cardbodered.png)
 
-###### html
+###### HTML
 ```html
 <CDBCard style="width: 25rem" [border]=true>
     <CDBCardBody>
@@ -118,7 +119,7 @@ Set the [border] property to true to give your cards borders.
 
 ![Angular Bootstrap Artwork Top Cards](./images/cardsartworktop.png)
 
-###### html
+###### HTML
 ```html
 <CDBCard style="width: 25rem">
     <CDBCardImage class="img-fluid" src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg">
@@ -149,7 +150,7 @@ Set the [border] property to true to give your cards borders.
 
 ![Angular Bootstrap Middle Cards](./images/cardsartworkmiddle.png)
 
-###### html
+###### HTML
 ```html
 <CDBCard style="width: 25rem">
     <CDBCardBody>
@@ -181,14 +182,14 @@ Set the [border] property to true to give your cards borders.
 </CDBCard>
 ```
 
-<i/>
+
 
 ## Widget Cards
 
 
 ![Angular Bootstrap Widget Cards](./images/cardwidget.png)
 
-###### html
+###### HTML
 ```html
 <CDBCard style="width: 25rem">
     <CDBCardBody>
@@ -199,13 +200,13 @@ Set the [border] property to true to give your cards borders.
     </CDBCardBody>
 </CDBCard>
 ```
-<i/>
+
 
 ## Profile Display Card
 
 ![Angular Bootstrap Profile Display Card](./images/cardprofiledisplay.png)
 
-###### html
+###### HTML
 ```html
 <CDBCard style="width: 25rem">
     <CDBCardImage class="img-fluid" src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg">
@@ -228,14 +229,14 @@ Set the [border] property to true to give your cards borders.
     </CDBCardBody>
 </CDBCard>
 ```
-<i/>
+
 
 ## Profile List Card
 
 
 ![Angular Bootstrap Profile List Card](./images/cardprofilelist.png)
 
-###### html
+###### HTML
 ```html
 <CDBCard style="width: 25rem">
     <CDBCardTitle class="lead p-3 border-bottom">Team Members</CDBCardTitle>
@@ -313,7 +314,7 @@ Set the [border] property to true to give your cards borders.
     </CDBCardBody>
 </CDBCard>
 ```
-<i/>
+
 
 ## Artwork Full Cards
 
@@ -321,7 +322,7 @@ Set the [border] property to true to give your cards borders.
 
 ![Angular Bootstrap Artwork Full Cards](./images/cardartworkfull.png)
 
-###### html
+###### HTML
 ```html
 <CDBCard
     style="width: 25rem; background-image: url('https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547_960_720.jpg')">
@@ -349,7 +350,7 @@ Set the [border] property to true to give your cards borders.
     </CDBCardBody>
 </CDBCard>
 ```
-<i/>
+
 
 ## Profile Cards
 
@@ -360,7 +361,7 @@ Set the [border] property to true to give your cards borders.
 ![Angular Bootstrap Cards Profile](./images/cardprofile3.png)
 ![Angular Bootstrap Cards Profile](./images/cardprofile4.png)
 
-###### html
+###### HTML
 ```html
 <CDBCard
     style="position: relative; width: 25rem; height: 33rem; padding: 25px; background-image: url(/assets/img/rectangle.png); background-repeat: no-repeat; background-position: center;">
@@ -626,7 +627,7 @@ The table below lists other prop options of the `CDBCardBody` component.
 | Name            | Type        | Default      |   Description| Example      |
 | :------------- | :----------: | -----------: | :----------: | -----------: |
 | class      | String       |              |Adds custom classes	      |   class="myClass" |
-| cascade        | Boolean      | false        | Switches the CardBody to cascade style mode | cascade=true |
+| cascade        | Boolean      | false        | Switches the card's body to cascade style mode | cascade=true |
 
 
 ## API Reference: Contrast Card Image Properties
@@ -636,8 +637,8 @@ The table below lists other prop options of the `CDBCardImage` component.
 | Name            | Type        | Default      |   Description| Example      |
 | :------------- | :----------: | -----------: | :----------: | -----------: |
 | class      | String       | |Adds custom classes	      |     class="myClass" |
-| cascade        | Boolean      | false        | Switches the CardBody to cascade style mode | cascade=true |
-| hover          | Boolean      | false        | Switches on hover behaviour | hover=true  |
+| cascade        | Boolean      | false        | Switches the card's body to cascade style mode | cascade=true |
+| hover          | Boolean      | false        | Switches on hover behavior | hover=true  |
 | overlay        | String       | white-light  | Sets the color of hover overlay | overlay="white-light" |
 | src            | String       |              | Source of the image | src="image_src" |
 | top            | Boolean      | false        | Makes image fluid | top=true |
