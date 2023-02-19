@@ -2,11 +2,12 @@
 title: 'Card'
 metaTitle: 'Bootstrap Card - Bootstrap CSS tutorial'
 metaDescription: 'Bootstrap 5 cards are flexible and extensible content containers.'
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/javascript/components/card.md"
 ---
 
 # Bootstrap 5 Card
 
-A flexible and configurable Bootstrap 5 card is a content container. It contains headers and footers, as well as a wealth of information, proper background colors, and a variety of display options.
+Bootstrap 5 Card is a flexible and configurable content container. It contains headers and footers, as well as a wealth of information, proper background colors, and a variety of display options.
 
 Card components show material made up of various pieces with shadows, depth, and hover effects.
 
@@ -18,9 +19,7 @@ To use Contrast Bootstrap's predefined card styles in your project, use the `car
 
 `card-title` for titles and `card-text` for texts in our card are two more classes that allow you to use Contrast Bootstrap default styles.
 
-![Bootstrap Card Default](./images/cardsbasic.png)
-
-###### Html
+<cardExample1 />
 
 ```html
 <div class="card" style="width: 25rem">
@@ -39,9 +38,7 @@ To use Contrast Bootstrap's predefined card styles in your project, use the `car
 
 ## Simple Cards
 
-![Bootstrap Card Default](./images/cardsimple.png)
-
-###### Html
+<cardExample2 />
 
 ```html
 <div class="card" style="width: 25rem">
@@ -74,9 +71,7 @@ To use Contrast Bootstrap's predefined card styles in your project, use the `car
 
 Use the `card-border` class to give your card borders.
 
-![Bootstrap Cards Bordered](./images/cardbodered.png)
-
-###### Html
+<cardExample3 />
 
 ```html
 <div class="card card-border" style="width: 25rem">
@@ -107,9 +102,7 @@ Use the `card-border` class to give your card borders.
 
 ## Artwork Top Cards
 
-![Bootstrap Cards Artwork Top Cards](./images/cardsartworktop.png)
-
-###### Html
+<cardExample4 />
 
 ```html
 <div class="card" style="width: 25rem">
@@ -136,9 +129,7 @@ Use the `card-border` class to give your card borders.
 
 ## Artwork Middle Cards
 
-![Bootstrap Cards Artwork Middle Cards](./images/cardsartworkmiddle.png)
-
-###### Html
+<cardExample5 />
 
 ```html
 <div class="card" style="width: 25rem">
@@ -165,9 +156,7 @@ Use the `card-border` class to give your card borders.
 
 ## Widget Cards
 
-![Bootstrap Cards Widget](./images/cardwidget.png)
-
-###### Html
+<cardExample6 />
 
 ```html
 <div class="card" style="width: 25rem">
@@ -181,9 +170,7 @@ Use the `card-border` class to give your card borders.
 
 ## Profile Display Card
 
-![Bootstrap Card Profile Display](./images/cardprofiledisplay.png)
-
-###### Html
+<cardExample7 />
 
 ```html
 <div class="card" style="width:25rem">
@@ -210,57 +197,10 @@ Use the `card-border` class to give your card borders.
 </div>
 ```
 
-## Profile List Card
-
-![Bootstrap Card Profile List Card](./images/cardprofilelist.png)
-
-###### Html
-
-```html
-<div class="card" style="width:25rem">
-  <h2 class="card-title lead p-3 border-bottom">Team Members</h2>
-  <div class="py-0 card-body">
-    <div class="pane mt-2">
-      <img class="pane-img pane-md" src="/img/pane/pane1.png" />
-      <div class="ml-3">
-        <h2 class="card-title my-0 h6">Warren Briggs</h2>
-        <p class="small m-0"><i class="fa fa-circle small p-0 mr-1"></i>Online</p>
-      </div>
-      <button class="btn btn-success btn-sm ml-auto flat">Add</button>
-    </div>
-    <div class="pane mt-4">
-      <img class="pane-img pane-md" src="/img/pane/pane2.png" />
-      <div class="ml-3">
-        <h2 class="card-title my-0 h6">Lu Chen</h2>
-        <p class="small m-0"><i class="fa fa-circle small text-warning mr-1"></i>In a meeting</p>
-      </div>
-      <button class="btn btn-success btn-sm ml-auto flat">Add</button>
-    </div>
-    <div class="pane mt-4">
-      <img class="pane-img pane-md" src="/img/pane/pane3.png" />
-      <div class="ml-3">
-        <h2 class="card-title my-0 h6">Lilah Loselev</h2>
-        <p class="small m-0"><i class="fa fa-circle small text-muted mr-1"></i>Not Available</p>
-      </div>
-      <button class="btn btn-success btn-sm ml-auto flat">Add</button>
-    </div>
-    <div class="pane my-4">
-      <img class="pane-img pane-md" src="/img/pane/pane4.png" />
-      <div class="ml-3">
-        <h2 class="card-title my-0 h6">Danny</h2>
-        <p class="small m-0"><i class="fa fa-circle small text-danger mr-1"></i>Offline</p>
-      </div>
-      <button class="btn btn-success btn-sm ml-auto flat">Add</button>
-    </div>
-  </div>
-</div>
-```
 
 ## Artwork Full Cards
 
-![Bootstrap Cards Artwork Full Cards](./images/cardartworkfull.png)
-
-###### Html
+<cardExample9 />
 
 ```html
 <div
@@ -300,12 +240,7 @@ Use the `card-border` class to give your card borders.
 
 ## Profile Cards
 
-![Bootstrap Cards Profile Cards](./images/cardprofile1.png)
-![Bootstrap Cards Profile Cards](./images/cardprofile2.png)
-![Bootstrap Cards Profile Cards](./images/cardprofile3.png)
-![Bootstrap Cards Profile Cards](./images/cardprofile4.png)
-
-###### Html
+<cardExample10 />
 
 ```html
 <div

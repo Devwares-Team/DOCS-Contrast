@@ -2,18 +2,19 @@
 title: "Breadcrumb"
 metaTitle: "Angular Bootstrap Breadcrumb "
 metaDescription: "Angular Bootstrap Breadcrumb indicates the current page’s location within a navigational hierarchy that automatically adds separators via CSS"
+gtihubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/angular/components/breadcrumb.md"
 ---
 
-# Angular Bootstrap Breadcrumb
+# Contrast Angular Bootstrap Breadcrumb
 
-Angular Bootstrap Breadcrumb reveals the user’s location in a website or Web application. It is used as a navigational tool that offers users a way to trace their paths and be aware of their location within the website. 
+Contrast Angular Bootstrap Breadcrumb reveals the user’s location in a website or web application.  It's a navigational component that allows website visitors or web application users to track their current location and previous navigated page(s).
 
 
 ## Importing the Contrast Angular Bootstrap Breadcrumb Module
 
 To use the Contrast Angular Bootstrap Breadcrumb component in your project you need to import `BreadcrumbModule`.
 
-```typescript
+```ts
 import {BreadcrumbModule } from 'cdbangular';
 ```
 
@@ -21,7 +22,7 @@ import {BreadcrumbModule } from 'cdbangular';
 
 ![Angular Bootstrap Breadcrumb](./images/breadcrumb.png)
 
-###### html
+###### HTML
 ```html
 <CDBBreadcrumb color="none">
     <li class="breadcrumb-item">
@@ -43,14 +44,12 @@ import {BreadcrumbModule } from 'cdbangular';
 </CDBBreadcrumb>
 ```
 
-<i/>
-
 ## Breadcrumb with Icons
 
 
 ![Angular Bootstrap Breadcrumb with Icons](./images/breadcrumbwithicon.png)
 
-###### html
+###### HTNL
 ```html
 <CDBBreadcrumb color="none" class="align-items-center">
     <li class="breadcrumb-item">
@@ -82,7 +81,7 @@ import {BreadcrumbModule } from 'cdbangular';
 
 ![Angular Bootstrap Breadcrumb with colors](./images/breadcrumbwithcolors.png)
 
-###### html
+###### HTML
 ```html
 <CDBBreadcrumb color="dark" class="align-items-center text-white">
     <li class="breadcrumb-item">

@@ -2,19 +2,20 @@
 title: 'Carousel'
 metaTitle: 'Bootstrap 5 Carousel - Bootstrap CSS tutorial'
 metaDescription: 'Bootstrap 5 Carousel is a dynamic and interactive slideshow designed for presenting content, particularly images and videos.'
+githubUrl : "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/javascript/components/carousel.md"
 ---
 
 # Bootstrap 5 Carousel
 
 Bootstrap 5 Carousel is a dynamic and interactive slideshow designed for presenting content, particularly images and videos.
 
-It's a slideshow that allows you to cycle through a variety of stuff. Photos, text, and custom markup can all be utilized with it. Also supported are previous/next buttons and indicators.
+It's a slideshow that allows you to cycle through a variety of contents. Photos, text, and custom markup can all be utilized with it. Also supported are previous/next buttons and indicators.
 
 ## Default Carousel
 
-![Bootstrap Carousel Default](https://i.imgur.com/NH00iYw.gif)
+<Carousel1/>
 
-###### html
+###### HTML
 
 ```html
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">

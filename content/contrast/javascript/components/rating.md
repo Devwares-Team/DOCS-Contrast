@@ -1,18 +1,20 @@
 ---
+
 title: "Rating"
 metaTitle: "Bootstrap 5 Rating - Bootstrap CSS tutorial"
 metaDescription: "
 The interactive icons in the Bootstrap 5 Rating component allow consumers to share their thoughts on your product."
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/javascript/components/rating.md"
+---
+# Bootstrap 5 Rating
 
----# Bootstrap 5 Rating
-
-The interactive icons in the Bootstrap 5 Rating component allow consumers to share their thoughts on your product. This allows you to obtain input from your product's users in order to improve the product's outcome.
+The interactive icons in the Bootstrap 5 Rating component c
 
 ## Default Rating
 
-![Bootstrap Rating Default](./images/rating.png)
+<Rating1/>
 
-######html
+###### HTML
 
 ```html
 <div id="rating1" class="star-rating" role="rating" data-rating="3">
@@ -23,6 +25,8 @@ The interactive icons in the Bootstrap 5 Rating component allow consumers to sha
   <span class="star" data-value="5">&#9733;<span class="star-notification">Excellent</span></span>
 </div>
 ```
+
+###### JavaScript
 
 ```js
 <script>

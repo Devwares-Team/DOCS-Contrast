@@ -2,21 +2,18 @@
 title: "Radio"
 metaTitle: "Angular Bootstrap Radio Component"
 metaDescription: "Angular Bootstrap Radio button is a component used for allowing a user to make a single choice among many options"
-
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/angular/components/radio.md"
 ---
 
-# Angular Bootstrap Radio
+# Contrast Angular Bootstrap Radio
 
-Angular Bootstrap Radio button is a component used for allowing a user to make a single choice among many options, while
-`Checkboxes` are for selecting multiple options.
-
-<i/>
+Contrast Angular Bootstrap Radio button is a component that allow users to select an option from a list of options, while `Checkboxes` are for selecting multiple options.
 
 ## Importing the Contrast Angular Bootstrap Radio Module
 
 To use the Contrast Angular Bootstrap Radio component in your project you need to import `RadioModule`.
 
-```typescript
+```ts
 import {RadioModule } from 'cdbangular';
 ```
 
@@ -26,13 +23,12 @@ Use the Contrast Angular Bootstrap `CDBRadio` component to create radio buttons.
 
 ![Angular Bootstrap Radio](./images/radio1.png)
 
-###### html
+###### HTML
 ```html
 <CDBRadio value="Choice 1" fill="#eb7434" colorfill="#eb7434"></CDBRadio>
 <CDBRadio value="Choice 2" fill="green" colorfill="red"></CDBRadio>
 <CDBRadio value="Choice 3" fill="#000000" colorfill="#000000"></CDBRadio>
 ```
-<i/>
 
 ## Radio Group
 
@@ -42,7 +38,7 @@ With `CDBRadioGroup` component, you have an [answers] prop. This [answers] prop 
 
 ![Angular Bootstrap Radio Group](./images/radio2.png)
 
-###### html
+###### HTML
 ```html
 <CDBRadioGroup fill="#eb7434" colorfill="#eb7434" [answers]="['Choice 1', 'Choice 2' , 'Choice 3' , 'Choice 4' ]"></CDBRadioGroup>
 ```
@@ -50,7 +46,7 @@ With `CDBRadioGroup` component, you have an [answers] prop. This [answers] prop 
 
 # API
 
-This section will build on your information about the props you get to use with the Contrast React Bootstrap Radio component. You will find out what these props do, their default values, and how you would use them in your code.
+This section will build on your information about the props you get to use with the Contrast Angular Bootstrap Radio component. You will find out what these props do, their default values, and how you would use them in your code.
 
 
 

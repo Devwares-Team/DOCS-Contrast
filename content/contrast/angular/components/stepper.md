@@ -2,14 +2,14 @@
 title: "Stepper"
 metaTitle: "Angular Bootstrap Stepper"
 metaDescription: "Angular Bootstrap Stepper is a component that displays content as a process with defined by user milestones. Following steps are separated and connected by buttons"
-
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/angular/components/stepper.md"
 ---
 
-# Angular Bootstrap Stepper
+# Contrast Angular Bootstrap Stepper
 
-Angular Bootstrap Stepper is a component that displays content as a process with defined by user milestones. Following steps are separated and connected by buttons.
+Contrast Angular Bootstrap Stepper is a component that displays content as a process defined by user milestones. The steps are separated and linked by buttons.
 
-This is a great solution for a variety of registration forms, where you don't want to scare the user with loads of fields and questions.
+This is a great solution for forms, where you don't want to overwhelm users with loads of fields and questions.
 
 Stepper can be aligned vertically as well as horizontally.
 
@@ -21,13 +21,12 @@ Examples of Angular Bootstrap steps use:
 
 See the following Bootstrap Angular stepper examples:
 
-<i/>
 
 ## Importing the Contrast Angular Bootstrap Stepper Module
 
 To use the Contrast Angular Bootstrap Stepper component in your project you need to import `StepperModule`.
 
-```typescript
+```ts
 import {StepperModule } from 'cdbangular';
 ```
 
@@ -37,11 +36,11 @@ Use the Contrast Angular Bootstrap `CDBStepper` component to create steppers in 
 
 The `CDBStepper` takes in a `direction` prop, which specifies the orientation of your stepper.
 
-Alongside our `CDBStepper`, we also import [CDBIcon](https://www.devwares.com/docs/contrast/react/components/icon) for our icons, [CDBInput](https://www.devwares.com/docs/contrast/react/components/input) for the input fields, and the [CDBButton](https://www.devwares.com/docs/contrast/react/components/buttons) for our buttons.
+Alongside our `CDBStepper`, we also import [CDBIcon](https://www.devwares.com/docs/contrast/angular/components/icon) for our icons, [CDBInput](https://www.devwares.com/docs/contrast/angular/components/input) for the input fields, and the [CDBButton](https://www.devwares.com/docs/contrast/angular/components/buttons) for our buttons.
 
 ![Angular Bootstrap Vertical Stepper Default](https://i.imgur.com/khiy8Dd.gif)
 
-###### html
+###### HTML
 ```html
 <div class="container" style=" height: 500px; width:50px">
     <CDBStepper direction="vertical">
@@ -121,8 +120,8 @@ Alongside our `CDBStepper`, we also import [CDBIcon](https://www.devwares.com/do
         </CDBBtn>
     </div>
 ```
-###### typescript
-```typescript
+###### TypeScript
+```ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -151,14 +150,13 @@ export class StepperComponent implements OnInit {
   ngOnInit(): void {}
 }
 ```
-<i/>
 
 ## Basic Horizontal Stepper
 
 
 ![Angular Bootstrap Stepper Horizontal](https://i.imgur.com/eQMikuS.gif)
 
-###### html
+###### HTML
 ```html
 <div class="container" style="width:100%">
     <CDBStepper style="width:100%" direction="horizontal">
@@ -245,8 +243,8 @@ export class StepperComponent implements OnInit {
         </CDBBtn>
     </div>
 ```
-###### typescript
-```typescript
+###### TypeScript
+```ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -276,14 +274,12 @@ export class StepperComponent implements OnInit {
 }
 ```
 
-<i/>
-
 ## Stepper Without Icons
 
 
 ![Angular Bootstrap Stepper Without icons](./images/stepper.png)
 
-###### html
+###### HTML
 ```html
 <CDBStepper style="width:100%" direction="horizontal">
     <CDBStep name="Label 1" id={1}></CDBStep>
@@ -292,8 +288,8 @@ export class StepperComponent implements OnInit {
     <CDBStep name="Label 4" id={4}></CDBStep>
 </CDBStepper>
 ```
-###### typescript
-```typescript
+###### TypeScript
+```ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({

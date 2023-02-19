@@ -2,20 +2,21 @@
 title: "Select 2"
 metaTitle: "Angular Bootstrap Select"
 metaDescription: "Angular Bootstrap Select is a form control, that after the click displays a collapsible list of multiple values which can be used in forms, menus or surveys"
-
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/angular/components/select2.md"
 ---
+<ProAlertAngular />
 
-#  Angular Bootstrap Select2
+# Contrast Angular Bootstrap Select2
 
-The  Angular Bootstrap `Select2` is the pro version of the Contrast Angular Bootstrap Select component, [CDBSelect](https://www.devwares.com/docs/contrast/react/components/select). With more predefined styles for your select button. Get the CDB pro version to use in your project.  
+The Contrast Angular Bootstrap `Select2` is the pro version of the Contrast Angular Bootstrap Select component, [CDBSelect](https://www.devwares.com/docs/contrast/angular/components/select). With more predefined styles for your select button. Get the CDB pro version to use in your project.  
 
-<i/>
+
 
 ## Importing the Contrast Angular Bootstrap Select2 Module
 
 To use the Contrast Angular Bootstrap Select2 component in your project you need to import `Select2Module`.
 
-```typescript
+```ts
 import {Select2Module } from 'cdbangular';
 ```
 
@@ -23,13 +24,13 @@ import {Select2Module } from 'cdbangular';
 
 ![Angular Bootstrap Select](./images/select1.png)
 
-###### html
+###### HTML
 ```html
 <CDBSelect2 [options]='select2Options' [iconBrand]=true selected="Choose an option" color="white"></CDBSelect2>
 ```
 
-###### typescript
-```typescript
+###### TypeScript
+```ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -64,7 +65,6 @@ export class Select2Component implements OnInit {
   ngOnInit(): void {}
 }
 ```
-<i/>
 
 ## Disable Select Button
 
@@ -72,12 +72,12 @@ Use the `disabled` prop to disable the select button.
 
 ![Angular Bootstrap Select Disabled](./images/select2.png)
 
-###### html
+###### HTML
 ```html
 <CDBSelect2 [options]='select2Options' [iconBrand]=true selected="Choose an option" [disabled]=true color="none"></CDBSelect2>
 ```
-###### typescript
-```typescript
+###### TypeScript
+```ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -112,7 +112,6 @@ export class Select2Component implements OnInit {
   ngOnInit(): void {}
 }
 ```
-<i/>
 
 ## Colored Select Button
 
@@ -120,7 +119,7 @@ Use the `color` prop to give the select button a background color of your choice
 
 ![Angular Bootstrap Select Colored](./images/select3.png)
 
-###### html
+###### HTML
 ```html
 <CDBSelect2 [options]='select2Options' [iconBrand]=true selected="Choose an option" color="primary"></CDBSelect2>
 <CDBSelect2 [options]='select2Options' [iconBrand]=true selected="Choose an option" color="secondary"></CDBSelect2>
@@ -128,8 +127,8 @@ Use the `color` prop to give the select button a background color of your choice
 <CDBSelect2 [options]='select2Options' [iconBrand]=true selected="Choose an option" color="warning"></CDBSelect2>
 <CDBSelect2 [options]='select2Options' [iconBrand]=true selected="Choose an option" color="dark"></CDBSelect2>
 ```
-###### typescript
-```typescript
+###### TypeScript
+```ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -164,7 +163,6 @@ export class Select2Component implements OnInit {
   ngOnInit(): void {}
 }
 ```
-<i/>
 
 ## Colored Options with Hover
 
@@ -172,12 +170,12 @@ The `hoverColor` prop gives your select options an hover effect.
 
 ![Angular Bootstrap Select Hover Color](./images/select4.png)
 
-###### html
+###### HTML
 ```html
 <CDBSelect2 [options]='select2Options' [iconBrand]=true selected="Choose an option" [hoverColor]=true color="danger"></CDBSelect2>
 ```
-###### typescript
-```typescript
+###### TypeScript
+```ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -212,7 +210,6 @@ export class Select2Component implements OnInit {
   ngOnInit(): void {}
 }
 ```
-<i/>
 
 
 ## API Reference: Contrast Angular Bootstrap Select2 Props

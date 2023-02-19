@@ -2,15 +2,15 @@
 title: "Slider"
 metaTitle: "Angular Bootstrap Slider"
 metaDescription: "Angular Bootstrap Slider is an interactive component that lets the user swiftly slide through possible values spread on the desired range"
-
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/angular/components/slider.md"
 ---
 
 
-# Angular Bootstrap Slider
+# Contrast Angular Bootstrap Slider
 
-Angular Bootstrap Slider is an interactive component that lets the user swiftly slide through possible values spread on the desired range.
+Contrast Angular Bootstrap Slider is an interactive component that allows users to choose a value from a range of values using a sliding bar.
 
-Applications of a React Bootstrap slider:
+Applications of a Angular Bootstrap slider:
 
 * Brightness
 * Volume increase/decrease
@@ -20,14 +20,14 @@ Applications of a React Bootstrap slider:
 
 To use the Contrast Angular Bootstrap Slider component in your project you need to import `SliderModule`.
 
-```typescript
+```ts
 import {SliderModule } from 'cdbangular';
 ```
 
 ## Slider 
 
 ![Angular Bootstrap Slider](./images/slider.png)
-###### html
+###### HTML
 
 ```html
         <CDBSlider style="max-width: 300px;margin: auto;"></CDBSlider>

@@ -2,21 +2,22 @@
 title: 'Animation'
 metaTitle: 'Bootstrap 5 Animatons - Bootstrap CSS tutorial'
 metaDescription: 'Bootstrap 5 Animations are animated web elements that give the illusion of movement.'
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/javascript/components/animations.md"
 ---
 
 # Bootstrap 5 Animation
 
-Bootstrap 5 Animations are animated web elements that give the illusion of movement. Only CSS was used to create the +70 animations, which operate in all browsers.
+Bootstrap 5 Animations give the illusion of movement on web elements. Over 70+ animations were written in CSS and tested to have all browsers support.
 
-We use the Bootstrap Animation to animate items by giving them a `class` with the value `animate`. Another class we pass is the type of animation we want our element to have (e.g., bounce, flash, pulse, etc. ). Then we specify how long we want the animation to play for.
+The Bootstrap Animation can be used to animate web elements by adding a `class` with the value `animate`. Additionally, we add other classes to our elements which are the type of animation (e.g., bounce, flash, pulse, etc. ) and the duration of the the animation.
 
-![Bootstrap Animations](./images/animation.gif)
+<Animation/>
 
-###### html
+###### HTML
 
 ```html
 <div class="animated bounce infinite">
-  <img src="../img/ball.png" alt="" style="width: 50px;height:50px;" />z
+  <img src="../img/ball.png" alt="" style="width: 50px;height:50px;" />
 </div>
 <div class="animated flash infinite">
   <img src="../img/ball.png" alt="" style="width: 50px;height:50px;" />
@@ -49,3 +50,4 @@ We use the Bootstrap Animation to animate items by giving them a `class` with th
   <img src="../img/ball.png" alt="" style="width: 50px;height:50px;" />
 </div>
 ```
+

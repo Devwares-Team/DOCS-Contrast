@@ -1,18 +1,21 @@
 ---
+
 title: 'Table'
 metaTitle: ' Bootstrap 5 Tables - Bootstrap CSS tutorial'
 metaDescription: 'Bootstrap 5 Tables are component with basic tables features.'
----# Bootstrap 5 Table
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/javascript/components/table.md"
+---
+# Bootstrap 5 Table
 
 Bootstrap 5 Tables are a component that includes basic table functionality. They enable you to compile large amounts of data and show it in a logical and ordered manner.
 
-Additional advantages of Bootstrap tables include responsiveness and the ability to customize table styles. Add buttons, checkboxes, panels, and a variety of other items to your tables to make them more appealing. You can also use advanced data table features such as sorting, searching, and pagination..
+Additional advantages of Bootstrap tables include responsiveness and the ability to customize table styles. Buttons, checkboxes, panels, and suchlike can be added to your tables to make them look more appealing. You can also use advanced data table features such as sorting, searching, and pagination.
 
 ## Default Table
 
-![Bootstrap Table Default](./images/table1.png)
+![Bootstrap Table Default](./images/table6.png)
 
-###### html
+###### HTML
 
 ```html
 <table CdbTable>
@@ -34,9 +37,9 @@ Additional advantages of Bootstrap tables include responsiveness and the ability
 
 ## Variants
 
-![Bootstrap Table Variants](./images/table2.png)
+<Table1/>
 
-###### html
+###### HTML
 
 ```html
 <table class="table">
@@ -102,9 +105,9 @@ Additional advantages of Bootstrap tables include responsiveness and the ability
 
 To make your table stripes, use the `table-striped` class.
 
-![Bootstrap Table Striped](./images/table3.png)
+<Table2/>
 
-###### html
+###### HTML
 
 ```html
 <table class="table table-striped">
@@ -140,9 +143,9 @@ To make your table stripes, use the `table-striped` class.
 
 ## Dark tables
 
-![Bootstrap Tables Dark](./images/table4.png)
+<Table3/>
 
-###### html
+###### HTML
 
 ```html
 <table class="table table-dark table-striped">
@@ -178,9 +181,9 @@ To make your table stripes, use the `table-striped` class.
 
 ## Hoverable Rows
 
-![Bootstrap Table Hoverable Rows](./images/table5.png)
+<Table4/>
 
-###### html
+###### HTML
 
 ```html
 <table class="table table-hover">

@@ -2,20 +2,20 @@
 title: "TimePicker"
 metaTitle: "Angular Bootstrap TimePicker"
 metaDescription: "Angular Bootstrap material time picker is a component which uses a dialog to select a single time in `hours:minutes` format. The selected time is indicated by the filled circle at the end of the clock hand"
-
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/angular/sections/timepicker.md"
 ---
+<ProAlertAngular />
 
-# Angular Bootstrap TimePicker
+# Contrast Angular Bootstrap TimePicker
 
-Angular Bootstrap material time picker is a component which uses a dialog to select a single time in `hours:minutes` format. The selected time is indicated by the filled circle at the end of the clock hand.
+Contrast Angular Bootstrap material time picker is a component which uses a dialog to select time in `hours:minutes` format. The selected time is indicated by the filled circle at the end of the clock hand.
 
-<i/>
 
 ## Importing the Contrast Angular Bootstrap TimePicker Module
 
 To use the Contrast Angular Bootstrap TimePicker component in your project you need to import `TimePickerModule`.
 
-```typescript
+```ts
 import {TimePickerModule } from 'cdbangular';
 ```
 
@@ -23,7 +23,7 @@ import {TimePickerModule } from 'cdbangular';
 
 ![Angular Bootstrap TimePicker Default](./images/timepicker.png)
 
-###### html
+###### HTML
 
 ```html
 <CDBTimepicker placeholder="10:05 AM" theme="SoundCloud" colorPalette="dark"></CDBTimepicker>

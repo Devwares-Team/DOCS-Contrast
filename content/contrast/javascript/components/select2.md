@@ -1,12 +1,15 @@
 ---
+
 title: 'Select 2'
 metaTitle: 'Bootstrap 5 Select - Bootstrap CSS tutorial'
 metaDescription: 'Bootstrap Select is a form control, that after the click displays a collapsible list of multiple values which can be used in forms, menus or surveys'
----# Bootstrap 5 Select2
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/javascript/components/select2.md"
+---
+# Bootstrap 5 Select2
 
-Bootstrap 5 Select is a component in our Contrast that displays a collapsible list of numerous values following a click. It is mostly used in forms, menus, and surveys.
+Bootstrap 5 Select is a component in our Contrast that displays a collapsible list of options. It may be used in forms, menus, and surveys.
 
-Use the `↑` and `↓` arrow keys to browse between the options, and the `↵` key to choose the appropriate item with our Contrast Bootstrap 5 Select (works for stateful select).
+Use the `↑` and `↓` arrow keys to browse between the options, and the `↵` key to choose the appropriate item with our Contrast Bootstrap 5 Select (does not works for stateless select).
 
 <i/>
 
@@ -14,9 +17,9 @@ Use the `↑` and `↓` arrow keys to browse between the options, and the `↵` 
 
 Give your `div` the class `select2` to use the Contrast Bootstrap 5 Select2 Button in your project.
 
-![Bootstrap Select Button](./images/select1.png)
+<Select2a />
 
-###### html
+###### HTML
 
 ```html
 <div class="select2">
@@ -46,17 +49,15 @@ Give your `div` the class `select2` to use the Contrast Bootstrap 5 Select2 Butt
       <span>Option 5</span>
     </div>
   </div>
-  >
 </div>
 ```
 
 ## Disable Select Button
 
 To switch off your form select, use the `disabled` property.
+<Select2b/>
 
-![Bootstrap Select Button Disable](./images/select2.png)
-
-###### html
+###### HTML
 
 ```html
          <div
@@ -97,9 +98,9 @@ To switch off your form select, use the `disabled` property.
 
 Use the select2 class and add the color code for the color you want your choose choice to be. This will give your select component color.
 
-![Bootstrap Select Button Colored](./images/select3.png)
+<Select2c/>
 
-###### html
+###### HTML
 
 ```html
 <div class="select2 select2-primary">
@@ -276,9 +277,9 @@ Use the select2 class and add the color code for the color you want your choose 
 
 The `hoverColor` property adds a hover effect to your choose options.
 
-![Bootstrap Select Colored Options with Hover](./images/select4.png)
+<Select2d/>
 
-###### html
+###### HTML
 
 ```html
 <div class="select2 select2-danger hoverColor">
@@ -311,7 +312,7 @@ The `hoverColor` property adds a hover effect to your choose options.
 </div>
 ```
 
-###### Script
+###### JavaScript
 
 ```js
     <script>

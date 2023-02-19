@@ -1,24 +1,28 @@
 ---
+
 title: 'Table'
-metaTitle: 'Table Component for React Bootstrap'
-metaDescription: 'Building a Table Component using React Bootstrap'
+metaTitle: 'Table Component for React Bootstrap 5'
+metaDescription: 'Building a Table Component using React Bootstrap 5'
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/react/table/table.mdx"
 ---import React from 'react';
 
-# React Bootstrap Table
+# React Bootstrap 5 Table
 
-React Bootstrap Tables are component with basic tables features. They let you aggregate a huge amount of data and present it in a clear and orderly way.
+React Bootstrap 5 Tables are component with basic tables features. They let you aggregate a huge amount of data and present it in a clear and orderly way.
 
-React Bootstrap tables provide additional benefits like responsiveness, and the possibility to manipulate the styles of the tables. You can enhance your tables by adding buttons, checkboxes, panels, and many other additional elements. You can also use an advanced data tables options like sort, search or pagination.
+React Bootstrap 5 tables provide additional benefits like responsiveness, and the possibility to manipulate the styles of the tables. You can enhance your tables by adding buttons, checkboxes, panels, and many other additional elements. You can also use an advanced data tables options like sort, search or pagination.
 
-## Importing the React Bootstrap Table Component
+## Importing the React Bootstrap 5 Table Component
 
-To use the Contrast React Bootstrap Table, you import `CDBTable` into your project. We also need to import `CDBTableHeader` for the first row, which usually indicates the items in the columns. We also need to import `CDBTableBody` for the rest of the table.
+To use the Contrast React Bootstrap 5 Table, you import `CDBTable` into your project. We also need to import `CDBTableHeader` for the first row, which usually indicates the items in the columns. We also need to import `CDBTableBody` for the rest of the table.
 
 ```js
 import { CDBTable, CDBTableHeader, CDBTableBody, CDBContainer } from 'cdbreact';
 ```
 
 ## Default Table
+
+The dafult Table comes with all you will need in creating a table with the react bootstrap table component.
 
 <div class="container">
   <table class="table">
@@ -97,6 +101,8 @@ export default Table;
 ```
 
 ## Table Head Options
+
+This is react bootstrap table that has some options on the header of the table.
 
 <div class="container">
   <table class="table">
@@ -236,6 +242,8 @@ export default Table;
 
 ## Striped Table
 
+Striped Table is one of the many designs you can use the react bootstrap table to achieve.
+
 <div class="container">
   <table class="table table-striped">
     <thead>
@@ -313,6 +321,8 @@ export default Table;
 ```
 
 ## Bordered Table
+
+The
 
 <div class="container">
   <table class="table">
@@ -832,9 +842,9 @@ const Table = () => {
 export default Table;
 ```
 
-## API Reference: Contrast React Bootstrap Table Props
+## API Reference: Contrast React Bootstrap 5 Table Props
 
-This section will build on your information about the props you get to use with the Contrast React Bootstrap Table component. You will find out what these props do, their default values, and how you would use them in your code.
+This section will build on your information about the props you get to use with the Contrast React Bootstrap 5 Table component. You will find out what these props do, their default values, and how you would use them in your code.
 
 The table below lists other prop options of the `CDBTable` component.
 
@@ -861,7 +871,7 @@ The table below lists other prop options of the `CDBTable` component.
 | small            | Boolean |   false |                                                                                             Cuts cell's padding by half.                                                                                             |                              <CDBTable small .../> |
 | striped          | Boolean |   false |                                                                                        Adds zebra-striping to any table row.                                                                                         |                            <CDBTable striped .../> |
 
-## API Reference: Contrast React Bootstrap Table Header Props
+## API Reference: Contrast React Bootstrap 5 Table Header Props
 
 The table below lists other prop options of the `CDBTableHeader` component.
 
@@ -872,7 +882,7 @@ The table below lists other prop options of the `CDBTableHeader` component.
 | textWhite |    Boolean     |   false |           Sets TableHead's font color to white.           |              <CDBTableHeader textWhite .../> |
 | columns   | Array[Objects] |   false |            Binds your data into the component.            |      <CDBTableHeader columns={columns} .../> |
 
-## API Reference: Contrast React Bootstrap Table Body Props
+## API Reference: Contrast React Bootstrap 5 Table Body Props
 
 The table below lists other prop options of the `CDBTableBody` component.
 
@@ -883,7 +893,7 @@ The table below lists other prop options of the `CDBTableBody` component.
 | textWhite |    Boolean     |   false |           Sets TableBody's font color to white.           |              <CDBTableBody textWhite .../> |
 | rows      | Array[Objects] |   false |            Binds your data into the component.            |            <CDBTableBody rows={rows} .../> |
 
-## API Reference: Contrast React Bootstrap Table Footer Props
+## API Reference: Contrast React Bootstrap 5 Table Footer Props
 
 The table below lists other prop options of the `CDBTableFooter` component.
 

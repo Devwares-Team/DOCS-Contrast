@@ -2,17 +2,20 @@
 title: 'Breadcrumb'
 metaTitle: 'Bootstrap 5 Breadcrumb - Bootstrap CSS tutorial'
 metaDescription: 'Bootstrap 5 Breadcrumb is a component that indicates to users where they are on a website or in a Web application.'
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/javascript/components/breadcrumb.md"
 ---
 
 # Bootstrap 5 Breadcrumb
 
-Bootstrap 5 Breadcrumb is a component that indicates to users where they are on a website or in a Web application. It's a navigational tool that allows visitors to track their journeys and keep track of where they are on the page.
+Bootstrap 5 Breadcrumb is a component that indicates to users where they are on a website or a web application. It's a navigational component that allows website visitors or web application users to track their current location and previous navigated page(s).
 
-## Navigation BreadCrumb
+The breadcrumb Bootstrap navigation system follows a standard format. Each item in the navigation system is preceded by a chevron character and is followed by a forward slash. Each item in the navigation is also linked so that users can easily go back to the previous page.
 
-![Bootstrap Breadcrumb](./images/breadcrumb.png)
+## Navigation Breadcrumb
 
-###### html
+<Breadcrumb1/>
+
+###### HTML
 
 ```html
 <nav aria-label="breadcrumb">
@@ -36,3 +39,5 @@ Bootstrap 5 Breadcrumb is a component that indicates to users where they are on 
   </ol>
 </nav>
 ```
+
+The breadcrumb bootstrap system is essential in any application or website a user visits.

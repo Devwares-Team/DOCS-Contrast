@@ -1,16 +1,19 @@
 ---
 
 title: 'Sidebar'
-metaTitle: 'Sidebar Component for React Bootstrap'
-metaDescription: 'Building a Sidebar Component using React Bootstrap'
+metaTitle: 'Sidebar Component for React Bootstrap 5'
+metaDescription: 'Building a Sidebar Component using React Bootstrap 5'
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/react/navigation/sidebar.mdx"
 ---import React from 'react';
 import { Link } from 'gatsby';
 import sidebarImage from '../components/images/sidebar.gif';
 import sidebarImg from '../components/images/sidebar.png';
 
-# React Bootstrap Sidebar
+<ProAlertReact/>
 
-React Bootstrap Sidebar is a vertical navigation component which apart from traditional, text links, might embed icons, dropdowns, avatars or search forms.
+# React Bootstrap 5 Sidebar
+
+React Bootstrap 5 Sidebar is a vertical navigation component which apart from traditional, text links, might embed icons, dropdowns, avatars or search forms.
 
 By virtue of its clarity and simplicity it remarkably increases User Experience. It allows you to navigate through small applications as well as vast portals swiftly. Multiple link embedding functionality enables you to implement more advanced content categorisation, which is almost essential within bigger projects.
 
@@ -18,17 +21,18 @@ Thanks to CDB you can easily implement Sidebar in your own projects, by using on
 
 Navigation on the left is a live demo of Sidebar.
 
-## Importing the React Bootstrap Sidebar Component
 
-To use the Contrast React Bootstrap Sidebar component, you import `CDBSidebar` into your project.
+## Importing the React Bootstrap 5 Sidebar Component
 
-```js link=github.com/Devwares-Home
+To use the Contrast React Bootstrap 5 Sidebar component, you import `CDBSidebar` into your project.
+
+```js 
 import { CDBSidebar } from 'cdbreact';
 ```
 
 Alongside the `CDBSidebar` component we also import other Contrast Bootstrap Components, these components are the `CDBSidebarContent` component to hold the content in your sidebar, the `CDBSidebarHeader` component for your sidebar header, the `CDBSidebarMenu` component for grouping menu items, the `CDBSidebarMenuItem` component this represents an item in your sidebar menu, and the `CDBSidebarFooter` component, this is your sidebar footer.
 
-```js link=github.com/Devwares-Home
+```js 
 import {
   CDBSidebar,
   CDBSidebarHeader,
@@ -49,9 +53,11 @@ The `CDBSidebarHeader` component takes in an optional `prefix` prop, this object
 To have icons nested in your `CDBSidebarMenuItem`, use the `icon` prop.
 
 <i />
+
 <sidebarExample1 />
 
-```js link=github.com/Devwares-Home
+```js link=github.com/Devwares-Team/Contrast-Docs/blob/master/content/contrast/react/navigation/sidebar.mdx
+
 import React from 'react';
 import {
   CDBSidebar,
@@ -97,7 +103,8 @@ You can configure your `CDBSidebar` to take in a  `textColor` prop which defines
 
 <sidebarExample2 />
 
-```js link=github.com/Devwares-Home
+```js link=github.com/Devwares-Team/Contrast-Docs/blob/master/content/contrast/react/navigation/sidebar.mdx
+
 import React from 'react';
 import {
   CDBSidebar,
@@ -137,8 +144,206 @@ const SideBar = () => {
 };
 
 export default Sidebar;
+
 ```
+
+
+
+## Sidebar with Badges
+
+Lets Add Badges to our Sidebar
+
+In this tutorial we use the [CDBBadge](https://www.devwares.com/docs/contrast/react/components/badge) for the badges in our sidebar, 
+
+
+<sidebarExample3 />
+
+```js link=github.com/Devwares-Team/Contrast-Docs/blob/master/content/contrast/react/navigation/sidebar.mdx
+
+
+
+import React from 'react';
+import {
+  CDBSidebar,
+  CDBSidebarHeader,
+  CDBSidebarMenuItem,
+  CDBSidebarContent,
+  CDBSidebarMenu,
+  CDBSidebarSubMenu,
+  CDBSidebarFooter,
+  CDBBadge,
+  CDBContainer,
+} from 'cdbreact';
+
+const Sidebar = () => {
+  return (
+        <CDBSidebar textColor="#fff" backgroundColor="#333">
+          <CDBSidebarHeader prefix={<CDBIcon icon="bars" size="lg" />}>
+            With Badges
+          </CDBSidebarHeader>
+          <CDBSidebarContent>
+            <CDBSidebarMenu>
+              <CDBSidebarMenuItem
+                suffix={
+                  <CDBBadge color="danger" size="small" borderType="pill">
+                    pro
+                  </CDBBadge>
+                }
+                icon="th-large"
+              >
+                Dashboard
+              </CDBSidebarMenuItem>
+              <CDBSidebarMenuItem icon="sticky-note" suffix={<CDBBadge>4</CDBBadge>}>
+                Components
+              </CDBSidebarMenuItem>
+            </CDBSidebarMenu>
+          </CDBSidebarContent>
+          <CDBSidebarFooter style={{ textAlign: 'center' }}>
+            <div
+              className="sidebar-btn-wrapper"
+              style={{ padding: '20px 5px'}}
+            >
+              Sidebar Footer
+            </div>
+          </CDBSidebarFooter>
+        </CDBSidebar>
+  )
+  export default Sidebar
+
+```
+
+
+
+## Sidebar with Custom Logo
+
+You can use a custom component as the Header of your sidebar. Here we create a custom logo for Sidebar
+
+<sidebarExample6 />
+
+```js link=github.com/Devwares-Team/Contrast-Docs/blob/master/content/contrast/react/navigation/sidebar.mdx
+
+
+
+import React from 'react';
+import {
+  CDBSidebar,
+  CDBSidebarHeader,
+  CDBSidebarMenuItem,
+  CDBSidebarContent,
+  CDBSidebarMenu,
+  CDBSidebarSubMenu,
+  CDBSidebarFooter,
+  CDBBadge,
+  CDBContainer,
+} from 'cdbreact';
+
+const Sidebar = () => {
+  return (
+      <CDBSidebar textColor="#333" backgroundColor="#f0f0f0">
+        <CDBSidebarHeader prefix={<i className="fa fa-bars" />}>
+          <div className="container" style={{ display: 'flex', alignItems: 'center' }}>
+            <img
+              src={'https://seeklogo.com/images/B/butterfly-logo-0A00378822-seeklogo.com.png'}
+              alt=""
+              style={{ width: '30px' }}
+            />
+            <h6 className="ml-2">BABYCARE ™</h6>
+          </div>
+        </CDBSidebarHeader>
+        <CDBSidebarContent>
+          <CDBSidebarMenu>
+            <CDBSidebarMenuItem icon="th-large">Dashboard</CDBSidebarMenuItem>
+            <CDBSidebarMenuItem icon="sticky-note">Components</CDBSidebarMenuItem>
+            <CDBSidebarMenuItem icon="chart-line" iconType="solid">
+              metrics
+            </CDBSidebarMenuItem>
+          </CDBSidebarMenu>
+        </CDBSidebarContent>
+      </CDBSidebar>
+  )
+};
+
+export default Sidebar;
+
+```
+
+
+
+
+## Sidebar with Call to Action Button
+
+Here we will demo how to add other custom components and styles to your Sidebar.
+
+The `CDBSidebarCTA` component support two default themes; `default` and `overlay`.
+
+
+<sidebarExample5 />
+
+
+```js link=github.com/Devwares-Team/Contrast-Docs/blob/master/content/contrast/react/navigation/sidebar.mdx
+
+
+
+import React from 'react';
+import {
+  CDBSidebar,
+  CDBSidebarHeader,
+  CDBSidebarMenuItem,
+  CDBSidebarContent,
+  CDBSidebarMenu,
+  CDBSidebarSubMenu,
+  CDBSidebarFooter,
+  CDBBadge,
+  CDBContainer,
+  CDBSidebarCTA,
+} from 'cdbreact';
+
+const Sidebar = () => {
+  return (
+      <CDBSidebar textColor="#fff" backgroundColor="#333">
+        <CDBSidebarHeader prefix={<i className="fa fa-bars" />}>With CTA</CDBSidebarHeader>
+        <CDBSidebarContent>
+          <CDBSidebarMenu>
+            <CDBSidebarMenuItem icon="th-large" iconSize="lg">
+              Dashboard
+            </CDBSidebarMenuItem>
+            <CDBSidebarMenuItem icon="sticky-note" iconSize="sm">
+              Components
+            </CDBSidebarMenuItem>
+            <CDBSidebarMenuItem icon="credit-card" iconType="solid" textFontSize="14px">
+              Sales
+            </CDBSidebarMenuItem>
+            <CDBSidebarMenuItem icon="gamepad" iconType="solid" textFontSize="14px">
+              Games
+            </CDBSidebarMenuItem>
+          </CDBSidebarMenu>
+        </CDBSidebarContent>
+        <CDBSidebarCTA
+          theme="overlay"
+          text="This sidebar contains a CTA component. You can add anything you want here; text, images or a custom component"
+        ></CDBSidebarCTA>
+        <CDBSidebarFooter style={{ textAlign: 'center' }}>
+          <div
+            className="sidebar-btn-wrapper"
+            style={{padding: '20px 5px'}}
+          >
+            Sidebar Footer
+          </div>
+        </CDBSidebarFooter>
+      </CDBSidebar>
+  )
+};
+
+export default Sidebar;
+
+```
+
+
+
+
 ## Multilevel Sidebar
+
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
 
 You can customize you Sidebar to have multiple submenu options
 
@@ -148,7 +353,9 @@ The `CDBSidebarSubMenu` takes in a `title` and `icon` props.
 
 <sidebarExample4 />
 
-```js link=github.com/Devwares-Team
+```js link=github.com/Devwares-Team/Contrast-Docs/blob/master/content/contrast/react/navigation/sidebar.mdx
+
+
 import React from 'react';
 import {
   CDBSidebar,
@@ -241,199 +448,25 @@ const Sidebar = () => {
   );
 };
 export default Sidebar;
-```
-
-## Sidebar with Badges
-
-Lets Add Badges to our Sidebar
-
-In this tutorial we use the [CDBBadge](https://www.devwares.com/docs/contrast/react/components/badge) for the badges in our sidebar, 
-
-
-<sidebarExample3 />
-
-```js link=github.com/Devwares-Team
-import React from 'react';
-import {
-  CDBSidebar,
-  CDBSidebarHeader,
-  CDBSidebarMenuItem,
-  CDBSidebarContent,
-  CDBSidebarMenu,
-  CDBSidebarSubMenu,
-  CDBSidebarFooter,
-  CDBBadge,
-  CDBContainer,
-} from 'cdbreact';
-
-const Sidebar = () => {
-  return (
-        <CDBSidebar textColor="#fff" backgroundColor="#333">
-          <CDBSidebarHeader prefix={<CDBIcon icon="bars" size="lg" />}>
-            With Badges
-          </CDBSidebarHeader>
-          <CDBSidebarContent>
-            <CDBSidebarMenu>
-              <CDBSidebarMenuItem
-                suffix={
-                  <CDBBadge color="danger" size="small" borderType="pill">
-                    pro
-                  </CDBBadge>
-                }
-                icon="th-large"
-              >
-                Dashboard
-              </CDBSidebarMenuItem>
-              <CDBSidebarMenuItem icon="sticky-note" suffix={<CDBBadge>4</CDBBadge>}>
-                Components
-              </CDBSidebarMenuItem>
-            </CDBSidebarMenu>
-          </CDBSidebarContent>
-          <CDBSidebarFooter style={{ textAlign: 'center' }}>
-            <div
-              className="sidebar-btn-wrapper"
-              style={{ padding: '20px 5px'}}
-            >
-              Sidebar Footer
-            </div>
-          </CDBSidebarFooter>
-        </CDBSidebar>
-  )
-  export default Sidebar
-
-```
-
-
-
-## Sidebar with Custom Logo
-
-You can use a custom component as the Header of your sidebar. Here we create a custom logo for Sidebar
-
-<sidebarExample6 />
-
-```js link=github.com/Devwares-Team
-
-import React from 'react';
-import {
-  CDBSidebar,
-  CDBSidebarHeader,
-  CDBSidebarMenuItem,
-  CDBSidebarContent,
-  CDBSidebarMenu,
-  CDBSidebarSubMenu,
-  CDBSidebarFooter,
-  CDBBadge,
-  CDBContainer,
-} from 'cdbreact';
-
-const Sidebar = () => {
-  return (
-      <CDBSidebar textColor="#333" backgroundColor="#f0f0f0">
-        <CDBSidebarHeader prefix={<i className="fa fa-bars" />}>
-          <div className="container" style={{ display: 'flex', alignItems: 'center' }}>
-            <img
-              src={'https://seeklogo.com/images/B/butterfly-logo-0A00378822-seeklogo.com.png'}
-              alt=""
-              style={{ width: '30px' }}
-            />
-            <h6 className="ml-2">BABYCARE ™</h6>
-          </div>
-        </CDBSidebarHeader>
-        <CDBSidebarContent>
-          <CDBSidebarMenu>
-            <CDBSidebarMenuItem icon="th-large">Dashboard</CDBSidebarMenuItem>
-            <CDBSidebarMenuItem icon="sticky-note">Components</CDBSidebarMenuItem>
-            <CDBSidebarMenuItem icon="chart-line" iconType="solid">
-              metrics
-            </CDBSidebarMenuItem>
-          </CDBSidebarMenu>
-        </CDBSidebarContent>
-      </CDBSidebar>
-  )
-};
-
-export default Sidebar;
 
 ```
 
 
 
 
-## Sidebar with Call to Action Button
+## Custom Themed Sidebar 
 
-Here we will demo how to add other custom components and styles to your Sidebar.
-
-The `CDBSidebarCTA` component support two default themes; `default` and `overlay`.
-
-
-<sidebarExample5 />
-
-
-```js link=github.com/Devwares-Team
-
-import React from 'react';
-import {
-  CDBSidebar,
-  CDBSidebarHeader,
-  CDBSidebarMenuItem,
-  CDBSidebarContent,
-  CDBSidebarMenu,
-  CDBSidebarSubMenu,
-  CDBSidebarFooter,
-  CDBBadge,
-  CDBContainer,
-  CDBSidebarCTA,
-} from 'cdbreact';
-
-const Sidebar = () => {
-  return (
-      <CDBSidebar textColor="#fff" backgroundColor="#333">
-        <CDBSidebarHeader prefix={<i className="fa fa-bars" />}>With CTA</CDBSidebarHeader>
-        <CDBSidebarContent>
-          <CDBSidebarMenu>
-            <CDBSidebarMenuItem icon="th-large" iconSize="lg">
-              Dashboard
-            </CDBSidebarMenuItem>
-            <CDBSidebarMenuItem icon="sticky-note" iconSize="sm">
-              Components
-            </CDBSidebarMenuItem>
-            <CDBSidebarMenuItem icon="credit-card" iconType="solid" textFontSize="14px">
-              Sales
-            </CDBSidebarMenuItem>
-            <CDBSidebarMenuItem icon="gamepad" iconType="solid" textFontSize="14px">
-              Games
-            </CDBSidebarMenuItem>
-          </CDBSidebarMenu>
-        </CDBSidebarContent>
-        <CDBSidebarCTA
-          theme="overlay"
-          text="This sidebar contains a CTA component. You can add anything you want here; text, images or a custom component"
-        ></CDBSidebarCTA>
-        <CDBSidebarFooter style={{ textAlign: 'center' }}>
-          <div
-            className="sidebar-btn-wrapper"
-            style={{padding: '20px 5px'}}
-          >
-            Sidebar Footer
-          </div>
-        </CDBSidebarFooter>
-      </CDBSidebar>
-  )
-};
-
-export default Sidebar;
-
-```
-
-
-## Custom Themed Sidebar
+<Link to="/product/contrast-pro"><span class="badge badge-lg badge-pro">Pro Component</span></Link>
 
 You can stylize and customize your Sidebar to fit the theme of design pattern you are trying to implement. Our components are very flexible
 
 <sidebarExample7 />
 
 
-```js link=github.com/Devwares-Team
+```js link=github.com/Devwares-Team/Contrast-Docs/blob/master/content/contrast/react/navigation/sidebar.mdx
+
+
+
 
 import React from 'react';
 import {
@@ -503,13 +536,15 @@ export default Sidebar;
 
 ```
 
+
+
 > Using the `prefix` object prop we can nest the `CDBIcon` component to have icons in our `CDBSidebarHeader`.
 
 > In the `CDBSidebarMenuItem` component, we use the `suffix` object prop to put an element or component after the text. In this case the component is the `CDBBadge`.
 
 ## API Reference: Contrast React Bootstrap Sidebar Props
 
-This section will build on your information about the props you get to use with the Contrast React Bootstrap Sidebar component. You will find out what these props do, their default values, and how you would use them in your code.
+This section will build on your information about the props you get to use with the Contrast React Bootstrap 5 Sidebar component. You will find out what these props do, their default values, and how you would use them in your code.
 
 The table below lists other prop options of the `CDBSidebar` component.
 
@@ -519,8 +554,12 @@ The table below lists other prop options of the `CDBSidebar` component.
 | tag             | string |     div | Changes default input tag |            `<CDBSidebar tag="input" ... />` |
 | textColor       | string |    #fff | Changes default input tag |       `<CDBSidebar textColor="#000" ... />` |
 | backgroundColor | string |    #000 |  Changes the text color   | `<CDBSidebar backgroundColor="#fff" ... />` |
+| toggled | boolean |    false |  state to show if sidebar is toggled or not   | `<CDBSidebar toggled ... />` |
+| breakpoint | number |    720 |  Defines width of veiwport when sidebar should collapse   | `<CDBSidebar breakpoint={720} ... />` |
+| minWidth | string |    80px |  Defines minimum width of sidebar   | `<CDBSidebar minWidth="80px" ... />` |
+| maxWidth | string |    720px |  Defines maximum width of sidebar   | `<CDBSidebar maxWidth="720px" ... />` |
 
-## API Reference: Contrast React Bootstrap SidebarMenuItem Props
+## API Reference: Contrast React Bootstrap 5 SidebarMenuItem Props
 
 The table below lists other prop options of the `CDBSidebarMenuItem` component.
 
@@ -534,7 +573,7 @@ The table below lists other prop options of the `CDBSidebarMenuItem` component.
 | iconSize      | string  |      md |    set size of item icon, if any    |                                `<CDBSidebarMenuItem iconSize='md' ... />` |
 | textFontSize  | string  |    10px |   set font size of menuitem text    |                          `<CDBSidebarMenuItem textFontSize='14px' ... />` |
 
-## API Reference: Contrast React Bootstrap SidebarSubMenu Props
+## API Reference: Contrast React Bootstrap 5 SidebarSubMenu Props
 
 The table below lists other prop options of the `CDBSidebarSubMenu` component.
 
@@ -557,5 +596,6 @@ The table below lists other prop options of the `CDBSidebarCTA` component.
 | Name          |  Type   | Default |                                  Description                                   |                                                                  Example |
 | :------------ | :-----: | ------: | :----------------------------------------------------------------------------: | -----------------------------------------------------------------------: |
 | image     | node  |         |                          Define Image for  the CTA component                              |                          `<CDBSidebarCTA image={<img src="" />} ... />` |
-| theme         | String  |   default |                           Changes default input tag                            |                                  `<CDBSidebarCTA theme="default" ... />` |
+| mode         | String  |   dark |                           Changes default input tag                            |                                  `<CDBSidebarCTA mode="light" ... />` |
+
 | text         | String  |     div |                           Changes default input tag                            |                                  `<CDBSidebarSubMenu text="Welcome to your dashboard" ... />` |

@@ -2,11 +2,12 @@
 title: "Accordion"
 metaTitle: "Angular Bootstrap Accordion"
 metaDescription: "Angular Bootstrap Accordion is a component which organizes content within collapsable items, showing only one collapsible item per time"
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/angular/components/accordion.md"
 ---
 
-# Angular Bootstrap Accordion
+# Contrast Angular Bootstrap Accordion
 
-Angular Bootstrap Accordion organizes content within collapsable items. They can toggle through a number of text blocks with a single click. This property allows for an excellent user experience.
+Constrast Angular Bootstrap Accordion organizes content within collapsable items. They can toggle through a number content with a single click. This property allows for an excellent user experience.
 
 Applications of Angular Bootstrap Accordion are:
 
@@ -16,9 +17,9 @@ Applications of Angular Bootstrap Accordion are:
 
 * Data tables
 
-## Importing the Angular Bootstrap AccordionModule
+## Importing the Angular Bootstrap Accordion Module
 
-```typescript
+```ts
 import {AccordionModule } from 'cdbangular';
 ```
 
@@ -27,7 +28,7 @@ import {AccordionModule } from 'cdbangular';
 ![Angular Bootstrap Default Accordion](https://i.imgur.com/jg2QM8n.gif)
 
 ###### Typescript
-```typescript
+```ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -73,7 +74,7 @@ export class AccordionComponent implements OnInit {
 ```
 
 
-###### html
+###### HTML
 ```html
 <CDBAccordion [data]='data' ></CDBAccordion>
 ```
@@ -83,7 +84,7 @@ export class AccordionComponent implements OnInit {
 ![Angular Bootstrap Accordion with Icons](./images/accordionwithouticon.png)
 
 ###### Typescript
-```typescript
+```ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({

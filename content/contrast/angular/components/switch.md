@@ -2,18 +2,18 @@
 title: "Switch"
 metaTitle: "Angular Bootstrap Switch"
 metaDescription: "Angular Bootstrap Switch is a simple component used for activating one of two predefined options. Commonly used as an on/off button"
-
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/angular/components/switch.md"
 ---
 
-# Angular Bootstrap Switch
+# Contrast Angular Bootstrap Switch
 
-Angular Bootstrap switch is a simple component that a user uses to toggle between two predefined options.
+Contrast Angular Bootstrap switch is a simple component that a user uses to toggle between two predefined options.
 
 ## Importing the Contrast Angular Bootstrap Switch Module
 
 To use the Contrast Angular Bootstrap Switch component in your project you need to import `SwitchModule`.
 
-```typescript
+```ts
 import {SwitchModule } from 'cdbangular';
 ```
 
@@ -21,7 +21,7 @@ import {SwitchModule } from 'cdbangular';
 
 ![Angular Bootstrap Switch Default](./images/switch.png)
 
-###### html
+###### HTML
 ```html
     <CDBSwitch></CDBSwitch>
     <CDBSwitch [checked]=true></CDBSwitch>

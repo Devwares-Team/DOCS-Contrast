@@ -2,7 +2,7 @@
 title: "Fixed DataTable"
 metaTitle: "Angular Bootstrap DataTable Component"
 metaDescription: "Angular Bootstrap DataTables are components that mix tables with advanced options like searching, sorting and pagination"
-
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/angular/table/fixed_datatables.md"
 ---
 
 # Angular Bootstrap Fixed DataTables
@@ -15,7 +15,7 @@ In this tutorial we use the [CDBCard](https://www.devwares.com/docs/contrast/ang
 
 ![Angular Bootstrap Fixed DataTable](./images/datatable.png)
 
-###### html
+###### HTML
 ```html
 <CDBCard style="margin: 1rem;">
     <CDBCardBody>
@@ -26,7 +26,7 @@ In this tutorial we use the [CDBCard](https://www.devwares.com/docs/contrast/ang
                         Show Entries
                         <select class='custom-select custom-select-sm form-control form-control-sm ml-0'
                             style="margin-left: .5rem" (change)='changeEntries($event)'>
-                            <option *ngFor='let entry of entries' [value]="entry" [key]='entry'>
+                            <option *ngFor='let entry of entries' [value]="entry">
                                 {{ entry }}
                             </option>
                         </select>
@@ -38,14 +38,16 @@ In this tutorial we use the [CDBCard](https://www.devwares.com/docs/contrast/ang
                             (keyup)="searchItems()" id="search-input2">
                     </div>
                 </div>
-                <table CdbTable CdbTableScroll scrollY="true" maxHeight="350" #tableEl2="CdbTable" stickyHeader="true"
-                    hover="true" striped='true' bordered="true" class="z-depth-1 col-md-12">
+                <table CdbTable CdbTableScroll [scrollY]="true" maxHeight="350" #tableEl2="CdbTable" stickyHeader="true"
+                    hover="true" [striped]='true' [bordered]="true" class="z-depth-1 col-md-12">
                     <thead class="sticky-top">
                         <tr>
                             <th *ngFor="let head of headElements; let i = index" (sortEnd)="sort()"
                                 [CdbTableSort]="elements" [tableEl]='tableEl2' [enableSort]='headElements[i].enableSort'
-                                [sortBy]="headElements[i].field" scope="col">{{head.label | titlecase}} <mdb-icon fas
-                                    icon="sort"></mdb-icon>
+                                [sortBy]="headElements[i].field" scope="col">{{head.label | titlecase}}
+                                <CDBIcon [fas]="true" icon="sort"></CDBIcon> 
+                                <!-- <mdb-icon fas
+                                    icon="sort"></mdb-icon> -->
                             </th>
                         </tr>
                     </thead>
@@ -64,9 +66,11 @@ In this tutorial we use the [CDBCard](https://www.devwares.com/docs/contrast/ang
                     </tbody>
                     <thead class="sticky-top">
                         <tr>
-                            <th *ngFor="let head of headElements; let i = index" [mdbTableSort]="elements"
-                                [sortBy]="headElements[i].field" scope="col">{{head.label | titlecase}} <mdb-icon fas
-                                    icon="sort"></mdb-icon>
+                            <th *ngFor="let head of headElements; let i = index" [CdbTableSort]="elements"
+                                [sortBy]="headElements[i].field" scope="col">{{head.label | titlecase}} 
+                                <CDBIcon [fas]="true" icon="sort"></CDBIcon>
+                                <!-- <mdb-icon fas
+                                    icon="sort"></mdb-icon> -->
                             </th>
                         </tr>
                     </thead>
@@ -81,12 +85,13 @@ In this tutorial we use the [CDBCard](https://www.devwares.com/docs/contrast/ang
         </div>
     </CDBCardBody>
 </CDBCard>
-<app-datatable></app-datatable>
+
 ```
-###### typescript
-```typescript
+###### TypeScript
+```ts
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { CdbTableDirective } from './/directives/cdb-table.directive';
+import { CdbTableDirective } from 'ng-cdbangular'
+;
 
 @Component({
   selector: 'app-fixed-datatable',
@@ -95,7 +100,8 @@ import { CdbTableDirective } from './/directives/cdb-table.directive';
 })
 export class FixedDatatableComponent implements OnInit {
 
-  @ViewChild(CdbTableDirective, { static: true }) CdbTable: CdbTableDirective;
+  @ViewChild(CdbTableDirective, { static: true })
+  CdbTable!: CdbTableDirective;
   elements: any = [
       {
         name: "Tiger Nixon",
@@ -371,9 +377,9 @@ export class FixedDatatableComponent implements OnInit {
         salary: "$112",
       },
   ];
-  pages = []
+  pages: any[] = []
   activePage = 0;
-  previousData;
+  previousData: any;
 
   //Declare entries options
   entries = [5, 10, 15]
@@ -417,7 +423,7 @@ export class FixedDatatableComponent implements OnInit {
 
   ngOnInit(): void {
     //subscribe to the current active page
-    this.CdbTable._activePage.subscribe(data => {
+    this.CdbTable._activePage.subscribe((data : any) => {
       this.activePage = data
     })
 
@@ -447,8 +453,8 @@ export class FixedDatatableComponent implements OnInit {
     }
   }
 
-  changeEntries(e) {
-    this.CdbTable.setEntries(e.target.value)
+  changeEntries(e: Event ) {
+    this.CdbTable.setEntries((e.target! as HTMLInputElement).value)
     this.CdbTable.setPages()
     this.pages = this.CdbTable.pages
     this.CdbTable._activePage.next(0)

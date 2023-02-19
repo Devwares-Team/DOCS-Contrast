@@ -1,8 +1,11 @@
 ---
+
 title: 'Mask'
 metaTitle: 'Bootstrap 5 Mask - Bootstrap CSS tutorial '
 metaDescription: "Bootstrap 5 Masks change an element's visibility by hiding it completely or partially."
----# Mask
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/javascript/components/mask.md"
+---
+# Mask
 
 Bootstrap 5 Masks change an element's visibility by hiding it completely or partially. Contrast Design Masks are used to increase the visibility of material in a photo.
 
@@ -10,12 +13,9 @@ Bootstrap 5 Masks change an element's visibility by hiding it completely or part
 
 The material that we are attempting to hide or partially hide, usually an image, remains in the `div` with the class `view`. This content is positioned above the mask `div`. The overlay or pattern over the content is the `div` with the class `mask`. Patterns are used in the code below, and there are plenty to pick from, ranging from pattern-1 to pattern-4.
 
-![Bootstrap Mask Patterns](https://imgur.com/MCquXaE.png)
-![Bootstrap Mask Patterns](https://imgur.com/qzyTCFL.png)
-![Bootstrap Mask Patterns](https://imgur.com/FOb0fkk.png)
-![Bootstrap Mask Patterns](https://imgur.com/FtwM3yj.png)
+<Mask1/>
 
-###### html
+###### HTML
 
 ```html
 <div class="view">
@@ -40,10 +40,9 @@ The material that we are attempting to hide or partially hide, usually an image,
 
 To use a light mask overlay instead of a mask, give your mask `div` the class rgba, then the color you want your overlay to be, and finally the word light (to select the thickness of our overlay
 
-![Bootstrap Mask Light Overlay](https://imgur.com/Yoxa6Xr.png)
-![Bootstrap Mask Light Overlay](https://imgur.com/XgzFd30.png)
+<Mask2/>
 
-###### html
+###### HTML
 
 ```html
 <div class="view">
@@ -56,8 +55,7 @@ To use a light mask overlay instead of a mask, give your mask `div` the class rg
 
 If you'd prefer a more robust Overlay background, append strong to the class instead.
 
-![Bootstrap Mask Strong Overlay](https://imgur.com/Q0y0x7A.png)
-![Bootstrap Mask Strong Overlay](https://imgur.com/39KbCT0.png)
+<Mask3/>
 
 ###### html
 

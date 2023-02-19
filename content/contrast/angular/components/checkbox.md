@@ -2,11 +2,12 @@
 title: "Checkbox"
 metaTitle: "Angular Bootstrap Checkbox Component"
 metaDescription: "Angular Bootstrap Checkbox is a component used for allowing a user to make  multiple choices"
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/angular/components/checkbox.md"
 ---
 
-# Angular Bootstrap Checkbox
+# Contrast Angular Bootstrap Checkbox
 
-Angular Bootstrap Checkbox is a component used for allowing a user to make  multiple choices. Broadly used in the forms and surveys.
+Contrast Angular Bootstrap Checkbox is a component that allows users to make multiple selection from a list of options. It is broadly used in the forms and surveys.
 
 Checkboxes are for selecting one or several options in a list, while `radios` are for selecting one option from many.
 
@@ -14,7 +15,7 @@ Checkboxes are for selecting one or several options in a list, while `radios` ar
 
 To use the Contrast Angular Bootstrap Card component in your project you need to import `CheckboxModule`.
 
-```typescript
+```ts
 import {CheckboxModule } from 'cdbangular';
 ```
 
@@ -24,7 +25,7 @@ For the default Contrast Angular Bootstrap Checkbox, use the [CDBInput](https://
 
 ![Angular Bootstrap Checkbox Default](./images/checkboxdefault.png)
 
-###### html
+###### HTML
 ```html
 <CDBInput type="checkbox"></CDBInput>
 ```
@@ -35,18 +36,18 @@ For the default Contrast Angular Bootstrap Checkbox, use the [CDBInput](https://
 
 ![Angular Bootstrap Checkbox](./images/cdbchecbox.png)
 
-###### html
+###### HTML
 ```html
 <CDBCheckbox class="mt-5"></CDBCheckbox>
 ```
 
 ## Disabled state
 
-Simply add the `disabled` boolean attribute to `CDBCheckbox`
+Simply add the `disabled` Boolean attribute to `CDBCheckbox`
 
 ![Angular Bootstrap Checkbox](./images/checkboxdisabled.png)
 
-###### html
+###### HTML
 ```html
 <CDBCheckbox disabled="true"></CDBCheckbox>
 ```
@@ -54,7 +55,7 @@ Simply add the `disabled` boolean attribute to `CDBCheckbox`
 
 ## API Reference: Contrast Checkbox Bootstrap Inputs
 
-This section will build on your information about the props you get to use with the Contrast Angular Bootstrap Badge component. You will find out what these props do, their default values, and how you would use them in your code.
+This section will build on your information about the props you get to use with the Contrast Angular Bootstrap Checkbox component. You will find out what these props do, their default values, and how you would use them in your code.
 
 The table below lists other prop options of the `CDBCheckbox` component.
 

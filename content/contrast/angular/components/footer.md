@@ -2,11 +2,12 @@
 title: "Footer"
 metaTitle: "Angular Bootstrap Footer Component"
 metaDescription: "Angular Bootstrap Footer is an additional navigation for the website"
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/angular/components/footer.md"
 ---
 
-# Angular Bootstrap Footer
+# Contrast Angular Bootstrap Footer
 
-Angular Bootstrap Footer is an additional navigation for the website. It can hold `links`, `company info`, `copyrights`, `buttons`, `forms`. and many other elements.
+Contrast Angular Bootstrap Footer is a component that provides additional navigation for a website. It can hold `links`, `company info`, `copyrights`, `buttons`, `forms`. and many other elements.
 
 You can set the color of the footer by adding one of classes from our `color palette`.
 
@@ -16,7 +17,7 @@ Just like any other components of CDBootstrap, Footers are responsive by default
 
 To use the Contrast Angular Bootstrap Footer component in your project you need to import `FooterModule`.
 
-```typescript
+```ts
 import {FooterModule } from 'cdbangular';
 ```
 
@@ -27,7 +28,7 @@ Alongside the `CDBFooter` component we also use the [CDBBtn](https://www.devware
 
 ![Angular Bootstrap Default Footer](./images/footer1.png)
 
-###### html
+###### HTML
 ```html
     <CDBFooter class="shadow">
         <div class="d-flex flex-column mx-auto py-5" style="width: 80%;">
@@ -85,7 +86,7 @@ Alongside the `CDBFooter` component we also use the [CDBBtn](https://www.devware
 
 ![Angular Bootstrap Footer Layout 2 ](./images/footer2.png)
 
-###### html
+###### HTML
 ```html
     <CDBFooter class="shadow">
         <div class="d-flex flex-column mx-auto py-5" style="width:80%">
@@ -143,7 +144,7 @@ Alongside the `CDBFooter` component we also use the [CDBBtn](https://www.devware
 
 ![Angular Bootstrap Footer Layout 3](./images/footer3.png)
 
-###### html
+###### HTML
 ```html
     <CDBFooter class="shadow">
         <div class="d-flex flex-column mx-auto py-5" style="width:80%">
@@ -204,7 +205,7 @@ Alongside the `CDBFooter` component we also use the [CDBBtn](https://www.devware
 
 ![Angular Bootstrap Footer Layout 4](./images/footer4.png)
 
-###### html
+###### HTML
 ```html
     <CDBFooter class="shadow">
         <div class="d-flex flex-column mx-auto py-5" style="width:80%">
@@ -263,7 +264,7 @@ Alongside the `CDBFooter` component we also use the [CDBBtn](https://www.devware
 
 ![Angular Bootstrap Footer Layout 5](./images/footer5.png)
 
-###### html
+###### HTML
 ```html
     <CDBFooter class="shadow">
         <div class="d-flex justify-content-between align-items-center mx-auto py-4" style="width:80%">
@@ -291,7 +292,7 @@ Alongside the `CDBFooter` component we also use the [CDBBtn](https://www.devware
 
 ![Angular Bootstrap Footer Layout 6](./images/footer6.png)
 
-###### html
+###### HTML
 ```html
     <CDBFooter class="shadow">
         <div class="d-flex flex-column mx-auto py-5" style="width:80%">
@@ -344,7 +345,7 @@ Alongside the `CDBFooter` component we also use the [CDBBtn](https://www.devware
 
 ![Angular Bootstrap Footer Layout 7](./images/footer7.png)
 
-###### html
+###### HTML
 ```html
     <CDBFooter class="shadow">
         <div class="d-flex justify-content-between align-items-center mx-auto py-4" style="width:80%">

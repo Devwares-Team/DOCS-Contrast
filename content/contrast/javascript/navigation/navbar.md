@@ -1,8 +1,11 @@
 ---
+
 title: 'Navbar'
 metaTitle: 'Bootstrap 5 Navbar'
 metaDescription: 'The Bootstrap 5 Navbar is a horizontal navigation component that can contain icons, dropdowns, avatars, and search forms in addition to typical text links.'
----# Bootstrap 5 Navbar
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/javascript/navigation/navbar.md"
+---
+# Bootstrap 5 Navbar
 
 The Bootstrap 5 Navbar is a horizontal navigation component that can contain icons, dropdowns, avatars, and search forms in addition to typical text links.
 
@@ -10,9 +13,7 @@ Contrast Design Bootstrap offers attractive Navbars with Material Design element
 
 ## Default Navbar
 
-![Bootstrap Navbar Default](./images/navbar1.png)
-
-###### html
+<Navbar1/>
 
 ```html
 <header>
@@ -64,9 +65,7 @@ Contrast Design Bootstrap offers attractive Navbars with Material Design element
 
 ## Example 2
 
-![Bootstrap NavBar Example 2](./images/navbar2.png)
-
-###### html
+<Navbar2/>
 
 ```html
 <header>
@@ -123,3 +122,9 @@ Contrast Design Bootstrap offers attractive Navbars with Material Design element
   </nav>
 </header>
 ```
+## Mobile View
+The Bootstrap 5 Navbar is a responsive component, it shows and hide navbar contents by its parent breakpoint. It uses a toggle element to set the display of its content.
+![Navbar Mobile View ](./images/mobile-nav2.png)
+
+#### Mobile View - Collapsed
+![Navbar Mobile View - Collapsed](./images/mobile-nav-collapsed.png)

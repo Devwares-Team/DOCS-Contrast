@@ -1,26 +1,27 @@
 ---
-title: "DropDown"
+title: "Dropdown"
 metaTitle: "Angular Bootstrap Dropdown Component"
 metaDescription: "Angular Bootstrap Dropdown is a toggleable menu embedding additional links or content"
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/angular/components/dropdown.md"
 ---
 
-# Angular Bootstrap DropDown
+# Angular Bootstrap Dropdown
 
 Angular Bootstrap Dropdown is a toggleable menu embedding additional links or content. It allows you to construct advanced navigation and link categorization.
 
-In case of more complicated navigations systems dropdowns are the essential elements providing you with possibility of placing all the most relevant links in our navigation bar (or other component acting as navigation - such as SideNav)
+In case of more complicated navigation systems, dropdowns are the essential elements providing you with possibility of placing all the most relevant links in our navigation bar (or other navigational components)
 
-Aside from being not only highly functional, CDB dropdowns are also extraordinary visually attractive. It gives them this characteristic Material Design effects, like shadows, living colors or charming waves effect after opening a link.
+Aside from being not only highly functional, CDB dropdowns are also extraordinary visually attractive. It gives them this characteristic Material Design effects, like shadows, living colors or charming waves effect after a dropdown item is clicked.
 
 They’re toggled by clicking, not by hovering; this is an intentional design decision. Why?
 
-CDB is "mobile first" framework so, we avoid mixing functional elements and interaction by hovering because it decreases User Experience of users of mobile devices.
+CDB is a "mobile first" framework so, we avoid mixing functional elements and interaction by hovering because it decreases User Experience of users of mobile devices.
 
 ## Importing the Contrast Angular Bootstrap Dropdown Module
 
 To use the Contrast Angular Bootstrap Collapse component in your project you need to import `DropdownModule`.
 
-```typescript
+```ts
 import {DropdownModule } from 'cdbangular';
 ```
 
@@ -28,7 +29,7 @@ import {DropdownModule } from 'cdbangular';
 
 ![Angular Bootstrap Dropdown Dark Toggle Bar](./images/dropdown1.png)
 
-###### html
+###### HTML
 ```html
 <CDBDropDown>
     <CDBDropDownToggle color="dark" (click)="menu1.toggleDropdown($event)"
@@ -40,11 +41,11 @@ import {DropdownModule } from 'cdbangular';
     </CDBDropDownMenu>
 </CDBDropDown>
 ```
-## Primary Toggler with Caret
+## Primary Toggle with Caret
 
 ![Angular Bootstrap Dropdown Primary Toggler with Caret](./images/dropdown2.png)
 
-###### html
+###### HTML
 ```html
 <CDBDropDown>
     <CDBDropDownToggle color="primary" [caretDropDown]=true (click)="menu2.toggleDropdown($event)">
@@ -60,7 +61,7 @@ import {DropdownModule } from 'cdbangular';
 
 ![Angular Bootstrap Dropdown Secondary Toggle Bar](./images/dropdown3.png)
 
-###### html
+###### HTML
 ```html
 <CDBDropDown>
     <CDBDropDownToggle [nav]=true color="secondary" [caretDropRight]=true
@@ -77,7 +78,7 @@ import {DropdownModule } from 'cdbangular';
 
 ![Angular Bootstrap Dropdown Danger Toggle Bar](./images/dropdown4.png)
 
-###### html
+###### HTML
 ```html
 <CDBDropDown>
     <CDBDropDownToggle color="danger" [caretDropUp]=true (click)="menu4.toggleDropdown($event)">
@@ -92,7 +93,7 @@ import {DropdownModule } from 'cdbangular';
 
 ![Angular Bootstrap Dropdown Success Toggle Bar](./images/dropdown5.png)
 
-###### html
+###### HTML
 ```html
 <CDBDropDown>
     <CDBDropDownToggle color="success" [caretDropLeft]=true (click)="menu5.toggleDropdown($event)">
@@ -104,11 +105,11 @@ import {DropdownModule } from 'cdbangular';
 </CDBDropDown>
 ```
 
-## Large DropDown
+## Large Dropdown
 
 ![Angular Bootstrap Dropdown Large](./images/dropdown6.png)
 
-###### html
+###### HTML
 ```html
 <CDBDropDown>
     <CDBDropDownToggle color="dark" size="lg" (click)="menu6.toggleDropdown($event)">
@@ -123,7 +124,7 @@ import {DropdownModule } from 'cdbangular';
 
 ![Angular Bootstrap Dropdown Small](./images/dropdown7.png)
 
-###### html
+###### HTML
 ```html
 <CDBDropDown>
     <CDBDropDownToggle color="secondary" size="sm" (click)="menu7.toggleDropdown($event)">
@@ -151,7 +152,7 @@ Set the `disabled` prop of your dropdown to true to disable your dropdown.
 
 ![Angular Bootstrap Dropdown Danger Toggle Bar Disabled](./images/dropdown8.png)
 
-###### html
+###### HTML
 ```html
 <CDBDropDown>
     <CDBDropDownToggle color="danger" [disabled]=true (click)="menu8.toggleDropdown($event)">
@@ -167,7 +168,7 @@ Set the `disabled` prop of your dropdown to true to disable your dropdown.
 
 ![Angular Bootstrap Dropdown Menu with Header](./images/dropdown9.png)
 
-###### html
+###### HTML
 ```html
 <CDBDropDown>
     <CDBDropDownToggle color="secondary" (click)="menu9.toggleDropdown($event)">
@@ -188,7 +189,7 @@ Set the `disabled` prop of your dropdown to true to disable your dropdown.
 
 ![Angular Bootstrap Dropdown Menu with Divider](./images/dropdown10.png)
 
-###### html
+###### HTML
 ```html
 <CDBDropDown>
     <CDBDropDownToggle color="warning" (click)="menu10.toggleDropdown($event)">
@@ -211,7 +212,7 @@ Set the `disabled` prop of your dropdown to true to disable your dropdown.
 
 ![Angular Bootstrap Dropdown Disable](./images/dropdown11.png)
 
-###### html
+###### HTML
 ```html
 <CDBDropDown>
     <CDBDropDownToggle color="success" (click)="menu11.toggleDropdown($event)">
@@ -232,7 +233,7 @@ Set the `disabled` prop of your dropdown to true to disable your dropdown.
 
 ![Angular Bootstrap Dropdown Active Menu Items](./images/dropdown12.png)
 
-###### html
+###### HTML
 ```html
 <CDBDropDown>
     <CDBDropDownToggle color="dark" (click)="menu12.toggleDropdown($event)">
@@ -280,7 +281,7 @@ The table below lists other prop options of the `CDBDropDownItem` component.
 | toggle        | Boolean      | false        |  Set to `false` to prevent from closing Dropdown on click	| toggle=false |
 | onClick        | function      |         | Toggle dropdown on click | onClick={handleToggle} |
 
-## API Reference: Contrast Angular Bootstrap DropDownItem Properties
+## API Reference: Contrast Angular Bootstrap DropownMenu Properties
 
 The table below lists other prop options of the `CDBDropDownMenu` component.
 
@@ -299,7 +300,7 @@ The table below lists other prop options of the `CDBDropDownMenu` component.
 | dropleft        | Boolean      | false        | Trigger dropdown menu on the left side of dropdown button | dropleft=true |
 | dropright        | Boolean      | false        | Trigger dropdown menu on the right side of dropdown button | dropright=true |
 
-## API Reference: Contrast Angular Bootstrap DropDownItem Properties
+## API Reference: Contrast Angular Bootstrap DropDownToggle Properties
 
 The table below lists other prop options of the `CDBDropDownToggle` component.
 

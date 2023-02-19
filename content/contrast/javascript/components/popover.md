@@ -1,18 +1,20 @@
 ---
-title: 'PopOver'
+title: 'Popover'
 metaTitle: 'Bootstrap 5 Popover - Bootstrap CSS tutorial'
-metaDescription: Bootstrap 5 popover is component that allows you to add a popover to your project."
----# Bootstrap 5 Popover
+metaDescription: Bootstrap 5 Popover is component that allows you to add a popover to your project."
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/javascript/components/popover.md"
+---
+# Bootstrap 5 Popover
 
-Bootstrap 5 popover is component that allows you to add a popover to your project. They are applied when you wish to give a user more information about an elements he/she is hovering about.
+Bootstrap 5 Popover is component that allows you to add a popover to your project. They are applied when you wish to give a user more information about an elements he/she is hovering about.
 
-This is a guide to adding Bootstrap 5 popovers to any element on your website. They're similar to the ones on iOS.
+This is a guide to adding Bootstrap 5 Popovers to any element on your website. They're similar to the ones on iOS.
 
 <i/>
 
 ## Popovers
 
-###### html
+###### HTML
 
 ```html
 <button
@@ -28,7 +30,7 @@ This is a guide to adding Bootstrap 5 popovers to any element on your website. T
 
 ## Dismiss Popovers
 
-###### html
+###### HTML
 
 ```html
 <a
@@ -45,7 +47,7 @@ This is a guide to adding Bootstrap 5 popovers to any element on your website. T
 
 ## Four directions
 
-###### html
+###### HTML
 
 ```html
 <button
@@ -93,7 +95,7 @@ This is a guide to adding Bootstrap 5 popovers to any element on your website. T
 </button>
 ```
 
-###### Script
+###### JavaScript
 
 ```js
    <script src="bootstrap/bootstrap.bundle.min.js"></script>

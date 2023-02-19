@@ -1,38 +1,56 @@
 ---
 title: 'Getting Started'
-metaTitle: 'Setting up the cdbreact on our project'
-metaDescription: 'Ways to set up our cdbreact on our project'
+metaTitle: 'Setting up Contrast Design Bootstrap React in our project'
+metaDescription: 'Ways to set up Contrast Design Bootstrap React in our project'
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/react/index.mdx"
 ---
 
 import React from 'react';
 import { Link } from 'gatsby';
 
-# Getting Started
+# Contrast Design Bootstrap React
 
-Get started with `cdbreact` - An elegant PRO UI Kit and PRO reusable components for building mobile-first, responsive websites and web apps
+> React 16 & Bootstrap 5 elegant UI Kit and reusable components for building mobile-first, responsive websites and web apps
 
-It will take less than 5 minutes.
+[![NPM](https://img.shields.io/npm/v/cdbreact.svg)](https://www.npmjs.com/package/cdbreact)  [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)  ![npm](https://img.shields.io/npm/dw/cdbreact)
 
-Step 1: Create a React App using create-react-app
+## Usage
+Be sure to have `cdbreact` installed in your project, you can follow the guides on our [installation](https://www.devwares.com/docs/contrast/react/Installation/) page to get `cdbreact` working on your project.
 
-`npx create-react-app <appname>`
+Below are some examples to show you how you can build your project using `cdbreact` components.
 
-Step 2: Navigate into the project's folder
-
-Step 3: Install `cdbreact`
-
-`yarn add cdbreact`
-
-Step 4: Import `cdbreact` in your project
-
+#### Alert Component Demo
 ```js
 import React from 'react';
 import { CDBAlert } from 'cdbreact';
 
-const Alert = () => {
-  return <CDBAlert color="primary">A simple alert built with contrast design</CDBAlert>;
+const AlertDemo = () => {
+  return <>
+   <CDBAlert color="primary">A simple alert built with contrast design</CDBAlert>
+   <CDBAlert color="danger" dismiss>A simple alert built with contrast design</CDBAlert>
+  </>;
 };
 export default Alert;
 ```
 
-Step 5: Start coding! Yes, its that easy.
+#### Button Component Demo
+````js
+import React from "react";
+import { CDBBtn, CDBContainer } from "cdbreact";
+
+export const ButtonDemo = () => {
+  return (
+    <CDBContainer>
+      <CDBBtn color="primary">Primary</CDBBtn>
+      <CDBBtn color="secondary">Secondary</CDBBtn>
+      <CDBBtn color="danger">Danger</CDBBtn>
+      <CDBBtn color="success">Success</CDBBtn>
+      <CDBBtn color="dark">Dark</CDBBtn>
+      <CDBBtn color="warning">Warning</CDBBtn>
+      <CDBBtn color="info">Info</CDBBtn>
+    </CDBContainer>
+  );
+};
+````
+
+`cdbreact` can be used on your projects to fit your projects needs. Yes, it's that easy! Check out the documentation for the components to see how you can use them.

@@ -1,16 +1,17 @@
 ---
 title: "Modal"
 metaTitle: "Angular Bootstrap Modal component"
-metaDescription: "Angular Bootstrap modal is lightweight, but powerful & multipurpose popup"
+metaDescription: "Angular Bootstrap Modal is lightweight, but powerful & multifunctional popup"
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/angular/components/modal.md"
 ---
 
-# Angular Bootstrap Modal
+# Contrast Angular Bootstrap Modal
 
-Angular Bootstrap modal is lightweight, but powerful & multipurpose popup. Learn how to manipulate size, styles & position. Multiple examples and detailed tutorial.
+Contrast Angular Bootstrap Modal is a lightweight, but powerful & multifunctional popup. 
 
-The Modal is a dialog box/popup window which can be used for light boxes, user notifications, UI enhancements, e-commerce components and many other cases.
+It is a dialog box/popup window which can be used for light boxes, user notifications, UI enhancements, e-commerce components and many other cases.
 
-It's easily customized. You can manipulate size, position, and content.
+It can easily be customized, you can configure the size, position, and content of this component. Below are several variants of the Modal component, created by configuring the size, styles and position.
 
 ## Importing the Contrast Angular Bootstrap Modal Module
 
@@ -21,7 +22,7 @@ To use the Contrast Angular Bootstrap Modal component in your project you need t
 
 ![Angular Bootstrap Custom Modal](https://imgur.com/z99wzWH.gif)
 
-###### html
+###### HTML
 ```html
 <CDBBtn (click)="modal1.toggleModal()" color="dark">
     Modal
@@ -76,7 +77,7 @@ To use the Contrast Angular Bootstrap Modal component in your project you need t
 
 ![Angular Bootstrap Modal Sizes](https://imgur.com/h8y6UlS.gif)
 
-###### html
+###### HTML
 ```html
 <CDBBtn color="light" [flat]=true (click)="modal2.toggleModal()">
     Medium modal
@@ -206,7 +207,7 @@ To use the Contrast Angular Bootstrap Modal component in your project you need t
 
 ![Angular Bootstrap Modal Positions ](https://imgur.com/sT4ZwEV.gif)
 
-###### html
+###### HTML
 ```html
 <CDBBtn color="dark" [flat]=true (click)="modal6.toggleModal()">
     Top right

@@ -2,15 +2,16 @@
 title: 'Box'
 metaTitle: 'Bootstrap 5 Box - Bootstrap CSS tutorial'
 metaDescription: 'Bootstrap 5 boxes are layout components that assist in the creation of build components for CSS utility purposes.'
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/javascript/components/box.md"
 ---
 
 # Bootstrap 5 Box
 
-Bootstrap 5 boxes are layout components that assist in the creation of build components for CSS utility purposes.
+Bootstrap 5 Boxes are layout components that assist in the creation of build components for CSS utility purposes.
 
 Bootstrap Box component can become any element from `ElementType` like `div`, `span`, `img`, `video` etc.
 
-![Bootstrap Box](./images/basicbox.png)
+<Box1/>
 
 ###### HTML
 
@@ -23,25 +24,25 @@ Bootstrap Box component can become any element from `ElementType` like `div`, `s
 
 ## Display
 
-We can define display styles for our boxes by giving our `div` a `class` of d and then appending the display style we want (flex, block, inline). For example `<div class="d-flex">Display FLex</div>`, for a display style of 'flex'.
+We can define display styles for our boxes by giving our `div` a `class` of d and then appending the display style we want (flex, block, inline). For example `<div class="d-flex">Display Flex</div>`, for a display style of `flex`.
 
-![Bootstrap Display](./images/boxdisplay.png)
+<Box2/>
 
-###### html
+###### HTML
 
 ```html
-<div class="d-flex">Display FLex</div>
+<div class="d-flex">Display Flex</div>
 <div class="d-block">Display Block</div>
 <div class="d-inline">Display Inline</div>
 ```
 
 ## Flex
 
-To determine the flex orientation of your elements. We add a flex 'class' to our element, which adds the direction ( column or row). For example `<div class="d-flex flex-column"></div>`.
+To determine the flex orientation of your elements. We add a flex `class` to our element, which adds the direction ( column or row). For example `<div class="d-flex flex-column"></div>`.
 
-![Bootstrap Box Flex](./images/boxflex.png)
+<Box3/>
 
-###### html
+###### HTML
 
 ```html
 <div class="d-flex flex-column">
@@ -49,7 +50,7 @@ To determine the flex orientation of your elements. We add a flex 'class' to our
   <p>Coloumn</p>
   <p>Coloumn</p>
 </div>
-<div class="d-flex flex-row">
+<div class="d-flex flex-row ">
   <p>row</p>
   <p>row</p>
   <p>row</p>
@@ -58,11 +59,11 @@ To determine the flex orientation of your elements. We add a flex 'class' to our
 
 ## Colors
 
-By giving our element a `class` of text and appending the color code we desire, we may set text colors for it. For example `<div class="text-danger">Danger</div>`.
+Text color can be set in elements by giving the element a `class` of text and appending a color code. For example `<div class="text-danger">Danger</div>`.
 
-![Bootstrap Box Color](./images/boxcolor.png)
+<Box4/>
 
-###### html
+###### HTML
 
 ```html
 <div class="text-danger">Danger</div>
@@ -73,11 +74,11 @@ By giving our element a `class` of text and appending the color code we desire, 
 
 ## Background Colors
 
-You can give the elements a backdrop color with the Contrast Boostrap 5 Box component. To accomplish so, we give the div element the `class` of `bg` and append the desired color code to it. For example `<div class="bg-danger">Danger</div>`.
+Elements can be given a backdrop color with the Contrast Boostrap 5 Box component by adding the `bg` class and appending the desired color code to it. For example `<div class="bg-danger">Danger</div>`.
 
-![Bootstrap Box](./images/boxbackgroundcolors.png)
+<box5/>
 
-###### html
+###### HTML
 
 ```html
 <div class="bg-danger">Danger</div>

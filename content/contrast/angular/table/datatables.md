@@ -2,12 +2,12 @@
 title: "DataTable"
 metaTitle: "Angular Bootstrap DataTable"
 metaDescription: "Angular Bootstrap DataTables are components that mix tables with advanced options like searching, sorting and pagination"
-
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/angular/table/datatables.md"
 ---
 
-# Angular Bootstrap DataTables
+# Contrast Angular Bootstrap DataTables
 
-Angular Bootstrap DataTables are components that mix tables with advanced options like searching, sorting and pagination.
+Contrast Angular Bootstrap DataTables are components that mix tables with advanced options like searching, sorting and pagination.
 
 ## Default DataTable
 
@@ -15,79 +15,82 @@ In this tutorial we use the [CDBCard](https://www.devwares.com/docs/contrast/ang
 
 ![Angular Bootstrap Datatables Default](./images/datatable.png)
 
-###### html
+###### HTML
 ```html
 <CDBCard style="margin: 1rem;">
-  <CDBCardBody>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 mx-auto pl-0">
-          <label>
-              Show Entries
-              <select class='custom-select custom-select-sm form-control form-control-sm ml-0'
-                  style="margin-left: .5rem" (change)='changeEntries($event)'>
-                  <option *ngFor='let entry of entries' [value]="entry" [key]='entry'>
-                      {{ entry }}
-                  </option>
-              </select>
-          </label>
-        </div>
-        <div class="col-md-6 mx-auto pl-0 pr-0 mb-1">
-          <div class="md-form">
-            <input type="text" placeholder="Search" class="form-control" [(ngModel)]="searchText" (keyup)="searchItems()" id="search-input">
+    <CDBCardBody>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 mx-auto pl-0">
+            <label>
+                Show Entries
+                <select class='custom-select custom-select-sm form-control form-control-sm ml-0'
+                    style="margin-left: .5rem" (change)='changeEntries($event)'>
+                    <option *ngFor='let entry of entries' [value]="entry" >
+                        {{ entry }}
+                    </option>
+                </select>
+            </label>
           </div>
-        </div>
-        <table CdbTable CdbTableScroll scrollY="true" maxHeight="500" #tableEl1="CdbTable" stickyHeader="true" hover="true" striped='true' bordered="true" class="z-depth-1 col-md-12">
-          <thead class="sticky-top">
-          <tr>
-            <th *ngFor="let head of headElements; let i = index" (sortEnd)="sort()" [CdbTableSort]="elements" [tableEl]='tableEl1' [enableSort]='headElements[i].enableSort' [sortBy]="headElements[i].field"
-                scope="col">{{head.label | titlecase}} <mdb-icon fas icon="sort"></mdb-icon>
-            </th>
-          </tr>
-          </thead>
-          <tbody #row>
-          <tr  *ngFor="let el of pages[activePage]; let i = index">
-            <th  scope="row">{{el.name}}</th>
-            <td  class="red-text">{{el.position}}</td>
-            <td >{{el.office}}</td>
-            <td >{{el.age}}</td>
-            <td >{{el.date}}</td>
-            <td >{{el.salary}}</td>
-          </tr>
-          <tr  *ngIf="!pages[activePage]">
-            <td scope="row" colspan="100%">No Matching Records Found</td>
-          </tr>
-          </tbody>
-        <thead class="sticky-top">
+          <div class="col-md-6 mx-auto pl-0 pr-0 mb-1">
+            <div class="md-form">
+              <input type="text" placeholder="Search" class="form-control" [(ngModel)]="searchText" (keyup)="searchItems()" id="search-input">
+            </div>
+          </div>
+          <table CdbTable CdbTableScroll [scrollY]="true" maxHeight="500" #tableEl1="CdbTable" stickyHeader="true" hover="true" [striped]='true' [bordered]="true" class="z-depth-1 col-md-12">
+            <thead class="sticky-top">
             <tr>
-                <th *ngFor="let head of headElements; let i = index" [mdbTableSort]="elements" [sortBy]="headElements[i].field"
-                    scope="col">{{head.label | titlecase}} <mdb-icon fas icon="sort"></mdb-icon>
-                </th>
+              <th *ngFor="let head of headElements; let i = index" (sortEnd)="sort()" [CdbTableSort]="elements" [tableEl]='tableEl1' [enableSort]='headElements[i].enableSort' [sortBy]="headElements[i].field"
+                  scope="col">{{head.label | titlecase}} 
+                  <CDBIcon [fas]="true" icon="sort"></CDBIcon>
+              </th>
             </tr>
-        </thead>
-        </table>
-        <div class="mt-2">
-          Showing {{activePage > 0 ? (activePage * pages[0].length) + 1 : activePage + 1}} to {{pages.length - 1 > activePage
-          ? pages[activePage].length * (activePage + 1)
-          : elements.length}} of {{elements.length}} records
+            </thead>
+            <tbody #row>
+            <tr  *ngFor="let el of pages[activePage]; let i = index">
+              <th  scope="row">{{el.name}}</th>
+              <td  class="red-text">{{el.position}}</td>
+              <td >{{el.office}}</td>
+              <td >{{el.age}}</td>
+              <td >{{el.date}}</td>
+              <td >{{el.salary}}</td>
+            </tr>
+            <tr  *ngIf="!pages[activePage]">
+              <td scope="row" colspan="100%">No Matching Records Found</td>
+            </tr>
+            </tbody>
+          <thead class="sticky-top">
+              <tr>
+                  <th *ngFor="let head of headElements; let i = index" [CdbTableSort]="elements" [sortBy]="headElements[i].field"
+                      scope="col">{{head.label | titlecase}} 
+                      <CDBIcon [fas]="true" icon="sort"></CDBIcon>
+                  </th>
+              </tr>
+          </thead>
+          </table>
+          <div class="mt-2">
+            Showing {{activePage > 0 ? (activePage * pages[0].length) + 1 : activePage + 1}} to {{pages.length - 1 > activePage
+            ? pages[activePage].length * (activePage + 1)
+            : elements.length}} of {{elements.length}} records
+          </div>
+          <CDBTable-pagination class="ml-auto pr-0 mt-2" [tableEl]='tableEl1' ></CDBTable-pagination>
         </div>
-        <CDBTable-pagination class="ml-auto pr-0 mt-2" [tableEl]='tableEl1' ></CDBTable-pagination>
       </div>
-    </div>
-  </CDBCardBody>
-</CDBCard>
+    </CDBCardBody>
+  </CDBCard>
 ```
-###### typescript
-```typescript
+###### TypeScript
+```ts
 import { Component, OnInit, ViewChild } from '@angular/core';
-import {CdbTableDirective} from './/directives/cdb-table.directive'
+import { CdbTableDirective } from 'ng-cdbangular'
+
 @Component({
   selector: 'app-datatable',
   templateUrl: './datatable.component.html',
   styleUrls: ['./datatable.component.scss']
 })
 export class DatatableComponent implements OnInit {
-  @ViewChild(CdbTableDirective, { static: true }) CdbTable: CdbTableDirective;
+  @ViewChild(CdbTableDirective, { static: true }) CdbTable!: CdbTableDirective;
   elements: any = [
       {
         name: "Tiger Nixon",
@@ -363,9 +366,9 @@ export class DatatableComponent implements OnInit {
         salary: "$112",
       },
   ];
-  pages = []
+  pages: any = []
   activePage = 0;
-  previousData;
+  previousData: any;
 
   //Declare entries options
   entries = [5, 10, 15]
@@ -409,7 +412,7 @@ export class DatatableComponent implements OnInit {
 
   ngOnInit(): void {
     //subscribe to the current active page
-    this.CdbTable._activePage.subscribe(data => {
+    this.CdbTable._activePage.subscribe((data : any) => {
       this.activePage = data
     })
 
@@ -439,8 +442,8 @@ export class DatatableComponent implements OnInit {
     }
   }
 
-  changeEntries(e) {
-    this.CdbTable.setEntries(e.target.value)
+  changeEntries(e : Event ) {
+    this.CdbTable.setEntries((e.target as HTMLInputElement).value)
     this.CdbTable.setPages()
     this.pages = this.CdbTable.pages
     this.CdbTable._activePage.next(0)

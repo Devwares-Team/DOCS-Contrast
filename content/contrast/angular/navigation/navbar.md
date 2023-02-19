@@ -2,19 +2,21 @@
 title: 'Navbar'
 metaTitle: 'Angular Bootstrap Navbar'
 metaDescription: 'Angular Bootstrap Navbar is a horizontal navigation component which apart from traditional, text links, might embed icons, dropdowns, avatars or search forms'
----# Angular Bootstrap Navbar
+githubUrl: "https://github.com/Devwares-Team/DOCS-Contrast/blob/master/content/contrast/angular/navigation/navbar.md"
+---
+# Contrast Angular Bootstrap Navbar
 
-Angular Bootstrap Navbar is a user interface element that links a user to other sections of the website.
+Contrast Angular Bootstrap Navbar is a user interface element that links a user to other sections of the website.
 
 The Contrast Angular Bootstrap Navbar has predefined styles you can access via passing values into a prop on the component.
 
 ## Default Navbar
 
-In this section of the tutorial we use the [CDBDropDown](https://www.devwares.com/docs/contrast/angular/components/dropdown) component to have dropdowns in our Navbar, the [CDBBtn](https://www.devwares.com/docs/contrast/angular/components/dropdown)component for our buttons, the [CDBIcon](https://www.devwares.com/docs/contrast/angular/components/icon) component for our icons, and the [CDBCollapse](https://www.devwares.com/docs/contrast/angular/components/collapse) component alongside the `CDBNavbar` component. For more information, check out our docs .
+In this section of the tutorial we use the [CDBDropDown](https://www.devwares.com/docs/contrast/angular/components/dropdown) component to have dropdowns in our Navbar, the [CDBBtn](https://www.devwares.com/docs/contrast/angular/components/dropdown) component for our buttons, the [CDBIcon](https://www.devwares.com/docs/contrast/angular/components/icon) component for our icons, and the [CDBCollapse](https://www.devwares.com/docs/contrast/angular/components/collapse) component alongside the `CDBNavbar` component. For more information, check out our docs. The Navbar example below requires that you add the 'BrowserAnimationsModule` to `app.nodule.ts`
 
 ![Angular Bootstrap Navbar Default](./images/navbar1.png)
 
-###### html
+###### HTML
 
 ```html
 <header>
@@ -68,8 +70,7 @@ In this section of the tutorial we use the [CDBDropDown](https://www.devwares.co
           <CDBDropDown>
             <CDBDropDownToggle
               [caretDropDown]="true"
-              style="padding: 0"
-              color="dark"
+              style="padding: 0; background-color: black "
               (click)="menu.toggleDropdown($event)"
             >
               <CDBIcon class="mr-2" icon="cogs"></CDBIcon> Options
@@ -89,7 +90,7 @@ In this section of the tutorial we use the [CDBDropDown](https://www.devwares.co
 
 ![Angular Bootstrap Navbar Layout 2](./images/navbar2.png)
 
-###### html
+###### HTML
 
 ```html
 <header>
@@ -104,8 +105,7 @@ In this section of the tutorial we use the [CDBDropDown](https://www.devwares.co
           <CDBDropDown>
             <CDBDropDownToggle
               [caretDropDown]="true"
-              style="padding: 0"
-              color="dark"
+              style="padding: 0; background-color: black"
               (click)="menu2.toggleDropdown($event)"
             >
               Categories
@@ -157,24 +157,31 @@ In this section of the tutorial we use the [CDBDropDown](https://www.devwares.co
 </header>
 ```
 
+## Mobile View
+Contrast Angular Bootstrap Navbar is a responsive component, it shows and hide navbar contents by its parent breakpoint. It uses a toggle element to set the display of its content.
+![Navbar Mobile View ](./images/mobile-nav2.png)
+
+#### Mobile View - Collapsed
+![Navbar Mobile View - Collapsed](./images/mobile-nav-collapsed.png)
+
 # API
 
 Here in this section you will find information about required modules and available inputs, outputs, methods and events of this component.
 
 ## Contrast Navbar Bootstrap Modules used
 
-```typescript
+```ts
 import { NavbarModule } from 'cdbangular';
 ```
 
 ## API Reference: Contrast Navbar Inputs
 
-The table below shows the possible input of the Navbar component.
+The table below shows the possible input of the `CDBNavbar` component.
 
 | Name                  |       Type        | Default |                                                              Description                                                              |                   Example |
 | :-------------------- | :---------------: | ------: | :-----------------------------------------------------------------------------------------------------------------------------------: | ------------------------: |
 | class                 |      String       |         |                                                          Adds custom classes                                                          |           class="myClass" |
-| color                 |      String       |   false |                                          Sets navbar background color. Use mdb color palette                                          |            color="indigo" |
+| color                 |      String       |   false |                                          Sets navbar background color. Use cdb color palette                                          |            color="indigo" |
 | dark                  |      Boolean      |   false |                                       Change navbar's theme to dark (text color will be white)                                        |                 dark=true |
 | light                 |      Boolean      |   false |                                       Change navbar's theme to light (text color will be black)                                       |                light=true |
 | double                |      Boolean      |   false |                                              Allows navbar to be used along with Sidebar                                              |               double=true |
@@ -187,7 +194,7 @@ The table below shows the possible input of the Navbar component.
 
 ## API Reference: Contrast Navbar Brand Properties
 
-The table below shows the configuration options of the CDBNavBrand component.
+The table below shows the configuration options of the `CDBNavBrand` component.
 
 | Name  |  Type  | Default |     Description     |                    Example |
 | :---- | :----: | ------: | :-----------------: | -------------------------: |
@@ -196,7 +203,7 @@ The table below shows the configuration options of the CDBNavBrand component.
 
 ## API Reference: Contrast Navbar Item Properties
 
-The table below shows the configuration options of the CDBNavItem component.
+The table below shows the configuration options of the `CDBNavItem` component.
 
 | Name   |  Type   | Default |           Description            |         Example |
 | :----- | :-----: | ------: | :------------------------------: | --------------: |
@@ -205,7 +212,7 @@ The table below shows the configuration options of the CDBNavItem component.
 
 ## API Reference: Contrast Navbar Link Properties
 
-The table below shows the configuration options of the CDBNavLink component.
+The table below shows the configuration options of the `CDBNavLink` component.
 
 | Name      |  Type   | Default |                  Description                   |                     Example |
 | :-------- | :-----: | ------: | :--------------------------------------------: | --------------------------: |
@@ -217,7 +224,7 @@ The table below shows the configuration options of the CDBNavLink component.
 
 ## API Reference: Contrast Navbar Toggle Properties
 
-The table below shows the configuration options of the CDBNavToggle component.
+The table below shows the configuration options of the `CDBNavToggle` component.
 
 | Name  |  Type   | Default |                  Description                  |                Example |
 | :---- | :-----: | ------: | :-------------------------------------------: | ---------------------: |
@@ -229,7 +236,7 @@ The table below shows the configuration options of the CDBNavToggle component.
 
 ## API Reference: Contrast Navbar Nav Properties
 
-The table below shows the configuration options of the CDBNavbarNav component.
+The table below shows the configuration options of the `CDBNavbarNav` component.
 
 | Name  |  Type   | Default |                  Description                  |         Example |
 | :---- | :-----: | ------: | :-------------------------------------------: | --------------: |
